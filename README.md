@@ -21,19 +21,25 @@
 
 - [nuget package](https://www.nuget.org/packages/netcore-opengl/)
 
-in .cs file
+- [extension methods](https://devel0.github.io/netcore-opengl/api/SearchAThing.OpenGlExt.html)
 
 ```csharp
 using SearchAThing;
 ```
 
-in .xaml file specify namespace
+- controls xaml
 
 ```
 xmlns:opengl="clr-namespace:SearchAThing;assembly=netcore-opengl"
 ```
 
-to run examples
+- [toolkit](https://devel0.github.io/netcore-opengl/api/SearchAThing.OpenGlToolkit.html)
+
+```cs
+using static SearchAThing.OpenGlToolkit;
+```
+
+- run examples
 
 ```sh
 cd netcore-opengl
