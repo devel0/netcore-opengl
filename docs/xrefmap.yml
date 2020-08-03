@@ -517,6 +517,61 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlExt.AddToVertexManager
   nameWithType: OpenGlExt.AddToVertexManager
+- uid: SearchAThing.OpenGlExt.ToGLTriangleVertex(Vector3D)
+  name: ToGLTriangleVertex(Vector3D)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToGLTriangleVertex_Vector3D_
+  commentId: M:SearchAThing.OpenGlExt.ToGLTriangleVertex(Vector3D)
+  fullName: SearchAThing.OpenGlExt.ToGLTriangleVertex(Vector3D)
+  nameWithType: OpenGlExt.ToGLTriangleVertex(Vector3D)
+- uid: SearchAThing.OpenGlExt.ToGLTriangleVertex*
+  name: ToGLTriangleVertex
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToGLTriangleVertex_
+  commentId: Overload:SearchAThing.OpenGlExt.ToGLTriangleVertex
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlExt.ToGLTriangleVertex
+  nameWithType: OpenGlExt.ToGLTriangleVertex
+- uid: SearchAThing.OpenGlExt.ToSystemDrawingColor(Color)
+  name: ToSystemDrawingColor(Color)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToSystemDrawingColor_Color_
+  commentId: M:SearchAThing.OpenGlExt.ToSystemDrawingColor(Color)
+  fullName: SearchAThing.OpenGlExt.ToSystemDrawingColor(Color)
+  nameWithType: OpenGlExt.ToSystemDrawingColor(Color)
+- uid: SearchAThing.OpenGlExt.ToSystemDrawingColor*
+  name: ToSystemDrawingColor
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToSystemDrawingColor_
+  commentId: Overload:SearchAThing.OpenGlExt.ToSystemDrawingColor
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlExt.ToSystemDrawingColor
+  nameWithType: OpenGlExt.ToSystemDrawingColor
+- uid: SearchAThing.OpenGlExt.ToVector3(Vector4)
+  name: ToVector3(Vector4)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToVector3_Vector4_
+  commentId: M:SearchAThing.OpenGlExt.ToVector3(Vector4)
+  fullName: SearchAThing.OpenGlExt.ToVector3(Vector4)
+  nameWithType: OpenGlExt.ToVector3(Vector4)
+- uid: SearchAThing.OpenGlExt.ToVector3*
+  name: ToVector3
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToVector3_
+  commentId: Overload:SearchAThing.OpenGlExt.ToVector3
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlExt.ToVector3
+  nameWithType: OpenGlExt.ToVector3
+- uid: SearchAThing.OpenGlExt.ToVector4(Color,System.Nullable{System.Single})
+  name: ToVector4(Color, Nullable<Single>)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToVector4_Color_System_Nullable_System_Single__
+  commentId: M:SearchAThing.OpenGlExt.ToVector4(Color,System.Nullable{System.Single})
+  name.vb: ToVector4(Color, Nullable(Of Single))
+  fullName: SearchAThing.OpenGlExt.ToVector4(Color, System.Nullable<System.Single>)
+  fullName.vb: SearchAThing.OpenGlExt.ToVector4(Color, System.Nullable(Of System.Single))
+  nameWithType: OpenGlExt.ToVector4(Color, Nullable<Single>)
+  nameWithType.vb: OpenGlExt.ToVector4(Color, Nullable(Of Single))
+- uid: SearchAThing.OpenGlExt.ToVector4*
+  name: ToVector4
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToVector4_
+  commentId: Overload:SearchAThing.OpenGlExt.ToVector4
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlExt.ToVector4
+  nameWithType: OpenGlExt.ToVector4
 - uid: SearchAThing.OpenGlModelBase
   name: OpenGlModelBase
   href: api/SearchAThing.OpenGlModelBase.html
@@ -677,67 +732,25 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlModelOptions.Debug
   nameWithType: OpenGlModelOptions.Debug
-- uid: SearchAThing.SciExt
-  name: SciExt
-  href: api/SearchAThing.SciExt.html
-  commentId: T:SearchAThing.SciExt
-  fullName: SearchAThing.SciExt
-  nameWithType: SciExt
-- uid: SearchAThing.SciExt.ToGLTriangleVertex(Vector3D)
-  name: ToGLTriangleVertex(Vector3D)
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToGLTriangleVertex_Vector3D_
-  commentId: M:SearchAThing.SciExt.ToGLTriangleVertex(Vector3D)
-  fullName: SearchAThing.SciExt.ToGLTriangleVertex(Vector3D)
-  nameWithType: SciExt.ToGLTriangleVertex(Vector3D)
-- uid: SearchAThing.SciExt.ToGLTriangleVertex*
-  name: ToGLTriangleVertex
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToGLTriangleVertex_
-  commentId: Overload:SearchAThing.SciExt.ToGLTriangleVertex
+- uid: SearchAThing.OpenGlToolkit
+  name: OpenGlToolkit
+  href: api/SearchAThing.OpenGlToolkit.html
+  commentId: T:SearchAThing.OpenGlToolkit
+  fullName: SearchAThing.OpenGlToolkit
+  nameWithType: OpenGlToolkit
+- uid: SearchAThing.OpenGlToolkit.RndColor(System.Double,System.Double)
+  name: RndColor(Double, Double)
+  href: api/SearchAThing.OpenGlToolkit.html#SearchAThing_OpenGlToolkit_RndColor_System_Double_System_Double_
+  commentId: M:SearchAThing.OpenGlToolkit.RndColor(System.Double,System.Double)
+  fullName: SearchAThing.OpenGlToolkit.RndColor(System.Double, System.Double)
+  nameWithType: OpenGlToolkit.RndColor(Double, Double)
+- uid: SearchAThing.OpenGlToolkit.RndColor*
+  name: RndColor
+  href: api/SearchAThing.OpenGlToolkit.html#SearchAThing_OpenGlToolkit_RndColor_
+  commentId: Overload:SearchAThing.OpenGlToolkit.RndColor
   isSpec: "True"
-  fullName: SearchAThing.SciExt.ToGLTriangleVertex
-  nameWithType: SciExt.ToGLTriangleVertex
-- uid: SearchAThing.SciExt.ToSystemDrawingColor(Color)
-  name: ToSystemDrawingColor(Color)
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToSystemDrawingColor_Color_
-  commentId: M:SearchAThing.SciExt.ToSystemDrawingColor(Color)
-  fullName: SearchAThing.SciExt.ToSystemDrawingColor(Color)
-  nameWithType: SciExt.ToSystemDrawingColor(Color)
-- uid: SearchAThing.SciExt.ToSystemDrawingColor*
-  name: ToSystemDrawingColor
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToSystemDrawingColor_
-  commentId: Overload:SearchAThing.SciExt.ToSystemDrawingColor
-  isSpec: "True"
-  fullName: SearchAThing.SciExt.ToSystemDrawingColor
-  nameWithType: SciExt.ToSystemDrawingColor
-- uid: SearchAThing.SciExt.ToVector3(Vector4)
-  name: ToVector3(Vector4)
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToVector3_Vector4_
-  commentId: M:SearchAThing.SciExt.ToVector3(Vector4)
-  fullName: SearchAThing.SciExt.ToVector3(Vector4)
-  nameWithType: SciExt.ToVector3(Vector4)
-- uid: SearchAThing.SciExt.ToVector3*
-  name: ToVector3
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToVector3_
-  commentId: Overload:SearchAThing.SciExt.ToVector3
-  isSpec: "True"
-  fullName: SearchAThing.SciExt.ToVector3
-  nameWithType: SciExt.ToVector3
-- uid: SearchAThing.SciExt.ToVector4(Color,System.Nullable{System.Single})
-  name: ToVector4(Color, Nullable<Single>)
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToVector4_Color_System_Nullable_System_Single__
-  commentId: M:SearchAThing.SciExt.ToVector4(Color,System.Nullable{System.Single})
-  name.vb: ToVector4(Color, Nullable(Of Single))
-  fullName: SearchAThing.SciExt.ToVector4(Color, System.Nullable<System.Single>)
-  fullName.vb: SearchAThing.SciExt.ToVector4(Color, System.Nullable(Of System.Single))
-  nameWithType: SciExt.ToVector4(Color, Nullable<Single>)
-  nameWithType.vb: SciExt.ToVector4(Color, Nullable(Of Single))
-- uid: SearchAThing.SciExt.ToVector4*
-  name: ToVector4
-  href: api/SearchAThing.SciExt.html#SearchAThing_SciExt_ToVector4_
-  commentId: Overload:SearchAThing.SciExt.ToVector4
-  isSpec: "True"
-  fullName: SearchAThing.SciExt.ToVector4
-  nameWithType: SciExt.ToVector4
+  fullName: SearchAThing.OpenGlToolkit.RndColor
+  nameWithType: OpenGlToolkit.RndColor
 - uid: SearchAThing.VertexArrayObject`1
   name: VertexArrayObject<PacketStructure>
   href: api/SearchAThing.VertexArrayObject-1.html
