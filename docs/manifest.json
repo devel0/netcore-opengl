@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.GLVertex.html",
-          "hash": "EJIzGir1P8BzYv5hdh0g0Q=="
+          "hash": "z7GHGHEPoxfYi/kBSuytuw=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.GLVertexWithNormal.html",
-          "hash": "HDpK7gLb0r+Gc+Z4+kAY0Q=="
+          "hash": "3g1CDKMhn4qvNIHz0bkwIA=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.GLVertexWithNormalNfo.html",
-          "hash": "Iy07JPikAceu9hviiTGhrw=="
+          "hash": "Lj+DAS6kCGKF0GfyQEyBIg=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlControl.html",
-          "hash": "mAf3Heacq7ljEOhs1nKg7Q=="
+          "hash": "p8RaG0VNrDALSVBZxlzhuQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlExt.html",
-          "hash": "W68FpFMcdpcPeb1RflPMOA=="
+          "hash": "nqItL5+LNd9GXk2nWDwABA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlModelBase.html",
-          "hash": "RPXunhy0OyffHu6pdWbCgA=="
+          "hash": "c4VBf23nCa0gn4cQ+jGLkg=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlModelOptions.html",
-          "hash": "916cHAdci/21RdIwsVUfwQ=="
+          "hash": "OMk6qtgWa1OZq8O2EzbvcA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.SciExt.html",
-          "hash": "BQuNbBYXllS5Goupl0ZDpw=="
+          "hash": "t4rpOqJLnpqTT0jQouyxUQ=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.VertexArrayObject-1.html",
-          "hash": "s3ktu9D26BVoKb0s1vly2Q=="
+          "hash": "kbSZ6RS/AXXQ0XoEKIoWPQ=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.VertexBufferObject-1.html",
-          "hash": "G0ar0fQ4Q8uQKpp2YEkcgw=="
+          "hash": "m8XfjBYk6VdDzIsF9HxktA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.VertexManager.html",
-          "hash": "KA+/yTmgrjgYvOp1355RiQ=="
+          "hash": "vSY8fldgGi2Ur3WbQ1wj/Q=="
         }
       },
       "is_incremental": false,
@@ -156,7 +156,7 @@
           "hash": "LSt+UHDTUFrJJHKnTJedEQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -180,7 +180,7 @@
           "hash": "yh3wpsBVXXJs9+lvbjGgjQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -207,7 +207,7 @@
           "hash": "3KYzEpIMsXNEY7IgxoCuxA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -226,25 +226,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 0
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 12,
-          "skipped_file_count": 0
+          "skipped_file_count": 1
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -257,8 +255,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
