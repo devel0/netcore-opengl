@@ -6,7 +6,6 @@ using Avalonia;
 using Avalonia.Media.Imaging;
 using Avalonia.Visuals.Media.Imaging;
 using System;
-using System.Threading;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Collections.Generic;
@@ -43,20 +42,7 @@ namespace SearchAThing
         PixelSize oldSize = new PixelSize();
 
         HashSet<OpenGlControl> glControls = new HashSet<OpenGlControl>();
-        object glControlsLck = new object();
-
-        // #region RenderCount
-        // private ulong _RenderCount = 0;
-
-        // public static readonly DirectProperty<OpenGlModelBase, ulong> RenderCountProperty =
-        //     AvaloniaProperty.RegisterDirect<OpenGlModelBase, ulong>("RenderCount", o => o.RenderCount, (o, v) => o.RenderCount = v);
-
-        // public ulong RenderCount
-        // {
-        //     get => _RenderCount;
-        //     set => SetAndRaise(RenderCountProperty, ref _RenderCount, value);
-        // }
-        // #endregion 
+        object glControlsLck = new object();       
 
         #region FocusedCtl
         private OpenGlControl _FocusedCtl = null;
@@ -252,9 +238,7 @@ namespace SearchAThing
                 GL.DeleteRenderbuffer(renderBuffer);
             }
 
-            GL.Viewport(0, 0, width, height);
-
-            //GL.GetInteger(GetPName.TextureBinding2D, out var oldTexture);
+            GL.Viewport(0, 0, width, height);            
 
             GL.BindTexture(TextureTarget.Texture2D, texture);
             unsafe
@@ -277,22 +261,7 @@ namespace SearchAThing
                 TextureTarget.Texture2D,
                 TextureParameterName.TextureMinFilter,
                 (int)GLEnum.Nearest);
-
-            // clean old texture render buffer
-            // if (oldTexture != 0)
-            // {
-            //     GL.BindTexture(TextureTarget.Texture2D, (uint)oldTexture);
-            //     GL.GetInteger(GetPName.RenderbufferBinding, out var oldRenderbuffer);
-            //     if (oldRenderbuffer != 0)
-            //     {
-            //         // GL.BindRenderbuffer(
-            //         //     RenderbufferTarget.Renderbuffer,
-            //         //     (uint)oldRenderbuffer);
-            //         System.Console.WriteLine($"delete render buffer: {oldRenderbuffer}");
-            //         //GL.DeleteBuffer((uint)oldRenderbuffer);
-            //     }
-            // }
-
+         
             // create new render buffer
             renderBuffer = GL.GenRenderbuffer();
 
@@ -307,10 +276,7 @@ namespace SearchAThing
                 GLEnum.Framebuffer,
                 GLEnum.DepthAttachment,
                 GLEnum.Renderbuffer,
-                renderBuffer);
-            // GL.BindRenderbuffer(
-            //     RenderbufferTarget.Renderbuffer,
-            //     (uint)renderBuffer);
+                renderBuffer);            
 
             if (firstInit)
             {
@@ -340,36 +306,6 @@ namespace SearchAThing
         protected virtual void OnDeinitialize()
         {
 
-        }
-        #endregion
-
-        #region calc ============================================================================================
-        public Line3D RayWorld(OpenGlControl ctl, float mouse_x, float mouse_y)
-        {
-            var projection = ctl.GetProjectionMatrix();
-            var view = ctl.GetViewMatrix();
-            var model = ctl.GetModelMatrix();
-
-            var x = (float)(2f * mouse_x / ctl.Bounds.Width - 1f);
-            var y = -(float)(1f - (2f * mouse_y) / ctl.Bounds.Height);
-            var z = 1f;
-            var ray_ndc = new Vector3(x, y, z);
-            var ray_clip = new Vector4(ray_ndc.X, ray_ndc.Y, -1, 1);
-            var ray_eye = Vector4.Transform(ray_clip, projection.Inverse());
-            ray_eye = new Vector4(ray_eye.X, ray_eye.Y, -1, 0);
-            var _ray_wor = Vector4.Transform(ray_eye, view.Inverse());
-            var _ray_wor_modelinv = Vector4.Transform(_ray_wor, model.Inverse());
-            var r = _ray_wor_modelinv;
-            var ray_wor_norm = Vector3.Normalize(new Vector3(r.X, r.Y, r.Z));
-            var ray_wor = new Vector3(ray_wor_norm.X, ray_wor_norm.Y, ray_wor_norm.Z);
-
-            var _cp = new Vector4(ctl.CameraPosX, ctl.CameraPosY, ctl.CameraPosZ, 0);
-            //var _cp = new Vector4(CameraTarget.X, CameraTarget.Y, CameraTarget.Z, 0);
-            var cp_modelinv = Vector4.Transform(_cp, model.Inverse());
-            var c = cp_modelinv;
-            var cp = new Vector3(c.X, c.Y, c.Z);
-
-            return new Line3D(cp, ray_wor, Line3DConstructMode.PointAndVector);
         }
         #endregion
 
