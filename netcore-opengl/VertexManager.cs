@@ -381,7 +381,7 @@ namespace SearchAThing
 
     }
 
-    public static partial class SciExt
+    public static partial class OpenGlExt
     {
 
         /// <summary>
@@ -397,11 +397,6 @@ namespace SearchAThing
                 Normal = Vector3D.Zero
             };
         }
-
-    }
-
-    public static partial class OpenGlExt
-    {
 
         /// <summary>
         /// Add this BBox to GL vertex manager as wires of faces

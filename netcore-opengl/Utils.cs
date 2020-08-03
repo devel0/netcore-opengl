@@ -1,3 +1,4 @@
+using System;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -6,7 +7,7 @@ using Avalonia.Media;
 namespace SearchAThing
 {
 
-    public static partial class SciExt
+    public static partial class OpenGlExt
     {
 
         /// <summary>
@@ -38,6 +39,31 @@ namespace SearchAThing
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static System.Drawing.Color ToSystemDrawingColor(this Color color) =>
             System.Drawing.Color.FromArgb(color.A, color.R, color.G, color.B);
+
+    }
+
+    public static partial class OpenGlToolkit
+    {
+
+        /// <summary>
+        /// create a random color between given min,max values as Vector3(0..1, 0..1, 0..1);
+        /// </summary>
+        /// <param name="min">min color value (0..1)</param>
+        /// <param name="max">max color value (0..1)</param>
+        /// <returns>color Vector3</returns>
+        public static Vector3 RndColor(double min = 0, double max = 1)
+        {
+            var rnd = new Random();
+            float rndColor()
+            {
+                var r = rnd.NextDouble();
+                var res = (float)(min + (max - min) * r);
+
+                return res;
+            }
+            
+            return new Vector3(rndColor(), rndColor(), rndColor());
+        }
 
     }
 
