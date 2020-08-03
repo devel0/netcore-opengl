@@ -1,0 +1,275 @@
+{
+  "homepages": [],
+  "source_base_path": "Z:/netcore-opengl/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.GLVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.GLVertex.html",
+          "hash": "EJIzGir1P8BzYv5hdh0g0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.GLVertexWithNormal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.GLVertexWithNormal.html",
+          "hash": "HDpK7gLb0r+Gc+Z4+kAY0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.GLVertexWithNormalNfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.GLVertexWithNormalNfo.html",
+          "hash": "Iy07JPikAceu9hviiTGhrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGlControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGlControl.html",
+          "hash": "mAf3Heacq7ljEOhs1nKg7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGlExt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGlExt.html",
+          "hash": "W68FpFMcdpcPeb1RflPMOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGlModelBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGlModelBase.html",
+          "hash": "RPXunhy0OyffHu6pdWbCgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGlModelOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGlModelOptions.html",
+          "hash": "916cHAdci/21RdIwsVUfwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.SciExt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.SciExt.html",
+          "hash": "BQuNbBYXllS5Goupl0ZDpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.VertexArrayObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.VertexArrayObject-1.html",
+          "hash": "s3ktu9D26BVoKb0s1vly2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.VertexBufferObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.VertexBufferObject-1.html",
+          "hash": "G0ar0fQ4Q8uQKpp2YEkcgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.VertexManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.VertexManager.html",
+          "hash": "KA+/yTmgrjgYvOp1355RiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.html",
+          "hash": "0DMCooMEdp252DkI7qRftg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "LSt+UHDTUFrJJHKnTJedEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "3RE6NVMaDC8QOBaQUstbEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "yh3wpsBVXXJs9+lvbjGgjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "3KYzEpIMsXNEY7IgxoCuxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 12,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

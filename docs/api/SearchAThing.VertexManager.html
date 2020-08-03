@@ -1,0 +1,830 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VertexManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VertexManager
+   ">
+    <meta name="generator" content="docfx 2.55.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SearchAThing.VertexManager">
+  
+  
+  <h1 id="SearchAThing_VertexManager" data-uid="SearchAThing.VertexManager" class="text-break">Class VertexManager
+  </h1>
+  <div class="markdown level0 summary"><p>Helper to manage gl vertexes for figures such as triangles, lines</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">VertexManager</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SearchAThing.html">SearchAThing</a></h6>
+  <h6><strong>Assembly</strong>: netcore-opengl.dll</h6>
+  <h5 id="SearchAThing_VertexManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VertexManager : object</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="SearchAThing_VertexManager__ctor_" data-uid="SearchAThing.VertexManager.#ctor*"></a>
+  <h4 id="SearchAThing_VertexManager__ctor_System_Double_" data-uid="SearchAThing.VertexManager.#ctor(System.Double)">VertexManager(Double)</h4>
+  <div class="markdown level1 summary"><p>construct a vertex manager that stores given points with given tolerance for indexing</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VertexManager(double tol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">tol</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="SearchAThing_VertexManager_BBox_" data-uid="SearchAThing.VertexManager.BBox*"></a>
+  <h4 id="SearchAThing_VertexManager_BBox" data-uid="SearchAThing.VertexManager.BBox">BBox</h4>
+  <div class="markdown level1 summary"><p>bbox of all inserted points, updated after each Add methods</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BBox3D BBox { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BBox3D</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_FigureNames_" data-uid="SearchAThing.VertexManager.FigureNames*"></a>
+  <h4 id="SearchAThing_VertexManager_FigureNames" data-uid="SearchAThing.VertexManager.FigureNames">FigureNames</h4>
+  <div class="markdown level1 summary"><p>list of all figure names</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; FigureNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_Idxs_" data-uid="SearchAThing.VertexManager.Idxs*"></a>
+  <h4 id="SearchAThing_VertexManager_Idxs" data-uid="SearchAThing.VertexManager.Idxs">Idxs</h4>
+  <div class="markdown level1 summary"><p>readonly list of all indexes subdivided for figureNames</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, uint&gt; Idxs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.UInt32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_Points_" data-uid="SearchAThing.VertexManager.Points*"></a>
+  <h4 id="SearchAThing_VertexManager_Points" data-uid="SearchAThing.VertexManager.Points">Points</h4>
+  <div class="markdown level1 summary"><p>points added ( duplicate included )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Points { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_Tol_" data-uid="SearchAThing.VertexManager.Tol*"></a>
+  <h4 id="SearchAThing_VertexManager_Tol" data-uid="SearchAThing.VertexManager.Tol">Tol</h4>
+  <div class="markdown level1 summary"><p>tolerance used for dictionarized vertex storage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Tol { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_Vtxs_" data-uid="SearchAThing.VertexManager.Vtxs*"></a>
+  <h4 id="SearchAThing_VertexManager_Vtxs" data-uid="SearchAThing.VertexManager.Vtxs">Vtxs</h4>
+  <div class="markdown level1 summary"><p>readonly list of all inserted vertexes with normals ( normals updated only after BuildPoints() call )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;GLVertexWithNormalNfo&gt; Vtxs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="SearchAThing.GLVertexWithNormalNfo.html">GLVertexWithNormalNfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="SearchAThing_VertexManager_AddFaces_" data-uid="SearchAThing.VertexManager.AddFaces*"></a>
+  <h4 id="SearchAThing_VertexManager_AddFaces_System_String_IEnumerable_Facet__Func_Vector4__" data-uid="SearchAThing.VertexManager.AddFaces(System.String,IEnumerable{Facet},Func{Vector4})">AddFaces(String, IEnumerable&lt;Facet&gt;, Func&lt;Vector4&gt;)</h4>
+  <div class="markdown level1 summary"><p>add given STL facets to the given figureName set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFaces(string figureName, IEnumerable&lt;Facet&gt; facets, Func&lt;Vector4&gt; color = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>set name for the triangles</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Facet</span>&gt;</td>
+        <td><span class="parametername">facets</span></td>
+        <td><p>STL facets (see STLDocument.Read(stream).Facets)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>color ( or null ) to associate this figure name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_AddFigures_" data-uid="SearchAThing.VertexManager.AddFigures*"></a>
+  <h4 id="SearchAThing_VertexManager_AddFigures_System_String_IEnumerable_Vector3D____Func_Vector4__" data-uid="SearchAThing.VertexManager.AddFigures(System.String,IEnumerable{Vector3D[]},Func{Vector4})">AddFigures(String, IEnumerable&lt;Vector3D[]&gt;, Func&lt;Vector4&gt;)</h4>
+  <div class="markdown level1 summary"><p>add given figures points array to the given figureName set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddFigures(string figureName, IEnumerable&lt;Vector3D[]&gt; figuresPoints, Func&lt;Vector4&gt; color = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>set name for the figure points</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Vector3D</span>[]&gt;</td>
+        <td><span class="parametername">figuresPoints</span></td>
+        <td><p>array of points array that represents a set of figures ( 3 pts for triangles, 2 pts for lines )</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>color ( or null ) to associate this figure name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+        <td><p>readonly list of figure indexes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_AddLine_" data-uid="SearchAThing.VertexManager.AddLine*"></a>
+  <h4 id="SearchAThing_VertexManager_AddLine_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_" data-uid="SearchAThing.VertexManager.AddLine(Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)">AddLine(Line3D, Func&lt;Vector4&gt;, Double, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>creates triangles for a fat line (smoothed using circle polygonalized).
+autoallocate random figurename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (string figureName, IReadOnlyList&lt;uint&gt; idxs) AddLine(Line3D line, Func&lt;Vector4&gt; color = null, double w = 1, int segmentCount = 8, bool closeCaps = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Line3D</span></td>
+        <td><span class="parametername">line</span></td>
+        <td><p>line from,to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>color ( or null ) to associate this figure name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">w</span></td>
+        <td><p>thickness of line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">segmentCount</span></td>
+        <td><p>nr of segment inscribed to circle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">closeCaps</span></td>
+        <td><p>if true generates triangles for the front and rear</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;&gt;</td>
+        <td><p>figure name and indexes of triangles that represent a flat line described as a parallelepiped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_AddLine_" data-uid="SearchAThing.VertexManager.AddLine*"></a>
+  <h4 id="SearchAThing_VertexManager_AddLine_System_String_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_" data-uid="SearchAThing.VertexManager.AddLine(System.String,Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)">AddLine(String, Line3D, Func&lt;Vector4&gt;, Double, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>creates triangles for a fat line (smoothed using circle polygonalized)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddLine(string figureName, Line3D line, Func&lt;Vector4&gt; color = null, double w = 1, int segmentCount = 8, bool closeCaps = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>name of vtx mgr figure for this fat line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Line3D</span></td>
+        <td><span class="parametername">line</span></td>
+        <td><p>line from,to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>color ( or null ) to associate this figure name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">w</span></td>
+        <td><p>thickness of line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">segmentCount</span></td>
+        <td><p>nr of segment inscribed to circle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">closeCaps</span></td>
+        <td><p>if true generates triangles for the front and rear</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+        <td><p>indexes of triangles that represent a flat line described as a parallelepiped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_AddSquaredLine_" data-uid="SearchAThing.VertexManager.AddSquaredLine*"></a>
+  <h4 id="SearchAThing_VertexManager_AddSquaredLine_System_String_Line3D_Func_Vector4__System_Double_" data-uid="SearchAThing.VertexManager.AddSquaredLine(System.String,Line3D,Func{Vector4},System.Double)">AddSquaredLine(String, Line3D, Func&lt;Vector4&gt;, Double)</h4>
+  <div class="markdown level1 summary"><p>creates triangles for a fat line</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddSquaredLine(string figureName, Line3D line, Func&lt;Vector4&gt; color, double w = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>name of vtx mgr figure for this fat line</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Line3D</span></td>
+        <td><span class="parametername">line</span></td>
+        <td><p>line from,to</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>color ( or null ) to associate this figure name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">w</span></td>
+        <td><p>thickness of line</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+        <td><p>indexes of triangles that represent a flat line described as a parallelepiped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_AddTriangles_" data-uid="SearchAThing.VertexManager.AddTriangles*"></a>
+  <h4 id="SearchAThing_VertexManager_AddTriangles_System_String_IEnumerable_Vector3D____Func_Vector4__" data-uid="SearchAThing.VertexManager.AddTriangles(System.String,IEnumerable{Vector3D[]},Func{Vector4})">AddTriangles(String, IEnumerable&lt;Vector3D[]&gt;, Func&lt;Vector4&gt;)</h4>
+  <div class="markdown level1 summary"><p>add given triangles array to the given figureName set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddTriangles(string figureName, IEnumerable&lt;Vector3D[]&gt; triangles, Func&lt;Vector4&gt; color = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>set name for the triangles</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Vector3D</span>[]&gt;</td>
+        <td><span class="parametername">triangles</span></td>
+        <td><p>array of triangles ( 3 pts each )</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>color ( or null ) to associate this figure name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+        <td><p>readonly list of triangles indexes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_BuildPoints_" data-uid="SearchAThing.VertexManager.BuildPoints*"></a>
+  <h4 id="SearchAThing_VertexManager_BuildPoints" data-uid="SearchAThing.VertexManager.BuildPoints">BuildPoints()</h4>
+  <div class="markdown level1 summary"><p>to be called after all figures inserted; this will rebuild vertex normals</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLVertexWithNormal[] BuildPoints()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SearchAThing.GLVertexWithNormal.html">GLVertexWithNormal</a>[]</td>
+        <td><p>array of vertex with normal suitable to use with GL array</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_GetColor_" data-uid="SearchAThing.VertexManager.GetColor*"></a>
+  <h4 id="SearchAThing_VertexManager_GetColor_System_String_" data-uid="SearchAThing.VertexManager.GetColor(System.String)">GetColor(String)</h4>
+  <div class="markdown level1 summary"><p>retrieve figure associated color</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector4? GetColor(string figureName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>figure name to retrieve associated color</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><p>color associated to given figure name or null if not specified</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_GetIdxs_" data-uid="SearchAThing.VertexManager.GetIdxs*"></a>
+  <h4 id="SearchAThing_VertexManager_GetIdxs_System_String_" data-uid="SearchAThing.VertexManager.GetIdxs(System.String)">GetIdxs(String)</h4>
+  <div class="markdown level1 summary"><p>retrieve the set of indexes belonging to given figure name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] GetIdxs(string figureName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>figure name for which to retrieve indexes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span>[]</td>
+        <td><p>indexes belonging to given figure name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SearchAThing_VertexManager_SetColor_" data-uid="SearchAThing.VertexManager.SetColor*"></a>
+  <h4 id="SearchAThing_VertexManager_SetColor_System_String_Func_Vector4__" data-uid="SearchAThing.VertexManager.SetColor(System.String,Func{Vector4})">SetColor(String, Func&lt;Vector4&gt;)</h4>
+  <div class="markdown level1 summary"><p>set figure associated color</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetColor(string figureName, Func&lt;Vector4&gt; color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>figure name which associate a color</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>color to associate given figure name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
