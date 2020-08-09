@@ -7,36 +7,40 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/examples/0001/0001.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "${workspaceFolder}/netcore-opengl.sln"
             ],
             "problemMatcher": "$msCompile"
-        },
+        },       
         {
-            "label": "publish",
+            "label": "test",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "publish",
-                "${workspaceFolder}/examples/0001/0001.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "test",
+                "${workspaceFolder}/test/test.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         },
         {
-            "label": "watch",
+            "label": "test with coverage",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "watch",
-                "run",
-                "${workspaceFolder}/examples/0001/0001.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "test",
+                "/p:CollectCoverage=true",
+                "/p:CoverletOutputFormat=lcov",
+                "/p:CoverletOutput=./netcore-sci/lcov.info",
+                "${workspaceFolder}/test/test.csproj",
             ],
-            "problemMatcher": "$msCompile"
-        }
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
     ]
 }

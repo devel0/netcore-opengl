@@ -24,12 +24,31 @@ namespace SearchAThing
     }
 
     /// <summary>
+    /// used by GLVertexManager to store info about position
+    /// </summary>
+    public class GLVertexNfo
+    {
+        public Vector3 Position;
+        /// <summary>
+        /// convert this object to a struct suitable for GL operations
+        /// </summary>        
+        public GLVertex ToGLVertex() => new GLVertex { Position = this.Position };
+    }
+
+    /// <summary>
     /// used by GLVertexManager to store info about position, normal of vertexes
     /// </summary>
-    public class GLVertexWithNormalNfo
+    public class GLVertexWithNormalNfo : GLVertexNfo
     {
-        public Vector3D Position;
-        public Vector3D Normal;
+        public Vector3 Normal;
+        /// <summary>
+        /// convert this object to a struct suitable for GL operations
+        /// </summary>
+        public GLVertexWithNormal ToGLVertexWithNormal() => new GLVertexWithNormal
+        {
+            Position = this.Position,
+            Normal = this.Normal
+        };
     }
 
 }

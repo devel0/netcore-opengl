@@ -152,18 +152,9 @@ namespace SearchAThing.SciExamples
             GL.DeleteShader(vertexShader);
             GL.DeleteShader(fragmentShader);
 
-            GL.UseProgram(Shader);
+            //GL.UseProgram(Shader);            
 
-            uint SafeGetAttribLocation(string name)
-            {
-                var res = GL.GetAttribLocation(Shader, name);
-
-                if (res < 0) throw new Exception($"invalid uniform location name [{name}]");
-
-                return (uint)res;
-            }
-
-            var vPosLocation = SafeGetAttribLocation("vPos");
+            var vPosLocation = SafeGetAttribLocation(Shader, "vPos");
 
             //Tell opengl how to give the data to the shaders.
 
@@ -180,15 +171,18 @@ namespace SearchAThing.SciExamples
             Vao.AttribPointer(vPosLocation, 0, 3, VertexAttribPointerType.Float, false, sizeof(float) * 3);
         }
 
+        protected override void RenderClear(OpenGlControl _ctl, DrawingContext context, PixelSize ps)
+        {
+            //Clear the color channel.
+            GL.Clear((uint)ClearBufferMask.ColorBufferBit);
+        }
+
         protected override void Render(OpenGlControl _ctl, DrawingContext context, PixelSize ps)
         {
             GL.UseProgram(Shader);
 
             var objColLoc = GL.GetUniformLocation(Shader, "ObjCol");
             GL.Uniform3(objColLoc, ObjColorRed, ObjColorGreen, ObjColorBlue);
-
-            //Clear the color channel.
-            GL.Clear((uint)ClearBufferMask.ColorBufferBit);
 
             //Bind the geometry and shader.
             Vao.Bind();
@@ -201,6 +195,11 @@ namespace SearchAThing.SciExamples
                 GL.DrawElements(PrimitiveType.Triangles, (uint)Indices.Length, DrawElementsType.UnsignedInt, null);
             }
         }
+
+        /// <summary>
+        /// override bbox in order to allow framework F
+        /// </summary>
+        public override BBox3D BBox => new BBox3D(new[] { new Vector3D(-1, -1, 0), new Vector3D(1, 1, 0) });
 
     }
 

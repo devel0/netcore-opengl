@@ -33,7 +33,7 @@ using SearchAThing;
 xmlns:opengl="clr-namespace:SearchAThing;assembly=netcore-opengl"
 ```
 
-- [toolkit](https://devel0.github.io/netcore-opengl/api/SearchAThing.OpenGlToolkit.html)
+- [toolkit methods](https://devel0.github.io/netcore-opengl/api/SearchAThing.OpenGlToolkit.html)
 
 ```cs
 using static SearchAThing.OpenGlToolkit;
@@ -64,6 +64,12 @@ hit F5 to start example ( change by edit [.vscode/launch.json](.vscode/launch.js
 Triangle
 
 ![](data/img/example-0001.gif)
+
+#### 0002
+
+STL map
+
+![](data/img/example-0002.gif)
 
 ## How this project was built
 

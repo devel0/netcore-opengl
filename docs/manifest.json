@@ -5,11 +5,35 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.Circle2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.Circle2.html",
+          "hash": "ROLkTicTnMNS7HIBCXGHqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SearchAThing.GLVertex.yml",
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.GLVertex.html",
           "hash": "OsTzUZCHZ8/KUNrUNgtdag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.GLVertexNfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.GLVertexNfo.html",
+          "hash": "/9XTQjcofO9u4R+WC2R6Iw=="
         }
       },
       "is_incremental": false,
@@ -33,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.GLVertexWithNormalNfo.html",
-          "hash": "bhoIRsZpydwKth7o3LbL8Q=="
+          "hash": "tQUn8BGUix/HIF9koxgfoA=="
         }
       },
       "is_incremental": false,
@@ -45,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlControl.html",
-          "hash": "5vbxFuGn7mSEeHxBNC7ZYg=="
+          "hash": "Tl7A5l1e9HGErjlewETHjQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlExt.html",
-          "hash": "McTfti2VUOfqESQg0vfnOg=="
+          "hash": "FKFXiKfYHyKsqR96YHpUMQ=="
         }
       },
       "is_incremental": false,
@@ -69,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlModelBase.html",
-          "hash": "BQTZJx9E+qJDeXedUZJIqQ=="
+          "hash": "OZ8RL6F62Mt1SgbsDTYo9g=="
         }
       },
       "is_incremental": false,
@@ -81,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlModelOptions.html",
-          "hash": "GneiTwS5WnFrCZL3aTpstQ=="
+          "hash": "IgNoqAD3i7wsoJChvhh4Og=="
         }
       },
       "is_incremental": false,
@@ -93,7 +117,31 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlToolkit.html",
-          "hash": "Yq4HhS6Tesz/BkYXImxJOg=="
+          "hash": "FTyheHFLhXL2kYawbwukvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OrbitFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OrbitFunction.html",
+          "hash": "S6kavURtogB5yfGXuwFtYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OrbitGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OrbitGeometry.html",
+          "hash": "+XcN73VVOnw6BxyeSqVhoA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.VertexManager.html",
-          "hash": "TaXzecCa1bk3Y5YF7JGM2g=="
+          "hash": "zwj2mIY4ce4wwc9v5YBDwg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.html",
-          "hash": "b9bSzhV5JEDjS7RFU1/NsQ=="
+          "hash": "bV5EcJtM9tNuiST+ND/NdA=="
         }
       },
       "is_incremental": false,
@@ -165,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "mBOspyMhXvN4TDsw5Yls9w=="
+          "hash": "SNg3n1th7AzkEnkFY9+WBg=="
         }
       },
       "is_incremental": false,
@@ -243,7 +291,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 12,
+          "total_file_count": 16,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

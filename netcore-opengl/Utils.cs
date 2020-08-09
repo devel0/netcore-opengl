@@ -8,15 +8,7 @@ namespace SearchAThing
 {
 
     public static partial class OpenGlExt
-    {
-
-        /// <summary>
-        /// create vector3 from vector4 discarding w
-        /// </summary>
-        /// <param name="v">vector4 input</param>
-        /// <returns>vector3</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 ToVector3(this Vector4 v) => new Vector3(v.X, v.Y, v.Z);
+    {        
 
         /// <summary>
         /// convert color to vec4 (r,g,b,a)

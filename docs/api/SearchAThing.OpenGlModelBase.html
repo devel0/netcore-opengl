@@ -83,12 +83,13 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">AvaloniaObject</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SearchAThing.html">SearchAThing</a></h6>
   <h6><strong>Assembly</strong>: netcore-opengl.dll</h6>
   <h5 id="SearchAThing_OpenGlModelBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class OpenGlModelBase : AvaloniaObject, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class OpenGlModelBase : AvaloniaObject, IDisposable, AvaloniaObject</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -97,7 +98,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase__ctor_SearchAThing_OpenGlModelOptions_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.%23ctor(SearchAThing.OpenGlModelOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L62">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L79">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlModelBase__ctor_" data-uid="SearchAThing.OpenGlModelBase.#ctor*"></a>
   <h4 id="SearchAThing_OpenGlModelBase__ctor_SearchAThing_OpenGlModelOptions_" data-uid="SearchAThing.OpenGlModelBase.#ctor(SearchAThing.OpenGlModelOptions)">OpenGlModelBase(OpenGlModelOptions)</h4>
@@ -128,17 +129,17 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_FocusedCtlProperty.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.FocusedCtlProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_FocusedControlProperty.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.FocusedControlProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L50">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L56">View Source</a>
   </span>
-  <h4 id="SearchAThing_OpenGlModelBase_FocusedCtlProperty" data-uid="SearchAThing.OpenGlModelBase.FocusedCtlProperty">FocusedCtlProperty</h4>
+  <h4 id="SearchAThing_OpenGlModelBase_FocusedControlProperty" data-uid="SearchAThing.OpenGlModelBase.FocusedControlProperty">FocusedControlProperty</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;OpenGlModelBase, OpenGlControl&gt; FocusedCtlProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;OpenGlModelBase, OpenGlControl&gt; FocusedControlProperty</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,17 +158,46 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_FocusedControlSizeProperty.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.FocusedControlSizeProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L69">View Source</a>
+  </span>
+  <h4 id="SearchAThing_OpenGlModelBase_FocusedControlSizeProperty" data-uid="SearchAThing.OpenGlModelBase.FocusedControlSizeProperty">FocusedControlSizeProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DirectProperty&lt;OpenGlModelBase, PixelSize&gt; FocusedControlSizeProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DirectProperty</span>&lt;<a class="xref" href="SearchAThing.OpenGlModelBase.html">OpenGlModelBase</a>, <span class="xref">PixelSize</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_GL.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.GL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L37">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L44">View Source</a>
   </span>
   <h4 id="SearchAThing_OpenGlModelBase_GL" data-uid="SearchAThing.OpenGlModelBase.GL">GL</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected GL GL</code></pre>
+    <pre><code class="lang-csharp hljs">public GL GL</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +219,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_glContext.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.glContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L36">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L43">View Source</a>
   </span>
   <h4 id="SearchAThing_OpenGlModelBase_glContext" data-uid="SearchAThing.OpenGlModelBase.glContext">glContext</h4>
   <div class="markdown level1 summary"></div>
@@ -217,18 +247,48 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_FocusedCtl.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.FocusedCtl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_BBox.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.BBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L53">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L224">View Source</a>
   </span>
-  <a id="SearchAThing_OpenGlModelBase_FocusedCtl_" data-uid="SearchAThing.OpenGlModelBase.FocusedCtl*"></a>
-  <h4 id="SearchAThing_OpenGlModelBase_FocusedCtl" data-uid="SearchAThing.OpenGlModelBase.FocusedCtl">FocusedCtl</h4>
+  <a id="SearchAThing_OpenGlModelBase_BBox_" data-uid="SearchAThing.OpenGlModelBase.BBox*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_BBox" data-uid="SearchAThing.OpenGlModelBase.BBox">BBox</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OpenGlControl FocusedCtl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract BBox3D BBox { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BBox3D</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_FocusedControl.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.FocusedControl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L59">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlModelBase_FocusedControl_" data-uid="SearchAThing.OpenGlModelBase.FocusedControl*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_FocusedControl" data-uid="SearchAThing.OpenGlModelBase.FocusedControl">FocusedControl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OpenGlControl FocusedControl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,6 +305,66 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_FocusedControlSize.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.FocusedControlSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L72">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlModelBase_FocusedControlSize_" data-uid="SearchAThing.OpenGlModelBase.FocusedControlSize*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_FocusedControlSize" data-uid="SearchAThing.OpenGlModelBase.FocusedControlSize">FocusedControlSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PixelSize FocusedControlSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PixelSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_Options.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.Options%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L45">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlModelBase_Options_" data-uid="SearchAThing.OpenGlModelBase.Options*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_Options" data-uid="SearchAThing.OpenGlModelBase.Options">Options</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OpenGlModelOptions Options { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SearchAThing.OpenGlModelOptions.html">OpenGlModelOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -252,7 +372,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_Dispose.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L291">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L365">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlModelBase_Dispose_" data-uid="SearchAThing.OpenGlModelBase.Dispose*"></a>
   <h4 id="SearchAThing_OpenGlModelBase_Dispose" data-uid="SearchAThing.OpenGlModelBase.Dispose">Dispose()</h4>
@@ -264,27 +384,27 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_Invalidate.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.Invalidate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_InvalidateAllControls.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.InvalidateAllControls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L100">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L117">View Source</a>
   </span>
-  <a id="SearchAThing_OpenGlModelBase_Invalidate_" data-uid="SearchAThing.OpenGlModelBase.Invalidate*"></a>
-  <h4 id="SearchAThing_OpenGlModelBase_Invalidate" data-uid="SearchAThing.OpenGlModelBase.Invalidate">Invalidate()</h4>
+  <a id="SearchAThing_OpenGlModelBase_InvalidateAllControls_" data-uid="SearchAThing.OpenGlModelBase.InvalidateAllControls*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_InvalidateAllControls" data-uid="SearchAThing.OpenGlModelBase.InvalidateAllControls">InvalidateAllControls()</h4>
   <div class="markdown level1 summary"><p>force invalidate visual of associated controls.
 this should not required from user side because its called automatically at render end.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Invalidate()</code></pre>
+    <pre><code class="lang-csharp hljs">public void InvalidateAllControls()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_OnDeinitialize.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.OnDeinitialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L302">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L376">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlModelBase_OnDeinitialize_" data-uid="SearchAThing.OpenGlModelBase.OnDeinitialize*"></a>
   <h4 id="SearchAThing_OpenGlModelBase_OnDeinitialize" data-uid="SearchAThing.OpenGlModelBase.OnDeinitialize">OnDeinitialize()</h4>
@@ -299,7 +419,7 @@ this should not required from user side because its called automatically at rend
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_OnInitialized.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.OnInitialized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L211">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L287">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlModelBase_OnInitialized_" data-uid="SearchAThing.OpenGlModelBase.OnInitialized*"></a>
   <h4 id="SearchAThing_OpenGlModelBase_OnInitialized" data-uid="SearchAThing.OpenGlModelBase.OnInitialized">OnInitialized()</h4>
@@ -314,7 +434,7 @@ this should not required from user side because its called automatically at rend
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_RayWorld_SearchAThing_OpenGlControl_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.RayWorld(SearchAThing.OpenGlControl%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L309">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/30-Calc.cs/#L29">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlModelBase_RayWorld_" data-uid="SearchAThing.OpenGlModelBase.RayWorld*"></a>
   <h4 id="SearchAThing_OpenGlModelBase_RayWorld_SearchAThing_OpenGlControl_System_Single_System_Single_" data-uid="SearchAThing.OpenGlModelBase.RayWorld(SearchAThing.OpenGlControl,System.Single,System.Single)">RayWorld(OpenGlControl, Single, Single)</h4>
@@ -371,7 +491,7 @@ this should not required from user side because its called automatically at rend
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_Render_SearchAThing_OpenGlControl_DrawingContext_PixelSize_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.Render(SearchAThing.OpenGlControl%2CDrawingContext%2CPixelSize)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L152">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L222">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlModelBase_Render_" data-uid="SearchAThing.OpenGlModelBase.Render*"></a>
   <h4 id="SearchAThing_OpenGlModelBase_Render_SearchAThing_OpenGlControl_DrawingContext_PixelSize_" data-uid="SearchAThing.OpenGlModelBase.Render(SearchAThing.OpenGlControl,DrawingContext,PixelSize)">Render(OpenGlControl, DrawingContext, PixelSize)</h4>
@@ -408,9 +528,226 @@ this should not required from user side because its called automatically at rend
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_RenderClear_SearchAThing_OpenGlControl_DrawingContext_PixelSize_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.RenderClear(SearchAThing.OpenGlControl%2CDrawingContext%2CPixelSize)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L216">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlModelBase_RenderClear_" data-uid="SearchAThing.OpenGlModelBase.RenderClear*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_RenderClear_SearchAThing_OpenGlControl_DrawingContext_PixelSize_" data-uid="SearchAThing.OpenGlModelBase.RenderClear(SearchAThing.OpenGlControl,DrawingContext,PixelSize)">RenderClear(OpenGlControl, DrawingContext, PixelSize)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RenderClear(OpenGlControl ctl, DrawingContext context, PixelSize ps)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
+        <td><span class="parametername">ctl</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">DrawingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">PixelSize</span></td>
+        <td><span class="parametername">ps</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_SafeGetAttribLocation_System_UInt32_System_String_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.SafeGetAttribLocation(System.UInt32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L138">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlModelBase_SafeGetAttribLocation_" data-uid="SearchAThing.OpenGlModelBase.SafeGetAttribLocation*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_SafeGetAttribLocation_System_UInt32_System_String_" data-uid="SearchAThing.OpenGlModelBase.SafeGetAttribLocation(System.UInt32,System.String)">SafeGetAttribLocation(UInt32, String)</h4>
+  <div class="markdown level1 summary"><p>retrieve attrib location generating exception if not found.
+example:
+layout(location = 0) in vec3 vPos;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected uint SafeGetAttribLocation(uint program, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">program</span></td>
+        <td><p>shader id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>attrib name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><p>attrib location</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_SafeGetUniformLocation_System_UInt32_System_String_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.SafeGetUniformLocation(System.UInt32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs/#L155">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlModelBase_SafeGetUniformLocation_" data-uid="SearchAThing.OpenGlModelBase.SafeGetUniformLocation*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_SafeGetUniformLocation_System_UInt32_System_String_" data-uid="SearchAThing.OpenGlModelBase.SafeGetUniformLocation(System.UInt32,System.String)">SafeGetUniformLocation(UInt32, String)</h4>
+  <div class="markdown level1 summary"><p>retrieve uniform location generating exception if not found.
+example:
+uniform vec3 uObjCol;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int SafeGetUniformLocation(uint program, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">program</span></td>
+        <td><p>shader id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>uniform name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>uniform location</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase_ToNDC_SearchAThing_OpenGlControl_Vector2_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase.ToNDC(SearchAThing.OpenGlControl%2CVector2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/30-Calc.cs/#L18">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlModelBase_ToNDC_" data-uid="SearchAThing.OpenGlModelBase.ToNDC*"></a>
+  <h4 id="SearchAThing_OpenGlModelBase_ToNDC_SearchAThing_OpenGlControl_Vector2_" data-uid="SearchAThing.OpenGlModelBase.ToNDC(SearchAThing.OpenGlControl,Vector2)">ToNDC(OpenGlControl, Vector2)</h4>
+  <div class="markdown level1 summary"><p>convert given x,y coord ( origin left-bottom ) to normalized device coord</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ToNDC(OpenGlControl ctl, Vector2 pt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
+        <td><span class="parametername">ctl</span></td>
+        <td><p>control to retrieve info about screen size</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>2d point in pixel ( origin left-bottom )</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><p>ndc point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">AvaloniaObject</span>
   </div>
 </article>
           </div>
@@ -423,7 +760,7 @@ this should not required from user side because its called automatically at rend
                     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlModelBase.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlModelBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModelBase.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlModel/30-Calc.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

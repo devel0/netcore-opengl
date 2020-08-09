@@ -1,8 +1,10 @@
 using System;
+using System.Numerics;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media;
 using Window = Avalonia.Controls.Window;
 
 namespace SearchAThing.SciExamples

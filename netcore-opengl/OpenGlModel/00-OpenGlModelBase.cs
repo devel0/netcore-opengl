@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Numerics;
 using System.Linq;
+using static System.Math;
+using Avalonia.Input;
 
 namespace SearchAThing
 {
@@ -27,48 +29,59 @@ namespace SearchAThing
         /// together with Debug=true allow to customize the logging of debug info.
         /// </summary>        
         public DebugProc CustomDebug { get; set; }
+
+        /// <summary>
+        /// double click (ms)
+        /// </summary>
+        public double DoubleClickMs { get; set; } = 250;
     }
 
     public abstract partial class OpenGlModelBase : AvaloniaObject, IDisposable
     {
 
-        #region vars ============================================================================================
+        // vars ============================================================================================
         protected IWindow glContext;
-        protected GL GL;
-        OpenGlModelOptions options;
+        public GL GL;
+        public OpenGlModelOptions Options { get; private set; }
 
         uint fb, texture, renderBuffer;
         object renderLck = new object();
-        PixelSize oldSize = new PixelSize();
 
         HashSet<OpenGlControl> glControls = new HashSet<OpenGlControl>();
-        object glControlsLck = new object();       
+        object glControlsLck = new object();
 
-        #region FocusedCtl
-        private OpenGlControl _FocusedCtl = null;
+        #region FocusedControl
+        private OpenGlControl _FocusedControl = null;
 
-        public static readonly DirectProperty<OpenGlModelBase, OpenGlControl> FocusedCtlProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlModelBase, OpenGlControl>("FocusedCtl", o => o.FocusedCtl, (o, v) => o.FocusedCtl = v);
+        public static readonly DirectProperty<OpenGlModelBase, OpenGlControl> FocusedControlProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlModelBase, OpenGlControl>("FocusedControl", o => o.FocusedControl, (o, v) => o.FocusedControl = v);
 
-        public OpenGlControl FocusedCtl
+        public OpenGlControl FocusedControl
         {
-            get => _FocusedCtl;
-            set
-            {
-                System.Console.WriteLine($"OpenGlModelBase: FocusedCtl");
-                SetAndRaise(FocusedCtlProperty, ref _FocusedCtl, value);
-            }
+            get => _FocusedControl;
+            set => SetAndRaise(FocusedControlProperty, ref _FocusedControl, value);
         }
-        #endregion    
+        #endregion
 
+        #region FocusedControlSize
+        private PixelSize _FocusedControlSize = new PixelSize();
+
+        public static readonly DirectProperty<OpenGlModelBase, PixelSize> FocusedControlSizeProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlModelBase, PixelSize>("FocusedControlSize", o => o.FocusedControlSize, (o, v) => o.FocusedControlSize = v);
+
+        public PixelSize FocusedControlSize
+        {
+            get => _FocusedControlSize;
+            set => SetAndRaise(FocusedControlSizeProperty, ref _FocusedControlSize, value);
+        }
         #endregion
 
         protected OpenGlModelBase(OpenGlModelOptions options = null)
         {
             if (options == null)
-                this.options = new OpenGlModelOptions();
+                this.Options = new OpenGlModelOptions();
             else
-                this.options = options;
+                this.Options = options;
 
             Init();
         }
@@ -101,7 +114,7 @@ namespace SearchAThing
         /// force invalidate visual of associated controls.
         /// this should not required from user side because its called automatically at render end.
         /// </summary>
-        public void Invalidate()
+        public void InvalidateAllControls()
         {
             OpenGlControl[] ary;
             lock (glControlsLck)
@@ -109,22 +122,69 @@ namespace SearchAThing
                 ary = glControls.ToArray();
             }
             foreach (var ctl in ary)
-            {
-                //System.Console.WriteLine($"invalidating ctl:{ctl.Name}");
+            {                
                 ctl.InvalidateVisual();
             }
         }
 
-        #region render ==========================================================================================
-        internal void RenderToGlControl(OpenGlControl ctl, DrawingContext context, PixelSize ps)
+        /// <summary>
+        /// retrieve attrib location generating exception if not found.
+        /// example:
+        /// layout(location = 0) in vec3 vPos;
+        /// </summary>
+        /// <param name="program">shader id</param>
+        /// <param name="name">attrib name</param>
+        /// <returns>attrib location</returns>
+        protected uint SafeGetAttribLocation(uint program, string name)
         {
+            var res = GL.GetAttribLocation(program, name);
+
+            if (res < 0) throw new Exception($"invalid attrib location name [{name}]. it may simplified because not used by vertex shader or flowing through pipeline not used in the fragment shader.");
+
+            return (uint)res;
+        }
+
+        /// <summary>
+        /// retrieve uniform location generating exception if not found.
+        /// example:
+        /// uniform vec3 uObjCol;
+        /// </summary>
+        /// <param name="program">shader id</param>
+        /// <param name="name">uniform name</param>
+        /// <returns>uniform location</returns>
+        protected int SafeGetUniformLocation(uint program, string name)
+        {
+            var res = GL.GetUniformLocation(program, name);
+
+            if (res < 0) throw new Exception($"invalid uniform location name [{name}]. it may simplified because not used by vertex shader or flowing through pipeline not used in the fragment shader.");
+
+            return res;
+        }
+
+        // events ==========================================================================================
+
+        // render ==========================================================================================
+        internal void RenderToGlControl(OpenGlControl ctl, DrawingContext context, PixelSize ps)
+        {            
             lock (renderLck)
             {
                 GL.BindFramebuffer(FramebufferTarget.Framebuffer, fb);
-                if (!oldSize.Equals(ps))
+                if (!FocusedControlSize.Equals(ps))
                 {
                     Resize((uint)ps.Width, (uint)ps.Height);
+                    FocusedControlSize = ps;
                 }
+
+                GL.Enable(EnableCap.DepthTest);
+                GL.Enable(EnableCap.Blend);
+                GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
+
+                RenderClear(ctl, context, ps);
+
+                GL.UseProgram(overlayShader);
+                GL.PolygonMode(GLEnum.FrontAndBack, PolygonMode.Fill);
+                ctl.RenderOverlay(GL, context, ps);
+
                 Render(ctl, context, ps);
 
                 using (var bitmap = new WriteableBitmap(
@@ -153,10 +213,17 @@ namespace SearchAThing
             }
         }
 
-        protected abstract void Render(OpenGlControl ctl, DrawingContext context, PixelSize ps);
-        #endregion
+        protected virtual void RenderClear(OpenGlControl ctl, DrawingContext context, PixelSize ps)
+        {
+            GL.ClearColor(Colors.Black.ToSystemDrawingColor());
+            GL.Clear((uint)(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit));
+        }
 
-        #region init ============================================================================================
+        protected abstract void Render(OpenGlControl ctl, DrawingContext context, PixelSize ps);
+
+        public abstract BBox3D BBox { get; }
+
+        // init ============================================================================================
         void Init()
         {
             #region create gl context
@@ -169,10 +236,10 @@ namespace SearchAThing
                 glContext.IsVisible = false;
                 GL = GL.GetApi(glContext);
 
-                if (options.Debug)
+                if (Options.Debug)
                 {
                     GL.Enable(EnableCap.DebugOutput);
-                    var dProc = options.CustomDebug;
+                    var dProc = Options.CustomDebug;
                     if (dProc == null)
                     {
                         dProc = (_source, _type, id, _severity, length, message, userParam) =>
@@ -189,7 +256,10 @@ namespace SearchAThing
                             if (severity > DebugSeverity.DebugSeverityNotification &&
                                 //
                                 // Severity:Medium - Type:Performance - Source:Api - Id:131218 ===> Program/shader state performance warning: Vertex shader in program 3 is being recompiled based on GL state.
-                                id != 131218)
+                                id != 131218 &&
+                                // Severity:Medium - Type:Performance - Source:Api - Id:131154 ===> Pixel-path performance warning: Pixel transfer is synchronized with 3D rendering.
+                                id != 131154
+                                )
                                 Debugger.Break();
                         };
                     }
@@ -208,6 +278,8 @@ namespace SearchAThing
             {
                 throw new Exception($"can't alloc framebuffer");
             }
+
+            InitBuiltinOverlayShader();
 
             OnInitialized();
         }
@@ -238,7 +310,7 @@ namespace SearchAThing
                 GL.DeleteRenderbuffer(renderBuffer);
             }
 
-            GL.Viewport(0, 0, width, height);            
+            GL.Viewport(0, 0, width, height);
 
             GL.BindTexture(TextureTarget.Texture2D, texture);
             unsafe
@@ -261,7 +333,7 @@ namespace SearchAThing
                 TextureTarget.Texture2D,
                 TextureParameterName.TextureMinFilter,
                 (int)GLEnum.Nearest);
-         
+
             // create new render buffer
             renderBuffer = GL.GenRenderbuffer();
 
@@ -276,7 +348,7 @@ namespace SearchAThing
                 GLEnum.Framebuffer,
                 GLEnum.DepthAttachment,
                 GLEnum.Renderbuffer,
-                renderBuffer);            
+                renderBuffer);
 
             if (firstInit)
             {
@@ -289,9 +361,7 @@ namespace SearchAThing
             }
         }
 
-        #endregion
-
-        #region deinit ==========================================================================================
+        // deinit ==========================================================================================
         public void Dispose()
         {
             OnDeinitialize();
@@ -307,7 +377,6 @@ namespace SearchAThing
         {
 
         }
-        #endregion
 
     }
 

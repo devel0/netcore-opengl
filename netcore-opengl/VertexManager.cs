@@ -3,6 +3,8 @@ using System.Numerics;
 using QuantumConcepts.Formats.StereoLithography;
 using System.Linq;
 using System;
+using Silk.NET.OpenGL;
+using static System.Math;
 
 namespace SearchAThing
 {
@@ -18,16 +20,54 @@ namespace SearchAThing
         /// </summary>        
         public double Tol { get; set; }
 
+        // ------------------- vtx
+
         /// <summary>
         /// list of points
         /// entry i-th is coordinate of indexes i-th
         /// </summary>
-        List<GLVertexWithNormalNfo> vtxs = new List<GLVertexWithNormalNfo>();
+        List<GLVertex> vtxList = new List<GLVertex>();
 
         /// <summary>
-        /// readonly list of all inserted vertexes with normals ( normals updated only after BuildPoints() call )
+        /// list of inserted points
         /// </summary>
-        public IReadOnlyList<GLVertexWithNormalNfo> Vtxs => vtxs;
+        public IReadOnlyList<GLVertex> VtxList => vtxList;
+
+        GLVertex[] vtxs = null;
+
+        /// <summary>
+        /// points that figure indexes relates;
+        /// updated when access to this property if vertex manager is invalidated due to some
+        /// figure operation
+        /// </summary>
+        public GLVertex[] Vtxs
+        {
+            get
+            {
+                if (vtxs == null) vtxs = vtxList.Select(w => w).ToArray();
+                return vtxs;
+            }
+        }
+
+        // --------------------- vtxWithNormal
+
+        GLVertexWithNormal[] vtxWithNormals = null;
+
+        /// <summary>
+        /// list of all inserted vertexes with normals;
+        /// normals updated when access to this property if vertex manager is invalidated due to some
+        /// figure operation
+        /// </summary>
+        public GLVertexWithNormal[] VtxWithNormals
+        {
+            get
+            {
+                if (vtxWithNormals == null) BuildGLVertexWithNormal();
+                return vtxWithNormals;
+            }
+        }
+
+        // -------------
 
         /// <summary>
         /// dictionary key:vertex.ToString() value:vertex index
@@ -83,14 +123,17 @@ namespace SearchAThing
             var str = v.ToString(Tol);
             if (!idxs.TryGetValue(str, out res))
             {
-                res = (uint)vtxs.Count;
-                vtxs.Add(new GLVertexWithNormalNfo { Position = v });
+                res = (uint)vtxList.Count;
+                vtxList.Add(new GLVertex { Position = v });
                 idxs.Add(str, res);
 
                 BBox.ApplyUnion(v);
             }
 
             ++Points;
+
+            vtxs = null;
+            vtxWithNormals = null;
 
             return res;
         }
@@ -192,13 +235,13 @@ namespace SearchAThing
             var cs = new CoordinateSystem3D(line.From, line.To - line.From);
 
             var c = new Circle3D(Tol, cs, w / 2);
-            var sply = c.InscribedPolygon(segmentCount).ToList();
+            var sply = c.InscribedPolygon(Tol, segmentCount).ToList();
             var eply = sply.Select(w => w + line.To - line.From).ToList();
 
-            for (int i = 0; i < sply.Count; ++i)
+            for (int i = 0; i < sply.Count - 1; ++i)
             {
-                var splyNext = i == sply.Count - 1 ? sply[0] : sply[i + 1];
-                var eplyNext = i == eply.Count - 1 ? eply[0] : eply[i + 1];
+                var splyNext = sply[i + 1];
+                var eplyNext = eply[i + 1];
 
                 triangles.Add(new[] { sply[i], splyNext, eply[i] });
                 triangles.Add(new[] { splyNext, eplyNext, eply[i] });
@@ -207,17 +250,17 @@ namespace SearchAThing
             if (closeCaps)
             {
                 // front
-                for (int i = 0; i < sply.Count; ++i)
+                for (int i = 0; i < sply.Count - 1; ++i)
                 {
-                    var splyNext = i == sply.Count - 1 ? sply[0] : sply[i + 1];
+                    var splyNext = sply[i + 1];
 
                     triangles.Add(new[] { line.From, splyNext, sply[i] });
                 }
 
                 // rear
-                for (int i = 0; i < eply.Count; ++i)
+                for (int i = 0; i < eply.Count - 1; ++i)
                 {
-                    var eplyNext = i == eply.Count - 1 ? eply[0] : eply[i + 1];
+                    var eplyNext = eply[i + 1];
 
                     triangles.Add(new[] { line.To, eplyNext, eply[i] });
                 }
@@ -295,6 +338,171 @@ namespace SearchAThing
         }
 
         /// <summary>
+        /// add a line using control screen pixel coordinates xy ( origin at left-bottom )
+        /// </summary>
+        /// <param name="targetControl">ctl to retrieve screen size</param>
+        /// <param name="from">point from</param>
+        /// <param name="to">point to</param>
+        /// <param name="color">color fn</param>
+        /// <param name="pixelWidth">width of line in pixels</param>
+        /// <returns></returns>
+        public (string figureName, IReadOnlyList<uint> idxs) AddLine(
+            OpenGlControl targetControl,
+            Vector2 from, Vector2 to,
+            Func<Vector4> color = null,
+            double pixelWidth = 1.0)
+        {
+            var figureName = Guid.NewGuid().ToString();
+            var idxs = AddLine(targetControl, figureName, from, to, color, pixelWidth);
+            return (figureName, idxs);
+        }
+
+        public IReadOnlyList<uint> AddLine(OpenGlControl targetControl, string figureName,
+            Vector2 from, Vector2 to,
+            Func<Vector4> color = null,
+            double pixelWidth = 1.0)
+        {
+            Func<Vector2, Vector2> toNdc = (v) => targetControl.Model.ToNDC(targetControl, v);
+
+            var pw = pixelWidth;
+
+            var triangles = new List<Vector3D[]>();
+
+            var ll = (from - to).Length();
+            if (ll == 0) throw new System.Exception($"invalid line len 0");
+
+            var f = new Vector3D(from.X, from.Y);
+            var t = new Vector3D(to.X, to.Y);
+            var l = f.LineTo(t);
+            var cs = new CoordinateSystem3D(f, (t - f).RotateAboutZAxis(PI / 2), t - f);
+
+            Vector3D faNdc = toNdc(new Vector3D(-pw / 2, 0).ToWCS(cs).ToVector2());
+            Vector3D fbNdc = toNdc(new Vector3D(pw / 2, 0).ToWCS(cs).ToVector2());
+            Vector3D taNdc = toNdc(new Vector3D(-pw / 2, ll).ToWCS(cs).ToVector2());
+            Vector3D tbNdc = toNdc(new Vector3D(pw / 2, ll).ToWCS(cs).ToVector2());
+
+            triangles.Add(new[] { taNdc, faNdc, fbNdc });
+            triangles.Add(new[] { fbNdc, tbNdc, taNdc });
+
+            return AddTriangles(figureName, triangles, color);
+        }
+
+        /// <summary>
+        /// add an ellipse using control screen pixel coordinates xy ( origin at left-bottom )
+        /// </summary>
+        /// <param name="targetControl">ctl to retrieve screen size</param>
+        /// <param name="center">ellipse center</param>
+        /// <param name="rX">ellipse x radius</param>
+        /// <param name="rY">ellipse y radius</param>
+        /// <param name="color">color function</param>
+        /// <param name="pixelWidth">width of line in pixels</param>
+        /// <param name="flatness">maximum error of ellipse approximation</param>
+        /// <returns></returns>
+        public (string figureName, IReadOnlyList<uint> idxs) AddEllipse(
+            OpenGlControl targetControl,
+            Vector2 center, float rX, float rY,
+            Func<Vector4> color = null,
+            double pixelWidth = 1.0,
+            double flatness = 0.1)
+        {
+            var figureName = Guid.NewGuid().ToString();
+            var idxs = AddEllipse(targetControl, figureName, center, rX, rY, color, pixelWidth, flatness);
+            return (figureName, idxs);
+        }
+
+        public IReadOnlyList<uint> AddEllipse(OpenGlControl targetControl, string figureName,
+            Vector2 center, float rX, float rY,
+            Func<Vector4> color = null,
+            double pixelWidth = 1.0,
+            double flatness = 0.1)
+        {
+            Vector3D c = center;
+            // pts already include last=first
+            var evtxs = Polygon.EllipseToPolygon2D(c, 2 * rX, 2 * rY, 0.5);
+
+            var idxs = new List<uint>();
+            foreach (var v in evtxs.WithPrev())
+            {
+                if (v.prev == null) continue;
+
+                var q = AddLine(targetControl, figureName,
+                    v.prev.ToVector2(), v.item.ToVector2(),
+                    color, pixelWidth);
+                idxs.AddRange(q);
+            }
+
+            return idxs;
+        }
+
+        /// <summary>
+        /// add an circle using control screen pixel coordinates xy ( origin at left-bottom )
+        /// </summary>
+        /// <param name="targetControl">ctl to retrieve screen size</param>
+        /// <param name="center">ellipse center</param>
+        /// <param name="r">circle radius</param>        
+        /// <param name="color">color function</param>
+        /// <param name="pixelWidth">width of line in pixels</param>
+        /// <param name="segmentCount">segment count of inscribed polygon (must >= 3)</param>
+        /// <returns></returns>
+        public (string figureName, IReadOnlyList<uint> idxs) AddCircle(
+            OpenGlControl targetControl,
+            Vector2 center, float r,
+            Func<Vector4> color = null,
+            double pixelWidth = 1.0,
+            int segmentCount = 360)
+        {
+            var figureName = Guid.NewGuid().ToString();
+            var idxs = AddCircle(targetControl, figureName, center, r, color, pixelWidth, segmentCount);
+            return (figureName, idxs);
+        }
+
+        /// <summary>
+        /// add an circle using control screen pixel coordinates xy ( origin at left-bottom )
+        /// </summary>
+        /// <param name="targetControl">ctl to retrieve screen size</param>
+        /// <param name="circle">circle2 info</param>        
+        /// <param name="color">color function</param>
+        /// <param name="pixelWidth">width of line in pixels</param>
+        /// <param name="segmentCount">segment count of inscribed polygon (must >= 3)</param>
+        /// <returns></returns>
+        public (string figureName, IReadOnlyList<uint> idxs) AddCircle(
+            OpenGlControl targetControl,
+            Circle2 circle,
+            Func<Vector4> color = null,
+            double pixelWidth = 1.0,
+            int segmentCount = 360)
+        {
+            var figureName = Guid.NewGuid().ToString();
+            var idxs = AddCircle(targetControl, figureName, circle.Center, circle.Radius, color, pixelWidth, segmentCount);
+            return (figureName, idxs);
+        }
+
+        public IReadOnlyList<uint> AddCircle(OpenGlControl targetControl, string figureName,
+            Vector2 center, float r,
+            Func<Vector4> color = null,
+            double pixelWidth = 1.0,
+            int segmentCount = 360)
+        {
+            Vector3D c = center;
+
+            var evtxs = new Circle3D(Tol, CoordinateSystem3D.WCS.Move(c), r).InscribedPolygon(Tol, segmentCount);
+
+            var idxs = new List<uint>();
+
+            foreach (var v in evtxs.WithNext())
+            {
+                if (v.next == null) break;
+
+                var q = AddLine(targetControl, figureName,
+                    v.item.ToVector2(), v.next.ToVector2(),
+                    color, pixelWidth);
+                idxs.AddRange(q);
+            }
+
+            return idxs;
+        }
+
+        /// <summary>
         /// add given STL facets to the given figureName set
         /// </summary>
         /// <param name="figureName">set name for the triangles</param>        
@@ -308,12 +516,19 @@ namespace SearchAThing
         /// to be called after all figures inserted; this will rebuild vertex normals
         /// </summary>
         /// <returns>array of vertex with normal suitable to use with GL array</returns>
-        public GLVertexWithNormal[] BuildPoints()
+        void BuildGLVertexWithNormal()
         {
-            for (int i = 0; i < vtxs.Count; ++i)
+            //if (vtxWithNormals != null) throw new Exception($"internal error: vtxWithNormal must null before rebuild");
+
+            var vtxWithNormalNfos = new GLVertexWithNormalNfo[vtxList.Count];
+            for (int i = 0; i < vtxList.Count; ++i)
             {
-                var v = vtxs[i];
-                v.Normal = new Vector3();
+                var v = vtxList[i];
+                vtxWithNormalNfos[i] = new GLVertexWithNormalNfo
+                {
+                    Position = v.Position,
+                    Normal = new Vector3()
+                };
             }
 
             foreach (var triFigure in triangleFigures)
@@ -322,11 +537,12 @@ namespace SearchAThing
 
                 for (int i = 0; i < idxs.Count; i += 3)
                 {
-                    var a = vtxs[(int)idxs[i]];
-                    var b = vtxs[(int)idxs[i + 1]];
-                    var c = vtxs[(int)idxs[i + 2]];
+                    var a = vtxWithNormalNfos[(int)idxs[i]];
+                    var b = vtxWithNormalNfos[(int)idxs[i + 1]];
+                    var c = vtxWithNormalNfos[(int)idxs[i + 2]];
 
-                    var norm = ((c.Position - b.Position).CrossProduct(a.Position - b.Position)).Normalized();
+                    //var norm = ((c.Position - b.Position).CrossProduct(a.Position - b.Position)).Normalized();
+                    var norm = Vector3.Normalize(Vector3.Cross(c.Position - b.Position, a.Position - b.Position));
 
                     a.Normal += norm;
                     b.Normal += norm;
@@ -334,13 +550,13 @@ namespace SearchAThing
                 }
             }
 
-            for (int i = 0; i < vtxs.Count; i++)
+            for (int i = 0; i < vtxWithNormalNfos.Length; i++)
             {
-                var v = vtxs[i];
-                v.Normal = Vector3.Normalize(vtxs[i].Normal);
+                var v = vtxWithNormalNfos[i];
+                v.Normal = Vector3.Normalize(vtxWithNormalNfos[i].Normal);
             }
 
-            return vtxs.Select(w => new GLVertexWithNormal { Position = w.Position, Normal = w.Normal }).ToArray();
+            vtxWithNormals = vtxWithNormalNfos.Select(w => w.ToGLVertexWithNormal()).ToArray();
         }
 
         /// <summary>
@@ -406,7 +622,7 @@ namespace SearchAThing
         /// <param name="wireMode">if true draw bbox as lines, faces elsewhere</param>
         /// <param name="_figureName">name of figure</param>
         /// <param name="w">thickness of lines</param>
-        public static void AddToVertexManager(this BBox3D bbox, 
+        public static void AddToVertexManager(this BBox3D bbox,
             VertexManager vtxMgr,
             Func<System.Numerics.Vector4> color = null, bool wireMode = true, string _figureName = null, double w = 1)
         {
