@@ -8,6 +8,7 @@
 
 - [API Documentation](https://devel0.github.io/netcore-opengl/api/SearchAThing.html)
 - [Recent changes](#recent-changes)
+- [Roadmap](#roadmap)
 - [Quickstart](#quickstart)
 - [Keynotes](#keynotes)
 - [Examples](#examples)
@@ -16,6 +17,11 @@
 <hr/>
 
 ## Recent changes
+
+## Roadmap
+
+- ray world to compute 3d wcs coord over mouse xy
+- pan
 
 ## Quickstart
 
