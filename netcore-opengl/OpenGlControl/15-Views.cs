@@ -69,7 +69,7 @@ namespace SearchAThing
             }
             else
             {
-                CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;                
+                CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;
 
                 var os = OrthoBBox.Size;
                 var ar = Bounds.Size.AspectRatio;
@@ -117,8 +117,8 @@ namespace SearchAThing
             {
                 var obbox = OrthoBBox;
                 var os = obbox.Size;
-                
-                var obboxAr = obbox.Size.X / obbox.Size.Y;                
+
+                var obboxAr = obbox.Size.X / obbox.Size.Y;
 
                 var minx = obbox.Min.X;
                 var maxx = obbox.Max.X;
@@ -126,7 +126,7 @@ namespace SearchAThing
 
                 var miny = obbox.Min.Y;
                 var maxy = obbox.Max.Y;
-                var middley = (miny + maxy) / 2;                
+                var middley = (miny + maxy) / 2;
 
                 var w = maxx - minx;
                 var h = maxy - miny;
@@ -182,10 +182,10 @@ namespace SearchAThing
         // views
 
         public void ViewTop()
-        {            
+        {
             var bbox = this.Model.BBox;
             if (bbox.IsEmpty) return;
-            
+
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.Identity;
             UpdateYawPitchRollFromRotationMatrix();
@@ -199,7 +199,9 @@ namespace SearchAThing
             if (bbox.IsEmpty) return;
 
             Translation = -bbox.Middle;
-            RotationMatrix = Matrix4x4.CreateRotationY((float)PI / 2);
+            RotationMatrix = 
+                Matrix4x4.CreateRotationZ(-(float)PI / 2) *
+                Matrix4x4.CreateRotationX(-(float)PI / 2);
             UpdateYawPitchRollFromRotationMatrix();
             CameraTop(bbox);
             ZoomFit();
@@ -223,7 +225,9 @@ namespace SearchAThing
             if (bbox.IsEmpty) return;
 
             Translation = -bbox.Middle;
-            RotationMatrix = Matrix4x4.CreateRotationY(-(float)PI / 2);
+            RotationMatrix = 
+                Matrix4x4.CreateRotationZ((float)PI / 2) *
+                Matrix4x4.CreateRotationX(-(float)PI / 2);
             UpdateYawPitchRollFromRotationMatrix();
             CameraTop(bbox);
             ZoomFit();
@@ -245,7 +249,7 @@ namespace SearchAThing
         {
             var bbox = Model.BBox;
             if (bbox.IsEmpty) return;
-            
+
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.CreateFromYawPitchRoll((float)PI, 0, 0);
             UpdateYawPitchRollFromRotationMatrix();
