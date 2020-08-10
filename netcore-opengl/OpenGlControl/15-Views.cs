@@ -182,8 +182,10 @@ namespace SearchAThing
         // views
 
         public void ViewTop()
-        {
+        {            
             var bbox = this.Model.BBox;
+            if (bbox.IsEmpty) return;
+            
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.Identity;
             UpdateYawPitchRollFromRotationMatrix();
@@ -194,6 +196,8 @@ namespace SearchAThing
         public void ViewLeft()
         {
             var bbox = this.Model.BBox;
+            if (bbox.IsEmpty) return;
+
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.CreateRotationY((float)PI / 2);
             UpdateYawPitchRollFromRotationMatrix();
@@ -204,6 +208,8 @@ namespace SearchAThing
         public void ViewFront()
         {
             var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.CreateRotationX(-(float)PI / 2);
             UpdateYawPitchRollFromRotationMatrix();
@@ -214,6 +220,8 @@ namespace SearchAThing
         public void ViewRight()
         {
             var bbox = this.Model.BBox;
+            if (bbox.IsEmpty) return;
+
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.CreateRotationY(-(float)PI / 2);
             UpdateYawPitchRollFromRotationMatrix();
@@ -224,6 +232,8 @@ namespace SearchAThing
         public void ViewBack()
         {
             var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.CreateFromYawPitchRoll(0, -(float)PI / 2, -(float)PI);
             UpdateYawPitchRollFromRotationMatrix();
@@ -234,6 +244,8 @@ namespace SearchAThing
         public void ViewBottom()
         {
             var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+            
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.CreateFromYawPitchRoll((float)PI, 0, 0);
             UpdateYawPitchRollFromRotationMatrix();
