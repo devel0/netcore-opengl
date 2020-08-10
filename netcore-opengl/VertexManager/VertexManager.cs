@@ -275,10 +275,10 @@ namespace SearchAThing
         }
 
         /// <summary>
-        /// retrieve figure associated color
+        /// retrieve figure associated color (r,g,b,a)
         /// </summary>
         /// <param name="figureName">figure name to retrieve associated color</param>
-        /// <returns>color associated to given figure name or null if not specified</returns>
+        /// <returns>color (r,g,b,a) associated to given figure name or null if not specified</returns>
         public Vector4? GetColor(string figureName)
         {
             Func<Vector4> fn;
