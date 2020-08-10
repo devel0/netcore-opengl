@@ -15,6 +15,63 @@ namespace SearchAThing
     public partial class VertexManager
     {
 
+        public (string figureName, IReadOnlyList<uint> idxs) AddPolyLine(IEnumerable<Vector3D> pts,
+            Func<Vector4> color = null,
+            double w = 1.0, int segmentCount = 8, bool closeCaps = true)
+        {
+            var figureName = Guid.NewGuid().ToString();
+            var idxs = AddPolyLine(figureName, pts, color, w, segmentCount, closeCaps);
+            return (figureName, idxs);
+        }
+
+        public IReadOnlyList<uint> AddPolyLine(string figureName, IEnumerable<Vector3D> pts,
+            Func<Vector4> color = null,
+            double w = 1.0, int segmentCount = 8, bool closeCaps = true)
+        {
+            var triangles = new List<Vector3D[]>();
+
+            foreach (var p in pts.WithNext())
+            {
+                if (p.next == null) continue;
+
+                var cs = new CoordinateSystem3D(p.item, p.next - p.item);
+
+                var c = new Circle3D(Tol, cs, w / 2);
+                var sply = c.InscribedPolygon(Tol, segmentCount).ToList();
+                var eply = sply.Select(w => w + p.next - p.item).ToList();
+
+                for (int i = 0; i < sply.Count - 1; ++i)
+                {
+                    var splyNext = sply[i + 1];
+                    var eplyNext = eply[i + 1];
+
+                    triangles.Add(new[] { sply[i], splyNext, eply[i] });
+                    triangles.Add(new[] { splyNext, eplyNext, eply[i] });
+                }
+            }
+
+            // if (closeCaps)
+            // {
+            //     // front
+            //     for (int i = 0; i < sply.Count - 1; ++i)
+            //     {
+            //         var splyNext = sply[i + 1];
+
+            //         triangles.Add(new[] { line.From, splyNext, sply[i] });
+            //     }
+
+            //     // rear
+            //     for (int i = 0; i < eply.Count - 1; ++i)
+            //     {
+            //         var eplyNext = eply[i + 1];
+
+            //         triangles.Add(new[] { line.To, eplyNext, eply[i] });
+            //     }
+            // }
+
+            return AddTriangles(figureName, triangles, color);
+        }
+
         /// <summary>
         /// creates triangles for a fat line (smoothed using circle polygonalized).
         /// autoallocate random figurename.
