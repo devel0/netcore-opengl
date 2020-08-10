@@ -8,7 +8,7 @@ namespace SearchAThing
 {
 
     public static partial class OpenGlExt
-    {        
+    {
 
         /// <summary>
         /// convert color to vec4 (r,g,b,a)
@@ -22,6 +22,15 @@ namespace SearchAThing
             (float)color.B / 255f,
             alpha.HasValue ? alpha.Value : (float)color.A / 255f);
 
+
+        /// <summary>
+        /// convert given Vector4 rgba into Color type
+        /// </summary>
+        /// <param name="rgba">color input as Vector4 rgba</param>
+        /// <returns>equivalent color of Color type</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Drawing.Color ToSystemDrawingColor(this Vector4 rgba) =>
+            System.Drawing.Color.FromArgb((byte)(rgba.X * 255f), (byte)(rgba.Y * 255f), (byte)(rgba.Z * 255f), (byte)(rgba.W * 255f));
 
         /// <summary>
         /// convert avalonia color to system.drawing.color
@@ -53,7 +62,7 @@ namespace SearchAThing
 
                 return res;
             }
-            
+
             return new Vector3(rndColor(), rndColor(), rndColor());
         }
 
