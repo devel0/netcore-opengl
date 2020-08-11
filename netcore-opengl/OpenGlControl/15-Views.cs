@@ -199,7 +199,7 @@ namespace SearchAThing
             if (bbox.IsEmpty) return;
 
             Translation = -bbox.Middle;
-            RotationMatrix = 
+            RotationMatrix =
                 Matrix4x4.CreateRotationZ(-(float)PI / 2) *
                 Matrix4x4.CreateRotationX(-(float)PI / 2);
             UpdateYawPitchRollFromRotationMatrix();
@@ -225,7 +225,7 @@ namespace SearchAThing
             if (bbox.IsEmpty) return;
 
             Translation = -bbox.Middle;
-            RotationMatrix = 
+            RotationMatrix =
                 Matrix4x4.CreateRotationZ((float)PI / 2) *
                 Matrix4x4.CreateRotationX(-(float)PI / 2);
             UpdateYawPitchRollFromRotationMatrix();
@@ -253,6 +253,23 @@ namespace SearchAThing
             Translation = -bbox.Middle;
             RotationMatrix = Matrix4x4.CreateFromYawPitchRoll((float)PI, 0, 0);
             UpdateYawPitchRollFromRotationMatrix();
+            CameraTop(bbox);
+            ZoomFit();
+        }
+
+        /// <summary>
+        /// set view using rotation from yaw,pitch,roll
+        /// </summary>
+        /// <param name="yawDeg">rotation around Yaxis</param>
+        /// <param name="pitchDeg">rotation around Xaxis</param>
+        /// <param name="rollDeg">rotation around Zaxis</param>
+        public void ViewFromYawPitchRoll(float yawDeg, float pitchDeg, float rollDeg)
+        {
+            var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+
+            Translation = -bbox.Middle;
+            RotationMatrix = Matrix4x4.CreateFromYawPitchRoll(yawDeg.ToRad(), pitchDeg.ToRad(), rollDeg.ToRad());
             CameraTop(bbox);
             ZoomFit();
         }
