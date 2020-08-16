@@ -18,9 +18,10 @@
     <PackageReference Include="Avalonia" Version="0.10.0-preview2"/>
     <PackageReference Include="Avalonia.Desktop" Version="0.10.0-preview2"/>
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview2"/>
-    <PackageReference Include="netcore-desktop" Version="0.1.2"/><!-- <ProjectReference Include="..\..\netcore-desktop\netcore-desktop\netcore-desktop.csproj" /> -->
-    <PackageReference Include="netcore-sci" Version="1.12.2"/>
-    <!-- <ProjectReference Include="..\..\netcore-sci\netcore-sci\netcore-sci.csproj" /> -->
+    <!-- <PackageReference Include="netcore-desktop" Version="0.1.2"/ -->
+    <ProjectReference Include="..\..\netcore-desktop\netcore-desktop\netcore-desktop.csproj" />
+    <!-- <PackageReference Include="netcore-sci" Version="1.12.2"/> -->
+    <ProjectReference Include="..\..\netcore-sci\netcore-sci\netcore-sci.csproj" />
     <PackageReference Include="QuantumConcepts.Formats.STL.netcore" Version="1.3.1"/>
     <PackageReference Include="Silk.NET" Version="1.4.0"/>
   </ItemGroup>

@@ -15,6 +15,15 @@ namespace SearchAThing
     public partial class VertexManager
     {
 
+        /// <summary>
+        /// add an cuboid to the given figure name
+        /// </summary>        
+        /// <param name="cs">cs at base center of cuboid</param>
+        /// <param name="length">length along cs z axis of the hollow rectangle</param>
+        /// <param name="xLen">len of the rect along cs x axis</param>        
+        /// <param name="yLen">len of rect along cs y axis</param>        
+        /// <param name="color">color</param>
+        /// <returns>array of indexes</returns>
         public (string figureName, IReadOnlyList<uint> idxs) AddCuboid(CoordinateSystem3D cs, double length,
             double xLen, double yLen,
             Func<Vector4> color = null)
@@ -28,7 +37,7 @@ namespace SearchAThing
         /// add an cuboid to the given figure name
         /// </summary>
         /// <param name="figureName">figure name</param>
-        /// <param name="cs">cs at base of cuboid</param>
+        /// <param name="cs">cs at base center of cuboid</param>
         /// <param name="length">length along cs z axis of the hollow rectangle</param>
         /// <param name="xLen">len of the rect along cs x axis</param>        
         /// <param name="yLen">len of rect along cs y axis</param>        
