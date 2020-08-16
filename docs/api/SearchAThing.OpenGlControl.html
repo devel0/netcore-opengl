@@ -835,7 +835,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CoordinateSystem3D</span></td>
+        <td><span class="xref">SearchAThing.CoordinateSystem3D</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1436,7 +1436,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BBox3D</span></td>
+        <td><span class="xref">SearchAThing.BBox3D</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1948,7 +1948,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlControl_SetViewProjection_System_Boolean_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlControl.SetViewProjection(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L244">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L277">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlControl_SetViewProjection_" data-uid="SearchAThing.OpenGlControl.SetViewProjection*"></a>
   <h4 id="SearchAThing_OpenGlControl_SetViewProjection_System_Boolean_" data-uid="SearchAThing.OpenGlControl.SetViewProjection(System.Boolean)">SetViewProjection(Boolean)</h4>
@@ -1980,7 +1980,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlControl_ViewBack.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlControl.ViewBack%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L224">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L236">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlControl_ViewBack_" data-uid="SearchAThing.OpenGlControl.ViewBack*"></a>
   <h4 id="SearchAThing_OpenGlControl_ViewBack" data-uid="SearchAThing.OpenGlControl.ViewBack">ViewBack()</h4>
@@ -1995,7 +1995,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlControl_ViewBottom.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlControl.ViewBottom%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L234">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L248">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlControl_ViewBottom_" data-uid="SearchAThing.OpenGlControl.ViewBottom*"></a>
   <h4 id="SearchAThing_OpenGlControl_ViewBottom" data-uid="SearchAThing.OpenGlControl.ViewBottom">ViewBottom()</h4>
@@ -2007,10 +2007,56 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlControl_ViewFromYawPitchRoll_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L266">View Source</a>
+  </span>
+  <a id="SearchAThing_OpenGlControl_ViewFromYawPitchRoll_" data-uid="SearchAThing.OpenGlControl.ViewFromYawPitchRoll*"></a>
+  <h4 id="SearchAThing_OpenGlControl_ViewFromYawPitchRoll_System_Single_System_Single_System_Single_" data-uid="SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single,System.Single,System.Single)">ViewFromYawPitchRoll(Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>set view using rotation from yaw,pitch,roll</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ViewFromYawPitchRoll(float yawDeg, float pitchDeg, float rollDeg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">yawDeg</span></td>
+        <td><p>rotation around Yaxis</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">pitchDeg</span></td>
+        <td><p>rotation around Xaxis</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rollDeg</span></td>
+        <td><p>rotation around Zaxis</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlControl_ViewFront.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlControl.ViewFront%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L204">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L210">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlControl_ViewFront_" data-uid="SearchAThing.OpenGlControl.ViewFront*"></a>
   <h4 id="SearchAThing_OpenGlControl_ViewFront" data-uid="SearchAThing.OpenGlControl.ViewFront">ViewFront()</h4>
@@ -2025,7 +2071,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlControl_ViewLeft.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlControl.ViewLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L194">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L196">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlControl_ViewLeft_" data-uid="SearchAThing.OpenGlControl.ViewLeft*"></a>
   <h4 id="SearchAThing_OpenGlControl_ViewLeft" data-uid="SearchAThing.OpenGlControl.ViewLeft">ViewLeft()</h4>
@@ -2040,7 +2086,7 @@
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_OpenGlControl_ViewRight.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGlControl.ViewRight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L214">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/OpenGlControl/15-Views.cs/#L222">View Source</a>
   </span>
   <a id="SearchAThing_OpenGlControl_ViewRight_" data-uid="SearchAThing.OpenGlControl.ViewRight*"></a>
   <h4 id="SearchAThing_OpenGlControl_ViewRight" data-uid="SearchAThing.OpenGlControl.ViewRight">ViewRight()</h4>

@@ -827,6 +827,19 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ViewBottom
   nameWithType: OpenGlControl.ViewBottom
+- uid: SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single,System.Single,System.Single)
+  name: ViewFromYawPitchRoll(Single, Single, Single)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFromYawPitchRoll_System_Single_System_Single_System_Single_
+  commentId: M:SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single,System.Single,System.Single)
+  fullName: SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single, System.Single, System.Single)
+  nameWithType: OpenGlControl.ViewFromYawPitchRoll(Single, Single, Single)
+- uid: SearchAThing.OpenGlControl.ViewFromYawPitchRoll*
+  name: ViewFromYawPitchRoll
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFromYawPitchRoll_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewFromYawPitchRoll
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewFromYawPitchRoll
+  nameWithType: OpenGlControl.ViewFromYawPitchRoll
 - uid: SearchAThing.OpenGlControl.ViewFront
   name: ViewFront()
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFront
@@ -937,13 +950,13 @@ references:
   commentId: T:SearchAThing.OpenGlExt
   fullName: SearchAThing.OpenGlExt
   nameWithType: OpenGlExt
-- uid: SearchAThing.OpenGlExt.AddToVertexManager(BBox3D,SearchAThing.VertexManager,Func{System.Numerics.Vector4},System.Boolean,System.String,System.Double)
+- uid: SearchAThing.OpenGlExt.AddToVertexManager(SearchAThing.BBox3D,SearchAThing.VertexManager,Func{System.Numerics.Vector4},System.Boolean,System.String,System.Double)
   name: AddToVertexManager(BBox3D, VertexManager, Func<System.Numerics.Vector4>, Boolean, String, Double)
-  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_AddToVertexManager_BBox3D_SearchAThing_VertexManager_Func_System_Numerics_Vector4__System_Boolean_System_String_System_Double_
-  commentId: M:SearchAThing.OpenGlExt.AddToVertexManager(BBox3D,SearchAThing.VertexManager,Func{System.Numerics.Vector4},System.Boolean,System.String,System.Double)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_AddToVertexManager_SearchAThing_BBox3D_SearchAThing_VertexManager_Func_System_Numerics_Vector4__System_Boolean_System_String_System_Double_
+  commentId: M:SearchAThing.OpenGlExt.AddToVertexManager(SearchAThing.BBox3D,SearchAThing.VertexManager,Func{System.Numerics.Vector4},System.Boolean,System.String,System.Double)
   name.vb: AddToVertexManager(BBox3D, VertexManager, Func(Of System.Numerics.Vector4), Boolean, String, Double)
-  fullName: SearchAThing.OpenGlExt.AddToVertexManager(BBox3D, SearchAThing.VertexManager, Func<System.Numerics.Vector4>, System.Boolean, System.String, System.Double)
-  fullName.vb: SearchAThing.OpenGlExt.AddToVertexManager(BBox3D, SearchAThing.VertexManager, Func(Of System.Numerics.Vector4), System.Boolean, System.String, System.Double)
+  fullName: SearchAThing.OpenGlExt.AddToVertexManager(SearchAThing.BBox3D, SearchAThing.VertexManager, Func<System.Numerics.Vector4>, System.Boolean, System.String, System.Double)
+  fullName.vb: SearchAThing.OpenGlExt.AddToVertexManager(SearchAThing.BBox3D, SearchAThing.VertexManager, Func(Of System.Numerics.Vector4), System.Boolean, System.String, System.Double)
   nameWithType: OpenGlExt.AddToVertexManager(BBox3D, VertexManager, Func<System.Numerics.Vector4>, Boolean, String, Double)
   nameWithType.vb: OpenGlExt.AddToVertexManager(BBox3D, VertexManager, Func(Of System.Numerics.Vector4), Boolean, String, Double)
 - uid: SearchAThing.OpenGlExt.AddToVertexManager*
@@ -953,11 +966,11 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlExt.AddToVertexManager
   nameWithType: OpenGlExt.AddToVertexManager
-- uid: SearchAThing.OpenGlExt.ToGLTriangleVertex(Vector3D)
+- uid: SearchAThing.OpenGlExt.ToGLTriangleVertex(SearchAThing.Vector3D)
   name: ToGLTriangleVertex(Vector3D)
-  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToGLTriangleVertex_Vector3D_
-  commentId: M:SearchAThing.OpenGlExt.ToGLTriangleVertex(Vector3D)
-  fullName: SearchAThing.OpenGlExt.ToGLTriangleVertex(Vector3D)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToGLTriangleVertex_SearchAThing_Vector3D_
+  commentId: M:SearchAThing.OpenGlExt.ToGLTriangleVertex(SearchAThing.Vector3D)
+  fullName: SearchAThing.OpenGlExt.ToGLTriangleVertex(SearchAThing.Vector3D)
   nameWithType: OpenGlExt.ToGLTriangleVertex(Vector3D)
 - uid: SearchAThing.OpenGlExt.ToGLTriangleVertex*
   name: ToGLTriangleVertex
@@ -972,6 +985,12 @@ references:
   commentId: M:SearchAThing.OpenGlExt.ToSystemDrawingColor(Color)
   fullName: SearchAThing.OpenGlExt.ToSystemDrawingColor(Color)
   nameWithType: OpenGlExt.ToSystemDrawingColor(Color)
+- uid: SearchAThing.OpenGlExt.ToSystemDrawingColor(Vector4)
+  name: ToSystemDrawingColor(Vector4)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToSystemDrawingColor_Vector4_
+  commentId: M:SearchAThing.OpenGlExt.ToSystemDrawingColor(Vector4)
+  fullName: SearchAThing.OpenGlExt.ToSystemDrawingColor(Vector4)
+  nameWithType: OpenGlExt.ToSystemDrawingColor(Vector4)
 - uid: SearchAThing.OpenGlExt.ToSystemDrawingColor*
   name: ToSystemDrawingColor
   href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToSystemDrawingColor_
@@ -1720,6 +1739,56 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.AddCircle
   nameWithType: VertexManager.AddCircle
+- uid: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})
+  name: AddCuboid(CoordinateSystem3D, Double, Double, Double, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCuboid_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})
+  name.vb: AddCuboid(CoordinateSystem3D, Double, Double, Double, Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, Func(Of Vector4))
+  nameWithType: VertexManager.AddCuboid(CoordinateSystem3D, Double, Double, Double, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddCuboid(CoordinateSystem3D, Double, Double, Double, Func(Of Vector4))
+- uid: SearchAThing.VertexManager.AddCuboid(System.String,SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})
+  name: AddCuboid(String, CoordinateSystem3D, Double, Double, Double, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCuboid_System_String_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddCuboid(System.String,SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})
+  name.vb: AddCuboid(String, CoordinateSystem3D, Double, Double, Double, Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddCuboid(System.String, SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddCuboid(System.String, SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, Func(Of Vector4))
+  nameWithType: VertexManager.AddCuboid(String, CoordinateSystem3D, Double, Double, Double, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddCuboid(String, CoordinateSystem3D, Double, Double, Double, Func(Of Vector4))
+- uid: SearchAThing.VertexManager.AddCuboid*
+  name: AddCuboid
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCuboid_
+  commentId: Overload:SearchAThing.VertexManager.AddCuboid
+  isSpec: "True"
+  fullName: SearchAThing.VertexManager.AddCuboid
+  nameWithType: VertexManager.AddCuboid
+- uid: SearchAThing.VertexManager.AddCylinder(SearchAThing.Line3D,System.Double,Func{Vector4},System.Int32,System.Boolean)
+  name: AddCylinder(Line3D, Double, Func<Vector4>, Int32, Boolean)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCylinder_SearchAThing_Line3D_System_Double_Func_Vector4__System_Int32_System_Boolean_
+  commentId: M:SearchAThing.VertexManager.AddCylinder(SearchAThing.Line3D,System.Double,Func{Vector4},System.Int32,System.Boolean)
+  name.vb: AddCylinder(Line3D, Double, Func(Of Vector4), Int32, Boolean)
+  fullName: SearchAThing.VertexManager.AddCylinder(SearchAThing.Line3D, System.Double, Func<Vector4>, System.Int32, System.Boolean)
+  fullName.vb: SearchAThing.VertexManager.AddCylinder(SearchAThing.Line3D, System.Double, Func(Of Vector4), System.Int32, System.Boolean)
+  nameWithType: VertexManager.AddCylinder(Line3D, Double, Func<Vector4>, Int32, Boolean)
+  nameWithType.vb: VertexManager.AddCylinder(Line3D, Double, Func(Of Vector4), Int32, Boolean)
+- uid: SearchAThing.VertexManager.AddCylinder(System.String,SearchAThing.Line3D,System.Double,Func{Vector4},System.Int32,System.Boolean)
+  name: AddCylinder(String, Line3D, Double, Func<Vector4>, Int32, Boolean)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCylinder_System_String_SearchAThing_Line3D_System_Double_Func_Vector4__System_Int32_System_Boolean_
+  commentId: M:SearchAThing.VertexManager.AddCylinder(System.String,SearchAThing.Line3D,System.Double,Func{Vector4},System.Int32,System.Boolean)
+  name.vb: AddCylinder(String, Line3D, Double, Func(Of Vector4), Int32, Boolean)
+  fullName: SearchAThing.VertexManager.AddCylinder(System.String, SearchAThing.Line3D, System.Double, Func<Vector4>, System.Int32, System.Boolean)
+  fullName.vb: SearchAThing.VertexManager.AddCylinder(System.String, SearchAThing.Line3D, System.Double, Func(Of Vector4), System.Int32, System.Boolean)
+  nameWithType: VertexManager.AddCylinder(String, Line3D, Double, Func<Vector4>, Int32, Boolean)
+  nameWithType.vb: VertexManager.AddCylinder(String, Line3D, Double, Func(Of Vector4), Int32, Boolean)
+- uid: SearchAThing.VertexManager.AddCylinder*
+  name: AddCylinder
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCylinder_
+  commentId: Overload:SearchAThing.VertexManager.AddCylinder
+  isSpec: "True"
+  fullName: SearchAThing.VertexManager.AddCylinder
+  nameWithType: VertexManager.AddCylinder
 - uid: SearchAThing.VertexManager.AddEllipse(SearchAThing.OpenGlControl,System.String,Vector2,System.Single,System.Single,Func{Vector4},System.Double,System.Double)
   name: AddEllipse(OpenGlControl, String, Vector2, Single, Single, Func<Vector4>, Double, Double)
   href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddEllipse_SearchAThing_OpenGlControl_System_String_Vector2_System_Single_System_Single_Func_Vector4__System_Double_System_Double_
@@ -1761,13 +1830,13 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.AddFaces
   nameWithType: VertexManager.AddFaces
-- uid: SearchAThing.VertexManager.AddFigures(System.String,IEnumerable{Vector3D[]},Func{Vector4})
+- uid: SearchAThing.VertexManager.AddFigures(System.String,IEnumerable{SearchAThing.Vector3D[]},Func{Vector4})
   name: AddFigures(String, IEnumerable<Vector3D[]>, Func<Vector4>)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddFigures_System_String_IEnumerable_Vector3D____Func_Vector4__
-  commentId: M:SearchAThing.VertexManager.AddFigures(System.String,IEnumerable{Vector3D[]},Func{Vector4})
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddFigures_System_String_IEnumerable_SearchAThing_Vector3D____Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddFigures(System.String,IEnumerable{SearchAThing.Vector3D[]},Func{Vector4})
   name.vb: AddFigures(String, IEnumerable(Of Vector3D()), Func(Of Vector4))
-  fullName: SearchAThing.VertexManager.AddFigures(System.String, IEnumerable<Vector3D[]>, Func<Vector4>)
-  fullName.vb: SearchAThing.VertexManager.AddFigures(System.String, IEnumerable(Of Vector3D()), Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddFigures(System.String, IEnumerable<SearchAThing.Vector3D[]>, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddFigures(System.String, IEnumerable(Of SearchAThing.Vector3D()), Func(Of Vector4))
   nameWithType: VertexManager.AddFigures(String, IEnumerable<Vector3D[]>, Func<Vector4>)
   nameWithType.vb: VertexManager.AddFigures(String, IEnumerable(Of Vector3D()), Func(Of Vector4))
 - uid: SearchAThing.VertexManager.AddFigures*
@@ -1777,13 +1846,38 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.AddFigures
   nameWithType: VertexManager.AddFigures
-- uid: SearchAThing.VertexManager.AddLine(Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
+- uid: SearchAThing.VertexManager.AddHollowRectangle(SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,System.Double,System.Double,Func{Vector4})
+  name: AddHollowRectangle(CoordinateSystem3D, Double, Double, Double, Double, Double, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddHollowRectangle_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_System_Double_System_Double_Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddHollowRectangle(SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,System.Double,System.Double,Func{Vector4})
+  name.vb: AddHollowRectangle(CoordinateSystem3D, Double, Double, Double, Double, Double, Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddHollowRectangle(SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, System.Double, System.Double, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddHollowRectangle(SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, System.Double, System.Double, Func(Of Vector4))
+  nameWithType: VertexManager.AddHollowRectangle(CoordinateSystem3D, Double, Double, Double, Double, Double, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddHollowRectangle(CoordinateSystem3D, Double, Double, Double, Double, Double, Func(Of Vector4))
+- uid: SearchAThing.VertexManager.AddHollowRectangle(System.String,SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,System.Double,System.Double,Func{Vector4})
+  name: AddHollowRectangle(String, CoordinateSystem3D, Double, Double, Double, Double, Double, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddHollowRectangle_System_String_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_System_Double_System_Double_Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddHollowRectangle(System.String,SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,System.Double,System.Double,Func{Vector4})
+  name.vb: AddHollowRectangle(String, CoordinateSystem3D, Double, Double, Double, Double, Double, Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddHollowRectangle(System.String, SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, System.Double, System.Double, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddHollowRectangle(System.String, SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, System.Double, System.Double, Func(Of Vector4))
+  nameWithType: VertexManager.AddHollowRectangle(String, CoordinateSystem3D, Double, Double, Double, Double, Double, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddHollowRectangle(String, CoordinateSystem3D, Double, Double, Double, Double, Double, Func(Of Vector4))
+- uid: SearchAThing.VertexManager.AddHollowRectangle*
+  name: AddHollowRectangle
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddHollowRectangle_
+  commentId: Overload:SearchAThing.VertexManager.AddHollowRectangle
+  isSpec: "True"
+  fullName: SearchAThing.VertexManager.AddHollowRectangle
+  nameWithType: VertexManager.AddHollowRectangle
+- uid: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
   name: AddLine(Line3D, Func<Vector4>, Double, Int32, Boolean)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_
-  commentId: M:SearchAThing.VertexManager.AddLine(Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_
+  commentId: M:SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
   name.vb: AddLine(Line3D, Func(Of Vector4), Double, Int32, Boolean)
-  fullName: SearchAThing.VertexManager.AddLine(Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean)
-  fullName.vb: SearchAThing.VertexManager.AddLine(Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean)
+  fullName: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean)
+  fullName.vb: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean)
   nameWithType: VertexManager.AddLine(Line3D, Func<Vector4>, Double, Int32, Boolean)
   nameWithType.vb: VertexManager.AddLine(Line3D, Func(Of Vector4), Double, Int32, Boolean)
 - uid: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl,System.String,Vector2,Vector2,Func{Vector4},System.Double)
@@ -1804,13 +1898,13 @@ references:
   fullName.vb: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl, Vector2, Vector2, Func(Of Vector4), System.Double)
   nameWithType: VertexManager.AddLine(OpenGlControl, Vector2, Vector2, Func<Vector4>, Double)
   nameWithType.vb: VertexManager.AddLine(OpenGlControl, Vector2, Vector2, Func(Of Vector4), Double)
-- uid: SearchAThing.VertexManager.AddLine(System.String,Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
+- uid: SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
   name: AddLine(String, Line3D, Func<Vector4>, Double, Int32, Boolean)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_System_String_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_
-  commentId: M:SearchAThing.VertexManager.AddLine(System.String,Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_
+  commentId: M:SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
   name.vb: AddLine(String, Line3D, Func(Of Vector4), Double, Int32, Boolean)
-  fullName: SearchAThing.VertexManager.AddLine(System.String, Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean)
-  fullName.vb: SearchAThing.VertexManager.AddLine(System.String, Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean)
+  fullName: SearchAThing.VertexManager.AddLine(System.String, SearchAThing.Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean)
+  fullName.vb: SearchAThing.VertexManager.AddLine(System.String, SearchAThing.Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean)
   nameWithType: VertexManager.AddLine(String, Line3D, Func<Vector4>, Double, Int32, Boolean)
   nameWithType.vb: VertexManager.AddLine(String, Line3D, Func(Of Vector4), Double, Int32, Boolean)
 - uid: SearchAThing.VertexManager.AddLine*
@@ -1820,13 +1914,38 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.AddLine
   nameWithType: VertexManager.AddLine
-- uid: SearchAThing.VertexManager.AddSquaredLine(System.String,Line3D,Func{Vector4},System.Double)
+- uid: SearchAThing.VertexManager.AddPolyLine(IEnumerable{SearchAThing.Vector3D},Func{Vector4},System.Double,System.Int32,System.Boolean)
+  name: AddPolyLine(IEnumerable<Vector3D>, Func<Vector4>, Double, Int32, Boolean)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddPolyLine_IEnumerable_SearchAThing_Vector3D__Func_Vector4__System_Double_System_Int32_System_Boolean_
+  commentId: M:SearchAThing.VertexManager.AddPolyLine(IEnumerable{SearchAThing.Vector3D},Func{Vector4},System.Double,System.Int32,System.Boolean)
+  name.vb: AddPolyLine(IEnumerable(Of Vector3D), Func(Of Vector4), Double, Int32, Boolean)
+  fullName: SearchAThing.VertexManager.AddPolyLine(IEnumerable<SearchAThing.Vector3D>, Func<Vector4>, System.Double, System.Int32, System.Boolean)
+  fullName.vb: SearchAThing.VertexManager.AddPolyLine(IEnumerable(Of SearchAThing.Vector3D), Func(Of Vector4), System.Double, System.Int32, System.Boolean)
+  nameWithType: VertexManager.AddPolyLine(IEnumerable<Vector3D>, Func<Vector4>, Double, Int32, Boolean)
+  nameWithType.vb: VertexManager.AddPolyLine(IEnumerable(Of Vector3D), Func(Of Vector4), Double, Int32, Boolean)
+- uid: SearchAThing.VertexManager.AddPolyLine(System.String,IEnumerable{SearchAThing.Vector3D},Func{Vector4},System.Double,System.Int32,System.Boolean)
+  name: AddPolyLine(String, IEnumerable<Vector3D>, Func<Vector4>, Double, Int32, Boolean)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddPolyLine_System_String_IEnumerable_SearchAThing_Vector3D__Func_Vector4__System_Double_System_Int32_System_Boolean_
+  commentId: M:SearchAThing.VertexManager.AddPolyLine(System.String,IEnumerable{SearchAThing.Vector3D},Func{Vector4},System.Double,System.Int32,System.Boolean)
+  name.vb: AddPolyLine(String, IEnumerable(Of Vector3D), Func(Of Vector4), Double, Int32, Boolean)
+  fullName: SearchAThing.VertexManager.AddPolyLine(System.String, IEnumerable<SearchAThing.Vector3D>, Func<Vector4>, System.Double, System.Int32, System.Boolean)
+  fullName.vb: SearchAThing.VertexManager.AddPolyLine(System.String, IEnumerable(Of SearchAThing.Vector3D), Func(Of Vector4), System.Double, System.Int32, System.Boolean)
+  nameWithType: VertexManager.AddPolyLine(String, IEnumerable<Vector3D>, Func<Vector4>, Double, Int32, Boolean)
+  nameWithType.vb: VertexManager.AddPolyLine(String, IEnumerable(Of Vector3D), Func(Of Vector4), Double, Int32, Boolean)
+- uid: SearchAThing.VertexManager.AddPolyLine*
+  name: AddPolyLine
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddPolyLine_
+  commentId: Overload:SearchAThing.VertexManager.AddPolyLine
+  isSpec: "True"
+  fullName: SearchAThing.VertexManager.AddPolyLine
+  nameWithType: VertexManager.AddPolyLine
+- uid: SearchAThing.VertexManager.AddSquaredLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double)
   name: AddSquaredLine(String, Line3D, Func<Vector4>, Double)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddSquaredLine_System_String_Line3D_Func_Vector4__System_Double_
-  commentId: M:SearchAThing.VertexManager.AddSquaredLine(System.String,Line3D,Func{Vector4},System.Double)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddSquaredLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_
+  commentId: M:SearchAThing.VertexManager.AddSquaredLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double)
   name.vb: AddSquaredLine(String, Line3D, Func(Of Vector4), Double)
-  fullName: SearchAThing.VertexManager.AddSquaredLine(System.String, Line3D, Func<Vector4>, System.Double)
-  fullName.vb: SearchAThing.VertexManager.AddSquaredLine(System.String, Line3D, Func(Of Vector4), System.Double)
+  fullName: SearchAThing.VertexManager.AddSquaredLine(System.String, SearchAThing.Line3D, Func<Vector4>, System.Double)
+  fullName.vb: SearchAThing.VertexManager.AddSquaredLine(System.String, SearchAThing.Line3D, Func(Of Vector4), System.Double)
   nameWithType: VertexManager.AddSquaredLine(String, Line3D, Func<Vector4>, Double)
   nameWithType.vb: VertexManager.AddSquaredLine(String, Line3D, Func(Of Vector4), Double)
 - uid: SearchAThing.VertexManager.AddSquaredLine*
@@ -1836,13 +1955,13 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.AddSquaredLine
   nameWithType: VertexManager.AddSquaredLine
-- uid: SearchAThing.VertexManager.AddTriangles(System.String,IEnumerable{Vector3D[]},Func{Vector4})
+- uid: SearchAThing.VertexManager.AddTriangles(System.String,IEnumerable{SearchAThing.Vector3D[]},Func{Vector4})
   name: AddTriangles(String, IEnumerable<Vector3D[]>, Func<Vector4>)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddTriangles_System_String_IEnumerable_Vector3D____Func_Vector4__
-  commentId: M:SearchAThing.VertexManager.AddTriangles(System.String,IEnumerable{Vector3D[]},Func{Vector4})
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddTriangles_System_String_IEnumerable_SearchAThing_Vector3D____Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddTriangles(System.String,IEnumerable{SearchAThing.Vector3D[]},Func{Vector4})
   name.vb: AddTriangles(String, IEnumerable(Of Vector3D()), Func(Of Vector4))
-  fullName: SearchAThing.VertexManager.AddTriangles(System.String, IEnumerable<Vector3D[]>, Func<Vector4>)
-  fullName.vb: SearchAThing.VertexManager.AddTriangles(System.String, IEnumerable(Of Vector3D()), Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddTriangles(System.String, IEnumerable<SearchAThing.Vector3D[]>, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddTriangles(System.String, IEnumerable(Of SearchAThing.Vector3D()), Func(Of Vector4))
   nameWithType: VertexManager.AddTriangles(String, IEnumerable<Vector3D[]>, Func<Vector4>)
   nameWithType.vb: VertexManager.AddTriangles(String, IEnumerable(Of Vector3D()), Func(Of Vector4))
 - uid: SearchAThing.VertexManager.AddTriangles*
