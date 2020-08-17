@@ -1,6 +1,7 @@
 using System.Numerics;
 using Silk.NET.OpenGL;
 using static System.Math;
+using System.Linq;
 
 namespace SearchAThing
 {
@@ -16,8 +17,7 @@ namespace SearchAThing
             }
             else
             {
-                OrthoWidthScale += OrthoWidthScale * scale;
-                OrthoHeightScale += OrthoHeightScale * scale;
+                OrthoZoom += OrthoZoom * scale;
             }
         }
 
@@ -26,6 +26,7 @@ namespace SearchAThing
 
         public void ZoomFit()
         {
+            var ar = Bounds.Size.AspectRatio;
             var ccs = CameraCS;
 
             CameraTarget = new Vector3();
@@ -71,18 +72,27 @@ namespace SearchAThing
             {
                 CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;
 
-                var os = OrthoBBox.Size;
-                var ar = Bounds.Size.AspectRatio;
-                if (os.X >= os.Y)
-                {
-                    OrthoWidthScale = 1f;
-                    OrthoHeightScale = (float)(1d / ar);
-                }
+                var mm = GetModelMatrix();
+
+                var obbox = new BBox3D(Model.BBox.Points.Select(w => w.ToUCS(ccs)));
+                var obboxSize = obbox.Size;
+                var obboxWidth = obboxSize.X;
+                var obboxHeight = obboxSize.Y;
+                var oAr = obboxWidth / obboxHeight;
+
+                var obboxR = new BBox3D(Model.BBox.Points.Select(w => ((Vector3D)Vector3.Transform(w, mm)).ToUCS(ccs)));
+                var obboxRSize = obboxR.Size;
+                var obboxRWidth = obboxRSize.X;
+                var obboxRHeight = obboxRSize.Y;
+                var oArR = obboxRWidth / obboxRHeight;
+
+                var ogWidth = (obboxWidth * ar);
+                var ogHeight = (obboxHeight * oAr);
+
+                if (oArR > ar)
+                    OrthoZoom = (float)(1d / ogWidth * obboxRWidth);
                 else
-                {
-                    OrthoWidthScale = (float)ar;
-                    OrthoHeightScale = 1f;
-                }
+                    OrthoZoom = (float)(1d / ogHeight * obboxRHeight);
             }
         }
 
@@ -109,29 +119,30 @@ namespace SearchAThing
 
         public virtual Matrix4x4 GetProjectionMatrix()
         {
-            var ar = (float)(Bounds.Width / Bounds.Height);
+            var ar = Bounds.Size.AspectRatio;
 
             if (Perspective)
-                return Matrix4x4.CreatePerspectiveFieldOfView(FovDeg.ToRad(), ar, Near, Far);
+                return Matrix4x4.CreatePerspectiveFieldOfView(FovDeg.ToRad(), (float)ar, Near, Far);
             else
             {
-                var obbox = OrthoBBox;
-                var os = obbox.Size;
+                var ccs = CameraCS;
+                CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;
 
-                var obboxAr = obbox.Size.X / obbox.Size.Y;
+                var mm = GetModelMatrix();
 
-                var minx = obbox.Min.X;
-                var maxx = obbox.Max.X;
-                var middlex = (minx + maxx) / 2;
+                var obbox = new BBox3D(Model.BBox.Points.Select(w => w.ToUCS(ccs)));
+                var obboxSize = obbox.Size;
+                var obboxWidth = obboxSize.X;
+                var obboxHeight = obboxSize.Y;
+                var oAr = obboxWidth / obboxHeight;
 
-                var miny = obbox.Min.Y;
-                var maxy = obbox.Max.Y;
-                var middley = (miny + maxy) / 2;
+                var ogWidth = (obboxWidth * ar);
+                var ogHeight = (obboxHeight * oAr);
 
-                var w = maxx - minx;
-                var h = maxy - miny;
-
-                return Matrix4x4.CreateOrthographic((float)w * OrthoWidthScale, (float)h * OrthoHeightScale, Near, Far);
+                return Matrix4x4.CreateOrthographic(
+                    (float)ogWidth * OrthoZoom,
+                    (float)ogHeight * OrthoZoom,
+                    Near, Far);
             }
         }
 

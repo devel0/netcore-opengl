@@ -419,31 +419,18 @@ namespace SearchAThing
         }
         #endregion
 
-        #region OrthoWidthScale
-        private float _OrthoWidthScale = 1f;
+        #region OrthoZoom
+        private float _OrthoZoom = 1f;
 
-        public static readonly DirectProperty<OpenGlControl, float> OrthoWidthScaleProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("OrthoWidthScale", o => o.OrthoWidthScale, (o, v) => o.OrthoWidthScale = v);
+        public static readonly DirectProperty<OpenGlControl, float> OrthoZoomProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("OrthoZoom", o => o.OrthoZoom, (o, v) => o.OrthoZoom = v);
 
-        public float OrthoWidthScale
+        public float OrthoZoom
         {
-            get => _OrthoWidthScale;
-            set => SetAndRaise(OrthoWidthScaleProperty, ref _OrthoWidthScale, value);
+            get => _OrthoZoom;
+            set => SetAndRaise(OrthoZoomProperty, ref _OrthoZoom, value);
         }
-        #endregion    
-
-        #region OrthoHeightScale
-        private float _OrthoHeightScale = 1f;
-
-        public static readonly DirectProperty<OpenGlControl, float> OrthoHeightScaleProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("OrthoHeightScale", o => o.OrthoHeightScale, (o, v) => o.OrthoHeightScale = v);
-
-        public float OrthoHeightScale
-        {
-            get => _OrthoHeightScale;
-            set => SetAndRaise(OrthoHeightScaleProperty, ref _OrthoHeightScale, value);
-        }
-        #endregion    
+        #endregion
 
         public OrbitGeometry orbitGeometry { get; private set; } = new OrbitGeometry();
 
@@ -541,7 +528,7 @@ namespace SearchAThing
 
         public override void Render(DrawingContext context)
         {
-            if (Model == null) return;            
+            if (Model == null) return;
 
             var scaling = VisualRoot.RenderScaling;
             var ps = new PixelSize(

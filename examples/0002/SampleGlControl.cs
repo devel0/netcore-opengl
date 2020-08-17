@@ -236,7 +236,7 @@ namespace SearchAThing.SciExamples
                 CameraTargetXProperty, CameraTargetYProperty, CameraTargetZProperty,
                 CameraUpXProperty, CameraUpYProperty, CameraUpZProperty,
                 FovDegProperty, NearProperty, FarProperty,
-                OrthoWidthScaleProperty, OrthoHeightScaleProperty,
+                OrthoZoomProperty,
                 ObjColorRedProperty, ObjColorGreenProperty, ObjColorBlueProperty,
                 LightPosXProperty, LightPosYProperty, LightPosZProperty,
                 AmbientProperty, AlphaProperty);

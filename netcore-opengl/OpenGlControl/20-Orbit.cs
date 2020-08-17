@@ -87,10 +87,7 @@ namespace SearchAThing
             {
 
                 case OrbitFunction.Horizontal:
-                    {
-                        BBox3D obboxBefore = null;
-                        if (!Perspective) obboxBefore = OrthoBBox;
-
+                    {                        
                         var moveDelta = orbitMovedPosition.Position - orbitPressPosition.Position;
 
                         var dx = moveDelta.X;
@@ -104,10 +101,7 @@ namespace SearchAThing
                     break;
 
                 case OrbitFunction.Vertical:
-                    {
-                        BBox3D obboxBefore = null;
-                        if (!Perspective) obboxBefore = OrthoBBox;
-
+                    {                        
                         var moveDelta = orbitMovedPosition.Position - orbitPressPosition.Position;
 
                         var dy = moveDelta.Y;
@@ -140,10 +134,7 @@ namespace SearchAThing
                     break;
 
                 case OrbitFunction.Roll:
-                    {
-                        BBox3D obboxBefore = null;
-                        if (!Perspective) obboxBefore = OrthoBBox;
-
+                    {                        
                         var sc = new Vector3D(Bounds.Width / 2, Bounds.Height / 2);
                         var a = sc.LineTo(orbitPressPosition.Position.Eval(w => new Vector3D(w.X, w.Y)));
                         var b = sc.LineTo(orbitMovedPosition.Position.Eval(w => new Vector3D(w.X, w.Y)));

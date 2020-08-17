@@ -1,5 +1,6 @@
 using static System.Math;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace SearchAThing
 {
@@ -16,25 +17,6 @@ namespace SearchAThing
         /// </summary>        
         public CoordinateSystem3D CameraCS =>
             new CoordinateSystem3D(CameraTarget, ((Vector3D)CameraUp).CrossProduct(CameraPos - CameraTarget), CameraUp);
-
-        /// <summary>
-        /// bbox of orthographic view
-        /// </summary>        
-        public BBox3D OrthoBBox
-        {
-            get
-            {
-                var ccs = CameraCS;
-                var csPts = new List<Vector3D>();
-
-                foreach (var p in Model.BBox.Points)
-                {
-                    csPts.Add(p.ToUCS(ccs));
-                }
-
-                return new BBox3D(csPts);
-            }
-        }
         
     }
 

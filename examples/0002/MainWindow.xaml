@@ -98,8 +98,7 @@
                     </Grid>
                     <TextBlock Text="Ortho w,h scale" Margin="0,10,0,0" FontWeight="Bold"/>
                     <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider ToolTip.Tip="Ortho width scale" Value="{Binding #win.Model.FocusedControl.OrthoWidthScale, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="1e-1" AutoExpandMinimum="true" Maximum="1e1" AutoExpandMaximum="true" StepFactor="1e-3" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider ToolTip.Tip="Ortho height scale" Value="{Binding #win.Model.FocusedControl.OrthoHeightScale, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="1e-1" AutoExpandMinimum="true" Maximum="1e1" AutoExpandMaximum="true" StepFactor="1e-3" Grid.Column="1"/>
+                        <desktop:TextBoxSlider ToolTip.Tip="Ortho zoom" Value="{Binding #win.Model.FocusedControl.OrthoZoom, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="1e-1" AutoExpandMinimum="true" Maximum="1e1" AutoExpandMaximum="true" StepFactor="1e-3" Margin="0,0,10,0"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                         <TextBlock Text="Object Color" FontWeight="Bold" VerticalAlignment="Center"/>
@@ -162,13 +161,17 @@
                     <Button ToolTip.Tip="perspective" Click="viewPerspectiveClick" Classes="toolbarbtn">
                         <StackPanel>
                             <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.PerspectiveCamera_16x}"/>
-                            <TextBlock Text="persp" Classes="toolbartxt"/>
+                            <TextBlock Text="persp" Classes="toolbartxt" Background="{Binding #win.Model.FocusedControl.Perspective, FallbackValue=Transparent,
+                                Converter={StaticResource SmartConverter}
+                                ConverterParameter=true LightGray Transparent}"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="ortho" Click="viewOrthoClick" Classes="toolbarbtn">
                         <StackPanel>
                             <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.OrthographicCamera_16x}"/>
-                            <TextBlock Text="ortho" Classes="toolbartxt"/>
+                            <TextBlock Text="ortho" Classes="toolbartxt" Background="{Binding #win.Model.FocusedControl.Perspective, FallbackValue=Transparent,
+                                Converter={StaticResource SmartConverter}
+                                ConverterParameter=false LightGray Transparent}"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="orbit" Click="ortbitClick" Classes="toolbarbtn">
