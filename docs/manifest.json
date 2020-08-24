@@ -12,7 +12,7 @@
           "hash": "CKVIzilDRRgpQMlp9yMskA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlControl.html",
-          "hash": "hxVB9EBTzmJmKuQADIAy6A=="
+          "hash": "l8/tPfTgnzSxbRx/4MOjOw=="
         }
       },
       "is_incremental": false,
@@ -96,7 +96,7 @@
           "hash": "5ZKdL1QpXI0P9VHoKlA9Tg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "8wMmhiysFLF7gN/1RyAFZA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -302,7 +302,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 17,
-          "skipped_file_count": 12
+          "skipped_file_count": 16
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

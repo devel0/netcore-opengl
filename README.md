@@ -18,7 +18,7 @@
 
 ## Recent changes
 
-- : generalized some drawing function to work in screen or world coordinates
+- : generalized some drawing function to work in screen or world coordinates; exposed View methods
 - **0.2.0** : refactored orbit control ; added pan ; TODO: projection fitview, screen-model coord
 
 ## Roadmap

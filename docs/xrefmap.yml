@@ -312,6 +312,45 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.OpenGlControl
   nameWithType: OpenGlControl.OpenGlControl
+- uid: SearchAThing.OpenGlControl.BaseModelMatrix
+  name: BaseModelMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_BaseModelMatrix
+  commentId: P:SearchAThing.OpenGlControl.BaseModelMatrix
+  fullName: SearchAThing.OpenGlControl.BaseModelMatrix
+  nameWithType: OpenGlControl.BaseModelMatrix
+- uid: SearchAThing.OpenGlControl.BaseModelMatrix*
+  name: BaseModelMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_BaseModelMatrix_
+  commentId: Overload:SearchAThing.OpenGlControl.BaseModelMatrix
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.BaseModelMatrix
+  nameWithType: OpenGlControl.BaseModelMatrix
+- uid: SearchAThing.OpenGlControl.CameraBack(SearchAThing.BBox3D)
+  name: CameraBack(BBox3D)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraBack_SearchAThing_BBox3D_
+  commentId: M:SearchAThing.OpenGlControl.CameraBack(SearchAThing.BBox3D)
+  fullName: SearchAThing.OpenGlControl.CameraBack(SearchAThing.BBox3D)
+  nameWithType: OpenGlControl.CameraBack(BBox3D)
+- uid: SearchAThing.OpenGlControl.CameraBack*
+  name: CameraBack
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraBack_
+  commentId: Overload:SearchAThing.OpenGlControl.CameraBack
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.CameraBack
+  nameWithType: OpenGlControl.CameraBack
+- uid: SearchAThing.OpenGlControl.CameraBottom(SearchAThing.BBox3D)
+  name: CameraBottom(BBox3D)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraBottom_SearchAThing_BBox3D_
+  commentId: M:SearchAThing.OpenGlControl.CameraBottom(SearchAThing.BBox3D)
+  fullName: SearchAThing.OpenGlControl.CameraBottom(SearchAThing.BBox3D)
+  nameWithType: OpenGlControl.CameraBottom(BBox3D)
+- uid: SearchAThing.OpenGlControl.CameraBottom*
+  name: CameraBottom
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraBottom_
+  commentId: Overload:SearchAThing.OpenGlControl.CameraBottom
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.CameraBottom
+  nameWithType: OpenGlControl.CameraBottom
 - uid: SearchAThing.OpenGlControl.CameraCS
   name: CameraCS
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraCS
@@ -325,6 +364,32 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.CameraCS
   nameWithType: OpenGlControl.CameraCS
+- uid: SearchAThing.OpenGlControl.CameraFront(SearchAThing.BBox3D)
+  name: CameraFront(BBox3D)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraFront_SearchAThing_BBox3D_
+  commentId: M:SearchAThing.OpenGlControl.CameraFront(SearchAThing.BBox3D)
+  fullName: SearchAThing.OpenGlControl.CameraFront(SearchAThing.BBox3D)
+  nameWithType: OpenGlControl.CameraFront(BBox3D)
+- uid: SearchAThing.OpenGlControl.CameraFront*
+  name: CameraFront
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraFront_
+  commentId: Overload:SearchAThing.OpenGlControl.CameraFront
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.CameraFront
+  nameWithType: OpenGlControl.CameraFront
+- uid: SearchAThing.OpenGlControl.CameraLeft(SearchAThing.BBox3D)
+  name: CameraLeft(BBox3D)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraLeft_SearchAThing_BBox3D_
+  commentId: M:SearchAThing.OpenGlControl.CameraLeft(SearchAThing.BBox3D)
+  fullName: SearchAThing.OpenGlControl.CameraLeft(SearchAThing.BBox3D)
+  nameWithType: OpenGlControl.CameraLeft(BBox3D)
+- uid: SearchAThing.OpenGlControl.CameraLeft*
+  name: CameraLeft
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraLeft_
+  commentId: Overload:SearchAThing.OpenGlControl.CameraLeft
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.CameraLeft
+  nameWithType: OpenGlControl.CameraLeft
 - uid: SearchAThing.OpenGlControl.CameraPos
   name: CameraPos
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraPos
@@ -395,6 +460,19 @@ references:
   commentId: F:SearchAThing.OpenGlControl.CameraPosZProperty
   fullName: SearchAThing.OpenGlControl.CameraPosZProperty
   nameWithType: OpenGlControl.CameraPosZProperty
+- uid: SearchAThing.OpenGlControl.CameraRight(SearchAThing.BBox3D)
+  name: CameraRight(BBox3D)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraRight_SearchAThing_BBox3D_
+  commentId: M:SearchAThing.OpenGlControl.CameraRight(SearchAThing.BBox3D)
+  fullName: SearchAThing.OpenGlControl.CameraRight(SearchAThing.BBox3D)
+  nameWithType: OpenGlControl.CameraRight(BBox3D)
+- uid: SearchAThing.OpenGlControl.CameraRight*
+  name: CameraRight
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraRight_
+  commentId: Overload:SearchAThing.OpenGlControl.CameraRight
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.CameraRight
+  nameWithType: OpenGlControl.CameraRight
 - uid: SearchAThing.OpenGlControl.CameraTarget
   name: CameraTarget
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraTarget
@@ -465,6 +543,19 @@ references:
   commentId: F:SearchAThing.OpenGlControl.CameraTargetZProperty
   fullName: SearchAThing.OpenGlControl.CameraTargetZProperty
   nameWithType: OpenGlControl.CameraTargetZProperty
+- uid: SearchAThing.OpenGlControl.CameraTop(SearchAThing.BBox3D)
+  name: CameraTop(BBox3D)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraTop_SearchAThing_BBox3D_
+  commentId: M:SearchAThing.OpenGlControl.CameraTop(SearchAThing.BBox3D)
+  fullName: SearchAThing.OpenGlControl.CameraTop(SearchAThing.BBox3D)
+  nameWithType: OpenGlControl.CameraTop(BBox3D)
+- uid: SearchAThing.OpenGlControl.CameraTop*
+  name: CameraTop
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraTop_
+  commentId: Overload:SearchAThing.OpenGlControl.CameraTop
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.CameraTop
+  nameWithType: OpenGlControl.CameraTop
 - uid: SearchAThing.OpenGlControl.CameraUp
   name: CameraUp
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_CameraUp
@@ -887,12 +978,12 @@ references:
   commentId: F:SearchAThing.OpenGlControl.ShowOrbitProperty
   fullName: SearchAThing.OpenGlControl.ShowOrbitProperty
   nameWithType: OpenGlControl.ShowOrbitProperty
-- uid: SearchAThing.OpenGlControl.ViewBack
-  name: ViewBack()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewBack
-  commentId: M:SearchAThing.OpenGlControl.ViewBack
-  fullName: SearchAThing.OpenGlControl.ViewBack()
-  nameWithType: OpenGlControl.ViewBack()
+- uid: SearchAThing.OpenGlControl.ViewBack(System.Boolean)
+  name: ViewBack(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewBack_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewBack(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewBack(System.Boolean)
+  nameWithType: OpenGlControl.ViewBack(Boolean)
 - uid: SearchAThing.OpenGlControl.ViewBack*
   name: ViewBack
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewBack_
@@ -900,12 +991,12 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ViewBack
   nameWithType: OpenGlControl.ViewBack
-- uid: SearchAThing.OpenGlControl.ViewBottom
-  name: ViewBottom()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewBottom
-  commentId: M:SearchAThing.OpenGlControl.ViewBottom
-  fullName: SearchAThing.OpenGlControl.ViewBottom()
-  nameWithType: OpenGlControl.ViewBottom()
+- uid: SearchAThing.OpenGlControl.ViewBottom(System.Boolean)
+  name: ViewBottom(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewBottom_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewBottom(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewBottom(System.Boolean)
+  nameWithType: OpenGlControl.ViewBottom(Boolean)
 - uid: SearchAThing.OpenGlControl.ViewBottom*
   name: ViewBottom
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewBottom_
@@ -913,12 +1004,12 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ViewBottom
   nameWithType: OpenGlControl.ViewBottom
-- uid: SearchAThing.OpenGlControl.ViewFront
-  name: ViewFront()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFront
-  commentId: M:SearchAThing.OpenGlControl.ViewFront
-  fullName: SearchAThing.OpenGlControl.ViewFront()
-  nameWithType: OpenGlControl.ViewFront()
+- uid: SearchAThing.OpenGlControl.ViewFront(System.Boolean)
+  name: ViewFront(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFront_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewFront(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewFront(System.Boolean)
+  nameWithType: OpenGlControl.ViewFront(Boolean)
 - uid: SearchAThing.OpenGlControl.ViewFront*
   name: ViewFront
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFront_
@@ -926,12 +1017,12 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ViewFront
   nameWithType: OpenGlControl.ViewFront
-- uid: SearchAThing.OpenGlControl.ViewLeft
-  name: ViewLeft()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewLeft
-  commentId: M:SearchAThing.OpenGlControl.ViewLeft
-  fullName: SearchAThing.OpenGlControl.ViewLeft()
-  nameWithType: OpenGlControl.ViewLeft()
+- uid: SearchAThing.OpenGlControl.ViewLeft(System.Boolean)
+  name: ViewLeft(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewLeft_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewLeft(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewLeft(System.Boolean)
+  nameWithType: OpenGlControl.ViewLeft(Boolean)
 - uid: SearchAThing.OpenGlControl.ViewLeft*
   name: ViewLeft
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewLeft_
@@ -958,12 +1049,12 @@ references:
   commentId: F:SearchAThing.OpenGlControl.ViewMatrixProperty
   fullName: SearchAThing.OpenGlControl.ViewMatrixProperty
   nameWithType: OpenGlControl.ViewMatrixProperty
-- uid: SearchAThing.OpenGlControl.ViewRight
-  name: ViewRight()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewRight
-  commentId: M:SearchAThing.OpenGlControl.ViewRight
-  fullName: SearchAThing.OpenGlControl.ViewRight()
-  nameWithType: OpenGlControl.ViewRight()
+- uid: SearchAThing.OpenGlControl.ViewRight(System.Boolean)
+  name: ViewRight(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewRight_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewRight(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewRight(System.Boolean)
+  nameWithType: OpenGlControl.ViewRight(Boolean)
 - uid: SearchAThing.OpenGlControl.ViewRight*
   name: ViewRight
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewRight_
