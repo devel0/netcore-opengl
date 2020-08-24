@@ -67,48 +67,34 @@
                     Converter={StaticResource SmartConverter},
                     ConverterParameter=?IsNull false true}">
                 <StackPanel Margin="10">
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">                        
                         <CheckBox IsChecked="{Binding #win.Model.FocusedControl.ShowModel, FallbackValue=false, Mode=TwoWay}">
-                            <TextBlock Text="Show model" FontWeight="Bold" VerticalAlignment="Center"/>
+                            <TextBlock Text="MODEL" FontWeight="Bold" VerticalAlignment="Center"/>
                         </CheckBox>
                         <CheckBox IsChecked="{Binding #win.Model.FocusedControl.ShowModelBBox, Mode=TwoWay, FallbackValue=false}" Margin="10,0,0,0">
-                            <TextBlock Text="Show bbox" FontWeight="Bold" VerticalAlignment="Center"/>
+                            <TextBlock Text="BBOX" FontWeight="Bold" VerticalAlignment="Center"/>
+                        </CheckBox>
+                        <CheckBox IsChecked="{Binding #win.Model.FocusedControl.ShowOrbit, Mode=TwoWay, FallbackValue=false}" Margin="10,0,0,0">
+                            <TextBlock Text="ORBIT" FontWeight="Bold" VerticalAlignment="Center"/>
                         </CheckBox>
                         <Button Content="reset" Click="click_reset" Margin="10,0,0,0"/>
                         <Button Content="exportDxf" Click="click_exportDxf" Margin="10,0,0,0"/>
-                    </StackPanel>
-                    <Expander IsExpanded="true">
+                    </StackPanel>                    
+                    <Expander IsExpanded="true" Margin="0,10,0,0">
                         <Expander.Header>
-                            <TextBlock Text="Model" Classes="expanderHdr" />
+                            <TextBlock Text="Model" Classes="expanderHdr"/>
                         </Expander.Header>
                         <Border Classes="brdRed">
                             <StackPanel Margin="10">
                                 <TextBox Classes="mono" IsReadOnly="true" Text="{Binding #win.Model.FocusedControl.ModelMatrix,                     
                                     Mode=OneWay,
                                     Converter={StaticResource MatrixDisplay}}"/>
-                                <!-- <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
-                                    <TextBlock Grid.Column="0" Text="TX" Classes="ary"/>
-                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Margin="0,0,10,0"/>
-                                    <TextBlock Grid.Column="1" Text="TY" Classes="ary"/>
-                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
-                                    <TextBlock Grid.Column="2" Text="TZ" Classes="ary"/>
-                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Grid.Column="2"/>
-                                </Grid> -->
-                                <!-- <TextBlock Text="Yaw Pitch Roll" Margin="0,10,0,0" FontWeight="Bold"/> -->
-                                <!-- <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
-                                    <TextBlock Grid.Column="0" Text="Yaw" Classes="ary"/>
-                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.YawDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Margin="0,0,10,0"/>
-                                    <TextBlock Grid.Column="1" Text="Pitch" Classes="ary"/>
-                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.PitchDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
-                                    <TextBlock Grid.Column="2" Text="Roll" Classes="ary"/>
-                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.RollDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Grid.Column="2"/>
-                                </Grid> -->
                             </StackPanel>
                         </Border>
                     </Expander>
                     <Expander IsExpanded="true">
                         <Expander.Header>
-                            <TextBlock Text="View"  Classes="expanderHdr" />
+                            <TextBlock Text="View" Classes="expanderHdr"/>
                         </Expander.Header>
                         <Border Classes="brdGreen">
                             <StackPanel Margin="10">
@@ -138,7 +124,7 @@
                     </Expander>
                     <Expander IsExpanded="true">
                         <Expander.Header>
-                            <TextBlock Text="Projection" Classes="expanderHdr" />
+                            <TextBlock Text="Projection" Classes="expanderHdr"/>
                         </Expander.Header>
                         <Border Classes="brdBlue">
                             <StackPanel Margin="10">
@@ -237,19 +223,13 @@
                                 Converter={StaticResource SmartConverter}
                                 ConverterParameter=false LightGray Transparent}"/>
                         </StackPanel>
-                    </Button>
-                    <Button ToolTip.Tip="orbit" Click="ortbitClick" Classes="toolbarbtn">
-                        <StackPanel>
-                            <Image Classes="toolbaricon" Source="/Assets/orbit.png"/>
-                            <TextBlock Text="orbit" Classes="toolbartxt"/>
-                        </StackPanel>
-                    </Button>
+                    </Button>                    
                     <Button ToolTip.Tip="toggle wireframe" Click="viewWireframeClick" Classes="toolbarbtn">
                         <StackPanel>
                             <Image Classes="toolbaricon" Source="/Assets/wireframe.png"/>
                             <TextBlock Text="wframe" Classes="toolbartxt" Background="{Binding #win.Model.FocusedControl.Wireframe, FallbackValue=Transparent,
                                 Converter={StaticResource SmartConverter}
-                                ConverterParameter=true LightGray Transparent}"/>                            
+                                ConverterParameter=true LightGray Transparent}"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>

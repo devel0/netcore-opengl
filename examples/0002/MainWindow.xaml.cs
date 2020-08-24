@@ -71,12 +71,21 @@ namespace SearchAThing.SciExamples
 
             CreateControlSample = () =>
             {
+                var fc = Model.FocusedControl as SampleGlControl;
+
                 var ctl = new SampleGlControl((x) =>
                 {
                     //setRndColor(x);
+                    if (fc != null)
+                    {
+                        x.ShowOrbit = fc.ShowOrbit;
+                        x.ShowModel = fc.ShowModel;
+                        x.ShowModelBBox = fc.ShowModelBBox;
+                        x.Perspective = fc.Perspective;
+                    }
                 });
                 ctl.Model = Model;
-                Model.FocusedControl = ctl;                
+                Model.FocusedControl = ctl;
 
                 return ctl;
             };
@@ -100,7 +109,7 @@ namespace SearchAThing.SciExamples
             ctl.Reset();
         }
 
-         private void click_exportDxf(object sender, RoutedEventArgs e)
+        private void click_exportDxf(object sender, RoutedEventArgs e)
         {
             var ctl = Model.FocusedControl as SampleGlControl;
             var model = ctl.Model as SampleGlModel;
@@ -109,7 +118,7 @@ namespace SearchAThing.SciExamples
 
         private void splitHorizontalClick(object sender, RoutedEventArgs e)
         {
-            gridSplitterManager.Split(GridSplitDirection.Horizontally);            
+            gridSplitterManager.Split(GridSplitDirection.Horizontally);
         }
 
         private void splitVerticalClick(object sender, RoutedEventArgs e)
