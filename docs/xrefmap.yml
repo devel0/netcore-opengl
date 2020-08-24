@@ -38,6 +38,19 @@ references:
   commentId: F:SearchAThing.Circle2.Radius
   fullName: SearchAThing.Circle2.Radius
   nameWithType: Circle2.Radius
+- uid: SearchAThing.Circle2.ToCircle3D(System.Double)
+  name: ToCircle3D(Double)
+  href: api/SearchAThing.Circle2.html#SearchAThing_Circle2_ToCircle3D_System_Double_
+  commentId: M:SearchAThing.Circle2.ToCircle3D(System.Double)
+  fullName: SearchAThing.Circle2.ToCircle3D(System.Double)
+  nameWithType: Circle2.ToCircle3D(Double)
+- uid: SearchAThing.Circle2.ToCircle3D*
+  name: ToCircle3D
+  href: api/SearchAThing.Circle2.html#SearchAThing_Circle2_ToCircle3D_
+  commentId: Overload:SearchAThing.Circle2.ToCircle3D
+  isSpec: "True"
+  fullName: SearchAThing.Circle2.ToCircle3D
+  nameWithType: Circle2.ToCircle3D
 - uid: SearchAThing.GlControlMatrixSource
   name: GlControlMatrixSource
   href: api/SearchAThing.GlControlMatrixSource.html
@@ -688,6 +701,25 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.orbitPressPosition
   nameWithType: OpenGlControl.orbitPressPosition
+- uid: SearchAThing.OpenGlControl.OrbitShowCross
+  name: OrbitShowCross
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrbitShowCross
+  commentId: P:SearchAThing.OpenGlControl.OrbitShowCross
+  fullName: SearchAThing.OpenGlControl.OrbitShowCross
+  nameWithType: OpenGlControl.OrbitShowCross
+- uid: SearchAThing.OpenGlControl.OrbitShowCross*
+  name: OrbitShowCross
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrbitShowCross_
+  commentId: Overload:SearchAThing.OpenGlControl.OrbitShowCross
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.OrbitShowCross
+  nameWithType: OpenGlControl.OrbitShowCross
+- uid: SearchAThing.OpenGlControl.OrbitShowCrossProperty
+  name: OrbitShowCrossProperty
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrbitShowCrossProperty
+  commentId: F:SearchAThing.OpenGlControl.OrbitShowCrossProperty
+  fullName: SearchAThing.OpenGlControl.OrbitShowCrossProperty
+  nameWithType: OpenGlControl.OrbitShowCrossProperty
 - uid: SearchAThing.OpenGlControl.OrthoZoom
   name: OrthoZoom
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoZoom
@@ -1807,33 +1839,24 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.VertexManager
   nameWithType: VertexManager.VertexManager
-- uid: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,SearchAThing.Circle2,Func{Vector4},System.Double,System.Int32)
-  name: AddCircle(OpenGlControl, Circle2, Func<Vector4>, Double, Int32)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_SearchAThing_Circle2_Func_Vector4__System_Double_System_Int32_
-  commentId: M:SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,SearchAThing.Circle2,Func{Vector4},System.Double,System.Int32)
-  name.vb: AddCircle(OpenGlControl, Circle2, Func(Of Vector4), Double, Int32)
-  fullName: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl, SearchAThing.Circle2, Func<Vector4>, System.Double, System.Int32)
-  fullName.vb: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl, SearchAThing.Circle2, Func(Of Vector4), System.Double, System.Int32)
-  nameWithType: VertexManager.AddCircle(OpenGlControl, Circle2, Func<Vector4>, Double, Int32)
-  nameWithType.vb: VertexManager.AddCircle(OpenGlControl, Circle2, Func(Of Vector4), Double, Int32)
-- uid: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,System.String,Vector2,System.Single,Func{Vector4},System.Double,System.Int32)
-  name: AddCircle(OpenGlControl, String, Vector2, Single, Func<Vector4>, Double, Int32)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_System_String_Vector2_System_Single_Func_Vector4__System_Double_System_Int32_
-  commentId: M:SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,System.String,Vector2,System.Single,Func{Vector4},System.Double,System.Int32)
-  name.vb: AddCircle(OpenGlControl, String, Vector2, Single, Func(Of Vector4), Double, Int32)
-  fullName: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl, System.String, Vector2, System.Single, Func<Vector4>, System.Double, System.Int32)
-  fullName.vb: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl, System.String, Vector2, System.Single, Func(Of Vector4), System.Double, System.Int32)
-  nameWithType: VertexManager.AddCircle(OpenGlControl, String, Vector2, Single, Func<Vector4>, Double, Int32)
-  nameWithType.vb: VertexManager.AddCircle(OpenGlControl, String, Vector2, Single, Func(Of Vector4), Double, Int32)
-- uid: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,Vector2,System.Single,Func{Vector4},System.Double,System.Int32)
-  name: AddCircle(OpenGlControl, Vector2, Single, Func<Vector4>, Double, Int32)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_Vector2_System_Single_Func_Vector4__System_Double_System_Int32_
-  commentId: M:SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,Vector2,System.Single,Func{Vector4},System.Double,System.Int32)
-  name.vb: AddCircle(OpenGlControl, Vector2, Single, Func(Of Vector4), Double, Int32)
-  fullName: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl, Vector2, System.Single, Func<Vector4>, System.Double, System.Int32)
-  fullName.vb: SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl, Vector2, System.Single, Func(Of Vector4), System.Double, System.Int32)
-  nameWithType: VertexManager.AddCircle(OpenGlControl, Vector2, Single, Func<Vector4>, Double, Int32)
-  nameWithType.vb: VertexManager.AddCircle(OpenGlControl, Vector2, Single, Func(Of Vector4), Double, Int32)
+- uid: SearchAThing.VertexManager.AddCircle(SearchAThing.Circle3D,Func{Vector4},System.Double,System.Int32,SearchAThing.OpenGlControl)
+  name: AddCircle(Circle3D, Func<Vector4>, Double, Int32, OpenGlControl)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCircle_SearchAThing_Circle3D_Func_Vector4__System_Double_System_Int32_SearchAThing_OpenGlControl_
+  commentId: M:SearchAThing.VertexManager.AddCircle(SearchAThing.Circle3D,Func{Vector4},System.Double,System.Int32,SearchAThing.OpenGlControl)
+  name.vb: AddCircle(Circle3D, Func(Of Vector4), Double, Int32, OpenGlControl)
+  fullName: SearchAThing.VertexManager.AddCircle(SearchAThing.Circle3D, Func<Vector4>, System.Double, System.Int32, SearchAThing.OpenGlControl)
+  fullName.vb: SearchAThing.VertexManager.AddCircle(SearchAThing.Circle3D, Func(Of Vector4), System.Double, System.Int32, SearchAThing.OpenGlControl)
+  nameWithType: VertexManager.AddCircle(Circle3D, Func<Vector4>, Double, Int32, OpenGlControl)
+  nameWithType.vb: VertexManager.AddCircle(Circle3D, Func(Of Vector4), Double, Int32, OpenGlControl)
+- uid: SearchAThing.VertexManager.AddCircle(System.String,SearchAThing.Circle3D,Func{Vector4},System.Double,System.Int32,SearchAThing.OpenGlControl)
+  name: AddCircle(String, Circle3D, Func<Vector4>, Double, Int32, OpenGlControl)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCircle_System_String_SearchAThing_Circle3D_Func_Vector4__System_Double_System_Int32_SearchAThing_OpenGlControl_
+  commentId: M:SearchAThing.VertexManager.AddCircle(System.String,SearchAThing.Circle3D,Func{Vector4},System.Double,System.Int32,SearchAThing.OpenGlControl)
+  name.vb: AddCircle(String, Circle3D, Func(Of Vector4), Double, Int32, OpenGlControl)
+  fullName: SearchAThing.VertexManager.AddCircle(System.String, SearchAThing.Circle3D, Func<Vector4>, System.Double, System.Int32, SearchAThing.OpenGlControl)
+  fullName.vb: SearchAThing.VertexManager.AddCircle(System.String, SearchAThing.Circle3D, Func(Of Vector4), System.Double, System.Int32, SearchAThing.OpenGlControl)
+  nameWithType: VertexManager.AddCircle(String, Circle3D, Func<Vector4>, Double, Int32, OpenGlControl)
+  nameWithType.vb: VertexManager.AddCircle(String, Circle3D, Func(Of Vector4), Double, Int32, OpenGlControl)
 - uid: SearchAThing.VertexManager.AddCircle*
   name: AddCircle
   href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCircle_
@@ -1973,42 +1996,24 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.AddHollowRectangle
   nameWithType: VertexManager.AddHollowRectangle
-- uid: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
-  name: AddLine(Line3D, Func<Vector4>, Double, Int32, Boolean)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_
-  commentId: M:SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
-  name.vb: AddLine(Line3D, Func(Of Vector4), Double, Int32, Boolean)
-  fullName: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean)
-  fullName.vb: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean)
-  nameWithType: VertexManager.AddLine(Line3D, Func<Vector4>, Double, Int32, Boolean)
-  nameWithType.vb: VertexManager.AddLine(Line3D, Func(Of Vector4), Double, Int32, Boolean)
-- uid: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl,System.String,Vector2,Vector2,Func{Vector4},System.Double)
-  name: AddLine(OpenGlControl, String, Vector2, Vector2, Func<Vector4>, Double)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_SearchAThing_OpenGlControl_System_String_Vector2_Vector2_Func_Vector4__System_Double_
-  commentId: M:SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl,System.String,Vector2,Vector2,Func{Vector4},System.Double)
-  name.vb: AddLine(OpenGlControl, String, Vector2, Vector2, Func(Of Vector4), Double)
-  fullName: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl, System.String, Vector2, Vector2, Func<Vector4>, System.Double)
-  fullName.vb: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl, System.String, Vector2, Vector2, Func(Of Vector4), System.Double)
-  nameWithType: VertexManager.AddLine(OpenGlControl, String, Vector2, Vector2, Func<Vector4>, Double)
-  nameWithType.vb: VertexManager.AddLine(OpenGlControl, String, Vector2, Vector2, Func(Of Vector4), Double)
-- uid: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl,Vector2,Vector2,Func{Vector4},System.Double)
-  name: AddLine(OpenGlControl, Vector2, Vector2, Func<Vector4>, Double)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_SearchAThing_OpenGlControl_Vector2_Vector2_Func_Vector4__System_Double_
-  commentId: M:SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl,Vector2,Vector2,Func{Vector4},System.Double)
-  name.vb: AddLine(OpenGlControl, Vector2, Vector2, Func(Of Vector4), Double)
-  fullName: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl, Vector2, Vector2, Func<Vector4>, System.Double)
-  fullName.vb: SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl, Vector2, Vector2, Func(Of Vector4), System.Double)
-  nameWithType: VertexManager.AddLine(OpenGlControl, Vector2, Vector2, Func<Vector4>, Double)
-  nameWithType.vb: VertexManager.AddLine(OpenGlControl, Vector2, Vector2, Func(Of Vector4), Double)
-- uid: SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
-  name: AddLine(String, Line3D, Func<Vector4>, Double, Int32, Boolean)
-  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_
-  commentId: M:SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)
-  name.vb: AddLine(String, Line3D, Func(Of Vector4), Double, Int32, Boolean)
-  fullName: SearchAThing.VertexManager.AddLine(System.String, SearchAThing.Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean)
-  fullName.vb: SearchAThing.VertexManager.AddLine(System.String, SearchAThing.Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean)
-  nameWithType: VertexManager.AddLine(String, Line3D, Func<Vector4>, Double, Int32, Boolean)
-  nameWithType.vb: VertexManager.AddLine(String, Line3D, Func(Of Vector4), Double, Int32, Boolean)
+- uid: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean,SearchAThing.OpenGlControl)
+  name: AddLine(Line3D, Func<Vector4>, Double, Int32, Boolean, OpenGlControl)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_SearchAThing_OpenGlControl_
+  commentId: M:SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean,SearchAThing.OpenGlControl)
+  name.vb: AddLine(Line3D, Func(Of Vector4), Double, Int32, Boolean, OpenGlControl)
+  fullName: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean, SearchAThing.OpenGlControl)
+  fullName.vb: SearchAThing.VertexManager.AddLine(SearchAThing.Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean, SearchAThing.OpenGlControl)
+  nameWithType: VertexManager.AddLine(Line3D, Func<Vector4>, Double, Int32, Boolean, OpenGlControl)
+  nameWithType.vb: VertexManager.AddLine(Line3D, Func(Of Vector4), Double, Int32, Boolean, OpenGlControl)
+- uid: SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean,SearchAThing.OpenGlControl)
+  name: AddLine(String, Line3D, Func<Vector4>, Double, Int32, Boolean, OpenGlControl)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_SearchAThing_OpenGlControl_
+  commentId: M:SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean,SearchAThing.OpenGlControl)
+  name.vb: AddLine(String, Line3D, Func(Of Vector4), Double, Int32, Boolean, OpenGlControl)
+  fullName: SearchAThing.VertexManager.AddLine(System.String, SearchAThing.Line3D, Func<Vector4>, System.Double, System.Int32, System.Boolean, SearchAThing.OpenGlControl)
+  fullName.vb: SearchAThing.VertexManager.AddLine(System.String, SearchAThing.Line3D, Func(Of Vector4), System.Double, System.Int32, System.Boolean, SearchAThing.OpenGlControl)
+  nameWithType: VertexManager.AddLine(String, Line3D, Func<Vector4>, Double, Int32, Boolean, OpenGlControl)
+  nameWithType.vb: VertexManager.AddLine(String, Line3D, Func(Of Vector4), Double, Int32, Boolean, OpenGlControl)
 - uid: SearchAThing.VertexManager.AddLine*
   name: AddLine
   href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddLine_

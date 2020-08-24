@@ -380,19 +380,19 @@ figure operation</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_SearchAThing_Circle2_Func_Vector4__System_Double_System_Int32_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl%2CSearchAThing.Circle2%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCircle_SearchAThing_Circle3D_Func_Vector4__System_Double_System_Int32_SearchAThing_OpenGlControl_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCircle(SearchAThing.Circle3D%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32%2CSearchAThing.OpenGlControl)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L96">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L70">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddCircle_" data-uid="SearchAThing.VertexManager.AddCircle*"></a>
-  <h4 id="SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_SearchAThing_Circle2_Func_Vector4__System_Double_System_Int32_" data-uid="SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,SearchAThing.Circle2,Func{Vector4},System.Double,System.Int32)">AddCircle(OpenGlControl, Circle2, Func&lt;Vector4&gt;, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>add an circle using control screen pixel coordinates xy ( origin at left-bottom )</p>
+  <h4 id="SearchAThing_VertexManager_AddCircle_SearchAThing_Circle3D_Func_Vector4__System_Double_System_Int32_SearchAThing_OpenGlControl_" data-uid="SearchAThing.VertexManager.AddCircle(SearchAThing.Circle3D,Func{Vector4},System.Double,System.Int32,SearchAThing.OpenGlControl)">AddCircle(Circle3D, Func&lt;Vector4&gt;, Double, Int32, OpenGlControl)</h4>
+  <div class="markdown level1 summary"><p>add a circle</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (string figureName, IReadOnlyList&lt;uint&gt; idxs) AddCircle(OpenGlControl targetControl, Circle2 circle, Func&lt;Vector4&gt; color = null, double pixelWidth = 1, int segmentCount = 360)</code></pre>
+    <pre><code class="lang-csharp hljs">public (string figureName, IReadOnlyList&lt;uint&gt; idxs) AddCircle(Circle3D circle, Func&lt;Vector4&gt; color = null, double pixelWidth = 1, int segmentCount = 360, OpenGlControl screenControl = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -405,13 +405,7 @@ figure operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
-        <td><span class="parametername">targetControl</span></td>
-        <td><p>ctl to retrieve screen size</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="SearchAThing.Circle2.html">Circle2</a></td>
+        <td><span class="xref">SearchAThing.Circle3D</span></td>
         <td><span class="parametername">circle</span></td>
         <td><p>circle2 info</p>
 </td>
@@ -434,6 +428,12 @@ figure operation</p>
         <td><p>segment count of inscribed polygon (must &gt;= 3)</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
+        <td><span class="parametername">screenControl</span></td>
+        <td><p>if specified drawing will be done in screen coordinates</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -447,102 +447,26 @@ figure operation</p>
     <tbody>
       <tr>
         <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;&gt;</td>
-        <td></td>
+        <td><p>figurename and geometry indexes</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_System_String_Vector2_System_Single_Func_Vector4__System_Double_System_Int32_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl%2CSystem.String%2CVector2%2CSystem.Single%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCircle_System_String_SearchAThing_Circle3D_Func_Vector4__System_Double_System_Int32_SearchAThing_OpenGlControl_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCircle(System.String%2CSearchAThing.Circle3D%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32%2CSearchAThing.OpenGlControl)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L108">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L92">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddCircle_" data-uid="SearchAThing.VertexManager.AddCircle*"></a>
-  <h4 id="SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_System_String_Vector2_System_Single_Func_Vector4__System_Double_System_Int32_" data-uid="SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,System.String,Vector2,System.Single,Func{Vector4},System.Double,System.Int32)">AddCircle(OpenGlControl, String, Vector2, Single, Func&lt;Vector4&gt;, Double, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddCircle(OpenGlControl targetControl, string figureName, Vector2 center, float r, Func&lt;Vector4&gt; color = null, double pixelWidth = 1, int segmentCount = 360)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
-        <td><span class="parametername">targetControl</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">figureName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">center</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">r</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
-        <td><span class="parametername">color</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">pixelWidth</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">segmentCount</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_Vector2_System_Single_Func_Vector4__System_Double_System_Int32_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl%2CVector2%2CSystem.Single%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L75">View Source</a>
-  </span>
-  <a id="SearchAThing_VertexManager_AddCircle_" data-uid="SearchAThing.VertexManager.AddCircle*"></a>
-  <h4 id="SearchAThing_VertexManager_AddCircle_SearchAThing_OpenGlControl_Vector2_System_Single_Func_Vector4__System_Double_System_Int32_" data-uid="SearchAThing.VertexManager.AddCircle(SearchAThing.OpenGlControl,Vector2,System.Single,Func{Vector4},System.Double,System.Int32)">AddCircle(OpenGlControl, Vector2, Single, Func&lt;Vector4&gt;, Double, Int32)</h4>
-  <div class="markdown level1 summary"><p>add an circle using control screen pixel coordinates xy ( origin at left-bottom )</p>
+  <h4 id="SearchAThing_VertexManager_AddCircle_System_String_SearchAThing_Circle3D_Func_Vector4__System_Double_System_Int32_SearchAThing_OpenGlControl_" data-uid="SearchAThing.VertexManager.AddCircle(System.String,SearchAThing.Circle3D,Func{Vector4},System.Double,System.Int32,SearchAThing.OpenGlControl)">AddCircle(String, Circle3D, Func&lt;Vector4&gt;, Double, Int32, OpenGlControl)</h4>
+  <div class="markdown level1 summary"><p>add a circle</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (string figureName, IReadOnlyList&lt;uint&gt; idxs) AddCircle(OpenGlControl targetControl, Vector2 center, float r, Func&lt;Vector4&gt; color = null, double pixelWidth = 1, int segmentCount = 360)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddCircle(string figureName, Circle3D circle, Func&lt;Vector4&gt; color = null, double pixelWidth = 1, int segmentCount = 360, OpenGlControl screenControl = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -555,21 +479,15 @@ figure operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
-        <td><span class="parametername">targetControl</span></td>
-        <td><p>ctl to retrieve screen size</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">figureName</span></td>
+        <td><p>name of figure where to store points</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">center</span></td>
-        <td><p>ellipse center</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">r</span></td>
-        <td><p>circle radius</p>
+        <td><span class="xref">SearchAThing.Circle3D</span></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>circle2 info</p>
 </td>
       </tr>
       <tr>
@@ -590,6 +508,12 @@ figure operation</p>
         <td><p>segment count of inscribed polygon (must &gt;= 3)</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
+        <td><span class="parametername">screenControl</span></td>
+        <td><p>if specified drawing will be done in screen coordinates</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -602,8 +526,9 @@ figure operation</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;&gt;</td>
-        <td></td>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+        <td><p>geometry indexes</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -612,7 +537,7 @@ figure operation</p>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCuboid_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D%2CSystem.Double%2CSystem.Double%2CSystem.Double%2CFunc%7BVector4%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cuboid.cs/#L27">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cuboid.cs/#L24">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddCuboid_" data-uid="SearchAThing.VertexManager.AddCuboid*"></a>
   <h4 id="SearchAThing_VertexManager_AddCuboid_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__" data-uid="SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})">AddCuboid(CoordinateSystem3D, Double, Double, Double, Func&lt;Vector4&gt;)</h4>
@@ -686,7 +611,7 @@ figure operation</p>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCuboid_System_String_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCuboid(System.String%2CSearchAThing.CoordinateSystem3D%2CSystem.Double%2CSystem.Double%2CSystem.Double%2CFunc%7BVector4%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cuboid.cs/#L46">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cuboid.cs/#L43">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddCuboid_" data-uid="SearchAThing.VertexManager.AddCuboid*"></a>
   <h4 id="SearchAThing_VertexManager_AddCuboid_System_String_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__" data-uid="SearchAThing.VertexManager.AddCuboid(System.String,SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})">AddCuboid(String, CoordinateSystem3D, Double, Double, Double, Func&lt;Vector4&gt;)</h4>
@@ -766,11 +691,12 @@ figure operation</p>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCylinder_SearchAThing_Line3D_System_Double_Func_Vector4__System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCylinder(SearchAThing.Line3D%2CSystem.Double%2CFunc%7BVector4%7D%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cylynder.cs/#L18">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cylynder.cs/#L23">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddCylinder_" data-uid="SearchAThing.VertexManager.AddCylinder*"></a>
   <h4 id="SearchAThing_VertexManager_AddCylinder_SearchAThing_Line3D_System_Double_Func_Vector4__System_Int32_System_Boolean_" data-uid="SearchAThing.VertexManager.AddCylinder(SearchAThing.Line3D,System.Double,Func{Vector4},System.Int32,System.Boolean)">AddCylinder(Line3D, Double, Func&lt;Vector4&gt;, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>add an cylynder</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -789,27 +715,32 @@ figure operation</p>
       <tr>
         <td><span class="xref">SearchAThing.Line3D</span></td>
         <td><span class="parametername">line</span></td>
-        <td></td>
+        <td><p>line describing cylinder from, to</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">radius</span></td>
-        <td></td>
+        <td><p>radius of cylinder</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>color</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">segmentCount</span></td>
-        <td></td>
+        <td><p>nr. of segment discretization of cylinder circle shape</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">closeCaps</span></td>
-        <td></td>
+        <td><p>close ending caps</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -824,7 +755,8 @@ figure operation</p>
     <tbody>
       <tr>
         <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;&gt;</td>
-        <td></td>
+        <td><p>figure name and geometry indexes</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -833,11 +765,12 @@ figure operation</p>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddCylinder_System_String_SearchAThing_Line3D_System_Double_Func_Vector4__System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddCylinder(System.String%2CSearchAThing.Line3D%2CSystem.Double%2CFunc%7BVector4%7D%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cylynder.cs/#L22">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Cylynder.cs/#L37">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddCylinder_" data-uid="SearchAThing.VertexManager.AddCylinder*"></a>
   <h4 id="SearchAThing_VertexManager_AddCylinder_System_String_SearchAThing_Line3D_System_Double_Func_Vector4__System_Int32_System_Boolean_" data-uid="SearchAThing.VertexManager.AddCylinder(System.String,SearchAThing.Line3D,System.Double,Func{Vector4},System.Int32,System.Boolean)">AddCylinder(String, Line3D, Double, Func&lt;Vector4&gt;, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>add an cylinder to the given figurename</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -856,32 +789,38 @@ figure operation</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">figureName</span></td>
-        <td></td>
+        <td><p>figure name which adds cylinder</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">SearchAThing.Line3D</span></td>
         <td><span class="parametername">line</span></td>
-        <td></td>
+        <td><p>line describing cylinder from, to</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">radius</span></td>
-        <td></td>
+        <td><p>radius of cylinder</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>color</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">segmentCount</span></td>
-        <td></td>
+        <td><p>nr. of segment discretization of cylinder circle shape</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">closeCaps</span></td>
-        <td></td>
+        <td><p>close ending caps</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -896,7 +835,8 @@ figure operation</p>
     <tbody>
       <tr>
         <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
-        <td></td>
+        <td><p>figure name and geometry indexes</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -905,7 +845,7 @@ figure operation</p>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddEllipse_SearchAThing_OpenGlControl_System_String_Vector2_System_Single_System_Single_Func_Vector4__System_Double_System_Double_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddEllipse(SearchAThing.OpenGlControl%2CSystem.String%2CVector2%2CSystem.Single%2CSystem.Single%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L41">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L37">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddEllipse_" data-uid="SearchAThing.VertexManager.AddEllipse*"></a>
   <h4 id="SearchAThing_VertexManager_AddEllipse_SearchAThing_OpenGlControl_System_String_Vector2_System_Single_System_Single_Func_Vector4__System_Double_System_Double_" data-uid="SearchAThing.VertexManager.AddEllipse(SearchAThing.OpenGlControl,System.String,Vector2,System.Single,System.Single,Func{Vector4},System.Double,System.Double)">AddEllipse(OpenGlControl, String, Vector2, Single, Single, Func&lt;Vector4&gt;, Double, Double)</h4>
@@ -987,7 +927,7 @@ figure operation</p>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddEllipse_SearchAThing_OpenGlControl_Vector2_System_Single_System_Single_Func_Vector4__System_Double_System_Double_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddEllipse(SearchAThing.OpenGlControl%2CVector2%2CSystem.Single%2CSystem.Single%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L29">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Ellipse2D.cs/#L25">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddEllipse_" data-uid="SearchAThing.VertexManager.AddEllipse*"></a>
   <h4 id="SearchAThing_VertexManager_AddEllipse_SearchAThing_OpenGlControl_Vector2_System_Single_System_Single_Func_Vector4__System_Double_System_Double_" data-uid="SearchAThing.VertexManager.AddEllipse(SearchAThing.OpenGlControl,Vector2,System.Single,System.Single,Func{Vector4},System.Double,System.Double)">AddEllipse(OpenGlControl, Vector2, Single, Single, Func&lt;Vector4&gt;, Double, Double)</h4>
@@ -1346,20 +1286,20 @@ figure operation</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddLine_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddLine(SearchAThing.Line3D%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddLine_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_SearchAThing_OpenGlControl_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddLine(SearchAThing.Line3D%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32%2CSystem.Boolean%2CSearchAThing.OpenGlControl)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L85">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L86">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddLine_" data-uid="SearchAThing.VertexManager.AddLine*"></a>
-  <h4 id="SearchAThing_VertexManager_AddLine_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_" data-uid="SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)">AddLine(Line3D, Func&lt;Vector4&gt;, Double, Int32, Boolean)</h4>
+  <h4 id="SearchAThing_VertexManager_AddLine_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_SearchAThing_OpenGlControl_" data-uid="SearchAThing.VertexManager.AddLine(SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean,SearchAThing.OpenGlControl)">AddLine(Line3D, Func&lt;Vector4&gt;, Double, Int32, Boolean, OpenGlControl)</h4>
   <div class="markdown level1 summary"><p>creates triangles for a fat line (smoothed using circle polygonalized).
 autoallocate random figurename.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (string figureName, IReadOnlyList&lt;uint&gt; idxs) AddLine(Line3D line, Func&lt;Vector4&gt; color = null, double w = 1, int segmentCount = 8, bool closeCaps = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public (string figureName, IReadOnlyList&lt;uint&gt; idxs) AddLine(Line3D line, Func&lt;Vector4&gt; color = null, double w = 1, int segmentCount = 8, bool closeCaps = true, OpenGlControl screenControl = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1401,6 +1341,12 @@ autoallocate random figurename.</p>
         <td><p>if true generates triangles for the front and rear</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
+        <td><span class="parametername">screenControl</span></td>
+        <td><p>if specified drawing will be done in screen coordinates</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -1421,164 +1367,19 @@ autoallocate random figurename.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddLine_SearchAThing_OpenGlControl_System_String_Vector2_Vector2_Func_Vector4__System_Double_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl%2CSystem.String%2CVector2%2CVector2%2CFunc%7BVector4%7D%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_SearchAThing_OpenGlControl_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddLine(System.String%2CSearchAThing.Line3D%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32%2CSystem.Boolean%2CSearchAThing.OpenGlControl)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L238">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L107">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddLine_" data-uid="SearchAThing.VertexManager.AddLine*"></a>
-  <h4 id="SearchAThing_VertexManager_AddLine_SearchAThing_OpenGlControl_System_String_Vector2_Vector2_Func_Vector4__System_Double_" data-uid="SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl,System.String,Vector2,Vector2,Func{Vector4},System.Double)">AddLine(OpenGlControl, String, Vector2, Vector2, Func&lt;Vector4&gt;, Double)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddLine(OpenGlControl targetControl, string figureName, Vector2 from, Vector2 to, Func&lt;Vector4&gt; color = null, double pixelWidth = 1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
-        <td><span class="parametername">targetControl</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">figureName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">from</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">to</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
-        <td><span class="parametername">color</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">pixelWidth</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddLine_SearchAThing_OpenGlControl_Vector2_Vector2_Func_Vector4__System_Double_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl%2CVector2%2CVector2%2CFunc%7BVector4%7D%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L227">View Source</a>
-  </span>
-  <a id="SearchAThing_VertexManager_AddLine_" data-uid="SearchAThing.VertexManager.AddLine*"></a>
-  <h4 id="SearchAThing_VertexManager_AddLine_SearchAThing_OpenGlControl_Vector2_Vector2_Func_Vector4__System_Double_" data-uid="SearchAThing.VertexManager.AddLine(SearchAThing.OpenGlControl,Vector2,Vector2,Func{Vector4},System.Double)">AddLine(OpenGlControl, Vector2, Vector2, Func&lt;Vector4&gt;, Double)</h4>
-  <div class="markdown level1 summary"><p>add a line using control screen pixel coordinates xy ( origin at left-bottom )</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (string figureName, IReadOnlyList&lt;uint&gt; idxs) AddLine(OpenGlControl targetControl, Vector2 from, Vector2 to, Func&lt;Vector4&gt; color = null, double pixelWidth = 1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
-        <td><span class="parametername">targetControl</span></td>
-        <td><p>ctl to retrieve screen size</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">from</span></td>
-        <td><p>point from</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">to</span></td>
-        <td><p>point to</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">Vector4</span>&gt;</td>
-        <td><span class="parametername">color</span></td>
-        <td><p>color fn</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">pixelWidth</span></td>
-        <td><p>width of line in pixels</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">IReadOnlyList</span>&lt;<span class="xref">System.UInt32</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddLine(System.String%2CSearchAThing.Line3D%2CFunc%7BVector4%7D%2CSystem.Double%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L104">View Source</a>
-  </span>
-  <a id="SearchAThing_VertexManager_AddLine_" data-uid="SearchAThing.VertexManager.AddLine*"></a>
-  <h4 id="SearchAThing_VertexManager_AddLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_" data-uid="SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean)">AddLine(String, Line3D, Func&lt;Vector4&gt;, Double, Int32, Boolean)</h4>
+  <h4 id="SearchAThing_VertexManager_AddLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_System_Int32_System_Boolean_SearchAThing_OpenGlControl_" data-uid="SearchAThing.VertexManager.AddLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double,System.Int32,System.Boolean,SearchAThing.OpenGlControl)">AddLine(String, Line3D, Func&lt;Vector4&gt;, Double, Int32, Boolean, OpenGlControl)</h4>
   <div class="markdown level1 summary"><p>creates triangles for a fat line (smoothed using circle polygonalized)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddLine(string figureName, Line3D line, Func&lt;Vector4&gt; color = null, double w = 1, int segmentCount = 8, bool closeCaps = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;uint&gt; AddLine(string figureName, Line3D line, Func&lt;Vector4&gt; color = null, double w = 1, int segmentCount = 8, bool closeCaps = true, OpenGlControl screenControl = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1624,6 +1425,12 @@ autoallocate random figurename.</p>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">closeCaps</span></td>
         <td><p>if true generates triangles for the front and rear</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SearchAThing.OpenGlControl.html">OpenGlControl</a></td>
+        <td><span class="parametername">screenControl</span></td>
+        <td><p>if specified drawing will be done in screen coordinates</p>
 </td>
       </tr>
     </tbody>
@@ -1788,7 +1595,7 @@ autoallocate random figurename.</p>
     <a href="https://github.com/devel0/netcore-opengl/new/master/apiSpec/new?filename=SearchAThing_VertexManager_AddSquaredLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_.md&amp;value=---%0Auid%3A%20SearchAThing.VertexManager.AddSquaredLine(System.String%2CSearchAThing.Line3D%2CFunc%7BVector4%7D%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L158">View Source</a>
+    <a href="https://github.com/devel0/netcore-opengl/blob/master/netcore-opengl/VertexManager/Line.cs/#L194">View Source</a>
   </span>
   <a id="SearchAThing_VertexManager_AddSquaredLine_" data-uid="SearchAThing.VertexManager.AddSquaredLine*"></a>
   <h4 id="SearchAThing_VertexManager_AddSquaredLine_System_String_SearchAThing_Line3D_Func_Vector4__System_Double_" data-uid="SearchAThing.VertexManager.AddSquaredLine(System.String,SearchAThing.Line3D,Func{Vector4},System.Double)">AddSquaredLine(String, Line3D, Func&lt;Vector4&gt;, Double)</h4>
