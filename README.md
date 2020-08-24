@@ -77,7 +77,13 @@ Triangle
 
 STL map
 
-![](data/img/example-0002.gif)
+- OrthoFit
+
+![](data/img/example-0002a.gif)
+
+- GridSplitManager
+
+![](data/img/example-0002b.gif)
 
 ## How this project was built
 
