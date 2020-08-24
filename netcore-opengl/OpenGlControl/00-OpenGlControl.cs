@@ -109,7 +109,7 @@ namespace SearchAThing
             get => _ModelMatrix;
             set => SetAndRaise(ModelMatrixProperty, ref _ModelMatrix, value);
         }
-        #endregion      
+        #endregion       
 
         // ==[ VIEW ]==============================================================================
 
@@ -124,7 +124,7 @@ namespace SearchAThing
             get => _ViewMatrix;
             //set => SetAndRaise(ViewMatrixProperty, ref _ViewMatrix, value);
         }
-        #endregion       
+        #endregion 
 
         void RebuildViewMatrix()
         {
@@ -406,7 +406,7 @@ namespace SearchAThing
                 CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;
 
                 var mm = ModelMatrix;
-                
+
                 var obbox = new BBox3D(Model.BBox.Points.Select(w => (Vector3D)Vector3.Transform(w, ViewMatrix)));
                 var obboxSize = obbox.Size;
                 var obboxWidth = obboxSize.X;
@@ -541,6 +541,19 @@ namespace SearchAThing
             set => SetAndRaise(ShowOrbitProperty, ref _ShowOrbit, value);
         }
         #endregion
+
+        #region OrbitShowCross
+        private bool _OrbitShowCross = false;
+
+        public static readonly DirectProperty<OpenGlControl, bool> OrbitShowCrossProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, bool>("OrbitShowCross", o => o.OrbitShowCross, (o, v) => o.OrbitShowCross = v);
+
+        public bool OrbitShowCross
+        {
+            get => _OrbitShowCross;
+            set => SetAndRaise(OrbitShowCrossProperty, ref _OrbitShowCross, value);
+        }
+        #endregion    
 
         internal bool ShiftKeyPressed = false;
 

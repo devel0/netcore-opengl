@@ -81,13 +81,15 @@ namespace SearchAThing
         /// <param name="w">thickness of line</param>
         /// <param name="segmentCount">nr of segment inscribed to circle</param>
         /// <param name="closeCaps">if true generates triangles for the front and rear</param>
+        /// <param name="screenControl">if specified drawing will be done in screen coordinates</param>
         /// <returns>figure name and indexes of triangles that represent a flat line described as a parallelepiped</returns>
         public (string figureName, IReadOnlyList<uint> idxs) AddLine(Line3D line,
             Func<Vector4> color = null,
-            double w = 1.0, int segmentCount = 8, bool closeCaps = true)
+            double w = 1.0, int segmentCount = 8, bool closeCaps = true,
+            OpenGlControl screenControl = null)
         {
             var figureName = Guid.NewGuid().ToString();
-            var idxs = AddLine(figureName, line, color, w, segmentCount, closeCaps);
+            var idxs = AddLine(figureName, line, color, w, segmentCount, closeCaps, screenControl);
             return (figureName, idxs);
         }
 
@@ -100,51 +102,85 @@ namespace SearchAThing
         /// <param name="w">thickness of line</param>
         /// <param name="segmentCount">nr of segment inscribed to circle</param>
         /// <param name="closeCaps">if true generates triangles for the front and rear</param>        
+        /// <param name="screenControl">if specified drawing will be done in screen coordinates</param>
         /// <returns>indexes of triangles that represent a flat line described as a parallelepiped</returns>
         public IReadOnlyList<uint> AddLine(string figureName, Line3D line,
             Func<Vector4> color = null,
-            double w = 1.0, int segmentCount = 8, bool closeCaps = true)
+            double w = 1.0, int segmentCount = 8, bool closeCaps = true, OpenGlControl screenControl = null)
         {
-            var triangles = new List<Vector3D[]>();
-
-            var ll = line.Length;
-            if (ll == 0) throw new System.Exception($"invalid line len 0");
-
-            var cs = new CoordinateSystem3D(line.From, line.To - line.From);
-
-            var c = new Circle3D(Tol, cs, w / 2);
-            var sply = c.InscribedPolygon(Tol, segmentCount).ToList();
-            var eply = sply.Select(w => w + line.To - line.From).ToList();
-
-            for (int i = 0; i < sply.Count - 1; ++i)
+            if (screenControl != null)
             {
-                var splyNext = sply[i + 1];
-                var eplyNext = eply[i + 1];
+                var from = line.From;
+                var to = line.To;
+                var pixelWidth = w;
 
-                triangles.Add(new[] { sply[i], splyNext, eply[i] });
-                triangles.Add(new[] { splyNext, eplyNext, eply[i] });
+                Func<Vector2, Vector2> toNdc = (v) => screenControl.Model.ToNDC(screenControl, v);
+
+                var pw = pixelWidth;
+
+                var triangles = new List<Vector3D[]>();
+
+                var ll = (from - to).Length;
+                if (ll == 0) throw new System.Exception($"invalid line len 0");
+
+                var f = new Vector3D(from.X, from.Y);
+                var t = new Vector3D(to.X, to.Y);
+                var l = f.LineTo(t);
+                var cs = new CoordinateSystem3D(f, (t - f).RotateAboutZAxis(PI / 2), t - f);
+
+                Vector3D faNdc = toNdc(new Vector3D(-pw / 2, 0).ToWCS(cs).ToVector2());
+                Vector3D fbNdc = toNdc(new Vector3D(pw / 2, 0).ToWCS(cs).ToVector2());
+                Vector3D taNdc = toNdc(new Vector3D(-pw / 2, ll).ToWCS(cs).ToVector2());
+                Vector3D tbNdc = toNdc(new Vector3D(pw / 2, ll).ToWCS(cs).ToVector2());
+
+                triangles.Add(new[] { taNdc, faNdc, fbNdc });
+                triangles.Add(new[] { fbNdc, tbNdc, taNdc });
+
+                return AddTriangles(figureName, triangles, color);
             }
-
-            if (closeCaps)
+            else
             {
-                // front
+                var triangles = new List<Vector3D[]>();
+
+                var ll = line.Length;
+                if (ll == 0) throw new System.Exception($"invalid line len 0");
+
+                var cs = new CoordinateSystem3D(line.From, line.To - line.From);
+
+                var c = new Circle3D(Tol, cs, w / 2);
+                var sply = c.InscribedPolygon(Tol, segmentCount).ToList();
+                var eply = sply.Select(w => w + line.To - line.From).ToList();
+
                 for (int i = 0; i < sply.Count - 1; ++i)
                 {
                     var splyNext = sply[i + 1];
-
-                    triangles.Add(new[] { line.From, splyNext, sply[i] });
-                }
-
-                // rear
-                for (int i = 0; i < eply.Count - 1; ++i)
-                {
                     var eplyNext = eply[i + 1];
 
-                    triangles.Add(new[] { line.To, eplyNext, eply[i] });
+                    triangles.Add(new[] { sply[i], splyNext, eply[i] });
+                    triangles.Add(new[] { splyNext, eplyNext, eply[i] });
                 }
-            }
 
-            return AddTriangles(figureName, triangles, color);
+                if (closeCaps)
+                {
+                    // front
+                    for (int i = 0; i < sply.Count - 1; ++i)
+                    {
+                        var splyNext = sply[i + 1];
+
+                        triangles.Add(new[] { line.From, splyNext, sply[i] });
+                    }
+
+                    // rear
+                    for (int i = 0; i < eply.Count - 1; ++i)
+                    {
+                        var eplyNext = eply[i + 1];
+
+                        triangles.Add(new[] { line.To, eplyNext, eply[i] });
+                    }
+                }
+
+                return AddTriangles(figureName, triangles, color);
+            }
         }
 
         /// <summary>
@@ -211,56 +247,6 @@ namespace SearchAThing
             // rear
             triangles.Add(new[] { pe0, pe3, pe1 });
             triangles.Add(new[] { pe3, pe2, pe1 });
-
-            return AddTriangles(figureName, triangles, color);
-        }
-
-        /// <summary>
-        /// add a line using control screen pixel coordinates xy ( origin at left-bottom )
-        /// </summary>
-        /// <param name="targetControl">ctl to retrieve screen size</param>
-        /// <param name="from">point from</param>
-        /// <param name="to">point to</param>
-        /// <param name="color">color fn</param>
-        /// <param name="pixelWidth">width of line in pixels</param>
-        /// <returns></returns>
-        public (string figureName, IReadOnlyList<uint> idxs) AddLine(
-            OpenGlControl targetControl,
-            Vector2 from, Vector2 to,
-            Func<Vector4> color = null,
-            double pixelWidth = 1.0)
-        {
-            var figureName = Guid.NewGuid().ToString();
-            var idxs = AddLine(targetControl, figureName, from, to, color, pixelWidth);
-            return (figureName, idxs);
-        }
-
-        public IReadOnlyList<uint> AddLine(OpenGlControl targetControl, string figureName,
-            Vector2 from, Vector2 to,
-            Func<Vector4> color = null,
-            double pixelWidth = 1.0)
-        {
-            Func<Vector2, Vector2> toNdc = (v) => targetControl.Model.ToNDC(targetControl, v);
-
-            var pw = pixelWidth;
-
-            var triangles = new List<Vector3D[]>();
-
-            var ll = (from - to).Length();
-            if (ll == 0) throw new System.Exception($"invalid line len 0");
-
-            var f = new Vector3D(from.X, from.Y);
-            var t = new Vector3D(to.X, to.Y);
-            var l = f.LineTo(t);
-            var cs = new CoordinateSystem3D(f, (t - f).RotateAboutZAxis(PI / 2), t - f);
-
-            Vector3D faNdc = toNdc(new Vector3D(-pw / 2, 0).ToWCS(cs).ToVector2());
-            Vector3D fbNdc = toNdc(new Vector3D(pw / 2, 0).ToWCS(cs).ToVector2());
-            Vector3D taNdc = toNdc(new Vector3D(-pw / 2, ll).ToWCS(cs).ToVector2());
-            Vector3D tbNdc = toNdc(new Vector3D(pw / 2, ll).ToWCS(cs).ToVector2());
-
-            triangles.Add(new[] { taNdc, faNdc, fbNdc });
-            triangles.Add(new[] { fbNdc, tbNdc, taNdc });
 
             return AddTriangles(figureName, triangles, color);
         }

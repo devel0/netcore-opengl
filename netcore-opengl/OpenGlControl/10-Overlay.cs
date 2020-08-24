@@ -32,17 +32,16 @@ namespace SearchAThing
 
                 orbitGeometry.Recompute(sw, sh);
 
-                vtxmgr.AddCircle(this, orbitGeometry.Main, colfn, pw);
-                vtxmgr.AddCircle(this, orbitGeometry.Top, colfn, pw);
-                vtxmgr.AddCircle(this, orbitGeometry.Bottom, colfn, pw);
-                vtxmgr.AddCircle(this, orbitGeometry.Left, colfn, pw);
-                vtxmgr.AddCircle(this, orbitGeometry.Right, colfn, pw);
+                vtxmgr.AddCircle(orbitGeometry.Main.ToCircle3D(1e-6), colfn, pw, 360, this);
+                vtxmgr.AddCircle(orbitGeometry.Top.ToCircle3D(1e-6), colfn, pw, 360, this);
+                vtxmgr.AddCircle(orbitGeometry.Bottom.ToCircle3D(1e-6), colfn, pw, 360, this);
+                vtxmgr.AddCircle(orbitGeometry.Left.ToCircle3D(1e-6), colfn, pw, 360, this);
+                vtxmgr.AddCircle(orbitGeometry.Right.ToCircle3D(1e-6), colfn, pw, 360, this);
 
-                var showCross = false;
-                if (showCross)
+                if (OrbitShowCross)
                 {
-                    vtxmgr.AddLine(this, orbitGeometry.Bottom.Center, orbitGeometry.Top.Center, colfn, pw);
-                    vtxmgr.AddLine(this, orbitGeometry.Left.Center, orbitGeometry.Right.Center, colfn, pw);
+                    vtxmgr.AddLine(new Line3D(orbitGeometry.Bottom.Center, orbitGeometry.Top.Center), colfn, pw, 8, false, this);
+                    vtxmgr.AddLine(new Line3D(orbitGeometry.Left.Center, orbitGeometry.Right.Center), colfn, pw, 8, false, this);
                 }
 
                 var pts = vtxmgr.Vtxs.Select(w => new GLVertex { Position = new Vector3(w.Position.X, w.Position.Y, -1) }).ToArray();

@@ -228,7 +228,7 @@ namespace SearchAThing.SciExamples
             this.onModelAttached = onModelAttached;
 
             AffectsRender<SampleGlControl>(
-                WireframeProperty, ShowModelProperty, ShowModelBBoxProperty, ShowOrbitProperty,
+                WireframeProperty, ShowModelProperty, ShowModelBBoxProperty, ShowOrbitProperty, OrbitShowCrossProperty,
                 ModelMatrixProperty,
                 PerspectiveProperty,
                 CameraPosXProperty, CameraPosYProperty, CameraPosZProperty,

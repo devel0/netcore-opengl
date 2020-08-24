@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using System.Numerics;
-using QuantumConcepts.Formats.StereoLithography;
 using System.Linq;
 using System;
-using Silk.NET.OpenGL;
-using static System.Math;
 
 namespace SearchAThing
 {
