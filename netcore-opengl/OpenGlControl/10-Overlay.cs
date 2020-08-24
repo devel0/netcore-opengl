@@ -38,6 +38,13 @@ namespace SearchAThing
                 vtxmgr.AddCircle(this, orbitGeometry.Left, colfn, pw);
                 vtxmgr.AddCircle(this, orbitGeometry.Right, colfn, pw);
 
+                var showCross = false;
+                if (showCross)
+                {
+                    vtxmgr.AddLine(this, orbitGeometry.Bottom.Center, orbitGeometry.Top.Center, colfn, pw);
+                    vtxmgr.AddLine(this, orbitGeometry.Left.Center, orbitGeometry.Right.Center, colfn, pw);
+                }
+
                 var pts = vtxmgr.Vtxs.Select(w => new GLVertex { Position = new Vector3(w.Position.X, w.Position.Y, -1) }).ToArray();
 
                 Vector4? color = null;

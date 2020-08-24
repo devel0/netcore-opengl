@@ -9,7 +9,7 @@ namespace SearchAThing
     {
 
         /// <summary>
-        /// camera coordinate systems such as:
+        /// camera coordinate systems ( Z+ point to observer ):
         /// - origin in CameraPosition
         /// - csZaxis : Normalized(cameraPos - cameraTarget) 
         /// - csXaxis : Normalized(cameraUp x (cameraPos - cameraTarget))        

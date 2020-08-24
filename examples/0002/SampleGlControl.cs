@@ -34,8 +34,8 @@ namespace SearchAThing.SciExamples
         public Vector3 Vector3_180Neg => new Vector3(-180, -180, -180);
 
         public const float FOV_DEFAULT = 45f;
-        public const float NEAR_DEFAULT = 0.01f;
-        public const float FAR_DEFAULT = 1000f;
+        public const float NEAR_DEFAULT = 10f;
+        public const float FAR_DEFAULT = 10000f;
 
         static readonly Vector3 OBJ_COLOR_DEFAUILT = new Vector3(0.3f, 0.7f, 1);
         static readonly float AMBIENT_DEFAULT = 0.2f;
@@ -229,8 +229,7 @@ namespace SearchAThing.SciExamples
 
             AffectsRender<SampleGlControl>(
                 WireframeProperty, ShowModelProperty, ShowModelBBoxProperty, ShowOrbitProperty,
-                TranslationXProperty, TranslationYProperty, TranslationZProperty,
-                RotationXProperty, RotationYProperty, RotationZProperty,
+                ModelMatrixProperty,
                 PerspectiveProperty,
                 CameraPosXProperty, CameraPosYProperty, CameraPosZProperty,
                 CameraTargetXProperty, CameraTargetYProperty, CameraTargetZProperty,
@@ -269,15 +268,30 @@ namespace SearchAThing.SciExamples
 
         // init/deinit ====================================================================================
 
+        bool modelAttachedInitDone = false;
         protected override void OnModelAttached()
         {
             this.PointerPressed += pointerPressed;
             this.PointerMoved += pointerMoved;
             this.PointerWheelChanged += pointerWheelChanged;
 
-            Reset(true);
+            this.EffectiveViewportChanged += (a, b) =>
+            {                                
+                if (Bounds.Width != 0 && Bounds.Height != 0)
+                {
+                    if (!modelAttachedInitDone)
+                    {
+                        Reset(true);
+                        
+                        InvalidateVisual();
+                        modelAttachedInitDone = true;
+                    }                    
+                }
+            };
+            this.AttachedToVisualTree += (a, b) =>
+            {
 
-            InvalidateVisual();
+            };
         }
 
         protected override void OnDetachModel()
@@ -286,7 +300,7 @@ namespace SearchAThing.SciExamples
             this.PointerMoved -= pointerMoved;
             this.PointerPressed -= pointerPressed;
         }
- 
+
         public void Reset(bool execOnModelAttach = false)
         {
             var Model = this.Model as SampleGlModel;
@@ -297,12 +311,11 @@ namespace SearchAThing.SciExamples
                 ResetRotation();
 
                 // view
-                CameraTarget = new Vector3();// Model.vtxMgrBBox.Middle;
-                CameraPos = CameraTarget + (Vector3)(Vector3D.ZAxis * Model.vtxMgrBBox.Size.Length);
-                CameraUp = new Vector3(0, 1, 0);
-                FovDeg = FOV_DEFAULT;
-                Near = NEAR_DEFAULT;
-                Far = FAR_DEFAULT;
+                var ct = new Vector3();
+                var cp = ct + (Vector3)(Vector3D.ZAxis * Model.vtxMgrBBox.Size.Length);
+                var cu = new Vector3(0, 1, 0);
+                SetViewMatrix(cp, cp, cu);
+                SetProjectionMatrix(FOV_DEFAULT, NEAR_DEFAULT, FAR_DEFAULT, perspective: true);
 
                 // aspect                                
                 ObjColor = OBJ_COLOR_DEFAUILT;
@@ -321,7 +334,7 @@ namespace SearchAThing.SciExamples
 
             var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
             var rayWorld = new Vector3();
-                       
+
             Dispatcher.UIThread.Post(() =>
             {
                 var sb = new StringBuilder();

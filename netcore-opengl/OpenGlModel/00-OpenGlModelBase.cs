@@ -34,6 +34,8 @@ namespace SearchAThing
         /// double click (ms)
         /// </summary>
         public double DoubleClickMs { get; set; } = 250;
+
+        public double GeomTol { get; set; } = 1e-10;
     }
 
     public abstract partial class OpenGlModelBase : AvaloniaObject, IDisposable
@@ -85,6 +87,8 @@ namespace SearchAThing
 
             Init();
         }
+
+        public double GeomTol => Options.GeomTol;
 
         internal void Register(OpenGlControl ctl)
         {
@@ -170,8 +174,9 @@ namespace SearchAThing
             {
                 GL.BindFramebuffer(FramebufferTarget.Framebuffer, fb);
                 if (!FocusedControlSize.Equals(ps))
-                {
+                {                                        
                     Resize((uint)ps.Width, (uint)ps.Height);
+                    ctl.RebuildProjectionMatrix();
                     FocusedControlSize = ps;
                 }
 
@@ -186,6 +191,9 @@ namespace SearchAThing
                 ctl.RenderOverlay(GL, context, ps);
 
                 Render(ctl, context, ps);
+
+                System.Console.WriteLine($"rendering ps:{ps.Width}x{ps.Height} (ps.ar:{ps.AspectRatio})");
+                System.Console.WriteLine($"ctl:{ctl.Bounds.Width}x{ctl.Bounds.Height}");
 
                 using (var bitmap = new WriteableBitmap(
                     ps,
@@ -292,7 +300,9 @@ namespace SearchAThing
         bool fbInitialized = false;
 
         void Resize(uint width, uint height)
-        {
+        {            
+            System.Console.WriteLine($"resizing w:{width}x{height}");
+
             var firstInit = !fbInitialized;
 
             if (!fbInitialized) fbInitialized = true;

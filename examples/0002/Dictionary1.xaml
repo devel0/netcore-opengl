@@ -1,5 +1,9 @@
-<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:SearchAThing.SciExamples" xmlns:desktop="clr-namespace:SearchAThing;assembly=netcore-desktop">
+<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+xmlns:local="clr-namespace:SearchAThing.SciExamples"
+ xmlns:desktop="clr-namespace:SearchAThing;assembly=netcore-desktop">
     <desktop:SmartConverter x:Key="SmartConverter"/><!-- icons generated using https://github.com/ahopper/Avalonia.IconPacks -->
+    <local:MatrixDisplay x:Key="MatrixDisplay"/>
+    <local:Constants x:Key="Constants"/>
     <DrawingGroup x:Key="VSImageLib.ViewTop_16x">
         <GeometryDrawing Brush="#00FFFFFF" Geometry="F1M16,16L0,16 0,0 16,0z"/>
         <GeometryDrawing Brush="#FFF6F6F6" Geometry="F1M7.6968,-0.000199999999999534L0.9998,4.4648 0.9998,11.5348 7.6968,15.9998 8.3038,15.9998 15.0008,11.5348 15.0008,4.4648 8.3038,-0.000199999999999534z"/>

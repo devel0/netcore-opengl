@@ -17,7 +17,7 @@ namespace SearchAThing.SciExamples
 
     public partial class SampleGlModel : SearchAThing.OpenGlModelBase
     {
-      
+
         // vars ===========================================================================================
 
         SampleGlControl currentRenderingCtl = null;
@@ -45,7 +45,7 @@ namespace SearchAThing.SciExamples
         // location of vertexShader uniforms
         int uModelLocation;
         int uProjectionLocation;
-        int uViewLocation;        
+        int uViewLocation;
 
         // location of fragmentShader uniforms
         int uAmbLocation;
@@ -167,10 +167,19 @@ namespace SearchAThing.SciExamples
         public SampleGlModel(OpenGlModelOptions options = null)
             : base(options)
         {
-        }        
+        }
+
+        internal string exportDxfPending = null;
 
         protected override void Render(OpenGlControl _ctl, DrawingContext context, PixelSize ps)
         {
+            netDxf.DxfDocument dxf = null;
+
+            if (exportDxfPending != null)
+            {
+                dxf = new netDxf.DxfDocument();
+            }
+
             GL.UseProgram(Shader);
 
             var ctl = _ctl as SampleGlControl;
@@ -178,9 +187,9 @@ namespace SearchAThing.SciExamples
             currentRenderingCtl = ctl;
 
             // transformation matrixes               
-            var model = ctl.GetModelMatrix();
-            var view = ctl.GetViewMatrix();
-            var projection = ctl.GetProjectionMatrix();
+            var model = ctl.ModelMatrix;
+            var view = ctl.ViewMatrix;
+            var projection = ctl.ProjectionMatrix;
 
             // load vertex shader variables
             unsafe
@@ -222,6 +231,9 @@ namespace SearchAThing.SciExamples
                         {
                             var idxs = vtxmgr.GetIdxs(figure);
                             color = vtxmgr.GetColor(figure);
+
+                            if (dxf != null) pts.ExportDxf(idxs, dxf, color);
+
                             using (var EboTmp = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, idxs))
                             {
                                 setGLColor(color);
@@ -240,26 +252,13 @@ namespace SearchAThing.SciExamples
             {
                 var vtxMgrTmp = new VertexManager(TOL);
 
-                if (FocusedControl == ctl && ctl.pointerMovedPosition != null)
+
+                var drawBBoxDiags = false;
+                if (drawBBoxDiags)
                 {
-                    var mouse_x = (float)ctl.pointerMovedPosition.Position.X;
-                    var mouse_y = (float)ctl.pointerMovedPosition.Position.Y;
-
-                    rayWorld = RayWorld(ctl, mouse_x, mouse_y);
-
-                    // TODO:
-                }
-
-                if (rayWorld != null && rayWorld.V.Length > 0)
-                {
-                    var bboxIps = vtxMgrBBox.Intersect(TOL, rayWorld).ToList();
-
-                    foreach (var ip in bboxIps)
-                    {
-                        var l = BBox.Middle.LineTo(ip);
-                        vtxMgrTmp.AddLine(l, () => Colors.Yellow.ToVector4());
-                    }
-                }
+                    vtxMgrTmp.AddLine(BBox.Min.LineTo(BBox.Max), () => Colors.Green.ToVector4());
+                    vtxMgrTmp.AddLine(BBox.Min.Set(OrdIdx.Y, BBox.Max.Y).LineTo(BBox.Max.Set(OrdIdx.Y, BBox.Min.Y)), () => Colors.Green.ToVector4());
+                }                
 
                 {
                     if (ctl.ShowModelBBox)
@@ -286,6 +285,7 @@ namespace SearchAThing.SciExamples
                         GL.DrawElements(PrimitiveType.Triangles,
                             (uint)VtxMgr_Idxs_WCSX.Length, DrawElementsType.UnsignedInt, null);
                     }
+                    if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSX, dxf, color);
                 }
                 {
                     color = VtxMgr.GetColor(FIGURE_WCSY);
@@ -296,6 +296,7 @@ namespace SearchAThing.SciExamples
                         GL.DrawElements(PrimitiveType.Triangles,
                             (uint)VtxMgr_Idxs_WCSY.Length, DrawElementsType.UnsignedInt, null);
                     }
+                    if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSY, dxf, color);
                 }
                 {
                     color = VtxMgr.GetColor(FIGURE_WCSZ);
@@ -306,6 +307,7 @@ namespace SearchAThing.SciExamples
                         GL.DrawElements(PrimitiveType.Triangles,
                             (uint)VtxMgr_Idxs_WCSZ.Length, DrawElementsType.UnsignedInt, null);
                     }
+                    if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSZ, dxf, color);
                 }
             }
             #endregion                     
@@ -325,11 +327,23 @@ namespace SearchAThing.SciExamples
                     GL.DrawElements(PrimitiveType.Triangles,
                         (uint)VtxMgr_Idxs_MAP.Length, DrawElementsType.UnsignedInt, null);
                 }
+                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_MAP, dxf, color);
             }
 
             ctl.UpdateInfo();
 
             currentRenderingCtl = null;
+
+            if (exportDxfPending != null)
+            {
+                dxf.Viewport.ShowGrid = false;
+                dxf.Save(exportDxfPending, true);
+                exportDxfPending = null;
+
+                var psi = new ProcessStartInfo(Environment.CurrentDirectory);
+                psi.UseShellExecute = true;
+                Process.Start(psi);
+            }
         }
 
         /// <summary>

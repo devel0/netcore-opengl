@@ -2,6 +2,7 @@ using System.Numerics;
 using Silk.NET.OpenGL;
 using static System.Math;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace SearchAThing
 {
@@ -13,7 +14,8 @@ namespace SearchAThing
         {
             if (Perspective)
             {
-                CameraPos -= scale * (CameraTarget - CameraPos);
+                var delta = scale * (CameraTarget - CameraPos);
+                CameraPos -= delta;
             }
             else
             {
@@ -24,63 +26,75 @@ namespace SearchAThing
         public void ZoomIn(float scale = 1e-1f) => Zoom(scale);
         public void ZoomOut(float scale = -1e-1f) => Zoom(scale);
 
+        internal class FitNfo
+        {
+            internal Vector3D p;
+            internal Vector3D pmv;
+            internal double Md;
+            internal double pdx;
+            internal double pdy;
+        };
+
         public void ZoomFit()
         {
-            var ar = Bounds.Size.AspectRatio;
+            var boundsSize = Bounds.Size;
+            if (boundsSize.Width == 0 || boundsSize.Height == 0)
+                return;
+            var ar = boundsSize.AspectRatio;
+
             var ccs = CameraCS;
+            var cameraDir = Vector3.Normalize(CameraPos - CameraTarget);
+            var mm = ModelMatrix;
 
-            CameraTarget = new Vector3();
-
-            if (Perspective)
+            if (Perspective) // TODO : centering
             {
-                double? dMax = null;
-                double dMin = 0d;
+                var bbox = Model.BBox;
+                var bboxMiddle = bbox.Middle;
+                var mmDec = ModelMatrix.Decompose();
 
-                var cotgFov_2 = 1d / Tan(FovDeg.ToRad() / 2);
+                ModelMatrix =
+                    Matrix4x4.CreateTranslation(-bboxMiddle)
+                    *
+                    Matrix4x4.CreateFromQuaternion(mmDec.rotation)
+                    *
+                    Matrix4x4.CreateScale(mmDec.scale);
 
-                var mm = GetModelMatrix();
-
-                foreach (var _p in Model.BBox.Points)
+                var fov = FovDeg.ToRad();
+                var alpha = fov / 2;
+                var nfos = new List<FitNfo>();
+                var M = bboxMiddle;
+                foreach (var p in Model.BBox.Points)
                 {
-                    var p = (Vector3D)Vector3.Transform(_p, mm);
+                    var nfo = new FitNfo();
 
-                    var pcs = p.ToUCS(ccs);
+                    nfos.Add(nfo);
 
-                    // frustum (side)                                
-                    var d = Abs(pcs.Y) * cotgFov_2;
-                    if (!dMax.HasValue)
-                    {
-                        dMax = d;
-                        dMin = d;
-                    }
-                    else
-                    {
-                        dMax = Max(dMax.Value, d);
-                        dMin = Min(dMin, d);
-                    }
-
-                    // frustum (top)                            
-                    d = Abs(pcs.X) * cotgFov_2;
-
-                    dMax = Max(dMax.Value, d);
-                    dMin = Min(dMin, d);
+                    nfo.p = p;
+                    nfo.pmv = Vector3.Transform(p, ModelMatrix * ViewMatrix);
+                    nfo.pdx = Abs(nfo.pmv.Y) / Tan(alpha);
+                    nfo.pdy = Abs(nfo.pmv.X / ar) / Tan(alpha);
+                    nfo.Md = ((Vector3)nfo.pmv - Vector3.Transform(M, ModelMatrix * ViewMatrix)).Z;
                 }
 
-                CameraPos = (Vector3D)CameraTarget + dMax.Value * ccs.BaseZ;
+                var matchPDx = nfos.OrderByDescending(w => w.pdx + w.Md).First();
+                var matchPDy = nfos.OrderByDescending(w => w.pdy + w.pdy).First();
+
+                var maxPDx = matchPDx.pdx + matchPDx.Md;
+                var maxPDy = matchPDx.pdy + matchPDx.Md;
+
+                CameraPos = CameraTarget + (float)Max(maxPDx, maxPDy) * cameraDir;
             }
             else
             {
                 CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;
 
-                var mm = GetModelMatrix();
-
-                var obbox = new BBox3D(Model.BBox.Points.Select(w => w.ToUCS(ccs)));
+                var obbox = new BBox3D(Model.BBox.Points.Select(w => (Vector3D)Vector3.Transform(w, ViewMatrix)));
                 var obboxSize = obbox.Size;
                 var obboxWidth = obboxSize.X;
                 var obboxHeight = obboxSize.Y;
                 var oAr = obboxWidth / obboxHeight;
 
-                var obboxR = new BBox3D(Model.BBox.Points.Select(w => ((Vector3D)Vector3.Transform(w, mm)).ToUCS(ccs)));
+                var obboxR = new BBox3D(Model.BBox.Points.Select(w => (Vector3D)Vector3.Transform(w, ModelMatrix * ViewMatrix)));                
                 var obboxRSize = obboxR.Size;
                 var obboxRWidth = obboxRSize.X;
                 var obboxRHeight = obboxRSize.Y;
@@ -88,6 +102,15 @@ namespace SearchAThing
 
                 var ogWidth = (obboxWidth * ar);
                 var ogHeight = (obboxHeight * oAr);
+
+                var mmDec = ModelMatrix.Decompose();
+
+                ModelMatrix =
+                    Matrix4x4.CreateTranslation(-Model.BBox.Middle)
+                    *
+                    Matrix4x4.CreateFromQuaternion(mmDec.rotation)
+                    *
+                    Matrix4x4.CreateScale(mmDec.scale);
 
                 if (oArR > ar)
                     OrthoZoom = (float)(1d / ogWidth * obboxRWidth);
@@ -98,52 +121,7 @@ namespace SearchAThing
 
         public void ResetRotation()
         {
-            RotationMatrix = Matrix4x4.Identity;
-            UpdateYawPitchRollFromRotationMatrix();
-        }
-
-        public virtual Matrix4x4 GetModelMatrix()
-        {
-            var tr = new Vector3(TranslationX, TranslationY, TranslationZ);
-
-            return
-                Matrix4x4.CreateTranslation(tr)
-                *
-                RotationMatrix;
-        }
-
-        public virtual Matrix4x4 GetViewMatrix()
-        {
-            return Matrix4x4.CreateLookAt(CameraPos, CameraTarget, CameraUp);
-        }
-
-        public virtual Matrix4x4 GetProjectionMatrix()
-        {
-            var ar = Bounds.Size.AspectRatio;
-
-            if (Perspective)
-                return Matrix4x4.CreatePerspectiveFieldOfView(FovDeg.ToRad(), (float)ar, Near, Far);
-            else
-            {
-                var ccs = CameraCS;
-                CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;
-
-                var mm = GetModelMatrix();
-
-                var obbox = new BBox3D(Model.BBox.Points.Select(w => w.ToUCS(ccs)));
-                var obboxSize = obbox.Size;
-                var obboxWidth = obboxSize.X;
-                var obboxHeight = obboxSize.Y;
-                var oAr = obboxWidth / obboxHeight;
-
-                var ogWidth = (obboxWidth * ar);
-                var ogHeight = (obboxHeight * oAr);
-
-                return Matrix4x4.CreateOrthographic(
-                    (float)ogWidth * OrthoZoom,
-                    (float)ogHeight * OrthoZoom,
-                    Near, Far);
-            }
+            ModelMatrix = Matrix4x4.Identity;
         }
 
         // camera helpers
@@ -197,9 +175,7 @@ namespace SearchAThing
             var bbox = this.Model.BBox;
             if (bbox.IsEmpty) return;
 
-            Translation = -bbox.Middle;
-            RotationMatrix = Matrix4x4.Identity;
-            UpdateYawPitchRollFromRotationMatrix();
+            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
             CameraTop(bbox);
             ZoomFit();
         }
@@ -209,12 +185,8 @@ namespace SearchAThing
             var bbox = this.Model.BBox;
             if (bbox.IsEmpty) return;
 
-            Translation = -bbox.Middle;
-            RotationMatrix =
-                Matrix4x4.CreateRotationZ(-(float)PI / 2) *
-                Matrix4x4.CreateRotationX(-(float)PI / 2);
-            UpdateYawPitchRollFromRotationMatrix();
-            CameraTop(bbox);
+            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            CameraLeft(bbox);
             ZoomFit();
         }
 
@@ -223,10 +195,8 @@ namespace SearchAThing
             var bbox = Model.BBox;
             if (bbox.IsEmpty) return;
 
-            Translation = -bbox.Middle;
-            RotationMatrix = Matrix4x4.CreateRotationX(-(float)PI / 2);
-            UpdateYawPitchRollFromRotationMatrix();
-            CameraTop(bbox);
+            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            CameraFront(bbox);
             ZoomFit();
         }
 
@@ -235,12 +205,8 @@ namespace SearchAThing
             var bbox = this.Model.BBox;
             if (bbox.IsEmpty) return;
 
-            Translation = -bbox.Middle;
-            RotationMatrix =
-                Matrix4x4.CreateRotationZ((float)PI / 2) *
-                Matrix4x4.CreateRotationX(-(float)PI / 2);
-            UpdateYawPitchRollFromRotationMatrix();
-            CameraTop(bbox);
+            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            CameraRight(bbox);
             ZoomFit();
         }
 
@@ -249,10 +215,8 @@ namespace SearchAThing
             var bbox = Model.BBox;
             if (bbox.IsEmpty) return;
 
-            Translation = -bbox.Middle;
-            RotationMatrix = Matrix4x4.CreateFromYawPitchRoll(0, -(float)PI / 2, -(float)PI);
-            UpdateYawPitchRollFromRotationMatrix();
-            CameraTop(bbox);
+            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            CameraBack(bbox);
             ZoomFit();
         }
 
@@ -261,27 +225,8 @@ namespace SearchAThing
             var bbox = Model.BBox;
             if (bbox.IsEmpty) return;
 
-            Translation = -bbox.Middle;
-            RotationMatrix = Matrix4x4.CreateFromYawPitchRoll((float)PI, 0, 0);
-            UpdateYawPitchRollFromRotationMatrix();
-            CameraTop(bbox);
-            ZoomFit();
-        }
-
-        /// <summary>
-        /// set view using rotation from yaw,pitch,roll
-        /// </summary>
-        /// <param name="yawDeg">rotation around Yaxis</param>
-        /// <param name="pitchDeg">rotation around Xaxis</param>
-        /// <param name="rollDeg">rotation around Zaxis</param>
-        public void ViewFromYawPitchRoll(float yawDeg, float pitchDeg, float rollDeg)
-        {
-            var bbox = Model.BBox;
-            if (bbox.IsEmpty) return;
-
-            Translation = -bbox.Middle;
-            RotationMatrix = Matrix4x4.CreateFromYawPitchRoll(yawDeg.ToRad(), pitchDeg.ToRad(), rollDeg.ToRad());
-            CameraTop(bbox);
+            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            CameraBottom(bbox);
             ZoomFit();
         }
 

@@ -41,6 +41,31 @@ namespace SearchAThing
         public static System.Drawing.Color ToSystemDrawingColor(this Color color) =>
             System.Drawing.Color.FromArgb(color.A, color.R, color.G, color.B);
 
+        /// <summary>
+        /// export triangles from given pts, idxs to dxf with optional color
+        /// </summary>
+        /// <param name="pts">triangles vertex with normal array</param>
+        /// <param name="idxs">triangles indexes</param>
+        /// <param name="dxf">dxf target</param>
+        /// <param name="color">global color</param>
+        public static void ExportDxf(this GLVertexWithNormal[] pts, uint[] idxs, netDxf.DxfDocument dxf, Vector4? color = null)
+        {
+            for (int i = 0; i < idxs.Length; i += 3)
+            {
+                Vector3D v1 = pts[idxs[i]].Position;
+                Vector3D v2 = pts[idxs[i + 1]].Position;
+                Vector3D v3 = pts[idxs[i + 2]].Position;
+
+                var face = new netDxf.Entities.Face3d(v1, v2, v3);
+                if (color.HasValue)
+                {
+                    var c = new netDxf.AciColor();
+                    c.FromColor(color.Value.ToSystemDrawingColor());
+                    face.Color = c;
+                }
+                dxf.AddEntity(face);
+            }
+        }
     }
 
     public static partial class OpenGlToolkit

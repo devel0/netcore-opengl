@@ -27,4 +27,7 @@
   <ItemGroup>
     <EmbeddedResource Include="shaders/*"/>
   </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
 </Project>

@@ -4,21 +4,52 @@ using Avalonia;
 using static System.Math;
 using System.Numerics;
 using Avalonia.Input;
-using SearchAThing;
 using System;
-using System.Reactive;
-using System.Runtime.CompilerServices;
+using System.Linq;
 
 namespace SearchAThing
 {
 
+    public class GlControlMatrixSource
+    {
+        public Matrix4x4 ModelMatrix { get; private set; }
+        public Matrix4x4 ViewMatrix { get; private set; }
+        public Matrix4x4 ProjectionMatrix { get; private set; }
+
+        public Vector3 CameraPos { get; private set; }
+        public Vector3 CameraTarget { get; private set; }
+        public Vector3 CameraUp { get; private set; }
+
+        public bool Perspective { get; private set; }
+        public float OrthoZoom { get; private set; }
+
+        public float FovDeg { get; private set; }
+        public float Near { get; private set; }
+        public float Far { get; private set; }
+
+        public GlControlMatrixSource(OpenGlControl glControl)
+        {
+            ModelMatrix = glControl.ModelMatrix;
+            ViewMatrix = glControl.ViewMatrix;
+            ProjectionMatrix = glControl.ProjectionMatrix;
+
+            CameraPos = glControl.CameraPos;
+            CameraTarget = glControl.CameraTarget;
+            CameraUp = glControl.CameraUp;
+
+            Perspective = glControl.Perspective;
+            OrthoZoom = glControl.OrthoZoom;
+
+            FovDeg = glControl.FovDeg;
+            Near = glControl.Near;
+            Far = glControl.Far;
+        }
+    }
+
     public partial class OpenGlControl : Control
     {
 
-        // vars ========================================================================================
         bool initialized = false;
-
-        // props =======================================================================================
 
         #region Model
         private OpenGlModelBase _Model = null;
@@ -63,153 +94,64 @@ namespace SearchAThing
                 }
             }
         }
-        #endregion               
+        #endregion
 
-        #region TranslationX
-        private float _TranslationX = 0;
+        // ==[ MODEL MATRIX ]======================================================================
 
-        public static readonly DirectProperty<OpenGlControl, float> TranslationXProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("TranslationX", o => o.TranslationX, (o, v) => o.TranslationX = v);
+        #region ModelMatrix
+        private Matrix4x4 _ModelMatrix = Matrix4x4.Identity;
 
-        public float TranslationX
+        public static readonly DirectProperty<OpenGlControl, Matrix4x4> ModelMatrixProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, Matrix4x4>("ModelMatrix", o => o.ModelMatrix, (o, v) => o.ModelMatrix = v);
+
+        public Matrix4x4 ModelMatrix
         {
-            get => _TranslationX;
-            set => SetAndRaise(TranslationXProperty, ref _TranslationX, value);
+            get => _ModelMatrix;
+            set => SetAndRaise(ModelMatrixProperty, ref _ModelMatrix, value);
         }
-        #endregion    
+        #endregion      
 
-        #region TranslationY
-        private float _TranslationY = 0;
+        // ==[ VIEW ]==============================================================================
 
-        public static readonly DirectProperty<OpenGlControl, float> TranslationYProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("TranslationY", o => o.TranslationY, (o, v) => o.TranslationY = v);
+        #region ViewMatrix
+        private Matrix4x4 _ViewMatrix = Matrix4x4.Identity;
 
-        public float TranslationY
+        public static readonly DirectProperty<OpenGlControl, Matrix4x4> ViewMatrixProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, Matrix4x4>("ViewMatrix", o => o.ViewMatrix);//, (o, v) => o.ViewMatrix = v);
+
+        public Matrix4x4 ViewMatrix
         {
-            get => _TranslationY;
-            set => SetAndRaise(TranslationYProperty, ref _TranslationY, value);
+            get => _ViewMatrix;
+            //set => SetAndRaise(ViewMatrixProperty, ref _ViewMatrix, value);
         }
-        #endregion    
+        #endregion       
 
-        #region TranslationZ
-        private float _TranslationZ = 0;
-
-        public static readonly DirectProperty<OpenGlControl, float> TranslationZProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("TranslationZ", o => o.TranslationZ, (o, v) => o.TranslationZ = v);
-
-        public float TranslationZ
+        void RebuildViewMatrix()
         {
-            get => _TranslationZ;
-            set => SetAndRaise(TranslationZProperty, ref _TranslationZ, value);
+            SetAndRaise(ViewMatrixProperty, ref _ViewMatrix, Matrix4x4.CreateLookAt(CameraPos, CameraTarget, CameraUp));
         }
-        #endregion    
-
-        Vector3 Translation
-        {
-            get { return new Vector3(TranslationX, TranslationY, TranslationZ); }
-            set
-            {
-                TranslationX = value.X;
-                TranslationY = value.Y;
-                TranslationZ = value.Z;
-            }
-        }
-
-        internal Matrix4x4 RotationMatrix = Matrix4x4.Identity;
-        // backing field to distinguish from RotationXYZ dp change
-        internal float RotationMatrixX = 0f;
-        internal float RotationMatrixY = 0f;
-        internal float RotationMatrixZ = 0f;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        void RebuildRotationMatrix() => RotationMatrix =
-            Matrix4x4.CreateFromYawPitchRoll(RotationMatrixY.ToRad(), RotationMatrixX.ToRad(), RotationMatrixZ.ToRad());
-
-        #region RotationX
-        private float _RotationX = 0;
-
-        public static readonly DirectProperty<OpenGlControl, float> RotationXProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("RotationX", o => o.RotationX, (o, v) => o.RotationX = v);
-
-        /// <summary>
-        /// rotation around Xaxis (deg)
-        /// </summary>
-        public float RotationX
-        {
-            get => _RotationX;
-            set
-            {
-                if (value != RotationMatrixX)
-                {
-                    RotationMatrixX = value;
-                    RebuildRotationMatrix();
-                }
-                SetAndRaise(RotationXProperty, ref _RotationX, value);
-            }
-        }
-        #endregion    
-
-        #region RotationY
-        private float _RotationY = 0;
-
-        public static readonly DirectProperty<OpenGlControl, float> RotationYProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("RotationY", o => o.RotationY, (o, v) => o.RotationY = v);
-
-        /// <summary>
-        /// rotation around Yaxis (deg)
-        /// </summary>
-        public float RotationY
-        {
-            get => _RotationY;
-            set
-            {
-                if (value != RotationMatrixY)
-                {
-                    RotationMatrixY = value;
-                    RebuildRotationMatrix();
-                }
-                SetAndRaise(RotationYProperty, ref _RotationY, value);
-            }
-        }
-        #endregion    
-
-        #region RotationZ
-        private float _RotationZ = 0;
-
-        public static readonly DirectProperty<OpenGlControl, float> RotationZProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("RotationZ", o => o.RotationZ, (o, v) => o.RotationZ = v);
-
-        /// <summary>
-        /// rotation around Zaxis (deg)
-        /// </summary>
-        public float RotationZ
-        {
-            get => _RotationZ;
-            set
-            {
-                if (value != RotationMatrixZ)
-                {
-                    RotationMatrixZ = value;
-                    RebuildRotationMatrix();
-                }
-                SetAndRaise(RotationZProperty, ref _RotationZ, value);
-            }
-        }
-        #endregion    
-
-        internal Matrix4x4 OrbitPressRotationMatrix = Matrix4x4.Identity;
 
         public Vector3 CameraPos
         {
             get { return new Vector3(CameraPosX, CameraPosY, CameraPosZ); }
             set
             {
-                CameraPosX = value.X;
-                CameraPosY = value.Y;
-                CameraPosZ = value.Z;
+                var oldCameraPosX = _CameraPosX;
+                var oldCameraPosY = _CameraPosY;
+                var oldCameraPosZ = _CameraPosZ;
+
+                var changed = value.X != oldCameraPosX || value.Y != oldCameraPosY || value.Z != oldCameraPosZ;
+                _CameraPosX = value.X;
+                _CameraPosY = value.Y;
+                _CameraPosZ = value.Z;
+
+                RaisePropertyChanged(CameraPosXProperty, oldCameraPosX, value.X);
+                RaisePropertyChanged(CameraPosYProperty, oldCameraPosY, value.Y);
+                RaisePropertyChanged(CameraPosZProperty, oldCameraPosZ, value.Z);
+
+                if (changed) RebuildViewMatrix();
             }
         }
-
-        internal Vector3 OrbitPressCameraPos = new Vector3();
 
         #region CameraPosX
         private float _CameraPosX = 0;
@@ -220,7 +162,12 @@ namespace SearchAThing
         public float CameraPosX
         {
             get => _CameraPosX;
-            set => SetAndRaise(CameraPosXProperty, ref _CameraPosX, value);
+            set
+            {
+                var changed = value != _CameraPosX;
+                SetAndRaise(CameraPosXProperty, ref _CameraPosX, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion    
 
@@ -233,7 +180,12 @@ namespace SearchAThing
         public float CameraPosY
         {
             get => _CameraPosY;
-            set => SetAndRaise(CameraPosYProperty, ref _CameraPosY, value);
+            set
+            {
+                var changed = value != _CameraPosY;
+                SetAndRaise(CameraPosYProperty, ref _CameraPosY, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion         
 
@@ -246,7 +198,12 @@ namespace SearchAThing
         public float CameraPosZ
         {
             get => _CameraPosZ;
-            set => SetAndRaise(CameraPosZProperty, ref _CameraPosZ, value);
+            set
+            {
+                var changed = value != _CameraPosZ;
+                SetAndRaise(CameraPosZProperty, ref _CameraPosZ, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion
 
@@ -255,13 +212,22 @@ namespace SearchAThing
             get { return new Vector3(CameraTargetX, CameraTargetY, CameraTargetZ); }
             set
             {
-                CameraTargetX = value.X;
-                CameraTargetY = value.Y;
-                CameraTargetZ = value.Z;
+                var oldCameraTargetX = _CameraTargetX;
+                var oldCameraTargetY = _CameraTargetY;
+                var oldCameraTargetZ = _CameraTargetZ;
+
+                var changed = value.X != oldCameraTargetX || value.Y != oldCameraTargetY || value.Z != oldCameraTargetZ;
+                _CameraTargetX = value.X;
+                _CameraTargetY = value.Y;
+                _CameraTargetZ = value.Z;
+
+                RaisePropertyChanged(CameraTargetXProperty, oldCameraTargetX, value.X);
+                RaisePropertyChanged(CameraTargetYProperty, oldCameraTargetY, value.Y);
+                RaisePropertyChanged(CameraTargetZProperty, oldCameraTargetZ, value.Z);
+
+                if (changed) RebuildViewMatrix();
             }
         }
-
-        internal Vector3 OrbitPressTargetCameraPos = new Vector3();
 
         #region CameraTargetX
         private float _CameraTargetX = 0;
@@ -272,7 +238,12 @@ namespace SearchAThing
         public float CameraTargetX
         {
             get => _CameraTargetX;
-            set => SetAndRaise(CameraTargetXProperty, ref _CameraTargetX, value);
+            set
+            {
+                var changed = value != _CameraTargetX;
+                SetAndRaise(CameraTargetXProperty, ref _CameraTargetX, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion    
 
@@ -285,7 +256,12 @@ namespace SearchAThing
         public float CameraTargetY
         {
             get => _CameraTargetY;
-            set => SetAndRaise(CameraTargetYProperty, ref _CameraTargetY, value);
+            set
+            {
+                var changed = value != _CameraTargetY;
+                SetAndRaise(CameraTargetYProperty, ref _CameraTargetY, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion    
 
@@ -298,7 +274,12 @@ namespace SearchAThing
         public float CameraTargetZ
         {
             get => _CameraTargetZ;
-            set => SetAndRaise(CameraTargetZProperty, ref _CameraTargetZ, value);
+            set
+            {
+                var changed = value != _CameraTargetZ;
+                SetAndRaise(CameraTargetZProperty, ref _CameraTargetZ, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion
 
@@ -307,13 +288,22 @@ namespace SearchAThing
             get { return new Vector3(CameraUpX, CameraUpY, CameraUpZ); }
             set
             {
-                CameraUpX = value.X;
-                CameraUpY = value.Y;
-                CameraUpZ = value.Z;
+                var oldCameraUpX = _CameraUpX;
+                var oldCameraUpY = _CameraUpY;
+                var oldCameraUpZ = _CameraUpZ;
+
+                var changed = value.X != oldCameraUpX || value.Y != oldCameraUpY || value.Z != oldCameraUpZ;
+                _CameraUpX = value.X;
+                _CameraUpY = value.Y;
+                _CameraUpZ = value.Z;
+
+                RaisePropertyChanged(CameraUpXProperty, oldCameraUpX, value.X);
+                RaisePropertyChanged(CameraUpYProperty, oldCameraUpY, value.Y);
+                RaisePropertyChanged(CameraUpZProperty, oldCameraUpZ, value.Z);
+
+                if (changed) RebuildViewMatrix();
             }
         }
-
-        internal Vector3 OrbitPressCameraUp = new Vector3();
 
         #region CameraUpX
         private float _CameraUpX = 0;
@@ -324,7 +314,12 @@ namespace SearchAThing
         public float CameraUpX
         {
             get => _CameraUpX;
-            set => SetAndRaise(CameraUpXProperty, ref _CameraUpX, value);
+            set
+            {
+                var changed = value != _CameraUpX;
+                SetAndRaise(CameraUpXProperty, ref _CameraUpX, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion    
 
@@ -337,7 +332,12 @@ namespace SearchAThing
         public float CameraUpY
         {
             get => _CameraUpY;
-            set => SetAndRaise(CameraUpYProperty, ref _CameraUpY, value);
+            set
+            {
+                var changed = value != _CameraUpY;
+                SetAndRaise(CameraUpYProperty, ref _CameraUpY, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion    
 
@@ -350,9 +350,78 @@ namespace SearchAThing
         public float CameraUpZ
         {
             get => _CameraUpZ;
-            set => SetAndRaise(CameraUpZProperty, ref _CameraUpZ, value);
+            set
+            {
+                var changed = value != _CameraUpZ;
+                SetAndRaise(CameraUpZProperty, ref _CameraUpZ, value);
+                if (changed) RebuildViewMatrix();
+            }
         }
         #endregion
+
+        /// <summary>
+        /// set view matrix all at once avoiding rebuild over property changed
+        /// </summary>        
+        public void SetViewMatrix(Vector3 cameraPos, Vector3 cameraTarget, Vector3 cameraUp)
+        {
+            SetAndRaise(CameraPosXProperty, ref _CameraPosX, cameraPos.X);
+            SetAndRaise(CameraPosYProperty, ref _CameraPosY, cameraPos.Y);
+            SetAndRaise(CameraPosZProperty, ref _CameraPosZ, cameraPos.Z);
+
+            SetAndRaise(CameraTargetXProperty, ref _CameraTargetX, cameraTarget.X);
+            SetAndRaise(CameraTargetYProperty, ref _CameraTargetY, cameraTarget.Y);
+            SetAndRaise(CameraTargetZProperty, ref _CameraTargetZ, cameraTarget.Z);
+
+            SetAndRaise(CameraUpXProperty, ref _CameraUpX, cameraUp.X);
+            SetAndRaise(CameraUpYProperty, ref _CameraUpY, cameraUp.Y);
+            SetAndRaise(CameraUpZProperty, ref _CameraUpZ, cameraUp.Z);
+
+            RebuildViewMatrix();
+        }
+
+        // ==[ PROJECTION ]========================================================================
+
+        #region ProjectionMatrix
+        private Matrix4x4 _ProjectionMatrix = Matrix4x4.Identity;
+
+        public static readonly DirectProperty<OpenGlControl, Matrix4x4> ProjectionMatrixProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, Matrix4x4>("ProjectionMatrix", o => o.ProjectionMatrix, (o, v) => o.ProjectionMatrix = v);
+
+        public Matrix4x4 ProjectionMatrix
+        {
+            get => _ProjectionMatrix;
+            set => SetAndRaise(ProjectionMatrixProperty, ref _ProjectionMatrix, value);
+        }
+        #endregion
+
+        public void RebuildProjectionMatrix()
+        {
+            var ar = Bounds.Size.AspectRatio;
+
+            if (Perspective && FovDeg > 0)
+                ProjectionMatrix = Matrix4x4.CreatePerspectiveFieldOfView(FovDeg.ToRad(), (float)ar, Near, Far);
+            else
+            {
+                var ccs = CameraCS;
+                CameraPos = (Vector3D)CameraTarget + ccs.BaseZ;
+
+                var mm = ModelMatrix;
+                
+                var obbox = new BBox3D(Model.BBox.Points.Select(w => (Vector3D)Vector3.Transform(w, ViewMatrix)));
+                var obboxSize = obbox.Size;
+                var obboxWidth = obboxSize.X;
+                var obboxHeight = obboxSize.Y;
+                var oAr = obboxWidth / obboxHeight;
+
+                var ogWidth = (obboxWidth * ar);
+                var ogHeight = (obboxHeight * oAr);
+
+                ProjectionMatrix = Matrix4x4.CreateOrthographic(
+                    (float)ogWidth * OrthoZoom,
+                    (float)ogHeight * OrthoZoom,
+                    Near, Far);
+            }
+        }
 
         #region FovDeg
         private float _FovDeg = 0;
@@ -363,7 +432,12 @@ namespace SearchAThing
         public float FovDeg
         {
             get => _FovDeg;
-            set => SetAndRaise(FovDegProperty, ref _FovDeg, value);
+            set
+            {
+                var changed = value != _FovDeg;
+                SetAndRaise(FovDegProperty, ref _FovDeg, value);
+                if (changed) RebuildProjectionMatrix();
+            }
         }
         #endregion    
 
@@ -376,7 +450,12 @@ namespace SearchAThing
         public float Near
         {
             get => _Near;
-            set => SetAndRaise(NearProperty, ref _Near, value);
+            set
+            {
+                var changed = value != _Near;
+                SetAndRaise(NearProperty, ref _Near, value);
+                if (changed) RebuildProjectionMatrix();
+            }
         }
         #endregion    
 
@@ -389,9 +468,66 @@ namespace SearchAThing
         public float Far
         {
             get => _Far;
-            set => SetAndRaise(FarProperty, ref _Far, value);
+            set
+            {
+                var changed = value != _Far;
+                SetAndRaise(FarProperty, ref _Far, value);
+                if (changed) RebuildProjectionMatrix();
+            }
         }
         #endregion
+
+        #region Perspective
+        private bool _Perspective = true;
+
+        public static readonly DirectProperty<OpenGlControl, bool> PerspectiveProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, bool>("Perspective", o => o.Perspective, (o, v) => o.Perspective = v);
+
+        public bool Perspective
+        {
+            get => _Perspective;
+            set
+            {
+                var changed = value != _Perspective;
+                SetAndRaise(PerspectiveProperty, ref _Perspective, value);
+                if (changed) RebuildProjectionMatrix();
+            }
+        }
+        #endregion
+
+        #region OrthoZoom
+        private float _OrthoZoom = 1f;
+
+        public static readonly DirectProperty<OpenGlControl, float> OrthoZoomProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("OrthoZoom", o => o.OrthoZoom, (o, v) => o.OrthoZoom = v);
+
+        public float OrthoZoom
+        {
+            get => _OrthoZoom;
+            set
+            {
+                var changed = value != _OrthoZoom;
+                SetAndRaise(OrthoZoomProperty, ref _OrthoZoom, value);
+                if (changed) RebuildProjectionMatrix();
+            }
+        }
+        #endregion
+
+        /// <summary>
+        /// set projection matrix all at once avoiding rebuild over property changed
+        /// </summary>        
+        public void SetProjectionMatrix(float fovDeg, float near, float far, bool perspective, float orthoZoom = 1f)
+        {
+            SetAndRaise(FovDegProperty, ref _FovDeg, fovDeg);
+            SetAndRaise(NearProperty, ref _Near, near);
+            SetAndRaise(FarProperty, ref _Far, far);
+            SetAndRaise(PerspectiveProperty, ref _Perspective, perspective);
+            SetAndRaise(OrthoZoomProperty, ref _OrthoZoom, orthoZoom);
+
+            RebuildProjectionMatrix();
+        }
+
+        // ==[ ]===================================================================================
 
         #region ShowOrbit
         private bool _ShowOrbit = true;
@@ -406,39 +542,8 @@ namespace SearchAThing
         }
         #endregion
 
-        #region Perspective
-        private bool _Perspective = true;
-
-        public static readonly DirectProperty<OpenGlControl, bool> PerspectiveProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, bool>("Perspective", o => o.Perspective, (o, v) => o.Perspective = v);
-
-        public bool Perspective
-        {
-            get => _Perspective;
-            set => SetAndRaise(PerspectiveProperty, ref _Perspective, value);
-        }
-        #endregion
-
-        #region OrthoZoom
-        private float _OrthoZoom = 1f;
-
-        public static readonly DirectProperty<OpenGlControl, float> OrthoZoomProperty =
-            AvaloniaProperty.RegisterDirect<OpenGlControl, float>("OrthoZoom", o => o.OrthoZoom, (o, v) => o.OrthoZoom = v);
-
-        public float OrthoZoom
-        {
-            get => _OrthoZoom;
-            set => SetAndRaise(OrthoZoomProperty, ref _OrthoZoom, value);
-        }
-        #endregion
-
-        public OrbitGeometry orbitGeometry { get; private set; } = new OrbitGeometry();
-
-        OrbitFunction orbitFunction = OrbitFunction.None;
-
         internal bool ShiftKeyPressed = false;
 
-        public PointerPoint? panPressPosition { get; private set; }
         public DateTime middleButtonPressTimestamp = DateTime.MinValue;
 
         public OpenGlControl()
@@ -466,6 +571,7 @@ namespace SearchAThing
                 else if (panPressPosition == null)
                 {
                     panPressPosition = cp;
+                    panPressMatrixSource = new GlControlMatrixSource(this);
                 }
                 middleButtonPressTimestamp = DateTime.Now;
             }
@@ -474,31 +580,23 @@ namespace SearchAThing
         void ControlPointerMoved(object sender, PointerEventArgs e)
         {
             var ctl = sender as OpenGlControl;
-
-            if (panPressPosition != null)
-            {
-                // TODO:
-            }
-            EvalOrbitPointerMoved(e.GetCurrentPoint(ctl));
+            var p = e.GetCurrentPoint(ctl);
+            EvalPanPointerMoved(p);
+            EvalOrbitPointerMoved(p);
         }
 
         void ControlPointerReleased(object sender, PointerReleasedEventArgs e)
         {
             var ctl = sender as OpenGlControl;
-
-            EvalOrbitPointerReleased(e.GetCurrentPoint(ctl));
-
-            panPressPosition = null;
+            var p = e.GetCurrentPoint(ctl);
+            EvalPanPointerReleased(p);
+            EvalOrbitPointerReleased(p);
         }
 
         void ControlPointerWheelChanged(object sender, PointerWheelEventArgs e)
         {
             var ctl = sender as OpenGlControl;
-
-            if (e.Delta.Y > 0)
-                ctl.ZoomOut();
-            else
-                ctl.ZoomIn();
+            EvalZoomChanged(e.Delta.Y);
         }
 
         void ControlGotFocus(object sender, GotFocusEventArgs e)

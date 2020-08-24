@@ -28,9 +28,9 @@ namespace SearchAThing
 
         public Line3D RayWorld(OpenGlControl ctl, float mouse_x, float mouse_y)
         {
-            var projection = ctl.GetProjectionMatrix();
-            var view = ctl.GetViewMatrix();
-            var model = ctl.GetModelMatrix();
+            var pm = ctl.ProjectionMatrix;
+            var vm = ctl.ViewMatrix;
+            var mm = ctl.ModelMatrix;
 
             var w = ctl.Bounds.Width;
             var h = ctl.Bounds.Height;

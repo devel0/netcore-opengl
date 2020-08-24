@@ -18,6 +18,8 @@
 
 ## Recent changes
 
+- **0.2.0** : refactored orbit control ; added pan ; TODO: projection fitview, screen-model coord
+
 ## Roadmap
 
 - ray world to compute 3d wcs coord over mouse xy

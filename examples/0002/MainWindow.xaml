@@ -9,6 +9,9 @@
         </ResourceDictionary>
     </Window.Resources>
     <Window.Styles>
+        <Style Selector="TextBox.mono">
+            <Setter Property="FontFamily" Value="Monospace"/>
+        </Style>
         <Style Selector="TextBlock.bold">
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
@@ -31,6 +34,32 @@
             <Setter Property="Width" Value="20"/>
             <Setter Property="Height" Value="20"/>
         </Style>
+        <Style Selector="Border.brdGray">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+        </Style>
+        <Style Selector="Border.brdRed">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Red"/>
+        </Style>
+        <Style Selector="Border.brdGreen">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Green"/>
+        </Style>
+        <Style Selector="Border.brdBlue">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Blue"/>
+        </Style>
+        <Style Selector="Image.toolbaricon">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+        <Style Selector="TextBlock.expanderHdr">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#505050"/>
+            <Setter Property="Padding" Value="10,0,10,0"/>
+        </Style>
     </Window.Styles>
     <Grid ColumnDefinitions="420,*"><!-- a comment sample -->
         <Grid Grid.Column="0" Margin="0,0,10,0" Background="{StaticResource stdbg}">
@@ -46,64 +75,99 @@
                             <TextBlock Text="Show bbox" FontWeight="Bold" VerticalAlignment="Center"/>
                         </CheckBox>
                         <Button Content="reset" Click="click_reset" Margin="10,0,0,0"/>
+                        <Button Content="exportDxf" Click="click_exportDxf" Margin="10,0,0,0"/>
                     </StackPanel>
-                    <TextBlock Text="Views" Margin="0,10,0,0" FontWeight="Bold"/>
-                    <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
-                        <TextBlock Grid.Column="0" Text="TX" Classes="ary"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Margin="0,0,10,0"/>
-                        <TextBlock Grid.Column="1" Text="TY" Classes="ary"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
-                        <TextBlock Grid.Column="2" Text="TZ" Classes="ary"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Grid.Column="2"/>
-                    </Grid><!-- <TextBlock Text="Yaw Pitch Roll" Margin="0,10,0,0" FontWeight="Bold"/> -->
-                    <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
-                        <TextBlock Grid.Column="0" Text="RY (Yaw)" Classes="ary"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.RotationY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Margin="0,0,10,0"/>
-                        <TextBlock Grid.Column="1" Text="RX (Pitch)" Classes="ary"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.RotationX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
-                        <TextBlock Grid.Column="2" Text="RZ (Roll)" Classes="ary"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.RotationZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Grid.Column="2"/>
-                    </Grid>
-                    <TextBlock Text="Camera Position" Margin="0,10,0,0" FontWeight="Bold"/>
-                    <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraPosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraPosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraPosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
-                    </Grid>
-                    <TextBlock Text="Camera Target" Margin="0,10,0,0" FontWeight="Bold"/>
-                    <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraTargetX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraTargetY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraTargetZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
-                    </Grid>
-                    <TextBlock Text="Camera Up" Margin="0,10,0,0" FontWeight="Bold"/>
-                    <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraUpX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraUpY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" Grid.Column="1" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraUpZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" Grid.Column="2"/>
-                    </Grid>
+                    <Expander IsExpanded="true">
+                        <Expander.Header>
+                            <TextBlock Text="Model" Classes="expanderHdr" />
+                        </Expander.Header>
+                        <Border Classes="brdRed">
+                            <StackPanel Margin="10">
+                                <TextBox Classes="mono" IsReadOnly="true" Text="{Binding #win.Model.FocusedControl.ModelMatrix,                     
+                                    Mode=OneWay,
+                                    Converter={StaticResource MatrixDisplay}}"/>
+                                <!-- <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
+                                    <TextBlock Grid.Column="0" Text="TX" Classes="ary"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Margin="0,0,10,0"/>
+                                    <TextBlock Grid.Column="1" Text="TY" Classes="ary"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
+                                    <TextBlock Grid.Column="2" Text="TZ" Classes="ary"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.TranslationZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-100" AutoExpandMinimum="true" Maximum="100" AutoExpandMaximum="true" StepFactor="0.02" Grid.Row="1" Grid.Column="2"/>
+                                </Grid> -->
+                                <!-- <TextBlock Text="Yaw Pitch Roll" Margin="0,10,0,0" FontWeight="Bold"/> -->
+                                <!-- <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
+                                    <TextBlock Grid.Column="0" Text="Yaw" Classes="ary"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.YawDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Margin="0,0,10,0"/>
+                                    <TextBlock Grid.Column="1" Text="Pitch" Classes="ary"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.PitchDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
+                                    <TextBlock Grid.Column="2" Text="Roll" Classes="ary"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.RollDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-180" Maximum="180" StepMultiple="2" Grid.Row="1" Grid.Column="2"/>
+                                </Grid> -->
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                    <Expander IsExpanded="true">
+                        <Expander.Header>
+                            <TextBlock Text="View"  Classes="expanderHdr" />
+                        </Expander.Header>
+                        <Border Classes="brdGreen">
+                            <StackPanel Margin="10">
+                                <TextBox Classes="mono" IsReadOnly="true" Text="{Binding #win.Model.FocusedControl.ViewMatrix,                     
+                                    Mode=OneWay,
+                                    Converter={StaticResource MatrixDisplay}}"/>
+                                <TextBlock Text="Camera Position" Margin="0,10,0,0" FontWeight="Bold"/>
+                                <Grid ColumnDefinitions="*,*,*">
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraPosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraPosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraPosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
+                                </Grid>
+                                <TextBlock Text="Camera Target" Margin="0,10,0,0" FontWeight="Bold"/>
+                                <Grid ColumnDefinitions="*,*,*">
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraTargetX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraTargetY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraTargetZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
+                                </Grid>
+                                <TextBlock Text="Camera Up" Margin="0,10,0,0" FontWeight="Bold"/>
+                                <Grid ColumnDefinitions="*,*,*">
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraUpX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" Margin="0,0,10,0"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraUpY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" Grid.Column="1" Margin="0,0,10,0"/>
+                                    <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.CameraUpZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-1" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" Grid.Column="2"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                    <Expander IsExpanded="true">
+                        <Expander.Header>
+                            <TextBlock Text="Projection" Classes="expanderHdr" />
+                        </Expander.Header>
+                        <Border Classes="brdBlue">
+                            <StackPanel Margin="10">
+                                <TextBox Classes="mono" IsReadOnly="true" Text="{Binding #win.Model.FocusedControl.ProjectionMatrix,                     
+                                    Mode=OneWay,
+                                    Converter={StaticResource MatrixDisplay}}"/>
+                                <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
+                                    <TextBlock Grid.Column="0" Text="Fov" Classes="ary"/>
+                                    <desktop:TextBoxSlider ToolTip.Tip="Field of view (deg)" Value="{Binding #win.Model.FocusedControl.FovDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="1" Maximum="179" AutoExpandMaximum="true" StepMultiple="1" Grid.Row="1" Margin="0,0,10,0"/>
+                                    <TextBlock Grid.Column="1" Text="Near" Classes="ary"/>
+                                    <desktop:TextBoxSlider ToolTip.Tip="Near plane distance" Value="{Binding #win.Model.FocusedControl.Near, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="1e-3" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
+                                    <TextBlock Grid.Column="2" Text="Far" Classes="ary"/>
+                                    <desktop:TextBoxSlider ToolTip.Tip="Far plane distance" Value="{Binding #win.Model.FocusedControl.Far, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="150" AutoExpandMinimum="true" Maximum="200" AutoExpandMaximum="true" StepFactor="1e-3" Grid.Row="1" Grid.Column="2"/>
+                                </Grid>
+                                <TextBlock Text="OrthoZoom" Margin="0,10,0,0" FontWeight="Bold"/>
+                                <desktop:TextBoxSlider ToolTip.Tip="Ortho zoom" Value="{Binding #win.Model.FocusedControl.OrthoZoom, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="1e-1" AutoExpandMinimum="true" Maximum="1e1" AutoExpandMaximum="true" StepFactor="1e-3" Margin="0,0,10,0"/>
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="Object Color" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <Button Content="random" Click="click_random" Margin="10,0,0,0"/>
+                    </StackPanel>
                     <TextBlock Text="Light Pos" Margin="0,10,0,0" FontWeight="Bold"/>
                     <Grid ColumnDefinitions="*,*,*">
                         <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
                         <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
                         <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
                     </Grid>
-                    <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,*" Margin="0,10,0,0">
-                        <TextBlock Grid.Column="0" Text="Fov" Classes="ary"/>
-                        <desktop:TextBoxSlider ToolTip.Tip="Field of view (deg)" Value="{Binding #win.Model.FocusedControl.FovDeg, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="1" Maximum="179" AutoExpandMaximum="true" StepMultiple="1" Grid.Row="1" Margin="0,0,10,0"/>
-                        <TextBlock Grid.Column="1" Text="Near" Classes="ary"/>
-                        <desktop:TextBoxSlider ToolTip.Tip="Near plane distance" Value="{Binding #win.Model.FocusedControl.Near, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" AutoExpandMinimum="true" Maximum="1" AutoExpandMaximum="true" StepFactor="1e-3" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0"/>
-                        <TextBlock Grid.Column="2" Text="Far" Classes="ary"/>
-                        <desktop:TextBoxSlider ToolTip.Tip="Far plane distance" Value="{Binding #win.Model.FocusedControl.Far, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="150" AutoExpandMinimum="true" Maximum="200" AutoExpandMaximum="true" StepFactor="1e-3" Grid.Row="1" Grid.Column="2"/>
-                    </Grid>
-                    <TextBlock Text="Ortho w,h scale" Margin="0,10,0,0" FontWeight="Bold"/>
-                    <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider ToolTip.Tip="Ortho zoom" Value="{Binding #win.Model.FocusedControl.OrthoZoom, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="1e-1" AutoExpandMinimum="true" Maximum="1e1" AutoExpandMaximum="true" StepFactor="1e-3" Margin="0,0,10,0"/>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                        <TextBlock Text="Object Color" FontWeight="Bold" VerticalAlignment="Center"/>
-                        <Button Content="random" Click="click_random" Margin="10,0,0,0"/>
-                    </StackPanel>
                     <TextBlock Grid.Row="0" Text="Ambient" Margin="0,10,0,0" FontWeight="Bold"/>
                     <desktop:TextBoxSlider ToolTip.Tip="Ambient light" Grid.Row="1" Value="{Binding #win.Model.FocusedControl.Ambient, Mode=TwoWay, FallbackValue=0}" Minimum="0" Maximum="1"/>
                     <TextBlock Grid.Row="0" Text="Alpha" Margin="0,10,0,0" FontWeight="Bold"/>
@@ -118,49 +182,49 @@
                 <StackPanel Grid.Column="0" Orientation="Horizontal">
                     <Button ToolTip.Tip="top" Click="viewTopClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.ViewTop_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/topview.png"/>
                             <TextBlock Text="top" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="left" Click="viewLeftClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.ViewLeft_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/leftview.png"/>
                             <TextBlock Text="left" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="front" Click="viewFrontClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.ViewFront_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/frontview.png"/>
                             <TextBlock Text="front" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="right" Click="viewRightClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.ViewRight_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/rightview.png"/>
                             <TextBlock Text="right" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="back" Click="viewBackClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.ViewBack_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/backview.png"/>
                             <TextBlock Text="back" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="bottom" Click="viewBottomClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.ViewBottom_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/bottomview.png"/>
                             <TextBlock Text="bottom" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="zoom fit" Click="zoomFitClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.FitToScreen_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/fitview.png"/>
                             <TextBlock Text="zoomfit" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="perspective" Click="viewPerspectiveClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.PerspectiveCamera_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/perspective.png"/>
                             <TextBlock Text="persp" Classes="toolbartxt" Background="{Binding #win.Model.FocusedControl.Perspective, FallbackValue=Transparent,
                                 Converter={StaticResource SmartConverter}
                                 ConverterParameter=true LightGray Transparent}"/>
@@ -168,7 +232,7 @@
                     </Button>
                     <Button ToolTip.Tip="ortho" Click="viewOrthoClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.OrthographicCamera_16x}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/ortho.png"/>
                             <TextBlock Text="ortho" Classes="toolbartxt" Background="{Binding #win.Model.FocusedControl.Perspective, FallbackValue=Transparent,
                                 Converter={StaticResource SmartConverter}
                                 ConverterParameter=false LightGray Transparent}"/>
@@ -176,33 +240,35 @@
                     </Button>
                     <Button ToolTip.Tip="orbit" Click="ortbitClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource Material.RotateOrbit}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/orbit.png"/>
                             <TextBlock Text="orbit" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
-                    <ToggleButton ToolTip.Tip="toggle wireframe" IsChecked="{Binding #win.Model.FocusedControl.Wireframe, Mode=TwoWay, FallbackValue=false}">
+                    <Button ToolTip.Tip="toggle wireframe" Click="viewWireframeClick" Classes="toolbarbtn">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSImageLib.ToggleWireframe_16x}"/>
-                            <TextBlock Text="wframe" Classes="toolbartxt"/>
+                            <Image Classes="toolbaricon" Source="/Assets/wireframe.png"/>
+                            <TextBlock Text="wframe" Classes="toolbartxt" Background="{Binding #win.Model.FocusedControl.Wireframe, FallbackValue=Transparent,
+                                Converter={StaticResource SmartConverter}
+                                ConverterParameter=true LightGray Transparent}"/>                            
                         </StackPanel>
-                    </ToggleButton>
+                    </Button>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                     <Button ToolTip.Tip="Split view horizontally" Classes="toolbarbtn" Click="splitHorizontalClick">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSCodeLight.split-horizontal}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/splithorizontal.png"/>
                             <TextBlock Text="hsplit" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="Split view vertically" Classes="toolbarbtn" Click="splitVerticalClick">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource VSCodeLight.split-vertical}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/splitvertical.png"/>
                             <TextBlock Text="vsplit" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="remove view" Classes="toolbarbtn" Click="removeViewClick">
                         <StackPanel>
-                            <DrawingPresenter Classes="toolbaricon" Drawing="{StaticResource BoxIcons.RegularWindowClose}"/>
+                            <Image Classes="toolbaricon" Source="/Assets/closeview.png"/>
                             <TextBlock Text="remove" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
