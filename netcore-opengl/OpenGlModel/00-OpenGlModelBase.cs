@@ -190,10 +190,7 @@ namespace SearchAThing
                 GL.PolygonMode(GLEnum.FrontAndBack, PolygonMode.Fill);
                 ctl.RenderOverlay(GL, context, ps);
 
-                Render(ctl, context, ps);
-
-                System.Console.WriteLine($"rendering ps:{ps.Width}x{ps.Height} (ps.ar:{ps.AspectRatio})");
-                System.Console.WriteLine($"ctl:{ctl.Bounds.Width}x{ctl.Bounds.Height}");
+                Render(ctl, context, ps);                
 
                 using (var bitmap = new WriteableBitmap(
                     ps,
@@ -300,9 +297,7 @@ namespace SearchAThing
         bool fbInitialized = false;
 
         void Resize(uint width, uint height)
-        {            
-            System.Console.WriteLine($"resizing w:{width}x{height}");
-
+        {                        
             var firstInit = !fbInitialized;
 
             if (!fbInitialized) fbInitialized = true;
