@@ -94,7 +94,7 @@ namespace SearchAThing
                 var obboxHeight = obboxSize.Y;
                 var oAr = obboxWidth / obboxHeight;
 
-                var obboxR = new BBox3D(Model.BBox.Points.Select(w => (Vector3D)Vector3.Transform(w, ModelMatrix * ViewMatrix)));                
+                var obboxR = new BBox3D(Model.BBox.Points.Select(w => (Vector3D)Vector3.Transform(w, ModelMatrix * ViewMatrix)));
                 var obboxRSize = obboxR.Size;
                 var obboxRWidth = obboxRSize.X;
                 var obboxRHeight = obboxRSize.Y;
@@ -126,42 +126,66 @@ namespace SearchAThing
 
         // camera helpers
 
-        void CameraTop(BBox3D bbox)
+        /// <summary>
+        /// set CameraTarget=(0,0,0) ; CameraUp=(0,1,0) ; CameraPos=(0,0,dst)
+        /// </summary>
+        /// <param name="bbox">used to compute dst</param>
+        public void CameraTop(BBox3D bbox)
         {
             CameraTarget = new Vector3();
             CameraUp = new Vector3(0, 1, 0);
             CameraPos = new Vector3(0, 0, (float)(bbox.Max.Z + bbox.Size.Z));
         }
 
-        void CameraLeft(BBox3D bbox)
+        /// <summary>
+        /// set CameraTarget=(0,0,0) ; CameraUp=(0,0,1) ; CameraPos=(dst,0,0)
+        /// </summary>
+        /// <param name="bbox">used to compute dst</param>
+        public void CameraLeft(BBox3D bbox)
         {
             CameraTarget = new Vector3();
             CameraUp = new Vector3(0, 0, 1);
             CameraPos = new Vector3((float)(bbox.Min.X - bbox.Size.X), 0, 0);
         }
 
-        void CameraFront(BBox3D bbox)
+        /// <summary>
+        /// set CameraTarget=(0,0,0) ; CameraUp=(0,0,1) ; CameraPos=(0,dst,0)
+        /// </summary>
+        /// <param name="bbox">used to compute dst</param>
+        public void CameraFront(BBox3D bbox)
         {
             CameraTarget = new Vector3();
             CameraUp = new Vector3(0, 0, 1);
             CameraPos = new Vector3(0, (float)(bbox.Min.Y - bbox.Size.Y), 0);
         }
 
-        void CameraRight(BBox3D bbox)
+        /// <summary>
+        /// set CameraTarget=(0,0,0) ; CameraUp=(0,0,1) ; CameraPos=(dst,0,0)
+        /// </summary>
+        /// <param name="bbox">used to compute dst</param>
+        public void CameraRight(BBox3D bbox)
         {
             CameraTarget = new Vector3();
             CameraUp = new Vector3(0, 0, 1);
             CameraPos = new Vector3((float)(bbox.Max.X + bbox.Size.X), 0, 0);
         }
 
-        void CameraBack(BBox3D bbox)
+        /// <summary>
+        /// set CameraTarget=(0,0,0) ; CameraUp=(0,0,1) ; CameraPos=(dst,0,0)
+        /// </summary>
+        /// <param name="bbox">used to compute dst</param>
+        public void CameraBack(BBox3D bbox)
         {
             CameraTarget = new Vector3();
             CameraUp = new Vector3(0, 0, 1);
             CameraPos = new Vector3(0, (float)(bbox.Max.Y + bbox.Size.Y), 0);
         }
 
-        void CameraBottom(BBox3D bbox)
+        /// <summary>
+        /// set CameraTarget=(0,0,0) ; CameraUp=(0,1,0) ; CameraPos=(0,0,dst)
+        /// </summary>
+        /// <param name="bbox">used to compute dst</param>
+        public void CameraBottom(BBox3D bbox)
         {
             CameraTarget = new Vector3();
             CameraUp = new Vector3(0, 1, 0);
@@ -170,62 +194,64 @@ namespace SearchAThing
 
         // views
 
+        public Matrix4x4 BaseModelMatrix => ModelMatrix = Matrix4x4.CreateTranslation(-this.Model.BBox.Middle);
+
         public void ViewTop()
         {
             var bbox = this.Model.BBox;
             if (bbox.IsEmpty) return;
 
-            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            ModelMatrix = BaseModelMatrix;
             CameraTop(bbox);
             ZoomFit();
         }
 
-        public void ViewLeft()
+        public void ViewLeft(bool resetModelMatrix = true)
         {
             var bbox = this.Model.BBox;
             if (bbox.IsEmpty) return;
 
-            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            if (resetModelMatrix) ModelMatrix = BaseModelMatrix;
             CameraLeft(bbox);
             ZoomFit();
         }
 
-        public void ViewFront()
+        public void ViewFront(bool resetModelMatrix = true)
         {
             var bbox = Model.BBox;
             if (bbox.IsEmpty) return;
 
-            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            if (resetModelMatrix) ModelMatrix = BaseModelMatrix;
             CameraFront(bbox);
             ZoomFit();
         }
 
-        public void ViewRight()
+        public void ViewRight(bool resetModelMatrix = true)
         {
             var bbox = this.Model.BBox;
             if (bbox.IsEmpty) return;
 
-            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            if (resetModelMatrix) ModelMatrix = BaseModelMatrix;
             CameraRight(bbox);
             ZoomFit();
         }
 
-        public void ViewBack()
+        public void ViewBack(bool resetModelMatrix = true)
         {
             var bbox = Model.BBox;
             if (bbox.IsEmpty) return;
 
-            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            if (resetModelMatrix) ModelMatrix = BaseModelMatrix;
             CameraBack(bbox);
             ZoomFit();
         }
 
-        public void ViewBottom()
+        public void ViewBottom(bool resetModelMatrix = true)
         {
             var bbox = Model.BBox;
             if (bbox.IsEmpty) return;
 
-            ModelMatrix = Matrix4x4.CreateTranslation(-bbox.Middle);
+            if (resetModelMatrix) ModelMatrix = BaseModelMatrix;
             CameraBottom(bbox);
             ZoomFit();
         }
