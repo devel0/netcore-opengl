@@ -12,7 +12,7 @@
           "hash": "ROLkTicTnMNS7HIBCXGHqQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "OsTzUZCHZ8/KUNrUNgtdag=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -36,7 +36,7 @@
           "hash": "/9XTQjcofO9u4R+WC2R6Iw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "lQuFFmrGYI85IhaRb+jDDw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -60,7 +60,19 @@
           "hash": "tQUn8BGUix/HIF9koxgfoA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.GlControlMatrixSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.GlControlMatrixSource.html",
+          "hash": "r26flaz6a4Te4fBH5yWdaQ=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlControl.html",
-          "hash": "k7L5VVd6iuN3nbBHwNQmdQ=="
+          "hash": "ORlF5I/98tMrjIsHLDSwWQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlExt.html",
-          "hash": "Om2X+nw7TRPUiwab+feklA=="
+          "hash": "5ZKdL1QpXI0P9VHoKlA9Tg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlModelBase.html",
-          "hash": "EAT04lT14Su8IruCxjx9BQ=="
+          "hash": "TqoZNQkQafp+vlRB3KdW4A=="
         }
       },
       "is_incremental": false,
@@ -105,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlModelOptions.html",
-          "hash": "IgNoqAD3i7wsoJChvhh4Og=="
+          "hash": "9xrDRkraKh3uGdqRTywnjw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OpenGlToolkit.html",
-          "hash": "UQ0SjaB2SE31rR1KDD2cvA=="
+          "hash": "XmbxDHMJ1ChMOlu6Afx1Hg=="
         }
       },
       "is_incremental": false,
@@ -129,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.OrbitFunction.html",
-          "hash": "S6kavURtogB5yfGXuwFtYA=="
+          "hash": "yAfGDxvg7+5TOSCABwIzrA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -144,7 +156,7 @@
           "hash": "+XcN73VVOnw6BxyeSqVhoA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -156,7 +168,7 @@
           "hash": "21BJb2x2I9zAJT+ozA0KMw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -168,7 +180,7 @@
           "hash": "uGNV/wUadKP3laVKzufrXQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SearchAThing.html",
-          "hash": "bV5EcJtM9tNuiST+ND/NdA=="
+          "hash": "h1OLKk3rbk+0E5NNCF/Knw=="
         }
       },
       "is_incremental": false,
@@ -204,7 +216,7 @@
           "hash": "BqrMTWAjHaJ/0XdYAPevHg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "SNg3n1th7AzkEnkFY9+WBg=="
+          "hash": "szUpsN7bxQHIhARqTkC8BA=="
         }
       },
       "is_incremental": false,
@@ -289,8 +301,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 16,
-          "skipped_file_count": 11
+          "total_file_count": 17,
+          "skipped_file_count": 9
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

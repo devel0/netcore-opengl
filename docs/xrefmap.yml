@@ -38,6 +38,168 @@ references:
   commentId: F:SearchAThing.Circle2.Radius
   fullName: SearchAThing.Circle2.Radius
   nameWithType: Circle2.Radius
+- uid: SearchAThing.GlControlMatrixSource
+  name: GlControlMatrixSource
+  href: api/SearchAThing.GlControlMatrixSource.html
+  commentId: T:SearchAThing.GlControlMatrixSource
+  fullName: SearchAThing.GlControlMatrixSource
+  nameWithType: GlControlMatrixSource
+- uid: SearchAThing.GlControlMatrixSource.#ctor(SearchAThing.OpenGlControl)
+  name: GlControlMatrixSource(OpenGlControl)
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource__ctor_SearchAThing_OpenGlControl_
+  commentId: M:SearchAThing.GlControlMatrixSource.#ctor(SearchAThing.OpenGlControl)
+  fullName: SearchAThing.GlControlMatrixSource.GlControlMatrixSource(SearchAThing.OpenGlControl)
+  nameWithType: GlControlMatrixSource.GlControlMatrixSource(OpenGlControl)
+- uid: SearchAThing.GlControlMatrixSource.#ctor*
+  name: GlControlMatrixSource
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource__ctor_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.#ctor
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.GlControlMatrixSource
+  nameWithType: GlControlMatrixSource.GlControlMatrixSource
+- uid: SearchAThing.GlControlMatrixSource.CameraPos
+  name: CameraPos
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_CameraPos
+  commentId: P:SearchAThing.GlControlMatrixSource.CameraPos
+  fullName: SearchAThing.GlControlMatrixSource.CameraPos
+  nameWithType: GlControlMatrixSource.CameraPos
+- uid: SearchAThing.GlControlMatrixSource.CameraPos*
+  name: CameraPos
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_CameraPos_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.CameraPos
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.CameraPos
+  nameWithType: GlControlMatrixSource.CameraPos
+- uid: SearchAThing.GlControlMatrixSource.CameraTarget
+  name: CameraTarget
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_CameraTarget
+  commentId: P:SearchAThing.GlControlMatrixSource.CameraTarget
+  fullName: SearchAThing.GlControlMatrixSource.CameraTarget
+  nameWithType: GlControlMatrixSource.CameraTarget
+- uid: SearchAThing.GlControlMatrixSource.CameraTarget*
+  name: CameraTarget
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_CameraTarget_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.CameraTarget
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.CameraTarget
+  nameWithType: GlControlMatrixSource.CameraTarget
+- uid: SearchAThing.GlControlMatrixSource.CameraUp
+  name: CameraUp
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_CameraUp
+  commentId: P:SearchAThing.GlControlMatrixSource.CameraUp
+  fullName: SearchAThing.GlControlMatrixSource.CameraUp
+  nameWithType: GlControlMatrixSource.CameraUp
+- uid: SearchAThing.GlControlMatrixSource.CameraUp*
+  name: CameraUp
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_CameraUp_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.CameraUp
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.CameraUp
+  nameWithType: GlControlMatrixSource.CameraUp
+- uid: SearchAThing.GlControlMatrixSource.Far
+  name: Far
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_Far
+  commentId: P:SearchAThing.GlControlMatrixSource.Far
+  fullName: SearchAThing.GlControlMatrixSource.Far
+  nameWithType: GlControlMatrixSource.Far
+- uid: SearchAThing.GlControlMatrixSource.Far*
+  name: Far
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_Far_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.Far
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.Far
+  nameWithType: GlControlMatrixSource.Far
+- uid: SearchAThing.GlControlMatrixSource.FovDeg
+  name: FovDeg
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_FovDeg
+  commentId: P:SearchAThing.GlControlMatrixSource.FovDeg
+  fullName: SearchAThing.GlControlMatrixSource.FovDeg
+  nameWithType: GlControlMatrixSource.FovDeg
+- uid: SearchAThing.GlControlMatrixSource.FovDeg*
+  name: FovDeg
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_FovDeg_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.FovDeg
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.FovDeg
+  nameWithType: GlControlMatrixSource.FovDeg
+- uid: SearchAThing.GlControlMatrixSource.ModelMatrix
+  name: ModelMatrix
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_ModelMatrix
+  commentId: P:SearchAThing.GlControlMatrixSource.ModelMatrix
+  fullName: SearchAThing.GlControlMatrixSource.ModelMatrix
+  nameWithType: GlControlMatrixSource.ModelMatrix
+- uid: SearchAThing.GlControlMatrixSource.ModelMatrix*
+  name: ModelMatrix
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_ModelMatrix_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.ModelMatrix
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.ModelMatrix
+  nameWithType: GlControlMatrixSource.ModelMatrix
+- uid: SearchAThing.GlControlMatrixSource.Near
+  name: Near
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_Near
+  commentId: P:SearchAThing.GlControlMatrixSource.Near
+  fullName: SearchAThing.GlControlMatrixSource.Near
+  nameWithType: GlControlMatrixSource.Near
+- uid: SearchAThing.GlControlMatrixSource.Near*
+  name: Near
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_Near_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.Near
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.Near
+  nameWithType: GlControlMatrixSource.Near
+- uid: SearchAThing.GlControlMatrixSource.OrthoZoom
+  name: OrthoZoom
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_OrthoZoom
+  commentId: P:SearchAThing.GlControlMatrixSource.OrthoZoom
+  fullName: SearchAThing.GlControlMatrixSource.OrthoZoom
+  nameWithType: GlControlMatrixSource.OrthoZoom
+- uid: SearchAThing.GlControlMatrixSource.OrthoZoom*
+  name: OrthoZoom
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_OrthoZoom_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.OrthoZoom
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.OrthoZoom
+  nameWithType: GlControlMatrixSource.OrthoZoom
+- uid: SearchAThing.GlControlMatrixSource.Perspective
+  name: Perspective
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_Perspective
+  commentId: P:SearchAThing.GlControlMatrixSource.Perspective
+  fullName: SearchAThing.GlControlMatrixSource.Perspective
+  nameWithType: GlControlMatrixSource.Perspective
+- uid: SearchAThing.GlControlMatrixSource.Perspective*
+  name: Perspective
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_Perspective_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.Perspective
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.Perspective
+  nameWithType: GlControlMatrixSource.Perspective
+- uid: SearchAThing.GlControlMatrixSource.ProjectionMatrix
+  name: ProjectionMatrix
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_ProjectionMatrix
+  commentId: P:SearchAThing.GlControlMatrixSource.ProjectionMatrix
+  fullName: SearchAThing.GlControlMatrixSource.ProjectionMatrix
+  nameWithType: GlControlMatrixSource.ProjectionMatrix
+- uid: SearchAThing.GlControlMatrixSource.ProjectionMatrix*
+  name: ProjectionMatrix
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_ProjectionMatrix_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.ProjectionMatrix
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.ProjectionMatrix
+  nameWithType: GlControlMatrixSource.ProjectionMatrix
+- uid: SearchAThing.GlControlMatrixSource.ViewMatrix
+  name: ViewMatrix
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_ViewMatrix
+  commentId: P:SearchAThing.GlControlMatrixSource.ViewMatrix
+  fullName: SearchAThing.GlControlMatrixSource.ViewMatrix
+  nameWithType: GlControlMatrixSource.ViewMatrix
+- uid: SearchAThing.GlControlMatrixSource.ViewMatrix*
+  name: ViewMatrix
+  href: api/SearchAThing.GlControlMatrixSource.html#SearchAThing_GlControlMatrixSource_ViewMatrix_
+  commentId: Overload:SearchAThing.GlControlMatrixSource.ViewMatrix
+  isSpec: "True"
+  fullName: SearchAThing.GlControlMatrixSource.ViewMatrix
+  nameWithType: GlControlMatrixSource.ViewMatrix
 - uid: SearchAThing.GLVertex
   name: GLVertex
   href: api/SearchAThing.GLVertex.html
@@ -398,45 +560,6 @@ references:
   commentId: F:SearchAThing.OpenGlControl.FovDegProperty
   fullName: SearchAThing.OpenGlControl.FovDegProperty
   nameWithType: OpenGlControl.FovDegProperty
-- uid: SearchAThing.OpenGlControl.GetModelMatrix
-  name: GetModelMatrix()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_GetModelMatrix
-  commentId: M:SearchAThing.OpenGlControl.GetModelMatrix
-  fullName: SearchAThing.OpenGlControl.GetModelMatrix()
-  nameWithType: OpenGlControl.GetModelMatrix()
-- uid: SearchAThing.OpenGlControl.GetModelMatrix*
-  name: GetModelMatrix
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_GetModelMatrix_
-  commentId: Overload:SearchAThing.OpenGlControl.GetModelMatrix
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.GetModelMatrix
-  nameWithType: OpenGlControl.GetModelMatrix
-- uid: SearchAThing.OpenGlControl.GetProjectionMatrix
-  name: GetProjectionMatrix()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_GetProjectionMatrix
-  commentId: M:SearchAThing.OpenGlControl.GetProjectionMatrix
-  fullName: SearchAThing.OpenGlControl.GetProjectionMatrix()
-  nameWithType: OpenGlControl.GetProjectionMatrix()
-- uid: SearchAThing.OpenGlControl.GetProjectionMatrix*
-  name: GetProjectionMatrix
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_GetProjectionMatrix_
-  commentId: Overload:SearchAThing.OpenGlControl.GetProjectionMatrix
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.GetProjectionMatrix
-  nameWithType: OpenGlControl.GetProjectionMatrix
-- uid: SearchAThing.OpenGlControl.GetViewMatrix
-  name: GetViewMatrix()
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_GetViewMatrix
-  commentId: M:SearchAThing.OpenGlControl.GetViewMatrix
-  fullName: SearchAThing.OpenGlControl.GetViewMatrix()
-  nameWithType: OpenGlControl.GetViewMatrix()
-- uid: SearchAThing.OpenGlControl.GetViewMatrix*
-  name: GetViewMatrix
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_GetViewMatrix_
-  commentId: Overload:SearchAThing.OpenGlControl.GetViewMatrix
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.GetViewMatrix
-  nameWithType: OpenGlControl.GetViewMatrix
 - uid: SearchAThing.OpenGlControl.middleButtonPressTimestamp
   name: middleButtonPressTimestamp
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_middleButtonPressTimestamp
@@ -456,6 +579,25 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.Model
   nameWithType: OpenGlControl.Model
+- uid: SearchAThing.OpenGlControl.ModelMatrix
+  name: ModelMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ModelMatrix
+  commentId: P:SearchAThing.OpenGlControl.ModelMatrix
+  fullName: SearchAThing.OpenGlControl.ModelMatrix
+  nameWithType: OpenGlControl.ModelMatrix
+- uid: SearchAThing.OpenGlControl.ModelMatrix*
+  name: ModelMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ModelMatrix_
+  commentId: Overload:SearchAThing.OpenGlControl.ModelMatrix
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ModelMatrix
+  nameWithType: OpenGlControl.ModelMatrix
+- uid: SearchAThing.OpenGlControl.ModelMatrixProperty
+  name: ModelMatrixProperty
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ModelMatrixProperty
+  commentId: F:SearchAThing.OpenGlControl.ModelMatrixProperty
+  fullName: SearchAThing.OpenGlControl.ModelMatrixProperty
+  nameWithType: OpenGlControl.ModelMatrixProperty
 - uid: SearchAThing.OpenGlControl.ModelProperty
   name: ModelProperty
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ModelProperty
@@ -546,57 +688,25 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.orbitPressPosition
   nameWithType: OpenGlControl.orbitPressPosition
-- uid: SearchAThing.OpenGlControl.OrthoBBox
-  name: OrthoBBox
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoBBox
-  commentId: P:SearchAThing.OpenGlControl.OrthoBBox
-  fullName: SearchAThing.OpenGlControl.OrthoBBox
-  nameWithType: OpenGlControl.OrthoBBox
-- uid: SearchAThing.OpenGlControl.OrthoBBox*
-  name: OrthoBBox
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoBBox_
-  commentId: Overload:SearchAThing.OpenGlControl.OrthoBBox
+- uid: SearchAThing.OpenGlControl.OrthoZoom
+  name: OrthoZoom
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoZoom
+  commentId: P:SearchAThing.OpenGlControl.OrthoZoom
+  fullName: SearchAThing.OpenGlControl.OrthoZoom
+  nameWithType: OpenGlControl.OrthoZoom
+- uid: SearchAThing.OpenGlControl.OrthoZoom*
+  name: OrthoZoom
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoZoom_
+  commentId: Overload:SearchAThing.OpenGlControl.OrthoZoom
   isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.OrthoBBox
-  nameWithType: OpenGlControl.OrthoBBox
-- uid: SearchAThing.OpenGlControl.OrthoHeightScale
-  name: OrthoHeightScale
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoHeightScale
-  commentId: P:SearchAThing.OpenGlControl.OrthoHeightScale
-  fullName: SearchAThing.OpenGlControl.OrthoHeightScale
-  nameWithType: OpenGlControl.OrthoHeightScale
-- uid: SearchAThing.OpenGlControl.OrthoHeightScale*
-  name: OrthoHeightScale
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoHeightScale_
-  commentId: Overload:SearchAThing.OpenGlControl.OrthoHeightScale
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.OrthoHeightScale
-  nameWithType: OpenGlControl.OrthoHeightScale
-- uid: SearchAThing.OpenGlControl.OrthoHeightScaleProperty
-  name: OrthoHeightScaleProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoHeightScaleProperty
-  commentId: F:SearchAThing.OpenGlControl.OrthoHeightScaleProperty
-  fullName: SearchAThing.OpenGlControl.OrthoHeightScaleProperty
-  nameWithType: OpenGlControl.OrthoHeightScaleProperty
-- uid: SearchAThing.OpenGlControl.OrthoWidthScale
-  name: OrthoWidthScale
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoWidthScale
-  commentId: P:SearchAThing.OpenGlControl.OrthoWidthScale
-  fullName: SearchAThing.OpenGlControl.OrthoWidthScale
-  nameWithType: OpenGlControl.OrthoWidthScale
-- uid: SearchAThing.OpenGlControl.OrthoWidthScale*
-  name: OrthoWidthScale
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoWidthScale_
-  commentId: Overload:SearchAThing.OpenGlControl.OrthoWidthScale
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.OrthoWidthScale
-  nameWithType: OpenGlControl.OrthoWidthScale
-- uid: SearchAThing.OpenGlControl.OrthoWidthScaleProperty
-  name: OrthoWidthScaleProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoWidthScaleProperty
-  commentId: F:SearchAThing.OpenGlControl.OrthoWidthScaleProperty
-  fullName: SearchAThing.OpenGlControl.OrthoWidthScaleProperty
-  nameWithType: OpenGlControl.OrthoWidthScaleProperty
+  fullName: SearchAThing.OpenGlControl.OrthoZoom
+  nameWithType: OpenGlControl.OrthoZoom
+- uid: SearchAThing.OpenGlControl.OrthoZoomProperty
+  name: OrthoZoomProperty
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrthoZoomProperty
+  commentId: F:SearchAThing.OpenGlControl.OrthoZoomProperty
+  fullName: SearchAThing.OpenGlControl.OrthoZoomProperty
+  nameWithType: OpenGlControl.OrthoZoomProperty
 - uid: SearchAThing.OpenGlControl.panPressPosition
   name: panPressPosition
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_panPressPosition
@@ -629,6 +739,38 @@ references:
   commentId: F:SearchAThing.OpenGlControl.PerspectiveProperty
   fullName: SearchAThing.OpenGlControl.PerspectiveProperty
   nameWithType: OpenGlControl.PerspectiveProperty
+- uid: SearchAThing.OpenGlControl.ProjectionMatrix
+  name: ProjectionMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ProjectionMatrix
+  commentId: P:SearchAThing.OpenGlControl.ProjectionMatrix
+  fullName: SearchAThing.OpenGlControl.ProjectionMatrix
+  nameWithType: OpenGlControl.ProjectionMatrix
+- uid: SearchAThing.OpenGlControl.ProjectionMatrix*
+  name: ProjectionMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ProjectionMatrix_
+  commentId: Overload:SearchAThing.OpenGlControl.ProjectionMatrix
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ProjectionMatrix
+  nameWithType: OpenGlControl.ProjectionMatrix
+- uid: SearchAThing.OpenGlControl.ProjectionMatrixProperty
+  name: ProjectionMatrixProperty
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ProjectionMatrixProperty
+  commentId: F:SearchAThing.OpenGlControl.ProjectionMatrixProperty
+  fullName: SearchAThing.OpenGlControl.ProjectionMatrixProperty
+  nameWithType: OpenGlControl.ProjectionMatrixProperty
+- uid: SearchAThing.OpenGlControl.RebuildProjectionMatrix
+  name: RebuildProjectionMatrix()
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RebuildProjectionMatrix
+  commentId: M:SearchAThing.OpenGlControl.RebuildProjectionMatrix
+  fullName: SearchAThing.OpenGlControl.RebuildProjectionMatrix()
+  nameWithType: OpenGlControl.RebuildProjectionMatrix()
+- uid: SearchAThing.OpenGlControl.RebuildProjectionMatrix*
+  name: RebuildProjectionMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RebuildProjectionMatrix_
+  commentId: Overload:SearchAThing.OpenGlControl.RebuildProjectionMatrix
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.RebuildProjectionMatrix
+  nameWithType: OpenGlControl.RebuildProjectionMatrix
 - uid: SearchAThing.OpenGlControl.Render(DrawingContext)
   name: Render(DrawingContext)
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_Render_DrawingContext_
@@ -655,63 +797,32 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ResetRotation
   nameWithType: OpenGlControl.ResetRotation
-- uid: SearchAThing.OpenGlControl.RotationX
-  name: RotationX
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationX
-  commentId: P:SearchAThing.OpenGlControl.RotationX
-  fullName: SearchAThing.OpenGlControl.RotationX
-  nameWithType: OpenGlControl.RotationX
-- uid: SearchAThing.OpenGlControl.RotationX*
-  name: RotationX
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationX_
-  commentId: Overload:SearchAThing.OpenGlControl.RotationX
+- uid: SearchAThing.OpenGlControl.SetProjectionMatrix(System.Single,System.Single,System.Single,System.Boolean,System.Single)
+  name: SetProjectionMatrix(Single, Single, Single, Boolean, Single)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_SetProjectionMatrix_System_Single_System_Single_System_Single_System_Boolean_System_Single_
+  commentId: M:SearchAThing.OpenGlControl.SetProjectionMatrix(System.Single,System.Single,System.Single,System.Boolean,System.Single)
+  fullName: SearchAThing.OpenGlControl.SetProjectionMatrix(System.Single, System.Single, System.Single, System.Boolean, System.Single)
+  nameWithType: OpenGlControl.SetProjectionMatrix(Single, Single, Single, Boolean, Single)
+- uid: SearchAThing.OpenGlControl.SetProjectionMatrix*
+  name: SetProjectionMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_SetProjectionMatrix_
+  commentId: Overload:SearchAThing.OpenGlControl.SetProjectionMatrix
   isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.RotationX
-  nameWithType: OpenGlControl.RotationX
-- uid: SearchAThing.OpenGlControl.RotationXProperty
-  name: RotationXProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationXProperty
-  commentId: F:SearchAThing.OpenGlControl.RotationXProperty
-  fullName: SearchAThing.OpenGlControl.RotationXProperty
-  nameWithType: OpenGlControl.RotationXProperty
-- uid: SearchAThing.OpenGlControl.RotationY
-  name: RotationY
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationY
-  commentId: P:SearchAThing.OpenGlControl.RotationY
-  fullName: SearchAThing.OpenGlControl.RotationY
-  nameWithType: OpenGlControl.RotationY
-- uid: SearchAThing.OpenGlControl.RotationY*
-  name: RotationY
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationY_
-  commentId: Overload:SearchAThing.OpenGlControl.RotationY
+  fullName: SearchAThing.OpenGlControl.SetProjectionMatrix
+  nameWithType: OpenGlControl.SetProjectionMatrix
+- uid: SearchAThing.OpenGlControl.SetViewMatrix(Vector3,Vector3,Vector3)
+  name: SetViewMatrix(Vector3, Vector3, Vector3)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_SetViewMatrix_Vector3_Vector3_Vector3_
+  commentId: M:SearchAThing.OpenGlControl.SetViewMatrix(Vector3,Vector3,Vector3)
+  fullName: SearchAThing.OpenGlControl.SetViewMatrix(Vector3, Vector3, Vector3)
+  nameWithType: OpenGlControl.SetViewMatrix(Vector3, Vector3, Vector3)
+- uid: SearchAThing.OpenGlControl.SetViewMatrix*
+  name: SetViewMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_SetViewMatrix_
+  commentId: Overload:SearchAThing.OpenGlControl.SetViewMatrix
   isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.RotationY
-  nameWithType: OpenGlControl.RotationY
-- uid: SearchAThing.OpenGlControl.RotationYProperty
-  name: RotationYProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationYProperty
-  commentId: F:SearchAThing.OpenGlControl.RotationYProperty
-  fullName: SearchAThing.OpenGlControl.RotationYProperty
-  nameWithType: OpenGlControl.RotationYProperty
-- uid: SearchAThing.OpenGlControl.RotationZ
-  name: RotationZ
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationZ
-  commentId: P:SearchAThing.OpenGlControl.RotationZ
-  fullName: SearchAThing.OpenGlControl.RotationZ
-  nameWithType: OpenGlControl.RotationZ
-- uid: SearchAThing.OpenGlControl.RotationZ*
-  name: RotationZ
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationZ_
-  commentId: Overload:SearchAThing.OpenGlControl.RotationZ
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.RotationZ
-  nameWithType: OpenGlControl.RotationZ
-- uid: SearchAThing.OpenGlControl.RotationZProperty
-  name: RotationZProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_RotationZProperty
-  commentId: F:SearchAThing.OpenGlControl.RotationZProperty
-  fullName: SearchAThing.OpenGlControl.RotationZProperty
-  nameWithType: OpenGlControl.RotationZProperty
+  fullName: SearchAThing.OpenGlControl.SetViewMatrix
+  nameWithType: OpenGlControl.SetViewMatrix
 - uid: SearchAThing.OpenGlControl.SetViewProjection(System.Boolean)
   name: SetViewProjection(Boolean)
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_SetViewProjection_System_Boolean_
@@ -744,63 +855,6 @@ references:
   commentId: F:SearchAThing.OpenGlControl.ShowOrbitProperty
   fullName: SearchAThing.OpenGlControl.ShowOrbitProperty
   nameWithType: OpenGlControl.ShowOrbitProperty
-- uid: SearchAThing.OpenGlControl.TranslationX
-  name: TranslationX
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationX
-  commentId: P:SearchAThing.OpenGlControl.TranslationX
-  fullName: SearchAThing.OpenGlControl.TranslationX
-  nameWithType: OpenGlControl.TranslationX
-- uid: SearchAThing.OpenGlControl.TranslationX*
-  name: TranslationX
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationX_
-  commentId: Overload:SearchAThing.OpenGlControl.TranslationX
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.TranslationX
-  nameWithType: OpenGlControl.TranslationX
-- uid: SearchAThing.OpenGlControl.TranslationXProperty
-  name: TranslationXProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationXProperty
-  commentId: F:SearchAThing.OpenGlControl.TranslationXProperty
-  fullName: SearchAThing.OpenGlControl.TranslationXProperty
-  nameWithType: OpenGlControl.TranslationXProperty
-- uid: SearchAThing.OpenGlControl.TranslationY
-  name: TranslationY
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationY
-  commentId: P:SearchAThing.OpenGlControl.TranslationY
-  fullName: SearchAThing.OpenGlControl.TranslationY
-  nameWithType: OpenGlControl.TranslationY
-- uid: SearchAThing.OpenGlControl.TranslationY*
-  name: TranslationY
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationY_
-  commentId: Overload:SearchAThing.OpenGlControl.TranslationY
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.TranslationY
-  nameWithType: OpenGlControl.TranslationY
-- uid: SearchAThing.OpenGlControl.TranslationYProperty
-  name: TranslationYProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationYProperty
-  commentId: F:SearchAThing.OpenGlControl.TranslationYProperty
-  fullName: SearchAThing.OpenGlControl.TranslationYProperty
-  nameWithType: OpenGlControl.TranslationYProperty
-- uid: SearchAThing.OpenGlControl.TranslationZ
-  name: TranslationZ
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationZ
-  commentId: P:SearchAThing.OpenGlControl.TranslationZ
-  fullName: SearchAThing.OpenGlControl.TranslationZ
-  nameWithType: OpenGlControl.TranslationZ
-- uid: SearchAThing.OpenGlControl.TranslationZ*
-  name: TranslationZ
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationZ_
-  commentId: Overload:SearchAThing.OpenGlControl.TranslationZ
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.TranslationZ
-  nameWithType: OpenGlControl.TranslationZ
-- uid: SearchAThing.OpenGlControl.TranslationZProperty
-  name: TranslationZProperty
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_TranslationZProperty
-  commentId: F:SearchAThing.OpenGlControl.TranslationZProperty
-  fullName: SearchAThing.OpenGlControl.TranslationZProperty
-  nameWithType: OpenGlControl.TranslationZProperty
 - uid: SearchAThing.OpenGlControl.ViewBack
   name: ViewBack()
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewBack
@@ -827,19 +881,6 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ViewBottom
   nameWithType: OpenGlControl.ViewBottom
-- uid: SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single,System.Single,System.Single)
-  name: ViewFromYawPitchRoll(Single, Single, Single)
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFromYawPitchRoll_System_Single_System_Single_System_Single_
-  commentId: M:SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single,System.Single,System.Single)
-  fullName: SearchAThing.OpenGlControl.ViewFromYawPitchRoll(System.Single, System.Single, System.Single)
-  nameWithType: OpenGlControl.ViewFromYawPitchRoll(Single, Single, Single)
-- uid: SearchAThing.OpenGlControl.ViewFromYawPitchRoll*
-  name: ViewFromYawPitchRoll
-  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFromYawPitchRoll_
-  commentId: Overload:SearchAThing.OpenGlControl.ViewFromYawPitchRoll
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlControl.ViewFromYawPitchRoll
-  nameWithType: OpenGlControl.ViewFromYawPitchRoll
 - uid: SearchAThing.OpenGlControl.ViewFront
   name: ViewFront()
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewFront
@@ -866,6 +907,25 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ViewLeft
   nameWithType: OpenGlControl.ViewLeft
+- uid: SearchAThing.OpenGlControl.ViewMatrix
+  name: ViewMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewMatrix
+  commentId: P:SearchAThing.OpenGlControl.ViewMatrix
+  fullName: SearchAThing.OpenGlControl.ViewMatrix
+  nameWithType: OpenGlControl.ViewMatrix
+- uid: SearchAThing.OpenGlControl.ViewMatrix*
+  name: ViewMatrix
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewMatrix_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewMatrix
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewMatrix
+  nameWithType: OpenGlControl.ViewMatrix
+- uid: SearchAThing.OpenGlControl.ViewMatrixProperty
+  name: ViewMatrixProperty
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewMatrixProperty
+  commentId: F:SearchAThing.OpenGlControl.ViewMatrixProperty
+  fullName: SearchAThing.OpenGlControl.ViewMatrixProperty
+  nameWithType: OpenGlControl.ViewMatrixProperty
 - uid: SearchAThing.OpenGlControl.ViewRight
   name: ViewRight()
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewRight
@@ -966,6 +1026,22 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlExt.AddToVertexManager
   nameWithType: OpenGlExt.AddToVertexManager
+- uid: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[],System.UInt32[],netDxf.DxfDocument,System.Nullable{Vector4})
+  name: ExportDxf(GLVertexWithNormal[], UInt32[], netDxf.DxfDocument, Nullable<Vector4>)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ExportDxf_SearchAThing_GLVertexWithNormal___System_UInt32___netDxf_DxfDocument_System_Nullable_Vector4__
+  commentId: M:SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[],System.UInt32[],netDxf.DxfDocument,System.Nullable{Vector4})
+  name.vb: ExportDxf(GLVertexWithNormal(), UInt32(), netDxf.DxfDocument, Nullable(Of Vector4))
+  fullName: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[], System.UInt32[], netDxf.DxfDocument, System.Nullable<Vector4>)
+  fullName.vb: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal(), System.UInt32(), netDxf.DxfDocument, System.Nullable(Of Vector4))
+  nameWithType: OpenGlExt.ExportDxf(GLVertexWithNormal[], UInt32[], netDxf.DxfDocument, Nullable<Vector4>)
+  nameWithType.vb: OpenGlExt.ExportDxf(GLVertexWithNormal(), UInt32(), netDxf.DxfDocument, Nullable(Of Vector4))
+- uid: SearchAThing.OpenGlExt.ExportDxf*
+  name: ExportDxf
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ExportDxf_
+  commentId: Overload:SearchAThing.OpenGlExt.ExportDxf
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlExt.ExportDxf
+  nameWithType: OpenGlExt.ExportDxf
 - uid: SearchAThing.OpenGlExt.ToGLTriangleVertex(SearchAThing.Vector3D)
   name: ToGLTriangleVertex(Vector3D)
   href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ToGLTriangleVertex_SearchAThing_Vector3D_
@@ -1097,6 +1173,19 @@ references:
   commentId: F:SearchAThing.OpenGlModelBase.FocusedControlSizeProperty
   fullName: SearchAThing.OpenGlModelBase.FocusedControlSizeProperty
   nameWithType: OpenGlModelBase.FocusedControlSizeProperty
+- uid: SearchAThing.OpenGlModelBase.GeomTol
+  name: GeomTol
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_GeomTol
+  commentId: P:SearchAThing.OpenGlModelBase.GeomTol
+  fullName: SearchAThing.OpenGlModelBase.GeomTol
+  nameWithType: OpenGlModelBase.GeomTol
+- uid: SearchAThing.OpenGlModelBase.GeomTol*
+  name: GeomTol
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_GeomTol_
+  commentId: Overload:SearchAThing.OpenGlModelBase.GeomTol
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlModelBase.GeomTol
+  nameWithType: OpenGlModelBase.GeomTol
 - uid: SearchAThing.OpenGlModelBase.GL
   name: GL
   href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_GL
@@ -1284,6 +1373,19 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlModelOptions.DoubleClickMs
   nameWithType: OpenGlModelOptions.DoubleClickMs
+- uid: SearchAThing.OpenGlModelOptions.GeomTol
+  name: GeomTol
+  href: api/SearchAThing.OpenGlModelOptions.html#SearchAThing_OpenGlModelOptions_GeomTol
+  commentId: P:SearchAThing.OpenGlModelOptions.GeomTol
+  fullName: SearchAThing.OpenGlModelOptions.GeomTol
+  nameWithType: OpenGlModelOptions.GeomTol
+- uid: SearchAThing.OpenGlModelOptions.GeomTol*
+  name: GeomTol
+  href: api/SearchAThing.OpenGlModelOptions.html#SearchAThing_OpenGlModelOptions_GeomTol_
+  commentId: Overload:SearchAThing.OpenGlModelOptions.GeomTol
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlModelOptions.GeomTol
+  nameWithType: OpenGlModelOptions.GeomTol
 - uid: SearchAThing.OpenGlToolkit
   name: OpenGlToolkit
   href: api/SearchAThing.OpenGlToolkit.html
