@@ -138,6 +138,14 @@ namespace SearchAThing
         }
 
         /// <summary>
+        /// force invalidate visual of current focused control;
+        /// </summary>
+        public void InvalidateCurrentControl()
+        {
+            FocusedControl.InvalidateVisual();
+        }
+
+        /// <summary>
         /// retrieve attrib location generating exception if not found.
         /// example:
         /// layout(location = 0) in vec3 vPos;
