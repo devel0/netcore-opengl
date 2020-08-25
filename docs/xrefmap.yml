@@ -1483,6 +1483,19 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlModelOptions.Debug
   nameWithType: OpenGlModelOptions.Debug
+- uid: SearchAThing.OpenGlModelOptions.DebugRenderCtlName
+  name: DebugRenderCtlName
+  href: api/SearchAThing.OpenGlModelOptions.html#SearchAThing_OpenGlModelOptions_DebugRenderCtlName
+  commentId: P:SearchAThing.OpenGlModelOptions.DebugRenderCtlName
+  fullName: SearchAThing.OpenGlModelOptions.DebugRenderCtlName
+  nameWithType: OpenGlModelOptions.DebugRenderCtlName
+- uid: SearchAThing.OpenGlModelOptions.DebugRenderCtlName*
+  name: DebugRenderCtlName
+  href: api/SearchAThing.OpenGlModelOptions.html#SearchAThing_OpenGlModelOptions_DebugRenderCtlName_
+  commentId: Overload:SearchAThing.OpenGlModelOptions.DebugRenderCtlName
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlModelOptions.DebugRenderCtlName
+  nameWithType: OpenGlModelOptions.DebugRenderCtlName
 - uid: SearchAThing.OpenGlModelOptions.DoubleClickMs
   name: DoubleClickMs
   href: api/SearchAThing.OpenGlModelOptions.html#SearchAThing_OpenGlModelOptions_DoubleClickMs
