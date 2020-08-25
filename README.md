@@ -7,7 +7,7 @@
 <hr/>
 
 - [API Documentation](https://devel0.github.io/netcore-opengl/api/SearchAThing.html)
-- [Recent changes](#recent-changes)
+- [Changelog](https://github.com/devel0/netcore-opengl/compare/a8b1c283134b559734c42831e4a2b699cb81b845...cf7c1686509b3c1168c199fc50fef7c5c414f607)
 - [Roadmap](#roadmap)
 - [Quickstart](#quickstart)
 - [Keynotes](#keynotes)
@@ -15,11 +15,6 @@
 - [How this project was built](#how-this-project-was-built)
 
 <hr/>
-
-## Recent changes
-
-- : generalized some drawing function to work in screen or world coordinates; exposed View methods
-- **0.2.0** : refactored orbit control ; added pan ; TODO: projection fitview, screen-model coord
 
 ## Roadmap
 
