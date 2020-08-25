@@ -26,6 +26,12 @@ namespace SearchAThing
         public bool Debug { get; set; }
 
         /// <summary>
+        /// if true a render info with ctl name will written to debug console when a render occurs.
+        /// name of the ctl can be set on the CreateControl method
+        /// </summary>
+        public bool DebugRenderCtlName { get; set; }
+
+        /// <summary>
         /// together with Debug=true allow to customize the logging of debug info.
         /// </summary>        
         public DebugProc CustomDebug { get; set; }
@@ -126,7 +132,7 @@ namespace SearchAThing
                 ary = glControls.ToArray();
             }
             foreach (var ctl in ary)
-            {                
+            {
                 ctl.InvalidateVisual();
             }
         }
@@ -169,12 +175,16 @@ namespace SearchAThing
 
         // render ==========================================================================================
         internal void RenderToGlControl(OpenGlControl ctl, DrawingContext context, PixelSize ps)
-        {            
+        {
             lock (renderLck)
             {
+                if (Options.DebugRenderCtlName)
+                {
+                    System.Diagnostics.Debug.WriteLine($"render [name:{ctl.Name}] {DateTime.Now}");
+                }
                 GL.BindFramebuffer(FramebufferTarget.Framebuffer, fb);
                 if (!FocusedControlSize.Equals(ps))
-                {                                        
+                {
                     Resize((uint)ps.Width, (uint)ps.Height);
                     ctl.RebuildProjectionMatrix();
                     FocusedControlSize = ps;
@@ -190,7 +200,7 @@ namespace SearchAThing
                 GL.PolygonMode(GLEnum.FrontAndBack, PolygonMode.Fill);
                 ctl.RenderOverlay(GL, context, ps);
 
-                Render(ctl, context, ps);                
+                Render(ctl, context, ps);
 
                 using (var bitmap = new WriteableBitmap(
                     ps,
@@ -297,7 +307,7 @@ namespace SearchAThing
         bool fbInitialized = false;
 
         void Resize(uint width, uint height)
-        {                        
+        {
             var firstInit = !fbInitialized;
 
             if (!fbInitialized) fbInitialized = true;

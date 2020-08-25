@@ -52,6 +52,8 @@ namespace SearchAThing.SciExamples
 
         GridSplitterManager gridSplitterManager;
 
+        static int ctlCount = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -60,7 +62,8 @@ namespace SearchAThing.SciExamples
 
             Model = new SampleGlModel(new OpenGlModelOptions
             {
-                Debug = true
+                Debug = true,
+                DebugRenderCtlName = true
             });
 
             var obs = Model.GetObservable(OpenGlModelBase.FocusedControlProperty);
@@ -84,6 +87,7 @@ namespace SearchAThing.SciExamples
                         x.Perspective = fc.Perspective;
                     }
                 });
+                ctl.Name = $"ctl{++ctlCount}";
                 ctl.Model = Model;
                 Model.FocusedControl = ctl;
 
