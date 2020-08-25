@@ -7,7 +7,7 @@
 <hr/>
 
 - [API Documentation](https://devel0.github.io/netcore-opengl/api/SearchAThing.html)
-- [Changelog](https://github.com/devel0/netcore-opengl/compare/a8b1c283134b559734c42831e4a2b699cb81b845...cf7c1686509b3c1168c199fc50fef7c5c414f607)
+- [Changelog](https://github.com/devel0/netcore-opengl/commits/master)
 - [Roadmap](#roadmap)
 - [Quickstart](#quickstart)
 - [Keynotes](#keynotes)
