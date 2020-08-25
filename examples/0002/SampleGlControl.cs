@@ -248,7 +248,7 @@ namespace SearchAThing.SciExamples
             pointerPressPosition = e.GetCurrentPoint(this);
             UpdateInfo();
 
-            Model.InvalidateAllControls();
+            //Model.InvalidateAllControls();
         }
 
         void pointerMoved(object sender, PointerEventArgs e)
@@ -256,7 +256,7 @@ namespace SearchAThing.SciExamples
             pointerMovedPosition = e.GetCurrentPoint(this);
             UpdateInfo();
 
-            Model.InvalidateAllControls();
+            //Model.InvalidateAllControls();
         }
 
         void pointerWheelChanged(object sender, PointerWheelEventArgs e)
