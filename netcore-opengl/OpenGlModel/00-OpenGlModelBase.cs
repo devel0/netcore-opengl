@@ -213,8 +213,7 @@ namespace SearchAThing
                 using (var bitmap = new WriteableBitmap(
                     ps,
                     new Avalonia.Vector(96, 96),
-                    Avalonia.Platform.PixelFormat.Rgba8888,
-                    Avalonia.Platform.AlphaFormat.Opaque))
+                    Avalonia.Platform.PixelFormat.Rgba8888))
                 {
                     using (var l = bitmap.Lock())
                     {
@@ -225,7 +224,7 @@ namespace SearchAThing
                         unsafe
                         {
                             GL.ReadPixels(0, 0, (uint)ps.Width, (uint)ps.Height,
-                                PixelFormat.Rgba, PixelType.UnsignedByte, l.Address.ToPointer());
+                                PixelFormat.Bgra, PixelType.UnsignedByte, l.Address.ToPointer());
                         }
                     }
 
