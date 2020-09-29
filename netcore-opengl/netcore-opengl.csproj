@@ -15,9 +15,9 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.0-preview3"/>
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.0-preview3"/>
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview3"/>
+    <PackageReference Include="Avalonia" Version="0.10.0-preview2"/>
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.0-preview2"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview2"/>
     <!-- <PackageReference Include="netcore-desktop" Version="0.1.2"/ -->
     <ProjectReference Include="..\..\netcore-desktop\netcore-desktop\netcore-desktop.csproj" />
     <!-- <PackageReference Include="netcore-sci" Version="1.12.2"/> -->
