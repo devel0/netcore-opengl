@@ -1,7 +1,3 @@
-using static System.Math;
-using System.Collections.Generic;
-using System.Numerics;
-
 namespace SearchAThing
 {
 
