@@ -6,6 +6,9 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Window = Avalonia.Controls.Window;
 using static SearchAThing.OpenGlToolkit;
+using System.Reactive.Subjects;
+using Avalonia.Data;
+using Avalonia.Media;
 
 namespace SearchAThing.SciExamples
 {
@@ -76,7 +79,12 @@ namespace SearchAThing.SciExamples
             {
                 var fc = Model.FocusedControl as SampleGlControl;
 
-                var ctl = new SampleGlControl((x) =>
+                var ctl = new Grid();
+                //ctl.RowDefinitions = new RowDefinitions();
+                ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Star));
+                ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Auto));
+
+                var glctl = new SampleGlControl((x) =>
                 {
                     //setRndColor(x);
                     if (fc != null)
@@ -87,9 +95,24 @@ namespace SearchAThing.SciExamples
                         x.Perspective = fc.Perspective;
                     }
                 });
-                ctl.Name = $"ctl{++ctlCount}";
-                ctl.Model = Model;
-                Model.FocusedControl = ctl;
+                glctl.Name = $"ctl{++ctlCount}";
+                glctl.Model = Model;
+                Model.FocusedControl = glctl;
+
+                var tblk = new TextBox()
+                {
+                    Foreground = new SolidColorBrush(Colors.White),
+                    Background = new SolidColorBrush(Colors.Black),
+                    IsReadOnly = true
+                };
+                tblk.Bind(TextBox.TextProperty, new Binding("CurrentWorldCoordStr")
+                {
+                    Source = glctl
+                });
+                Grid.SetRow(tblk, 1);
+                ctl.Children.Add(tblk);
+
+                ctl.Children.Add(glctl);
 
                 return ctl;
             };

@@ -11,6 +11,7 @@ using System.IO;
 using System.Numerics;
 using System.Linq;
 using static System.Math;
+using Avalonia.Threading;
 
 namespace SearchAThing.SciExamples
 {
@@ -74,9 +75,7 @@ namespace SearchAThing.SciExamples
         uint[] VtxMgr_Idxs_WCSY;
 
         const string FIGURE_WCSZ = "wcsz";
-        uint[] VtxMgr_Idxs_WCSZ;
-
-        public Line3D rayWorld = new Line3D(Vector3D.Zero, Vector3D.Zero);
+        uint[] VtxMgr_Idxs_WCSZ;        
 
         // data ===========================================================================================
 
@@ -252,13 +251,46 @@ namespace SearchAThing.SciExamples
             {
                 var vtxMgrTmp = new VertexManager(TOL);
 
-
                 var drawBBoxDiags = false;
                 if (drawBBoxDiags)
                 {
                     vtxMgrTmp.AddLine(BBox.Min.LineTo(BBox.Max), () => Colors.Green.ToVector4());
                     vtxMgrTmp.AddLine(BBox.Min.Set(OrdIdx.Y, BBox.Max.Y).LineTo(BBox.Max.Set(OrdIdx.Y, BBox.Min.Y)), () => Colors.Green.ToVector4());
-                }                
+                }
+
+                {
+                    if (ctl.pointerMovedPosition != null && ctl.Perspective)
+                    {
+                        var mouse_x = (float)ctl.pointerMovedPosition.Position.X;
+                        var mouse_y = (float)ctl.pointerMovedPosition.Position.Y;
+
+                        var coord = ctl.Model.MousePosToWorldPos(mouse_x, mouse_y);
+
+                        System.Console.WriteLine($"coord:{coord}");
+                        var l = new Line3D(Vector3D.Zero, coord);
+
+                        Dispatcher.UIThread.Post(() =>
+                        {
+                            ctl.CurrentWorldCoord = coord;
+                        });
+
+                        vtxMgrTmp.AddLine(l, () => Colors.Yellow.ToVector4(), 0.2);
+
+                        // display view cs used to compute current world coord
+                        {
+                            var ccs = ctl.CameraCS;
+                            var csCameraAtTarget = ccs.Move((Vector3D)ctl.CameraTarget - ccs.Origin);
+                            var cs1 = csCameraAtTarget.Transform(model.Inverse());
+
+                            vtxMgrTmp.AddLine(
+                                new Line3D(BBox.Middle, cs1.BaseX.Normalized() * 30, Line3DConstructMode.PointAndVector),
+                                () => Colors.Red.ToVector4());
+                            vtxMgrTmp.AddLine(
+                                new Line3D(BBox.Middle, cs1.BaseY.Normalized() * 30, Line3DConstructMode.PointAndVector),
+                                () => Colors.Green.ToVector4());
+                        }
+                    }
+                }
 
                 {
                     if (ctl.ShowModelBBox)

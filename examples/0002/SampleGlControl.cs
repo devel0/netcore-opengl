@@ -5,6 +5,7 @@ using System.Text;
 using Avalonia.Input;
 using static System.Math;
 using System;
+using System.Reactive.Subjects;
 
 namespace SearchAThing.SciExamples
 {
@@ -39,7 +40,7 @@ namespace SearchAThing.SciExamples
 
         static readonly Vector3 OBJ_COLOR_DEFAUILT = new Vector3(0.3f, 0.7f, 1);
         static readonly float AMBIENT_DEFAULT = 0.2f;
-        static readonly float ALPHA_DEFAULT = 1.0f;
+        static readonly float ALPHA_DEFAULT = 0.7f;
 
         // props =========================================================================================       
 
@@ -221,6 +222,38 @@ namespace SearchAThing.SciExamples
         }
         #endregion
 
+        #region CurrentWorldCoord
+        private Vector3D _CurrentWorldCoord = Vector3D.Zero;
+
+        public static readonly DirectProperty<SampleGlControl, Vector3D> CurrentWorldCoordProperty =
+            AvaloniaProperty.RegisterDirect<SampleGlControl, Vector3D>("CurrentWorldCoord", o => o.CurrentWorldCoord, (o, v) => o.CurrentWorldCoord = v);
+
+        public Vector3D CurrentWorldCoord
+        {
+            get => _CurrentWorldCoord;
+            set
+            {
+                SetAndRaise(CurrentWorldCoordProperty, ref _CurrentWorldCoord, value);
+                CurrentWorldCoordStr = value.ToString();
+            }
+        }
+        #endregion    
+
+        #region CurrentWorldCoordStr
+        private string _CurrentWorldCoordStr = "";
+
+        public static readonly DirectProperty<SampleGlControl, string> CurrentWorldCoordStrProperty =
+            AvaloniaProperty.RegisterDirect<SampleGlControl, string>("CurrentWorldCoordStr", o => o.CurrentWorldCoordStr, (o, v) => o.CurrentWorldCoordStr = v);
+
+        public string CurrentWorldCoordStr
+        {
+            get => _CurrentWorldCoordStr;
+            set => SetAndRaise(CurrentWorldCoordStrProperty, ref _CurrentWorldCoordStr, value);
+        }
+        #endregion    
+
+        //Subject<string> CurrentWorldCoordSubj = new Subject<string>();
+
         Action<SampleGlControl> onModelAttached = null;
 
         public SampleGlControl(Action<SampleGlControl> onModelAttached = null)
@@ -256,7 +289,7 @@ namespace SearchAThing.SciExamples
             pointerMovedPosition = e.GetCurrentPoint(this);
             UpdateInfo();
 
-            //Model.InvalidateAllControls();
+            Model.InvalidateAllControls();
         }
 
         void pointerWheelChanged(object sender, PointerWheelEventArgs e)
@@ -276,16 +309,16 @@ namespace SearchAThing.SciExamples
             this.PointerWheelChanged += pointerWheelChanged;
 
             this.EffectiveViewportChanged += (a, b) =>
-            {                                
+            {
                 if (Bounds.Width != 0 && Bounds.Height != 0)
                 {
                     if (!modelAttachedInitDone)
                     {
                         Reset(true);
-                        
+
                         InvalidateVisual();
                         modelAttachedInitDone = true;
-                    }                    
+                    }
                 }
             };
             this.AttachedToVisualTree += (a, b) =>
@@ -332,8 +365,8 @@ namespace SearchAThing.SciExamples
         {
             var Model = this.Model as SampleGlModel;
 
-            var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
-            var rayWorld = new Vector3();
+            var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);            
+            var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);            
 
             Dispatcher.UIThread.Post(() =>
             {
@@ -346,7 +379,6 @@ namespace SearchAThing.SciExamples
                 sb.AppendLine($"MODEL");
                 sb.AppendLine($"      min: {Model.vtxMgrBBox.Min}");
                 sb.AppendLine($"      max: {Model.vtxMgrBBox.Max}");
-                sb.AppendLine($" rayWorld: {rayWorld.X.Fmt(6, 9)},{rayWorld.Y.Fmt(6, 9)},{rayWorld.Z.Fmt(6, 9)}");
                 sb.AppendLine($" pts/idxs: {string.Format("{0,9:0}", Model.VtxMgr.Points)}/{string.Format("{0,9:0}", Model.VtxMgr.Idxs.Count)}");
 
                 Info = sb.ToString();
