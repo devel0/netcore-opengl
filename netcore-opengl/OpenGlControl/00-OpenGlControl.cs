@@ -396,6 +396,8 @@ namespace SearchAThing
 
         public void RebuildProjectionMatrix()
         {
+            if (Model.BBox.IsEmpty) return;
+
             var ar = Bounds.Size.AspectRatio;
 
             if (Perspective && FovDeg > 0)
