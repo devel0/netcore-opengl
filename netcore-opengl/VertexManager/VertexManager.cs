@@ -6,6 +6,7 @@ using System;
 using Silk.NET.OpenGL;
 using static System.Math;
 using System.Runtime.CompilerServices;
+using SearchAThing;
 
 namespace SearchAThing
 {
@@ -204,6 +205,16 @@ namespace SearchAThing
         /// <returns>readonly list of triangles indexes</returns>
         public void AddFaces(string figureName, IEnumerable<Facet> facets, Func<Vector4> color = null) =>
             AddTriangles(figureName, facets.Select(w => w.Vertices.Select(w => (Vector3D)w).ToArray()), color);
+
+        /// <summary>
+        /// add given dxf facet3d to the given figureName set
+        /// </summary>
+        /// <param name="figureName">set name for the triangles</param>        
+        /// <param name="facets">dxf face3d</param>
+        /// <param name="color">color ( or null ) to associate this figure name</param>
+        /// <returns>readonly list of triangles indexes</returns>
+        public void AddFaces(string figureName, IEnumerable<netDxf.Entities.Face3d> facets, Func<Vector4> color = null) =>
+            AddTriangles(figureName, facets.Select(w => w.Points().ToArray()), color);
 
         /// <summary>
         /// to be called after all figures inserted; this will rebuild vertex normals
