@@ -81,6 +81,12 @@ STL map
 
 ![](data/img/example-0002b.gif)
 
+#### 0003
+
+An attempt to examine how [MousePosToWorldPos](https://github.com/devel0/netcore-opengl/blob/52e9fab069918a0a6c56650b8c7c99c719e3bc59/netcore-opengl/OpenGlModel/30-Calc.cs#L33) should implemented ( actually not yet done ):
+
+![](data/img/example-0003.gif)
+
 ## How this project was built
 
 ```sh

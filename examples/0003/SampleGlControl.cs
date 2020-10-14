@@ -340,22 +340,26 @@ namespace SearchAThing.SciExamples
 
             Dispatcher.UIThread.Post(() =>
             {
-                // model                
-                ResetRotation();
+                if (!Model.vtxMgrBBox.IsEmpty)
+                {
 
-                // view
-                var ct = new Vector3();
-                var cp = ct + (Vector3)(Vector3D.ZAxis * Model.vtxMgrBBox.Size.Length);
-                var cu = new Vector3(0, 1, 0);
-                SetViewMatrix(cp, cp, cu);
-                SetProjectionMatrix(FOV_DEFAULT, NEAR_DEFAULT, FAR_DEFAULT, perspective: true);
+                    // model                
+                    ResetRotation();
 
-                // aspect                                
-                ObjColor = OBJ_COLOR_DEFAUILT;
-                LightPos = Model.vtxMgrBBox.Min - Model.vtxMgrBBox.Size.X * Vector3D.XAxis + Model.vtxMgrBBox.Size.Z * 5 * Vector3D.ZAxis;
-                Ambient = AMBIENT_DEFAULT;
+                    // view
+                    var ct = new Vector3();
+                    var cp = ct + (Vector3)(Vector3D.ZAxis * Model.vtxMgrBBox.Size.Length);
+                    var cu = new Vector3(0, 1, 0);
+                    SetViewMatrix(cp, cp, cu);
+                    SetProjectionMatrix(FOV_DEFAULT, NEAR_DEFAULT, FAR_DEFAULT, perspective: true);
 
-                ViewTop();
+                    // aspect                                
+                    ObjColor = OBJ_COLOR_DEFAUILT;
+                    LightPos = Model.vtxMgrBBox.Min - Model.vtxMgrBBox.Size.X * Vector3D.XAxis + Model.vtxMgrBBox.Size.Z * 5 * Vector3D.ZAxis;
+                    Ambient = AMBIENT_DEFAULT;
+
+                    ViewTop();
+                }
 
                 if (execOnModelAttach && this.onModelAttached != null) this.onModelAttached(this);
             });
@@ -365,8 +369,8 @@ namespace SearchAThing.SciExamples
         {
             var Model = this.Model as SampleGlModel;
 
-            var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);            
-            var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);            
+            var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
+            var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);
 
             Dispatcher.UIThread.Post(() =>
             {
@@ -377,8 +381,8 @@ namespace SearchAThing.SciExamples
                 sb.AppendLine($"   curPos: {pointerMovedPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
                 sb.AppendLine($"   clkPos: {pointerPressPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
                 sb.AppendLine($"MODEL");
-                sb.AppendLine($"      min: {Model.vtxMgrBBox.Min}");
-                sb.AppendLine($"      max: {Model.vtxMgrBBox.Max}");
+                sb.AppendLine($"      min: {Model.vtxMgrBBox?.Min}");
+                sb.AppendLine($"      max: {Model.vtxMgrBBox?.Max}");
                 sb.AppendLine($" pts/idxs: {string.Format("{0,9:0}", Model.VtxMgr.Points)}/{string.Format("{0,9:0}", Model.VtxMgr.Idxs.Count)}");
 
                 Info = sb.ToString();
