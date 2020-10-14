@@ -188,7 +188,7 @@ namespace SearchAThing
             {
                 if (Options.DebugRenderCtlName)
                 {
-                    System.Diagnostics.Debug.WriteLine($"render [name:{ctl.Name}] {DateTime.Now}");
+                    //System.Diagnostics.Debug.WriteLine($"render [name:{ctl.Name}] {DateTime.Now}");
                 }
                 GL.BindFramebuffer(FramebufferTarget.Framebuffer, fb);
                 if (!FocusedControlSize.Equals(ps))
