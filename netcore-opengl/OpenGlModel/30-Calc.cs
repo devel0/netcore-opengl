@@ -32,6 +32,8 @@ namespace SearchAThing
         /// </summary>
         public Vector3D MousePosToWorldPos(float mouse_x, float mouse_y)
         {
+            if (BBox.IsEmpty) return Vector3D.Zero;
+
             var ctl = this.FocusedControl;
 
             var pm = ctl.ProjectionMatrix;
@@ -45,7 +47,7 @@ namespace SearchAThing
                 var mouse_ndc = ToNDC(ctl, new Vector2(mouse_x, mouse_y));
 
                 var m = Matrix4x4.Multiply(vm, pm);
-
+;
                 Vector3 CalcRay(Vector2 ray_nds)
                 {
                     // https://antongerdelan.net/opengl/raycasting.html
@@ -72,6 +74,9 @@ namespace SearchAThing
 
                 var L = new Line3D(cami, ray.Normalized(), Line3DConstructMode.PointAndVector);
                 var ccs = ctl.CameraCS;
+                if (((Vector3D)ctl.CameraTarget).EqualsTol(GeomTol, ctl.CameraPos))
+                    return Vector3D.Zero;
+                    
                 var csCameraAtTarget = ccs.Move((Vector3D)ctl.CameraTarget - ccs.Origin);
                 var cs1 = csCameraAtTarget.Transform(mm.Inverse());
                 System.Console.WriteLine($"ics:{csCameraAtTarget}");
@@ -86,10 +91,10 @@ namespace SearchAThing
             {
 
             }
-
+            
             return res;
         }
-     
+
     }
 
 }
