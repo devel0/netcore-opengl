@@ -19,7 +19,6 @@
 ## Roadmap
 
 - ray world to compute 3d wcs coord over mouse xy
-- pan
 
 ## Quickstart
 
