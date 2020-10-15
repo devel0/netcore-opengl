@@ -21,8 +21,6 @@ namespace SearchAThing
         {
             if (ShowOrbit)
             {
-                var vtxmgr = new VertexManager(1e-6);
-
                 Func<Vector4> colfn = () => Colors.White.ToVector4();
 
                 var pw = 1; // pixel width                
@@ -32,40 +30,45 @@ namespace SearchAThing
 
                 orbitGeometry.Recompute(sw, sh);
 
-                vtxmgr.AddCircle(orbitGeometry.Main.ToCircle3D(1e-6), colfn, pw, 360, this);
-                vtxmgr.AddCircle(orbitGeometry.Top.ToCircle3D(1e-6), colfn, pw, 360, this);
-                vtxmgr.AddCircle(orbitGeometry.Bottom.ToCircle3D(1e-6), colfn, pw, 360, this);
-                vtxmgr.AddCircle(orbitGeometry.Left.ToCircle3D(1e-6), colfn, pw, 360, this);
-                vtxmgr.AddCircle(orbitGeometry.Right.ToCircle3D(1e-6), colfn, pw, 360, this);
-
-                if (OrbitShowCross)
+                if (!InvisibleOrbit)
                 {
-                    vtxmgr.AddLine(new Line3D(orbitGeometry.Bottom.Center, orbitGeometry.Top.Center), colfn, pw, 8, false, this);
-                    vtxmgr.AddLine(new Line3D(orbitGeometry.Left.Center, orbitGeometry.Right.Center), colfn, pw, 8, false, this);
-                }
+                    var vtxmgr = new VertexManager(1e-6);
 
-                var pts = vtxmgr.Vtxs.Select(w => new GLVertex { Position = new Vector3(w.Position.X, w.Position.Y, -1) }).ToArray();
+                    vtxmgr.AddCircle(orbitGeometry.Main.ToCircle3D(1e-6), colfn, pw, 360, this);
+                    vtxmgr.AddCircle(orbitGeometry.Top.ToCircle3D(1e-6), colfn, pw, 360, this);
+                    vtxmgr.AddCircle(orbitGeometry.Bottom.ToCircle3D(1e-6), colfn, pw, 360, this);
+                    vtxmgr.AddCircle(orbitGeometry.Left.ToCircle3D(1e-6), colfn, pw, 360, this);
+                    vtxmgr.AddCircle(orbitGeometry.Right.ToCircle3D(1e-6), colfn, pw, 360, this);
 
-                Vector4? color = null;
-
-                using (var VboTmp = new VertexBufferObject<GLVertex>(GL, BufferTargetARB.ArrayBuffer, pts))
-                {
-                    using (var VaoTmp = new VertexArrayObject<GLVertex>(GL))
+                    if (OrbitShowCross)
                     {
-                        VaoTmp.AttribPointer(Model.overlayPositionLocation, 0);
+                        vtxmgr.AddLine(new Line3D(orbitGeometry.Bottom.Center, orbitGeometry.Top.Center), colfn, pw, 8, false, this);
+                        vtxmgr.AddLine(new Line3D(orbitGeometry.Left.Center, orbitGeometry.Right.Center), colfn, pw, 8, false, this);
+                    }
 
-                        foreach (var figure in vtxmgr.FigureNames)
+                    var pts = vtxmgr.Vtxs.Select(w => new GLVertex { Position = new Vector3(w.Position.X, w.Position.Y, -1) }).ToArray();
+
+                    Vector4? color = null;
+
+                    using (var VboTmp = new VertexBufferObject<GLVertex>(GL, BufferTargetARB.ArrayBuffer, pts))
+                    {
+                        using (var VaoTmp = new VertexArrayObject<GLVertex>(GL))
                         {
-                            var idxs = vtxmgr.GetIdxs(figure);
-                            color = vtxmgr.GetColor(figure);
-                            using (var EboTmp = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, idxs))
-                            {
-                                GL.Uniform3(Model.overlayUObjColLocation, color.HasValue ? color.Value.ToVector3() : new Vector3(1f, 1f, 1f));
+                            VaoTmp.AttribPointer(Model.overlayPositionLocation, 0);
 
-                                unsafe
+                            foreach (var figure in vtxmgr.FigureNames)
+                            {
+                                var idxs = vtxmgr.GetIdxs(figure);
+                                color = vtxmgr.GetColor(figure);
+                                using (var EboTmp = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, idxs))
                                 {
-                                    GL.DrawElements(PrimitiveType.Triangles,
-                                        (uint)idxs.Length, DrawElementsType.UnsignedInt, null);
+                                    GL.Uniform3(Model.overlayUObjColLocation, color.HasValue ? color.Value.ToVector3() : new Vector3(1f, 1f, 1f));
+
+                                    unsafe
+                                    {
+                                        GL.DrawElements(PrimitiveType.Triangles,
+                                            (uint)idxs.Length, DrawElementsType.UnsignedInt, null);
+                                    }
                                 }
                             }
                         }

@@ -544,6 +544,19 @@ namespace SearchAThing
         }
         #endregion
 
+        #region InvisibleOrbit
+        private bool _InvisibleOrbit = true;
+
+        public static readonly DirectProperty<OpenGlControl, bool> InvisibleOrbitProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, bool>("InvisibleOrbit", o => o.InvisibleOrbit, (o, v) => o.InvisibleOrbit = v);
+
+        public bool InvisibleOrbit
+        {
+            get => _InvisibleOrbit;
+            set => SetAndRaise(InvisibleOrbitProperty, ref _InvisibleOrbit, value);
+        }
+        #endregion
+
         #region OrbitShowCross
         private bool _OrbitShowCross = false;
 

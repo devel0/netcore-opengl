@@ -207,7 +207,7 @@ namespace SearchAThing.SciExamples
                 this.VtxMgr = vtxMgrTmp;
 
                 {
-                    if (ctl.pointerMovedPosition != null && ctl.Perspective)
+                    if (ctl.pointerMovedPosition != null)// && ctl.Perspective)
                     {
                         var mouse_x = (float)ctl.pointerMovedPosition.Position.X;
                         var mouse_y = (float)ctl.pointerMovedPosition.Position.Y;
@@ -227,28 +227,42 @@ namespace SearchAThing.SciExamples
                             var bboxFaces = BBox.Faces(1e-6).ToList();
                             //vtxMgrTmp.AddFaces("bboxFace0", bboxFaces[5].Points.Tessellate());
 
-                            // intersect coord using Xdir Ydir Zdir to bbox faces
-                            foreach (var bboxFace in bboxFaces)
+                            foreach (var k in new[]
                             {
-                                // test xdir
+                                new
                                 {
-                                    var ip = bboxFace.Intersect(TOL, Line3D.XAxisLine.Move(coord));
-                                    if (ip != null && bboxFace.Contains(TOL, ip))
-                                        vtxMgrTmp.AddLine(coord.LineTo(ip), () => Colors.Red.ToVector4(), 0.2);
-                                }
+                                    line=Line3D.XAxisLine,
+                                    color=Colors.Red
+                                },
 
-                                // test ydir
+                                new
                                 {
-                                    var ip = bboxFace.Intersect(TOL, Line3D.YAxisLine.Move(coord));
-                                    if (ip != null && bboxFace.Contains(TOL, ip))
-                                        vtxMgrTmp.AddLine(coord.LineTo(ip), () => Colors.Green.ToVector4(), 0.2);
-                                }
+                                    line=Line3D.YAxisLine,
+                                    color=Colors.Green
+                                },
 
-                                // test zdir
+                                new
                                 {
-                                    var ip = bboxFace.Intersect(TOL, Line3D.ZAxisLine.Move(coord));
-                                    if (ip != null && bboxFace.Contains(TOL, ip))
-                                        vtxMgrTmp.AddLine(coord.LineTo(ip), () => Colors.Blue.ToVector4(), 0.2);
+                                    line=Line3D.ZAxisLine,
+                                    color=Colors.Blue
+                                }
+                            })
+                            {
+                                var xps = bboxFaces
+                                    .Select(bboxFace => new
+                                    {
+                                        bboxFace = bboxFace,
+                                        ip = bboxFace.Intersect(TOL, k.line.Move(coord))
+                                    })
+                                    .Where(r => r.ip != null && r.bboxFace.Contains(TOL, r.ip))
+                                    .ToList();
+
+                                if (xps.Count == 2)
+                                {
+                                    var L = xps.First().ip.LineTo(xps.Skip(1).First().ip);
+                                    vtxMgrTmp.AddLine(L, () => k.color.ToVector4(), 0.2);
+
+                                    
                                 }
                             }
 

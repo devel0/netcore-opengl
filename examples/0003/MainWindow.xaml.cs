@@ -186,6 +186,34 @@ namespace SearchAThing.SciExamples
             ctl.ViewBottom();
         }
 
+        private void soviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewSouthWest();
+        }
+
+        private void seviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewSouthEast();
+        }
+
+        private void neviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewNorthEast();
+        }
+
+        private void noviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewNorthWest();
+        }
+
         private void zoomFitClick(object sender, RoutedEventArgs e)
         {
             var Model = this.Model as SampleGlModel;

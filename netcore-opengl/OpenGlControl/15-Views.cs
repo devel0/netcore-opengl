@@ -256,6 +256,66 @@ namespace SearchAThing
             ZoomFit();
         }
 
+        public void ViewSouthWest(bool resetModelMatrix = true)
+        {
+            var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+
+            CameraTop(bbox);
+            if (resetModelMatrix)
+            {
+                ModelMatrix = BaseModelMatrix;
+                ViewModelRoll((float)(PI / 4));
+                ViewModelVRot((float)(PI / 2 - Atan(1d / Sqrt(2))));
+            }
+            ZoomFit();
+        }
+
+        public void ViewSouthEast(bool resetModelMatrix = true)
+        {
+            var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+
+            CameraTop(bbox);
+            if (resetModelMatrix)
+            {
+                ModelMatrix = BaseModelMatrix;
+                ViewModelRoll((float)(-PI / 4));
+                ViewModelVRot((float)(PI / 2 - Atan(1d / Sqrt(2))));
+            }
+            ZoomFit();
+        }
+
+        public void ViewNorthEast(bool resetModelMatrix = true)
+        {
+            var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+
+            CameraTop(bbox);
+            if (resetModelMatrix)
+            {
+                ModelMatrix = BaseModelMatrix;
+                ViewModelRoll((float)(-PI / 4 - PI / 2));
+                ViewModelVRot((float)(PI / 2 - Atan(1d / Sqrt(2))));
+            }
+            ZoomFit();
+        }
+
+        public void ViewNorthWest(bool resetModelMatrix = true)
+        {
+            var bbox = Model.BBox;
+            if (bbox.IsEmpty) return;
+
+            CameraTop(bbox);
+            if (resetModelMatrix)
+            {
+                ModelMatrix = BaseModelMatrix;
+                ViewModelRoll((float)(-PI / 4 - PI));
+                ViewModelVRot((float)(PI / 2 - Atan(1d / Sqrt(2))));
+            }
+            ZoomFit();
+        }
+
         public void SetViewProjection(bool perspective)
         {
             Perspective = perspective;
