@@ -664,6 +664,25 @@ references:
   commentId: F:SearchAThing.OpenGlControl.FovDegProperty
   fullName: SearchAThing.OpenGlControl.FovDegProperty
   nameWithType: OpenGlControl.FovDegProperty
+- uid: SearchAThing.OpenGlControl.InvisibleOrbit
+  name: InvisibleOrbit
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_InvisibleOrbit
+  commentId: P:SearchAThing.OpenGlControl.InvisibleOrbit
+  fullName: SearchAThing.OpenGlControl.InvisibleOrbit
+  nameWithType: OpenGlControl.InvisibleOrbit
+- uid: SearchAThing.OpenGlControl.InvisibleOrbit*
+  name: InvisibleOrbit
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_InvisibleOrbit_
+  commentId: Overload:SearchAThing.OpenGlControl.InvisibleOrbit
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.InvisibleOrbit
+  nameWithType: OpenGlControl.InvisibleOrbit
+- uid: SearchAThing.OpenGlControl.InvisibleOrbitProperty
+  name: InvisibleOrbitProperty
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_InvisibleOrbitProperty
+  commentId: F:SearchAThing.OpenGlControl.InvisibleOrbitProperty
+  fullName: SearchAThing.OpenGlControl.InvisibleOrbitProperty
+  nameWithType: OpenGlControl.InvisibleOrbitProperty
 - uid: SearchAThing.OpenGlControl.middleButtonPressTimestamp
   name: middleButtonPressTimestamp
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_middleButtonPressTimestamp
@@ -1049,6 +1068,71 @@ references:
   commentId: F:SearchAThing.OpenGlControl.ViewMatrixProperty
   fullName: SearchAThing.OpenGlControl.ViewMatrixProperty
   nameWithType: OpenGlControl.ViewMatrixProperty
+- uid: SearchAThing.OpenGlControl.ViewModelHRot(System.Single)
+  name: ViewModelHRot(Single)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewModelHRot_System_Single_
+  commentId: M:SearchAThing.OpenGlControl.ViewModelHRot(System.Single)
+  fullName: SearchAThing.OpenGlControl.ViewModelHRot(System.Single)
+  nameWithType: OpenGlControl.ViewModelHRot(Single)
+- uid: SearchAThing.OpenGlControl.ViewModelHRot*
+  name: ViewModelHRot
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewModelHRot_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewModelHRot
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewModelHRot
+  nameWithType: OpenGlControl.ViewModelHRot
+- uid: SearchAThing.OpenGlControl.ViewModelRoll(System.Single)
+  name: ViewModelRoll(Single)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewModelRoll_System_Single_
+  commentId: M:SearchAThing.OpenGlControl.ViewModelRoll(System.Single)
+  fullName: SearchAThing.OpenGlControl.ViewModelRoll(System.Single)
+  nameWithType: OpenGlControl.ViewModelRoll(Single)
+- uid: SearchAThing.OpenGlControl.ViewModelRoll*
+  name: ViewModelRoll
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewModelRoll_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewModelRoll
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewModelRoll
+  nameWithType: OpenGlControl.ViewModelRoll
+- uid: SearchAThing.OpenGlControl.ViewModelVRot(System.Single)
+  name: ViewModelVRot(Single)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewModelVRot_System_Single_
+  commentId: M:SearchAThing.OpenGlControl.ViewModelVRot(System.Single)
+  fullName: SearchAThing.OpenGlControl.ViewModelVRot(System.Single)
+  nameWithType: OpenGlControl.ViewModelVRot(Single)
+- uid: SearchAThing.OpenGlControl.ViewModelVRot*
+  name: ViewModelVRot
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewModelVRot_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewModelVRot
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewModelVRot
+  nameWithType: OpenGlControl.ViewModelVRot
+- uid: SearchAThing.OpenGlControl.ViewNorthEast(System.Boolean)
+  name: ViewNorthEast(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewNorthEast_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewNorthEast(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewNorthEast(System.Boolean)
+  nameWithType: OpenGlControl.ViewNorthEast(Boolean)
+- uid: SearchAThing.OpenGlControl.ViewNorthEast*
+  name: ViewNorthEast
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewNorthEast_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewNorthEast
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewNorthEast
+  nameWithType: OpenGlControl.ViewNorthEast
+- uid: SearchAThing.OpenGlControl.ViewNorthWest(System.Boolean)
+  name: ViewNorthWest(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewNorthWest_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewNorthWest(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewNorthWest(System.Boolean)
+  nameWithType: OpenGlControl.ViewNorthWest(Boolean)
+- uid: SearchAThing.OpenGlControl.ViewNorthWest*
+  name: ViewNorthWest
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewNorthWest_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewNorthWest
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewNorthWest
+  nameWithType: OpenGlControl.ViewNorthWest
 - uid: SearchAThing.OpenGlControl.ViewRight(System.Boolean)
   name: ViewRight(Boolean)
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewRight_System_Boolean_
@@ -1062,6 +1146,32 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.ViewRight
   nameWithType: OpenGlControl.ViewRight
+- uid: SearchAThing.OpenGlControl.ViewSouthEast(System.Boolean)
+  name: ViewSouthEast(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewSouthEast_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewSouthEast(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewSouthEast(System.Boolean)
+  nameWithType: OpenGlControl.ViewSouthEast(Boolean)
+- uid: SearchAThing.OpenGlControl.ViewSouthEast*
+  name: ViewSouthEast
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewSouthEast_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewSouthEast
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewSouthEast
+  nameWithType: OpenGlControl.ViewSouthEast
+- uid: SearchAThing.OpenGlControl.ViewSouthWest(System.Boolean)
+  name: ViewSouthWest(Boolean)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewSouthWest_System_Boolean_
+  commentId: M:SearchAThing.OpenGlControl.ViewSouthWest(System.Boolean)
+  fullName: SearchAThing.OpenGlControl.ViewSouthWest(System.Boolean)
+  nameWithType: OpenGlControl.ViewSouthWest(Boolean)
+- uid: SearchAThing.OpenGlControl.ViewSouthWest*
+  name: ViewSouthWest
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewSouthWest_
+  commentId: Overload:SearchAThing.OpenGlControl.ViewSouthWest
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.ViewSouthWest
+  nameWithType: OpenGlControl.ViewSouthWest
 - uid: SearchAThing.OpenGlControl.ViewTop
   name: ViewTop()
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_ViewTop
@@ -1334,6 +1444,32 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlModelBase.InvalidateAllControls
   nameWithType: OpenGlModelBase.InvalidateAllControls
+- uid: SearchAThing.OpenGlModelBase.InvalidateCurrentControl
+  name: InvalidateCurrentControl()
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_InvalidateCurrentControl
+  commentId: M:SearchAThing.OpenGlModelBase.InvalidateCurrentControl
+  fullName: SearchAThing.OpenGlModelBase.InvalidateCurrentControl()
+  nameWithType: OpenGlModelBase.InvalidateCurrentControl()
+- uid: SearchAThing.OpenGlModelBase.InvalidateCurrentControl*
+  name: InvalidateCurrentControl
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_InvalidateCurrentControl_
+  commentId: Overload:SearchAThing.OpenGlModelBase.InvalidateCurrentControl
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlModelBase.InvalidateCurrentControl
+  nameWithType: OpenGlModelBase.InvalidateCurrentControl
+- uid: SearchAThing.OpenGlModelBase.MousePosToWorldPos(System.Single,System.Single)
+  name: MousePosToWorldPos(Single, Single)
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_MousePosToWorldPos_System_Single_System_Single_
+  commentId: M:SearchAThing.OpenGlModelBase.MousePosToWorldPos(System.Single,System.Single)
+  fullName: SearchAThing.OpenGlModelBase.MousePosToWorldPos(System.Single, System.Single)
+  nameWithType: OpenGlModelBase.MousePosToWorldPos(Single, Single)
+- uid: SearchAThing.OpenGlModelBase.MousePosToWorldPos*
+  name: MousePosToWorldPos
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_MousePosToWorldPos_
+  commentId: Overload:SearchAThing.OpenGlModelBase.MousePosToWorldPos
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlModelBase.MousePosToWorldPos
+  nameWithType: OpenGlModelBase.MousePosToWorldPos
 - uid: SearchAThing.OpenGlModelBase.OnDeinitialize
   name: OnDeinitialize()
   href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_OnDeinitialize
@@ -1373,19 +1509,6 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlModelBase.Options
   nameWithType: OpenGlModelBase.Options
-- uid: SearchAThing.OpenGlModelBase.RayWorld(SearchAThing.OpenGlControl,System.Single,System.Single)
-  name: RayWorld(OpenGlControl, Single, Single)
-  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_RayWorld_SearchAThing_OpenGlControl_System_Single_System_Single_
-  commentId: M:SearchAThing.OpenGlModelBase.RayWorld(SearchAThing.OpenGlControl,System.Single,System.Single)
-  fullName: SearchAThing.OpenGlModelBase.RayWorld(SearchAThing.OpenGlControl, System.Single, System.Single)
-  nameWithType: OpenGlModelBase.RayWorld(OpenGlControl, Single, Single)
-- uid: SearchAThing.OpenGlModelBase.RayWorld*
-  name: RayWorld
-  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_RayWorld_
-  commentId: Overload:SearchAThing.OpenGlModelBase.RayWorld
-  isSpec: "True"
-  fullName: SearchAThing.OpenGlModelBase.RayWorld
-  nameWithType: OpenGlModelBase.RayWorld
 - uid: SearchAThing.OpenGlModelBase.Render(SearchAThing.OpenGlControl,DrawingContext,PixelSize)
   name: Render(OpenGlControl, DrawingContext, PixelSize)
   href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_Render_SearchAThing_OpenGlControl_DrawingContext_PixelSize_
@@ -2052,6 +2175,24 @@ references:
   fullName.vb: SearchAThing.VertexManager.AddFaces(System.String, IEnumerable(Of Facet), Func(Of Vector4))
   nameWithType: VertexManager.AddFaces(String, IEnumerable<Facet>, Func<Vector4>)
   nameWithType.vb: VertexManager.AddFaces(String, IEnumerable(Of Facet), Func(Of Vector4))
+- uid: SearchAThing.VertexManager.AddFaces(System.String,IEnumerable{netDxf.Entities.Face3d},Func{Vector4})
+  name: AddFaces(String, IEnumerable<netDxf.Entities.Face3d>, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddFaces_System_String_IEnumerable_netDxf_Entities_Face3d__Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddFaces(System.String,IEnumerable{netDxf.Entities.Face3d},Func{Vector4})
+  name.vb: AddFaces(String, IEnumerable(Of netDxf.Entities.Face3d), Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddFaces(System.String, IEnumerable<netDxf.Entities.Face3d>, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddFaces(System.String, IEnumerable(Of netDxf.Entities.Face3d), Func(Of Vector4))
+  nameWithType: VertexManager.AddFaces(String, IEnumerable<netDxf.Entities.Face3d>, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddFaces(String, IEnumerable(Of netDxf.Entities.Face3d), Func(Of Vector4))
+- uid: SearchAThing.VertexManager.AddFaces(System.String,IEnumerable{SearchAThing.Triangle3D},Func{Vector4})
+  name: AddFaces(String, IEnumerable<Triangle3D>, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddFaces_System_String_IEnumerable_SearchAThing_Triangle3D__Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddFaces(System.String,IEnumerable{SearchAThing.Triangle3D},Func{Vector4})
+  name.vb: AddFaces(String, IEnumerable(Of Triangle3D), Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddFaces(System.String, IEnumerable<SearchAThing.Triangle3D>, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddFaces(System.String, IEnumerable(Of SearchAThing.Triangle3D), Func(Of Vector4))
+  nameWithType: VertexManager.AddFaces(String, IEnumerable<Triangle3D>, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddFaces(String, IEnumerable(Of Triangle3D), Func(Of Vector4))
 - uid: SearchAThing.VertexManager.AddFaces*
   name: AddFaces
   href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddFaces_
