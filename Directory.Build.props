@@ -1,0 +1,9 @@
+<!--Directory.Build.props: MSBuild properties that are included in every project--><!--Info: https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019#directorybuildprops-and-directorybuildtargets-->
+<Project>
+    <PropertyGroup>
+        <!-- <AvaloniaVersion>0.10.0-preview5</AvaloniaVersion> -->
+        <AvaloniaVersion>0.10.0-rc2</AvaloniaVersion>        
+        <!-- <OxyPlotVersion>2.1.0-20201211.2</OxyPlotVersion> -->
+        <!-- <CSharpMathVersion>0.5.0-beta</CSharpMathVersion> -->
+    </PropertyGroup>
+</Project>

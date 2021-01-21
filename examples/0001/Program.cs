@@ -1,6 +1,6 @@
 ﻿using System;
 using Avalonia;
-using Avalonia.ReactiveUI;
+//using Avalonia.ReactiveUI;
 
 namespace SearchAThing.SciExamples
 {
@@ -16,7 +16,7 @@ namespace SearchAThing.SciExamples
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .UseReactiveUI()
+                //.UseReactiveUI()
                 .LogToDebug();
     }
 }

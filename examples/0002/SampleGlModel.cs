@@ -86,10 +86,8 @@ namespace SearchAThing.SciExamples
 
             var sw0 = new Stopwatch();
             sw0.Start();
-
-            //TODO: set path
+            
             var STLmapPathfilename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "map.stl");
-            //STLmapPathfilename = "/home/devel0/tmp/FULL.stl";
 
             if (!File.Exists(STLmapPathfilename))
             {
