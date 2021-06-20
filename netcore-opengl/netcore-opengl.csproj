@@ -3,7 +3,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>netcore-opengl</PackageId>
-    <PackageVersion>0.4.0</PackageVersion>
+    <PackageVersion>0.5.0</PackageVersion>
     <Title>net core opengl</Title>
     <Description></Description>
     <LangVersion>8</LangVersion>
