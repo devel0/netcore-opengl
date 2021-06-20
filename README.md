@@ -6,13 +6,17 @@
 
 <hr/>
 
-- [API Documentation](https://devel0.github.io/netcore-opengl/api/SearchAThing.html)
-- [Changelog](https://github.com/devel0/netcore-opengl/commits/master)
-- [Roadmap](#roadmap)
-- [Quickstart](#quickstart)
-- [Keynotes](#keynotes)
-- [Examples](#examples)
-- [How this project was built](#how-this-project-was-built)
+<!-- TOC -->
+* [Roadmap](#roadmap)
+* [Quickstart](#quickstart)
+* [Keynotes](#keynotes)
+* [Examples](#examples)
+    - [0001](#0001)
+    - [0002](#0002)
+    - [0003](#0003)
+    - [0004](#0004)
+* [How this project was built](#how-this-project-was-built)
+<!-- TOCEND -->
 
 <hr/>
 
@@ -89,7 +93,7 @@ An attempt to examine how [MousePosToWorldPos](https://github.com/devel0/netcore
 
 #### 0004
 
-
+[Model animation](https://github.com/devel0/netcore-opengl/blob/c47daca3ebdc90fbde1cfb9c87e5effff9e3bf5f/examples/0004/SampleGlModel.cs#L108)
 
 ![](data/img/example-0004.gif)
 
