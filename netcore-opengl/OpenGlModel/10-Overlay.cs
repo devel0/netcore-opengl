@@ -15,10 +15,12 @@ namespace SearchAThing
         internal int overlayUObjColLocation;
 
         // builtin overlay vertex shader
+        // note: replace "netcore-opengl" with "<yourasemblyname>"
         string OverlayVertexShaderSource =>
             "netcore-opengl.shaders.overlay.vert".GetEmbeddedFileContent<OpenGlModelBase>();
 
         // builtin overlay fragment shader
+        // note: replace "netcore-opengl" with "<yourasemblyname>"
         string OverlayFragmentShaderSource =>
             "netcore-opengl.shaders.overlay.frag".GetEmbeddedFileContent<OpenGlModelBase>();
 
@@ -82,8 +84,8 @@ namespace SearchAThing
                 overlayUObjColLocation = SafeGetUniformLocation(overlayShader, "uObjCol");
             }
         }
-        
-       
+
+
 
     }
 

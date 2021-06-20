@@ -28,10 +28,12 @@ namespace SearchAThing.SciExamples
         VertexArrayObject<GLVertexWithNormal> Vao;
 
         //Vertex shaders are run on each vertex.
+        // note: replace "0003" with "<yourasemblyname>"
         string VertexShaderSource =>
             "0003.shaders.shader.vert".GetEmbeddedFileContent<SampleGlControl>();
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
+        // note: replace "0003" with "<yourasemblyname>"
         string FragmentShaderSource =>
             "0003.shaders.shader.frag".GetEmbeddedFileContent<SampleGlControl>();
 

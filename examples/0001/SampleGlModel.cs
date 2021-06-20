@@ -72,10 +72,12 @@ namespace SearchAThing.SciExamples
         private uint Shader;
 
         //Vertex shaders are run on each vertex.
+        // note: replace "0001" with "<yourasemblyname>"
         private string VertexShaderSource =>
             "0001.shaders.vertexShader.glsl".GetEmbeddedFileContent<SampleGlControl>();
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
+        // note: replace "0001" with "<yourasemblyname>"
         private string FragmentShaderSource =>
             "0001.shaders.fragmentShader.glsl".GetEmbeddedFileContent<SampleGlControl>();
 
