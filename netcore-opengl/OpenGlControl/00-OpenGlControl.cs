@@ -6,6 +6,7 @@ using System.Numerics;
 using Avalonia.Input;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SearchAThing
 {
@@ -47,9 +48,7 @@ namespace SearchAThing
     }
 
     public partial class OpenGlControl : Control
-    {
-
-        bool initialized = false;
+    {                
 
         #region Model
         private OpenGlModelBase _Model = null;

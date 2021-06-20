@@ -137,6 +137,16 @@ namespace SearchAThing
             }
         }
 
+        public OpenGlControl[] GetAllControls()
+        {
+            OpenGlControl[] ary;
+            lock (glControlsLck)
+            {
+                ary = glControls.ToArray();
+            }
+            return ary;
+        }
+
         /// <summary>
         /// force invalidate visual of current focused control;
         /// </summary>

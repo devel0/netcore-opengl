@@ -28,12 +28,12 @@ namespace SearchAThing.SciExamples
         VertexArrayObject<GLVertexWithNormal> Vao;
 
         //Vertex shaders are run on each vertex.
-        // note: replace "0002" with "<yourasemblyname>"
+        // note: replace "0002" with "<csprojname>"
         string VertexShaderSource =>
             "0002.shaders.shader.vert".GetEmbeddedFileContent<SampleGlControl>();
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
-        // note: replace "0002" with "<yourasemblyname>"
+        // note: replace "0002" with "<csprojname>"
         string FragmentShaderSource =>
             "0002.shaders.shader.frag".GetEmbeddedFileContent<SampleGlControl>();
 
@@ -77,7 +77,7 @@ namespace SearchAThing.SciExamples
         uint[] VtxMgr_Idxs_WCSY;
 
         const string FIGURE_WCSZ = "wcsz";
-        uint[] VtxMgr_Idxs_WCSZ;        
+        uint[] VtxMgr_Idxs_WCSZ;
 
         // data ===========================================================================================
 
@@ -88,7 +88,7 @@ namespace SearchAThing.SciExamples
 
             var sw0 = new Stopwatch();
             sw0.Start();
-            
+
             var STLmapPathfilename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "map.stl");
 
             if (!File.Exists(STLmapPathfilename))

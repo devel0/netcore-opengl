@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>example</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <AvaloniaResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\netcore-opengl\netcore-opengl.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="shaders/*"/>
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**"/>
+  </ItemGroup>
+  <ItemGroup><!-- <ProjectReference Include="..\..\..\..\..\..\..\..\opensource\netcore-opengl\netcore-opengl\netcore-opengl.csproj" /> --></ItemGroup>
+</Project>

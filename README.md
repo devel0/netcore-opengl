@@ -87,6 +87,12 @@ An attempt to examine how [MousePosToWorldPos](https://github.com/devel0/netcore
 
 ![](data/img/example-0003.gif)
 
+#### 0004
+
+
+
+![](data/img/example-0004.gif)
+
 ## How this project was built
 
 ```sh

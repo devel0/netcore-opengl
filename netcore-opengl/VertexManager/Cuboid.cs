@@ -12,6 +12,8 @@ namespace SearchAThing
     public partial class VertexManager
     {
 
+
+
         /// <summary>
         /// add an cuboid to the given figure name
         /// </summary>        
@@ -93,7 +95,6 @@ namespace SearchAThing
 
             return AddTriangles(figureName, triangles, color);
         }
-
 
     }
 

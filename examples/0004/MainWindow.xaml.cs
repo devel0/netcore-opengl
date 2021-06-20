@@ -1,6 +1,7 @@
 using System;
 using Avalonia;
 using Avalonia.Controls;
+using System.Linq;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
@@ -9,6 +10,8 @@ using static SearchAThing.OpenGlToolkit;
 using System.Reactive.Subjects;
 using Avalonia.Data;
 using Avalonia.Media;
+using System.Threading.Tasks;
+using Avalonia.Threading;
 
 namespace SearchAThing.SciExamples
 {
@@ -41,7 +44,7 @@ namespace SearchAThing.SciExamples
         }
         #endregion                 
 
-        public OpenGlControl NewGlControl() => new SampleGlControl();
+        //public OpenGlControl NewGlControl() => new SampleGlControl();
 
         void GlPointerPressed(object sender, PointerPressedEventArgs e)
         {
@@ -56,6 +59,8 @@ namespace SearchAThing.SciExamples
         GridSplitterManager gridSplitterManager;
 
         static int ctlCount = 0;
+
+        SampleGlControl glctl = null;
 
         public MainWindow()
         {
@@ -84,7 +89,7 @@ namespace SearchAThing.SciExamples
                 ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Star));
                 ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Auto));
 
-                var glctl = new SampleGlControl((x) =>
+                glctl = new SampleGlControl((x) =>
                 {
                     //setRndColor(x);
                     if (fc != null)
@@ -93,6 +98,11 @@ namespace SearchAThing.SciExamples
                         x.ShowModel = fc.ShowModel;
                         x.ShowModelBBox = fc.ShowModelBBox;
                         x.Perspective = fc.Perspective;
+
+                        if (fc.AnimTask != null)
+                        {
+                            x.StartAnim();
+                        }
                     }
                 });
                 glctl.Name = $"ctl{++ctlCount}";
@@ -114,9 +124,10 @@ namespace SearchAThing.SciExamples
 
                 ctl.Children.Add(glctl);
 
+
+
                 return ctl;
             };
-
         }
 
         private void click_random(object sender, RoutedEventArgs e)
@@ -134,7 +145,25 @@ namespace SearchAThing.SciExamples
         {
             var ctl = Model.FocusedControl as SampleGlControl;
             ctl.Reset();
-        }        
+        }
+
+        private void click_start(object sender, RoutedEventArgs e)
+        {
+            var ctls = Model.GetAllControls();
+
+            foreach (var ctl in ctls.Cast<SampleGlControl>())
+            {
+                //var ctl = Model.FocusedControl as SampleGlControl;
+                var model = ctl.Model as SampleGlModel;
+
+                model.startTimestamp = DateTime.Now;
+                if (ctl.AnimTask == null)
+                {
+                    ctl.StartAnim();
+                    
+                }
+            }
+        }
 
         private void click_exportDxf(object sender, RoutedEventArgs e)
         {
