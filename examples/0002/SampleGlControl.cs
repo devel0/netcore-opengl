@@ -181,7 +181,46 @@ namespace SearchAThing.SciExamples
             get => _LightPosZ;
             set => SetAndRaise(LightPosZProperty, ref _LightPosZ, value);
         }
-        #endregion             
+        #endregion  
+
+        #region Light2PosX
+        private float _Light2PosX = 300f;
+
+        public static readonly DirectProperty<SampleGlControl, float> Light2PosXProperty =
+            AvaloniaProperty.RegisterDirect<SampleGlControl, float>("Light2PosX", o => o.Light2PosX, (o, v) => o.Light2PosX = v);
+
+        public float Light2PosX
+        {
+            get => _Light2PosX;
+            set => SetAndRaise(Light2PosXProperty, ref _Light2PosX, value);
+        }
+        #endregion    
+
+        #region Light2PosY
+        private float _Light2PosY = 300;
+
+        public static readonly DirectProperty<SampleGlControl, float> Light2PosYProperty =
+            AvaloniaProperty.RegisterDirect<SampleGlControl, float>("Light2PosY", o => o.Light2PosY, (o, v) => o.Light2PosY = v);
+
+        public float Light2PosY
+        {
+            get => _Light2PosY;
+            set => SetAndRaise(Light2PosYProperty, ref _Light2PosY, value);
+        }
+        #endregion    
+
+        #region Light2PosZ
+        private float _Light2PosZ = 2500;
+
+        public static readonly DirectProperty<SampleGlControl, float> Light2PosZProperty =
+            AvaloniaProperty.RegisterDirect<SampleGlControl, float>("Light2PosZ", o => o.Light2PosZ, (o, v) => o.Light2PosZ = v);
+
+        public float Light2PosZ
+        {
+            get => _Light2PosZ;
+            set => SetAndRaise(Light2PosZProperty, ref _Light2PosZ, value);
+        }
+        #endregion               
 
         #region Ambient        
         private float _Ambient = AMBIENT_DEFAULT;
@@ -271,6 +310,7 @@ namespace SearchAThing.SciExamples
                 OrthoZoomProperty,
                 ObjColorRedProperty, ObjColorGreenProperty, ObjColorBlueProperty,
                 LightPosXProperty, LightPosYProperty, LightPosZProperty,
+                Light2PosXProperty, Light2PosYProperty, Light2PosZProperty,
                 AmbientProperty, AlphaProperty);
         }
 
@@ -365,8 +405,8 @@ namespace SearchAThing.SciExamples
         {
             var Model = this.Model as SampleGlModel;
 
-            var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);            
-            var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);            
+            var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
+            var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);
 
             Dispatcher.UIThread.Post(() =>
             {

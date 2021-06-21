@@ -153,9 +153,15 @@
                     </StackPanel>
                     <TextBlock Text="Light Pos" Margin="0,10,0,0" FontWeight="Bold"/>
                     <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
+                    </Grid>
+                    <TextBlock Text="Light2 Pos" Margin="0,10,0,0" FontWeight="Bold"/>
+                    <Grid ColumnDefinitions="*,*,*">
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.Light2PosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.Light2PosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.Light2PosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
                     </Grid>
                     <TextBlock Grid.Row="0" Text="Ambient" Margin="0,10,0,0" FontWeight="Bold"/>
                     <desktop:TextBoxSlider ToolTip.Tip="Ambient light" Grid.Row="1" Value="{Binding #win.Model.FocusedControl.Ambient, Mode=TwoWay, FallbackValue=0}" Minimum="0" Maximum="1"/>

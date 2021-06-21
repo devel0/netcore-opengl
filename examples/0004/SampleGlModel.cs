@@ -110,7 +110,7 @@ namespace SearchAThing.SciExamples
 
             //System.Console.WriteLine($"mainArm:{mainArm}");
 
-            VtxMgr.AddCylinder(FIGURE_MODEL, mainArm, 100, () => Colors.Red.ToVector4());
+            VtxMgr.AddCylinder(FIGURE_MODEL, mainArm, 100, () => Colors.White.ToVector4());
 
             // WCS
 
