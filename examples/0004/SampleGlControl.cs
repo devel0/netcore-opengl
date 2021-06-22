@@ -69,28 +69,7 @@ namespace SearchAThing.SciExamples
             get => _ShowModelBBox;
             set => SetAndRaise(ShowModelBBoxProperty, ref _ShowModelBBox, value);
         }
-        #endregion
-
-        // internal Task AnimTask = null;
-
-        // internal void StartAnim()
-        // {
-        //     if (AnimTask != null) return;
-
-        //     AnimTask = Task.Run(async () =>
-        //     {
-        //         while (true)
-        //         {           
-        //             Dispatcher.UIThread.Post(() =>
-        //             {
-        //                 CurrentTime = DateTime.Now;
-        //             });                                                 
-        //             var model = (Model as SampleGlModel);
-        //             await Task.Delay((int)model.BuildModelRefreshTimeLapse.TotalMilliseconds);
-        //         }
-
-        //     });
-        // }
+        #endregion        
 
         #region CurrentTime        
         private DateTime _CurrentTime;
@@ -105,19 +84,6 @@ namespace SearchAThing.SciExamples
         }
         #endregion
 
-        // #region AnimStarted
-        // private bool _AnimStarted;
-
-        // public static readonly DirectProperty<SampleGlControl, bool> AnimStartedProperty =
-        //     AvaloniaProperty.RegisterDirect<SampleGlControl, bool>("AnimStarted", o => o.AnimStarted, (o, v) => o.AnimStarted = v);
-
-        // public bool AnimStarted
-        // {
-        //     get => _AnimStarted;
-        //     set => SetAndRaise(AnimStartedProperty, ref _AnimStarted, value);
-        // }
-        // #endregion
-        
         #region Wireframe        
         private bool _Wireframe;
 
@@ -269,7 +235,7 @@ namespace SearchAThing.SciExamples
             set => SetAndRaise(InfoProperty, ref _Info, value);
         }
         #endregion
-         
+
         #region StatusStr
         private string _StatusStr = "";
 
@@ -292,6 +258,7 @@ namespace SearchAThing.SciExamples
             this.onModelAttached = onModelAttached;
 
             AffectsRender<SampleGlControl>(
+                CurrentTimeProperty,
                 WireframeProperty, ShowModelProperty, ShowModelBBoxProperty, ShowOrbitProperty, InvisibleOrbitProperty, OrbitShowCrossProperty,
                 ModelMatrixProperty,
                 PerspectiveProperty,
@@ -400,24 +367,51 @@ namespace SearchAThing.SciExamples
         {
             var Model = this.Model as SampleGlModel;
 
-           /* var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
-            var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);
+            /* var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
+             var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);
 
-            Dispatcher.UIThread.Post(() =>
-            {
-                var sb = new StringBuilder();
+             Dispatcher.UIThread.Post(() =>
+             {
+                 var sb = new StringBuilder();
 
-                sb.AppendLine("SCREEN");
-                sb.AppendLine($"    w x h: {Bounds.Width} x {Bounds.Height} (aspect:{Round(Bounds.Width / Bounds.Height, 3)})");
-                sb.AppendLine($"   curPos: {pointerMovedPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
-                sb.AppendLine($"   clkPos: {pointerPressPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
-                sb.AppendLine($"MODEL");
-                sb.AppendLine($"      min: {Model.vtxMgrBBox?.Min}");
-                sb.AppendLine($"      max: {Model.vtxMgrBBox?.Max}");
-                sb.AppendLine($" pts/idxs: {string.Format("{0,9:0}", Model.VtxMgr.Points)}/{string.Format("{0,9:0}", Model.VtxMgr.Idxs.Count)}");
+                 sb.AppendLine("SCREEN");
+                 sb.AppendLine($"    w x h: {Bounds.Width} x {Bounds.Height} (aspect:{Round(Bounds.Width / Bounds.Height, 3)})");
+                 sb.AppendLine($"   curPos: {pointerMovedPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
+                 sb.AppendLine($"   clkPos: {pointerPressPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
+                 sb.AppendLine($"MODEL");
+                 sb.AppendLine($"      min: {Model.vtxMgrBBox?.Min}");
+                 sb.AppendLine($"      max: {Model.vtxMgrBBox?.Max}");
+                 sb.AppendLine($" pts/idxs: {string.Format("{0,9:0}", Model.VtxMgr.Points)}/{string.Format("{0,9:0}", Model.VtxMgr.Idxs.Count)}");
 
-                Info = sb.ToString();
-            });*/
+                 Info = sb.ToString();
+             });*/
+        }
+
+        Task animTask = null;
+        bool animTaskRunning = false;
+
+        public void TogglePause()
+        {
+            if (animTask == null)
+                animTask = Task.Run(async () =>
+                {
+                    var model = (Model as SampleGlModel);
+                    
+                    while (true)
+                    {
+                        if (animTaskRunning)
+                        {
+                            Dispatcher.UIThread.Post(() =>
+                            {
+                                CurrentTime = DateTime.Now; // changing this prop cause redraw ( see AffectsRender on constructor )
+                            });
+                        }
+
+                        await Task.Delay((int)model.BuildModelRefreshTimeLapse.TotalMilliseconds);
+                    }
+
+                });
+            animTaskRunning = !animTaskRunning;
         }
 
     }

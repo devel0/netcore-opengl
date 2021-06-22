@@ -200,7 +200,7 @@ namespace SearchAThing.SciExamples
 
                 var vtxMgrTmp = new VertexManager(TOL);
 
-                var t = (DateTime.Now - startTimestamp).TotalSeconds;
+                var t = (ctl.CurrentTime - startTimestamp).TotalSeconds;
 
                 Dispatcher.UIThread.Post(() => ctl.StatusStr = $"{t}");
 
@@ -226,46 +226,8 @@ namespace SearchAThing.SciExamples
             #endregion            
 
             // bind global vertex array object
-            Vao.Bind();
-            /*
-                        #region draw wcs                                                            
-                        {
-                            {
-                                color = VtxMgr.GetColor(FIGURE_WCSX);
-                                setGLColor(color);
-                                EboWcsX.Bind();
-                                unsafe
-                                {
-                                    GL.DrawElements(PrimitiveType.Triangles,
-                                        (uint)VtxMgr_Idxs_WCSX.Length, DrawElementsType.UnsignedInt, null);
-                                }
-                                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSX, dxf, color);
-                            }
-                            {
-                                color = VtxMgr.GetColor(FIGURE_WCSY);
-                                setGLColor(color);
-                                EboWcsY.Bind();
-                                unsafe
-                                {
-                                    GL.DrawElements(PrimitiveType.Triangles,
-                                        (uint)VtxMgr_Idxs_WCSY.Length, DrawElementsType.UnsignedInt, null);
-                                }
-                                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSY, dxf, color);
-                            }
-                            {
-                                color = VtxMgr.GetColor(FIGURE_WCSZ);
-                                setGLColor(color);
-                                EboWcsZ.Bind();
-                                unsafe
-                                {
-                                    GL.DrawElements(PrimitiveType.Triangles,
-                                        (uint)VtxMgr_Idxs_WCSZ.Length, DrawElementsType.UnsignedInt, null);
-                                }
-                                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSZ, dxf, color);
-                            }
-                        }
-                        #endregion                     
-            */
+            Vao.Bind(); 
+
             // copy from code to fragment shader uniform input            
             // color = VtxMgr.GetColor(FIGURE_MAP);
             // setGLColor(color);

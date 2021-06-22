@@ -95,7 +95,7 @@ namespace SearchAThing.SciExamples
                         x.ShowOrbit = fc.ShowOrbit;
                         x.ShowModel = fc.ShowModel;
                         x.ShowModelBBox = fc.ShowModelBBox;
-                        x.Perspective = fc.Perspective;                        
+                        x.Perspective = fc.Perspective;
                     }
                 });
                 glctl.Name = $"ctl{++ctlCount}";
@@ -117,20 +117,7 @@ namespace SearchAThing.SciExamples
 
                 ctl.Children.Add(glctl);
 
-                // Task.Run(async () =>
-                // {
-                //     while (true)
-                //     {
-                //         Dispatcher.UIThread.Post(() =>
-                //         {
-                //             glctl.AnimStarted = (Model as SampleGlModel).IsAnimStarted;
-                //             glctl.CurrentTime = DateTime.Now;
-                //         });
-                //         var model = (Model as SampleGlModel);
-                //         await Task.Delay((int)model.BuildModelRefreshTimeLapse.TotalMilliseconds);
-                //     }
-
-                // });
+                glctl.TogglePause();
 
                 return ctl;
             };
@@ -148,27 +135,11 @@ namespace SearchAThing.SciExamples
             ctl.ObjColor = RndColor(0.5, 0.8);
         }
 
-        // void startAnim()
-        // {
-        //     var ctls = Model.GetAllControls();
-
-        //     foreach (var ctl in ctls.Cast<SampleGlControl>())
-        //     {
-        //         //var ctl = Model.FocusedControl as SampleGlControl;
-        //         var model = ctl.Model as SampleGlModel;
-
-        //         //model.startTimestamp = DateTime.Now;
-        //         if (ctl.AnimTask == null)
-        //         {
-        //             ctl.StartAnim();
-
-        //         }
-        //     }
-        // }
-
         private void click_pause(object sender, RoutedEventArgs e)
         {
+            var ctl = Model.FocusedControl as SampleGlControl;
 
+            ctl.TogglePause();
         }
 
         private void click_reset(object sender, RoutedEventArgs e)
