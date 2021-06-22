@@ -26,6 +26,9 @@
         <Style Selector="Button.toolbarbtn">
             <Setter Property="Width" Value="60"/>
         </Style>
+        <Style Selector="Button.toolbarbtnnarrow">
+            <Setter Property="Width" Value="40"/>
+        </Style>
         <Style Selector="TextBlock.toolbartxt">
             <Setter Property="FontSize" Value="11"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -68,9 +71,6 @@
                     ConverterParameter=?IsNull false true}">
                 <StackPanel Margin="10">
                     <StackPanel Orientation="Horizontal">
-                        <Button Content="START" Click="click_start"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
                         <CheckBox IsChecked="{Binding #win.Model.FocusedControl.ShowModel, FallbackValue=false, Mode=TwoWay}">
                             <TextBlock Text="MODEL" FontWeight="Bold" VerticalAlignment="Center"/>
                         </CheckBox>
@@ -80,7 +80,13 @@
                         <CheckBox IsChecked="{Binding #win.Model.FocusedControl.ShowOrbit, Mode=TwoWay, FallbackValue=false}" Margin="10,0,0,0">
                             <TextBlock Text="ORBIT" FontWeight="Bold" VerticalAlignment="Center"/>
                         </CheckBox>
-                        <Button Content="reset" Click="click_reset" Margin="10,0,0,0"/>
+                        <CheckBox IsChecked="{Binding #win.Model.FocusedControl.InvisibleOrbit, Mode=TwoWay, FallbackValue=false}" Margin="10,0,0,0">
+                            <TextBlock Text="(invsibile)" FontWeight="Bold" VerticalAlignment="Center"/>
+                        </CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="pause" Click="click_pause"/>
+                        <Button Content="reset" Click="click_reset"/>
                         <Button Content="exportDxf" Click="click_exportDxf" Margin="10,0,0,0"/>
                     </StackPanel>
                     <Expander IsExpanded="true" Margin="0,10,0,0">
@@ -153,15 +159,9 @@
                     </StackPanel>
                     <TextBlock Text="Light Pos" Margin="0,10,0,0" FontWeight="Bold"/>
                     <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
-                    </Grid>
-                    <TextBlock Text="Light2 Pos" Margin="0,10,0,0" FontWeight="Bold"/>
-                    <Grid ColumnDefinitions="*,*,*">
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.Light2PosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.Light2PosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
-                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.Light2PosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-20000" AutoExpandMinimum="true" Maximum="20000" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosX, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Margin="0,0,10,0"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosY, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="1" Margin="0,0,10,0"/>
+                        <desktop:TextBoxSlider Value="{Binding #win.Model.FocusedControl.LightPosZ, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="-300" AutoExpandMinimum="true" Maximum="300" AutoExpandMaximum="true" StepFactor="0.05" Grid.Column="2"/>
                     </Grid>
                     <TextBlock Grid.Row="0" Text="Ambient" Margin="0,10,0,0" FontWeight="Bold"/>
                     <desktop:TextBoxSlider ToolTip.Tip="Ambient light" Grid.Row="1" Value="{Binding #win.Model.FocusedControl.Ambient, Mode=TwoWay, FallbackValue=0}" Minimum="0" Maximum="1"/>
@@ -209,6 +209,30 @@
                         <StackPanel>
                             <Image Classes="toolbaricon" Source="/Assets/bottomview.png"/>
                             <TextBlock Text="bottom" Classes="toolbartxt"/>
+                        </StackPanel>
+                    </Button>
+                    <Button ToolTip.Tip="SouthWest view" Click="soviewClick" Classes="toolbarbtnnarrow">
+                        <StackPanel>
+                            <Image Classes="toolbaricon" Source="/Assets/swview.png"/>
+                            <TextBlock Text="SW" Classes="toolbartxt"/>
+                        </StackPanel>
+                    </Button>
+                    <Button ToolTip.Tip="SouthEast view" Click="seviewClick" Classes="toolbarbtnnarrow">
+                        <StackPanel>
+                            <Image Classes="toolbaricon" Source="/Assets/seview.png"/>
+                            <TextBlock Text="SE" Classes="toolbartxt"/>
+                        </StackPanel>
+                    </Button>
+                    <Button ToolTip.Tip="NorthEast View" Click="neviewClick" Classes="toolbarbtnnarrow">
+                        <StackPanel>
+                            <Image Classes="toolbaricon" Source="/Assets/neview.png"/>
+                            <TextBlock Text="NE" Classes="toolbartxt"/>
+                        </StackPanel>
+                    </Button>
+                    <Button ToolTip.Tip="NorthWest View" Click="noviewClick" Classes="toolbarbtnnarrow">
+                        <StackPanel>
+                            <Image Classes="toolbaricon" Source="/Assets/nwview.png"/>
+                            <TextBlock Text="NW" Classes="toolbartxt"/>
                         </StackPanel>
                     </Button>
                     <Button ToolTip.Tip="zoom fit" Click="zoomFitClick" Classes="toolbarbtn">

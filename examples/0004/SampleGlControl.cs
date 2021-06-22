@@ -40,7 +40,7 @@ namespace SearchAThing.SciExamples
         public const float FAR_DEFAULT = 100000f;
 
         static readonly Vector3 OBJ_COLOR_DEFAUILT = new Vector3(0.3f, 0.7f, 1);
-        static readonly float AMBIENT_DEFAULT = 0.6f;
+        static readonly float AMBIENT_DEFAULT = 0.2f;
         static readonly float ALPHA_DEFAULT = 0.7f;
 
         // props =========================================================================================       
@@ -71,26 +71,26 @@ namespace SearchAThing.SciExamples
         }
         #endregion
 
-        internal Task AnimTask = null;
+        // internal Task AnimTask = null;
 
-        internal void StartAnim()
-        {
-            if (AnimTask != null) return;
+        // internal void StartAnim()
+        // {
+        //     if (AnimTask != null) return;
 
-            AnimTask = Task.Run(async () =>
-            {
-                while (true)
-                {           
-                    Dispatcher.UIThread.Post(() =>
-                    {
-                        CurrentTime = DateTime.Now;
-                    });                                                 
-                    var model = (Model as SampleGlModel);
-                    await Task.Delay((int)model.BuildModelRefreshTimeLapse.TotalMilliseconds);
-                }
+        //     AnimTask = Task.Run(async () =>
+        //     {
+        //         while (true)
+        //         {           
+        //             Dispatcher.UIThread.Post(() =>
+        //             {
+        //                 CurrentTime = DateTime.Now;
+        //             });                                                 
+        //             var model = (Model as SampleGlModel);
+        //             await Task.Delay((int)model.BuildModelRefreshTimeLapse.TotalMilliseconds);
+        //         }
 
-            });
-        }
+        //     });
+        // }
 
         #region CurrentTime        
         private DateTime _CurrentTime;
@@ -105,6 +105,19 @@ namespace SearchAThing.SciExamples
         }
         #endregion
 
+        // #region AnimStarted
+        // private bool _AnimStarted;
+
+        // public static readonly DirectProperty<SampleGlControl, bool> AnimStartedProperty =
+        //     AvaloniaProperty.RegisterDirect<SampleGlControl, bool>("AnimStarted", o => o.AnimStarted, (o, v) => o.AnimStarted = v);
+
+        // public bool AnimStarted
+        // {
+        //     get => _AnimStarted;
+        //     set => SetAndRaise(AnimStartedProperty, ref _AnimStarted, value);
+        // }
+        // #endregion
+        
         #region Wireframe        
         private bool _Wireframe;
 
@@ -216,57 +229,7 @@ namespace SearchAThing.SciExamples
             get => _LightPosZ;
             set => SetAndRaise(LightPosZProperty, ref _LightPosZ, value);
         }
-        #endregion      
-
-        public Vector3 Light2Pos
-        {
-            get { return new Vector3(Light2PosX, Light2PosY, Light2PosZ); }
-            set
-            {
-                Light2PosX = value.X;
-                Light2PosY = value.Y;
-                Light2PosZ = value.Z;
-            }
-        }
-
-        #region Light2PosX
-        private float _Light2PosX = 300f;
-
-        public static readonly DirectProperty<SampleGlControl, float> Light2PosXProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlControl, float>("Light2PosX", o => o.Light2PosX, (o, v) => o.Light2PosX = v);
-
-        public float Light2PosX
-        {
-            get => _Light2PosX;
-            set => SetAndRaise(Light2PosXProperty, ref _Light2PosX, value);
-        }
-        #endregion    
-
-        #region Light2PosY
-        private float _Light2PosY = 300;
-
-        public static readonly DirectProperty<SampleGlControl, float> Light2PosYProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlControl, float>("Light2PosY", o => o.Light2PosY, (o, v) => o.Light2PosY = v);
-
-        public float Light2PosY
-        {
-            get => _Light2PosY;
-            set => SetAndRaise(Light2PosYProperty, ref _Light2PosY, value);
-        }
-        #endregion    
-
-        #region Light2PosZ
-        private float _Light2PosZ = 2500;
-
-        public static readonly DirectProperty<SampleGlControl, float> Light2PosZProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlControl, float>("Light2PosZ", o => o.Light2PosZ, (o, v) => o.Light2PosZ = v);
-
-        public float Light2PosZ
-        {
-            get => _Light2PosZ;
-            set => SetAndRaise(Light2PosZProperty, ref _Light2PosZ, value);
-        }
-        #endregion          
+        #endregion             
 
         #region Ambient        
         private float _Ambient = AMBIENT_DEFAULT;
@@ -306,34 +269,17 @@ namespace SearchAThing.SciExamples
             set => SetAndRaise(InfoProperty, ref _Info, value);
         }
         #endregion
+         
+        #region StatusStr
+        private string _StatusStr = "";
 
-        #region CurrentWorldCoord
-        private Vector3D _CurrentWorldCoord = Vector3D.Zero;
+        public static readonly DirectProperty<SampleGlControl, string> StatusStrProperty =
+            AvaloniaProperty.RegisterDirect<SampleGlControl, string>("StatusStr", o => o.StatusStr, (o, v) => o.StatusStr = v);
 
-        public static readonly DirectProperty<SampleGlControl, Vector3D> CurrentWorldCoordProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlControl, Vector3D>("CurrentWorldCoord", o => o.CurrentWorldCoord, (o, v) => o.CurrentWorldCoord = v);
-
-        public Vector3D CurrentWorldCoord
+        public string StatusStr
         {
-            get => _CurrentWorldCoord;
-            set
-            {
-                SetAndRaise(CurrentWorldCoordProperty, ref _CurrentWorldCoord, value);
-                CurrentWorldCoordStr = value.ToString();
-            }
-        }
-        #endregion    
-
-        #region CurrentWorldCoordStr
-        private string _CurrentWorldCoordStr = "";
-
-        public static readonly DirectProperty<SampleGlControl, string> CurrentWorldCoordStrProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlControl, string>("CurrentWorldCoordStr", o => o.CurrentWorldCoordStr, (o, v) => o.CurrentWorldCoordStr = v);
-
-        public string CurrentWorldCoordStr
-        {
-            get => _CurrentWorldCoordStr;
-            set => SetAndRaise(CurrentWorldCoordStrProperty, ref _CurrentWorldCoordStr, value);
+            get => _StatusStr;
+            set => SetAndRaise(StatusStrProperty, ref _StatusStr, value);
         }
         #endregion    
 
@@ -346,9 +292,7 @@ namespace SearchAThing.SciExamples
             this.onModelAttached = onModelAttached;
 
             AffectsRender<SampleGlControl>(
-                // changing this property time will affect render and inform to refresh display
-                CurrentTimeProperty,
-                WireframeProperty, ShowModelProperty, ShowModelBBoxProperty, ShowOrbitProperty, OrbitShowCrossProperty,
+                WireframeProperty, ShowModelProperty, ShowModelBBoxProperty, ShowOrbitProperty, InvisibleOrbitProperty, OrbitShowCrossProperty,
                 ModelMatrixProperty,
                 PerspectiveProperty,
                 CameraPosXProperty, CameraPosYProperty, CameraPosZProperty,
@@ -358,7 +302,6 @@ namespace SearchAThing.SciExamples
                 OrthoZoomProperty,
                 ObjColorRedProperty, ObjColorGreenProperty, ObjColorBlueProperty,
                 LightPosXProperty, LightPosYProperty, LightPosZProperty,
-                Light2PosXProperty, Light2PosYProperty, Light2PosZProperty,
                 AmbientProperty, AlphaProperty);
         }
 
@@ -428,22 +371,26 @@ namespace SearchAThing.SciExamples
 
             Dispatcher.UIThread.Post(() =>
             {
-                // model                
-                ResetRotation();
+                if (!Model.vtxMgrBBox.IsEmpty)
+                {
 
-                // view
-                var ct = new Vector3();
-                var cp = ct + (Vector3)(Vector3D.ZAxis * Model.vtxMgrBBox.Size.Length);
-                var cu = new Vector3(0, 1, 0);
-                SetViewMatrix(cp, cp, cu);
-                SetProjectionMatrix(FOV_DEFAULT, NEAR_DEFAULT, FAR_DEFAULT, perspective: true);
+                    // model                
+                    ResetRotation();
 
-                // aspect                                
-                ObjColor = OBJ_COLOR_DEFAUILT;
-                LightPos = Model.vtxMgrBBox.Min - Model.vtxMgrBBox.Size.X * Vector3D.XAxis + Model.vtxMgrBBox.Size.Z * 5 * Vector3D.ZAxis;
-                Ambient = AMBIENT_DEFAULT;
+                    // view
+                    var ct = new Vector3();
+                    var cp = ct + (Vector3)(Vector3D.ZAxis * Model.vtxMgrBBox.Size.Length);
+                    var cu = new Vector3(0, 1, 0);
+                    SetViewMatrix(cp, cp, cu);
+                    SetProjectionMatrix(FOV_DEFAULT, NEAR_DEFAULT, FAR_DEFAULT, perspective: true);
 
-                ViewFront();
+                    // aspect                                
+                    ObjColor = OBJ_COLOR_DEFAUILT;
+                    LightPos = Model.vtxMgrBBox.Min - Model.vtxMgrBBox.Size.X * Vector3D.XAxis + Model.vtxMgrBBox.Size.Z * 5 * Vector3D.ZAxis;
+                    Ambient = AMBIENT_DEFAULT;
+
+                    ViewFront();
+                }
 
                 if (execOnModelAttach && this.onModelAttached != null) this.onModelAttached(this);
             });
@@ -453,7 +400,7 @@ namespace SearchAThing.SciExamples
         {
             var Model = this.Model as SampleGlModel;
 
-            var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
+           /* var curNDC = new Line3D(Vector3D.Zero, Vector3D.Zero);
             var rayLine = new Line3D(Vector3D.Zero, Vector3D.Zero);
 
             Dispatcher.UIThread.Post(() =>
@@ -465,12 +412,12 @@ namespace SearchAThing.SciExamples
                 sb.AppendLine($"   curPos: {pointerMovedPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
                 sb.AppendLine($"   clkPos: {pointerPressPosition?.Position.Eval(k => string.Format("{0:0.0},{1:0.0}", k.X, k.Y))}");
                 sb.AppendLine($"MODEL");
-                sb.AppendLine($"      min: {Model.vtxMgrBBox.Min}");
-                sb.AppendLine($"      max: {Model.vtxMgrBBox.Max}");
+                sb.AppendLine($"      min: {Model.vtxMgrBBox?.Min}");
+                sb.AppendLine($"      max: {Model.vtxMgrBBox?.Max}");
                 sb.AppendLine($" pts/idxs: {string.Format("{0,9:0}", Model.VtxMgr.Points)}/{string.Format("{0,9:0}", Model.VtxMgr.Idxs.Count)}");
 
                 Info = sb.ToString();
-            });
+            });*/
         }
 
     }

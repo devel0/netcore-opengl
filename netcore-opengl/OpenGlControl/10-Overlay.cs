@@ -18,7 +18,7 @@ namespace SearchAThing
         /// <param name="context">avalonia drawing context</param>
         /// <param name="ps">control size</param>
         internal void RenderOverlay(GL GL, DrawingContext context, PixelSize ps)
-        {
+        {            
             if (ShowOrbit)
             {
                 Func<Vector4> colfn = () => Colors.White.ToVector4();

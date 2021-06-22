@@ -28,12 +28,12 @@ namespace SearchAThing.SciExamples
         VertexArrayObject<GLVertexWithNormal> Vao;
 
         //Vertex shaders are run on each vertex.
-        // note: replace "0004" with "<csprojname>"
+        // note: replace "0003" with "<csprojname>"
         string VertexShaderSource =>
             "0004.shaders.shader.vert".GetEmbeddedFileContent<SampleGlControl>();
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
-        // note: replace "0004" with "<csprojname>"
+        // note: replace "0003" with "<csprojname>"
         string FragmentShaderSource =>
             "0004.shaders.shader.frag".GetEmbeddedFileContent<SampleGlControl>();
 
@@ -61,12 +61,9 @@ namespace SearchAThing.SciExamples
         // vertex manager
         public VertexManager VtxMgr { get; private set; } = new VertexManager(TOL);
         readonly uint GLVertexWithNormal_SIZE = (uint)Marshal.SizeOf<GLVertexWithNormal>();
-
-        public BBox3D vtxMgrBBox { get; private set; }
+        readonly int IDX_SIZE = sizeof(uint);
+        public BBox3D vtxMgrBBox => VtxMgr.BBox;
         GLVertexWithNormal[] vtxMgrPoints;
-
-        const string FIGURE_MODEL = "mesh";
-        uint[] VtxMgr_Idxs_MAP;
 
         const string FIGURE_WCSX = "wcsx";
         uint[] VtxMgr_Idxs_WCSX;
@@ -87,114 +84,28 @@ namespace SearchAThing.SciExamples
         const double pendulumLength_m = 10d;
         double angular_speed = Sqrt(g_m_s2 / pendulumLength_m);
 
-        void internalRebuildModel()
+        // data ===========================================================================================
+
+        void LoadStlData()
         {
-            // MODEL
+            /* VtxMgr.AddLine(FIGURE_WCSX,
+                 new Line3D(Vector3D.Zero, Vector3D.XAxis * 10, Line3DConstructMode.PointAndVector),
+                 () => new Vector4(1f, 0, 0, currentRenderingCtl.Alpha));
 
-            //
-            // simple pendulum 10m len
-            //
-            // front view : so that pendulum resides on XZ plane
-            //
+             VtxMgr.AddLine(FIGURE_WCSY,
+                 new Line3D(Vector3D.Zero, Vector3D.YAxis * 10, Line3DConstructMode.PointAndVector),
+                 () => new Vector4(0, 1f, 0, currentRenderingCtl.Alpha));
 
-            VtxMgr = new VertexManager(TOL);
+             VtxMgr.AddLine(FIGURE_WCSZ,
+                 new Line3D(Vector3D.Zero, Vector3D.ZAxis * 10, Line3DConstructMode.PointAndVector),
+                 () => new Vector4(0, 0, 1f, currentRenderingCtl.Alpha));
 
-            var t = (DateTime.Now - startTimestamp).TotalSeconds;
+             vtxMgrPoints = VtxMgr.VtxWithNormals;
+             VtxMgr_Idxs_WCSX = VtxMgr.GetIdxs(FIGURE_WCSX);
+             VtxMgr_Idxs_WCSY = VtxMgr.GetIdxs(FIGURE_WCSY);
+             VtxMgr_Idxs_WCSZ = VtxMgr.GetIdxs(FIGURE_WCSZ);
 
-            var tetha = initialDisplacementDeg.ToRad() * Cos(angular_speed * t);
-
-            //System.Console.WriteLine($"tetha: {tetha.ToDeg()}");
-
-            var mainArm = new Line3D(Vector3D.Zero, new Vector3D(0, 0, -pendulumLength_m * 1000))
-                .RotateAboutAxis(Line3D.YAxisLine, tetha);
-
-            //System.Console.WriteLine($"mainArm:{mainArm}");
-
-            VtxMgr.AddCylinder(FIGURE_MODEL, mainArm, 100, () => Colors.White.ToVector4());
-
-            // WCS
-
-            VtxMgr.AddLine(FIGURE_WCSX,
-                new Line3D(Vector3D.Zero, Vector3D.XAxis * 10, Line3DConstructMode.PointAndVector),
-                () => new Vector4(1f, 0, 0, currentRenderingCtl.Alpha));
-
-            VtxMgr.AddLine(FIGURE_WCSY,
-                new Line3D(Vector3D.Zero, Vector3D.YAxis * 10, Line3DConstructMode.PointAndVector),
-                () => new Vector4(0, 1f, 0, currentRenderingCtl.Alpha));
-
-            VtxMgr.AddLine(FIGURE_WCSZ,
-                new Line3D(Vector3D.Zero, Vector3D.ZAxis * 10, Line3DConstructMode.PointAndVector),
-                () => new Vector4(0, 0, 1f, currentRenderingCtl.Alpha));
-
-            buildBuffers();
-        }
-
-        void buildBuffers()
-        {
-            // System.Console.WriteLine($"computing normals");
-
-            vtxMgrPoints = VtxMgr.VtxWithNormals;
-            VtxMgr_Idxs_MAP = VtxMgr.GetIdxs(FIGURE_MODEL);
-            VtxMgr_Idxs_WCSX = VtxMgr.GetIdxs(FIGURE_WCSX);
-            VtxMgr_Idxs_WCSY = VtxMgr.GetIdxs(FIGURE_WCSY);
-            VtxMgr_Idxs_WCSZ = VtxMgr.GetIdxs(FIGURE_WCSZ);
-            // System.Console.WriteLine($"took {sw0.Elapsed.ToString()}");
-
-            //System.Console.WriteLine($"MODEL LOAD TOTAL TIME: {swTotal.Elapsed}");
-
-            vtxMgrBBox = VtxMgr.BBox;
-            //System.Console.WriteLine($"Model Bounds: {vtxMgrBBox}");
-
-            // Init Buffers
-            {
-                //Initializing a vertex buffer that holds the vertex data.
-                Vbo = new VertexBufferObject<GLVertexWithNormal>(GL, BufferTargetARB.ArrayBuffer, vtxMgrPoints);
-
-                //Initializing a element buffer that holds the index data.
-                EboMap = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, VtxMgr_Idxs_MAP);
-
-                EboWcsX = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, VtxMgr_Idxs_WCSX);
-
-                EboWcsY = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, VtxMgr_Idxs_WCSY);
-
-                EboWcsZ = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, VtxMgr_Idxs_WCSZ);
-
-                //Creating a vertex array.                
-                Vao = new VertexArrayObject<GLVertexWithNormal>(GL);
-
-                /*
-                                Vertex0        | Vertex1        |
-                components      x y z nx ny nz | x y z nx ny nz | ...
-                positionLoc     o o o .  .  .  | o o o .  .  .  |     components=3
-                        offset  ^              | ^              |     offset=0
-                normalLoc       . . . o  o  o  | . . . o  o  o  |     components=3
-                        offset        ^        |       ^        |     offset=3
-
-                sizeof(float)=4
-                stride=4*6      o . . .  .  .  | o . . .  .  .  |
-
-                */
-
-                Vao.AttribPointer(positionLocation, 0);
-                Vao.AttribPointer(normalLocation, 3 * sizeof(float));
-            }
-        }
-
-        /// <summary>
-        /// rebuild model limiting fps
-        /// </summary>
-        void BuildModel()
-        {
-            if ((DateTime.Now - startTimestamp) > BuildModelRefreshTimeLapse)
-            {
-                lock (buildModelLck)
-                {
-                    if ((DateTime.Now - startTimestamp) > BuildModelRefreshTimeLapse)
-                    {
-                        internalRebuildModel();
-                    }
-                }
-            }
+             vtxMgrBBox = VtxMgr.BBox;*/
         }
 
         public SampleGlModel(OpenGlModelOptions options = null)
@@ -206,7 +117,7 @@ namespace SearchAThing.SciExamples
 
         protected override void Render(OpenGlControl _ctl, DrawingContext context, PixelSize ps)
         {
-            BuildModel();
+            if (vtxMgrBBox.IsEmpty) ((SampleGlControl)_ctl).Reset();
 
             netDxf.DxfDocument dxf = null;
 
@@ -285,84 +196,81 @@ namespace SearchAThing.SciExamples
 
             #region draw tmp            
             {
+                GL.Enable(EnableCap.CullFace);
+
                 var vtxMgrTmp = new VertexManager(TOL);
 
-                var drawBBoxDiags = false;
-                if (drawBBoxDiags)
-                {
-                    vtxMgrTmp.AddLine(BBox.Min.LineTo(BBox.Max), () => Colors.Green.ToVector4());
-                    vtxMgrTmp.AddLine(BBox.Min.Set(OrdIdx.Y, BBox.Max.Y).LineTo(BBox.Max.Set(OrdIdx.Y, BBox.Min.Y)), () => Colors.Green.ToVector4());
-                }
+                var t = (DateTime.Now - startTimestamp).TotalSeconds;
 
+                Dispatcher.UIThread.Post(() => ctl.StatusStr = $"{t}");
+
+                var tetha = initialDisplacementDeg.ToRad() * Cos(angular_speed * t);
+
+                var mainArm = new Line3D(Vector3D.Zero, new Vector3D(0, 0, -pendulumLength_m * 1000))
+                    .RotateAboutAxis(Line3D.YAxisLine, tetha);
+
+                vtxMgrTmp.AddCylinder(mainArm, 100, () => Colors.White.ToVector4());
+
+                // draw bbox
                 {
                     if (ctl.ShowModelBBox)
                     {
-                        vtxMgrBBox.AddToVertexManager(vtxMgrTmp);
+                        vtxMgrTmp.BBox.AddToVertexManager(vtxMgrTmp, null, true, null, 0.2);
                     }
-
-                    DrawVtxMgr(vtxMgrTmp);
                 }
+
+                this.VtxMgr = vtxMgrTmp;
+
+                DrawVtxMgr(vtxMgrTmp);
             }
             #endregion            
 
             // bind global vertex array object
             Vao.Bind();
-
-            #region draw wcs                                                            
-            {
-                {
-                    color = VtxMgr.GetColor(FIGURE_WCSX);
-                    setGLColor(color);
-                    EboWcsX.Bind();
-                    unsafe
-                    {
-                        GL.DrawElements(PrimitiveType.Triangles,
-                            (uint)VtxMgr_Idxs_WCSX.Length, DrawElementsType.UnsignedInt, null);
-                    }
-                    if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSX, dxf, color);
-                }
-                {
-                    color = VtxMgr.GetColor(FIGURE_WCSY);
-                    setGLColor(color);
-                    EboWcsY.Bind();
-                    unsafe
-                    {
-                        GL.DrawElements(PrimitiveType.Triangles,
-                            (uint)VtxMgr_Idxs_WCSY.Length, DrawElementsType.UnsignedInt, null);
-                    }
-                    if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSY, dxf, color);
-                }
-                {
-                    color = VtxMgr.GetColor(FIGURE_WCSZ);
-                    setGLColor(color);
-                    EboWcsZ.Bind();
-                    unsafe
-                    {
-                        GL.DrawElements(PrimitiveType.Triangles,
-                            (uint)VtxMgr_Idxs_WCSZ.Length, DrawElementsType.UnsignedInt, null);
-                    }
-                    if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSZ, dxf, color);
-                }
-            }
-            #endregion                     
-
+            /*
+                        #region draw wcs                                                            
+                        {
+                            {
+                                color = VtxMgr.GetColor(FIGURE_WCSX);
+                                setGLColor(color);
+                                EboWcsX.Bind();
+                                unsafe
+                                {
+                                    GL.DrawElements(PrimitiveType.Triangles,
+                                        (uint)VtxMgr_Idxs_WCSX.Length, DrawElementsType.UnsignedInt, null);
+                                }
+                                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSX, dxf, color);
+                            }
+                            {
+                                color = VtxMgr.GetColor(FIGURE_WCSY);
+                                setGLColor(color);
+                                EboWcsY.Bind();
+                                unsafe
+                                {
+                                    GL.DrawElements(PrimitiveType.Triangles,
+                                        (uint)VtxMgr_Idxs_WCSY.Length, DrawElementsType.UnsignedInt, null);
+                                }
+                                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSY, dxf, color);
+                            }
+                            {
+                                color = VtxMgr.GetColor(FIGURE_WCSZ);
+                                setGLColor(color);
+                                EboWcsZ.Bind();
+                                unsafe
+                                {
+                                    GL.DrawElements(PrimitiveType.Triangles,
+                                        (uint)VtxMgr_Idxs_WCSZ.Length, DrawElementsType.UnsignedInt, null);
+                                }
+                                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_WCSZ, dxf, color);
+                            }
+                        }
+                        #endregion                     
+            */
             // copy from code to fragment shader uniform input            
-            color = VtxMgr.GetColor(FIGURE_MODEL);
-            setGLColor(color);
+            // color = VtxMgr.GetColor(FIGURE_MAP);
+            // setGLColor(color);
 
             GL.Uniform1(uAmbLocation, ctl.Ambient);
-
-            // draw map         
-            if (ctl.ShowModel)
-            {
-                EboMap.Bind();
-                unsafe
-                {
-                    GL.DrawElements(PrimitiveType.Triangles,
-                        (uint)VtxMgr_Idxs_MAP.Length, DrawElementsType.UnsignedInt, null);
-                }
-                if (dxf != null) vtxMgrPoints.ExportDxf(VtxMgr_Idxs_MAP, dxf, color);
-            }
 
             ctl.UpdateInfo();
 
@@ -383,13 +291,22 @@ namespace SearchAThing.SciExamples
         /// <summary>
         /// override bbox in order to allow framework F
         /// </summary>
-        public override BBox3D BBox => this.vtxMgrBBox;
+        public override BBox3D BBox =>
+            this.VtxMgr == null ? new BBox3D() : this.VtxMgr.BBox;
+
+        bool dataLoaded = false;
+
+        //internal bool IsAnimStarted = true;
 
         protected override void OnInitialized()
         {
-            BuildModel();
+            if (!dataLoaded)
+            {
+                LoadStlData();
+                dataLoaded = true;
+            }
 
-            GL.Enable(EnableCap.CullFace);
+
             GL.Enable(EnableCap.DepthTest);
             GL.Enable(EnableCap.Blend);
             GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
@@ -454,6 +371,38 @@ namespace SearchAThing.SciExamples
                 uAlphaLocation = SafeGetUniformLocation(Shader, "uAlpha");
                 uObjColLocation = SafeGetUniformLocation(Shader, "uObjCol");
                 uLightPosLocation = SafeGetUniformLocation(Shader, "uLightPos");
+            }
+
+            // Init Buffers
+            {
+                //Initializing a vertex buffer that holds the vertex data.
+                Vbo = new VertexBufferObject<GLVertexWithNormal>(GL, BufferTargetARB.ArrayBuffer, vtxMgrPoints);
+
+                //Initializing a element buffer that holds the index data.                
+                EboWcsX = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, VtxMgr_Idxs_WCSX);
+
+                EboWcsY = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, VtxMgr_Idxs_WCSY);
+
+                EboWcsZ = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, VtxMgr_Idxs_WCSZ);
+
+                //Creating a vertex array.                
+                Vao = new VertexArrayObject<GLVertexWithNormal>(GL);
+
+                /*
+                                Vertex0        | Vertex1        |
+                components      x y z nx ny nz | x y z nx ny nz | ...
+                positionLoc     o o o .  .  .  | o o o .  .  .  |     components=3
+                        offset  ^              | ^              |     offset=0
+                normalLoc       . . . o  o  o  | . . . o  o  o  |     components=3
+                        offset        ^        |       ^        |     offset=3
+
+                sizeof(float)=4
+                stride=4*6      o . . .  .  .  | o . . .  .  .  |
+
+                */
+
+                Vao.AttribPointer(positionLocation, 0);
+                Vao.AttribPointer(normalLocation, 3 * sizeof(float));
             }
         }
     }

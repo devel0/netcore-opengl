@@ -1,7 +1,7 @@
 using System;
+using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
-using System.Linq;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
@@ -44,7 +44,7 @@ namespace SearchAThing.SciExamples
         }
         #endregion                 
 
-        //public OpenGlControl NewGlControl() => new SampleGlControl();
+        public OpenGlControl NewGlControl() => new SampleGlControl();
 
         void GlPointerPressed(object sender, PointerPressedEventArgs e)
         {
@@ -59,8 +59,6 @@ namespace SearchAThing.SciExamples
         GridSplitterManager gridSplitterManager;
 
         static int ctlCount = 0;
-
-        SampleGlControl glctl = null;
 
         public MainWindow()
         {
@@ -89,7 +87,7 @@ namespace SearchAThing.SciExamples
                 ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Star));
                 ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Auto));
 
-                glctl = new SampleGlControl((x) =>
+                var glctl = new SampleGlControl((x) =>
                 {
                     //setRndColor(x);
                     if (fc != null)
@@ -97,12 +95,7 @@ namespace SearchAThing.SciExamples
                         x.ShowOrbit = fc.ShowOrbit;
                         x.ShowModel = fc.ShowModel;
                         x.ShowModelBBox = fc.ShowModelBBox;
-                        x.Perspective = fc.Perspective;
-
-                        if (fc.AnimTask != null)
-                        {
-                            x.StartAnim();
-                        }
+                        x.Perspective = fc.Perspective;                        
                     }
                 });
                 glctl.Name = $"ctl{++ctlCount}";
@@ -115,7 +108,7 @@ namespace SearchAThing.SciExamples
                     Background = new SolidColorBrush(Colors.Black),
                     IsReadOnly = true
                 };
-                tblk.Bind(TextBox.TextProperty, new Binding("CurrentWorldCoordStr")
+                tblk.Bind(TextBox.TextProperty, new Binding("StatusStr")
                 {
                     Source = glctl
                 });
@@ -124,10 +117,24 @@ namespace SearchAThing.SciExamples
 
                 ctl.Children.Add(glctl);
 
-                startAnim();
+                // Task.Run(async () =>
+                // {
+                //     while (true)
+                //     {
+                //         Dispatcher.UIThread.Post(() =>
+                //         {
+                //             glctl.AnimStarted = (Model as SampleGlModel).IsAnimStarted;
+                //             glctl.CurrentTime = DateTime.Now;
+                //         });
+                //         var model = (Model as SampleGlModel);
+                //         await Task.Delay((int)model.BuildModelRefreshTimeLapse.TotalMilliseconds);
+                //     }
+
+                // });
 
                 return ctl;
             };
+
         }
 
         private void click_random(object sender, RoutedEventArgs e)
@@ -141,47 +148,33 @@ namespace SearchAThing.SciExamples
             ctl.ObjColor = RndColor(0.5, 0.8);
         }
 
+        // void startAnim()
+        // {
+        //     var ctls = Model.GetAllControls();
+
+        //     foreach (var ctl in ctls.Cast<SampleGlControl>())
+        //     {
+        //         //var ctl = Model.FocusedControl as SampleGlControl;
+        //         var model = ctl.Model as SampleGlModel;
+
+        //         //model.startTimestamp = DateTime.Now;
+        //         if (ctl.AnimTask == null)
+        //         {
+        //             ctl.StartAnim();
+
+        //         }
+        //     }
+        // }
+
+        private void click_pause(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void click_reset(object sender, RoutedEventArgs e)
         {
             var ctl = Model.FocusedControl as SampleGlControl;
             ctl.Reset();
-        }
-
-        void startAnim()
-        {
-            var ctls = Model.GetAllControls();
-
-            foreach (var ctl in ctls.Cast<SampleGlControl>())
-            {
-                //var ctl = Model.FocusedControl as SampleGlControl;
-                var model = ctl.Model as SampleGlModel;
-
-                //model.startTimestamp = DateTime.Now;
-                if (ctl.AnimTask == null)
-                {
-                    ctl.StartAnim();
-
-                }
-            }
-        }
-
-        private void click_start(object sender, RoutedEventArgs e)
-        {
-            Dispatcher.UIThread.Post(() =>
-            {
-                var ctls = Model.GetAllControls();
-
-                foreach (var ctl in ctls.Cast<SampleGlControl>())
-                {
-                    //var ctl = Model.FocusedControl as SampleGlControl;
-                    var model = ctl.Model as SampleGlModel;
-                    model.startTimestamp = DateTime.Now;
-                    
-                    ctl.CurrentTime = DateTime.Now;
-                }
-
-                startAnim();
-            });
         }
 
         private void click_exportDxf(object sender, RoutedEventArgs e)
@@ -232,6 +225,34 @@ namespace SearchAThing.SciExamples
             var Model = this.Model as SampleGlModel;
             var ctl = Model.FocusedControl as SampleGlControl;
             ctl.ViewBottom();
+        }
+
+        private void soviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewSouthWest();
+        }
+
+        private void seviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewSouthEast();
+        }
+
+        private void neviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewNorthEast();
+        }
+
+        private void noviewClick(object sender, RoutedEventArgs e)
+        {
+            var Model = this.Model as SampleGlModel;
+            var ctl = Model.FocusedControl as SampleGlControl;
+            ctl.ViewNorthWest();
         }
 
         private void zoomFitClick(object sender, RoutedEventArgs e)

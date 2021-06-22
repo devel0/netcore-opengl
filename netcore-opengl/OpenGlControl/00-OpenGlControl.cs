@@ -48,7 +48,7 @@ namespace SearchAThing
     }
 
     public partial class OpenGlControl : Control
-    {                
+    {
 
         #region Model
         private OpenGlModelBase _Model = null;
@@ -544,7 +544,7 @@ namespace SearchAThing
         #endregion
 
         #region InvisibleOrbit
-        private bool _InvisibleOrbit = true;
+        private bool _InvisibleOrbit = false;
 
         public static readonly DirectProperty<OpenGlControl, bool> InvisibleOrbitProperty =
             AvaloniaProperty.RegisterDirect<OpenGlControl, bool>("InvisibleOrbit", o => o.InvisibleOrbit, (o, v) => o.InvisibleOrbit = v);

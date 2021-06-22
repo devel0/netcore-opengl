@@ -214,6 +214,7 @@ namespace SearchAThing
 
                 RenderClear(ctl, context, ps);
 
+                GL.Disable(EnableCap.CullFace);
                 GL.UseProgram(overlayShader);
                 GL.PolygonMode(GLEnum.FrontAndBack, PolygonMode.Fill);
                 ctl.RenderOverlay(GL, context, ps);
