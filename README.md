@@ -93,7 +93,7 @@ An attempt to examine how [MousePosToWorldPos](https://github.com/devel0/netcore
 
 #### 0004
 
-[Model animation](https://github.com/devel0/netcore-opengl/blob/c47daca3ebdc90fbde1cfb9c87e5effff9e3bf5f/examples/0004/SampleGlModel.cs#L108)
+[Model animation](https://github.com/devel0/netcore-opengl/blob/6eb5cc6fc77f8bce337330d551be78aee17bd156/examples/0004/SampleGlModel.cs#L203)
 
 ![](data/img/example-0004.gif)
 
