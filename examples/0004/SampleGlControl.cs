@@ -80,11 +80,11 @@ namespace SearchAThing.SciExamples
             AnimTask = Task.Run(async () =>
             {
                 while (true)
-                {
+                {           
                     Dispatcher.UIThread.Post(() =>
                     {
                         CurrentTime = DateTime.Now;
-                    });
+                    });                                                 
                     var model = (Model as SampleGlModel);
                     await Task.Delay((int)model.BuildModelRefreshTimeLapse.TotalMilliseconds);
                 }

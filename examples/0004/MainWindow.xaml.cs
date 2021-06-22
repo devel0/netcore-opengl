@@ -124,7 +124,7 @@ namespace SearchAThing.SciExamples
 
                 ctl.Children.Add(glctl);
 
-
+                startAnim();
 
                 return ctl;
             };
@@ -147,7 +147,7 @@ namespace SearchAThing.SciExamples
             ctl.Reset();
         }
 
-        private void click_start(object sender, RoutedEventArgs e)
+        void startAnim()
         {
             var ctls = Model.GetAllControls();
 
@@ -156,13 +156,32 @@ namespace SearchAThing.SciExamples
                 //var ctl = Model.FocusedControl as SampleGlControl;
                 var model = ctl.Model as SampleGlModel;
 
-                model.startTimestamp = DateTime.Now;
+                //model.startTimestamp = DateTime.Now;
                 if (ctl.AnimTask == null)
                 {
                     ctl.StartAnim();
-                    
+
                 }
             }
+        }
+
+        private void click_start(object sender, RoutedEventArgs e)
+        {
+            Dispatcher.UIThread.Post(() =>
+            {
+                var ctls = Model.GetAllControls();
+
+                foreach (var ctl in ctls.Cast<SampleGlControl>())
+                {
+                    //var ctl = Model.FocusedControl as SampleGlControl;
+                    var model = ctl.Model as SampleGlModel;
+                    model.startTimestamp = DateTime.Now;
+                    
+                    ctl.CurrentTime = DateTime.Now;
+                }
+
+                startAnim();
+            });
         }
 
         private void click_exportDxf(object sender, RoutedEventArgs e)

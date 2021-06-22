@@ -54,8 +54,7 @@ namespace SearchAThing.SciExamples
         int uAmbLocation;
         int uAlphaLocation;
         int uObjColLocation;
-        int uLightPosLocation;
-        int uLightPosLocation2;
+        int uLightPosLocation;        
 
         const double TOL = 1e-3;
 
@@ -456,8 +455,7 @@ namespace SearchAThing.SciExamples
                 uAmbLocation = SafeGetUniformLocation(Shader, "uAmb");
                 uAlphaLocation = SafeGetUniformLocation(Shader, "uAlpha");
                 uObjColLocation = SafeGetUniformLocation(Shader, "uObjCol");
-                uLightPosLocation = SafeGetUniformLocation(Shader, "uLightPos");
-                uLightPosLocation2 = SafeGetUniformLocation(Shader, "uLightPos2");
+                uLightPosLocation = SafeGetUniformLocation(Shader, "uLightPos");                
             }
 
             // Init Buffers

@@ -96,6 +96,40 @@ namespace SearchAThing
             return AddTriangles(figureName, triangles, color);
         }
 
+        public (string figureName, IReadOnlyList<uint> idxs) AddCuboid(CoordinateSystem3D cs, double length,
+            Vector3D p1, Vector3D p2,
+            Func<Vector4> color = null)
+        {
+            var figureName = Guid.NewGuid().ToString();
+            var idxs = AddCuboid(figureName, cs, length, p1, p2, color);
+            return (figureName, idxs);
+        }
+
+
+        /// <summary>
+        /// add a box
+        /// </summary>
+        /// <param name="figureName">figure name</param>
+        /// <param name="cs">cs at base center of cuboid</param>
+        /// <param name="length">length along cs z axis of the hollow rectangle</param>
+        /// <param name="xLen">len of the rect along cs x axis</param>        
+        /// <param name="yLen">len of rect along cs y axis</param>        
+        /// <param name="color">color</param>
+        /// <returns>array of indexes</returns>
+        public IReadOnlyList<uint> AddCuboid(string figureName,
+            CoordinateSystem3D cs, double length,
+            Vector3D p1, Vector3D p2,
+            Func<Vector4> color = null)
+        {
+            var _p1 = p1.ToUCS(cs);
+            var _p2 = p2.ToUCS(cs);
+            var _diff = _p2 - _p1;
+            var xlen = _diff.X;
+            var ylen = _diff.Y;
+
+            return AddCuboid(figureName, cs.Move((p1 + p2) / 2), length, xlen, ylen, color);
+        }
+
     }
 
 }
