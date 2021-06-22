@@ -15,13 +15,16 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)"/>    
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)"/>
     <PackageReference Include="netDxf.netstandard" Version="$(NetDxfNetStandardVersion)"/>
     <PackageReference Include="QuantumConcepts.Formats.STL.netcore" Version="$(STLNetCoreVersion)"/>
-    <PackageReference Include="Silk.NET" Version="$(SilkNetVersion)"/>        
-    <PackageReference Include="netcore-sci" Version="$(NetCoreSciVersion)" />
-    <PackageReference Include="netcore-util" Version="$(NetCoreUtilVersion)" />    
-    <PackageReference Include="netcore-desktop" Version="$(NetCoreDesktopVersion)" />    
+    <PackageReference Include="Silk.NET" Version="$(SilkNetVersion)"/>
+    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\netcore-desktop\netcore-desktop\netcore-desktop.csproj"/>
+    <ProjectReference Include="..\..\netcore-sci\netcore-sci\netcore-sci.csproj"/>
+    <ProjectReference Include="..\..\netcore-util\netcore-util\netcore-util.csproj"/>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\"/>

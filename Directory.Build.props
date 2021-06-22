@@ -16,9 +16,10 @@
         <MessageBoxAvaloniaVersion>1.0.5</MessageBoxAvaloniaVersion>
         <UnitsNetVersion>4.83.0</UnitsNetVersion>
         <SilkNetVersion>1.4.0</SilkNetVersion>
+        <NewtonsoftJsonVersion>12.0.3</NewtonsoftJsonVersion>
         <NetCoreUtilVersion>1.9.1</NetCoreUtilVersion>
         <NetCoreSciVersion>1.29.0</NetCoreSciVersion>
-        <NetCoreDesktopVersion>0.4.0</NetCoreDesktopVersion>
+        <NetCoreDesktopVersion>0.4.0</NetCoreDesktopVersion>        
         <!-- <CSharpMathVersion>0.5.0-beta</CSharpMathVersion> -->
     </PropertyGroup>
 </Project>
