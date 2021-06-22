@@ -16,10 +16,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)"/>
-    <PackageReference Include="netDxf.netstandard" Version="$(NetDxfNetStandardVersion)"/>
-    <PackageReference Include="QuantumConcepts.Formats.STL.netcore" Version="$(STLNetCoreVersion)"/>
     <PackageReference Include="Silk.NET" Version="$(SilkNetVersion)"/>
-    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)"/>
+    <!-- <PackageReference Include="netDxf.netstandard" Version="$(NetDxfNetStandardVersion)"/>
+    <PackageReference Include="QuantumConcepts.Formats.STL.netcore" Version="$(STLNetCoreVersion)"/>
+    
+    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)"/> -->
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\netcore-desktop\netcore-desktop\netcore-desktop.csproj"/>

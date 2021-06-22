@@ -1,25 +1,31 @@
 <!--Directory.Build.props: MSBuild properties that are included in every project--><!--Info: https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019#directorybuildprops-and-directorybuildtargets-->
 <Project>
-    <PropertyGroup>
+    <PropertyGroup><!-- 
+        === netcore-util -->
+        <MicrosoftCSharpVersion>4.7.0</MicrosoftCSharpVersion>
+        <MicrosoftEntityFrameworkCoreVersion>5.0.1</MicrosoftEntityFrameworkCoreVersion>
+        <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
+        <NpgsqlEntityFrameworkCorePostgreSQLVersion>5.0.0</NpgsqlEntityFrameworkCorePostgreSQLVersion>
+        <UnitsNetVersion>4.74.0</UnitsNetVersion><!-- 
+        === netcore-sci -->
         <NetcoreUtilVersion>1.9.1</NetcoreUtilVersion>
-        <NetcorePsqlUtilVersion>1.2.1</NetcorePsqlUtilVersion>        
-        <AvaloniaVersion>0.10.6</AvaloniaVersion>        
-        <OxyPlotVersion>2.1.0-20201211.2</OxyPlotVersion>        
-        <MathNetNumericsVersion>4.12.0</MathNetNumericsVersion>
+        <NetcorePsqlUtilVersion>1.2.1</NetcorePsqlUtilVersion>
+        <AvaloniaVersion>0.10.6</AvaloniaVersion>
+        <LibTessDotNetVersion>1.1.13</LibTessDotNetVersion>
         <LinqStatisticsVersion>2.3.0</LinqStatisticsVersion>
+        <ClosedXMLVersion>0.95.4</ClosedXMLVersion>
+        <MathNetNumericsVersion>4.12.0</MathNetNumericsVersion>
         <NetDxfNetStandardVersion>2.4.0</NetDxfNetStandardVersion>
         <ParagonClipperVersion>6.4.2</ParagonClipperVersion>
-        <STLNetCoreVersion>1.3.1</STLNetCoreVersion>
-        <LibTessDotNetVersion>1.1.13</LibTessDotNetVersion>
         <AngouriMathVersion>1.2.0-preview.6</AngouriMathVersion>
-        <ClosedXMLVersion>0.95.4</ClosedXMLVersion>
+        <STLNetCoreVersion>1.3.1</STLNetCoreVersion>
+        <OxyPlotVersion>2.1.0-20201211.2</OxyPlotVersion>
         <MessageBoxAvaloniaVersion>1.0.5</MessageBoxAvaloniaVersion>
-        <UnitsNetVersion>4.83.0</UnitsNetVersion>
+        <UnitsNetVersion>4.83.0</UnitsNetVersion><!--
+        === netcore-desktop -->
+        <AvaloniaVersion>0.10.6</AvaloniaVersion>
+        <!--
+        === netcore-opengl -->
         <SilkNetVersion>1.4.0</SilkNetVersion>
-        <NewtonsoftJsonVersion>12.0.3</NewtonsoftJsonVersion>
-        <NetCoreUtilVersion>1.9.1</NetCoreUtilVersion>
-        <NetCoreSciVersion>1.29.0</NetCoreSciVersion>
-        <NetCoreDesktopVersion>0.4.0</NetCoreDesktopVersion>        
-        <!-- <CSharpMathVersion>0.5.0-beta</CSharpMathVersion> -->
     </PropertyGroup>
 </Project>
