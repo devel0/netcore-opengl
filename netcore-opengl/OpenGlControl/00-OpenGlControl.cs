@@ -479,7 +479,7 @@ namespace SearchAThing
         #endregion
 
         #region Perspective
-        private bool _Perspective = true;
+        private bool _Perspective = false;
 
         public static readonly DirectProperty<OpenGlControl, bool> PerspectiveProperty =
             AvaloniaProperty.RegisterDirect<OpenGlControl, bool>("Perspective", o => o.Perspective, (o, v) => o.Perspective = v);
