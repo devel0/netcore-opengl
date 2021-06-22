@@ -1,9 +1,24 @@
 <!--Directory.Build.props: MSBuild properties that are included in every project--><!--Info: https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019#directorybuildprops-and-directorybuildtargets-->
 <Project>
     <PropertyGroup>
-        <!-- <AvaloniaVersion>0.10.0-preview5</AvaloniaVersion> -->
+        <NetcoreUtilVersion>1.9.1</NetcoreUtilVersion>
+        <NetcorePsqlUtilVersion>1.2.1</NetcorePsqlUtilVersion>        
         <AvaloniaVersion>0.10.6</AvaloniaVersion>        
-        <!-- <OxyPlotVersion>2.1.0-20201211.2</OxyPlotVersion> -->
+        <OxyPlotVersion>2.1.0-20201211.2</OxyPlotVersion>        
+        <MathNetNumericsVersion>4.12.0</MathNetNumericsVersion>
+        <LinqStatisticsVersion>2.3.0</LinqStatisticsVersion>
+        <NetDxfNetStandardVersion>2.4.0</NetDxfNetStandardVersion>
+        <ParagonClipperVersion>6.4.2</ParagonClipperVersion>
+        <STLNetCoreVersion>1.3.1</STLNetCoreVersion>
+        <LibTessDotNetVersion>1.1.13</LibTessDotNetVersion>
+        <AngouriMathVersion>1.2.0-preview.6</AngouriMathVersion>
+        <ClosedXMLVersion>0.95.4</ClosedXMLVersion>
+        <MessageBoxAvaloniaVersion>1.0.5</MessageBoxAvaloniaVersion>
+        <UnitsNetVersion>4.83.0</UnitsNetVersion>
+        <SilkNetVersion>1.4.0</SilkNetVersion>
+        <NetCoreUtilVersion>1.9.1</NetCoreUtilVersion>
+        <NetCoreSciVersion>1.29.0</NetCoreSciVersion>
+        <NetCoreDesktopVersion>0.4.0</NetCoreDesktopVersion>
         <!-- <CSharpMathVersion>0.5.0-beta</CSharpMathVersion> -->
     </PropertyGroup>
 </Project>
