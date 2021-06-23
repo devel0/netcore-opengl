@@ -2,65 +2,13 @@ using Avalonia;
 using Avalonia.Media;
 using Silk.NET.OpenGL;
 using System;
+using System.Linq;
 using System.Numerics;
 
 namespace SearchAThing.SciExamples
 {
     public partial class SampleGlModel : SearchAThing.OpenGlModelBase
     {
-
-        #region ObjColorRed
-        private float _ObjColorRed = 0f;
-
-        public static readonly DirectProperty<SampleGlModel, float> ObjColorRedProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlModel, float>("ObjColorRed", o => o.ObjColorRed, (o, v) => o.ObjColorRed = v);
-
-        public float ObjColorRed
-        {
-            get => _ObjColorRed;
-            set
-            {
-                SetAndRaise(ObjColorRedProperty, ref _ObjColorRed, value);
-                AffectsRenderPropChanged?.Invoke();
-            }
-        }
-        #endregion    
-
-        #region ObjColorGreen
-        private float _ObjColorGreen = 1f;
-
-        public static readonly DirectProperty<SampleGlModel, float> ObjColorGreenProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlModel, float>("ObjColorGreen", o => o.ObjColorGreen, (o, v) => o.ObjColorGreen = v);
-
-        public float ObjColorGreen
-        {
-            get => _ObjColorGreen;
-            set
-            {
-                SetAndRaise(ObjColorGreenProperty, ref _ObjColorGreen, value);
-                AffectsRenderPropChanged?.Invoke();
-            }
-        }
-        #endregion    
-
-        #region ObjColorBlue
-        private float _ObjColorBlue = 0f;
-
-        public static readonly DirectProperty<SampleGlModel, float> ObjColorBlueProperty =
-            AvaloniaProperty.RegisterDirect<SampleGlModel, float>("ObjColorBlue", o => o.ObjColorBlue, (o, v) => o.ObjColorBlue = v);
-
-        public float ObjColorBlue
-        {
-            get => _ObjColorBlue;
-            set
-            {
-                SetAndRaise(ObjColorBlueProperty, ref _ObjColorBlue, value);
-                AffectsRenderPropChanged?.Invoke();
-            }
-        }
-        #endregion
-
-        public event Action AffectsRenderPropChanged;
 
         public Vector3 ObjColorMin => new Vector3(0f, 0, 0);
         public Vector3 ObjColorMax => new Vector3(1, 1, 1);
@@ -72,14 +20,12 @@ namespace SearchAThing.SciExamples
         private uint Shader;
 
         //Vertex shaders are run on each vertex.
-        // note: replace "0001" with "<csprojname>"
-        private string VertexShaderSource =>
-            "0001.shaders.vertexShader.glsl".GetEmbeddedFileContent<SampleGlControl>();
+        string VertexShaderSource =>
+            UtilToolkit.GetEmbeddedResourcesList<SampleGlModel>().First(w => w.Contains("vertexShader.glsl")).GetEmbeddedFileContent<SampleGlModel>();
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
-        // note: replace "0001" with "<csprojname>"
-        private string FragmentShaderSource =>
-            "0001.shaders.fragmentShader.glsl".GetEmbeddedFileContent<SampleGlControl>();
+        string FragmentShaderSource =>
+            UtilToolkit.GetEmbeddedResourcesList<SampleGlModel>().First(w => w.Contains("fragmentShader.glsl")).GetEmbeddedFileContent<SampleGlModel>();
 
         //Vertex data, uploaded to the VBO.
         private readonly float[] Vertices =
@@ -101,7 +47,7 @@ namespace SearchAThing.SciExamples
         }
 
         protected override void OnInitialized()
-        {
+        {            
             //Creating a vertex array.
             Vao = new VertexArrayObject<float>(GL);
 
@@ -173,18 +119,19 @@ namespace SearchAThing.SciExamples
             Vao.AttribPointer(vPosLocation, 0, 3, VertexAttribPointerType.Float, false, sizeof(float) * 3);
         }
 
-        protected override void RenderClear(OpenGlControl _ctl, DrawingContext context, PixelSize ps)
-        {
-            //Clear the color channel.
-            GL.Clear((uint)ClearBufferMask.ColorBufferBit);
-        }
+        // protected override void RenderClear(OpenGlControl _ctl, DrawingContext context, PixelSize ps)
+        // {
+        //     //Clear the color channel.
+        //     GL.Clear((uint)ClearBufferMask.ColorBufferBit);
+        // }
 
         protected override void Render(OpenGlControl _ctl, DrawingContext context, PixelSize ps)
         {
             GL.UseProgram(Shader);
 
             var objColLoc = GL.GetUniformLocation(Shader, "ObjCol");
-            GL.Uniform3(objColLoc, ObjColorRed, ObjColorGreen, ObjColorBlue);
+            var glCtl = _ctl as SampleGlControl;
+            GL.Uniform3(objColLoc, glCtl.ObjColorRed, glCtl.ObjColorGreen, glCtl.ObjColorBlue);
 
             //Bind the geometry and shader.
             Vao.Bind();

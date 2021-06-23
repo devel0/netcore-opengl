@@ -17,9 +17,9 @@ Title="example">
                     <Button Content="random" Click="click_random" Margin="10,0,0,0"/>
                 </StackPanel>
                 <Grid ColumnDefinitions="*,*,*" Margin="0,10,0,0">
-                    <desktop:TextBoxSlider Value="{Binding #glCtl.Model.ObjColorRed, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" Maximum="1"/>
-                    <desktop:TextBoxSlider Value="{Binding #glCtl.Model.ObjColorGreen, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" Maximum="1" Grid.Column="1"/>
-                    <desktop:TextBoxSlider Value="{Binding #glCtl.Model.ObjColorBlue, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" Maximum="1" Grid.Column="2"/>
+                    <desktop:TextBoxSlider Value="{Binding #glCtl.ObjColorRed, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" Maximum="1"/>
+                    <desktop:TextBoxSlider Value="{Binding #glCtl.ObjColorGreen, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" Maximum="1" Grid.Column="1"/>
+                    <desktop:TextBoxSlider Value="{Binding #glCtl.ObjColorBlue, Mode=TwoWay, FallbackValue=0}" AutoRoundDigits="4" Minimum="0" Maximum="1" Grid.Column="2"/>
                 </Grid>
             </StackPanel>
         </Grid>

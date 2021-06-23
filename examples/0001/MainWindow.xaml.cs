@@ -31,24 +31,20 @@ namespace SearchAThing.SciExamples
         {
             InitializeComponent();
 
-            glCtl = this.FindControl<SampleGlControl>("glCtl");
+            glCtl = this.FindControl<SampleGlControl>("glCtl");            
 
             Model = new SampleGlModel(new OpenGlModelOptions
             {
                 Debug = true
-            });
-            Model.AffectsRenderPropChanged += () =>
-            {
-                glCtl.InvalidateVisual();
-            };
+            });            
         }
 
         private void click_random(object sender, RoutedEventArgs e)
         {
             var rnd = new Random();
-            Model.ObjColorRed = (float)rnd.NextDouble();
-            Model.ObjColorGreen = (float)rnd.NextDouble();
-            Model.ObjColorBlue = (float)rnd.NextDouble();
+            glCtl.ObjColorRed = (float)rnd.NextDouble();
+            glCtl.ObjColorGreen = (float)rnd.NextDouble();
+            glCtl.ObjColorBlue = (float)rnd.NextDouble();            
         }
 
         private void InitializeComponent()
