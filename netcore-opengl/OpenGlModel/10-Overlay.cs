@@ -1,6 +1,7 @@
 using Silk.NET.OpenGL;
 using Avalonia;
 using System;
+using System.Linq;
 
 namespace SearchAThing
 {
@@ -14,15 +15,13 @@ namespace SearchAThing
         // location of builtin overlay fragmentShader uniforms
         internal int overlayUObjColLocation;
 
-        // builtin overlay vertex shader
-        // note: replace "netcore-opengl" with "<yourasemblyname>"
+        // builtin overlay vertex shader        
         string OverlayVertexShaderSource =>
-            "netcore-opengl.overlay.vert".GetEmbeddedFileContent<OpenGlModelBase>();
+            UtilToolkit.GetEmbeddedResourceNames().First(w => w.Contains("overlay.vert")).GetEmbeddedFileContent<OpenGlModelBase>();        
 
-        // builtin overlay fragment shader
-        // note: replace "netcore-opengl" with "<yourasemblyname>"
+        // builtin overlay fragment shader        
         string OverlayFragmentShaderSource =>
-            "netcore-opengl.overlay.frag".GetEmbeddedFileContent<OpenGlModelBase>();
+            UtilToolkit.GetEmbeddedResourceNames().First(w => w.Contains("overlay.frag")).GetEmbeddedFileContent<OpenGlModelBase>();            
 
         uint overlayShader;
         uint overlayVertexShader;
