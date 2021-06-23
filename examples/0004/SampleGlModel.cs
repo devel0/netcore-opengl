@@ -216,7 +216,7 @@ namespace SearchAThing.SciExamples
                 {
                     if (ctl.ShowModelBBox)
                     {
-                        vtxMgrTmp.BBox.AddToVertexManager(vtxMgrTmp, null, true, null, 0.2);
+                        vtxMgrTmp.BBox.AddToVertexManager(vtxMgrTmp, null, true, null, 10);
                     }
                 }
 
