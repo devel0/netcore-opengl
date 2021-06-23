@@ -543,6 +543,19 @@ namespace SearchAThing
         }
         #endregion
 
+        #region OrbitSegmentPerCircle
+        private int _OrbitSegmentPerCircle = 32;
+
+        public static readonly DirectProperty<OpenGlControl, int> OrbitSegmentPerCircleProperty =
+            AvaloniaProperty.RegisterDirect<OpenGlControl, int>("OrbitSegmentPerCircle", o => o.OrbitSegmentPerCircle, (o, v) => o.OrbitSegmentPerCircle = v);
+
+        public int OrbitSegmentPerCircle
+        {
+            get => _OrbitSegmentPerCircle;
+            set => SetAndRaise(OrbitSegmentPerCircleProperty, ref _OrbitSegmentPerCircle, value);
+        }
+        #endregion
+
         #region InvisibleOrbit
         private bool _InvisibleOrbit = false;
 
@@ -634,8 +647,8 @@ namespace SearchAThing
         }
 
         public void NotifyKeyDown(KeyEventArgs e)
-        {            
-            ShiftKeyPressed = e.Key == Key.LeftShift || e.Key == Key.RightShift;            
+        {
+            ShiftKeyPressed = e.Key == Key.LeftShift || e.Key == Key.RightShift;
         }
 
         void ControlKeyDown(object sender, KeyEventArgs e)
