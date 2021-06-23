@@ -28,14 +28,12 @@ namespace SearchAThing.SciExamples
         VertexArrayObject<GLVertexWithNormal> Vao;
 
         //Vertex shaders are run on each vertex.
-        // note: replace "0003" with "<csprojname>"
         string VertexShaderSource =>
-            "0004.shaders.shader.vert".GetEmbeddedFileContent<SampleGlControl>();
+            UtilToolkit.GetEmbeddedResourcesList<SampleGlControl>().First(w => w.Contains("shader.vert")).GetEmbeddedFileContent<SampleGlControl>();
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
-        // note: replace "0003" with "<csprojname>"
         string FragmentShaderSource =>
-            "0004.shaders.shader.frag".GetEmbeddedFileContent<SampleGlControl>();
+            UtilToolkit.GetEmbeddedResourcesList<SampleGlControl>().First(w => w.Contains("shader.frag")).GetEmbeddedFileContent<SampleGlControl>();
 
         uint Shader;
         uint vertexShader;
@@ -178,7 +176,10 @@ namespace SearchAThing.SciExamples
                             var idxs = vtxmgr.GetIdxs(figure);
                             color = vtxmgr.GetColor(figure);
 
-                            if (dxf != null) pts.ExportDxf(idxs, dxf, color);
+                            if (dxf != null)
+                            {
+                                pts.ExportDxf(idxs, dxf, color, ctl.ModelMatrix * ctl.ViewMatrix);
+                            }
 
                             using (var EboTmp = new VertexBufferObject<uint>(GL, BufferTargetARB.ElementArrayBuffer, idxs))
                             {
@@ -226,7 +227,7 @@ namespace SearchAThing.SciExamples
             #endregion            
 
             // bind global vertex array object
-            Vao.Bind(); 
+            Vao.Bind();
 
             // copy from code to fragment shader uniform input            
             // color = VtxMgr.GetColor(FIGURE_MAP);
