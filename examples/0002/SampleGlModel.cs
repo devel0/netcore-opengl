@@ -28,14 +28,12 @@ namespace SearchAThing.SciExamples
         VertexArrayObject<GLVertexWithNormal> Vao;
 
         //Vertex shaders are run on each vertex.
-        // note: replace "0002" with "<csprojname>"
         string VertexShaderSource =>
-            "0002.shaders.shader.vert".GetEmbeddedFileContent<SampleGlControl>();
+            UtilToolkit.GetEmbeddedResourcesList<SampleGlControl>().First(w => w.Contains("shader.vert")).GetEmbeddedFileContent<SampleGlControl>();
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
-        // note: replace "0002" with "<csprojname>"
         string FragmentShaderSource =>
-            "0002.shaders.shader.frag".GetEmbeddedFileContent<SampleGlControl>();
+            UtilToolkit.GetEmbeddedResourcesList<SampleGlControl>().First(w => w.Contains("shader.frag")).GetEmbeddedFileContent<SampleGlControl>();
 
         uint Shader;
         uint vertexShader;
@@ -54,7 +52,7 @@ namespace SearchAThing.SciExamples
         int uAmbLocation;
         int uAlphaLocation;
         int uObjColLocation;
-        int uLightPosLocation;        
+        int uLightPosLocation;
 
         const double TOL = 1e-3;
 
@@ -455,7 +453,7 @@ namespace SearchAThing.SciExamples
                 uAmbLocation = SafeGetUniformLocation(Shader, "uAmb");
                 uAlphaLocation = SafeGetUniformLocation(Shader, "uAlpha");
                 uObjColLocation = SafeGetUniformLocation(Shader, "uObjCol");
-                uLightPosLocation = SafeGetUniformLocation(Shader, "uLightPos");                
+                uLightPosLocation = SafeGetUniformLocation(Shader, "uLightPos");
             }
 
             // Init Buffers
