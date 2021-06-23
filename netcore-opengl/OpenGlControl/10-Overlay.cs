@@ -34,11 +34,11 @@ namespace SearchAThing
                 {
                     var vtxmgr = new VertexManager(1e-6);
 
-                    vtxmgr.AddCircle(orbitGeometry.Main.ToCircle3D(1e-6), colfn, pw, 360, this);
-                    vtxmgr.AddCircle(orbitGeometry.Top.ToCircle3D(1e-6), colfn, pw, 360, this);
-                    vtxmgr.AddCircle(orbitGeometry.Bottom.ToCircle3D(1e-6), colfn, pw, 360, this);
-                    vtxmgr.AddCircle(orbitGeometry.Left.ToCircle3D(1e-6), colfn, pw, 360, this);
-                    vtxmgr.AddCircle(orbitGeometry.Right.ToCircle3D(1e-6), colfn, pw, 360, this);
+                    vtxmgr.AddCircle(orbitGeometry.Main.ToCircle3D(1e-6), colfn, pw, 16, this);
+                    vtxmgr.AddCircle(orbitGeometry.Top.ToCircle3D(1e-6), colfn, pw, 16, this);
+                    vtxmgr.AddCircle(orbitGeometry.Bottom.ToCircle3D(1e-6), colfn, pw, 16, this);
+                    vtxmgr.AddCircle(orbitGeometry.Left.ToCircle3D(1e-6), colfn, pw, 16, this);
+                    vtxmgr.AddCircle(orbitGeometry.Right.ToCircle3D(1e-6), colfn, pw, 16, this);
 
                     if (OrbitShowCross)
                     {
