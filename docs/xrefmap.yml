@@ -746,6 +746,32 @@ references:
   commentId: F:SearchAThing.OpenGlControl.NearProperty
   fullName: SearchAThing.OpenGlControl.NearProperty
   nameWithType: OpenGlControl.NearProperty
+- uid: SearchAThing.OpenGlControl.NotifyKeyDown(KeyEventArgs)
+  name: NotifyKeyDown(KeyEventArgs)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_NotifyKeyDown_KeyEventArgs_
+  commentId: M:SearchAThing.OpenGlControl.NotifyKeyDown(KeyEventArgs)
+  fullName: SearchAThing.OpenGlControl.NotifyKeyDown(KeyEventArgs)
+  nameWithType: OpenGlControl.NotifyKeyDown(KeyEventArgs)
+- uid: SearchAThing.OpenGlControl.NotifyKeyDown*
+  name: NotifyKeyDown
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_NotifyKeyDown_
+  commentId: Overload:SearchAThing.OpenGlControl.NotifyKeyDown
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.NotifyKeyDown
+  nameWithType: OpenGlControl.NotifyKeyDown
+- uid: SearchAThing.OpenGlControl.NotifyKeyUp(KeyEventArgs)
+  name: NotifyKeyUp(KeyEventArgs)
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_NotifyKeyUp_KeyEventArgs_
+  commentId: M:SearchAThing.OpenGlControl.NotifyKeyUp(KeyEventArgs)
+  fullName: SearchAThing.OpenGlControl.NotifyKeyUp(KeyEventArgs)
+  nameWithType: OpenGlControl.NotifyKeyUp(KeyEventArgs)
+- uid: SearchAThing.OpenGlControl.NotifyKeyUp*
+  name: NotifyKeyUp
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_NotifyKeyUp_
+  commentId: Overload:SearchAThing.OpenGlControl.NotifyKeyUp
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.NotifyKeyUp
+  nameWithType: OpenGlControl.NotifyKeyUp
 - uid: SearchAThing.OpenGlControl.OnDetachModel
   name: OnDetachModel()
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OnDetachModel
@@ -811,6 +837,25 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlControl.orbitPressPosition
   nameWithType: OpenGlControl.orbitPressPosition
+- uid: SearchAThing.OpenGlControl.OrbitSegmentPerCircle
+  name: OrbitSegmentPerCircle
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrbitSegmentPerCircle
+  commentId: P:SearchAThing.OpenGlControl.OrbitSegmentPerCircle
+  fullName: SearchAThing.OpenGlControl.OrbitSegmentPerCircle
+  nameWithType: OpenGlControl.OrbitSegmentPerCircle
+- uid: SearchAThing.OpenGlControl.OrbitSegmentPerCircle*
+  name: OrbitSegmentPerCircle
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrbitSegmentPerCircle_
+  commentId: Overload:SearchAThing.OpenGlControl.OrbitSegmentPerCircle
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlControl.OrbitSegmentPerCircle
+  nameWithType: OpenGlControl.OrbitSegmentPerCircle
+- uid: SearchAThing.OpenGlControl.OrbitSegmentPerCircleProperty
+  name: OrbitSegmentPerCircleProperty
+  href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrbitSegmentPerCircleProperty
+  commentId: F:SearchAThing.OpenGlControl.OrbitSegmentPerCircleProperty
+  fullName: SearchAThing.OpenGlControl.OrbitSegmentPerCircleProperty
+  nameWithType: OpenGlControl.OrbitSegmentPerCircleProperty
 - uid: SearchAThing.OpenGlControl.OrbitShowCross
   name: OrbitShowCross
   href: api/SearchAThing.OpenGlControl.html#SearchAThing_OpenGlControl_OrbitShowCross
@@ -1259,15 +1304,15 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlExt.AddToVertexManager
   nameWithType: OpenGlExt.AddToVertexManager
-- uid: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[],System.UInt32[],netDxf.DxfDocument,System.Nullable{Vector4})
-  name: ExportDxf(GLVertexWithNormal[], UInt32[], netDxf.DxfDocument, Nullable<Vector4>)
-  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ExportDxf_SearchAThing_GLVertexWithNormal___System_UInt32___netDxf_DxfDocument_System_Nullable_Vector4__
-  commentId: M:SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[],System.UInt32[],netDxf.DxfDocument,System.Nullable{Vector4})
-  name.vb: ExportDxf(GLVertexWithNormal(), UInt32(), netDxf.DxfDocument, Nullable(Of Vector4))
-  fullName: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[], System.UInt32[], netDxf.DxfDocument, System.Nullable<Vector4>)
-  fullName.vb: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal(), System.UInt32(), netDxf.DxfDocument, System.Nullable(Of Vector4))
-  nameWithType: OpenGlExt.ExportDxf(GLVertexWithNormal[], UInt32[], netDxf.DxfDocument, Nullable<Vector4>)
-  nameWithType.vb: OpenGlExt.ExportDxf(GLVertexWithNormal(), UInt32(), netDxf.DxfDocument, Nullable(Of Vector4))
+- uid: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[],System.UInt32[],netDxf.DxfDocument,System.Nullable{Vector4},System.Nullable{Matrix4x4})
+  name: ExportDxf(GLVertexWithNormal[], UInt32[], netDxf.DxfDocument, Nullable<Vector4>, Nullable<Matrix4x4>)
+  href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ExportDxf_SearchAThing_GLVertexWithNormal___System_UInt32___netDxf_DxfDocument_System_Nullable_Vector4__System_Nullable_Matrix4x4__
+  commentId: M:SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[],System.UInt32[],netDxf.DxfDocument,System.Nullable{Vector4},System.Nullable{Matrix4x4})
+  name.vb: ExportDxf(GLVertexWithNormal(), UInt32(), netDxf.DxfDocument, Nullable(Of Vector4), Nullable(Of Matrix4x4))
+  fullName: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal[], System.UInt32[], netDxf.DxfDocument, System.Nullable<Vector4>, System.Nullable<Matrix4x4>)
+  fullName.vb: SearchAThing.OpenGlExt.ExportDxf(SearchAThing.GLVertexWithNormal(), System.UInt32(), netDxf.DxfDocument, System.Nullable(Of Vector4), System.Nullable(Of Matrix4x4))
+  nameWithType: OpenGlExt.ExportDxf(GLVertexWithNormal[], UInt32[], netDxf.DxfDocument, Nullable<Vector4>, Nullable<Matrix4x4>)
+  nameWithType.vb: OpenGlExt.ExportDxf(GLVertexWithNormal(), UInt32(), netDxf.DxfDocument, Nullable(Of Vector4), Nullable(Of Matrix4x4))
 - uid: SearchAThing.OpenGlExt.ExportDxf*
   name: ExportDxf
   href: api/SearchAThing.OpenGlExt.html#SearchAThing_OpenGlExt_ExportDxf_
@@ -1419,6 +1464,19 @@ references:
   isSpec: "True"
   fullName: SearchAThing.OpenGlModelBase.GeomTol
   nameWithType: OpenGlModelBase.GeomTol
+- uid: SearchAThing.OpenGlModelBase.GetAllControls
+  name: GetAllControls()
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_GetAllControls
+  commentId: M:SearchAThing.OpenGlModelBase.GetAllControls
+  fullName: SearchAThing.OpenGlModelBase.GetAllControls()
+  nameWithType: OpenGlModelBase.GetAllControls()
+- uid: SearchAThing.OpenGlModelBase.GetAllControls*
+  name: GetAllControls
+  href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_GetAllControls_
+  commentId: Overload:SearchAThing.OpenGlModelBase.GetAllControls
+  isSpec: "True"
+  fullName: SearchAThing.OpenGlModelBase.GetAllControls
+  nameWithType: OpenGlModelBase.GetAllControls
 - uid: SearchAThing.OpenGlModelBase.GL
   name: GL
   href: api/SearchAThing.OpenGlModelBase.html#SearchAThing_OpenGlModelBase_GL
@@ -2091,6 +2149,15 @@ references:
   isSpec: "True"
   fullName: SearchAThing.VertexManager.AddCircle
   nameWithType: VertexManager.AddCircle
+- uid: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D,System.Double,SearchAThing.Vector3D,SearchAThing.Vector3D,Func{Vector4})
+  name: AddCuboid(CoordinateSystem3D, Double, Vector3D, Vector3D, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCuboid_SearchAThing_CoordinateSystem3D_System_Double_SearchAThing_Vector3D_SearchAThing_Vector3D_Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D,System.Double,SearchAThing.Vector3D,SearchAThing.Vector3D,Func{Vector4})
+  name.vb: AddCuboid(CoordinateSystem3D, Double, Vector3D, Vector3D, Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D, System.Double, SearchAThing.Vector3D, SearchAThing.Vector3D, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D, System.Double, SearchAThing.Vector3D, SearchAThing.Vector3D, Func(Of Vector4))
+  nameWithType: VertexManager.AddCuboid(CoordinateSystem3D, Double, Vector3D, Vector3D, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddCuboid(CoordinateSystem3D, Double, Vector3D, Vector3D, Func(Of Vector4))
 - uid: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})
   name: AddCuboid(CoordinateSystem3D, Double, Double, Double, Func<Vector4>)
   href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCuboid_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__
@@ -2100,6 +2167,15 @@ references:
   fullName.vb: SearchAThing.VertexManager.AddCuboid(SearchAThing.CoordinateSystem3D, System.Double, System.Double, System.Double, Func(Of Vector4))
   nameWithType: VertexManager.AddCuboid(CoordinateSystem3D, Double, Double, Double, Func<Vector4>)
   nameWithType.vb: VertexManager.AddCuboid(CoordinateSystem3D, Double, Double, Double, Func(Of Vector4))
+- uid: SearchAThing.VertexManager.AddCuboid(System.String,SearchAThing.CoordinateSystem3D,System.Double,SearchAThing.Vector3D,SearchAThing.Vector3D,Func{Vector4})
+  name: AddCuboid(String, CoordinateSystem3D, Double, Vector3D, Vector3D, Func<Vector4>)
+  href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCuboid_System_String_SearchAThing_CoordinateSystem3D_System_Double_SearchAThing_Vector3D_SearchAThing_Vector3D_Func_Vector4__
+  commentId: M:SearchAThing.VertexManager.AddCuboid(System.String,SearchAThing.CoordinateSystem3D,System.Double,SearchAThing.Vector3D,SearchAThing.Vector3D,Func{Vector4})
+  name.vb: AddCuboid(String, CoordinateSystem3D, Double, Vector3D, Vector3D, Func(Of Vector4))
+  fullName: SearchAThing.VertexManager.AddCuboid(System.String, SearchAThing.CoordinateSystem3D, System.Double, SearchAThing.Vector3D, SearchAThing.Vector3D, Func<Vector4>)
+  fullName.vb: SearchAThing.VertexManager.AddCuboid(System.String, SearchAThing.CoordinateSystem3D, System.Double, SearchAThing.Vector3D, SearchAThing.Vector3D, Func(Of Vector4))
+  nameWithType: VertexManager.AddCuboid(String, CoordinateSystem3D, Double, Vector3D, Vector3D, Func<Vector4>)
+  nameWithType.vb: VertexManager.AddCuboid(String, CoordinateSystem3D, Double, Vector3D, Vector3D, Func(Of Vector4))
 - uid: SearchAThing.VertexManager.AddCuboid(System.String,SearchAThing.CoordinateSystem3D,System.Double,System.Double,System.Double,Func{Vector4})
   name: AddCuboid(String, CoordinateSystem3D, Double, Double, Double, Func<Vector4>)
   href: api/SearchAThing.VertexManager.html#SearchAThing_VertexManager_AddCuboid_System_String_SearchAThing_CoordinateSystem3D_System_Double_System_Double_System_Double_Func_Vector4__
