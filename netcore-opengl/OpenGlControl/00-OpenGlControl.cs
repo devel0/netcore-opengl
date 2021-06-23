@@ -633,18 +633,24 @@ namespace SearchAThing
             Model.FocusedControl = ctl;
         }
 
+        public void NotifyKeyDown(KeyEventArgs e)
+        {            
+            ShiftKeyPressed = e.Key == Key.LeftShift || e.Key == Key.RightShift;            
+        }
+
         void ControlKeyDown(object sender, KeyEventArgs e)
         {
-            var ctl = sender as OpenGlControl;
+            NotifyKeyDown(e);
+        }
 
-            ctl.ShiftKeyPressed = e.Key == Key.LeftShift || e.Key == Key.RightShift;
+        public void NotifyKeyUp(KeyEventArgs e)
+        {
+            ShiftKeyPressed = false;
         }
 
         void ControlKeyUp(object sender, KeyEventArgs e)
         {
-            var ctl = sender as OpenGlControl;
-
-            ShiftKeyPressed = false;
+            NotifyKeyUp(e);
         }
 
         protected virtual void OnModelAttached() { }

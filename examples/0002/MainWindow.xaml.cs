@@ -9,6 +9,7 @@ using static SearchAThing.OpenGlToolkit;
 using System.Reactive.Subjects;
 using Avalonia.Data;
 using Avalonia.Media;
+using System.Linq;
 
 namespace SearchAThing.SciExamples
 {
@@ -83,6 +84,24 @@ namespace SearchAThing.SciExamples
                 //ctl.RowDefinitions = new RowDefinitions();
                 ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Star));
                 ctl.RowDefinitions.Add(new RowDefinition(1, GridUnitType.Auto));
+                ctl.KeyDown += (a, b) =>
+                {
+                    var q = ctl.Children.FirstOrDefault(w => w is SampleGlControl);
+                    if (q != null)
+                    {
+                        (q as SampleGlControl).NotifyKeyDown(b);
+                    }
+
+                };
+                ctl.KeyUp += (a, b) =>
+                {
+                    var q = ctl.Children.FirstOrDefault(w => w is SampleGlControl);
+                    if (q != null)
+                    {
+                        (q as SampleGlControl).NotifyKeyUp(b);
+                    }
+
+                };
 
                 var glctl = new SampleGlControl((x) =>
                 {
@@ -134,7 +153,7 @@ namespace SearchAThing.SciExamples
         {
             var ctl = Model.FocusedControl as SampleGlControl;
             ctl.Reset();
-        }        
+        }
 
         private void click_exportDxf(object sender, RoutedEventArgs e)
         {
