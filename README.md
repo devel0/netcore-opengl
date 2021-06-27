@@ -4,6 +4,9 @@
 
 .NET core opengl
 
+- [API Documentation](https://devel0.github.io/netcore-opengl/api/SearchAThing.html)
+- [Changelog](https://github.com/devel0/netcore-opengl/commits/master)
+
 <hr/>
 
 <!-- TOC -->
