@@ -185,6 +185,22 @@ namespace SearchAThing
 
         /// <summary>
         /// creates triangles for a fat line
+        /// </summary>        
+        /// <param name="line">line from,to</param>
+        /// <param name="color">color ( or null ) to associate this figure name</param>
+        /// <param name="w">thickness of line</param>
+        /// <returns>indexes of triangles that represent a flat line described as a parallelepiped</returns>
+        public (string figureName, IReadOnlyList<uint> idxs) AddSquaredLine(Line3D line,
+           Func<Vector4> color = null,
+           double w = 1.0)
+        {
+            var figureName = Guid.NewGuid().ToString();
+            var idxs = AddSquaredLine(figureName, line, color, w);
+            return (figureName, idxs);
+        }
+
+        /// <summary>
+        /// creates triangles for a fat line
         /// </summary>
         /// <param name="figureName">name of vtx mgr figure for this fat line</param>
         /// <param name="line">line from,to</param>
