@@ -1,7 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Media;
 using Silk.NET.OpenGL;
-using Silk.NET.Windowing.Common;
+//using Silk.NET.Windowing.Common;
 using Avalonia;
 using Avalonia.Media.Imaging;
 using Avalonia.Visuals.Media.Imaging;
@@ -13,6 +13,7 @@ using System.Numerics;
 using System.Linq;
 using static System.Math;
 using Avalonia.Input;
+using Silk.NET.Windowing;
 
 namespace SearchAThing
 {

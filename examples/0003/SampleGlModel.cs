@@ -1,7 +1,7 @@
 using Avalonia;
 using Avalonia.Media;
 using Silk.NET.OpenGL;
-using Silk.NET.Windowing.Common;
+//using Silk.NET.Windowing.Common;
 using SearchAThing;
 using System.Runtime.InteropServices;
 using QuantumConcepts.Formats.StereoLithography;
