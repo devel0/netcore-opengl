@@ -29,6 +29,11 @@
 
 ## Quickstart
 
+- prerequisite
+```sh
+apt install libglfw3
+```
+
 - [nuget package](https://www.nuget.org/packages/netcore-opengl/)
 
 - [extension methods](https://devel0.github.io/netcore-opengl/api/SearchAThing.OpenGlExt.html)
