@@ -12,6 +12,7 @@
 <!-- TOC -->
 * [Roadmap](#roadmap)
 * [Quickstart](#quickstart)
+* [build](#build)
 * [Keynotes](#keynotes)
 * [Examples](#examples)
     - [0001](#0001)
