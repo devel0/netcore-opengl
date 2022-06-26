@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['ondeinitialize_230',['OnDeinitialize',['../class_search_a_thing_1_1_open_gl_model_base.html#aa66d82b6a31cef26f035db1ffc2ab4bf',1,'SearchAThing::OpenGlModelBase']]],
-  ['ondetachmodel_231',['OnDetachModel',['../class_search_a_thing_1_1_open_gl_control.html#abb124e7e0f6ebe9ff93a5954671fbb78',1,'SearchAThing::OpenGlControl']]],
-  ['oninitialized_232',['OnInitialized',['../class_search_a_thing_1_1_open_gl_model_base.html#a02fa1812d4d2fad938f00644c637cfcf',1,'SearchAThing::OpenGlModelBase']]],
-  ['onmodelattached_233',['OnModelAttached',['../class_search_a_thing_1_1_open_gl_control.html#a7e5151f7c3b244affc324ac79dd91ce0',1,'SearchAThing::OpenGlControl']]],
-  ['openglcontrol_234',['OpenGlControl',['../class_search_a_thing_1_1_open_gl_control.html#a064295f7945a7c7248597a9e4b0f986c',1,'SearchAThing::OpenGlControl']]],
-  ['openglmodelbase_235',['OpenGlModelBase',['../class_search_a_thing_1_1_open_gl_model_base.html#a42d40fab10fc79c63ec4d24c60c663c8',1,'SearchAThing::OpenGlModelBase']]],
-  ['orbitgeometry_236',['OrbitGeometry',['../class_search_a_thing_1_1_orbit_geometry.html#a96d410616159ee650ab98c24b1e20362',1,'SearchAThing::OrbitGeometry']]]
+  ['rebuildprojectionmatrix_237',['RebuildProjectionMatrix',['../class_search_a_thing_1_1_open_gl_control.html#ad8e61877b5bb15df819fd123766a3830',1,'SearchAThing::OpenGlControl']]],
+  ['recompute_238',['Recompute',['../class_search_a_thing_1_1_orbit_geometry.html#a5e7dcba3fc3582474696ed57d264c039',1,'SearchAThing::OrbitGeometry']]],
+  ['render_239',['Render',['../class_search_a_thing_1_1_open_gl_control.html#a660b7ab3650f9f2a587e7098511505f5',1,'SearchAThing.OpenGlControl.Render()'],['../class_search_a_thing_1_1_open_gl_model_base.html#ab9dd37e7bbe711c24cda616ea9307122',1,'SearchAThing.OpenGlModelBase.Render(OpenGlControl ctl, DrawingContext context, PixelSize ps)']]],
+  ['renderclear_240',['RenderClear',['../class_search_a_thing_1_1_open_gl_model_base.html#a0d26deb75de6b2e93c98c0300522983d',1,'SearchAThing::OpenGlModelBase']]],
+  ['resetrotation_241',['ResetRotation',['../class_search_a_thing_1_1_open_gl_control.html#a179899312144bafe7e21a9d469c0afd4',1,'SearchAThing::OpenGlControl']]],
+  ['rndcolor_242',['RndColor',['../class_search_a_thing_1_1_open_gl_toolkit.html#acc22bcab420be374838269c449493fb9',1,'SearchAThing::OpenGlToolkit']]]
 ];

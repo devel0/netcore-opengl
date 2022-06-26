@@ -111,17 +111,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a43a5f12dfa73a649b8364b4e0c53c361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e2d745cdb7a7b983f861ed6a9a541a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_gl_model_base.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a> ()</td></tr>
 <tr class="separator:a6e2d745cdb7a7b983f861ed6a9a541a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae62bfed0b0d1bb6f92a180dfd5895937"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_gl_model_base.html#ae62bfed0b0d1bb6f92a180dfd5895937">ToNDC</a> (<a class="el" href="class_search_a_thing_1_1_open_gl_control.html">OpenGlControl</a> ctl, Vector2 pt)</td></tr>
+<tr class="memitem:ae62bfed0b0d1bb6f92a180dfd5895937"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_gl_model_base.html#ae62bfed0b0d1bb6f92a180dfd5895937">ToNDC</a> (<a class="el" href="class_search_a_thing_1_1_open_gl_control.html">OpenGlControl</a> ctl, Vector2 <a class="el" href="class_search_a_thing_1_1_open_gl_model_base.html#ad7df1842907aba5802b533143fb9f24f">pt</a>)</td></tr>
 <tr class="memdesc:ae62bfed0b0d1bb6f92a180dfd5895937"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert given x,y coord ( origin left-bottom ) to normalized device coord  <a href="class_search_a_thing_1_1_open_gl_model_base.html#ae62bfed0b0d1bb6f92a180dfd5895937">More...</a><br /></td></tr>
 <tr class="separator:ae62bfed0b0d1bb6f92a180dfd5895937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a155967d86ee99b7266fbda3740737443"><td class="memItemLeft" align="right" valign="top">Vector3D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_gl_model_base.html#a155967d86ee99b7266fbda3740737443">MousePosToWorldPos</a> (float mouse_x, float mouse_y)</td></tr>
-<tr class="memdesc:a155967d86ee99b7266fbda3740737443"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve 3d world coord by given mouse xy TODO: orthographic mode  <a href="class_search_a_thing_1_1_open_gl_model_base.html#a155967d86ee99b7266fbda3740737443">More...</a><br /></td></tr>
-<tr class="separator:a155967d86ee99b7266fbda3740737443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab18b0e2042da1acd614e4647f18f3cce"><td class="memItemLeft" align="right" valign="top">GL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_gl_model_base.html#ab18b0e2042da1acd614e4647f18f3cce">GL</a></td></tr>
 <tr class="separator:ab18b0e2042da1acd614e4647f18f3cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7df1842907aba5802b533143fb9f24f"><td class="memItemLeft" align="right" valign="top">Vector3D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_gl_model_base.html#ad7df1842907aba5802b533143fb9f24f">pt</a></td></tr>
+<tr class="memdesc:ad7df1842907aba5802b533143fb9f24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrieve 3d world coord by given mouse xy and ray to make hover test  <a href="class_search_a_thing_1_1_open_gl_model_base.html#ad7df1842907aba5802b533143fb9f24f">More...</a><br /></td></tr>
+<tr class="separator:ad7df1842907aba5802b533143fb9f24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -264,36 +264,6 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>force invalidate visual of current focused control; </p>
-
-</div>
-</div>
-<a id="a155967d86ee99b7266fbda3740737443"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a155967d86ee99b7266fbda3740737443">&#9670;&nbsp;</a></span>MousePosToWorldPos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3D MousePosToWorldPos </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>mouse_x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>mouse_y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>retrieve 3d world coord by given mouse xy TODO: orthographic mode </p>
 
 </div>
 </div>
@@ -644,6 +614,22 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7df1842907aba5802b533143fb9f24f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7df1842907aba5802b533143fb9f24f">&#9670;&nbsp;</a></span>pt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3D pt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>retrieve 3d world coord by given mouse xy and ray to make hover test </p>
 
 </div>
 </div>
