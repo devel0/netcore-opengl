@@ -4,7 +4,7 @@
 
 .NET core opengl
 
-- [API Documentation](https://devel0.github.io/netcore-opengl/api/SearchAThing.html)
+- [API Documentation](https://devel0.github.io/netcore-opengl/html/annotated.html)
 - [Changelog](https://github.com/devel0/netcore-opengl/commits/master)
 
 <hr/>
@@ -36,7 +36,7 @@ apt install libglfw3
 
 - [nuget package](https://www.nuget.org/packages/netcore-opengl/)
 
-- [extension methods](https://devel0.github.io/netcore-opengl/api/SearchAThing.OpenGlExt.html)
+- [extension methods](https://devel0.github.io/netcore-opengl/html/class_search_a_thing_1_1_open_gl_ext.html)
 
 ```csharp
 using SearchAThing;
@@ -48,7 +48,7 @@ using SearchAThing;
 xmlns:opengl="clr-namespace:SearchAThing;assembly=netcore-opengl"
 ```
 
-- [toolkit methods](https://devel0.github.io/netcore-opengl/api/SearchAThing.OpenGlToolkit.html)
+- [toolkit methods](https://devel0.github.io/netcore-opengl/html/class_search_a_thing_1_1_open_gl_toolkit.html)
 
 ```cs
 using static SearchAThing.OpenGlToolkit;
