@@ -4,7 +4,7 @@
     <LangVersion>10</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>netcore-opengl</PackageId>
-    <PackageVersion>0.7.0</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <Title>net core opengl</Title>
     <Description></Description>    
     <Authors>Lorenzo Delana</Authors>
