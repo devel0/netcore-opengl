@@ -24,10 +24,6 @@
 
 <hr/>
 
-## Roadmap
-
-- ray world to compute 3d wcs coord over mouse xy
-
 ## Quickstart
 
 - prerequisite
@@ -76,17 +72,19 @@ cd netcore-opengl
 dotnet build
 ```
 
-:point_right: To make dependency netcore-util debuggable comment `PackageReference` and uncomment `ProjectReference` for corresponding netcore-util/netcore-sci reference from [csproj](netcore-opengl/netcore-opengl.csproj)
+:point_right: To make dependency netcore-util/netcore-sci debuggable comment `PackageReference` and uncomment `ProjectReference` for corresponding reference from [csproj](netcore-opengl/netcore-opengl.csproj)
 
 ## Keynotes
 
-- create a derived class from [OpenGlModelBase](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/SampleGlModel.cs#L9):
+- create a derived class from [OpenGlModelBase][1]:
     - *OnInitialized* can be used to init VertexArray and VertexBuffer objects for static data; compile shaders; retrieve attrib and uniform locations; define attrib pointers
     - *Render* can be used to draw frame
 - create a derived class from [OpenGlControl](https://github.com/devel0/netcore-opengl/blob/7219639f91567ff0a1ba8bb5a0559b3d01405c23/examples/0001/SampleGlControl.cs#L4) or use directly in xaml if not need to specialize
 - glue [Model](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/MainWindow.xaml.cs#L34) to the [control](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/MainWindow.xaml#L28)
 - [draw something](https://github.com/devel0/netcore-opengl/blob/0c8bbfa03c95070ce1bb24f7fed528966e1ae371/examples/0003/SampleGlModel.cs#L186-L275) using [vertex manager](https://github.com/devel0/netcore-opengl/blob/0fae8b7cebae277283e8d7e48ab2c9a02e5f517d/netcore-opengl/VertexManager/VertexManager.cs#L17) ; it will rendered as [coloured triangles](https://github.com/devel0/netcore-opengl/blob/0c8bbfa03c95070ce1bb24f7fed528966e1ae371/examples/0003/SampleGlModel.cs#L153)
 - set Debug in [OpenGlModelOptions](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/MainWindow.xaml.cs#L36) to get notified on console about GL error and [break debugger](https://github.com/devel0/netcore-opengl/blob/7219639f91567ff0a1ba8bb5a0559b3d01405c23/netcore-opengl/OpenGlModelBase.cs#L193) in DEBUG mode
+
+- [1](https://github.com/devel0/netcore-opengl/blob/7d54fd507c60c20e1a95183f071a8e4c04f19921/examples/0001/SampleGlModel.cs#L10)
 
 ## Examples
 
