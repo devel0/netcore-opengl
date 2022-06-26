@@ -33,7 +33,7 @@ namespace SearchAThing.SciExamples
 
         //Fragment shaders are run on each fragment/pixel of the geometry.
         string FragmentShaderSource =>
-            UtilToolkit.GetEmbeddedResourcesList<SampleGlControl>().First(w => w.Contains("shader.frag")).GetEmbeddedFileContent<SampleGlControl>();        
+            UtilToolkit.GetEmbeddedResourcesList<SampleGlControl>().First(w => w.Contains("shader.frag")).GetEmbeddedFileContent<SampleGlControl>();
 
         uint Shader;
         uint vertexShader;
@@ -262,11 +262,54 @@ namespace SearchAThing.SciExamples
                                     var L = xps.First().ip.LineTo(xps.Skip(1).First().ip);
                                     vtxMgrTmp.AddLine(L, () => k.color.ToVector4(), 0.2);
 
-                                    
+
                                 }
                             }
 
                             vtxMgrTmp.AddLine(l, () => Colors.Yellow.ToVector4(), 0.2);
+                        }
+
+                        // draw widgets
+                        {
+                            double x = 0;
+                            double y = 0;
+                            double z = 0;
+
+                            var step = 5;
+                            var cubsize = new Vector3D(1, 1, 1);
+
+                            while (x <= 10)
+                            {
+                                y = 0;
+                                while (y <= 10)
+                                {
+                                    z = 0;
+                                    while (z <= 10)
+                                    {
+                                        var matches =
+                                            l.To.X >= x - cubsize.X / 2 &&
+                                            l.To.X <= x + cubsize.X / 2 &&
+
+                                            l.To.Y >= y - cubsize.Y / 2 &&
+                                            l.To.Y <= y + cubsize.Y / 2 &&
+
+                                            l.To.Z >= z - cubsize.Z / 2 &&
+                                            l.To.Z <= z + cubsize.Z / 2;
+
+                                        // if (matches)
+                                        //     System.Console.WriteLine("maches");
+
+                                        vtxMgrTmp.AddCuboid(CoordinateSystem3D.WCS.Move(new Vector3D(x, y, z)),
+                                            cubsize.X, cubsize.Y, cubsize.Z,
+                                            () => matches ? Colors.Yellow.ToVector4() : Colors.Cyan.ToVector4(0.1f));
+
+                                        z += step;
+                                    }
+
+                                    y += step;
+                                }
+                                x += step;
+                            }
                         }
                     }
                 }
