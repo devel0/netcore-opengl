@@ -27,12 +27,11 @@ namespace SearchAThing
         }
 
         /// <summary>
-        /// retrieve 3d world coord by given mouse xy
-        /// TODO: orthographic mode
+        /// retrieve 3d world coord by given mouse xy and ray to make hover test
         /// </summary>
-        public Vector3D MousePosToWorldPos(float mouse_x, float mouse_y)
+        public (Vector3D pt, Line3D? ray) MousePosToWorldPos(float mouse_x, float mouse_y)
         {
-            if (BBox.IsEmpty) return Vector3D.Zero;
+            if (BBox.IsEmpty) return (Vector3D.Zero, ray: null);
 
             var ctl = this.FocusedControl;
 
@@ -71,7 +70,7 @@ namespace SearchAThing
             var L = new Line3D(cami, ray.Normalized(), Line3DConstructMode.PointAndVector);
             var ccs = ctl.CameraCS;
             if (((Vector3D)ctl.CameraTarget).EqualsTol(GeomTol, ctl.CameraPos))
-                return Vector3D.Zero;
+                return (Vector3D.Zero, ray: null);
 
             var csCameraAtTarget = ccs.Move((Vector3D)ctl.CameraTarget - ccs.Origin);
             var cs1 = csCameraAtTarget.Transform(mm.Inverse());
@@ -83,7 +82,7 @@ namespace SearchAThing
 
             res = ip;
 
-            return res;
+            return (res, ray: L);
         }
 
     }

@@ -63,6 +63,20 @@ code .
 
 hit F5 to start example ( change by edit [.vscode/launch.json](.vscode/launch.json) )
 
+## build
+
+```sh
+mkdir ~/opensource
+git clone https://github.com/devel0/netcore-util.git
+git clone https://github.com/devel0/netcore-sci.git
+git clone https://github.com/devel0/netcore-opengl.git
+
+cd netcore-opengl
+dotnet build
+```
+
+:point_right: To make dependency netcore-util debuggable comment `PackageReference` and uncomment `ProjectReference` for corresponding netcore-util/netcore-sci reference from [csproj](netcore-opengl/netcore-opengl.csproj)
+
 ## Keynotes
 
 - create a derived class from [OpenGlModelBase](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/SampleGlModel.cs#L9):
@@ -95,9 +109,11 @@ STL map
 
 #### 0003
 
-An attempt to examine how [MousePosToWorldPos](https://github.com/devel0/netcore-opengl/blob/52e9fab069918a0a6c56650b8c7c99c719e3bc59/netcore-opengl/OpenGlModel/30-Calc.cs#L33) should implemented ( actually not yet done ):
+Show how to highlight mouse hovered 3d elements even in perspective mode
 
 ![](data/img/example-0003.gif)
+
+<img width=400 src="data/img/example-0003b.gif"/>
 
 #### 0004
 

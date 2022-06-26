@@ -16,11 +16,15 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />    
-    <PackageReference Include="netcore-util" Version="$(NetcoreUtilVersion)" />
+    <!-- <PackageReference Include="netcore-util" Version="$(NetcoreUtilVersion)" /> -->
     <PackageReference Include="netcore-sci" Version="$(NetcoreSciVersion)" />    
     <PackageReference Include="netcore-desktop" Version="$(NetcoreDesktopVersion)" />
     <PackageReference Include="Silk.NET" Version="$(SilkNetVersion)" />    
   </ItemGroup>  
+  <ItemGroup>
+    <!-- <ProjectReference Include="..\..\netcore-util\netcore-util\netcore-util.csproj"/> -->
+    <ProjectReference Include="..\..\netcore-sci\netcore-sci\netcore-sci.csproj"/>
+</ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
     <Compile Update="**\*.xaml.cs">

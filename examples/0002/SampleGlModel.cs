@@ -262,7 +262,8 @@ namespace SearchAThing.SciExamples
                         var mouse_x = (float)ctl.pointerMovedPosition.Position.X;
                         var mouse_y = (float)ctl.pointerMovedPosition.Position.Y;
 
-                        var coord = ctl.Model.MousePosToWorldPos(mouse_x, mouse_y);
+                        var q = ctl.Model.MousePosToWorldPos(mouse_x, mouse_y);
+                        var coord = q.pt;
 
                         System.Console.WriteLine($"coord:{coord}");
                         var l = new Line3D(Vector3D.Zero, coord);

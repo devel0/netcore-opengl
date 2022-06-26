@@ -212,7 +212,9 @@ namespace SearchAThing.SciExamples
                         var mouse_x = (float)ctl.pointerMovedPosition.Position.X;
                         var mouse_y = (float)ctl.pointerMovedPosition.Position.Y;
 
-                        var coord = ctl.Model.MousePosToWorldPos(mouse_x, mouse_y);
+                        var q = ctl.Model.MousePosToWorldPos(mouse_x, mouse_y);
+                        var coord = q.pt;
+                        var ray = q.ray;
 
                         System.Console.WriteLine($"coord:{coord}");
                         var l = new Line3D(Vector3D.Zero, coord);
@@ -225,26 +227,25 @@ namespace SearchAThing.SciExamples
                             });
 
                             var bboxFaces = BBox.Faces(1e-6).ToList();
-                            //vtxMgrTmp.AddFaces("bboxFace0", bboxFaces[5].Points.Tessellate());
 
                             foreach (var k in new[]
                             {
                                 new
                                 {
-                                    line=Line3D.XAxisLine,
-                                    color=Colors.Red
+                                    line = Line3D.XAxisLine,
+                                    color = Colors.Red
                                 },
 
                                 new
                                 {
-                                    line=Line3D.YAxisLine,
-                                    color=Colors.Green
+                                    line = Line3D.YAxisLine,
+                                    color = Colors.Green
                                 },
 
                                 new
                                 {
-                                    line=Line3D.ZAxisLine,
-                                    color=Colors.Blue
+                                    line = Line3D.ZAxisLine,
+                                    color = Colors.Blue
                                 }
                             })
                             {
@@ -261,8 +262,6 @@ namespace SearchAThing.SciExamples
                                 {
                                     var L = xps.First().ip.LineTo(xps.Skip(1).First().ip);
                                     vtxMgrTmp.AddLine(L, () => k.color.ToVector4(), 0.2);
-
-
                                 }
                             }
 
@@ -277,6 +276,8 @@ namespace SearchAThing.SciExamples
 
                             var step = 5;
                             var cubsize = new Vector3D(1, 1, 1);
+                            var widgetColor = Colors.Cyan.ToVector4(0.4f);
+                            var widgetColorHighlight = Colors.Yellow.ToVector4(0.8f);
 
                             while (x <= 10)
                             {
@@ -286,22 +287,14 @@ namespace SearchAThing.SciExamples
                                     z = 0;
                                     while (z <= 10)
                                     {
-                                        var matches =
-                                            l.To.X >= x - cubsize.X / 2 &&
-                                            l.To.X <= x + cubsize.X / 2 &&
+                                        var cuboid = SciToolkit.Cuboid(new Vector3D(x, y, z), cubsize)
+                                            .Select(f => f.ToRegion(TOL)).ToList();
 
-                                            l.To.Y >= y - cubsize.Y / 2 &&
-                                            l.To.Y <= y + cubsize.Y / 2 &&
-
-                                            l.To.Z >= z - cubsize.Z / 2 &&
-                                            l.To.Z <= z + cubsize.Z / 2;
-
-                                        // if (matches)
-                                        //     System.Console.WriteLine("maches");
+                                        var matches = cuboid.Any(w => w.Intersect(TOL, ray) != null);
 
                                         vtxMgrTmp.AddCuboid(CoordinateSystem3D.WCS.Move(new Vector3D(x, y, z)),
                                             cubsize.X, cubsize.Y, cubsize.Z,
-                                            () => matches ? Colors.Yellow.ToVector4() : Colors.Cyan.ToVector4(0.1f));
+                                            () => matches ? widgetColorHighlight : widgetColor);
 
                                         z += step;
                                     }
