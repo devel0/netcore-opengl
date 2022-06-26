@@ -20,7 +20,7 @@
         <AvaloniaVersion>0.10.15</AvaloniaVersion>
         <!-- === netcore-opengl -->
         <NetcoreUtilVersion>3.0.0</NetcoreUtilVersion>
-        <NetcoreSciVersion>3.3.0</NetcoreSciVersion>
+        <NetcoreSciVersion>3.4.0</NetcoreSciVersion>
         <NetcoreDesktopVersion>0.5.0</NetcoreDesktopVersion>
         <SilkNetVersion>2.15.0</SilkNetVersion>
     </PropertyGroup>

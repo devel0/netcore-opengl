@@ -4,7 +4,7 @@
     <LangVersion>10</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>netcore-opengl</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <Title>net core opengl</Title>
     <Description></Description>    
     <Authors>Lorenzo Delana</Authors>
@@ -16,14 +16,14 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />    
-    <!-- <PackageReference Include="netcore-util" Version="$(NetcoreUtilVersion)" /> -->
+    <PackageReference Include="netcore-util" Version="$(NetcoreUtilVersion)" />
     <PackageReference Include="netcore-sci" Version="$(NetcoreSciVersion)" />    
     <PackageReference Include="netcore-desktop" Version="$(NetcoreDesktopVersion)" />
     <PackageReference Include="Silk.NET" Version="$(SilkNetVersion)" />    
   </ItemGroup>  
   <ItemGroup>
     <!-- <ProjectReference Include="..\..\netcore-util\netcore-util\netcore-util.csproj"/> -->
-    <ProjectReference Include="..\..\netcore-sci\netcore-sci\netcore-sci.csproj"/>
+    <!-- <ProjectReference Include="..\..\netcore-sci\netcore-sci\netcore-sci.csproj"/> -->
 </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
