@@ -14,7 +14,7 @@ namespace SearchAThing
         /// convert color to vec4 (r,g,b,a)
         /// </summary>
         /// <param name="color">color</param>
-        /// <param name="alpha">override default color alpha</param>
+        /// <param name="alpha">override default color alpha (0..1f)</param>
         /// <returns>vec4 (r,g,b,a)</returns>
         public static Vector4 ToVector4(this Color color, float? alpha = null) => new Vector4(
             (float)color.R / 255f,
