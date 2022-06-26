@@ -13,7 +13,8 @@ namespace SearchAThing
         public bool Contains(Avalonia.Point pt) =>
             (new Vector2((float)pt.X, (float)pt.Y) - Center).Length() < Radius;
 
-        public Circle3D ToCircle3D(double tolLen) => new Circle3D(tolLen, CoordinateSystem3D.WCS.Move(Center), Radius);
+        public Circle3D ToCircle3D(double tolLen) => 
+            new Circle3D(CoordinateSystem3D.WCS.Move(Center), Radius);
     }
 
     public class OrbitGeometry

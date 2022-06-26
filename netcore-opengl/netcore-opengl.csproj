@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>10</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>netcore-opengl</PackageId>
     <PackageVersion>0.7.0</PackageVersion>
     <Title>net core opengl</Title>
-    <Description></Description>
-    <LangVersion>8</LangVersion>
+    <Description></Description>    
     <Authors>Lorenzo Delana</Authors>
     <PackageTags>netcore opengl silk.net avalonia</PackageTags>
     <PackageProjectUrl>https://github.com/devel0/netcore-opengl#netcore-opengl</PackageProjectUrl>

@@ -36,7 +36,7 @@ namespace SearchAThing
 
                 var cs = new CoordinateSystem3D(p.item, p.next - p.item);
 
-                var c = new Circle3D(Tol, cs, w / 2);
+                var c = new Circle3D(cs, w / 2);
                 var sply = c.InscribedPolygon(Tol, segmentCount).ToList();
                 var eply = sply.Select(w => w + p.next - p.item).ToList();
 
@@ -147,7 +147,7 @@ namespace SearchAThing
 
                 var cs = new CoordinateSystem3D(line.From, line.To - line.From);
 
-                var c = new Circle3D(Tol, cs, w / 2);
+                var c = new Circle3D(cs, w / 2);
                 var sply = c.InscribedPolygon(Tol, segmentCount).ToList();
                 var eply = sply.Select(w => w + line.To - line.From).ToList();
 

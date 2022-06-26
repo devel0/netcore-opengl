@@ -42,7 +42,7 @@ namespace SearchAThing
         {
             Vector3D c = center;
             // pts already include last=first
-            var evtxs = Polygon.EllipseToPolygon2D(c, 2 * rX, 2 * rY, 0.5);
+            var evtxs = SciToolkit.EllipseToPolygon2D(c, 2 * rX, 2 * rY, 0.5);
 
             var idxs = new List<uint>();
             foreach (var v in evtxs.WithPrev())
