@@ -123,11 +123,11 @@ Show how to highlight mouse hovered 3d elements even in perspective mode
 
 #### 0004
 
-[Model animation][1]
+[Model animation][100]
 
 ![](data/img/example-0004.gif)
 
-[1]: https://github.com/devel0/netcore-opengl/blob/5a7fde43360408fad7407f1e1f20c2606d8b683d/examples/0004/SampleGlModel.cs#L204
+[100]: https://github.com/devel0/netcore-opengl/blob/5a7fde43360408fad7407f1e1f20c2606d8b683d/examples/0004/SampleGlModel.cs#L204
 
 ## How this project was built
 
