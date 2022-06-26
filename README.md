@@ -10,7 +10,6 @@
 <hr/>
 
 <!-- TOC -->
-* [Roadmap](#roadmap)
 * [Quickstart](#quickstart)
 * [build](#build)
 * [Keynotes](#keynotes)
@@ -79,12 +78,20 @@ dotnet build
 - create a derived class from [OpenGlModelBase][1]:
     - *OnInitialized* can be used to init VertexArray and VertexBuffer objects for static data; compile shaders; retrieve attrib and uniform locations; define attrib pointers
     - *Render* can be used to draw frame
-- create a derived class from [OpenGlControl](https://github.com/devel0/netcore-opengl/blob/7219639f91567ff0a1ba8bb5a0559b3d01405c23/examples/0001/SampleGlControl.cs#L4) or use directly in xaml if not need to specialize
-- glue [Model](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/MainWindow.xaml.cs#L34) to the [control](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/MainWindow.xaml#L28)
-- [draw something](https://github.com/devel0/netcore-opengl/blob/0c8bbfa03c95070ce1bb24f7fed528966e1ae371/examples/0003/SampleGlModel.cs#L186-L275) using [vertex manager](https://github.com/devel0/netcore-opengl/blob/0fae8b7cebae277283e8d7e48ab2c9a02e5f517d/netcore-opengl/VertexManager/VertexManager.cs#L17) ; it will rendered as [coloured triangles](https://github.com/devel0/netcore-opengl/blob/0c8bbfa03c95070ce1bb24f7fed528966e1ae371/examples/0003/SampleGlModel.cs#L153)
-- set Debug in [OpenGlModelOptions](https://github.com/devel0/netcore-opengl/blob/ceaf31ceed2b60a438432cd59947d36971250c5c/examples/0001/MainWindow.xaml.cs#L36) to get notified on console about GL error and [break debugger](https://github.com/devel0/netcore-opengl/blob/7219639f91567ff0a1ba8bb5a0559b3d01405c23/netcore-opengl/OpenGlModelBase.cs#L193) in DEBUG mode
+- create a derived class from [OpenGlControl][2] or use directly in xaml if not need to specialize
+- glue [Model][3] to the [control][4]
+- [draw something][5] using [vertex manager][6] ; it will rendered as [coloured triangles][7]
+- set Debug in [OpenGlModelOptions][8] to get notified on console about GL error and [break debugger][9] in DEBUG mode
 
-- [1](https://github.com/devel0/netcore-opengl/blob/7d54fd507c60c20e1a95183f071a8e4c04f19921/examples/0001/SampleGlModel.cs#L10)
+[1]: https://github.com/devel0/netcore-opengl/blob/7d54fd507c60c20e1a95183f071a8e4c04f19921/examples/0001/SampleGlModel.cs#L10
+[2]: https://github.com/devel0/netcore-opengl/blob/7d54fd507c60c20e1a95183f071a8e4c04f19921/examples/0001/SampleGlControl.cs#L6
+[3]: https://github.com/devel0/netcore-opengl/blob/7d54fd507c60c20e1a95183f071a8e4c04f19921/examples/0001/MainWindow.xaml.cs#L36
+[4]: https://github.com/devel0/netcore-opengl/blob/7d54fd507c60c20e1a95183f071a8e4c04f19921/examples/0001/MainWindow.xaml#L28
+[5]: https://github.com/devel0/netcore-opengl/blob/6f38e6d78aab1e89507e76265ba2a4a7b0a65610/examples/0003/SampleGlModel.cs#L185-L312
+[6]: https://github.com/devel0/netcore-opengl/blob/0fae8b7cebae277283e8d7e48ab2c9a02e5f517d/netcore-opengl/VertexManager/VertexManager.cs#L17
+[7]: https://github.com/devel0/netcore-opengl/blob/6f38e6d78aab1e89507e76265ba2a4a7b0a65610/examples/0003/SampleGlModel.cs#L153
+[8]: https://github.com/devel0/netcore-opengl/blob/7d54fd507c60c20e1a95183f071a8e4c04f19921/examples/0001/MainWindow.xaml.cs#L38
+[9]: https://github.com/devel0/netcore-opengl/blob/5a7fde43360408fad7407f1e1f20c2606d8b683d/netcore-opengl/OpenGlModel/00-OpenGlModelBase.cs#L299
 
 ## Examples
 
@@ -116,9 +123,11 @@ Show how to highlight mouse hovered 3d elements even in perspective mode
 
 #### 0004
 
-[Model animation](https://github.com/devel0/netcore-opengl/blob/6eb5cc6fc77f8bce337330d551be78aee17bd156/examples/0004/SampleGlModel.cs#L203)
+[Model animation][1]
 
 ![](data/img/example-0004.gif)
+
+[1]: https://github.com/devel0/netcore-opengl/blob/5a7fde43360408fad7407f1e1f20c2606d8b683d/examples/0004/SampleGlModel.cs#L204
 
 ## How this project was built
 
