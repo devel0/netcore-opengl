@@ -3,7 +3,7 @@
 using static example.Toolkit;
 
 // example-0007
-// draw nurb sphere or tube with triangle selection on click
+// draw nurb tube with triangle selection on click
 //
 // - click on a triangle of the mesh to get highlighted over all views
 // - drag splitter handler to resize view

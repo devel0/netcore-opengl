@@ -5,7 +5,7 @@ using static example.Toolkit;
 namespace example.Views;
 
 // example-0008
-// draw nurb sphere or tube with lighting
+// draw nurb tube with lighting
 //
 // - slide light positions
 // - toggle shade with edge using ctrl+w

@@ -171,8 +171,8 @@ Click on the `example code` link to open source code of the example, read top to
 | [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |
 | [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |
 | [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |
-| [0007][es7]         | [![img][e7]][e7]   | Draw nurb sphere or tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.            |
-| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb sphere or tube with lighting tunable from mvvm interface.                                                                                           |
+| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.            |
+| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                           |
 | [0009][es9]         | offscreen render   | Generate two capture of different sizes from the same scene.                                                                                                  |
 | [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |
 | [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |
