@@ -85,7 +85,7 @@
       /><text x="5" font-size="14px" y="18.3594" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >figure type: Triangles	</text
       ><text x="5" font-size="14px" y="34.7188" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >shader: ShdeWidthEdgeShader</text
+      >shader: NormalShader</text
       ><text x="5" font-size="14px" y="51.0781" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >shadowTransform is null</text
       ><text x="5" font-size="14px" y="67.4375" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
@@ -100,7 +100,7 @@
       /><text x="5" font-size="14px" y="18.3594" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >figure type: Triangles</text
       ><text x="5" font-size="14px" y="34.7188" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >shader: ShdeWidthEdgeShader</text
+      >shader: ShadeWidthEdgeShader</text
       ><text x="5" font-size="14px" y="51.0781" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >shadowTransform is null</text
       ><text x="5" font-size="14px" y="67.4375" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
