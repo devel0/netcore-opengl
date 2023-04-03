@@ -13,28 +13,32 @@
 <hr/>
 
 <!-- TOC -->
-* [Introduction](#introduction)
-* [Quickstart](#quickstart)
-* [Examples](#examples)
-  + [List of examples](#list-of-examples)
-  + [Running examples from console](#running-examples-from-console)
-  + [Running examples from vscode](#running-examples-from-vscode)
-* [Development key notes](#development-key-notes)
-  + [Opengl debugging tools](#opengl-debugging-tools)
-  + [Multiplatform](#multiplatform)
-  + [Docker (mesa)](#docker-mesa)
-  + [Software rendered (mesa)](#software-rendered-mesa)
-  + [C# global usings (full)](#c%23-global-usings-full)
-  + [Gestures mouse and keybindings](#gestures-mouse-and-keybindings)
-* [Unit tests](#unit-tests)
-* [How this project was built](#how-this-project-was-built)
-  + [Documentation (github pages)](#documentation-github-pages)
+
+- [Introduction](#introduction)
+- [Quickstart](#quickstart)
+- [Examples](#examples)
+  - [List of examples](#list-of-examples)
+  - [Running examples from console](#running-examples-from-console)
+  - [Running examples from vscode](#running-examples-from-vscode)
+- [Development key notes](#development-key-notes)
+  - [GL Dev inspect tool](#gl-dev-inspect-tool)
+  - [Opengl debugging tools](#opengl-debugging-tools)
+  - [Multiplatform](#multiplatform)
+  - [Docker (mesa)](#docker-mesa)
+  - [Software rendered (mesa)](#software-rendered-mesa)
+  - [C# global usings (full)](#c%23-global-usings-full)
+  - [Gestures mouse and keybindings](#gestures-mouse-and-keybindings)
+- [Unit tests](#unit-tests)
+- [How this project was built](#how-this-project-was-built)
+  - [Documentation (github pages)](#documentation-github-pages)
     - [Build and view locally](#build-and-view-locally)
     - [Build and commit into docs branch](#build-and-commit-into-docs-branch)
-* [References](#references)
+- [References](#references)
 <!-- TOCEND -->
 
 <hr/>
+
+![](data/media/example-0006.gif)
 
 ## Introduction
 
@@ -45,7 +49,7 @@ The library is composed by following modules:
 | module   | framework        | dependencies                                           | description                     |
 | -------- | ---------------- | ------------------------------------------------------ | ------------------------------- |
 | [core]   | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
-| [render] | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering       |
+| [render] | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
 | [gui]    | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
 | [shapes] | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
 
@@ -82,7 +86,7 @@ namespace sample;
 using Vector3 = System.Numerics.Vector3;
 using Color = System.Drawing.Color;
 using SearchAThing.OpenGL.Core;
-using static SearchAThing.OpenGL.Core.Toolkit;
+using static SearchAThing.OpenGL.Core.Constants;
 using SearchAThing.OpenGL.Render;
 using SearchAThing.OpenGL.GUI;
 using static SearchAThing.OpenGL.GUI.Toolkit;
@@ -114,11 +118,11 @@ class Program
 
             // create and add a sphere centered at (0,0,0) with radius=1 and meshed as uvsphere with N=20 divisions
             var sphere = new UVSphere(center: Vector3.Zero, radius: 1);
-            glModel.AddFigure(sphere.Figure(N: 20).SetColor(Color.Cyan));
+            glModel.AddFigure(sphere.Figure(divisions: 20).SetColor(Color.Cyan));
 
             // place a base box which receive sphere shadow centered like the sphere but 2*z lower ( out of sphere )
             // with size xyz=(5, 5, .1f) larger than sphere but with small thickness
-            var basebox = new Box(csBase: MakeWCS(sphere.Center - Vector3.UnitZ * 2), csSize: new Vector3(5, 5, .1f));
+            var basebox = new Box(cs: WCS.Move(sphere.Center - Vector3.UnitZ * 2), csSize: new Vector3(5, 5, .1f));
             glModel.AddFigure(basebox.Sides);
 
             glCtl.CameraView(CameraViewType.Right);
@@ -143,6 +147,7 @@ results ( control can manipulated with [gestures](#gestures-mouse-and-keybinding
 ## Examples
 
 Click on the `example code` link to open source code of the example, read top tour instructions contained in each example to test functions, for example following in the top comment of example 0000:
+
 ```cs
 // example-0000
 // draw a triangle with 3 colors (one for each vertex)
@@ -157,29 +162,29 @@ Click on the `example code` link to open source code of the example, read top to
 
 ### List of examples
 
-| example code | image              | description                                                                                                                                                   |
-| ------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [0000][es0]  | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                          |
-| [0001][es1]  | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                             |
-| [0002][es2]  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                      |
-| [0003][es3]  | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                             |
-| [0004][es4]  | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |
-| [0005][es5]  | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |
-| [0006][es6]  | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |
-| [0007][es7]  | [![img][e7]][e7]   | Draw nurb sphere or tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.            |
-| [0008][es8]  | [![img][e8]][e8]   | Draw nurb sphere or tube with lighting tunable from mvvm interface.                                                                                           |
-| [0009][es9]  | offscreen render   | Generate two capture of different sizes from the same scene.                                                                                                  |
-| [0010][es10] | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |
-| [0011][es11] | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |
-| [0012][es12] | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |
-| [0013][es13] | [![img][e13]][e13] | Multiline text.                                                                                                                                               |
-| [0014][es14] | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                               |
-| [0015][es15] | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                 |
-| [0016][es16] | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                          |
-| [0017][es17] | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                    |
-| [0018][es18] | [![img][e18]][e18] | Illusion of rotating base box model while its the camera rotating around.animation, rotates small box using object matrix in all scene ; show camera frustum. |
-| [0019][es19] | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |
-| [0020][es20] | customize gesture  | Customize key gesture.                                                                                                                                        |
+| example code        | image              | description                                                                                                                                                   |
+| ------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                          |
+| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                             |
+| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                      |
+| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                             |
+| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |
+| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |
+| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |
+| [0007][es7]         | [![img][e7]][e7]   | Draw nurb sphere or tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.            |
+| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb sphere or tube with lighting tunable from mvvm interface.                                                                                           |
+| [0009][es9]         | offscreen render   | Generate two capture of different sizes from the same scene.                                                                                                  |
+| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |
+| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |
+| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |
+| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                               |
+| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                               |
+| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                 |
+| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                          |
+| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                    |
+| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera rotating around.animation, rotates small box using object matrix in all scene ; show camera frustum. |
+| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |
+| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |
 
 [es0]: examples/example-0000/Program.cs
 [es1]: examples/example-0001/Program.cs
@@ -240,12 +245,29 @@ code .
 C-S-p -> `NET: Generate Assets for Build and Debug`
 
 choose an example.
-To change startup example `./set-startup-example xxxx` where xxxx on of provided examples.
+
+Tip: to change startup example from bash `./set-startup-example xxxx` where xxxx on of provided examples.
+
 This will update `.vscode/launch.json` then hit F5 to start.
 
 ## Development key notes
 
 Most of technical documentation is directly integrated with [API documentation](https://devel0.github.io/netcore-opengl/html/annotated.html).
+
+### GL Dev inspect tool
+
+Hit `F1` gesture to open gl dev tool useful to understand how conversion translates between spaces; it provides some basic support such as:
+
+- show render count
+- show/edit GlView title
+- toggle control perspective, shadow, texture, wireframe, shadewithedge
+- override light ambient, diffuse, specular strength
+- change fovdeg, show camera coordinates and frustum
+- toggle autoadjust near/far with near,far edit
+- show bbox size and model/view/projection matrixes
+- activate, deactivate light and raw light position edit
+
+![](data/media/gldevtool.gif)
 
 ### Opengl debugging tools
 

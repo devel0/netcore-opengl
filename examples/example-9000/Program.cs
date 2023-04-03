@@ -5,7 +5,7 @@
 using Vector3 = System.Numerics.Vector3;
 using Color = System.Drawing.Color;
 using SearchAThing.OpenGL.Core;
-using static SearchAThing.OpenGL.Core.Toolkit;
+using static SearchAThing.OpenGL.Core.Constants;
 using SearchAThing.OpenGL.Render;
 using SearchAThing.OpenGL.GUI;
 using static SearchAThing.OpenGL.GUI.Toolkit;
