@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- NOTE : Default PropertyGroup in Directory.Build.props -->
+
+    <PropertyGroup>
+        <RootNamespace>SearchAThing.OpenGL.Core</RootNamespace>
+        <PackageId>netcore-opengl-core</PackageId>
+        <PackageVersion>2.0.0</PackageVersion>
+        <Title>net core opengl (core)</Title>
+        <Description>Core module contains everything useful for gl calculations and view management.</Description>
+
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>11</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="netcore-ext" Version="1.5.0" />
+        <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- <ProjectReference Include="..\..\..\netcore-ext\src\ext\netcore-ext.csproj" /> -->
+    </ItemGroup>
+
+</Project>

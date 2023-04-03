@@ -1,0 +1,24 @@
+<Project>
+
+	<!-- NOTE : Default PropertyGroup in Directory.Build.props -->
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<LangVersion>11</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>		
+		<Nullable>enable</Nullable>		
+		<noWarn>1591</noWarn>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>		
+		<Authors>Lorenzo Delana</Authors>
+        <PackageTags>netcore opengl silk.net avalonia 3d</PackageTags>
+        <PackageProjectUrl>https://github.com/devel0/netcore-opengl#netcore-opengl</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>                
+	</PropertyGroup>
+
+	<Import Project="../Directory.Build.props" />
+
+	<PropertyGroup>
+		
+	</PropertyGroup>
+
+</Project>

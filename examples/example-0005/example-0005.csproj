@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<RootNamespace>example</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\gui\netcore-opengl-gui.csproj" />
+		<ProjectReference Include="..\..\src\shapes\netcore-opengl-shapes.csproj" />
+
+		<Compile Include="../../src/core/usings.core.cs" />
+		<Compile Include="../../src/render/usings.render.cs" />
+		<Compile Include="../../src/gui/usings.gui.cs" />
+		<Compile Include="../../src/shapes/usings.shapes.cs" />		
+	</ItemGroup>
+
+</Project>

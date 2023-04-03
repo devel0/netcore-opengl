@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- NOTE : Default PropertyGroup in Directory.Build.props -->
+
+  <PropertyGroup>
+    <RootNamespace>SearchAThing.OpenGL.Render</RootNamespace>
+    <PackageId>netcore-opengl-render</PackageId>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Title>net core opengl</Title>
+    <Description>Render module contains abstractions over Silk.NET opengl library.</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="fonts/*.?tf" />
+    <EmbeddedResource Include="shaders/*.vs" />
+    <EmbeddedResource Include="shaders/*.gs" />
+    <EmbeddedResource Include="shaders/*.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="../../src/core/usings.core.cs" />
+
+    <ProjectReference Include="..\core\netcore-opengl-core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Silk.NET" Version="2.16.0" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="12.2.2" />
+    <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.3" />
+    <PackageReference Include="ClosedXML" Version="0.100.3" />
+  </ItemGroup>
+
+</Project>

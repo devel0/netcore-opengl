@@ -1,27 +1,22 @@
-<!--Directory.Build.props: MSBuild properties that are included in every project--><!--Info: https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019#directorybuildprops-and-directorybuildtargets-->
 <Project>
-    <PropertyGroup>
-        <!-- === netcore-util -->
-        <MicrosoftCSharpVersion>4.7.0</MicrosoftCSharpVersion>
-        <MicrosoftEntityFrameworkCoreVersion>6.0.0</MicrosoftEntityFrameworkCoreVersion>
-        <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
-        <NpgsqlEntityFrameworkCorePostgreSQLVersion>6.0.1</NpgsqlEntityFrameworkCorePostgreSQLVersion>
-        <UnitsNetVersion>4.109.0</UnitsNetVersion>
-        <xunitVersion>2.3.1</xunitVersion>
-        <!-- === netcore-sci -->
-        <NetcoreUtilVersion>1.9.1</NetcoreUtilVersion>
-        <LibTessDotNetVersion>1.1.13</LibTessDotNetVersion>
-        <LinqStatisticsVersion>2.3.0</LinqStatisticsVersion>
-        <MathNetNumericsVersion>4.12.0</MathNetNumericsVersion>
-        <NetDxfNetStandardVersion>2.4.0</NetDxfNetStandardVersion>
-        <ParagonClipperVersion>6.4.2</ParagonClipperVersion>
-        <STLNetCoreVersion>1.3.1</STLNetCoreVersion>
-        <!-- === netcore-desktop -->
-        <AvaloniaVersion>0.10.15</AvaloniaVersion>
-        <!-- === netcore-opengl -->
-        <NetcoreUtilVersion>3.0.0</NetcoreUtilVersion>
-        <NetcoreSciVersion>3.4.0</NetcoreSciVersion>
-        <NetcoreDesktopVersion>0.5.0</NetcoreDesktopVersion>
-        <SilkNetVersion>2.15.0</SilkNetVersion>
-    </PropertyGroup>
+
+	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+		<DefineConstants>WINDOWS_PLATFORM</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('OSX'))">
+		<DefineConstants>OSX_PLATFORM</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+		<DefineConstants>LINUX_PLATFORM</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AvaloniaVersion>11.0.0-preview5</AvaloniaVersion>
+		<!-- <AvaloniaVersion>11.0.999</AvaloniaVersion> -->
+		<XamlNameReferenceGeneratorVersion>1.5.1</XamlNameReferenceGeneratorVersion>
+		<GSharkVersion>2.2.0</GSharkVersion>
+	</PropertyGroup>
+
 </Project>

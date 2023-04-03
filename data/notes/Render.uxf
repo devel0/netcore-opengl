@@ -1,0 +1,71 @@
+<diagram program="umletino" version="15.1"><zoom_level>16</zoom_level><help_text></help_text><element><id>Relation</id><coordinates><x>384</x><y>224</y><w>48</w><h>1312</h></coordinates><panel_attributes>lt=.
+fg=white</panel_attributes><additional_attributes>10;800;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>64</y><w>336</w><h>176</h></coordinates><panel_attributes>*GLControl*
+--
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>336</y><w>48</w><h>1088</h></coordinates><panel_attributes>lt=-
+lw=3
+fg=#5a9435
+layer=100</panel_attributes><additional_attributes>10;660;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>160</y><w>48</w><h>416</h></coordinates><panel_attributes>lt=.
+fg=white</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>UMLActor</id><coordinates><x>48</x><y>64</y><w>96</w><h>176</h></coordinates><panel_attributes>Actor
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>352</y><w>352</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+Render()
+fg=white</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1184</x><y>272</y><w>48</w><h>1280</h></coordinates><panel_attributes>lt=.
+fg=white</panel_attributes><additional_attributes>10;780;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>272</y><w>1600</w><h>48</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>980;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>352</y><w>848</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+EnsureModel()
+fg=white</panel_attributes><additional_attributes>510;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1184</x><y>352</y><w>432</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=#9c8f44
+*AutoAdjustNear == true &amp;&amp;*
+*Perspective == true*</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1568</x><y>272</y><w>48</w><h>1280</h></coordinates><panel_attributes>lt=.
+fg=white</panel_attributes><additional_attributes>10;780;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1568</x><y>352</y><w>416</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+PreventZFighting()
+fg=white</panel_attributes><additional_attributes>240;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>432</y><w>848</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=#9c8f44
+*UseShadow == true*</panel_attributes><additional_attributes>510;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1184</x><y>432</y><w>432</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+RenderScene()
+foreach light
+fg=white</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1936</x><y>272</y><w>48</w><h>1280</h></coordinates><panel_attributes>lt=.
+fg=white</panel_attributes><additional_attributes>10;780;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1600</x><y>464</y><w>304</w><h>112</h></coordinates><panel_attributes>figure type: Triangles
+shader: DepthShader
+shadowTransform is not null
+clear: lightIdx == 0
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>624</y><w>848</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+DoShader()
+fg=white</panel_attributes><additional_attributes>510;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1184</x><y>624</y><w>432</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+RenderScene()
+fg=white</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1600</x><y>640</y><w>304</w><h>112</h></coordinates><panel_attributes>figure type: Point, Lines
+shader: MainShader
+shadowTransform is null
+clear: true
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>800</y><w>448</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+DoShader()
+fg=white</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1184</x><y>800</y><w>432</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+RenderScene()
+fg=white</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1600</x><y>816</y><w>304</w><h>112</h></coordinates><panel_attributes>figure type: Triangles
+shader: ShadeWidthEdgeShader
+shadowTransform is null
+clear: false
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>272</y><w>48</w><h>1280</h></coordinates><panel_attributes>lt=.
+fg=white</panel_attributes><additional_attributes>10;780;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>800</y><w>448</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=#9c8f44
+*Wireframe == false &amp;&amp;*
+*ShadeWidthEdge == true*</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>976</y><w>448</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+DoShader()
+fg=white</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1184</x><y>976</y><w>432</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+RenderScene()
+fg=white</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1600</x><y>992</y><w>304</w><h>112</h></coordinates><panel_attributes>figure type: Triangles	
+shader: NormalShader
+shadowTransform is null
+clear: false
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>976</y><w>448</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=#9c8f44
+*ShowNormals == true*</panel_attributes><additional_attributes>260;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>1152</y><w>848</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+DoShader()
+fg=white</panel_attributes><additional_attributes>510;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1184</x><y>1152</y><w>432</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+RenderScene()
+fg=white</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1600</x><y>1168</y><w>304</w><h>112</h></coordinates><panel_attributes>figure type: Triangles	
+shader: MainShader
+shadowTransform is null
+clear: false
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>0</y><w>2032</w><h>1600</h></coordinates><panel_attributes>bg=#1e1e1e
+fg=white
+layer=-100
+transparency=0</panel_attributes><additional_attributes></additional_attributes></element></diagram>

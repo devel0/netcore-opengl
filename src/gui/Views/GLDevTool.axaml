@@ -1,0 +1,283 @@
+<Window
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:desktop="clr-namespace:SearchAThing.Desktop;assembly=netcore-desktop"
+	xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui"
+	Name="uc"
+	mc:Ignorable="d"
+	d:DesignWidth="800" d:DesignHeight="450"
+	x:Class="SearchAThing.OpenGL.GUI.GLDevTool">
+
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="/Assets/Dictionary1.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+
+	<TabControl>
+		<TabItem Header="GLControl">
+			<ScrollViewer VerticalScrollBarVisibility="Auto">
+				<Grid ColumnDefinitions="Auto,Auto,*"
+					desktop:GridAutoRow.AutoRowDefinitions="true">
+					<Grid.Styles>
+						<Style Selector="TextBlock.hdr">
+							<Setter Property="Margin" Value="0,5,0,5" />
+							<Setter Property="FontWeight" Value="Bold" />
+							<Setter Property="VerticalAlignment" Value="Center" />
+						</Style>
+						<Style Selector="CheckBox.hdr">
+							<Setter Property="Margin" Value="0,5,0,5" />
+							<Setter Property="FontWeight" Value="Bold" />
+							<Setter Property="VerticalAlignment" Value="Center" />
+						</Style>
+						<Style Selector="TextBlock.mu">
+							<Setter Property="Margin" Value="10,5,0,5" />
+							<Setter Property="FontStyle" Value="Italic" />
+							<Setter Property="VerticalAlignment" Value="Center" />
+							<Setter Property="Foreground" Value="Orange" />
+							<Setter Property="FontSize" Value="12" />
+						</Style>
+						<Style Selector="TextBlock.val">
+							<Setter Property="Margin" Value="10,5,0,5" />
+							<Setter Property="VerticalAlignment" Value="Center" />
+							<Setter Property="HorizontalAlignment" Value="Left" />
+						</Style>
+						<Style Selector="TextBox.val">
+							<Setter Property="Margin" Value="10,5,0,5" />
+							<Setter Property="HorizontalAlignment" Value="Left" />
+							<Setter Property="VerticalAlignment" Value="Center" />
+						</Style>
+					</Grid.Styles>
+
+					<!-- <TextBlock desktop:GridAutoRow.Name="Top" Text="XXXX"/> -->
+
+					<TextBlock desktop:GridAutoRow.Ref="RenderCount" Grid.Column="0" Text="RenderCount" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="RenderCount" Grid.Column="2" Text="{Binding RenderCount}" Classes="val" />
+
+					<TextBlock desktop:GridAutoRow.Ref="Title" Grid.Column="0" Text="Title" Classes="hdr" />
+					<TextBox desktop:GridAutoRow.Ref="Title" Grid.Column="2" Text="{Binding #uc.AvaloniaGLControl.Title}" Classes="val" />
+
+					<TextBlock desktop:GridAutoRow.Ref="FPS" Grid.Column="0" Text="FPS" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="FPS" Grid.Column="2" Text="{Binding FrameRate, StringFormat={}{0:0.0}}" Classes="val" />
+
+					<CheckBox desktop:GridAutoRow.Ref="IsRenderInvalidated" Grid.Column="0" Grid.ColumnSpan="3" Content="IsRenderInvalidated" IsChecked="{Binding IsRenderInvalidated, Mode=OneWay}" />
+					
+					<CheckBox desktop:GridAutoRow.Ref="Perspective" Grid.Column="0" Grid.ColumnSpan="3" Content="Perspective" IsChecked="{Binding Perspective}" />
+					<CheckBox desktop:GridAutoRow.Ref="UseShadow" Grid.Column="0" Grid.ColumnSpan="3" Content="UseShadow" IsChecked="{Binding UseShadow}" />
+					<CheckBox desktop:GridAutoRow.Ref="UseTexture" Grid.Column="0" Grid.ColumnSpan="3" Content="UseTexture" IsChecked="{Binding UseTexture}" />
+					<CheckBox desktop:GridAutoRow.Ref="Wireframe" Grid.Column="0" Grid.ColumnSpan="3" Content="Wireframe" IsChecked="{Binding Wireframe}" />
+					<CheckBox desktop:GridAutoRow.Ref="ShadeWithEdge" Grid.Column="0" Grid.ColumnSpan="3" Content="ShadeWithEdge" IsChecked="{Binding ShadeWithEdge}" />
+
+					<CheckBox desktop:GridAutoRow.Ref="OverrideAmbient" Grid.Column="0" Grid.ColumnSpan="2"
+						Content="Override ambient" IsChecked="{Binding GLModel.OverrideAmbientEnabled}" />
+					<StackPanel desktop:GridAutoRow.Ref="OverrideAmbient" Grid.Column="2" Orientation="Horizontal">
+						<TextBlock Text="{Binding GLModel.OverrideAmbient, StringFormat={}{0:0.00}}" Width="100" VerticalAlignment="Center" />
+						<Slider Width="200" Minimum="0" Maximum="1" Value="{Binding GLModel.OverrideAmbient}" Margin="10,0,0,0" />
+					</StackPanel>
+
+					<CheckBox desktop:GridAutoRow.Ref="OverrideDiffuse" Grid.Column="0" Grid.ColumnSpan="2"
+						Content="Override diffuse" IsChecked="{Binding GLModel.OverrideDiffuseEnabled}" />
+					<StackPanel desktop:GridAutoRow.Ref="OverrideDiffuse" Grid.Column="2" Orientation="Horizontal">
+						<TextBlock Text="{Binding GLModel.OverrideDiffuse, StringFormat={}{0:0.00}}" Width="100" VerticalAlignment="Center" />
+						<Slider Width="200" Minimum="0" Maximum="1" Value="{Binding GLModel.OverrideDiffuse}" Margin="10,0,0,0" />
+					</StackPanel>
+
+					<CheckBox desktop:GridAutoRow.Ref="OverrideSpecular" Grid.Column="0" Grid.ColumnSpan="2"
+						Content="Override specular" IsChecked="{Binding GLModel.OverrideSpecularEnabled}" />
+					<StackPanel desktop:GridAutoRow.Ref="OverrideSpecular" Grid.Column="2" Orientation="Horizontal">
+						<TextBlock Text="{Binding GLModel.OverrideSpecular, StringFormat={}{0:0.00}}" Width="100" VerticalAlignment="Center" />
+						<Slider Width="200" Minimum="0" Maximum="1" Value="{Binding GLModel.OverrideSpecular}" Margin="10,0,0,0" />
+					</StackPanel>
+
+					<TextBlock desktop:GridAutoRow.Ref="FovDeg" Grid.Column="0" Text="FovDeg" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="FovDeg" Grid.Column="1" Text="[ world ]" Classes="mu" />
+					<TextBox desktop:GridAutoRow.Ref="FovDeg" Grid.Column="2" Text="{Binding FovDeg}" MaxWidth="100" Classes="val" />
+
+					<CheckBox desktop:GridAutoRow.Ref="ShowCameraObject" Grid.Column="0" Grid.ColumnSpan="2" Content="ShowCamera" IsChecked="{Binding ShowCameraObject}" />
+
+					<TextBlock desktop:GridAutoRow.Ref="CameraPos" Grid.Column="0" Text="CameraPos" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="CameraPos" Grid.Column="1" Text="[ world ]" Classes="mu" />
+					<StackPanel desktop:GridAutoRow.Ref="CameraPos" Grid.Column="2" Orientation="Horizontal">
+						<TextBlock Text="{Binding CameraPos}" Classes="val" />
+						<TextBlock Text="[ eye ]" Classes="mu" />
+						<TextBlock Text="{Binding ECameraPos}" Classes="val" />
+					</StackPanel>
+
+					<TextBlock desktop:GridAutoRow.Ref="CameraTarget" Grid.Column="0" Text="CameraTarget" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="CameraTarget" Grid.Column="1" Text="( world )" Classes="mu" />
+					<StackPanel desktop:GridAutoRow.Ref="CameraTarget" Grid.Column="2" Orientation="Horizontal">
+						<TextBlock Text="{Binding CameraTarget}" Classes="val" />
+						<TextBlock Text="[ eye ]" Classes="mu" />
+						<TextBlock Text="{Binding ECameraTarget}" Classes="val" />
+					</StackPanel>
+
+					<TextBlock desktop:GridAutoRow.Ref="CameraUp" Grid.Column="0" Text="CameraUp" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="CameraUp" Grid.Column="1" Text="[ world ]" Classes="mu" />
+					<TextBlock desktop:GridAutoRow.Ref="CameraUp" Grid.Column="2" Text="{Binding CameraUp}" Classes="val" />
+
+					<TextBlock desktop:GridAutoRow.Ref="OrthoZoom" Grid.Column="0" Text="OrthoZoom" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="OrthoZoom" Grid.Column="1" Text="[ eye ]" Classes="mu" />
+					<TextBlock desktop:GridAutoRow.Ref="OrthoZoom" Grid.Column="2" Text="{Binding OrthoZoom}" Classes="val" />
+
+					<CheckBox desktop:GridAutoRow.Ref="AutoAdjustNearFar" Grid.Column="0" Grid.ColumnSpan="3" Content="AutoAdjustNearFar" IsChecked="{Binding AutoAdjustNearFar}" />
+
+					<TextBlock desktop:GridAutoRow.Ref="Near" Grid.Column="0" Text="Near" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="Near" Grid.Column="1" Text="[ world ]" Classes="mu" />
+					<TextBox desktop:GridAutoRow.Ref="Near" Grid.Column="2" Text="{Binding Near}" MaxWidth="100" Classes="val" />
+
+					<TextBlock desktop:GridAutoRow.Ref="Far" Grid.Column="0" Text="Far" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="Far" Grid.Column="1" Text="[ world ]" Classes="mu" />
+					<TextBox desktop:GridAutoRow.Ref="Far" Grid.Column="2" Text="{Binding Far}" MaxWidth="100" Classes="val" />
+
+					<TextBlock desktop:GridAutoRow.Ref="Size" Grid.Column="0" Text="Size" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="Size" Grid.Column="1" Text="[ screen ]" Classes="mu" />
+					<TextBlock desktop:GridAutoRow.Ref="Size" Grid.Column="2" Text="{Binding Device.Size}" Classes="val" />
+
+					<CheckBox desktop:GridAutoRow.Ref="BBox" Grid.Column="0" Grid.ColumnSpan="2"
+						Classes="hdr" Content="BBox" IsChecked="{Binding ShowModelBBox}" />
+
+					<!-- <TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="0" Text="BBox" Classes="hdr" /> -->
+					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="1" Text="[ local ]" Classes="mu" />
+					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="2" Text="{Binding GLModel.BBox}" Classes="val" />
+
+					<TextBlock desktop:GridAutoRow.Ref="MM" Grid.Column="0" Text="ModelMatrix" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="MM" Grid.Column="1" Text="[ local ]" Classes="mu" />
+					<TextBlock desktop:GridAutoRow.Ref="MM" Grid.Column="2" Text="{Binding ModelMatrixFmt}" Classes="val" FontFamily="Monospace" />
+
+					<TextBlock desktop:GridAutoRow.Ref="VM" Grid.Column="0" Text="ViewMatrix" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="VM" Grid.Column="1" Text="[ world ]" Classes="mu" />
+					<TextBlock desktop:GridAutoRow.Ref="VM" Grid.Column="2" Text="{Binding ViewMatrixFmt}" Classes="val" FontFamily="Monospace" />
+
+					<TextBlock desktop:GridAutoRow.Ref="PM" Grid.Column="0" Text="ProjMatrix" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="PM" Grid.Column="1" Text="[ eye ]" Classes="mu" />
+					<TextBlock desktop:GridAutoRow.Ref="PM" Grid.Column="2" Text="{Binding ProjectionMatrixFmt}" Classes="val" FontFamily="Monospace" />
+
+					<StackPanel desktop:GridAutoRow.Ref="ViewBtns" Grid.ColumnSpan="3" Orientation="Horizontal">
+						<Button Content="Save view" Click="SaveViewClick" />
+						<Button Content="Restore view" Margin="10,0,0,0" Click="RestoreViewClick" />
+					</StackPanel>
+
+					<!-- <TextBlock desktop:GridAutoRow.Ref="Bottom" Text="YYYY"/> -->
+				</Grid>
+			</ScrollViewer>
+		</TabItem>
+
+		<TabItem Header="Figures">
+			<Grid RowDefinitions="Auto,*">
+				<Grid.Styles>
+					<Style Selector="TextBlock.hdr">
+						<Setter Property="FontWeight" Value="Bold" />
+						<Setter Property="Margin" Value="0,0,10,0" />
+						<Setter Property="Width" Value="100" />
+					</Style>
+				</Grid.Styles>
+
+				<StackPanel Orientation="Horizontal">
+					<StackPanel.Styles>
+						<Style Selector="TextBlock, CheckBox">
+							<Setter Property="VerticalAlignment" Value="Center" />
+						</Style>
+					</StackPanel.Styles>
+					<TextBlock Classes="hdr" Text="Count" />
+					<TextBlock Text="{Binding GLModel.Figures.Count}" />
+					<CheckBox Content="Highlight" Name="CbHighlight"
+						IsChecked="true"
+						Margin="10,0,0,0" />
+				</StackPanel>
+
+				<DataGrid Grid.Row="1" Name="dgFigures" AutoGenerateColumns="false"
+					Items="{Binding GLModel.Figures}">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Primitive" Binding="{Binding PrimitiveType}" />
+
+						<DataGridTextColumn Header="Count" Binding="{Binding Primitives.Count}" />
+
+						<DataGridTemplateColumn Header="Visible">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									<CheckBox PointerPressed="cbpress" IsChecked="{Binding Visible}" />
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
+
+						<DataGridTextColumn Header="Order" Binding="{Binding Order}" />
+
+						<DataGridTextColumn Header="Description" Binding="{Binding .}" />
+
+					</DataGrid.Columns>
+				</DataGrid>
+
+			</Grid>
+		</TabItem>
+
+		<TabItem Header="Vertexes">
+			<Grid RowDefinitions="Auto, *">
+				<StackPanel Orientation="Horizontal">
+					<Button Content="Export Xlsx" Click="ExportXlsxClick" />
+				</StackPanel>
+
+				<DataGrid Grid.Row="1" Name="dgVertexes" 
+					AutoGenerateColumns="false" IsReadOnly="true"					
+					Items="{Binding #uc.HighlightedVertexes}">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Normal" Width="3*"
+							Binding="{Binding Normal, Converter={x:Static gui:Vector3TextConverter.Instance}, ConverterParameter=3}" />
+
+						<DataGridTextColumn Header="Object" Width="3*"
+							Binding="{Binding Object, Converter={x:Static gui:Vector3TextConverter.Instance}, ConverterParameter=3}" />
+
+						<DataGridTextColumn Header="Local" Width="3*"
+							Binding="{Binding Local, Converter={x:Static gui:Vector3TextConverter.Instance}, ConverterParameter=3}" />
+
+						<DataGridTextColumn Header="World" Width="3*"
+							Binding="{Binding World, Converter={x:Static gui:Vector3TextConverter.Instance}, ConverterParameter=3}" />
+
+						<DataGridTextColumn Header="Eye" Width="3*"
+							Binding="{Binding Eye, Converter={x:Static gui:Vector3TextConverter.Instance}, ConverterParameter=3}" />
+
+						<DataGridTextColumn Header="Clip" Width="3*"
+							Binding="{Binding Clip, Converter={x:Static gui:Vector4TextConverter.Instance}, ConverterParameter=3}" />
+
+						<DataGridTextColumn Header="NDC" Width="3*"
+							Binding="{Binding NDC, Converter={x:Static gui:Vector3TextConverter.Instance}, ConverterParameter=3}" />
+
+						<DataGridTextColumn Header="Screen" Width="3*"
+							Binding="{Binding Screen, Converter={x:Static gui:Vector2TextConverter.Instance}, ConverterParameter=3}" />
+					</DataGrid.Columns>
+				</DataGrid>
+			</Grid>
+		</TabItem>
+
+		<TabItem Header="Lights">
+			<Grid RowDefinitions="100,*">
+				<DataGrid Name="dgLights" AutoGenerateColumns="false"
+					Items="{Binding GLModel.PointLights}">
+					<DataGrid.Columns>
+
+						<DataGridTextColumn Header="Pos"
+							Binding="{Binding Position, Converter={x:Static gui:Vector3TextConverter.Instance}}"
+							IsReadOnly="false" />
+
+						<DataGridTemplateColumn Header="ShowPoint" IsReadOnly="false">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									<CheckBox PointerPressed="cbpress" IsChecked="{Binding ShowPoint}" />
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
+
+					</DataGrid.Columns>
+				</DataGrid>
+				<StackPanel Grid.Row="1">
+					<Button Content="Add" Click="PointLightsAddClick" />
+					<Button Content="Del" Click="PointLightsDelClick" />
+				</StackPanel>
+			</Grid>
+		</TabItem>
+	</TabControl>
+
+</Window>

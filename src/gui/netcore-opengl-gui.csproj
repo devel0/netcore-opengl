@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- NOTE : Default PropertyGroup in Directory.Build.props -->
+
+  <PropertyGroup>
+    <RootNamespace>SearchAThing.OpenGL.GUI</RootNamespace>
+    <PackageId>netcore-opengl-gui</PackageId>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Title>net core opengl (gui)</Title>
+    <Description>GUI module uses Avalonia window in stand-alone console apps and in mvvm applications to transfer gl pixels from the GL framebuffer to the control drawing context.</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\render\netcore-opengl-render.csproj" />
+
+    <Compile Include="../../src/core/usings.core.cs" />
+    <Compile Include="../../src/render/usings.render.cs" />
+
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="XamlNameReferenceGenerator" Version="$(XamlNameReferenceGeneratorVersion)" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
+
+    <PackageReference Include="netcore-desktop" Version="2.3.2" />
+    <!-- <ProjectReference Include="..\..\..\netcore-desktop\src\desktop\netcore-desktop.csproj" /> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- to include Avalonia.Native for linux in avalonia source "./build.sh Package"
+      see https://github.com/AvaloniaUI/Avalonia/issues/4148 -->
+
+    <!-- <PackageReference Include="Avalonia" Version="11.0.999" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.999" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.999" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.0.999" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.999" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.999" />
+    <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.999" />         -->
+  </ItemGroup>
+
+</Project>

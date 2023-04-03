@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" x:Class="example.Views.MainWindow"
+    Icon="/Assets/avalonia-logo.ico" Title="example">
+
+    <Grid RowDefinitions="Auto,*">
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Random cubes" x:Name="btnRandomLines" />
+        </StackPanel>
+
+        <Grid Grid.Row="1" x:Name="grGL" />
+    </Grid>
+</Window>

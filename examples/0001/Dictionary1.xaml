@@ -1,4 +1,0 @@
-<ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-xmlns:local="clr-namespace:SearchAThing.SciExamples" xmlns:desktop="clr-namespace:SearchAThing;assembly=netcore-desktop">
-    <desktop:SmartConverter x:Key="SmartConverter"/>
-</ResourceDictionary>

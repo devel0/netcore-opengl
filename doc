@@ -1,0 +1,108 @@
+#!/bin/env bash
+
+exdir="$(dirname `readlink -f "$0"`)"
+
+docsdir="$exdir/docs"
+serve_port=8000
+cmd=""
+
+#--
+
+help()
+{
+    echo "Usage: doc [options] command
+
+    commands
+        build     Generate docs documentation
+        serve     Start webserver
+        view      Open default app to view documentation
+        commit    build + commit doc into docs branch        
+        umlet     export uxf to svg
+
+    options
+        [ -p | --port ]     specify serve port"
+
+    exit 2
+}
+
+SHORT=p:,h:
+LONG=port:,help
+OPTS=$(getopt -a -n doc --options $SHORT --longoptions $LONG -- "$@")
+
+VALID_ARGUMENTS=$# # Returns the count of arguments that are in short or long options
+
+if [ "$VALID_ARGUMENTS" -eq 0 ]; then
+  help
+fi
+
+eval set -- "$OPTS"
+
+while :
+do
+  case "$1" in    
+    -p | --port )
+      serve_port=$2
+      echo "port specified [$serve_port]"
+      shift 2
+      ;;    
+    -h | --help)
+      help
+      ;;
+    --)
+      shift;
+      break
+      ;;
+    *)
+      echo "Unexpected option: $1"
+      help
+      ;;
+  esac
+done
+
+#--[ build ]
+
+if [ "$1" == "build" ]; then    
+  rm -fr "$docsdir"
+  mkdir "$docsdir"
+  cd "$exdir"
+  doxygen
+  exit 0
+fi
+
+#--[ serve ]
+
+if [ "$1" == "serve" ]; then
+  cd "$exdir"/docs/html
+  python3 -m http.server &
+  cd "$exdir"
+  exit 0
+fi
+
+#--[ view ]
+
+if [ "$1" == "view" ]; then
+  xdg-open http://localhost:$serve_port
+fi
+
+#--[ commit ]
+if [ "$1" == "commit" ]; then
+  cd "$exdir"
+  git checkout docs
+  git merge master --commit --no-edit
+  ./doc build
+  git add -A
+  git commit -a -m "doc"
+  git checkout master
+fi
+
+#--[ umlet ]
+if [ "$1" == "umlet" ]; then
+  cd "$exdir"
+  # fname are uxf file relative to exdir (without extension)
+  for fname in "$exdir"/data/notes/*.uxf; do
+    srcfile="$fname"
+    dstfile="$(dirname $fname)/$(basename $fname .uxf).svg"
+    echo "Converting [$srcfile] to [$dstfile]"
+    umlet.sh -action=convert -format=svg -filename="$srcfile" -output="$dstfile"
+  done
+fi

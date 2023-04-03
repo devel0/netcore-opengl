@@ -1,0 +1,109 @@
+<Window
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui"
+	xmlns:desktop="clr-namespace:SearchAThing.Desktop;assembly=netcore-desktop"
+	d:DesignWidth="800" d:DesignHeight="450" x:Class="example.Views.MainWindow"
+	Name="uc"
+	Icon="/Assets/avalonia-logo.ico" Title="example">
+
+	<Grid ColumnDefinitions="250,*">
+		<TabControl Margin="10,10,20,10">
+			<TabItem Header="Tmp">
+				<StackPanel>
+					<StackPanel.Styles>
+						<Style Selector="TextBlock">
+							<Setter Property="VerticalAlignment" Value="Center" />
+						</Style>
+					</StackPanel.Styles>
+
+					<Control Name="Light1Pos" Tag="{Binding #uc.AvaloniaGLControl.GLControl.GLModel.PointLights[0],
+						Mode=OneWay,
+						Converter={x:Static gui:Vector3EditConverter.Instance},
+						ConverterParameter=Position}" />
+
+					<CheckBox Content="Light1" FontWeight="Bold"
+						IsChecked="{Binding #uc.AvaloniaGLControl.GLControl.GLModel.PointLights[0].Active}" />
+
+					<Grid ColumnDefinitions="70,*" RowDefinitions="Auto,Auto,Auto">
+						<TextBlock Text="{Binding #Light1Pos.Tag.X}" />
+						<Slider Grid.Column="1" Minimum="-5000" Maximum="5000" Value="{Binding #Light1Pos.Tag.X}" />
+
+						<TextBlock Grid.Row="1" Text="{Binding #Light1Pos.Tag.Y}" />
+						<Slider Grid.Row="1" Grid.Column="1" Minimum="-5000" Maximum="5000" Value="{Binding #Light1Pos.Tag.Y}" />
+
+						<TextBlock Grid.Row="2" Text="{Binding #Light1Pos.Tag.Z}" />
+						<Slider Grid.Row="2" Grid.Column="1" Minimum="-5000" Maximum="5000" Value="{Binding #Light1Pos.Tag.Z}" />
+					</Grid>
+
+					<!-- // -->
+
+					<Control Name="Light2Pos" Tag="{Binding #uc.AvaloniaGLControl.GLControl.GLModel.PointLights[1],
+						Mode=OneWay,
+						Converter={x:Static gui:Vector3EditConverter.Instance},
+						ConverterParameter=Position}" />
+
+					<CheckBox Content="Light2" FontWeight="Bold"
+						IsChecked="{Binding #uc.AvaloniaGLControl.GLControl.GLModel.PointLights[1].Active}" />
+
+					<Grid ColumnDefinitions="70,*" RowDefinitions="Auto,Auto,Auto">
+						<TextBlock Text="{Binding #Light2Pos.Tag.X}" />
+						<Slider Grid.Column="1" Minimum="-5000" Maximum="5000" Value="{Binding #Light2Pos.Tag.X}" />
+
+						<TextBlock Grid.Row="1" Text="{Binding #Light2Pos.Tag.Y}" />
+						<Slider Grid.Row="1" Grid.Column="1" Minimum="-5000" Maximum="5000" Value="{Binding #Light2Pos.Tag.Y}" />
+
+						<TextBlock Grid.Row="2" Text="{Binding #Light2Pos.Tag.Z}" />
+						<Slider Grid.Row="2" Grid.Column="1" Minimum="-5000" Maximum="5000" Value="{Binding #Light2Pos.Tag.Z}" />
+					</Grid>
+
+					<CheckBox Content="Shadow" FontWeight="Bold"
+						IsChecked="{Binding #uc.AvaloniaGLControl.GLControl.UseShadow}" />
+
+					<Grid ColumnDefinitions="Auto,*"
+						Name="grData"
+						desktop:GridAutoRow.AutoRowDefinitions="true">
+
+						<Grid.Styles>
+							<Style Selector="TextBlock.hdr">
+								<Setter Property="FontWeight" Value="Bold" />
+							</Style>
+							<Style Selector="TextBlock">
+								<Setter Property="Margin" Value="0,10,0,0" />
+							</Style>
+						</Grid.Styles>
+
+						<TextBlock desktop:GridAutoRow.Ref="Near" Text="Near" Classes="hdr" />
+						<TextBlock desktop:GridAutoRow.Ref="Near" Grid.Column="1"
+							Text="{Binding #uc.AvaloniaGLControl.GLControl.Near}" />
+
+						<TextBlock desktop:GridAutoRow.Ref="Far" Text="Far" Classes="hdr" />
+						<TextBlock desktop:GridAutoRow.Ref="Far" Grid.Column="1"
+							Text="{Binding #uc.AvaloniaGLControl.GLControl.Far}" />
+
+						<TextBlock desktop:GridAutoRow.Ref="CameraPos" Text="CameraPos" Classes="hdr" />
+						<TextBlock desktop:GridAutoRow.Ref="CameraPos" Grid.Column="1"
+							Text="{Binding #uc.AvaloniaGLControl.GLControl.CameraPos}" />
+
+						<TextBlock desktop:GridAutoRow.Ref="CameraTarget" Text="CameraTarget" Classes="hdr" />
+						<TextBlock desktop:GridAutoRow.Ref="CameraTarget" Grid.Column="1"
+							Text="{Binding #uc.AvaloniaGLControl.GLControl.CameraTarget}" />
+
+						<TextBlock desktop:GridAutoRow.Ref="CameraUp" Text="CameraUp" Classes="hdr" />
+						<TextBlock desktop:GridAutoRow.Ref="CameraUp" Grid.Column="1"
+							Text="{Binding #uc.AvaloniaGLControl.GLControl.CameraUp}" />
+
+					</Grid>
+				</StackPanel>
+			</TabItem>
+
+		</TabControl>
+
+		<GridSplitter Grid.Column="0" Width="10" Background="#303030" VerticalAlignment="Stretch"
+			HorizontalAlignment="Right" />
+
+		<Grid Grid.Column="1" x:Name="grGL" />
+	</Grid>
+</Window>

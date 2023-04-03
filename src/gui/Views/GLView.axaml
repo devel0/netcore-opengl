@@ -1,0 +1,20 @@
+<UserControl
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:desktop="clr-namespace:SearchAThing.Desktop;assembly=netcore-desktop"
+	xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui"
+	Name="uc"
+	mc:Ignorable="d"
+	d:DesignWidth="800" d:DesignHeight="450"
+	x:Class="SearchAThing.OpenGL.GUI.GLView">
+
+	<!-- Text="{Binding #AvaloniaGLControl.Title}" -->
+	<Grid Name="grRoot">
+		<TextBlock Name="TitleTblk"
+			HorizontalAlignment="Right" VerticalAlignment="Top"
+			Margin="0,5,5,0" ZIndex="1" />		
+	</Grid>
+
+</UserControl>

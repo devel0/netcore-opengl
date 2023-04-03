@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	xmlns:desktop="clr-namespace:SearchAThing.Desktop;assembly=netcore-desktop"
+	xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui"
+	d:DesignWidth="800" d:DesignHeight="450" x:Class="example.Views.MainWindow"
+	Name="uc"
+	Icon="/Assets/avalonia-logo.ico" Title="example">
+
+	<Grid ColumnDefinitions="350,*">
+		<StackPanel Margin="10">
+			<StackPanel.Styles>
+				<Style Selector="TextBlock.hdr">
+					<Setter Property="FontWeight" Value="Bold" />
+					<Setter Property="Width" Value="150" />
+					<Setter Property="VerticalAlignment" Value="Center" />
+				</Style>
+				<Style Selector="StackPanel.var">
+					<Setter Property="Margin" Value="0,5,0,5" />
+					<Setter Property="Orientation" Value="Horizontal" />
+				</Style>
+			</StackPanel.Styles>
+
+			<StackPanel Classes="var">
+				<TextBlock Classes="hdr" Text="VertexCount" />
+				<TextBlock Text="{Binding #uc.FocusedControl.GLModel.GLVertexManager.VertexCount, FallbackValue=1}" />
+			</StackPanel>
+
+			<StackPanel Classes="var">
+				<TextBlock Classes="hdr" Text="FigureCount" />
+				<TextBlock Text="{Binding #uc.FocusedControl.GLModel.GLVertexManager.FigureCount}" />
+			</StackPanel>
+
+			<StackPanel Classes="var">
+				<TextBlock Classes="hdr" Text="RenderCount" />
+				<TextBlock Text="{Binding #uc.FocusedControl.RenderCount}" />
+			</StackPanel>
+
+			<StackPanel IsVisible="{Binding #uc.FocusedControl.GLModel.GLVertexManager.VertexCount,
+				Converter={x:Static desktop:SmartConverter.Instance},
+				ConverterParameter=?gt 0 true false}">
+
+				<StackPanel Classes="var">
+					<TextBlock Classes="hdr" Text="VertexIdx" />
+					<NumericUpDown Name="VertexIndexSelector"
+						Value="0" Minimum="0" Maximum="2"
+						FormatString="0" />
+				</StackPanel>
+
+				<Grid ColumnDefinitions="70,*" desktop:GridAutoRow.AutoRowDefinitions="true">
+					<TextBlock desktop:GridAutoRow.Ref="X" Text="{Binding #uc.VertexEdit.X}" />
+					<Slider desktop:GridAutoRow.Ref="X" Grid.Column="1"
+						Minimum="-75" Maximum="75"
+						Value="{Binding #uc.VertexEdit.X}" />
+
+					<TextBlock desktop:GridAutoRow.Ref="Y" Text="{Binding #uc.VertexEdit.Y}" />
+					<Slider desktop:GridAutoRow.Ref="Y" Grid.Column="1"
+						Minimum="-75" Maximum="75"
+						Value="{Binding #uc.VertexEdit.Y}" />
+
+					<TextBlock desktop:GridAutoRow.Ref="Z" Text="{Binding #uc.VertexEdit.Z}" />
+					<Slider desktop:GridAutoRow.Ref="Z" Grid.Column="1"
+						Minimum="-75" Maximum="75"
+						Value="{Binding #uc.VertexEdit.Z}" />
+				</Grid>
+
+			</StackPanel>
+
+		</StackPanel>
+
+		<GridSplitter Grid.Column="0" Width="10" Background="#303030" VerticalAlignment="Stretch"
+			HorizontalAlignment="Right" />
+
+		<Grid Grid.Column="1" x:Name="grGL" />
+	</Grid>
+</Window>

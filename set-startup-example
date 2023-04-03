@@ -1,0 +1,16 @@
+#!/bin/bash
+
+exdir=$(dirname $(readlink -f "$0"))
+
+LAUNCH="$exdir/.vscode/launch.json"
+TASKS="$exdir/.vscode/tasks.json"
+
+if [[ ! -e "$LAUNCH" || ! -e "$TASKS" ]]; then
+    echo "launch or tasks json not found in $exdir/.vscode ; please issue a '.NET: Generate Assets for Build and Debug' from vscode"
+    exit 1
+fi
+
+if [ "$1" == "" ]; then echo "specify example nr to set as debug start ( ie. 0001 )"; exit; fi
+
+sed -i "s/example-..../example-$1/g" "$LAUNCH"
+sed -i "s/example-..../example-$1/g" "$TASKS"

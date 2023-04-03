@@ -1,0 +1,95 @@
+<Window xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	xmlns:desktop="clr-namespace:SearchAThing.Desktop;assembly=netcore-desktop"
+	xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui"
+	d:DesignWidth="800" d:DesignHeight="450" x:Class="example.Views.MainWindow"
+	Name="uc"
+	Icon="/Assets/avalonia-logo.ico" Title="example">
+
+	<Grid ColumnDefinitions="350,*">
+
+		<Grid RowDefinitions="*,Auto">
+			<StackPanel Margin="10">
+				<StackPanel.Styles>
+					<Style Selector="TextBlock.hdr">
+						<Setter Property="FontWeight" Value="Bold" />
+						<Setter Property="Width" Value="150" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="HorizontalAlignment" Value="Left" />
+						<Setter Property="Margin" Value="0,5,0,5" />
+					</Style>
+					<Style Selector="StackPanel.var">
+						<Setter Property="Margin" Value="0,5,0,5" />
+						<Setter Property="Orientation" Value="Horizontal" />
+					</Style>
+				</StackPanel.Styles>
+
+				<StackPanel>
+					<StackPanel>
+						<RadioButton Content="Sphere" IsChecked="{Binding #uc.TypeSphere}" />
+						<RadioButton Content="Plate" IsChecked="{Binding #uc.TypePlate}" />
+					</StackPanel>
+
+					<TextBlock Text="Radius" Classes="hdr" />
+					<TextBlock Text="{Binding #uc.Radius}" />
+					<Slider Grid.Column="1"
+						Minimum="1" Maximum="10000"
+						TickFrequency="200" IsSnapToTickEnabled="true"
+						Value="{Binding #uc.Radius}" />
+
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="Surface divisions" Classes="hdr" />
+						<NumericUpDown
+							Value="{Binding #uc.SurfaceDivisions}"
+							Minimum="2" Maximum="1000"
+							FormatString="0" />
+					</StackPanel>
+
+					<TextBlock Text="{Binding #uc.SurfaceDivisions}" />
+					<Slider Grid.Column="1"
+						Minimum="2" Maximum="1000"
+						Value="{Binding #uc.SurfaceDivisions}" />
+
+					<!-- TickFrequency="10" IsSnapToTickEnabled="true" -->
+
+					<CheckBox Content="Wireframe" IsChecked="{Binding #uc.FocusedControl.Wireframe}" />
+					<CheckBox Content="ShadeWithEdge" IsChecked="{Binding #uc.FocusedControl.ShadeWithEdge}" />
+					<CheckBox Content="HitTest" IsChecked="{Binding #uc.HitTest}" />
+
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="Vtx Count" Classes="hdr" />
+						<TextBlock Text="{Binding #uc.FocusedControl.GLModel.GLVertexManager.VertexCount}" Classes="val" />
+					</StackPanel>
+
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="Tri Count" Classes="hdr" />
+						<TextBlock Text="{Binding #uc.FocusedControl.GLModel.GLVertexManager.TriangleCount}" Classes="val" />
+					</StackPanel>
+
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="Render Count" Classes="hdr" />
+						<TextBlock Text="{Binding #uc.FocusedControl.RenderCount}" Classes="val" />
+					</StackPanel>
+
+					<Button Content="ExportDxf" Click="ExportDxfClick" />
+				</StackPanel>
+
+
+			</StackPanel>
+
+			<StackPanel Grid.Row="1">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="GC RAM" FontWeight="Bold" />
+					<TextBlock Text="{Binding #uc.RamUsed}" Margin="10,0,0,0" />
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+
+		<GridSplitter Grid.Column="0" Width="10" Background="#303030" VerticalAlignment="Stretch"
+			HorizontalAlignment="Right" />
+
+		<Grid Grid.Column="1" x:Name="grGL" />
+	</Grid>
+</Window>
