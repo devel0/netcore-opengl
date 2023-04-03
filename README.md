@@ -333,7 +333,7 @@ To install:
 
 _Technical note:_
 
-Mesa 20.1.8.7 doesn't expose glsl support for 4.6 regardless of that it contains effective implementation for that. To fix the problem `netcore-opengl` automatically set [two other environment variables]() when mesa is used.
+Mesa 20.1.8.7 doesn't expose glsl support for 4.6 regardless of that it contains effective implementation for that. To fix the problem `netcore-opengl` automatically set [two other environment variables](https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/render/GLContext.cs#L158-L159) when mesa is used.
 
 ### C# global usings (full)
 
