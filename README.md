@@ -403,7 +403,7 @@ global using static SearchAThing.OpenGL.Shapes.Toolkit;
 
 ### Gestures mouse and keybindings
 
-Gesture can be overriden ( see [example-0020](examples/example-0020) ).
+Gesture can be overriden ( see [example-0020](https://github.com/devel0/netcore-opengl/blob/3943766b7cb98ae46149fbf14e54497f84ecf41f/examples/example-0020/Program.cs#L19-L23) ).
 
 | Key       | Description                    |
 | --------- | ------------------------------ |
