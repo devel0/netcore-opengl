@@ -1,0 +1,9 @@
+<map id="ClipToEye" name="ClipToEye">
+<area shape="rect" id="node1" title="Converts given clip space coord to the corresponding eye space coord. &#160;Makes use of the inverse of th..." alt="" coords="765,31,851,56"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ab9924ede05854b1e019c1b91fffd66ad" title="Converts given screen space coord to corresponding virtual in eye space coord (z=0,..." alt="" coords="564,31,717,56"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ad9a376fbd100ab9feaf7101e98992043" title="Pan the view ( Orthogonal mode ) by the given screen translation coord generating new camera config." alt="" coords="415,5,496,31"/>
+<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a29118a66237c094ddfd5a935d5470dc5" title="Pan the view ( Perspective mode ) by the given screen translation coord generating new camera config." alt="" coords="395,55,516,80"/>
+<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a477f49b72ab0d89c78fc58cae4895f37" title="Fit current model view for orthographic projection." alt="" coords="220,5,332,31"/>
+<area shape="rect" id="node6" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ab44681ff016fe9da0ba9a13dd4b01278" title="Center the view ( Perspective mode ) by computing camera [world] position and target." alt="" coords="205,55,347,80"/>
+<area shape="rect" id="node7" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa11500be262e3a1d3ac6911e302b7861" title="Fit current model view for perspective projection." alt="" coords="5,55,157,80"/>
+</map>

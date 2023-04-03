@@ -1,0 +1,4 @@
+<map id="OrthoPan" name="OrthoPan">
+<area shape="rect" id="node1" title="Pan the view ( Orthogonal mode ) by the given screen translation coord generating new camera config." alt="" coords="165,5,247,31"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a477f49b72ab0d89c78fc58cae4895f37" title="Fit current model view for orthographic projection." alt="" coords="5,5,117,31"/>
+</map>

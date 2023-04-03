@@ -1,0 +1,10 @@
+<map id="GetGLMatrixes" name="GetGLMatrixes">
+<area shape="rect" id="node1" title="Retrieve model/view/projection matrixes and camera pos/target/up through a single object." alt="" coords="403,63,521,88"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#aac473598b86094d90e33249499313225" title="Rotate the model by given [eye] x,y angles around given [local] rotation center." alt="" coords="193,5,298,31"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_mouse_start.html#afdf42bff5dda5ffdc719ccde42638992" title=" " alt="" coords="136,55,355,95"/>
+<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#afc6003d84ce56250451495e4519d569a" title="Pan the view by the given screen translation." alt="" coords="223,120,268,145"/>
+<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#acd591f4d52216f736d05a37967dfbb76" title="Pan the view down of a little factor." alt="" coords="5,45,88,71"/>
+<area shape="rect" id="node6" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#ac0149d9ec4eefdc825a466e47f0cdb07" title="Pan the view left of a little factor." alt="" coords="12,95,81,120"/>
+<area shape="rect" id="node7" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a21c11768939dccbc75ef58be240cc90b" title="Pan the view right of a little factor." alt="" coords="7,144,86,169"/>
+<area shape="rect" id="node8" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#adbc9327929edf6458b41fb0849c41650" title="Pan the view up of a little factor." alt="" coords="15,193,78,219"/>
+</map>

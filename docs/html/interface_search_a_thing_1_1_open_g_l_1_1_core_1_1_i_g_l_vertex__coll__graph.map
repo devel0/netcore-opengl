@@ -1,0 +1,5 @@
+<map id="IGLVertex" name="IGLVertex">
+<area shape="rect" id="node1" title="Represent a vertex and its the base object managed by the GLVertexManager. &#160;Primitives such as GLPoin..." alt="" coords="156,79,240,104"/>
+<area shape="rect" id="node2" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html" title="Interface for GL objects such as IGLFigure, IGLPrimitive and IGLVertex. &#160;The purpose is to ensure tha..." alt="" coords="5,5,188,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="212,5,389,31"/>
+</map>

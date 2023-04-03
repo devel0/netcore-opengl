@@ -1,0 +1,6 @@
+<map id="IGLContextObject" name="IGLContextObject">
+<area shape="rect" id="node1" title="General inteface for objects that carrier a reference to Gl context." alt="" coords="86,5,222,31"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model." alt="" coords="5,79,84,104"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_pipeline.html" title="Gl pipeline object. &#160;Contains vertex, geometry and fragment shaders where defined and helper method t..." alt="" coords="109,79,199,104"/>
+<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_texture2_d.html" title="Handle reference to gl texture." alt="" coords="223,79,327,104"/>
+</map>

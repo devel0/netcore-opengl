@@ -1,0 +1,5 @@
+<map id="CreateViewMatrix" name="CreateViewMatrix">
+<area shape="rect" id="node1" title="Create view matrix to convert [world] to [eye] space. &#160;It&#39;s used for pan, camera movements functions ..." alt="" coords="205,31,344,56"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a477f49b72ab0d89c78fc58cae4895f37" title="Fit current model view for orthographic projection." alt="" coords="25,5,137,31"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa11500be262e3a1d3ac6911e302b7861" title="Fit current model view for perspective projection." alt="" coords="5,55,157,80"/>
+</map>

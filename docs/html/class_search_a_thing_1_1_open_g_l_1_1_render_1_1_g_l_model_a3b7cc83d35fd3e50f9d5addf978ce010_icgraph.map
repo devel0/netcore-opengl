@@ -1,0 +1,6 @@
+<map id="EnsureModel" name="EnsureModel">
+<area shape="rect" id="node1" title=" " alt="" coords="539,45,645,70"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a3e2efcd721af8aba50e8e1736db54b77" title="Main gl render process." alt="" coords="272,37,491,77"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#abc7ba7c829d73293844b8d0b84dcf2f5" title="Capture an image of current control using offscreen render device and actual rendere device size." alt="" coords="5,5,224,45"/>
+<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a6e1066020a6e35c62b91d19d7414ecab" title="Capture an image of current control using offscreen render device with given render device size." alt="" coords="5,69,224,109"/>
+</map>

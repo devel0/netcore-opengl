@@ -1,0 +1,5 @@
+<map id="WorldToLocal" name="WorldToLocal">
+<area shape="rect" id="node1" title="Converts given world space coord to the corresponding local space coord. &#160;Makes use of the inverse of..." alt="" coords="164,31,271,56"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a871817cfbd07ac87181ef5fc87e5b21f" title="Rotate the model by given [eye] x,y angles around given [local] rotation center." alt="" coords="8,5,113,31"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a8b88bca5ca7377d6aca5657c0c7a59a6" title="Create a raycast line [local] suitable to hit test of figure primitives." alt="" coords="5,55,116,80"/>
+</map>

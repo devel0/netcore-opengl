@@ -1,0 +1,6 @@
+<map id="RemoveVertex" name="RemoveVertex">
+<area shape="rect" id="node1" title=" " alt="" coords="439,42,557,67"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a87298d83c0adfb590c5efc0ea5f98806" title=" " alt="" coords="256,42,391,67"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html#a29a27241e38cc76270ec233b1c96f19e" title="Remove existing primitive from this figure." alt="" coords="5,5,208,45"/>
+<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a2fb4c6218470cf38add8dd3a062d0098" title="Remove given figure from the vertex manager. &#160;All vertexes belonging to the figures primitives will b..." alt="" coords="49,70,165,95"/>
+</map>

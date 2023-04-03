@@ -1,0 +1,8 @@
+<map id="GLPoint" name="GLPoint">
+<area shape="rect" id="node1" title=" " alt="" coords="162,225,234,251"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html" title=" " alt="" coords="69,152,199,177"/>
+<area shape="rect" id="node3" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_primitive.html" title="A primitive such a GLPoint, GLLine or GLTriangle can be added to a figure through its add method...." alt="" coords="147,79,249,104"/>
+<area shape="rect" id="node6" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_point.html" title="Primitive for GL_POINTS opengl element." alt="" coords="224,152,300,177"/>
+<area shape="rect" id="node4" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html" title="Interface for GL objects such as IGLFigure, IGLPrimitive and IGLVertex. &#160;The purpose is to ensure tha..." alt="" coords="5,5,188,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="212,5,389,31"/>
+</map>
