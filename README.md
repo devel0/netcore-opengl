@@ -525,5 +525,5 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 
 ## References
 
-- http://www.songho.ca/opengl/gl_transform.html
-- https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/projection-matrix-GPU-rendering-pipeline-clipping.html
+- [OpenGL Transformation](http://www.songho.ca/opengl/gl_transform.html) -  
+- [The Perspective and Orthographic Projection Matrix](https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/projection-matrix-GPU-rendering-pipeline-clipping.html)
