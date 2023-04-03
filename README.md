@@ -46,10 +46,10 @@ The library is composed by following modules:
 
 | module                                                                                                                       | framework        | dependencies                                           | description                     |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------ | ------------------------------- |
-| core [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)     | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
-| render [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
-| gui [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)       | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
-| shapes [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
+| **core** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)     | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
+| **render** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
+| **gui** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)       | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
+| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
 
 [core]: https://www.nuget.org/packages/netcore-opengl-core
 [render]: https://www.nuget.org/packages/netcore-opengl-render
