@@ -1,7 +1,5 @@
 # netcore-opengl
 
-[![NuGet Badge](https://buildstats.info/nuget/netcore-opengl)](https://www.nuget.org/packages/netcore-opengl/)
-
 .NET core opengl
 
 - [API Documentation][api]
@@ -46,12 +44,14 @@
 
 The library is composed by following modules:
 
-| module   | framework        | dependencies                                           | description                     |
-| -------- | ---------------- | ------------------------------------------------------ | ------------------------------- |
-| [core]   | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
-| [render] | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
-| [gui]    | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
-| [shapes] | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
+| module                                                                                                                       | framework        | dependencies                                           | description                     |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------ | ------------------------------- |
+| [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)     | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
+| [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
+| [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)       | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
+| [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
+
+[core-nuget]: [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)
 
 [core]: https://www.nuget.org/packages/netcore-opengl-core
 [render]: https://www.nuget.org/packages/netcore-opengl-render
@@ -171,9 +171,9 @@ Click on the `example code` link to open source code of the example, read top to
 | [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |
 | [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |
 | [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |
-| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.            |
-| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                           |
-| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                  |
+| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                      |
+| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                     |
+| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                 |
 | [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |
 | [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |
 | [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |
@@ -526,5 +526,5 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 
 ## References
 
-- [OpenGL Transformation](http://www.songho.ca/opengl/gl_transform.html) 
+- [OpenGL Transformation](http://www.songho.ca/opengl/gl_transform.html)
 - [The Perspective and Orthographic Projection Matrix](https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/projection-matrix-GPU-rendering-pipeline-clipping.html)
