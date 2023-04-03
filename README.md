@@ -36,6 +36,8 @@
 
 <hr/>
 
+![](data/media/example-0006.gif)
+
 ## Introduction
 
 **netcore-opengl** library provides a multiplatform framework for 3D rendering, visualization and interactions.
@@ -246,6 +248,20 @@ This will update `.vscode/launch.json` then hit F5 to start.
 ## Development key notes
 
 Most of technical documentation is directly integrated with [API documentation](https://devel0.github.io/netcore-opengl/html/annotated.html).
+
+### GL Dev inspect tool
+
+Hit `F1` gesture to open gl dev tool useful to understand how conversion translates between spaces; it provides some basic support such as:
+- show render count
+- show/edit GlView title
+- toggle control perspective, shadow, texture, wireframe, shadewithedge
+- override light ambient, diffuse, specular strength
+- change fovdeg, show camera coordinates and frustum
+- toggle autoadjust near/far with near,far edit
+- show bbox size and model/view/projection matrixes
+- activate, deactivate light and raw light position edit
+
+![](data/media/gldevtool.gif)
 
 ### Opengl debugging tools
 
