@@ -5,7 +5,7 @@ namespace example;
 // example-0017
 // figure using screen coord
 //
-// - try to pan and rotate to see that top right screen text and cyan border doesn't affect from
+// - try to pan and rotate to see that top left screen text and cyan border doesn't affect from
 // - press space to toggle task pause
 // - press application Control+b to toggle bounding box
 

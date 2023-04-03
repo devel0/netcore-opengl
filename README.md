@@ -173,7 +173,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |
 | [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.            |
 | [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                           |
-| [0009][es9]         | offscreen render   | Generate two capture of different sizes from the same scene.                                                                                                  |
+| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                  |
 | [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |
 | [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |
 | [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |
@@ -182,7 +182,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                 |
 | [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                          |
 | [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                    |
-| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera rotating around.animation, rotates small box using object matrix in all scene ; show camera frustum. |
+| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum. |
 | [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |
 | [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |
 
@@ -246,7 +246,7 @@ C-S-p -> `NET: Generate Assets for Build and Debug`
 
 choose an example.
 
-Tip: to change startup example from bash `./set-startup-example xxxx` where xxxx on of provided examples.
+Tip: to change startup example from bash `./set-startup-example xxxx` where xxxx is the nr of one of the examples provided.
 
 This will update `.vscode/launch.json` then hit F5 to start.
 
@@ -399,6 +399,7 @@ global using static SearchAThing.OpenGL.GUI.Constants;
 // shapes
 global using SearchAThing.OpenGL.Shapes;
 global using static SearchAThing.OpenGL.Shapes.Toolkit;
+global using static SearchAThing.OpenGL.Shapes.Constants;
 ```
 
 ### Gestures mouse and keybindings
