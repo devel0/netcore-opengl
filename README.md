@@ -44,11 +44,11 @@
 
 The library is composed by following modules:
 
-| module                                                                                                                       | framework        | dependencies                                           | description                     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------ | ------------------------------- |
-| **core** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)     | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
+| module                                                                                                                                  | framework        | dependencies                                           | description                     |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------ | ------------------------------- |
+| **core** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)       | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
 | **render** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
-| **gui** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)       | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
+| **gui** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)          | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
 | **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
 
 [core]: https://www.nuget.org/packages/netcore-opengl-core
@@ -136,7 +136,7 @@ class Program
 dotnet run # or hit F5 from vscode
 ```
 
-results ( control can manipulated with [gestures](#gestures-mouse-and-keybindings) ):
+results ( control can manipulated with [gestures](#gestures) ):
 
 [![img][sample]][sample]
 
@@ -400,9 +400,19 @@ global using static SearchAThing.OpenGL.Shapes.Toolkit;
 global using static SearchAThing.OpenGL.Shapes.Constants;
 ```
 
-### Gestures mouse and keybindings
+### Gestures
 
-Gesture can be overriden ( see [example-0020](https://github.com/devel0/netcore-opengl/blob/3943766b7cb98ae46149fbf14e54497f84ecf41f/examples/example-0020/Program.cs#L19-L23) ).
+#### Mouse gestures
+
+| Key                 | Description                       |
+| ------------------- | --------------------------------- |
+| Left + Move         | Rotate the model over bbox middle |
+| Middle + Move       | Pan                               |
+| Middle double click | Zoom fit                          |
+
+#### Keybindings
+
+Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netcore-opengl/blob/3943766b7cb98ae46149fbf14e54497f84ecf41f/examples/example-0020/Program.cs#L19-L23) ).
 
 | Key       | Description                    |
 | --------- | ------------------------------ |
