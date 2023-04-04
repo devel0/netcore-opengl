@@ -659,7 +659,7 @@ public partial class GLControl : INotifyPropertyChanged
 
             if (Near < 0 || Far < 0 || Near == 0 || Near > Far)
             {
-                Debug.WriteLine($"Invalid Near:{Near} Far:{Far}");
+                // Debug.WriteLine($"Invalid Near:{Near} Far:{Far}");
                 Near = DEFAULT_Near;
                 Far = DEFAULT_Far;
             }
