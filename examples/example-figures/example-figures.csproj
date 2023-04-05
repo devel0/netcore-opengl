@@ -14,10 +14,7 @@
 
 		<Compile Include="../../src/core/usings.core.cs" />
 		<Compile Include="../../src/render/usings.render.cs" />
-		<Compile Include="../../src/shapes/usings.shapes.cs" />
-
-		<PackageReference Include="GShark" Version="$(GSharkVersion)" />
-		<!--<ProjectReference Include="..\..\..\G-Shark\src\GShark\GShark.csproj" />-->
+		<Compile Include="../../src/shapes/usings.shapes.cs" />		
 	</ItemGroup>
 
 </Project>

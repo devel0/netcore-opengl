@@ -49,7 +49,7 @@ The library is composed by following modules:
 | **core** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)       | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
 | **render** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
 | **gui** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)          | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
-| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
+| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core], [G-Shark]                                                 | box, cone, sphere, arrow shapes |
 
 [core]: https://www.nuget.org/packages/netcore-opengl-core
 [render]: https://www.nuget.org/packages/netcore-opengl-render
@@ -62,6 +62,7 @@ The library is composed by following modules:
 [skiasharp.harfbuzz]: https://www.nuget.org/packages/SkiaSharp.HarfBuzz
 [avalonia]: https://www.nuget.org/packages/Avalonia
 [netcore-desktop]: https://www.nuget.org/packages/netcore-desktop
+[G-Shark]: https://www.nuget.org/packages/GShark
 
 ## Quickstart
 
