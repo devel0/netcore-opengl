@@ -79,17 +79,45 @@ public static partial class Ext
     /// </summary>
     /// <param name="primitive">Primitive to change vertexes color.</param>
     /// <param name="color">Color to set.</param>
-    public static void SetColor(this IGLPrimitive primitive, Color color) => primitive.SetColor(color.ToVector4());
+    public static T SetPrimitiveColor<T>(this T primitive, Color color)
+    where T : IGLPrimitive =>
+        primitive.SetPrimitiveColor<T>(color.ToVector4());
 
-    /// <summary>
-    /// Change the color of all vertexes of the given primitive.
-    /// </summary>
-    /// <param name="primitive">Primitive to change vertexes color.</param>
-    /// <param name="rgbaColor">Color to set.</param>
-    public static void SetColor(this IGLPrimitive primitive, Vector4 rgbaColor)
+    // <summary>
+    // Change the color of all vertexes of the given primitive.
+    // </summary>
+    // <param name="primitive">Primitive to change vertexes color.</param>
+    // <param name="rgbaColor">Color to set.</param>
+    public static T SetPrimitiveColor<T>(this T primitive, Vector4 rgbaColor)
+    where T : IGLPrimitive
     {
         foreach (var vertex in primitive.Vertexes)
             vertex.SetColor(rgbaColor);
+        return primitive;
+    }
+
+    /// <summary>
+    /// Change the color of all vertexes of the given primitives.
+    /// </summary>
+    /// <param name="primitives">Primitives to change vertexes color.</param>
+    /// <param name="color">Color to set.</param>
+    public static IEnumerable<T> SetPrimitiveColor<T>(this IEnumerable<T> primitives, Color color)
+    where T : IGLPrimitive =>
+        primitives.SetPrimitiveColor<T>(color.ToVector4());
+
+    /// <summary>
+    /// Change the color of all vertexes of the given primitives.
+    /// </summary>
+    /// <param name="primitives">Primitives to change vertexes color.</param>
+    /// <param name="rgbaColor">Color to set.</param>
+    public static IEnumerable<T> SetPrimitiveColor<T>(this IEnumerable<T> primitives, Vector4 rgbaColor)
+    where T : IGLPrimitive
+    {
+        // IGLPrimitive oo; oo.SetColor
+        foreach (var primitive in primitives)
+            primitive.SetPrimitiveColor(rgbaColor);
+
+        return primitives;
     }
 
 }

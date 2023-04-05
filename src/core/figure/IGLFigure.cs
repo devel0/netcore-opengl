@@ -24,7 +24,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// Invoke <see cref="FigureInvalidated"/>.<br/>
     /// Used for internal purpose by the <see cref="GLPrimitiveBase"/>.
     /// </summary>
-    void Invalidate();    
+    void Invalidate();
 
     /// <summary>
     /// A figure can contains primitives that in turn can contains vertexes.
@@ -151,7 +151,8 @@ public static partial class Ext
     /// <param name="figure">Figure which change vertex colours.</param>
     /// <param name="color">Color to apply figure vertexes.</param>
     /// <returns>Given figure reference.</returns>
-    public static GLFigureBase SetColor(this GLFigureBase figure, Color color) => figure.SetColor(color.ToVector4());
+    public static T SetColor<T>(this T figure, Color color) where T : GLFigureBase =>
+        figure.SetColor(color.ToVector4());
 
     /// <summary>
     /// Changes <see cref="IGLVertex.MaterialColor"/> of given figure vertexes.
@@ -164,10 +165,10 @@ public static partial class Ext
     /// <param name="figure">Figure which change vertex colours.</param>
     /// <param name="rgbaColor">Color to apply figure vertexes.</param>
     /// <returns>Given figure reference.</returns>
-    public static GLFigureBase SetColor(this GLFigureBase figure, Vector4 rgbaColor)
+    public static T SetColor<T>(this T figure, Vector4 rgbaColor) where T : GLFigureBase
     {
         foreach (var primitive in figure.Primitives)
-            primitive.SetColor(rgbaColor);
+            primitive.SetPrimitiveColor(rgbaColor);
 
         return figure;
     }
