@@ -23,6 +23,11 @@ public class Line
     /// </summary>
     public Vector3 To => From + V;
 
+    /// <summary>
+    /// Line midpoint as (From + To) / 2.
+    /// </summary>
+    public Vector3 MidPoint => (From + To) / 2;
+
     Line(Vector3 from, Vector3 v)
     {
         From = from;
@@ -78,6 +83,23 @@ public class Line
         var d = Vector3.Dot(p0 - l0, n) / l_dot_n;
 
         return l0 + l * d;
+    }
+
+    /// <summary>
+    /// States if this line contains given point within given tolerance.
+    /// </summary>
+    /// <param name="tol">Comparision tolerance.</param>
+    /// <param name="p">Point to test if its contained in this line.</param>
+    /// <returns>True if point contained in this line.</returns>
+    public bool Contains(float tol, in Vector3 p)
+    {
+        if (Length == 0) return false;
+
+        var prj = (p - From).Project(V) + From;
+
+        var dprj = (p - prj).Length();
+
+        return dprj <= tol;
     }
 
     public override string ToString() => $"{From} + {V} = {To}";
