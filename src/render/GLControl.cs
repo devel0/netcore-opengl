@@ -929,8 +929,8 @@ public partial class GLControl : INotifyPropertyChanged
         if (invalidate) Invalidate();
     }
 
-    // <summary>
-    /// Create a raycast Line suitable to hit test of figure primitives.
+    /// <summary>
+    /// Create a raycast Line suitable for hit test of figure primitives.
     /// </summary>
     /// <param name="screen">Screen coord (x,y) [screen].</param>
     /// <example>
