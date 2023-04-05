@@ -168,7 +168,22 @@ class Program
 
                 foreach (var fig in figures)
                 {
-                    var oraycast = lraycast.Transform(fig.ObjectMatrix.Inverse());
+                    // lraycast is relative to local space coord
+                    //
+                    // testing figure vs lraycast could not work correctly because a figure
+                    // can have an object matrix applied that translates into different local space
+                    // respect those considered by the RayCastLocal where no figure concept exists thus ObjectMatrix=Identity.
+                    //
+                    // In order to compare intersection between lraycast and primitives of the figure
+                    // we need before to transform lraycast to an object raycast suitable to match the same space
+                    // where figure primitives lies.
+                    Line oraycast;
+
+                    if (fig.ObjectMatrixIsIdentity) // no transform required if fig object matrix already an identity
+                        oraycast = lraycast;
+
+                    else
+                        oraycast = lraycast.Transform(fig.ObjectMatrix.Inverse());
 
                     foreach (var tri in fig.Primitives.OfType<GLTriangle>())
                     {

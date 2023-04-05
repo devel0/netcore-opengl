@@ -11,6 +11,8 @@ namespace example.Views;
 // - enable hittest
 // - move mouse on the figure to see hitted triangles
 // - increase divisions
+//
+// NOTE : hit test doesn't apply any optimization on hit test ( worst case ) : all figures evaluated
 
 public partial class MainWindow : Window, INotifyPropertyChanged
 {
@@ -324,7 +326,13 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
             foreach (var fig in figures)
             {
-                var oraycast = lraycast.Transform(fig.ObjectMatrix.Inverse());
+                Line oraycast;
+
+                if (fig.ObjectMatrixIsIdentity) // no transform required if fig object matrix already an identity
+                    oraycast = lraycast;
+
+                else
+                    oraycast = lraycast.Transform(fig.ObjectMatrix.Inverse());
 
                 foreach (var tri in fig.Primitives.OfType<GLTriangle>())
                 {
@@ -454,6 +462,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             }
 
             dxf.Save(file.Path.AbsolutePath, isBinary: true);
-        }                
+        }
     }
 }
