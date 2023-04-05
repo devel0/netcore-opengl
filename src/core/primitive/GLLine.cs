@@ -199,3 +199,19 @@ public class GLLine : GLPrimitiveBase, IGLLine
 
     public override string ToString() => Invariant($"{From} {To}");
 }
+
+public static partial class Toolkit
+{
+
+    /// <summary>
+    /// Enumerate given point set with gl lines.
+    /// </summary>
+    /// <param name="pts">Points set.</param>    
+    /// <param name="closed">If true a line will added between last and first point.</param>   
+    public static IEnumerable<GLLine> ToGLLines(this IEnumerable<Vector3> pts, bool closed = false) =>
+        pts
+        .WithNextPrimitive(repeatFirstAtEnd: closed)
+        .Where(nfo => !nfo.isLast)
+        .Select(nfo => GLLine.FromTo(nfo.item, nfo.next!.Value));
+
+}
