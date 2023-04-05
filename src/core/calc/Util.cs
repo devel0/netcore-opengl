@@ -144,7 +144,7 @@ public static partial class Toolkit
 
         if (eF < eC)
         {
-            var qNear = (eC - eN) * 1e-2f;
+            var qNear = Abs(eC - eN) * 1e-2f;
 
             if (qNear < DEFAULT_Near && bbox.Size.Max() > 100)
             {
@@ -161,7 +161,7 @@ public static partial class Toolkit
             if (far < near)
             {
                 far = 2f * near;
-            }
+            }            
         }
         else
         {
