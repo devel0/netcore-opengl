@@ -864,7 +864,7 @@ public partial class GLControl : INotifyPropertyChanged
 
             if (!Wireframe && ShadeWithEdge)
                 DoShader(
-                    fig => fig.PrimitiveType == GLPrimitiveType.Triangle,
+                    fig => fig.PrimitiveType == GLPrimitiveType.Triangle && !fig.ExcludeFromShadeWithEdge,
                     ShadeWithEdgeShader,
                     ptLightStructs,
                     clear: false);

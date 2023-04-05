@@ -37,6 +37,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     GLPrimitiveType PrimitiveType { get; }
 
     /// <summary>
+    /// If true figure will rendered w/out "shade with edge" shader regardless
+    /// the option is active in the gl control. (Default: false)
+    /// </summary>    
+    bool ExcludeFromShadeWithEdge { get; }
+
+    /// <summary>
     /// Object coord [object] to local space coord [local] transformation matrix.<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    

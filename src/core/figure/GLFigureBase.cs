@@ -68,6 +68,28 @@ public abstract class GLFigureBase : IGLFigure
 
     public abstract GLPrimitiveType PrimitiveType { get; }
 
+    #region ExcludeFromShadeWithEdge
+    
+    private bool _ExcludeFromShadeWithEdge = false;
+    /// <summary>
+    /// ExcludeFromShadeWithEdge
+    /// </summary>
+    public bool ExcludeFromShadeWithEdge
+    {
+        get => _ExcludeFromShadeWithEdge;
+        set
+        {
+             var changed = value != _ExcludeFromShadeWithEdge;
+             if (changed)
+             {
+                 _ExcludeFromShadeWithEdge = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     #region ObjectMatrixIsIdentity
 
     private bool? _ObjectMatrixIsIdentity = null;
