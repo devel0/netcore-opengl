@@ -68,6 +68,29 @@ public abstract class GLFigureBase : IGLFigure
 
     public abstract GLPrimitiveType PrimitiveType { get; }
 
+    #region ObjectMatrixIsIdentity
+
+    private bool? _ObjectMatrixIsIdentity = null;
+
+    /// <summary>
+    /// States if object matrix is an identity.
+    /// </summary>    
+    /// <remarks>
+    /// This property caches Matrix4x4.IsIdentity information and keeps updated only upon effective object matrix change.
+    /// </remarks>
+    public bool ObjectMatrixIsIdentity
+    {
+        get
+        {
+            if (_ObjectMatrixIsIdentity is null)
+                _ObjectMatrixIsIdentity = ObjectMatrix.IsIdentity;
+
+            return _ObjectMatrixIsIdentity.Value;
+        }
+    }
+
+    #endregion
+
     #region ObjectMatrix
 
     private Matrix4x4 _ObjectMatrix = DEFAULT_ObjectMatrix;
@@ -82,6 +105,8 @@ public abstract class GLFigureBase : IGLFigure
             {
                 _ObjectMatrix = value;
                 OnPropertyChanged();
+                _ObjectMatrixIsIdentity = null;
+                OnPropertyChanged(nameof(ObjectMatrixIsIdentity));
                 Invalidate();
             }
         }
