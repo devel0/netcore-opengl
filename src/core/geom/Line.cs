@@ -90,16 +90,19 @@ public class Line
     /// </summary>
     /// <param name="tol">Comparision tolerance.</param>
     /// <param name="p">Point to test if its contained in this line.</param>
-    /// <returns>True if point contained in this line.</returns>
-    public bool Contains(float tol, in Vector3 p)
+    /// <returns>Null if line not contain given point, a non null float that represent distance to projected point if contained under given tolerance.</returns>
+    public float? Contains(float tol, in Vector3 p)
     {
-        if (Length == 0) return false;
+        if (Length > 0)
+        {
+            var prj = (p - From).Project(V) + From;
 
-        var prj = (p - From).Project(V) + From;
+            var dprj = (p - prj).Length();
 
-        var dprj = (p - prj).Length();
+            if (dprj <= tol) return dprj;
+        }
 
-        return dprj <= tol;
+        return null;
     }
 
     public override string ToString() => $"{From} + {V} = {To}";
