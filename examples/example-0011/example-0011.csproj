@@ -27,9 +27,4 @@
 		<None Include="../textures/**/*" CopyToOutputDirectory="PreserveNewest" Link="texture/%(RecursiveDir)/%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="GShark" Version="2.0.1" />
-		<!--<ProjectReference Include="..\..\..\G-Shark\src\GShark\GShark.csproj" />-->
-	</ItemGroup>
-
 </Project>
