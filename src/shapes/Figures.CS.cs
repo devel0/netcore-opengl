@@ -10,9 +10,13 @@ public static partial class Toolkit
     /// <param name="originColor">(Optional) Color of the origin (Default:white).</param>
     /// <param name="setOriginColor">(Optional) Set the color of the origin (Default:true).</param>
     /// <param name="origin">(Optional) Wcs origin (Default:0,0,0).</param>
+    /// <param name="solidArrowsDiameterFactor">(Optional) If not null arrows instead lines will created with specified diameter factor.
+    /// <see cref="Arrow.Arrow(in System.Numerics.Vector3, in System.Numerics.Vector3, float?)"/> (Default:null).</param>    
     /// <returns>Wcs figure.</returns>   
-    public static GLLineFigure MakeWCSFigure(float size = 1, Color? originColor = null, bool setOriginColor = true, Vector3? origin = null) =>
-        MakeCSFigure(WCS.Move(origin), size, originColor, setOriginColor);
+    public static GLFigureBase MakeWCSFigure(float size = 1, Color? originColor = null,
+        bool setOriginColor = true, Vector3? origin = null,
+        float? solidArrowsDiameterFactor = null) =>
+        MakeCSFigure(WCS.Move(origin), size, originColor, setOriginColor, solidArrowsDiameterFactor);
 
     /// <summary>
     /// Make a figure that represents a cs with RGB X:red Y:green Z:blue axes.
@@ -21,9 +25,12 @@ public static partial class Toolkit
     /// <param name="size">(Optional) Axes length (Default:1).</param>
     /// <param name="originColor">(Optional) Color of the origin (Default:white).</param>
     /// <param name="setOriginColor">(Optional) Set the color of the origin (Default:true).</param>    
+    /// <param name="solidArrowsDiameterFactor">(Optional) If not null arrows instead lines will created with specified diameter factor.
+    /// <see cref="Arrow.Arrow(in System.Numerics.Vector3, in System.Numerics.Vector3, float?)"/> (Default:null).</param>    
     /// <returns>cs figure.</returns>   
-    public static GLLineFigure MakeCSFigure(Matrix4x4 cs,
-        float size = 1, Color? originColor = null, bool setOriginColor = true)
+    public static GLFigureBase MakeCSFigure(Matrix4x4 cs,
+        float size = 1, Color? originColor = null, bool setOriginColor = true,
+        float? solidArrowsDiameterFactor = null)
     {
         var pos = cs.Origin();
         var basex = cs.BaseX();
@@ -39,10 +46,34 @@ public static partial class Toolkit
         var yAxisColorFrom = setOriginColor ? originColor.Value : yAxisColorTo;
         var zAxisColorFrom = setOriginColor ? originColor.Value : zAxisColorTo;
 
-        var fig = new GLLineFigure(
-            pos.LineV(basex * size).ToGLLine(xAxisColorFrom, xAxisColorTo),
-            pos.LineV(basey * size).ToGLLine(yAxisColorFrom, yAxisColorTo),
-            pos.LineV(basez * size).ToGLLine(zAxisColorFrom, zAxisColorTo));
+        GLFigureBase fig;
+
+        if (solidArrowsDiameterFactor is not null)
+        {
+            var xFigs = new Arrow(pos, pos + basex, diameterFactor: solidArrowsDiameterFactor.Value)
+                .Triangles().ToList().SetPrimitiveColor(xAxisColorTo);
+
+            var yFigs = new Arrow(pos, pos + basey, diameterFactor: solidArrowsDiameterFactor.Value)
+                .Triangles().ToList().SetPrimitiveColor(yAxisColorTo);
+
+            var zFigs = new Arrow(pos, pos + basez, diameterFactor: solidArrowsDiameterFactor.Value)
+                .Triangles().ToList().SetPrimitiveColor(zAxisColorTo);
+
+            var tris = xFigs.Union(yFigs).Union(zFigs);
+
+            fig = new GLTriangleFigure(tris);
+
+            fig.ExcludeFromShadeWithEdge = true;
+        }
+
+        else
+        {
+            fig = new GLLineFigure(
+                pos.LineV(basex * size).ToGLLine(xAxisColorFrom, xAxisColorTo),
+                pos.LineV(basey * size).ToGLLine(yAxisColorFrom, yAxisColorTo),
+                pos.LineV(basez * size).ToGLLine(zAxisColorFrom, zAxisColorTo));
+        }
+
 
         return fig;
     }
