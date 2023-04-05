@@ -9,7 +9,7 @@ public static class Constants
     /// (Default) gl split focused control border thickness ( screen pixels ).
     /// </summary>
     public const double GRID_SPLITTER_MANAGER_FocusedControlBorderThickness = 2;
-
+    
     /// <summary>
     /// (Default) gl split focused control border brush.
     /// </summary>    
@@ -17,10 +17,16 @@ public static class Constants
         new SolidColorBrush(ColorTranslator.FromHtml("#ffff9b").ToAvaloniaColor());
 
     /// <summary>
+    /// (Default) gl split grid splitter color.
+    /// </summary>    
+    public static readonly Avalonia.Media.Color GRID_SPLITTER_MANAGER_SplitterColor =
+        ColorTranslator.FromHtml("#5e5e5e").ToAvaloniaColor();
+
+    /// <summary>
     /// (Default) gl split grid splitter brush.
     /// </summary>    
     public static readonly ISolidColorBrush GRID_SPLITTER_MANAGER_SplitterBrush =
-        new SolidColorBrush(ColorTranslator.FromHtml("#5e5e5e").ToAvaloniaColor());
+        new SolidColorBrush(GRID_SPLITTER_MANAGER_SplitterColor);
 
     #endregion
 
