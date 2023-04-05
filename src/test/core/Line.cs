@@ -34,10 +34,10 @@ public class LineTest
             new Vector3(-7070.68194984f, -2641.19835418f, -2576.00295896f),
             new Vector3(9888.19787171f, 6913.09108639f, 3953.11622307f));
 
-        Assert.True(line.Contains(1e-3f, line.MidPoint));
-        Assert.False(line.Contains(1e-3f, line.MidPoint + 1e-2f * Vector3.UnitX));
-        Assert.False(line.Contains(1e-3f, line.MidPoint + 1e-2f * Vector3.UnitY));
-        Assert.False(line.Contains(1e-3f, line.MidPoint + 1e-2f * Vector3.UnitZ));
+        Assert.NotNull(line.Contains(1e-3f, line.MidPoint));
+        Assert.Null(line.Contains(1e-3f, line.MidPoint + 1e-2f * Vector3.UnitX));
+        Assert.Null(line.Contains(1e-3f, line.MidPoint + 1e-2f * Vector3.UnitY));
+        Assert.Null(line.Contains(1e-3f, line.MidPoint + 1e-2f * Vector3.UnitZ));
     }
 
 }
