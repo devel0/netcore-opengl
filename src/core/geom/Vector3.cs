@@ -48,11 +48,27 @@ public static partial class Ext
     /// <param name="cs">Source coordinate system.</param>
     /// <param name="evalCSOrigin">If true the origin of the coordinate system will be evaluated during transofmration ( default: true ).</param>
     /// <returns></returns>
-    public static Vector3 ToWCS(this Vector3 v, Matrix4x4 cs, bool evalCSOrigin = true)
+    public static Vector3 ToWCS(this in Vector3 v, in Matrix4x4 cs, bool evalCSOrigin = true)
     {
         var res = v.Transform(cs);
 
         return evalCSOrigin ? res : res - cs.Origin();
+    }
+
+    /// <summary>
+    /// Project this vector to the other given.<br/>
+    /// References: https://en.wikipedia.org/wiki/Vector_projection
+    /// </summary>
+    /// <param name="v">Vector to project.</param>
+    /// <param name="other">Receiving projection vector.</param>
+    /// <returns>Projection point if any on the other vector.</returns>
+    public static Vector3 Project(this in Vector3 v, in Vector3 other)
+    {
+        var oLen = other.Length();
+
+        if (oLen == 0) throw new Exception($"project on null vector");
+
+        return Vector3.Dot(v, other) / oLen * Vector3.Normalize(other);
     }
 
     public static string ToString(this Vector3 v, float tol)

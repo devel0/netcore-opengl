@@ -1,72 +1,9 @@
-﻿using GVector3 = GShark.Geometry.Vector3;
-using GShark.Geometry;
+﻿using GShark.Geometry;
 
 namespace example;
 
 public static partial class Toolkit
 {
-
-    /// <summary>
-    /// G-Shark Point3 to Vector3
-    /// </summary>    
-    public static System.Numerics.Vector3 ToVector3(this Point3 p) =>
-        new System.Numerics.Vector3((float)p.X, (float)p.Y, (float)p.Z);
-
-    /// <summary>
-    /// G-Shark Vector3 to Vector3
-    /// </summary>    
-    public static System.Numerics.Vector3 ToVector3(this GVector3 p) =>
-        new System.Numerics.Vector3((float)p.X, (float)p.Y, (float)p.Z);
-
-    /// <summary>
-    /// Vector3 to G-Shark Point3
-    /// </summary>
-    public static Point3 ToPoint3(Vector3 v) => new Point3(v.X, v.Y, v.Z);
-
-    /// <summary>
-    /// G-Shark nurb to GLTriangle helper
-    /// </summary>
-    /// <param name="nurb">nurb</param>
-    /// <param name="color">color of triangles generated</param>
-    /// <param name="N">number of nurb divisions</param>
-    /// <returns>triangles mesh of the nurb</returns>
-    public static IEnumerable<GLTriangle> NurbToGL(NurbsSurface nurb, Color color, int N = 6)
-    {
-        var u1 = 0d;
-        var u2 = 0d;
-        var v1 = 0d;
-        var v2 = 0d;
-        var step = 1d / N;
-
-        for (int ui = 0; ui < N; ++ui)
-        {
-            v1 = 0;
-            u2 = u1 + step;
-            if (u2 > 1) u2 = Round(u2, N / 10 + 1);
-
-            for (int vi = 0; vi < N; ++vi)
-            {
-                v2 = v1 + step;
-                if (v2 > 1) v2 = Round(v2, N / 10 + 1);
-
-                var p1 = ToVector3(nurb.PointAt(u1, v1));
-                var p2 = ToVector3(nurb.PointAt(u2, v1));
-                var p3 = ToVector3(nurb.PointAt(u2, v2));
-                var p4 = ToVector3(nurb.PointAt(u1, v2));
-
-                var plate = new Plate(p1, p2, p3, p4);
-
-                foreach (var tri in plate.GetTriangles(color))
-                {
-                    yield return tri;
-                }
-
-                v1 += step;
-            }
-
-            u1 += step;
-        }
-    }
 
     public static GLTriangleFigure Example0007(
         int SURF_DIVS = 100,
@@ -75,11 +12,11 @@ public static partial class Toolkit
         float TUBE_SPAN = 1000.0f)
     {
         var circleCenter = new Point3();
-        var NcircleCenter = ToVector3(circleCenter);
+        var NcircleCenter = circleCenter.ToVector3();
 
         var revolveCenter = TUBE_SPAN * new Point3(1, 0, 0);
 
-        var revolveDirection = new GVector3(0, 1, 0);
+        var revolveDirection = new GShark.Geometry.Vector3(0, 1, 0);
 
         var circleRadius = FIG_RADIUS;
 
@@ -88,7 +25,7 @@ public static partial class Toolkit
             circleCenter + new Point3(1, 0, 0) * circleRadius,
             circleCenter + new Point3(0, 1, 0) * circleRadius);
 
-        var NrevolveCenter = ToVector3(revolveCenter);
+        var NrevolveCenter = revolveCenter.ToVector3();
 
         var revolveAxis = new Ray(revolveCenter, revolveDirection);
 
@@ -123,10 +60,10 @@ public static partial class Toolkit
         return new GLTriangleFigure(glNurb.AsEnumerable())
         {
             ComputeNormal = (tri, vtx) =>
-            {
-                var q = revolvePathNurb!.ClosestPoint(ToPoint3(vtx.Position));
+            {                
+                var q = revolvePathNurb!.ClosestPoint(vtx.Position.ToPoint3());
 
-                return Vector3.Normalize(vtx.Position - ToVector3(q));
+                return Vector3.Normalize(vtx.Position - q.ToVector3());
             }
         };
 

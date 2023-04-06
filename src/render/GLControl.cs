@@ -659,7 +659,7 @@ public partial class GLControl : INotifyPropertyChanged
 
             if (Near < 0 || Far < 0 || Near == 0 || Near > Far)
             {
-                Debug.WriteLine($"Invalid Near:{Near} Far:{Far}");
+                // Debug.WriteLine($"Invalid Near:{Near} Far:{Far}");
                 Near = DEFAULT_Near;
                 Far = DEFAULT_Far;
             }
@@ -864,7 +864,7 @@ public partial class GLControl : INotifyPropertyChanged
 
             if (!Wireframe && ShadeWithEdge)
                 DoShader(
-                    fig => fig.PrimitiveType == GLPrimitiveType.Triangle,
+                    fig => fig.PrimitiveType == GLPrimitiveType.Triangle && !fig.ExcludeFromShadeWithEdge,
                     ShadeWithEdgeShader,
                     ptLightStructs,
                     clear: false);
@@ -929,8 +929,8 @@ public partial class GLControl : INotifyPropertyChanged
         if (invalidate) Invalidate();
     }
 
-    // <summary>
-    /// Create a raycast Line suitable to hit test of figure primitives.
+    /// <summary>
+    /// Create a raycast Line suitable for hit test of figure primitives.
     /// </summary>
     /// <param name="screen">Screen coord (x,y) [screen].</param>
     /// <example>

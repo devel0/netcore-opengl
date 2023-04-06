@@ -66,9 +66,18 @@ public static partial class Ext
 {
 
     /// <summary>
-    /// retrieve triangles plate p1,p2,p3 and p3,p4,p1    ;
-    /// if quad is degenre triangle a single triangle will returned
-    /// </summary>   
+    /// Create 2 triangles from given plate.<br/>    
+    /// Default normal of generated triangles will be in accord between them having:<br/>
+    /// - first triangle (P1, P2, P3)
+    /// - second triangle (P3, P4, P1)
+    /// </summary>
+    /// <param name="plate">Plate for which create 2 triangles.</param>
+    /// <param name="color">Color to apply to created triangles.</param>
+    /// <param name="setTextureST">If true <see cref="GLVertex.TextureST"/> will be set in order to map texture on the plate.</param>
+    /// <returns>Two triangles.</returns>
+    public static IEnumerable<GLTriangle> GetTriangles(this Plate plate,
+        Color? color = null, bool setTextureST = false) =>
+        plate.GetTriangles(color, color, color, color, setTextureST);
 
     /// <summary>
     /// Create 2 triangles from given plate.<br/>    
@@ -77,12 +86,20 @@ public static partial class Ext
     /// - second triangle (P3, P4, P1)
     /// </summary>
     /// <param name="plate">Plate for which create 2 triangles.</param>
-    /// <param name="color">(optional) color to apply to created triangles.</param>
+    /// <param name="color1">(optional) color to apply to vertex1.</param>
+    /// <param name="color2">(optional) color to apply to vertex2.</param>
+    /// <param name="color3">(optional) color to apply to vertex3.</param>
+    /// <param name="color4">(optional) color to apply to vertex4.</param>
     /// <param name="setTextureST">If true <see cref="GLVertex.TextureST"/> will be set in order to map texture on the plate.</param>
     /// <returns>Two triangles.</returns>
-    public static IEnumerable<GLTriangle> GetTriangles(this Plate plate, Color? color = null, bool setTextureST = false)
+    public static IEnumerable<GLTriangle> GetTriangles(this Plate plate,
+        Color? color1, Color? color2, Color? color3, Color? color4,
+        bool setTextureST = false)
     {
-        var colorVector = color?.ToVector4();
+        var colorVector1 = color1?.ToVector4();
+        var colorVector2 = color2?.ToVector4();
+        var colorVector3 = color3?.ToVector4();
+        var colorVector4 = color4?.ToVector4();
 
         if (setTextureST)
         {
@@ -94,33 +111,33 @@ public static partial class Ext
             if (plate.P1 == plate.P2)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P2, colorVector, textureST: textureST_1),
-                    new GLVertex(plate.P3, colorVector, textureST: textureST_2),
-                    new GLVertex(plate.P4, colorVector, textureST: textureST_3));
+                    new GLVertex(plate.P2, colorVector2, textureST: textureST_1),
+                    new GLVertex(plate.P3, colorVector3, textureST: textureST_2),
+                    new GLVertex(plate.P4, colorVector4, textureST: textureST_3));
             }
 
             else if (plate.P2 == plate.P3)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P3, colorVector, textureST: textureST_1),
-                    new GLVertex(plate.P4, colorVector, textureST: textureST_2),
-                    new GLVertex(plate.P1, colorVector, textureST: textureST_3));
+                    new GLVertex(plate.P3, colorVector3, textureST: textureST_1),
+                    new GLVertex(plate.P4, colorVector4, textureST: textureST_2),
+                    new GLVertex(plate.P1, colorVector1, textureST: textureST_3));
             }
 
             else if (plate.P3 == plate.P4)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P4, colorVector, textureST: textureST_1),
-                    new GLVertex(plate.P1, colorVector, textureST: textureST_2),
-                    new GLVertex(plate.P2, colorVector, textureST: textureST_3));
+                    new GLVertex(plate.P4, colorVector4, textureST: textureST_1),
+                    new GLVertex(plate.P1, colorVector1, textureST: textureST_2),
+                    new GLVertex(plate.P2, colorVector2, textureST: textureST_3));
             }
 
             else if (plate.P4 == plate.P1)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P1, colorVector, textureST: textureST_1),
-                    new GLVertex(plate.P2, colorVector, textureST: textureST_2),
-                    new GLVertex(plate.P3, colorVector, textureST: textureST_3));
+                    new GLVertex(plate.P1, colorVector1, textureST: textureST_1),
+                    new GLVertex(plate.P2, colorVector2, textureST: textureST_2),
+                    new GLVertex(plate.P3, colorVector3, textureST: textureST_3));
             }
 
             else
@@ -139,9 +156,9 @@ public static partial class Ext
                */
 
                 yield return new GLTriangle(
-                    new GLVertex(plate.P1, colorVector, textureST: textureST_1),
-                    new GLVertex(plate.P2, colorVector, textureST: textureST_2),
-                    new GLVertex(plate.P3, colorVector, textureST: textureST_3));
+                    new GLVertex(plate.P1, colorVector1, textureST: textureST_1),
+                    new GLVertex(plate.P2, colorVector2, textureST: textureST_2),
+                    new GLVertex(plate.P3, colorVector3, textureST: textureST_3));
 
                 /*
                    0,0    1,0
@@ -156,9 +173,9 @@ public static partial class Ext
                  */
 
                 yield return new GLTriangle(
-                   new GLVertex(plate.P3, colorVector, textureST: textureST_3),
-                   new GLVertex(plate.P4, colorVector, textureST: textureST_4),
-                   new GLVertex(plate.P1, colorVector, textureST: textureST_1));
+                   new GLVertex(plate.P3, colorVector3, textureST: textureST_3),
+                   new GLVertex(plate.P4, colorVector4, textureST: textureST_4),
+                   new GLVertex(plate.P1, colorVector1, textureST: textureST_1));
 
             }
         }
@@ -168,46 +185,46 @@ public static partial class Ext
             if (plate.P1 == plate.P2)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P2, colorVector),
-                    new GLVertex(plate.P3, colorVector),
-                    new GLVertex(plate.P4, colorVector));
+                    new GLVertex(plate.P2, colorVector2),
+                    new GLVertex(plate.P3, colorVector3),
+                    new GLVertex(plate.P4, colorVector4));
             }
 
             else if (plate.P2 == plate.P3)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P3, colorVector),
-                    new GLVertex(plate.P4, colorVector),
-                    new GLVertex(plate.P1, colorVector));
+                    new GLVertex(plate.P3, colorVector3),
+                    new GLVertex(plate.P4, colorVector4),
+                    new GLVertex(plate.P1, colorVector1));
             }
 
             else if (plate.P3 == plate.P4)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P4, colorVector),
-                    new GLVertex(plate.P1, colorVector),
-                    new GLVertex(plate.P2, colorVector));
+                    new GLVertex(plate.P4, colorVector4),
+                    new GLVertex(plate.P1, colorVector1),
+                    new GLVertex(plate.P2, colorVector2));
             }
 
             else if (plate.P4 == plate.P1)
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P1, colorVector),
-                    new GLVertex(plate.P2, colorVector),
-                    new GLVertex(plate.P3, colorVector));
+                    new GLVertex(plate.P1, colorVector1),
+                    new GLVertex(plate.P2, colorVector2),
+                    new GLVertex(plate.P3, colorVector3));
             }
 
             else
             {
                 yield return new GLTriangle(
-                    new GLVertex(plate.P1, colorVector),
-                    new GLVertex(plate.P2, colorVector),
-                    new GLVertex(plate.P3, colorVector));
+                    new GLVertex(plate.P1, colorVector1),
+                    new GLVertex(plate.P2, colorVector2),
+                    new GLVertex(plate.P3, colorVector3));
 
                 yield return new GLTriangle(
-                    new GLVertex(plate.P3, colorVector),
-                    new GLVertex(plate.P4, colorVector),
-                    new GLVertex(plate.P1, colorVector));
+                    new GLVertex(plate.P3, colorVector3),
+                    new GLVertex(plate.P4, colorVector4),
+                    new GLVertex(plate.P1, colorVector1));
             }
         }
     }

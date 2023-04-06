@@ -170,15 +170,34 @@ public static partial class Toolkit
     }
 
     /// <summary>
-    /// Create a right-hand rule world matrix with given origin and normalized orthonormal x, y base vectors.
+    /// Create a right-hand rule world matrix with given origin and reference vectors vx, vy.    
     /// </summary>
     /// <param name="origin">World origin.</param>
-    /// <param name="baseX">World basex.</param>
-    /// <param name="baseY">World basey.</param>
-    /// <returns>World matrix.</returns>
-    public static Matrix4x4 MakeCS(Vector3 origin, Vector3 baseX, Vector3 baseY)
+    /// <param name="vx">Reference vector to compute basex.</param>
+    /// <param name="vy">Reference vector to compute basey.</param>
+    /// <param name="makeOrthonormalization">If false (default) vx and vy must given already normalized and ensured to be orthonormal.<br/>
+    /// If true base vector are computed by giving hinting vx, vy arguments:<br/>
+    /// - baseZ = Normalize(vx x vy)<br/>
+    /// - baseX = Normalize(vx)<br/>
+    /// - baseY = baseZ x baseX<br/></param>
+    /// <returns>World matrix with basex aligned to given vx.</returns>
+    public static Matrix4x4 MakeCS(Vector3 origin, Vector3 vx, Vector3 vy, bool makeOrthonormalization = false)
     {
-        var baseZ = Vector3.Normalize(Vector3.Cross(baseX, baseY));
+        Vector3 baseX, baseY, baseZ;
+
+        if (makeOrthonormalization)
+        {
+            baseZ = Vector3.Normalize(Vector3.Cross(vx, vy));
+            baseX = Vector3.Normalize(vx);
+            baseY = Vector3.Cross(baseZ, baseX);
+        }
+
+        else
+        {
+            baseX = vx;
+            baseY = vy;
+            baseZ = Vector3.Normalize(Vector3.Cross(vx, vy));
+        }
 
         return new Matrix4x4(
             baseX.X, baseX.Y, baseX.Z, 0, // WorldAxisX
@@ -186,6 +205,16 @@ public static partial class Toolkit
             baseZ.X, baseZ.Y, baseZ.Z, 0, // WorldAxisZ
             origin.X, origin.Y, origin.Z, 1); // WorldPos
     }
+
+    /// <summary>
+    /// Create a right-hand rule world matrix with given origin and normalized orthonormal x, y base vectors.
+    /// </summary>
+    /// <param name="origin">World origin.</param>
+    /// <param name="baseX">World basex.</param>
+    /// <param name="baseY">World basey.</param>
+    /// <returns>World matrix.</returns>
+    public static Matrix4x4 MakeCS(Vector3 origin, Vector3 baseX, Vector3 baseY) =>
+        MakeCS(origin, baseX, baseY, makeOrthonormalization: false);
 
     /// <summary>
     /// Create world matrix with given origin and normalized orthonormal x, y, z base vectors.

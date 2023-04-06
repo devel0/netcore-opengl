@@ -45,13 +45,13 @@ public class Arrow
     /// </summary>
     /// <param name="from">Arrow from position.</param>
     /// <param name="to">Arrow to position.</param>
-    /// <param name="diameter">(Optional) Arrow diameter or (10%) of length if not specified.</param>
-    public Arrow(in Vector3 from, in Vector3 to, float? diameter = null)
+    /// <param name="diameterFactor">(Optional) Arrow rod diameter factor to compute rod diameter as length * factor ( default:0.1 ).</param>
+    public Arrow(in Vector3 from, in Vector3 to, float? diameterFactor = null)
     {
         From = from;
         To = to;
-        if (diameter is null) diameter = (to - from).Length() * .1f;
-        Diameter = diameter.Value;
+        if (diameterFactor is null) diameterFactor = .1f;
+        Diameter = (to - from).Length() * diameterFactor.Value;
     }
 
     /// <summary>
@@ -69,7 +69,7 @@ public class Arrow
     /// Gl triangle figure that represents the arrow.
     /// </summary>
     /// <param name="divisions">Number of divisions to refine the figure. (Min:4)</param>    
-    public IEnumerable<GLTriangle> Triangles(int divisions)
+    public IEnumerable<GLTriangle> Triangles(int divisions = DEFAULT_ARROW_DIVISIONS)
     {
         var cs = MakeCS(From, Vector3.Normalize(To - From));
 

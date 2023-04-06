@@ -49,7 +49,7 @@ The library is composed by following modules:
 | **core** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)       | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
 | **render** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
 | **gui** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)          | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
-| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core]                                                 | box, cone, sphere, arrow shapes |
+| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core], [G-Shark]                                      | box, cone, sphere, arrow shapes |
 
 [core]: https://www.nuget.org/packages/netcore-opengl-core
 [render]: https://www.nuget.org/packages/netcore-opengl-render
@@ -62,6 +62,7 @@ The library is composed by following modules:
 [skiasharp.harfbuzz]: https://www.nuget.org/packages/SkiaSharp.HarfBuzz
 [avalonia]: https://www.nuget.org/packages/Avalonia
 [netcore-desktop]: https://www.nuget.org/packages/netcore-desktop
+[g-shark]: https://www.nuget.org/packages/GShark
 
 ## Quickstart
 
@@ -183,6 +184,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum. |
 | [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |
 | [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |
+| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |
 
 [es0]: examples/example-0000/Program.cs
 [es1]: examples/example-0001/Program.cs
@@ -205,6 +207,7 @@ Click on the `example code` link to open source code of the example, read top to
 [es18]: examples/example-0018/Program.cs
 [es19]: examples/example-0019/Views/MainWindow.axaml.cs
 [es20]: examples/example-0020/Program.cs
+[es21]: examples/example-0021/Views/MainWindow.axaml.cs
 [e0]: data/images/examples/0000.png
 [e1]: data/images/examples/0001.png
 [e2]: data/images/examples/0002.png
@@ -225,6 +228,7 @@ Click on the `example code` link to open source code of the example, read top to
 [e17]: data/images/examples/0017.png
 [e18]: data/images/examples/0018.png
 [e19]: data/images/examples/0019.png
+[e21]: data/images/examples/0021.gif
 
 ### Running examples from console
 
