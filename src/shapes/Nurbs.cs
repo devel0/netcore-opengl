@@ -22,11 +22,19 @@ public static partial class Ext
     /// </summary>
     public static Point3 ToPoint3(this in System.Numerics.Vector3 v) => new Point3(v.X, v.Y, v.Z);
 
+    /// <summary>
+    /// Enumerable Vector3 to Enumerable G-Shark Point3
+    /// </summary>
+    /// <param name="vs">Vector3 enumerable.</param>
+    /// <returns>G-Shark Point3 enumerable.</returns>
+    public static IEnumerable<Point3> ToPoint3(this IEnumerable<System.Numerics.Vector3> vs) =>
+        vs.Select(v => v.ToPoint3());
+
 }
 
 public static partial class Toolkit
 {
-    
+
     /// <summary>
     /// G-Shark nurb to GLTriangle helper
     /// </summary>
@@ -34,7 +42,7 @@ public static partial class Toolkit
     /// <param name="color">color of triangles generated</param>
     /// <param name="N">number of nurb divisions</param>
     /// <returns>triangles mesh of the nurb</returns>
-    public static IEnumerable<GLTriangle> NurbToGL(NurbsSurface nurb, Color color, int N = 6)
+    public static IEnumerable<GLTriangle> NurbToGL(this NurbsSurface nurb, Color color, int N = 6)
     {
         var u1 = 0d;
         var u2 = 0d;
