@@ -35,7 +35,7 @@ public static partial class Toolkit
 
         var nurb = NurbsSurface.Revolved(circle, revolveAxis, rotationAngle);
 
-        var glNurb = NurbToGL(nurb, figColor, SURF_DIVS).ToList();
+        var glNurb = nurb.NurbToGL(figColor, SURF_DIVS).ToList();
 
         var u = 0d;
         var step = 1d / SURF_DIVS;
