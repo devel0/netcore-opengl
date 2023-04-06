@@ -350,13 +350,13 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             {
                 foreach (var tri in hitTris)
                 {
-                    tri.SetColor(DEFAULT_MaterialColor);
+                    tri.SetPrimitiveColor(DEFAULT_MaterialColor);
                     tri.Order = DEFAULT_FigureOrder;
                 }
 
                 foreach (var tri in newHitTris)
                 {
-                    tri.SetColor(Color.Yellow);
+                    tri.SetPrimitiveColor(Color.Yellow);
                     tri.Order = 1;
                 }
 

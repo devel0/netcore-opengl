@@ -194,7 +194,7 @@ class Program
                             // change the color and order ( default:0 ) to 1 in order to bring over the triangle
                             // elsewhere edges of adjacent triangles can cover highlighted triangle edges
                             Debug.WriteLine($"hit tri [{tri}]");
-                            tri.SetColor(Color.Yellow);
+                            tri.SetPrimitiveColor(Color.Yellow);
                             tri.Order = 1;
 
                             // add a further line (orange) to hitted triangle
