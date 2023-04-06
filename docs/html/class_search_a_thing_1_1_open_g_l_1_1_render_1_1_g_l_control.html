@@ -133,6 +133,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a856e4e130210a03cd970f7a57d28f99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle display of camera frustum object ( generated at runtime through a temporary vertex manager ).  <br /></td></tr>
 <tr class="separator:a856e4e130210a03cd970f7a57d28f99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09cbf476a1d78c277380c9a99010ddb6"><td class="memItemLeft" align="right" valign="top">Line&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a09cbf476a1d78c277380c9a99010ddb6">RayCastLocal</a> (in Vector2 screen)</td></tr>
+<tr class="memdesc:a09cbf476a1d78c277380c9a99010ddb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a raycast Line suitable for hit test of figure primitives.  <br /></td></tr>
 <tr class="separator:a09cbf476a1d78c277380c9a99010ddb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b013ae153047446187737c929853f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a0b013ae153047446187737c929853f36">ToggleWireframe</a> (bool invalidate=DEFAULT_INVALIDATE)</td></tr>
 <tr class="memdesc:a0b013ae153047446187737c929853f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle wireframe mode.  <br /></td></tr>
@@ -1331,7 +1332,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a raycast Line suitable to hit test of figure primitives.</p>
+
+<p>Create a raycast Line suitable for hit test of figure primitives. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">screen</td><td>Screen coord (x,y) [screen].</td></tr>
@@ -1347,7 +1349,22 @@ Here is the caller graph for this function:</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">foreach</span> (var fig <span class="keywordflow">in</span> figures)</div>
 <div class="line">{</div>
-<div class="line">    var oraycast = lraycast.Transform(fig.ObjectMatrix.Inverse());</div>
+<div class="line">    <span class="comment">// lraycast is relative to local space coord</span></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="comment">// testing figure vs lraycast could not work correctly because a figure</span></div>
+<div class="line">    <span class="comment">// can have an object matrix applied that translates into different local space</span></div>
+<div class="line">    <span class="comment">// respect those considered by the RayCastLocal where no figure concept exists thus ObjectMatrix=Identity.</span></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="comment">// In order to compare intersection between lraycast and primitives of the figure</span></div>
+<div class="line">    <span class="comment">// we need before to transform lraycast to an object raycast suitable to match the same space</span></div>
+<div class="line">    <span class="comment">// where figure primitives lies.</span></div>
+<div class="line">    Line oraycast;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (fig.ObjectMatrixIsIdentity) <span class="comment">// no transform required if fig object matrix already an identity</span></div>
+<div class="line">        oraycast = lraycast;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        oraycast = lraycast.Transform(fig.ObjectMatrix.Inverse());</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">foreach</span> (var tri <span class="keywordflow">in</span> fig.Primitives.OfType&lt;GLTriangle&gt;())</div>
 <div class="line">    {</div>

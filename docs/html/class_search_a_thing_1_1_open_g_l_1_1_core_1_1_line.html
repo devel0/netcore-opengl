@@ -95,6 +95,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7dd4781e22577e9df9871dfbd29cc6ea"><td class="memItemLeft" align="right" valign="top">Vector3?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#a7dd4781e22577e9df9871dfbd29cc6ea">Intersect</a> (Matrix4x4 plane)</td></tr>
 <tr class="memdesc:a7dd4781e22577e9df9871dfbd29cc6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if this line intersect given plane and retrieve intersection point or null if no intersect.  <br /></td></tr>
 <tr class="separator:a7dd4781e22577e9df9871dfbd29cc6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0d241ed350710f5d8d74a740a653a4"><td class="memItemLeft" align="right" valign="top">float?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#a2c0d241ed350710f5d8d74a740a653a4">Contains</a> (float tol, in Vector3 p)</td></tr>
+<tr class="memdesc:a2c0d241ed350710f5d8d74a740a653a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this line contains given point within given tolerance.  <br /></td></tr>
+<tr class="separator:a2c0d241ed350710f5d8d74a740a653a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa73e7c4dd1df5fd5fbf81c7764ee1533"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#aa73e7c4dd1df5fd5fbf81c7764ee1533">ToString</a> ()</td></tr>
 <tr class="separator:aa73e7c4dd1df5fd5fbf81c7764ee1533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -119,6 +122,9 @@ Properties</h2></td></tr>
 <tr class="memitem:af2689248b2011311cf5d089799ced033"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#af2689248b2011311cf5d089799ced033">To</a><code> [get]</code></td></tr>
 <tr class="memdesc:af2689248b2011311cf5d089799ced033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate "to" of the line.  <br /></td></tr>
 <tr class="separator:af2689248b2011311cf5d089799ced033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ad70bf674d17a6f7b0101b7b0821d3"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#a54ad70bf674d17a6f7b0101b7b0821d3">MidPoint</a><code> [get]</code></td></tr>
+<tr class="memdesc:a54ad70bf674d17a6f7b0101b7b0821d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line midpoint as (From + To) / 2.  <br /></td></tr>
+<tr class="separator:a54ad70bf674d17a6f7b0101b7b0821d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab87d04698fba58ca22fe5ebecef0755e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#ab87d04698fba58ca22fe5ebecef0755e">Length</a><code> [get]</code></td></tr>
 <tr class="memdesc:ab87d04698fba58ca22fe5ebecef0755e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the line segment.  <br /></td></tr>
 <tr class="separator:ab87d04698fba58ca22fe5ebecef0755e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +134,44 @@ Properties</h2></td></tr>
  Internally encoded as From and V vectors, where To = From + V.<br  />
  Can be created through static methods FromTo and PointV. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2c0d241ed350710f5d8d74a740a653a4" name="a2c0d241ed350710f5d8d74a740a653a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c0d241ed350710f5d8d74a740a653a4">&#9670;&#160;</a></span>Contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float? Contains </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in Vector3&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>States if this line contains given point within given tolerance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tol</td><td>Comparision tolerance.</td></tr>
+    <tr><td class="paramname">p</td><td>Point to test if its contained in this line.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Null if line not contain given point, a non null float that represent distance to projected point if contained under given tolerance.</dd></dl>
+
+</div>
+</div>
 <a id="ad30b51a236929c95b180f5a4660674ea" name="ad30b51a236929c95b180f5a4660674ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad30b51a236929c95b180f5a4660674ea">&#9670;&#160;</a></span>FromTo()</h2>
 
@@ -365,6 +409,30 @@ Here is the caller graph for this function:</div>
 <p>Length of the line segment. </p>
 <p><br  />
  </p>
+
+</div>
+</div>
+<a id="a54ad70bf674d17a6f7b0101b7b0821d3" name="a54ad70bf674d17a6f7b0101b7b0821d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54ad70bf674d17a6f7b0101b7b0821d3">&#9670;&#160;</a></span>MidPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MidPoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Line midpoint as (From + To) / 2. </p>
 
 </div>
 </div>

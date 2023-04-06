@@ -15,5 +15,6 @@ var searchData=
   ['notemptyrenderpreview_12',['NotEmptyRenderPreview',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a41cfe1e536dc4676f529ab55ad4752d6',1,'SearchAThing::OpenGL::Render::GLControl']]],
   ['notification_5ftitle_5finput_5foutput_13',['NOTIFICATION_TITLE_INPUT_OUTPUT',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_constants.html#ad098d8dfae1cda17d9d0ad367dcb648a',1,'SearchAThing::OpenGL::GUI::Constants']]],
   ['notificationmanager_14',['NotificationManager',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_g_l_window.html#a68217d83ff704d2b35554e013103d39c',1,'SearchAThing::OpenGL::GUI::GLWindow']]],
-  ['notify_15',['Notify',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#a414d7be7c9f944da7fe8139a5f82ec6d',1,'SearchAThing::OpenGL::GUI::AvaloniaGLControl']]]
+  ['notify_15',['Notify',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#a414d7be7c9f944da7fe8139a5f82ec6d',1,'SearchAThing::OpenGL::GUI::AvaloniaGLControl']]],
+  ['nurbtogl_16',['NurbToGL',['../class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_toolkit.html#ad174bcc56a4c79989d871c01fd621de7',1,'SearchAThing::OpenGL::Shapes::Toolkit']]]
 ];

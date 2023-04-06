@@ -82,19 +82,22 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aefdcfa9795f60b9cb9dd6a8cfc089f26"><td class="memItemLeft" align="right" valign="top">static GLLineFigure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_toolkit.html#aefdcfa9795f60b9cb9dd6a8cfc089f26">MakeWCSFigure</a> (float size=1, Color? originColor=null, bool setOriginColor=true, Vector3? origin=null)</td></tr>
-<tr class="memdesc:aefdcfa9795f60b9cb9dd6a8cfc089f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a figure that represents a wcs with RGB X:red Y:green Z:blue axes.  <br /></td></tr>
-<tr class="separator:aefdcfa9795f60b9cb9dd6a8cfc089f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2ff8ac885b785dfb293c635da5f2d9b"><td class="memItemLeft" align="right" valign="top">static GLLineFigure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_toolkit.html#ad2ff8ac885b785dfb293c635da5f2d9b">MakeCSFigure</a> (Matrix4x4 cs, float size=1, Color? originColor=null, bool setOriginColor=true)</td></tr>
-<tr class="memdesc:ad2ff8ac885b785dfb293c635da5f2d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a figure that represents a cs with RGB X:red Y:green Z:blue axes.  <br /></td></tr>
-<tr class="separator:ad2ff8ac885b785dfb293c635da5f2d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4adb559de7c33f9c06b9264db13865e"><td class="memItemLeft" align="right" valign="top">static GLFigureBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_toolkit.html#aa4adb559de7c33f9c06b9264db13865e">MakeWCSFigure</a> (float size=1, Color? originColor=null, bool setOriginColor=true, Vector3? origin=null, float? solidArrowsDiameterFactor=null)</td></tr>
+<tr class="memdesc:aa4adb559de7c33f9c06b9264db13865e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a figure that represents a wcs with RGB X:red Y:green Z:blue axes.  <br /></td></tr>
+<tr class="separator:aa4adb559de7c33f9c06b9264db13865e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09fb7e3f3e491a4d6de4c15bfc56d036"><td class="memItemLeft" align="right" valign="top">static GLFigureBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_toolkit.html#a09fb7e3f3e491a4d6de4c15bfc56d036">MakeCSFigure</a> (Matrix4x4 cs, float size=1, Color? originColor=null, bool setOriginColor=true, float? solidArrowsDiameterFactor=null)</td></tr>
+<tr class="memdesc:a09fb7e3f3e491a4d6de4c15bfc56d036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a figure that represents a cs with RGB X:red Y:green Z:blue axes.  <br /></td></tr>
+<tr class="separator:a09fb7e3f3e491a4d6de4c15bfc56d036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af65b1b6cd37c1a31caa7f35ddd7d6121"><td class="memItemLeft" align="right" valign="top">static GLLineFigure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_toolkit.html#af65b1b6cd37c1a31caa7f35ddd7d6121">MakeRectangle</a> (Matrix4x4 csCenter, float w, float h, Color? color=null)</td></tr>
 <tr class="memdesc:af65b1b6cd37c1a31caa7f35ddd7d6121"><td class="mdescLeft">&#160;</td><td class="mdescRight">make rectangle by specify center, width, height  <br /></td></tr>
 <tr class="separator:af65b1b6cd37c1a31caa7f35ddd7d6121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad174bcc56a4c79989d871c01fd621de7"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; GLTriangle &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_toolkit.html#ad174bcc56a4c79989d871c01fd621de7">NurbToGL</a> (NurbsSurface nurb, Color color, int N=6)</td></tr>
+<tr class="memdesc:ad174bcc56a4c79989d871c01fd621de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">G-Shark nurb to GLTriangle helper.  <br /></td></tr>
+<tr class="separator:ad174bcc56a4c79989d871c01fd621de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad2ff8ac885b785dfb293c635da5f2d9b" name="ad2ff8ac885b785dfb293c635da5f2d9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2ff8ac885b785dfb293c635da5f2d9b">&#9670;&#160;</a></span>MakeCSFigure()</h2>
+<a id="a09fb7e3f3e491a4d6de4c15bfc56d036" name="a09fb7e3f3e491a4d6de4c15bfc56d036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fb7e3f3e491a4d6de4c15bfc56d036">&#9670;&#160;</a></span>MakeCSFigure()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -103,7 +106,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static GLLineFigure MakeCSFigure </td>
+          <td class="memname">static GLFigureBase MakeCSFigure </td>
           <td>(</td>
           <td class="paramtype">Matrix4x4&#160;</td>
           <td class="paramname"><em>cs</em>, </td>
@@ -124,7 +127,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>setOriginColor</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>setOriginColor</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?&#160;</td>
+          <td class="paramname"><em>solidArrowsDiameterFactor</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -146,6 +155,13 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">size</td><td>(Optional) Axes length (Default:1).</td></tr>
     <tr><td class="paramname">originColor</td><td>(Optional) Color of the origin (Default:white).</td></tr>
     <tr><td class="paramname">setOriginColor</td><td>(Optional) Set the color of the origin (Default:true).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solidArrowsDiameterFactor</td><td>(Optional) If not null arrows instead lines will created with specified diameter factor. Arrow.Arrow(in System.Numerics.Vector3, in System.Numerics.Vector3, float?) (Default:null).</td></tr>
   </table>
   </dd>
 </dl>
@@ -220,8 +236,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aefdcfa9795f60b9cb9dd6a8cfc089f26" name="aefdcfa9795f60b9cb9dd6a8cfc089f26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefdcfa9795f60b9cb9dd6a8cfc089f26">&#9670;&#160;</a></span>MakeWCSFigure()</h2>
+<a id="aa4adb559de7c33f9c06b9264db13865e" name="aa4adb559de7c33f9c06b9264db13865e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4adb559de7c33f9c06b9264db13865e">&#9670;&#160;</a></span>MakeWCSFigure()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,7 +246,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static GLLineFigure MakeWCSFigure </td>
+          <td class="memname">static GLFigureBase MakeWCSFigure </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>size</em> = <code>1</code>, </td>
@@ -251,7 +267,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Vector3?&#160;</td>
-          <td class="paramname"><em>origin</em> = <code>null</code>&#160;</td>
+          <td class="paramname"><em>origin</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?&#160;</td>
+          <td class="paramname"><em>solidArrowsDiameterFactor</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -273,18 +295,74 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">originColor</td><td>(Optional) Color of the origin (Default:white).</td></tr>
     <tr><td class="paramname">setOriginColor</td><td>(Optional) Set the color of the origin (Default:true).</td></tr>
     <tr><td class="paramname">origin</td><td>(Optional) Wcs origin (Default:0,0,0).</td></tr>
+    <tr><td class="paramname">solidArrowsDiameterFactor</td><td>(Optional) If not null arrows instead lines will created with specified diameter factor. Arrow.Arrow(in System.Numerics.Vector3, in System.Numerics.Vector3, float?) (Default:null).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Wcs figure.</dd></dl>
+<p><br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>Wcs figure.</dd></dl>
 <p><br  />
  </p>
+
+</div>
+</div>
+<a id="ad174bcc56a4c79989d871c01fd621de7" name="ad174bcc56a4c79989d871c01fd621de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad174bcc56a4c79989d871c01fd621de7">&#9670;&#160;</a></span>NurbToGL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt; GLTriangle &gt; NurbToGL </td>
+          <td>(</td>
+          <td class="paramtype">NurbsSurface&#160;</td>
+          <td class="paramname"><em>nurb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em> = <code>6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>G-Shark nurb to GLTriangle helper. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nurb</td><td>nurb</td></tr>
+    <tr><td class="paramname">color</td><td>color of triangles generated</td></tr>
+    <tr><td class="paramname">N</td><td>number of nurb divisions</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>triangles mesh of the nurb</dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/shapes/Figures.CS.cs</li>
 <li>src/shapes/Figures.Rectangle.cs</li>
+<li>src/shapes/Nurbs.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
