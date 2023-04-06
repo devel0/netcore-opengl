@@ -71,6 +71,16 @@ public static partial class Ext
         return Vector3.Dot(v, other) / oLen * Vector3.Normalize(other);
     }
 
+    /// <summary>
+    /// Project this vector to given xy plane.
+    /// </summary>
+    /// <param name="v">Vector to project.</param>
+    /// <param name="xyPlane">XY plane which project the vector into.</param>
+    /// <returns>Projected vector.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static Vector3? Project(this in Vector3 v, in Matrix4x4 xyPlane) =>
+        v.ToUCS(xyPlane).Fn(pv => new Vector3(pv.X, pv.Y, 0)).ToWCS(xyPlane);
+
     public static string ToString(this Vector3 v, float tol)
     {
         var digits = System.Math.Max(0, -tol.Magnitude());
