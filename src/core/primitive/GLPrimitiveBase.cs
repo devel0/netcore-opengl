@@ -44,18 +44,35 @@ public abstract class GLPrimitiveBase : IGLPrimitive
 
     protected abstract GLPrimitiveBase MakeInstance();
 
-    public IGLVertexManagerObject Copy()
+    /// <summary>
+    /// Creates a copy with all elements down the hierarchy until <see cref="GLPrimitiveBase"/> included.
+    /// </summary>    
+    protected GLPrimitiveBase CopyBase()
     {
         var res = MakeInstance();
 
         res.Order = Order;
 
-        res.CopyFromSpecialized(this);
+        return res;
+    }
+
+    protected abstract void CopySpecialized(GLPrimitiveBase other);
+
+    public IGLVertexManagerObject Copy()
+    {
+        var res = CopyBase();
+
+        res.CopySpecialized(this);
 
         return res;
     }
 
-    protected abstract void CopyFromSpecialized(GLPrimitiveBase other);
+    /// <summary>
+    /// Create a mirrored primitive against given xy plane.
+    /// </summary>
+    /// <param name="xyPlane">XY mirror plane.</param>
+    /// <returns>Mirrored primitive.</returns>
+    public abstract GLPrimitiveBase? Mirror(in Matrix4x4 xyPlane);
 
     #region Order
 
@@ -114,7 +131,7 @@ public abstract class GLPrimitiveBase : IGLPrimitive
 
 public static partial class Ext
 {
-   
+
     /// <summary>
     /// Set the color primitives vertexes.
     /// </summary>

@@ -92,12 +92,28 @@ public class GLLine : GLPrimitiveBase, IGLLine
 
     protected override GLPrimitiveBase MakeInstance() => new GLLine();
 
-    protected override void CopyFromSpecialized(GLPrimitiveBase other)
+    protected override void CopySpecialized(GLPrimitiveBase other)
     {
         var sother = (GLLine)other;
 
         From = (GLVertex)sother.From.Copy();
         To = (GLVertex)sother.To.Copy();
+    }
+
+    public override GLPrimitiveBase? Mirror(in Matrix4x4 xyPlane)
+    {
+        var mirroredFrom = From.Mirror(xyPlane);
+        if (mirroredFrom is null) return null;
+
+        var mirroredTo = To.Mirror(xyPlane);
+        if (mirroredTo is null) return null;
+
+        var copy = (GLLine)this.CopyBase();
+
+        copy.From = mirroredFrom;
+        copy.To = mirroredTo;
+
+        return copy;
     }
 
     /// <summary>
@@ -195,7 +211,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="plane">World matrix plane.</param>
     /// <seealso cref="SearchAThing.OpenGL.Core.Toolkit.MakeCS"/>
     /// <returns>Intersection point or null if no intersection found.</returns>
-    public Vector3? Intersect(Matrix4x4 plane) => Line.FromTo(From.Position, To.Position).Intersect(plane);
+    public Vector3? Intersect(Matrix4x4 plane) => Line.FromTo(From.Position, To.Position).Intersect(plane);    
 
     public override string ToString() => Invariant($"{From} {To}");
 }

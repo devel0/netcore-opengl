@@ -258,6 +258,24 @@ public class GLVertex : IGLVertex
         TextureST = TextureST
     };
 
+    /// <summary>
+    /// Mirror this vertex to the other side of given xy plane.
+    /// </summary>
+    /// <param name="refXYPlane">Reference xy plane.</param>
+    /// <returns>Copy of this vertex, mirrored.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public GLVertex? Mirror(in Matrix4x4 refXYPlane)
+    {
+        var qprj = Position.Project(refXYPlane);
+        if (qprj is null) return null;
+
+        var vtx = (GLVertex)Copy();
+        vtx.Position = qprj.Value + (qprj.Value - vtx.Position);
+        vtx.InvertNormal = !vtx.InvertNormal;
+
+        return vtx;
+    }
+
     public override string ToString() => Invariant($"{Position}");
 
 }

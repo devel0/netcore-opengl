@@ -24,7 +24,25 @@ public class GLLineFigure : GLFigureTypeBase<GLLine>, IGLLineFigure
 
     protected override GLFigureBase MakeInstance() => new GLLineFigure();
 
-    protected override void CopyFromSpecialized(GLFigureBase other) =>
-        base.CopyFromSpecialized(other);
+    protected override void CopySpecialized(GLFigureBase other) =>
+        base.CopySpecialized(other);
+
+    public override GLFigureBase? Mirror(in Matrix4x4 xyPlane)
+    {
+        var mirroredPrimitives = new ObservableCollection<GLPrimitiveBase>();
+        foreach (var primitive in PrimitivesOBC)
+        {
+            var q = primitive.Mirror(xyPlane);
+            if (q is null) return null;
+
+            mirroredPrimitives.Add(q);
+        }
+
+        var copy = (GLLineFigure)this.CopyBase();
+        
+        copy.PrimitivesOBC = mirroredPrimitives;
+
+        return copy;
+    }
 
 }

@@ -66,7 +66,7 @@ public abstract class GLFigureTypeBase<P> : GLFigureBase where P : GLPrimitiveBa
     /// </summary>    
     public GLFigureTypeBase(params P[] primitives) : this(primitives.AsEnumerable()) { }
 
-    protected override void CopyFromSpecialized(GLFigureBase other)
+    protected override void CopySpecialized(GLFigureBase other)
     {
         var sother = (GLFigureTypeBase<P>)other;
 

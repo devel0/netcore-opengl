@@ -54,11 +54,23 @@ public class GLPoint : GLPrimitiveBase, IGLPoint
 
     protected override GLPrimitiveBase MakeInstance() => new GLPoint();
 
-    protected override void CopyFromSpecialized(GLPrimitiveBase other)
+    protected override void CopySpecialized(GLPrimitiveBase other)
     {
         var sother = (GLPoint)other;
 
         Vertex = (GLVertex)sother.Vertex.Copy();
+    }
+
+    public override GLPrimitiveBase? Mirror(in Matrix4x4 xyPlane)
+    {
+        var mirroredVertex = Vertex.Mirror(xyPlane);
+        if (mirroredVertex is null) return null;
+
+        var copy = (GLPoint)this.CopyBase();
+
+        copy.Vertex = mirroredVertex;
+
+        return copy;
     }
 
     public override IEnumerable<GLVertex> Vertexes
@@ -68,4 +80,7 @@ public class GLPoint : GLPrimitiveBase, IGLPoint
             yield return Vertex;
         }
     }
+
+
+
 }
