@@ -91,8 +91,9 @@ public partial class AvaloniaGLControl
 
         var mouse_cur_pt = e.GetCurrentPoint(this);
 
-        var mouse_cur_x = (float)mouse_cur_pt.Position.X;
-        var mouse_cur_y = (float)mouse_cur_pt.Position.Y;
+        var mouse_cur = new Vector2((float)mouse_cur_pt.Position.X, (float)mouse_cur_pt.Position.Y);
+
+        GLControl.PointerCoord = mouse_cur;
 
         var mm = GLControl.ModelMatrix;
         var vm = GLControl.ViewMatrix;
@@ -105,7 +106,7 @@ public partial class AvaloniaGLControl
         {
             GLControl.Pan(
                 PanStart.StartPt,
-                new Vector2(mouse_cur_x, mouse_cur_y),
+                mouse_cur,
                 PanStart.GLMatrixes);
 
             // PanStart = null;
