@@ -19,8 +19,9 @@ public struct GLVertexStruct
     public Vector3 Position;
 
     /// <summary>
-    /// Vertex normal [local].
+    /// Vertex (effective) normal [local].
     /// </summary>
+    /// <seealso cref="GLVertex.EffectiveNormal"/>.
     [FieldOffset(12)]
     public Vector3 Normal;
 
