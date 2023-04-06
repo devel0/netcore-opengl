@@ -21,7 +21,7 @@ public class GLVertex : IGLVertex
     public GLVertexStruct ToStruct() => new GLVertexStruct
     {
         Position = Position,
-        Normal = Normal,
+        Normal = EffectiveNormal,
         MatColor = MaterialColor,
         MatProp = MaterialProperties,
         TextureST = TextureST
@@ -153,6 +153,8 @@ public class GLVertex : IGLVertex
                     ((GLVertexManager?)ParentVertexManager)?.AddVertex(this);
 
                 OnPropertyChanged();
+
+                OnPropertyChanged(nameof(EffectiveNormal));
             }
         }
     }
@@ -166,6 +168,44 @@ public class GLVertex : IGLVertex
             _Normal = normal;
 
             OnPropertyChanged(nameof(Normal));
+
+            OnPropertyChanged(nameof(EffectiveNormal));
+        }
+    }
+
+    #endregion
+
+    #region InvertNormal
+
+    private bool _InvertNormal = false;
+
+    public bool InvertNormal
+    {
+        get => _InvertNormal;
+        set
+        {
+            var changed = value != _InvertNormal;
+            if (changed)
+            {
+                _InvertNormal = value;
+                OnPropertyChanged();
+
+                OnPropertyChanged(nameof(EffectiveNormal));
+            }
+        }
+    }
+
+    #endregion
+
+    #region EffectiveNormal
+
+    private Vector3 _EffectiveNormal = DEFAULT_Normal;
+
+    public Vector3 EffectiveNormal
+    {
+        get
+        {
+            return InvertNormal ? -Normal : Normal;
         }
     }
 
@@ -257,6 +297,24 @@ public class GLVertex : IGLVertex
         Normal = Normal,
         TextureST = TextureST
     };
+
+    /// <summary>
+    /// Mirror this vertex to the other side of given xy plane.
+    /// </summary>
+    /// <param name="refXYPlane">Reference xy plane.</param>
+    /// <returns>Copy of this vertex, mirrored.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public GLVertex? Mirror(in Matrix4x4 refXYPlane)
+    {
+        var qprj = Position.Project(refXYPlane);
+        if (qprj is null) return null;
+
+        var vtx = (GLVertex)Copy();
+        vtx.Position = qprj.Value + (qprj.Value - vtx.Position);
+        vtx.InvertNormal = !vtx.InvertNormal;
+
+        return vtx;
+    }
 
     public override string ToString() => Invariant($"{Position}");
 

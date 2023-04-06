@@ -28,6 +28,16 @@ public class Cone
     public float Height { get; private set; }
 
     /// <summary>
+    /// If true figure include bottom closure (Default: true).
+    /// </summary>    
+    public bool BottomCap { get; private set; }
+
+    /// <summary>
+    /// If true figure include top closure (Default: true).
+    /// </summary>    
+    public bool TopCap { get; private set; }
+    
+    /// <summary>
     /// Create a:<br/>
     /// - Truncated cone ( if topRadius smaller than baseRadius ).<br/>
     /// - Pyramic ( if topRadius equals zero ).<br/>
@@ -37,12 +47,17 @@ public class Cone
     /// <param name="baseRadius">Base radius of the cone.</param>
     /// <param name="topRadius">Top radius of the cone.</param>
     /// <param name="height">Height of the cone.</param>
-    public Cone(Matrix4x4 baseCS, float baseRadius, float topRadius, float height)
+    /// <param name="bottomCap">If true figure include bottom cap (Default:true).</param>
+    /// <param name="topCap">If true figure include top cap (Default:true).</param>
+    public Cone(Matrix4x4 baseCS, float baseRadius, float topRadius, float height,
+        bool bottomCap = true, bool topCap = true)
     {
         BaseCS = baseCS;
         BaseRadius = baseRadius;
         TopRadius = topRadius;
         Height = height;
+        BottomCap = bottomCap;
+        TopCap = topCap;
     }
 
     /// <summary>
@@ -135,20 +150,19 @@ public class Cone
                     }
 
                     // top                        
-                    yield return new GLTriangle(qq, pp, C + vh);
+                    if (TopCap)
+                        yield return new GLTriangle(qq, pp, C + vh);
                 }
 
-                // base                
-                yield return new GLTriangle(C, p, q.Value);
+                // base        
+                if (BottomCap)                             
+                    yield return new GLTriangle(C, p, q.Value);
             }
 
             q = p;
 
             alpha += alphaStep;
         }
-
-
-        yield break;
     }
 
 }

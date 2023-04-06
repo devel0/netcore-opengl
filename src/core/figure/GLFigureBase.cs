@@ -38,13 +38,9 @@ public abstract class GLFigureBase : IGLFigure
     protected abstract GLFigureBase MakeInstance();
 
     /// <summary>
-    /// Copy data from specialized given other object.
-    /// It copies member data not accessible from the <see cref="GLFigureBase"/> because depends on derived classes and need to be implemented there.
-    /// </summary>
-    /// <param name="other">Other specialized <see cref="GLFigureBase"/>.</param>
-    protected abstract void CopyFromSpecialized(GLFigureBase other);
-
-    public IGLVertexManagerObject Copy()
+    /// Create a copy with all elements down the hierarchy until <see cref="GLFigureBase"/> included.
+    /// </summary>    
+    public GLFigureBase CopyBase()
     {
         var res = MakeInstance();
 
@@ -53,10 +49,26 @@ public abstract class GLFigureBase : IGLFigure
         res.Order = Order;
         res.Tag = Tag;
 
-        res.CopyFromSpecialized(this);
+        return res;
+    }
+
+    protected abstract void CopySpecialized(GLFigureBase other);
+
+    public IGLVertexManagerObject Copy()
+    {
+        var res = CopyBase();
+
+        res.CopySpecialized(this);
 
         return res;
     }
+
+    /// <summary>
+    /// Create a mirrored figure against given xy plane.
+    /// </summary>
+    /// <param name="xyPlane">XY mirror plane.</param>
+    /// <returns>Mirrored figure.</returns>
+    public abstract GLFigureBase? Mirror(in Matrix4x4 xyPlane);
 
     #endregion
 
@@ -69,7 +81,7 @@ public abstract class GLFigureBase : IGLFigure
     public abstract GLPrimitiveType PrimitiveType { get; }
 
     #region ExcludeFromShadeWithEdge
-    
+
     private bool _ExcludeFromShadeWithEdge = false;
     /// <summary>
     /// ExcludeFromShadeWithEdge
@@ -79,15 +91,15 @@ public abstract class GLFigureBase : IGLFigure
         get => _ExcludeFromShadeWithEdge;
         set
         {
-             var changed = value != _ExcludeFromShadeWithEdge;
-             if (changed)
-             {
-                 _ExcludeFromShadeWithEdge = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _ExcludeFromShadeWithEdge;
+            if (changed)
+            {
+                _ExcludeFromShadeWithEdge = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ObjectMatrixIsIdentity
@@ -305,6 +317,27 @@ public abstract class GLFigureBase : IGLFigure
     /// </summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Invalidate() => FigureInvalidated?.Invoke(this);
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="color">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public GLFigureBase SetColor(Color color) => SetColor(color.ToVector4());
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="rgbaColor">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public GLFigureBase SetColor(Vector4 rgbaColor)
+    {
+        foreach (var primitive in Primitives)
+            foreach (var vertex in primitive.Vertexes)
+                vertex.MaterialColor = rgbaColor;
+
+        return this;
+    }
 
     public override string ToString()
     {

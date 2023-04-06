@@ -9,7 +9,7 @@ public class GLPointFigure : GLFigureTypeBase<GLPoint>, IGLPointFigure
     #region PointSize
 
     private float _PointSize = DEFAULT_PointSize;
-       
+
     public float PointSize
     {
         get => _PointSize;
@@ -62,13 +62,34 @@ public class GLPointFigure : GLFigureTypeBase<GLPoint>, IGLPointFigure
 
     protected override GLFigureBase MakeInstance() => new GLPointFigure();
 
-    protected override void CopyFromSpecialized(GLFigureBase other)
+    protected override void CopySpecialized(GLFigureBase other)
     {
-        base.CopyFromSpecialized(other);
+        base.CopySpecialized(other);
 
         var sother = (GLPointFigure)other;
 
         PointSize = sother.PointSize;
     }
-    
+
+    public override GLFigureBase? Mirror(in Matrix4x4 xyPlane)
+    {
+        var mirroredPrimitives = new ObservableCollection<GLPrimitiveBase>();
+        foreach (var primitive in PrimitivesOBC)
+        {
+            var q = primitive.Mirror(xyPlane);
+            if (q is null) return null;
+
+            mirroredPrimitives.Add(q);
+        }
+
+        var copy = (GLPointFigure)this.CopyBase();
+
+        copy.PointSize = PointSize;
+        copy.PrimitivesOBC = mirroredPrimitives;
+
+        return copy;
+    }
+
+
+
 }

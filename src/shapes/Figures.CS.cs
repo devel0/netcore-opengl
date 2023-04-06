@@ -51,13 +51,13 @@ public static partial class Toolkit
         if (solidArrowsDiameterFactor is not null)
         {
             var xFigs = new Arrow(pos, pos + basex, diameterFactor: solidArrowsDiameterFactor.Value)
-                .Triangles().ToList().SetPrimitiveColor(xAxisColorTo);
+                .Triangles().ToList().SetColor(xAxisColorTo);
 
             var yFigs = new Arrow(pos, pos + basey, diameterFactor: solidArrowsDiameterFactor.Value)
-                .Triangles().ToList().SetPrimitiveColor(yAxisColorTo);
+                .Triangles().ToList().SetColor(yAxisColorTo);
 
             var zFigs = new Arrow(pos, pos + basez, diameterFactor: solidArrowsDiameterFactor.Value)
-                .Triangles().ToList().SetPrimitiveColor(zAxisColorTo);
+                .Triangles().ToList().SetColor(zAxisColorTo);
 
             var tris = xFigs.Union(yFigs).Union(zFigs);
 

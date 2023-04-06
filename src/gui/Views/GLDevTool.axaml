@@ -71,6 +71,7 @@
 					<CheckBox desktop:GridAutoRow.Ref="UseTexture" Grid.Column="0" Grid.ColumnSpan="3" Content="UseTexture" IsChecked="{Binding UseTexture}" />
 					<CheckBox desktop:GridAutoRow.Ref="Wireframe" Grid.Column="0" Grid.ColumnSpan="3" Content="Wireframe" IsChecked="{Binding Wireframe}" />
 					<CheckBox desktop:GridAutoRow.Ref="ShadeWithEdge" Grid.Column="0" Grid.ColumnSpan="3" Content="ShadeWithEdge" IsChecked="{Binding ShadeWithEdge}" />
+					<CheckBox desktop:GridAutoRow.Ref="ShowNormals" Grid.Column="0" Grid.ColumnSpan="3" Content="ShowNormals" IsChecked="{Binding ShowNormals}" />
 
 					<CheckBox desktop:GridAutoRow.Ref="OverrideAmbient" Grid.Column="0" Grid.ColumnSpan="2"
 						Content="Override ambient" IsChecked="{Binding GLModel.OverrideAmbientEnabled}" />
@@ -98,6 +99,14 @@
 					<TextBox desktop:GridAutoRow.Ref="FovDeg" Grid.Column="2" Text="{Binding FovDeg}" MaxWidth="100" Classes="val" />
 
 					<CheckBox desktop:GridAutoRow.Ref="ShowCameraObject" Grid.Column="0" Grid.ColumnSpan="2" Content="ShowCamera" IsChecked="{Binding ShowCameraObject}" />
+
+					<TextBlock desktop:GridAutoRow.Ref="PointerCoord" Grid.Column="0" Text="PointerCoord" Classes="hdr" />
+					<TextBlock desktop:GridAutoRow.Ref="PointerCoord" Grid.Column="1" Text="[ screen ]" Classes="mu" />
+					<StackPanel desktop:GridAutoRow.Ref="PointerCoord" Grid.Column="2" Orientation="Horizontal">
+						<TextBlock Text="{Binding PointerCoord}" Classes="val" />
+						<TextBlock Text="[ lraycast ]" Classes="mu" />
+						<TextBlock Text="{Binding PointerLRayCast}" Classes="val" />
+					</StackPanel>
 
 					<TextBlock desktop:GridAutoRow.Ref="CameraPos" Grid.Column="0" Text="CameraPos" Classes="hdr" />
 					<TextBlock desktop:GridAutoRow.Ref="CameraPos" Grid.Column="1" Text="[ world ]" Classes="mu" />

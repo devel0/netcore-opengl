@@ -894,4 +894,47 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    #region PointerCoord
+
+    private Vector2 _PointerCoord = Vector2.Zero;
+    /// <summary>
+    /// Actual pointer coord [screen]
+    /// </summary>
+    public Vector2 PointerCoord
+    {
+        get => _PointerCoord;
+        set
+        {
+            var changed = value != _PointerCoord;
+            if (changed)
+            {
+                _PointerCoord = value;
+                OnPropertyChanged();
+                _PointerLRayCast = null;
+                OnPropertyChanged(nameof(PointerLRayCast));
+            }
+        }
+    }
+
+    #endregion
+
+    #region PointerLRayCast
+
+    private Line? _PointerLRayCast = null;
+    /// <summary>
+    /// Actual pointer raycast [local]
+    /// </summary>
+    public Line? PointerLRayCast
+    {
+        get
+        {
+            if (_PointerLRayCast is null)            
+                _PointerLRayCast = RayCastLocal(PointerCoord);
+            
+            return _PointerLRayCast;
+        }
+    }
+
+    #endregion
+
 }

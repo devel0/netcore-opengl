@@ -72,9 +72,9 @@ public class GLTextCharFigure : GLTriangleFigure
 
     protected override GLFigureTypeBase<GLTriangle> MakeInstance() => new GLTextCharFigure();
 
-    protected override void CopyFromSpecialized(GLFigureBase other)
+    protected override void CopySpecialized(GLFigureBase other)
     {
-        base.CopyFromSpecialized(other);
+        base.CopySpecialized(other);
 
         var sother = (GLTextCharFigure)other;
 

@@ -13,8 +13,7 @@
 		<None Include="view.json" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\netcore-opengl\netcore-opengl.csproj" />
+	<ItemGroup>		
 		<ProjectReference Include="..\..\src\gui\netcore-opengl-gui.csproj" />
 		<ProjectReference Include="..\..\src\shapes\netcore-opengl-shapes.csproj" />
 

@@ -41,6 +41,17 @@ public interface IGLVertex : IGLVertexManagerObject, INotifyPropertyChanged
     Vector3 Normal { get; set; }
 
     /// <summary>
+    /// Invert the normal flag ( used by <see cref="GLVertex.Mirror"/>.    
+    /// </summary>    
+    /// <seealso cref="EffectiveNormal"/>
+    bool InvertNormal { get; set; }
+
+    /// <summary>
+    /// Vertex normal [local] eventually inverted if flag <see cref="InvertNormal"/> present.
+    /// </summary>    
+    Vector3 EffectiveNormal { get; }
+
+    /// <summary>
     /// Vertex texture offset ( range [0,0] to [1,1] ).
     /// </summary>    
     Vector2 TextureST { get; set; }

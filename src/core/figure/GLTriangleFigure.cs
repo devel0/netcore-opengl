@@ -74,14 +74,32 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
 
     protected override GLFigureBase MakeInstance() => new GLTriangleFigure();
 
-    protected override void CopyFromSpecialized(GLFigureBase other)
+    protected override void CopySpecialized(GLFigureBase other)
     {
-        base.CopyFromSpecialized(other);
+        base.CopySpecialized(other);
 
         var sother = (GLTriangleFigure)other;
 
         Texture2D = sother.Texture2D;
         ComputeNormal = sother.ComputeNormal;
+    }
+
+    public override GLFigureBase? Mirror(in Matrix4x4 xyPlane)
+    {
+        var mirroredPrimitives = new ObservableCollection<GLPrimitiveBase>();
+        foreach (var primitive in PrimitivesOBC)
+        {
+            var q = primitive.Mirror(xyPlane);
+            if (q is null) return null;
+
+            mirroredPrimitives.Add(q);
+        }
+
+        var copy = (GLTriangleFigure)this.CopyBase();
+
+        copy.PrimitivesOBC = mirroredPrimitives;
+
+        return copy;
     }
 
     public override GLPrimitiveType PrimitiveType => GLPrimitiveType.Triangle;

@@ -53,7 +53,7 @@ class Program
                 new Point3(10, 10, 15),
                 new Point3(0, 10, -4));
 
-            var tris = NurbToGL(nurb, color);
+            var tris = nurb.NurbToGL(color);
 
             // build figure from nurb mesh
             triFig = new GLTriangleFigure(tris);
@@ -76,7 +76,7 @@ class Program
 
             glModel.AddFigure(triFig);
 
-            glModel.PointLights.Add(new GLPointLight(new Vector3(7, 8, 14)));            
+            glModel.PointLights.Add(new GLPointLight(new Vector3(7, 8, 14)));
         };
 
         Task? task = null;

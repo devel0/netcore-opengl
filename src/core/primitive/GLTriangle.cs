@@ -6,7 +6,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
     #region V1
 
     private GLVertex _V1 = new GLVertex();
-    
+
     public GLVertex V1
     {
         get => _V1;
@@ -35,7 +35,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
     #region V2
 
     private GLVertex _V2 = new GLVertex();
-    
+
     public GLVertex V2
     {
         get => _V2;
@@ -64,7 +64,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
     #region V3
 
     private GLVertex _V3 = new GLVertex();
-    
+
     public GLVertex V3
     {
         get => _V3;
@@ -146,7 +146,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
         return true;
     }
-    
+
     /// <summary>
     /// Enumerate triangle as opengl lines (V1,V2), (V2,V3) and (V3,V1).
     /// </summary>    
@@ -159,13 +159,33 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
     protected override GLPrimitiveBase MakeInstance() => new GLTriangle();
 
-    protected override void CopyFromSpecialized(GLPrimitiveBase other)
+    protected override void CopySpecialized(GLPrimitiveBase other)
     {
         var sother = (GLTriangle)other;
 
         V1 = (GLVertex)sother.V1.Copy();
         V2 = (GLVertex)sother.V2.Copy();
         V3 = (GLVertex)sother.V3.Copy();
+    }
+
+    public override GLPrimitiveBase? Mirror(in Matrix4x4 xyPlane)
+    {
+        var mirroredV1 = V1.Mirror(xyPlane);
+        if (mirroredV1 is null) return null;
+
+        var mirroredV2 = V2.Mirror(xyPlane);
+        if (mirroredV2 is null) return null;
+
+        var mirroredV3 = V3.Mirror(xyPlane);
+        if (mirroredV3 is null) return null;
+
+        var copy = (GLTriangle)this.CopyBase();
+
+        copy.V1 = mirroredV1;
+        copy.V2 = mirroredV2;
+        copy.V3 = mirroredV3;
+
+        return copy;
     }
 
     public override IEnumerable<GLVertex> Vertexes
