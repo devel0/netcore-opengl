@@ -35,7 +35,7 @@ public class InvalidationTest
         Assert.Equal(1, renderDevice.TransferGLPixelsCount); // don't render because already done
         Assert.Equal(2, modelViewInvalidatedCount);
 
-        line.SetPrimitiveColor(Color.Yellow); // change a model object ( 2 vtx(from,to) removed 2 vtx added(from,to) )
+        line.SetColor(Color.Yellow); // change a model object ( 2 vtx(from,to) removed 2 vtx added(from,to) )
         Assert.Equal(6, modelViewInvalidatedCount); // model detected view changed
 
         // don't render because even modelview invalidated the control invalidation is responsible by the user choice

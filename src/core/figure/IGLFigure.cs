@@ -138,40 +138,7 @@ public static partial class Constants
 }
 
 public static partial class Ext
-{
-
-    /// <summary>
-    /// Changes <see cref="IGLVertex.MaterialColor"/> of given figure vertexes.
-    /// </summary>
-    /// <remarks>
-    /// Note that if more figures present in the model sharing the same vertex changing the color of a figure
-    /// will preserve other figure vertex color.<br/>
-    /// \snippet{'trimleft'} test/core/VertexManager.cs PreserveFigureVertexTest
-    /// </remarks>        
-    /// <param name="figure">Figure which change vertex colours.</param>
-    /// <param name="color">Color to apply figure vertexes.</param>
-    /// <returns>Given figure reference.</returns>
-    public static T SetColor<T>(this T figure, Color color) where T : GLFigureBase =>
-        figure.SetColor(color.ToVector4());
-
-    /// <summary>
-    /// Changes <see cref="IGLVertex.MaterialColor"/> of given figure vertexes.
-    /// </summary>
-    /// <remarks>
-    /// Note that if more figures present in the model sharing the same vertex changing the color of a figure
-    /// will preserve other figure vertex color.<br/>
-    /// \snippet{'trimleft'} test/core/VertexManager.cs PreserveFigureVertexTest
-    /// </remarks>        
-    /// <param name="figure">Figure which change vertex colours.</param>
-    /// <param name="rgbaColor">Color to apply figure vertexes.</param>
-    /// <returns>Given figure reference.</returns>
-    public static T SetColor<T>(this T figure, Vector4 rgbaColor) where T : GLFigureBase
-    {
-        foreach (var primitive in figure.Primitives)
-            primitive.SetPrimitiveColor(rgbaColor);
-
-        return figure;
-    }
+{    
 
     /// <summary>
     /// Mean of figure vertexes.

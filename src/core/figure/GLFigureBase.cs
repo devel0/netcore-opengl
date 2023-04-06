@@ -69,7 +69,7 @@ public abstract class GLFigureBase : IGLFigure
     public abstract GLPrimitiveType PrimitiveType { get; }
 
     #region ExcludeFromShadeWithEdge
-    
+
     private bool _ExcludeFromShadeWithEdge = false;
     /// <summary>
     /// ExcludeFromShadeWithEdge
@@ -79,15 +79,15 @@ public abstract class GLFigureBase : IGLFigure
         get => _ExcludeFromShadeWithEdge;
         set
         {
-             var changed = value != _ExcludeFromShadeWithEdge;
-             if (changed)
-             {
-                 _ExcludeFromShadeWithEdge = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _ExcludeFromShadeWithEdge;
+            if (changed)
+            {
+                _ExcludeFromShadeWithEdge = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ObjectMatrixIsIdentity
@@ -305,6 +305,27 @@ public abstract class GLFigureBase : IGLFigure
     /// </summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Invalidate() => FigureInvalidated?.Invoke(this);
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="color">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public GLFigureBase SetColor(Color color) => SetColor(color.ToVector4());
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="rgbaColor">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public GLFigureBase SetColor(Vector4 rgbaColor)
+    {
+        foreach (var primitive in Primitives)
+            foreach (var vertex in primitive.Vertexes)
+                vertex.MaterialColor = rgbaColor;
+
+        return this;
+    }
 
     public override string ToString()
     {

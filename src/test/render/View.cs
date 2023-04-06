@@ -37,7 +37,7 @@ public class ViewTest
             .Act(fig =>
             {
                 fig.Order = 1;
-                fig.SetPrimitiveColor(Color.Magenta);
+                fig.SetColor(Color.Magenta);
             }))
         { PointSize = 10 });
 
