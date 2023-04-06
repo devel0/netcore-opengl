@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab455657ff8fe6ab2ad42f00cac28404c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html">IGLVertexManagerObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#ab455657ff8fe6ab2ad42f00cac28404c">Copy</a> ()</td></tr>
 <tr class="memdesc:ab455657ff8fe6ab2ad42f00cac28404c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of this gl vertex manager object copying all relevant data except the ParentVertexManager that will default to null for copies object until added to a vertex manager.  <br /></td></tr>
 <tr class="separator:ab455657ff8fe6ab2ad42f00cac28404c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e16cf662a2a097070a6a803e4d1fd58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a2e16cf662a2a097070a6a803e4d1fd58">Mirror</a> (in Matrix4x4 refXYPlane)</td></tr>
+<tr class="memdesc:a2e16cf662a2a097070a6a803e4d1fd58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror this vertex to the other side of given xy plane.  <br /></td></tr>
+<tr class="separator:a2e16cf662a2a097070a6a803e4d1fd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa73e7c4dd1df5fd5fbf81c7764ee1533"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#aa73e7c4dd1df5fd5fbf81c7764ee1533">ToString</a> ()</td></tr>
 <tr class="separator:aa73e7c4dd1df5fd5fbf81c7764ee1533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aace6b57094c0ac91ff61e0e08db987"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_struct.html">GLVertexStruct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a8aace6b57094c0ac91ff61e0e08db987">ToStruct</a> ()</td></tr>
@@ -170,6 +173,13 @@ Properties</h2></td></tr>
 <tr class="memitem:a7e591df053002afc58b5a966d8c5d888"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a7e591df053002afc58b5a966d8c5d888">Normal</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a7e591df053002afc58b5a966d8c5d888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex normal [local].  <br /></td></tr>
 <tr class="separator:a7e591df053002afc58b5a966d8c5d888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74565fc1b6422c2a941ae66dc6f9fd68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a74565fc1b6422c2a941ae66dc6f9fd68">InvertNormal</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a74565fc1b6422c2a941ae66dc6f9fd68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert the normal flag ( used by GLVertex.Mirror. <br  />
+  <br /></td></tr>
+<tr class="separator:a74565fc1b6422c2a941ae66dc6f9fd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462c0351c206abf120e5572189e58a3a"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a462c0351c206abf120e5572189e58a3a">EffectiveNormal</a><code> [get]</code></td></tr>
+<tr class="memdesc:a462c0351c206abf120e5572189e58a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex normal [local] eventually inverted if flag InvertNormal present.  <br /></td></tr>
+<tr class="separator:a462c0351c206abf120e5572189e58a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea6c6bd50cf9109b1c2bc310cf4b76d6"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#aea6c6bd50cf9109b1c2bc310cf4b76d6">TextureST</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aea6c6bd50cf9109b1c2bc310cf4b76d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex texture offset ( range [0,0] to [1,1] ).  <br /></td></tr>
 <tr class="separator:aea6c6bd50cf9109b1c2bc310cf4b76d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +204,13 @@ Properties</h2></td></tr>
 <tr class="memitem:a7e591df053002afc58b5a966d8c5d888 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a7e591df053002afc58b5a966d8c5d888">Normal</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a7e591df053002afc58b5a966d8c5d888 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex normal [local].  <br /></td></tr>
 <tr class="separator:a7e591df053002afc58b5a966d8c5d888 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74565fc1b6422c2a941ae66dc6f9fd68 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a74565fc1b6422c2a941ae66dc6f9fd68">InvertNormal</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a74565fc1b6422c2a941ae66dc6f9fd68 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert the normal flag ( used by GLVertex.Mirror. <br  />
+  <br /></td></tr>
+<tr class="separator:a74565fc1b6422c2a941ae66dc6f9fd68 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462c0351c206abf120e5572189e58a3a inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a462c0351c206abf120e5572189e58a3a">EffectiveNormal</a><code> [get]</code></td></tr>
+<tr class="memdesc:a462c0351c206abf120e5572189e58a3a inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex normal [local] eventually inverted if flag InvertNormal present.  <br /></td></tr>
+<tr class="separator:a462c0351c206abf120e5572189e58a3a inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea6c6bd50cf9109b1c2bc310cf4b76d6 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#aea6c6bd50cf9109b1c2bc310cf4b76d6">TextureST</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aea6c6bd50cf9109b1c2bc310cf4b76d6 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex texture offset ( range [0,0] to [1,1] ).  <br /></td></tr>
 <tr class="separator:aea6c6bd50cf9109b1c2bc310cf4b76d6 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,6 +262,11 @@ Events</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a gl vertex ( default 0,0,0 ) [object]. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_a19362019daa87dc7dc2ecb0e6331030a_icgraph.svg" width="451" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -410,7 +432,39 @@ Alpha=0 (full transparent). (Default: white).</td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_ab455657ff8fe6ab2ad42f00cac28404c_icgraph.svg" width="347" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_ab455657ff8fe6ab2ad42f00cac28404c_icgraph.svg" width="567" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2e16cf662a2a097070a6a803e4d1fd58" name="a2e16cf662a2a097070a6a803e4d1fd58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e16cf662a2a097070a6a803e4d1fd58">&#9670;&#160;</a></span>Mirror()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a>? Mirror </td>
+          <td>(</td>
+          <td class="paramtype">in Matrix4x4&#160;</td>
+          <td class="paramname"><em>refXYPlane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mirror this vertex to the other side of given xy plane. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refXYPlane</td><td>Reference xy plane.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Copy of this vertex, mirrored.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_a2e16cf662a2a097070a6a803e4d1fd58_icgraph.svg" width="323" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -530,6 +584,34 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a id="a462c0351c206abf120e5572189e58a3a" name="a462c0351c206abf120e5572189e58a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462c0351c206abf120e5572189e58a3a">&#9670;&#160;</a></span>EffectiveNormal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 EffectiveNormal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vertex normal [local] eventually inverted if flag InvertNormal present. </p>
+<p><br  />
+ </p>
+
+<p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a462c0351c206abf120e5572189e58a3a">IGLVertex</a>.</p>
+
+</div>
+</div>
 <a id="a273448b40cdc56301d806e9e9c70cbb9" name="a273448b40cdc56301d806e9e9c70cbb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a273448b40cdc56301d806e9e9c70cbb9">&#9670;&#160;</a></span>Index</h2>
 
@@ -555,6 +637,35 @@ Here is the caller graph for this function:</div>
  </p>
 
 <p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a273448b40cdc56301d806e9e9c70cbb9">IGLVertex</a>.</p>
+
+</div>
+</div>
+<a id="a74565fc1b6422c2a941ae66dc6f9fd68" name="a74565fc1b6422c2a941ae66dc6f9fd68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74565fc1b6422c2a941ae66dc6f9fd68">&#9670;&#160;</a></span>InvertNormal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InvertNormal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invert the normal flag ( used by GLVertex.Mirror. <br  />
+ </p>
+<p><br  />
+ </p><dl class="section see"><dt>See also</dt><dd>EffectiveNormal</dd></dl>
+
+<p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a74565fc1b6422c2a941ae66dc6f9fd68">IGLVertex</a>.</p>
 
 </div>
 </div>

@@ -124,6 +124,13 @@ Properties</h2></td></tr>
 <tr class="memitem:a7e591df053002afc58b5a966d8c5d888"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a7e591df053002afc58b5a966d8c5d888">Normal</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a7e591df053002afc58b5a966d8c5d888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex normal [local].  <br /></td></tr>
 <tr class="separator:a7e591df053002afc58b5a966d8c5d888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74565fc1b6422c2a941ae66dc6f9fd68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a74565fc1b6422c2a941ae66dc6f9fd68">InvertNormal</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a74565fc1b6422c2a941ae66dc6f9fd68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert the normal flag ( used by GLVertex.Mirror. <br  />
+  <br /></td></tr>
+<tr class="separator:a74565fc1b6422c2a941ae66dc6f9fd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462c0351c206abf120e5572189e58a3a"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a462c0351c206abf120e5572189e58a3a">EffectiveNormal</a><code> [get]</code></td></tr>
+<tr class="memdesc:a462c0351c206abf120e5572189e58a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex normal [local] eventually inverted if flag InvertNormal present.  <br /></td></tr>
+<tr class="separator:a462c0351c206abf120e5572189e58a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea6c6bd50cf9109b1c2bc310cf4b76d6"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#aea6c6bd50cf9109b1c2bc310cf4b76d6">TextureST</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:aea6c6bd50cf9109b1c2bc310cf4b76d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex texture offset ( range [0,0] to [1,1] ).  <br /></td></tr>
 <tr class="separator:aea6c6bd50cf9109b1c2bc310cf4b76d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,6 +195,34 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a id="a462c0351c206abf120e5572189e58a3a" name="a462c0351c206abf120e5572189e58a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462c0351c206abf120e5572189e58a3a">&#9670;&#160;</a></span>EffectiveNormal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 EffectiveNormal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vertex normal [local] eventually inverted if flag InvertNormal present. </p>
+<p><br  />
+ </p>
+
+<p>Implemented in <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a462c0351c206abf120e5572189e58a3a">GLVertex</a>.</p>
+
+</div>
+</div>
 <a id="a273448b40cdc56301d806e9e9c70cbb9" name="a273448b40cdc56301d806e9e9c70cbb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a273448b40cdc56301d806e9e9c70cbb9">&#9670;&#160;</a></span>Index</h2>
 
@@ -213,6 +248,35 @@ Properties</h2></td></tr>
  </p>
 
 <p>Implemented in <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a273448b40cdc56301d806e9e9c70cbb9">GLVertex</a>.</p>
+
+</div>
+</div>
+<a id="a74565fc1b6422c2a941ae66dc6f9fd68" name="a74565fc1b6422c2a941ae66dc6f9fd68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74565fc1b6422c2a941ae66dc6f9fd68">&#9670;&#160;</a></span>InvertNormal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InvertNormal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invert the normal flag ( used by GLVertex.Mirror. <br  />
+ </p>
+<p><br  />
+ </p><dl class="section see"><dt>See also</dt><dd>EffectiveNormal</dd></dl>
+
+<p>Implemented in <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a74565fc1b6422c2a941ae66dc6f9fd68">GLVertex</a>.</p>
 
 </div>
 </div>

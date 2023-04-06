@@ -82,7 +82,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Constants:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants__coll__graph.svg" width="240" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants__coll__graph.svg" width="240" height="242"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -90,6 +90,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ab3ec244d4cdbe440aacf76eaadd759b7"><td class="memItemLeft" align="right" valign="top">static readonly Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants.html#ab3ec244d4cdbe440aacf76eaadd759b7">WCS</a> = MakeWCS()</td></tr>
 <tr class="memdesc:ab3ec244d4cdbe440aacf76eaadd759b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">CS world with origin=(0,0,0) basex=(1,0,0) basey=(0,1,0) basez=(0,0,1)  <br /></td></tr>
 <tr class="separator:ab3ec244d4cdbe440aacf76eaadd759b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28add120b26f848acd7ce974b1b56d6"><td class="memItemLeft" align="right" valign="top">static readonly Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants.html#ad28add120b26f848acd7ce974b1b56d6">YZCS</a> = MakeCS(Vector3.Zero, Vector3.UnitY, Vector3.UnitZ)</td></tr>
+<tr class="memdesc:ad28add120b26f848acd7ce974b1b56d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CS representing YZ plane origin=(0,0,0) basex=(0,1,0) basey=(0,0,1) basez=(1,0,0)  <br /></td></tr>
+<tr class="separator:ad28add120b26f848acd7ce974b1b56d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3d66ed127acfb18a2fca03b2510216"><td class="memItemLeft" align="right" valign="top">static readonly Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants.html#a0e3d66ed127acfb18a2fca03b2510216">XZCS</a> = MakeCS(Vector3.Zero, Vector3.UnitX, Vector3.UnitZ)</td></tr>
+<tr class="memdesc:a0e3d66ed127acfb18a2fca03b2510216"><td class="mdescLeft">&#160;</td><td class="mdescRight">CS representing XZ plane origin=(0,0,0) basex=(1,0,0) basey=(0,0,1) basez=(0,-1,0)  <br /></td></tr>
+<tr class="separator:a0e3d66ed127acfb18a2fca03b2510216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2948b4f1cdc5ca89d59ce9c8f0322ad2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#a3075ecc844ddcad5746b36f191d046b4">YAxisOrientationEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants.html#a2948b4f1cdc5ca89d59ce9c8f0322ad2">YAxisOrientation</a> = <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#a3075ecc844ddcad5746b36f191d046b4a2d8c40525de462289df4dc9402eb79b2">YAxisOrientationEnum.YPositiveUp</a></td></tr>
 <tr class="memdesc:a2948b4f1cdc5ca89d59ce9c8f0322ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y axis orientation [screen].<br  />
  <br  />
@@ -584,6 +590,32 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0e3d66ed127acfb18a2fca03b2510216" name="a0e3d66ed127acfb18a2fca03b2510216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3d66ed127acfb18a2fca03b2510216">&#9670;&#160;</a></span>XZCS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Matrix4x4 XZCS = MakeCS(Vector3.Zero, Vector3.UnitX, Vector3.UnitZ)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CS representing XZ plane origin=(0,0,0) basex=(1,0,0) basey=(0,0,1) basez=(0,-1,0) </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
 <a id="a2948b4f1cdc5ca89d59ce9c8f0322ad2" name="a2948b4f1cdc5ca89d59ce9c8f0322ad2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2948b4f1cdc5ca89d59ce9c8f0322ad2">&#9670;&#160;</a></span>YAxisOrientation</h2>
 
@@ -610,6 +642,32 @@ Static Public Attributes</h2></td></tr>
 <p><br  />
  </p>
 <p>TODO: Actually tested only for YPositiveUp. It's a constant hard coded. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="ad28add120b26f848acd7ce974b1b56d6" name="ad28add120b26f848acd7ce974b1b56d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28add120b26f848acd7ce974b1b56d6">&#9670;&#160;</a></span>YZCS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Matrix4x4 YZCS = MakeCS(Vector3.Zero, Vector3.UnitY, Vector3.UnitZ)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>CS representing YZ plane origin=(0,0,0) basex=(0,1,0) basey=(0,0,1) basez=(1,0,0) </p>
 <p><br  />
  </p>
 
