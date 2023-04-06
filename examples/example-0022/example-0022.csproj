@@ -10,8 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-		<None Include="view.json" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="Mesh.bdf" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="view.json" CopyToOutputDirectory="PreserveNewest" />    
 	</ItemGroup>
 
   <ItemGroup>
