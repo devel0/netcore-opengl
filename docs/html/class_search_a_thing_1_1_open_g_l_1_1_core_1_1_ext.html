@@ -241,6 +241,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af3c23df51a75774439d80fc18ab48cd1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line.html">GLLine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#af3c23df51a75774439d80fc18ab48cd1">ToGLLine</a> (this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> line, Color colorFrom, Color colorTo)</td></tr>
 <tr class="memdesc:af3c23df51a75774439d80fc18ab48cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a gl line primitive from given line geometry applying given from, to colors.  <br /></td></tr>
 <tr class="separator:af3c23df51a75774439d80fc18ab48cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3bd52c345de7533b431df7e1212fbd"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#aea3bd52c345de7533b431df7e1212fbd">ToFloat</a> (this double d)</td></tr>
+<tr class="memdesc:aea3bd52c345de7533b431df7e1212fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert given double to float ensuring not exceed the float range.  <br /></td></tr>
+<tr class="separator:aea3bd52c345de7533b431df7e1212fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9164532a2c892d5b88d9f477e46a37f3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a9164532a2c892d5b88d9f477e46a37f3">SetColor</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a> vertex, Color color)</td></tr>
 <tr class="memdesc:a9164532a2c892d5b88d9f477e46a37f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the color of the vertex.  <br /></td></tr>
 <tr class="separator:a9164532a2c892d5b88d9f477e46a37f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2122,6 +2125,41 @@ Alpha=0 (full transparent).</td></tr>
 
 </div>
 </div>
+<a id="aea3bd52c345de7533b431df7e1212fbd" name="aea3bd52c345de7533b431df7e1212fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea3bd52c345de7533b431df7e1212fbd">&#9670;&#160;</a></span>ToFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float ToFloat </td>
+          <td>(</td>
+          <td class="paramtype">this double&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert given double to float ensuring not exceed the float range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Double which convert to float.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Float of the given double.</dd></dl>
+
+</div>
+</div>
 <a id="af3c23df51a75774439d80fc18ab48cd1" name="af3c23df51a75774439d80fc18ab48cd1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3c23df51a75774439d80fc18ab48cd1">&#9670;&#160;</a></span>ToGLLine() <span class="overload">[1/2]</span></h2>
 
@@ -2654,6 +2692,7 @@ If not specified given color alpha will taken.</td></tr>
 <li>src/core/media/Screen.cs</li>
 <li>src/core/primitive/GLPrimitiveBase.cs</li>
 <li>src/core/primitive/IGLLine.cs</li>
+<li>src/core/types/Utils.cs</li>
 <li>src/core/vertex/IGLVertex.cs</li>
 <li>src/core/vertex/IGLVertexManagerObject.cs</li>
 </ul>

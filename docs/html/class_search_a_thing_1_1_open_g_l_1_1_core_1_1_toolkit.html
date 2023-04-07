@@ -219,9 +219,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a20cf96faf25b8c9335c595ddb25533bd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a20cf96faf25b8c9335c595ddb25533bd">PerspectiveZoom</a> (float scale, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> bbox, in Matrix4x4 mm, in Matrix4x4 vm, in Vector3 cameraPos, in Vector3 cameraTarget, out Vector3 scaledCameraPos, out Vector3 scaledCameraTarget)</td></tr>
 <tr class="memdesc:a20cf96faf25b8c9335c595ddb25533bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom the view [eye] ( Perspective mode ) by the given scale factor.  <br /></td></tr>
 <tr class="separator:a20cf96faf25b8c9335c595ddb25533bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab44681ff016fe9da0ba9a13dd4b01278"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ab44681ff016fe9da0ba9a13dd4b01278">PerspectiveCenter</a> (IEnumerable&lt; Vector3 &gt; pts, in Vector2 size, in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm, in Vector3 cameraPos, in Vector3 cameraTarget, out Vector3 panCameraPos, out Vector3 panCameraTarget, out <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> bbox)</td></tr>
-<tr class="memdesc:ab44681ff016fe9da0ba9a13dd4b01278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center the view ( Perspective mode ) by computing camera [world] position and target.  <br /></td></tr>
-<tr class="separator:ab44681ff016fe9da0ba9a13dd4b01278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0108f9e641ec868a0bcf4c83c449366"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa0108f9e641ec868a0bcf4c83c449366">PerspectiveCenter</a> (IEnumerable&lt; Vector3 &gt; pts, in Vector2 size, in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm, in Vector3 cameraPos, in Vector3 cameraTarget, out Vector3 panCameraPos, out Vector3 panCameraTarget, out <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> lBBox)</td></tr>
+<tr class="memdesc:aa0108f9e641ec868a0bcf4c83c449366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center the view ( Perspective mode ) by computing camera [world] position and target.  <br /></td></tr>
+<tr class="separator:aa0108f9e641ec868a0bcf4c83c449366"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa11500be262e3a1d3ac6911e302b7861"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa11500be262e3a1d3ac6911e302b7861">PerspectiveZoomFit</a> (IEnumerable&lt; Vector3 &gt; pts, in Vector2 size, in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm, in Vector3 cameraPos, in Vector3 cameraTarget, in Vector3 cameraUp, float fovDeg, out Vector3 fitCameraPos, out Vector3 fitCameraTarget, int LOOP_CNT_MAX=10, float FACTOR_TOL=1e-2f)</td></tr>
 <tr class="memdesc:aa11500be262e3a1d3ac6911e302b7861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fit current model view for perspective projection.  <br /></td></tr>
 <tr class="separator:aa11500be262e3a1d3ac6911e302b7861"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2460,8 +2460,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ab44681ff016fe9da0ba9a13dd4b01278" name="ab44681ff016fe9da0ba9a13dd4b01278"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab44681ff016fe9da0ba9a13dd4b01278">&#9670;&#160;</a></span>PerspectiveCenter()</h2>
+<a id="aa0108f9e641ec868a0bcf4c83c449366" name="aa0108f9e641ec868a0bcf4c83c449366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0108f9e641ec868a0bcf4c83c449366">&#9670;&#160;</a></span>PerspectiveCenter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2527,7 +2527,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">out <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td>
-          <td class="paramname"><em>bbox</em>&#160;</td>
+          <td class="paramname"><em>lBBox</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2552,16 +2552,16 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">pm</td><td>Projection matrix [eye].</td></tr>
     <tr><td class="paramname">cameraPos</td><td>Camera position (x,y,z) [world].</td></tr>
     <tr><td class="paramname">cameraTarget</td><td>Camera target (x,y,z) [world].</td></tr>
-    <tr><td class="paramname">panCameraPos</td><td></td></tr>
-    <tr><td class="paramname">panCameraTarget</td><td></td></tr>
-    <tr><td class="paramname">bbox</td><td></td></tr>
+    <tr><td class="paramname">panCameraPos</td><td>Computed pan camera pos [world].</td></tr>
+    <tr><td class="paramname">panCameraTarget</td><td>Computed pan camera target [world].</td></tr>
+    <tr><td class="paramname">lBBox</td><td>Computed local space bbox [local].</td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_ab44681ff016fe9da0ba9a13dd4b01278_icgraph.svg" width="352" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_aa0108f9e641ec868a0bcf4c83c449366_icgraph.svg" width="352" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

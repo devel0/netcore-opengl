@@ -3,5 +3,5 @@
 <area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a29118a66237c094ddfd5a935d5470dc5" title="Pan the view ( Perspective mode ) by the given screen translation coord generating new camera config." alt="" coords="402,5,523,31"/>
 <area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa11500be262e3a1d3ac6911e302b7861" title="Fit current model view for perspective projection." alt="" coords="5,31,157,56"/>
 <area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a20cf96faf25b8c9335c595ddb25533bd" title="Zoom the view [eye] ( Perspective mode ) by the given scale factor." alt="" coords="395,107,531,132"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ab44681ff016fe9da0ba9a13dd4b01278" title="Center the view ( Perspective mode ) by computing camera [world] position and target." alt="" coords="205,5,347,31"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa0108f9e641ec868a0bcf4c83c449366" title="Center the view ( Perspective mode ) by computing camera [world] position and target." alt="" coords="205,5,347,31"/>
 </map>

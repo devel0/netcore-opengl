@@ -65,7 +65,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ab44681ff016fe9da0ba9a13dd4b01278" target="_top" xlink:title="Center the view ( Perspective mode ) by computing camera [world] position and target.">
+<g id="a_node3"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa0108f9e641ec868a0bcf4c83c449366" target="_top" xlink:title="Center the view ( Perspective mode ) by computing camera [world] position and target.">
 <polygon fill="white" stroke="#666666" points="256,-95 150,-95 150,-76 256,-76 256,-95"/>
 <text text-anchor="middle" x="203" y="-83" font-family="Helvetica,sans-Serif" font-size="10.00">PerspectiveCenter</text>
 </a>

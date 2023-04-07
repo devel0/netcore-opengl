@@ -89,9 +89,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a771f0bb85066627095441a2741bf3883"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_arrow.html#a771f0bb85066627095441a2741bf3883">Arrow</a> (in Vector3 from, in Vector3 to, float? diameterFactor=null)</td></tr>
 <tr class="memdesc:a771f0bb85066627095441a2741bf3883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an arrow from, to with given optional diameter.  <br /></td></tr>
 <tr class="separator:a771f0bb85066627095441a2741bf3883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5870f70d60b03542a0ff877e014e9291"><td class="memItemLeft" align="right" valign="top">GLTriangleFigure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_arrow.html#a5870f70d60b03542a0ff877e014e9291">Figure</a> (int divisions=DEFAULT_ARROW_DIVISIONS)</td></tr>
-<tr class="memdesc:a5870f70d60b03542a0ff877e014e9291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gl triangles figure that represents the arrow.  <br /></td></tr>
-<tr class="separator:a5870f70d60b03542a0ff877e014e9291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7242e3c459950d51b8cd64dd08dfde"><td class="memItemLeft" align="right" valign="top">GLFigureBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_arrow.html#a2c7242e3c459950d51b8cd64dd08dfde">Figure</a> (int divisions=DEFAULT_ARROW_DIVISIONS, bool lineMode=false)</td></tr>
+<tr class="memdesc:a2c7242e3c459950d51b8cd64dd08dfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gl triangles figure that represents the arrow.  <br /></td></tr>
+<tr class="separator:a2c7242e3c459950d51b8cd64dd08dfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f7e59248957fafca82f095fa267a42"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; GLLine &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_arrow.html#ac5f7e59248957fafca82f095fa267a42">Lines</a> ()</td></tr>
+<tr class="memdesc:ac5f7e59248957fafca82f095fa267a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">GL line figure that presents the arrow.  <br /></td></tr>
+<tr class="separator:ac5f7e59248957fafca82f095fa267a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ef6dbc4cd974c1aa8d5e08caabab3c"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; GLTriangle &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_arrow.html#a11ef6dbc4cd974c1aa8d5e08caabab3c">Triangles</a> (int divisions=DEFAULT_ARROW_DIVISIONS)</td></tr>
 <tr class="memdesc:a11ef6dbc4cd974c1aa8d5e08caabab3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gl triangle figure that represents the arrow.  <br /></td></tr>
 <tr class="separator:a11ef6dbc4cd974c1aa8d5e08caabab3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,18 +169,28 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5870f70d60b03542a0ff877e014e9291" name="a5870f70d60b03542a0ff877e014e9291"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5870f70d60b03542a0ff877e014e9291">&#9670;&#160;</a></span>Figure()</h2>
+<a id="a2c7242e3c459950d51b8cd64dd08dfde" name="a2c7242e3c459950d51b8cd64dd08dfde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7242e3c459950d51b8cd64dd08dfde">&#9670;&#160;</a></span>Figure()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GLTriangleFigure Figure </td>
+          <td class="memname">GLFigureBase Figure </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>divisions</em> = <code>DEFAULT_ARROW_DIVISIONS</code></td><td>)</td>
+          <td class="paramname"><em>divisions</em> = <code>DEFAULT_ARROW_DIVISIONS</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>lineMode</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,7 +203,38 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineMode</td><td>If true a line with 3 lines instead of triangles will created (Default:false).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><br  />
  </p>
+
+</div>
+</div>
+<a id="ac5f7e59248957fafca82f095fa267a42" name="ac5f7e59248957fafca82f095fa267a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f7e59248957fafca82f095fa267a42">&#9670;&#160;</a></span>Lines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt; GLLine &gt; Lines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GL line figure that presents the arrow. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_arrow_ac5f7e59248957fafca82f095fa267a42_icgraph.svg" width="178" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
