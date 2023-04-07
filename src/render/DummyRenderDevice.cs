@@ -62,7 +62,7 @@ public class DummyRenderDevice : IRenderDevice, INotifyPropertyChanged
     
     #endregion    
     
-    public DummyRenderDevice(Size size)
+    public DummyRenderDevice(in Size size)
     {
         Size = size;
     }

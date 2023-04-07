@@ -95,7 +95,7 @@ public abstract class GLPrimitiveBase : IGLPrimitive
 
     #endregion
 
-    public BBox BBox(Matrix4x4? cs = null)
+    public BBox BBox(in Matrix4x4? cs = null)
     {
         var res = new BBox(cs);
 
@@ -112,14 +112,14 @@ public abstract class GLPrimitiveBase : IGLPrimitive
     /// </summary>    
     /// <param name="color">Color to set on primitive vertexes.</param>
     /// <returns>This primitive.</returns>
-    public GLPrimitiveBase SetColor(Color color) => SetColor(color.ToVector4());
+    public GLPrimitiveBase SetColor(in Color color) => SetColor(color.ToVector4());
 
     /// <summary>
     /// Set the color of primitive vertexes.
     /// </summary>    
     /// <param name="rgbaColor">Color to set on primitive vertexes.</param>
     /// <returns>This primitive.</returns>
-    public GLPrimitiveBase SetColor(Vector4 rgbaColor)
+    public GLPrimitiveBase SetColor(in Vector4 rgbaColor)
     {
         foreach (var vertex in Vertexes)
             vertex.MaterialColor = rgbaColor;
@@ -138,7 +138,7 @@ public static partial class Ext
     /// <param name="primitives">Gl primitives.</param>
     /// <param name="color">Color to set on primitives vertexes.</param>
     /// <returns>Calling enumerable.</returns>
-    public static IEnumerable<T> SetColor<T>(this IEnumerable<T> primitives, Color color)
+    public static IEnumerable<T> SetColor<T>(this IEnumerable<T> primitives, in Color color)
     where T : GLPrimitiveBase => primitives.SetColor(color.ToVector4());
 
     /// <summary>
@@ -147,7 +147,7 @@ public static partial class Ext
     /// <param name="primitives">Gl primitives.</param>
     /// <param name="rgbaColor">Color to set on primitives vertexes.</param>
     /// <returns>Calling enumerable.</returns>
-    public static IEnumerable<T> SetColor<T>(this IEnumerable<T> primitives, Vector4 rgbaColor)
+    public static IEnumerable<T> SetColor<T>(this IEnumerable<T> primitives, in Vector4 rgbaColor)
     where T : GLPrimitiveBase
     {
         foreach (var primitive in primitives)

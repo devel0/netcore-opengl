@@ -50,7 +50,7 @@ public class GLPoint : GLPrimitiveBase, IGLPoint
     /// </summary>
     /// <param name="coord">Point position [object].</param>
     /// <param name="color">Point color.</param>    
-    public GLPoint(Vector3 coord, Color? color = null) : this(new GLVertex(coord, color)) { }
+    public GLPoint(in Vector3 coord, in Color? color = null) : this(new GLVertex(coord, color)) { }
 
     protected override GLPrimitiveBase MakeInstance() => new GLPoint();
 

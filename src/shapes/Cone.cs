@@ -49,7 +49,7 @@ public class Cone
     /// <param name="height">Height of the cone.</param>
     /// <param name="bottomCap">If true figure include bottom cap (Default:true).</param>
     /// <param name="topCap">If true figure include top cap (Default:true).</param>
-    public Cone(Matrix4x4 baseCS, float baseRadius, float topRadius, float height,
+    public Cone(in Matrix4x4 baseCS, float baseRadius, float topRadius, float height,
         bool bottomCap = true, bool topCap = true)
     {
         BaseCS = baseCS;

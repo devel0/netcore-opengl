@@ -159,7 +159,7 @@ public class GLVertex : IGLVertex
         }
     }
 
-    internal void SetNormal(Vector3 normal)
+    internal void SetNormal(in Vector3 normal)
     {
         var changed = normal != _Normal;
 
@@ -256,11 +256,11 @@ public class GLVertex : IGLVertex
     /// <param name="materialProperties">(Optional) Describe the strength (0..1) of the ambient, diffuse, specular light effects. (Default: ambient:0.8, diffuse:0.6, strength:0.6).</param>
     /// <param name="normal">(Optional) Vertex normal [object]. (Default: zero).</param>
     /// <param name="textureST">(Optional) Vertex texture mapping in the range [0,0]...[1,1].</param>
-    public GLVertex(Vector3 position,
-        Vector4? rgbaColor = null,
-        Vector3? materialProperties = null,
-        Vector3? normal = null,
-        Vector2? textureST = null)
+    public GLVertex(in Vector3 position,
+        in Vector4? rgbaColor = null,
+        in Vector3? materialProperties = null,
+        in Vector3? normal = null,
+        in Vector2? textureST = null)
     {
         Position = position;
         MaterialColor = rgbaColor is null ? DEFAULT_MaterialColor.ToVector4() : rgbaColor.Value;
@@ -274,7 +274,7 @@ public class GLVertex : IGLVertex
     /// </summary>
     /// <param name="position">Vertex position [object].</param>
     /// <param name="color">Vertex color.</param>    
-    public GLVertex(Vector3 position, Color? color) : this(position, color?.ToVector4())
+    public GLVertex(in Vector3 position, in Color? color) : this(position, color?.ToVector4())
     {
     }
 
@@ -283,7 +283,7 @@ public class GLVertex : IGLVertex
     /// </summary>
     /// <param name="position">Vector position [object].</param>
     /// <param name="textureST">Texture position in the ranage [0,0]...[1,1].</param>    
-    public GLVertex(Vector3 position, Vector2 textureST) : this(position, null, null, null, textureST)
+    public GLVertex(in Vector3 position, in Vector2 textureST) : this(position, null, null, null, textureST)
     {
     }
 

@@ -85,7 +85,7 @@ public class BBox
     /// Create bounding box object with optional coordinate system.
     /// </summary>
     /// <param name="cs">Optional coordinate system ( if null <see cref="WCS"/> is considered )</param>
-    public BBox(Matrix4x4? cs = null)
+    public BBox(in Matrix4x4? cs = null)
     {
         CS = cs;
     }
@@ -98,7 +98,7 @@ public class BBox
     /// <summary>
     /// Create a cs oriented bounding box of given set of points.
     /// </summary>    
-    public BBox(Matrix4x4? cs, params Vector3[] pts) : this((IEnumerable<Vector3>)pts) { }
+    public BBox(in Matrix4x4? cs, params Vector3[] pts) : this((IEnumerable<Vector3>)pts) { }
 
     /// <summary>
     /// Create a wcs bounding box of given points
@@ -108,7 +108,7 @@ public class BBox
     /// <summary>
     /// Create a cs oriente bounding box of given set of points.
     /// </summary>    
-    public BBox(Matrix4x4 cs, IEnumerable<Vector3> pts) : this(cs) => ApplyUnion(pts);
+    public BBox(in Matrix4x4 cs, IEnumerable<Vector3> pts) : this(cs) => ApplyUnion(pts);
 
     /// <summary>
     /// Create a wcs bounding box adding given bboxes wcs extensions.
@@ -119,7 +119,7 @@ public class BBox
     /// <summary>
     /// Create a cs oriented bounding box adding given bboxes wcs extensions.
     /// </summary>    
-    public BBox(Matrix4x4 cs, IEnumerable<BBox> bboxes) : this(cs) =>
+    public BBox(in Matrix4x4 cs, IEnumerable<BBox> bboxes) : this(cs) =>
         ApplyUnion(bboxes.Where(bbox => !bbox.IsEmpty).SelectMany(bbox => bbox.Points));
 
     /// <summary>
@@ -253,7 +253,7 @@ public class BBox
     /// </summary>
     /// <param name="p">WCS point to add.</param>
     /// <returns>Extended bbox.</returns>
-    public BBox Union(Vector3 p)
+    public BBox Union(in Vector3 p)
     {
         var res = new BBox(this);
 
@@ -307,7 +307,7 @@ public class BBox
     /// </summary>
     /// <param name="delta">WCS delta to apply.</param>
     /// <returns>Moved bounding box.</returns>
-    public BBox Move(Vector3 delta) => new BBox(CS, Min + delta, Max + delta);
+    public BBox Move(in Vector3 delta) => new BBox(CS, Min + delta, Max + delta);
 
     /// <summary>
     /// WCS tests if given other bounding box is contained (with tolerance) to this one.
@@ -383,7 +383,7 @@ public static partial class Ext
     /// <param name="bbox">Bounding box for which create line figures.</param>
     /// <param name="color">(optional) color to apply created figure.</param>
     /// <returns>Lines figure.</returns>
-    public static GLLineFigure MakeFigure(this BBox bbox, Color? color) =>
+    public static GLLineFigure MakeFigure(this BBox bbox, in Color? color) =>
         new GLLineFigure(bbox.Lines(color));
 
     /// <summary>

@@ -44,14 +44,14 @@ public class Line
     /// </summary>
     /// <param name="from">From point.</param>
     /// <param name="to">To point.</param>    
-    public static Line FromTo(Vector3 from, Vector3 to) => new Line(from, to - from);
+    public static Line FromTo(in Vector3 from, in Vector3 to) => new Line(from, to - from);
 
     /// <summary>
     /// Create a line by the from position and given extension.
     /// </summary>
     /// <param name="point">From coordinate.</param>
     /// <param name="v">Extension vector.</param>    
-    public static Line PointV(Vector3 point, Vector3 v) => new Line(point, v);
+    public static Line PointV(in Vector3 point, in Vector3 v) => new Line(point, v);
 
     /// <summary>
     /// Create a new line by scaling from, to coordinates respect the given reference point and scale factor.
@@ -59,7 +59,7 @@ public class Line
     /// <param name="refpt">Reference point.</param>
     /// <param name="factor">Scale factor.</param>
     /// <returns>Scaled line.</returns>
-    public Line Scale(Vector3 refpt, float factor) =>
+    public Line Scale(in Vector3 refpt, float factor) =>
         Line.FromTo(From.ScaleAbout(refpt, factor), To.ScaleAbout(refpt, factor));
 
     /// <summary>
@@ -70,7 +70,7 @@ public class Line
     /// </remarks>
     /// <param name="plane">Plane to test line intersection with. ( <see cref="MakeCS"/> to create planes )</param>
     /// <returns>Intersection point or null if no intersection found.</returns>
-    public Vector3? Intersect(Matrix4x4 plane)
+    public Vector3? Intersect(in Matrix4x4 plane)
     {
         var l = Vector3.Normalize(V);
         var n = plane.BaseZ();
@@ -126,6 +126,6 @@ public static partial class Ext
     /// </summary>
     /// <param name="from">This point.</param>
     /// <param name="v">Extension vector.</param>    
-    public static Line LineV(this Vector3 from, Vector3 v) => Line.PointV(from, v);
+    public static Line LineV(this in Vector3 from, in Vector3 v) => Line.PointV(from, v);
 
 }

@@ -205,7 +205,7 @@ public static partial class Toolkit
     /// </summary>
     /// <param name="m"></param>
     /// <see cref="SearchAThing.OpenGL.Core.Toolkit.DeserializeMatrix4x4"/>
-    public static string Serialize(Matrix4x4 m) =>
+    public static string Serialize(in Matrix4x4 m) =>
         Invariant($"{m.M11} {m.M12} {m.M13} {m.M14} ") +
         Invariant($"{m.M21} {m.M22} {m.M23} {m.M24} ") +
         Invariant($"{m.M31} {m.M32} {m.M33} {m.M34} ") +

@@ -96,7 +96,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// Object space bbox of this figure vertexes.
     /// </summary>
     /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
-    BBox OBBox(Matrix4x4? cs = null);
+    BBox OBBox(in Matrix4x4? cs = null);
 
     /// <summary>
     /// States if this figure has to be considered for building of the shadow map.<br/>

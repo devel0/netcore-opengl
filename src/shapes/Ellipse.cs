@@ -26,7 +26,7 @@ public class Ellipse
     /// </summary>    
     public float RadiusY { get; private set; }
 
-    public Ellipse(Matrix4x4 baseCS, float radiusX, float radiusY)
+    public Ellipse(in Matrix4x4 baseCS, float radiusX, float radiusY)
     {
         BaseCS = baseCS;
         RadiusX = radiusX;

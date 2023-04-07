@@ -40,7 +40,7 @@ public interface IGLTriangle : IGLPrimitive
     /// States if given point is contained in the triangle, borders included.
     /// </summary>
     /// <param name="point">Point to test.</param>    
-    bool Contains(Vector3 point);   
+    bool Contains(in Vector3 point);   
 
 }
 

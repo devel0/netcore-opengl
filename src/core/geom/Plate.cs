@@ -39,7 +39,7 @@ public class Plate
     /// <param name="p2">Second point.</param>
     /// <param name="p3">Third point.</param>
     /// <param name="p4">Fourth point.</param>
-    public Plate(Vector3 p1, Vector3 p2, Vector3 p3, Vector3 p4)
+    public Plate(in Vector3 p1, in Vector3 p2, in Vector3 p3, in Vector3 p4)
     {
         P1 = p1;
         P2 = p2;
@@ -58,7 +58,7 @@ public class Plate
     /// </summary>
     /// <param name="delta">Delta vector.</param>
     /// <returns>Moved plate.</returns>
-    public Plate Move(Vector3 delta) => new Plate(P1 + delta, P2 + delta, P3 + delta, P4 + delta);
+    public Plate Move(in Vector3 delta) => new Plate(P1 + delta, P2 + delta, P3 + delta, P4 + delta);
 
 }
 
@@ -76,7 +76,7 @@ public static partial class Ext
     /// <param name="setTextureST">If true <see cref="GLVertex.TextureST"/> will be set in order to map texture on the plate.</param>
     /// <returns>Two triangles.</returns>
     public static IEnumerable<GLTriangle> GetTriangles(this Plate plate,
-        Color? color = null, bool setTextureST = false) =>
+        in Color? color = null, bool setTextureST = false) =>
         plate.GetTriangles(color, color, color, color, setTextureST);
 
     /// <summary>

@@ -45,7 +45,7 @@ public class GLMatrixes
     /// <param name="cp">Camera position [world].</param>
     /// <param name="ct">Camera target [world].</param>
     /// <param name="cu">Camera up [world].</param>
-    public GLMatrixes(Matrix4x4 mm, Matrix4x4 vm, Matrix4x4 pm, Vector3 cp, Vector3 ct, Vector3 cu)
+    public GLMatrixes(in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm, in Vector3 cp, in Vector3 ct, in Vector3 cu)
     {
         this.mm = mm;
         this.vm = vm;

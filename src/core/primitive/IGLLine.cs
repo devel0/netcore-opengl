@@ -41,7 +41,7 @@ public static partial class Ext
     /// <param name="p">From position.</param>
     /// <param name="v">Extension vector.</param>
     /// <param name="color">(Optional) from, to line vertexes color.</param>    
-    public static GLLine LineV(this Vector3 p, Vector3 v, Color? color = null) =>
+    public static GLLine LineV(this in Vector3 p, in Vector3 v, in Color? color = null) =>
         GLLine.PointV(
             new GLVertex(p, color is not null ? color.Value.ToVector4() : null),
             new GLVertex(v, color is not null ? color.Value.ToVector4() : null));
@@ -53,7 +53,7 @@ public static partial class Ext
     /// <param name="to">To position.</param>
     /// <param name="color">(Optional) from, to line vertexes color.</param>
     /// <returns></returns>
-    public static GLLine LineTo(this Vector3 from, Vector3 to, Color? color = null) =>
+    public static GLLine LineTo(this in Vector3 from, in Vector3 to, in Color? color = null) =>
         GLLine.FromTo(
             new GLVertex(from, color is not null ? color.Value.ToVector4() : null),
             new GLVertex(to, color is not null ? color.Value.ToVector4() : null));
@@ -64,7 +64,7 @@ public static partial class Ext
     /// <param name="line">Line geometry.</param>
     /// <param name="color">(Optional) from, to line vertexes color.</param>
     /// <returns>GL line primitive.</returns>
-    public static GLLine ToGLLine(this Line line, Color? color) =>
+    public static GLLine ToGLLine(this Line line, in Color? color) =>
         GLLine.FromTo(
             new GLVertex(line.From, color is not null ? color.Value.ToVector4() : null),
             new GLVertex(line.To, color is not null ? color.Value.ToVector4() : null));
@@ -76,7 +76,7 @@ public static partial class Ext
     /// <param name="colorFrom">Color to apply the from vertex.</param>
     /// <param name="colorTo">Color to apply the to vertex.</param>
     /// <returns>GL line primitive.</returns>
-    public static GLLine ToGLLine(this Line line, Color colorFrom, Color colorTo) =>
+    public static GLLine ToGLLine(this Line line, in Color colorFrom, in Color colorTo) =>
         GLLine.FromTo(
             new GLVertex(line.From, colorFrom),
             new GLVertex(line.To, colorTo));

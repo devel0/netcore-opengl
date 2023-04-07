@@ -232,7 +232,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <param name="z">Z coordinate [local].</param>
     /// <param name="color">Light color (ambient, diffuse, specular).</param>
     /// <param name="showPoint">If true a gl point will displayed where light is.</param>    
-    public GLPointLight(float x, float y, float z, Color? color = null, bool showPoint = DEFAULT_LIGHT_SHOW_POINT) :
+    public GLPointLight(float x, float y, float z, in Color? color = null, bool showPoint = DEFAULT_LIGHT_SHOW_POINT) :
         this(new Vector3(x, y, z), color, showPoint)
     {
     }

@@ -124,14 +124,14 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
     /// <param name="p1">First position.</param>
     /// <param name="p2">Second position.</param>
     /// <param name="p3">Third position.</param>    
-    public GLTriangle(Vector3 p1, Vector3 p2, Vector3 p3) : base(GLPrimitiveType.Triangle)
+    public GLTriangle(in Vector3 p1, in Vector3 p2, in Vector3 p3) : base(GLPrimitiveType.Triangle)
     {
         _V1 = new GLVertex(p1);
         _V2 = new GLVertex(p2);
         _V3 = new GLVertex(p3);
     }
 
-    public bool Contains(Vector3 point)
+    public bool Contains(in Vector3 point)
     {
         var a = V1.Position - point;
         var b = V2.Position - point;
