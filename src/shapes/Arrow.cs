@@ -58,11 +58,36 @@ public class Arrow
     /// Gl triangles figure that represents the arrow.
     /// </summary>
     /// <param name="divisions">Number of divisions to refine the figure. (Min:4)</param>    
-    public GLTriangleFigure Figure(int divisions = DEFAULT_ARROW_DIVISIONS)
+    /// <param name="lineMode">If true a line with 3 lines instead of triangles will created (Default:false).</param>    
+    public GLFigureBase Figure(int divisions = DEFAULT_ARROW_DIVISIONS, bool lineMode = false)
     {
-        var fig = new GLTriangleFigure(Triangles(divisions));
+        if (lineMode)
+            return new GLLineFigure(Lines());
+        else
+            return new GLTriangleFigure(Triangles(divisions));
+    }
 
-        return fig;
+    /// <summary>
+    /// GL line figure that presents the arrow.
+    /// </summary>
+    public IEnumerable<GLLine> Lines()
+    {
+        var cs = MakeCS(From, Vector3.Normalize(To - From));
+
+        var r = Diameter / 2;
+        var l = Length;
+        var tl = TipLength;
+        var tr = TipDiameter / 2;
+        var rl = l - tl;
+
+        var rod = GLLine.FromTo(From, To);
+        yield return rod;
+
+        yield return GLLine.FromTo(To, From + cs.BaseZ() * rl + cs.BaseX() * tr);
+        yield return GLLine.FromTo(To, From + cs.BaseZ() * rl - cs.BaseX() * tr);
+
+        yield return GLLine.FromTo(To, From + cs.BaseZ() * rl + cs.BaseY() * tr);
+        yield return GLLine.FromTo(To, From + cs.BaseZ() * rl - cs.BaseY() * tr);
     }
 
     /// <summary>
