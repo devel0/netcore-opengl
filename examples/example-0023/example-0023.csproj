@@ -7,12 +7,12 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<IsPackable>false</IsPackable>
-	</PropertyGroup>	
+	</PropertyGroup>
 
-	<ItemGroup>
+	<!-- <ItemGroup>
 		<None Include="view.json" CopyToOutputDirectory="PreserveNewest" />    
-	</ItemGroup>
-	
+	</ItemGroup> -->
+
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\gui\netcore-opengl-gui.csproj" />
 		<ProjectReference Include="..\..\src\shapes\netcore-opengl-shapes.csproj" />
@@ -21,6 +21,13 @@
 		<Compile Include="../../src/render/usings.render.cs" />
 		<Compile Include="../../src/gui/usings.gui.cs" />
 		<Compile Include="../../src/shapes/usings.shapes.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BriefFiniteElement.Net" Version="2.1.0" />
+
+		<!-- <ProjectReference Include="..\..\..\..\..\opensource\BriefFiniteElement.Net\Sources\BriefFiniteElementNet\BriefFiniteElementNet.csproj" /> -->
+		<!-- <ProjectReference Include="..\..\..\..\..\opensource\BriefFiniteElement.Net\Sources\Common\Common.csproj" /> -->
 	</ItemGroup>
 
 </Project>

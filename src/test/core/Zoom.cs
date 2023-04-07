@@ -69,4 +69,68 @@ public class ZoomTest
 
     }
 
+    [Fact]
+    public void Test3()
+    {
+        var screenSize = new Vector2(640, 480);
+        var fovDeg = DEFAULT_FovDeg;
+
+        var mm = Matrix4x4.Identity;
+        var cp = new Vector3(-0.0013006479f, 0.0013013184f, 5f);
+        var ct = new Vector3(-0.0013006479f, 0.0013013184f, 4f);
+        var cu = DEFAULT_CAMERA_UP;
+        var lbbox = new BBox();
+
+        var lpts = new[] { Vector3.Zero, new Vector3(0, 0, 5) };
+
+        CreateViewMatrix(cp, ct, cu, out var vm);
+
+        CreatePerspectiveProjectionMatrix(DEFAULT_FovDeg,
+            screenSize.X / screenSize.Y,
+            DEFAULT_Near, DEFAULT_Far, out var pm);
+
+        //
+
+        ComputeSBBox(lpts, screenSize, mm, vm, pm, out var sMin, out var sMax, lbbox);
+
+        AssertEqualsTol(1e-4f, Vector3.Zero, lbbox.Min);
+        AssertEqualsTol(1e-4f, lpts[1], lbbox.Max);
+
+        AssertNotNaN(sMin);
+        AssertNotNaN(sMax);
+
+        //
+
+        PerspectiveCenter(lpts, screenSize, mm, vm, pm, cp, ct,
+            out var newCp, out var newCt, out lbbox);
+
+        Assert.False(float.IsNaN(newCp.X));
+        Assert.False(float.IsNaN(newCp.Y));
+        Assert.False(float.IsNaN(newCp.Z));
+
+        Assert.False(float.IsNaN(newCt.X));
+        Assert.False(float.IsNaN(newCt.Y));
+        Assert.False(float.IsNaN(newCt.Z));
+
+        PerspectiveZoomFit(
+            lpts,
+            screenSize,
+            mm, vm, pm,
+            cp, ct, cu,
+            fovDeg,
+            out var fitCameraPos,
+            out var fitCameraTarget);
+
+        Assert.False(float.IsNaN(fitCameraPos.X));
+        Assert.False(float.IsNaN(fitCameraPos.Y));
+        Assert.False(float.IsNaN(fitCameraPos.Z));
+
+        Assert.False(float.IsNaN(fitCameraTarget.X));
+        Assert.False(float.IsNaN(fitCameraTarget.Y));
+        Assert.False(float.IsNaN(fitCameraTarget.Z));
+
+        PreventZFighting(lbbox, mm, vm, fitCameraPos, out var near, out var far);
+        Assert.False(near == 0f);
+    }
+
 }

@@ -339,6 +339,14 @@ public abstract class GLFigureBase : IGLFigure
         return this;
     }
 
+    /// <summary>
+    /// Change the figure order.
+    /// </summary>
+    /// <param name="order">Order to set.</param>
+    /// <seealso cref="Order"/>
+    /// <returns>This figure.</returns>
+    public GLFigureBase SetOrder(int order) => this.Act(fig => fig.Order = order);
+
     public override string ToString()
     {
         var tagNfo = "";

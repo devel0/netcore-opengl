@@ -30,7 +30,11 @@ public static partial class Toolkit
 
         foreach (var lPt in lPts)
         {
+            lBBox?.ApplyUnion(lPt);
+
             var s = LocalToScreen(lPt, size, mvpm);
+
+            if (float.IsInfinity(s.X) || float.IsInfinity(s.Y)) continue;
 
             if (firstAssign)
             {
@@ -47,8 +51,6 @@ public static partial class Toolkit
                 if (s.Y < symin) symin = s.Y;
                 else if (s.Y > symax) symax = s.Y;
             }
-
-            lBBox?.ApplyUnion(lPt);
         }
 
         if (firstAssign) throw new Exception($"not points");
@@ -146,10 +148,18 @@ public static partial class Toolkit
         {
             var qNear = Abs(eC - eN) * 1e-2f;
 
-            if (qNear < DEFAULT_Near && bbox.Size.Max() > 100)
+            if (qNear < DEFAULT_Near)
             {
-                near = 10 * DEFAULT_Near;
-                far = DEFAULT_Far;
+                if (bbox.Size.Max() > 100)
+                {
+                    near = 10 * DEFAULT_Near;
+                    far = DEFAULT_Far;
+                }
+                else
+                {
+                    near = DEFAULT_Near;
+                    far = DEFAULT_Far;
+                }
             }
 
             else
@@ -161,7 +171,7 @@ public static partial class Toolkit
             if (far < near)
             {
                 far = 2f * near;
-            }            
+            }
         }
         else
         {

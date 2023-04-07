@@ -87,17 +87,27 @@ public class GLFontCharManager
                         canvas.Flush();
                     }
 
-                    textBounds.Bottom = textBounds.Bottom < SMALL_LIMIT ? 0 : textBounds.Bottom;
+                    if (Abs(textBounds.Bottom) < SMALL_LIMIT)
+                        textBounds.Bottom = 0;
 
                     fcn = new GLFontChar(GLContext, c, measure, textBounds, bitmap, font);
                     font_char_to_nfo.Add(c_key, fcn);
                 }
+
+                // uncomment follow to save png of character
+                // char? dbgChar = null;
+                // dbgChar = '-';
+                // if (dbgChar is not null && c == dbgChar.Value)
+                //     bitmap.SaveTo(
+                //         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "char.png"));
             }
 
             res.Add(fcn);
         }
 
-        // font_char_to_nfo.Values.Describe(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "font.xlsx"));
+        // uncomment follow to generate fonts.xlsx table on desktop
+        // font_char_to_nfo.Values.Describe(
+        //     Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "font.xlsx"));
 
         if (shaper is not null) shaper.Dispose();
         if (paint is not null) paint.Dispose();

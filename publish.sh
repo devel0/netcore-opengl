@@ -2,10 +2,16 @@
 
 exdir=$(dirname `readlink -f "$0"`)
 
+modules="core render gui shapes"
+
+for module in $modules; do        
+    rm -fr "$exdir"/src/$module/bin        
+done
+
 cd "$exdir"
 dotnet pack -c Release
 
-for module in core render gui shapes; do
+for module in $modules; do    
     ls "$exdir"/src/$module/bin/Release/*.nupkg
     
     dotnet nuget push "$exdir"/src/$module/bin/Release/*.nupkg \

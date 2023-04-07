@@ -1,7 +1,0 @@
-<ResourceDictionary xmlns="https://github.com/avaloniaui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui">
-
-    <SolidColorBrush x:Key="DarkGrayBrush" Color="{x:Static gui:Constants.GRID_SPLITTER_MANAGER_SplitterColor}"/>
-
-</ResourceDictionary>

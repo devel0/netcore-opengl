@@ -5,6 +5,19 @@ public static partial class Toolkit
 
     public static string? TestProjectFolder() => ParentPath(AppDomain.CurrentDomain.BaseDirectory, "test");
 
+    public static void AssertNotNaN(Vector2 v)
+    {
+        Assert.False(float.IsNaN(v.X));
+        Assert.False(float.IsNaN(v.Y));        
+    }
+
+    public static void AssertNotNaN(Vector3 v)
+    {
+        Assert.False(float.IsNaN(v.X));
+        Assert.False(float.IsNaN(v.Y));
+        Assert.False(float.IsNaN(v.Z));
+    }
+
     public static void AssertEqualsTol(float tol, float expected, float actual, string userMessage = "")
     {
         if (!expected.EqualsTol(tol, actual))
