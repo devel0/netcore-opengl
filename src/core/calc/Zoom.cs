@@ -167,12 +167,12 @@ public static partial class Toolkit
 
             if (sBBoxW > sBBoxH * sAr)
             {
-                factor = size.X / sBBoxW;
+                factor = sBBoxW == 0 ? 1 : size.X / sBBoxW;
             }
 
             else
             {
-                factor = size.Y / sBBoxH;
+                factor = sBBoxH == 0 ? 1 : size.Y / sBBoxH;
             }
 
             //     
