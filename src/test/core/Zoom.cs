@@ -131,8 +131,6 @@ public class ZoomTest
 
         PreventZFighting(lbbox, mm, vm, fitCameraPos, out var near, out var far);
         Assert.False(near == 0f);
-
-        ;
     }
 
 }
