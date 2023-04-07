@@ -15,5 +15,6 @@ for module in $modules; do
     ls "$exdir"/src/$module/bin/Release/*.nupkg
     
     dotnet nuget push "$exdir"/src/$module/bin/Release/*.nupkg \
-        -k $(cat ~/security/nuget-api.key) -s https://api.nuget.org/v3/index.json
+        -k $(cat ~/security/nuget-api.key) -s https://api.nuget.org/v3/index.json \
+        --skip-duplicate
 done
