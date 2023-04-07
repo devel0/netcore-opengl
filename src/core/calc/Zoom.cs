@@ -49,26 +49,26 @@ public static partial class Toolkit
     /// <param name="pm">Projection matrix [eye].</param>
     /// <param name="cameraPos">Camera position (x,y,z) [world].</param>
     /// <param name="cameraTarget">Camera target (x,y,z) [world].</param>
-    /// <param name="panCameraPos"></param>
-    /// <param name="panCameraTarget"></param>
-    /// <param name="bbox"></param>
+    /// <param name="panCameraPos">Computed pan camera pos [world].</param>
+    /// <param name="panCameraTarget">Computed pan camera target [world].</param>
+    /// <param name="lBBox">Computed local space bbox [local].</param>
     public static void PerspectiveCenter(
         IEnumerable<Vector3> pts,
         in Vector2 size,
         in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm,
         in Vector3 cameraPos, in Vector3 cameraTarget,
-        out Vector3 panCameraPos, out Vector3 panCameraTarget, out BBox bbox
+        out Vector3 panCameraPos, out Vector3 panCameraTarget, out BBox lBBox
     )
     {
-        bbox = new BBox();
+        lBBox = new BBox();
 
-        ComputeSBBox(pts, size, mm, vm, pm, out var sMin, out var sMax, bbox);
+        ComputeSBBox(pts, size, mm, vm, pm, out var sMin, out var sMax, lBBox);
 
         var sdx = (sMin.X + sMax.X) / 2 - size.X / 2;
         var sdy = (sMin.Y + sMax.Y) / 2 - size.Y / 2;
 
         PerspectivePan(
-            bbox.Middle,
+            lBBox.Middle,
             new Vector2(sdx, sdy), Vector2.Zero, size,
             mm, vm, pm,
             cameraPos, cameraTarget,
