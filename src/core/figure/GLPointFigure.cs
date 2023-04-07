@@ -90,6 +90,11 @@ public class GLPointFigure : GLFigureTypeBase<GLPoint>, IGLPointFigure
         return copy;
     }
 
-
+    /// <summary>
+    /// Set figure points size.
+    /// </summary>
+    /// <param name="pointSize">point size in pixels [screen].</param>
+    /// <returns>This figure.</returns>
+    public GLPointFigure SetPointSize(float pointSize) => this.Act(fig => fig.PointSize = pointSize);
 
 }
