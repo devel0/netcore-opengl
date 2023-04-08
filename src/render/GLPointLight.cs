@@ -269,21 +269,22 @@ public class GLPointLight : INotifyPropertyChanged
     /// </summary>
     /// <param name="model">Gl model.</param>
     /// <param name="adjustConstant">Light constant attenuation factor.</param>
-    /// <param name="adjusLinear">Light linear attenuation factor.</param>
+    /// <param name="adjustLinear">Light linear attenuation factor.</param>
     /// <param name="adjustQuadratic">Light quadratic attenuation factor.</param>
     public void SetupAttenuation(GLModel model,
         float? adjustConstant = DEFAULT_LIGHT_CONSTANT,
-        float? adjusLinear = DEFAULT_LIGHT_LINEAR,
+        float? adjustLinear = DEFAULT_LIGHT_LINEAR,
         float? adjustQuadratic = DEFAULT_LIGHT_QUADRATIC)
     {
         var s = model.LBBox.Size.Max();
 
-        var L = adjusLinear.HasValue ? adjusLinear.Value / s : 0;
+        var C = adjustConstant.HasValue ? adjustConstant.Value : 1;
+        var L = adjustLinear.HasValue ? adjustLinear.Value / s : 0;
         var Q = adjustQuadratic.HasValue ? adjustQuadratic.Value / s : 0;
 
         foreach (var light in model.PointLights)
         {
-            light.Constant = 1.0f;
+            light.Constant = C;
             light.Linear = L;
             light.Quadratic = Q;
         }
