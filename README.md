@@ -19,6 +19,7 @@
   - [Running examples from console](#running-examples-from-console)
   - [Running examples from vscode](#running-examples-from-vscode)
 - [Development key notes](#development-key-notes)
+  - [Coordinate spaces](#coordinate-spaces)
   - [GL Dev inspect tool](#gl-dev-inspect-tool)
   - [Opengl debugging tools](#opengl-debugging-tools)
   - [Multiplatform](#multiplatform)
@@ -163,33 +164,33 @@ Click on the `example code` link to open source code of the example, read top to
 
 ### List of examples
 
-| example code        | image              | description                                                                                                                                                   | example dependencies                |
-| ------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                          |                                     |
-| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                             |                                     |
-| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                      |                                     |
-| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                             |                                     |
-| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |                                     |
-| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |                                     |
-| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |                                     |
-| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                      |                                     |
-| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                     |                                     |
-| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                 |                                     |
-| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |                                     |
-| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |                                     |
-| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |                                     |
-| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                               |                                     |
-| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                               |                                     |
-| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                 |                                     |
-| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                          |                                     |
-| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                    |                                     |
-| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum. |                                     |
-| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |                                     |
-| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |                                     |
-| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |                                     |
-| [0023][es23]        | [![img][e23]][e23] | Display bar displacement                                                                                                                                      | [BriefFiniteElement][dep-brief-fem] |
+| example code        | image              | description                                                                                                                                                   | example dependencies |
+| ------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                          |                      |
+| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                             |                      |
+| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                      |                      |
+| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                             |                      |
+| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |                      |
+| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |                      |
+| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |                      |
+| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                      |                      |
+| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                     |                      |
+| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                 |                      |
+| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |                      |
+| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |                      |
+| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |                      |
+| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                               |                      |
+| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                               |                      |
+| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                 |                      |
+| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                          |                      |
+| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                    |                      |
+| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum. |                      |
+| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |                      |
+| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |                      |
+| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |                      |
+| [0023][es23]        | [![img][e23]][e23] | Display bar displacement                                                                                                                                      | [BriefFiniteElement] |
 
-[dep-brief-fem]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
+[brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
 [es0]: examples/example-0000/Program.cs
 [es1]: examples/example-0001/Program.cs
 [es2]: examples/example-0002/Views/MainWindow.axaml.cs
@@ -262,18 +263,33 @@ This will update `.vscode/launch.json` then hit F5 to start.
 
 Most of technical documentation is directly integrated with [API documentation](https://devel0.github.io/netcore-opengl/html/annotated.html).
 
+### Coordinate spaces
+
+![](data/notes/SpaceCoord.svg)
+
+- **Object**, **Model**, **View** and **Projection** matrixes are used by the gl pipeline at the [vertex shader set gl position].
+- **Clip**, **NDC** and finally **Screen** spaces are handled by the gl pipeline as further stages where size of render device was set by the [gl control render][set of gl viewport].
+- Forward and backward coordinate transform can be done through provided core helper functions; these methods exists and used in order to allow preview what will be computed by the gpu in the zoomfit functions such as [compute screen bbox] or in the backward case to detect a [local ray cast].
+  - [forward transform](src/core/calc/ForwardTransform.cs)
+  - [backward transform](src/core/calc/BackwardTransform.cs)
+
+[vertex shader set gl position]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/render/shaders/4.main.vs#L74
+[set of gl viewport]: https://github.com/devel0/netcore-opengl/blob/3dbf0e483007c9eea979d091547e5fa08a85e082/src/render/GLControl.cs#L855
+[local ray cast]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/core/calc/BackwardTransform.cs#L176
+[compute screen bbox]: https://github.com/devel0/netcore-opengl/blob/ca1237b9b3b16c1a7fc2c673c9bf2de87160f12b/src/core/calc/Util.cs#L17
+
 ### GL Dev inspect tool
 
 Hit `F1` gesture to open gl dev tool useful to understand how conversion translates between spaces; it provides some basic support such as:
 
 - show render count
 - show/edit GlView title
-- toggle control perspective, shadow, texture, wireframe, shadewithedge
+- toggle control perspective, shadow, texture, wireframe, shade with edge, show normals
 - override light ambient, diffuse, specular strength
 - change fovdeg, show camera coordinates and frustum
 - toggle autoadjust near/far with near,far edit
 - show bbox size and model/view/projection matrixes
-- activate, deactivate light and raw light position edit
+- add, remove, set position, color of lights
 
 ![](data/images/gldevtool.gif)
 
