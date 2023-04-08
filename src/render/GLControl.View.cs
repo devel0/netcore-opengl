@@ -276,11 +276,11 @@ public partial class GLControl
         {
             File.WriteAllText(pathfilename, JsonConvert.SerializeObject(nfo, Formatting.Indented));
 
-            NotificationRequest?.Invoke("GLControl view", $"View saved to\n[{pathfilename}]");
+            SendNotification("GLControl view", $"View saved to\n[{pathfilename}]");
         }
         catch (Exception ex)
         {
-            NotificationRequest?.Invoke("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
+            SendNotification("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
                 GLNotificationType.Error);
         }
     }
@@ -289,7 +289,7 @@ public partial class GLControl
     /// Restore current view config.
     /// </summary>
     /// <param name="nfo">view config object</param>
-    /// <seealso cref="Loadview"/>
+    /// <seealso cref="LoadView"/>
     public void SetViewNfo(ViewNfo nfo)
     {
         ModelMatrix = nfo.ModelMatrix;

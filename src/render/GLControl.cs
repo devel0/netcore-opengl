@@ -76,6 +76,15 @@ public partial class GLControl : INotifyPropertyChanged
     /// </summary>
     public NotificationDelegate NotificationRequest;
 
+    /// <summary>
+    /// Send notification to frontend that manage this gl control.
+    /// </summary>
+    /// <param name="title">Title of notification.</param>
+    /// <param name="msg">Message to display, it can contains newlines.</param>
+    /// <param name="notifyType">Level type of notification (Default:Information).</param>
+    public void SendNotification(string title, string msg, GLNotificationType notifyType = GLNotificationType.Information) =>
+        NotificationRequest?.Invoke(title, msg, notifyType);
+
     void ListenModelChanges()
     {
         GLModel.PointLights.ItemsAdded += (a, items) =>
