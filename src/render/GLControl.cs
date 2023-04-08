@@ -71,6 +71,11 @@ public partial class GLControl : INotifyPropertyChanged
         ListenModelChanges();
     }
 
+    /// <summary>
+    /// Event emitted when gl control would to notify something. This will handled by <see cref="SearchAThing.OpenGL.GUI.AvaloniaGLControl"/>.
+    /// </summary>
+    public NotificationDelegate NotificationRequest;
+
     void ListenModelChanges()
     {
         GLModel.PointLights.ItemsAdded += (a, items) =>

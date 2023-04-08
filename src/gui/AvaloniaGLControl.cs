@@ -64,6 +64,10 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
                 if (sender is GLControl glControl && !glControl.IsRendering)
                     InvalidateVisual();
             };
+            _glControl.NotificationRequest += (title, msg, type) =>
+            {
+                this.Notify(new Notification(title, msg, type.ToAvaloniaNotificationType()));
+            };
             this.LayoutUpdated += AvaloniaGLControl_LayoutUpdated;
             SetDefaultKeyGestures();
 
