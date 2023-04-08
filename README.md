@@ -38,7 +38,7 @@
 
 <hr/>
 
-![](data/media/example-0006.gif)
+![](data/images/example-0006.gif)
 
 ## Introduction
 
@@ -275,7 +275,7 @@ Hit `F1` gesture to open gl dev tool useful to understand how conversion transla
 - show bbox size and model/view/projection matrixes
 - activate, deactivate light and raw light position edit
 
-![](data/media/gldevtool.gif)
+![](data/images/gldevtool.gif)
 
 ### Opengl debugging tools
 
