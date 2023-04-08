@@ -259,7 +259,7 @@ public static class Constants
     /// <summary>
     /// (Default) Gl dev tool window height (screen pixel).
     /// </summary>
-    public const double DEVTOOL_HEIGHT = 400;
+    public const double DEVTOOL_HEIGHT = 500;
 
     #endregion
 
