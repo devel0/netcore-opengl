@@ -57,4 +57,5 @@ public class ViewNfo
     public float Far { get; set; }
     public bool ShadeWithEdge { get; set; }
     public bool ShowCameraObject { get; set; }
+    public List<GLPointLight>? Lights { get; set; }
 }

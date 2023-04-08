@@ -224,6 +224,10 @@ public class GLPointLight : INotifyPropertyChanged
 
     #endregion
 
+    GLPointLight()
+    {
+    }
+
     /// <summary>
     /// Create a gl point light at given coordinates [local].
     /// </summary>
