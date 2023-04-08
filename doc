@@ -90,7 +90,7 @@ if [ "$1" == "commit" ]; then
   git checkout docs
   git merge master --commit --no-edit
   ./doc build
-  git add -A
+  git add -A docs
   git commit -a -m "doc"
   git checkout master
 fi

@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a2fbdd7f0a3441be2d442ad30aa862001" target="_top" xlink:title="Create a gl vertex with given position [object].">
+<g id="a_node2"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a274c75610c04d33e2f416cf62751cbb8" target="_top" xlink:title="Create a gl vertex with given position [object].">
 <polygon fill="white" stroke="#666666" points="152,-30 0,-30 0,0 152,0 152,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">SearchAThing.OpenGL.Core.</text>
 <text text-anchor="middle" x="76" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">GLVertex.GLVertex</text>

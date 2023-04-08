@@ -1,4 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,159,31"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control_split.html" title="Gl split control attached to GLWindow for stand&#45;alone application or Window on mvvm applications...." alt="" coords="207,5,377,31"/>
+<area shape="rect" id="node1" href="$struct_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_struct.html" title="Structure used by the vertex manager when register a vertex inside it. &#160;This structure has an explici..." alt="" coords="5,5,124,31"/>
 </map>

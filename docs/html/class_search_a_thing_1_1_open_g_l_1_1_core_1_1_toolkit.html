@@ -210,9 +210,9 @@ Static Public Member Functions</h2></td></tr>
  <br  />
   <br /></td></tr>
 <tr class="separator:a9de8ad2640f0fadcb8c11fbd4ca521ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a188bb9c02ffbf2da02f5eba3c778c000"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a188bb9c02ffbf2da02f5eba3c778c000">Serialize</a> (Matrix4x4 m)</td></tr>
-<tr class="memdesc:a188bb9c02ffbf2da02f5eba3c778c000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a string of 16 float space separated ( invariant ).  <br /></td></tr>
-<tr class="separator:a188bb9c02ffbf2da02f5eba3c778c000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638e4d0b0918728c444f6e6aacc04d06"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a638e4d0b0918728c444f6e6aacc04d06">Serialize</a> (in Matrix4x4 m)</td></tr>
+<tr class="memdesc:a638e4d0b0918728c444f6e6aacc04d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize to a string of 16 float space separated ( invariant ).  <br /></td></tr>
+<tr class="separator:a638e4d0b0918728c444f6e6aacc04d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fb1672a302bd0aefdd3560f87880b61"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a3fb1672a302bd0aefdd3560f87880b61">OrthoZoom</a> (float scale, float orthoZoom, out float scaledOrthoZoom)</td></tr>
 <tr class="memdesc:a3fb1672a302bd0aefdd3560f87880b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale by given factor the given [eye] zoom ( Orthogonal mode ).  <br /></td></tr>
 <tr class="separator:a3fb1672a302bd0aefdd3560f87880b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,41 +228,41 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a477f49b72ab0d89c78fc58cae4895f37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a477f49b72ab0d89c78fc58cae4895f37">OrthoZoomFit</a> (IEnumerable&lt; Vector3 &gt; pts, in Vector2 size, in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm, float orthoZoom, float near, float far, Vector3 cameraPos, Vector3 cameraTarget, Vector3 cameraUp, out float fitOrthoZoom, out Vector3 panCameraPos, out Vector3 panCameraTarget)</td></tr>
 <tr class="memdesc:a477f49b72ab0d89c78fc58cae4895f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fit current model view for orthographic projection.  <br /></td></tr>
 <tr class="separator:a477f49b72ab0d89c78fc58cae4895f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5f16c1ac861c9813c483c4d4d8fbb55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ae5f16c1ac861c9813c483c4d4d8fbb55">ArbitraryAxisAlghorithm</a> (Vector3 n, out Vector3 x, out Vector3 y, out Vector3 z)</td></tr>
-<tr class="memdesc:ae5f16c1ac861c9813c483c4d4d8fbb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build world matrix using Arbitrary Axis Algorithm.  <br /></td></tr>
-<tr class="separator:ae5f16c1ac861c9813c483c4d4d8fbb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac48162b12f2e3eecbc3ddfa8500b6e"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a7ac48162b12f2e3eecbc3ddfa8500b6e">MakeCS</a> (Vector3 origin, Vector3 N)</td></tr>
-<tr class="memdesc:a7ac48162b12f2e3eecbc3ddfa8500b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build world matrix using ArbitraryAxisAlghorithm and sets the origin to the given one.  <br /></td></tr>
-<tr class="separator:a7ac48162b12f2e3eecbc3ddfa8500b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd48a1f7632aec0e21dd3cc8f815728"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a3bd48a1f7632aec0e21dd3cc8f815728">MakeCS</a> (Vector3 origin, Vector3 vx, Vector3 vy, bool makeOrthonormalization=false)</td></tr>
-<tr class="memdesc:a3bd48a1f7632aec0e21dd3cc8f815728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a right-hand rule world matrix with given origin and reference vectors vx, vy. <br  />
+<tr class="memitem:a3f6c5b35b540d674780a2fa86fcd6173"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a3f6c5b35b540d674780a2fa86fcd6173">ArbitraryAxisAlghorithm</a> (in Vector3 n, out Vector3 x, out Vector3 y, out Vector3 z)</td></tr>
+<tr class="memdesc:a3f6c5b35b540d674780a2fa86fcd6173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build world matrix using Arbitrary Axis Algorithm.  <br /></td></tr>
+<tr class="separator:a3f6c5b35b540d674780a2fa86fcd6173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c917d212b0f100b147fc51a61da65f"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a43c917d212b0f100b147fc51a61da65f">MakeCS</a> (in Vector3 origin, in Vector3 N)</td></tr>
+<tr class="memdesc:a43c917d212b0f100b147fc51a61da65f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build world matrix using ArbitraryAxisAlghorithm and sets the origin to the given one.  <br /></td></tr>
+<tr class="separator:a43c917d212b0f100b147fc51a61da65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c7d76aa6008cd764dec9a42902038d"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ae3c7d76aa6008cd764dec9a42902038d">MakeCS</a> (in Vector3 origin, in Vector3 vx, in Vector3 vy, bool makeOrthonormalization=false)</td></tr>
+<tr class="memdesc:ae3c7d76aa6008cd764dec9a42902038d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a right-hand rule world matrix with given origin and reference vectors vx, vy. <br  />
   <br /></td></tr>
-<tr class="separator:a3bd48a1f7632aec0e21dd3cc8f815728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a349121e6e1b4cb30f28f467faaf2e870"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a349121e6e1b4cb30f28f467faaf2e870">MakeCS</a> (Vector3 origin, Vector3 baseX, Vector3 baseY)</td></tr>
-<tr class="memdesc:a349121e6e1b4cb30f28f467faaf2e870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a right-hand rule world matrix with given origin and normalized orthonormal x, y base vectors.  <br /></td></tr>
-<tr class="separator:a349121e6e1b4cb30f28f467faaf2e870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf5153fd4b10be001aeded2d1726beca"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#adf5153fd4b10be001aeded2d1726beca">MakeCS</a> (Vector3 origin, Vector3 baseX, Vector3 baseY, Vector3 baseZ)</td></tr>
-<tr class="memdesc:adf5153fd4b10be001aeded2d1726beca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create world matrix with given origin and normalized orthonormal x, y, z base vectors.  <br /></td></tr>
-<tr class="separator:adf5153fd4b10be001aeded2d1726beca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63ecd9eae3473098854dffbcff5ebd95"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a63ecd9eae3473098854dffbcff5ebd95">MakeWCS</a> (Vector3? origin=null)</td></tr>
-<tr class="memdesc:a63ecd9eae3473098854dffbcff5ebd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create world matrix using given origin and basex=(1,0,0), basey=(0,1,0), basez=(0,0,1).  <br /></td></tr>
-<tr class="separator:a63ecd9eae3473098854dffbcff5ebd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ae3c7d76aa6008cd764dec9a42902038d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b3225821fbf9d7a49d058cc794f821"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a99b3225821fbf9d7a49d058cc794f821">MakeCS</a> (in Vector3 origin, in Vector3 baseX, in Vector3 baseY)</td></tr>
+<tr class="memdesc:a99b3225821fbf9d7a49d058cc794f821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a right-hand rule world matrix with given origin and normalized orthonormal x, y base vectors.  <br /></td></tr>
+<tr class="separator:a99b3225821fbf9d7a49d058cc794f821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4242e0f447a71298d62072250f680c40"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a4242e0f447a71298d62072250f680c40">MakeCS</a> (in Vector3 origin, in Vector3 baseX, in Vector3 baseY, in Vector3 baseZ)</td></tr>
+<tr class="memdesc:a4242e0f447a71298d62072250f680c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create world matrix with given origin and normalized orthonormal x, y, z base vectors.  <br /></td></tr>
+<tr class="separator:a4242e0f447a71298d62072250f680c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e75d38e9d74e767882780b736fe59f7"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a5e75d38e9d74e767882780b736fe59f7">MakeWCS</a> (in Vector3? origin=null)</td></tr>
+<tr class="memdesc:a5e75d38e9d74e767882780b736fe59f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create world matrix using given origin and basex=(1,0,0), basey=(0,1,0), basez=(0,0,1).  <br /></td></tr>
+<tr class="separator:a5e75d38e9d74e767882780b736fe59f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a878b37c4b659a000bbad7ad3c1772916"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a878b37c4b659a000bbad7ad3c1772916">MakeWCS</a> (float ox, float oy, float oz)</td></tr>
 <tr class="memdesc:a878b37c4b659a000bbad7ad3c1772916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create world matrix using given origin and basex=(1,0,0), basey=(0,1,0), basez=(0,0,1).  <br /></td></tr>
 <tr class="separator:a878b37c4b659a000bbad7ad3c1772916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cbcccb35734cb6a1e6ac2eaf8d942be"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a8cbcccb35734cb6a1e6ac2eaf8d942be">MakeScreenCS</a> (Vector3? origin=null)</td></tr>
-<tr class="memdesc:a8cbcccb35734cb6a1e6ac2eaf8d942be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a screen matrix using given origin.<br  />
+<tr class="memitem:ae75ad4431e13ec9ae90fe3a84afbccc2"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ae75ad4431e13ec9ae90fe3a84afbccc2">MakeScreenCS</a> (in Vector3? origin=null)</td></tr>
+<tr class="memdesc:ae75ad4431e13ec9ae90fe3a84afbccc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a screen matrix using given origin.<br  />
  That is the same of a world matrix with y flipped like the screen coordinates are with (0,0) on (left,top).  <br /></td></tr>
-<tr class="separator:a8cbcccb35734cb6a1e6ac2eaf8d942be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33310d755e49d729e937f4da4a76c53a"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a33310d755e49d729e937f4da4a76c53a">RightHandXFromYZ</a> (Vector3 y, Vector3 z)</td></tr>
-<tr class="memdesc:a33310d755e49d729e937f4da4a76c53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect basex from given normalized basey and basez vectors using right-hand rule.  <br /></td></tr>
-<tr class="separator:a33310d755e49d729e937f4da4a76c53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9b48ac54896c95fd4bbf68703b31ec8"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa9b48ac54896c95fd4bbf68703b31ec8">MakeCCS</a> (Vector3 cameraPos, Vector3 cameraTarget, Vector3 cameraUp)</td></tr>
-<tr class="memdesc:aa9b48ac54896c95fd4bbf68703b31ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a world matrix that represent the one used by the camera [world].<br  />
+<tr class="separator:ae75ad4431e13ec9ae90fe3a84afbccc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bedc3c9819976161df1e3c111fc5df"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a66bedc3c9819976161df1e3c111fc5df">RightHandXFromYZ</a> (in Vector3 y, in Vector3 z)</td></tr>
+<tr class="memdesc:a66bedc3c9819976161df1e3c111fc5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect basex from given normalized basey and basez vectors using right-hand rule.  <br /></td></tr>
+<tr class="separator:a66bedc3c9819976161df1e3c111fc5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919ce31c5a533586e7e9bf7ae1a6c28e"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a919ce31c5a533586e7e9bf7ae1a6c28e">MakeCCS</a> (in Vector3 cameraPos, in Vector3 cameraTarget, in Vector3 cameraUp)</td></tr>
+<tr class="memdesc:a919ce31c5a533586e7e9bf7ae1a6c28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a world matrix that represent the one used by the camera [world].<br  />
  Basey = Normalized(cameraUp)<br  />
  Basez = Normalized(cameraPos - cameraTarget)<br  />
   <br /></td></tr>
-<tr class="separator:aa9b48ac54896c95fd4bbf68703b31ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a919ce31c5a533586e7e9bf7ae1a6c28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fa2f00d3a4845b9f318b173af7664a6"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line.html">GLLine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a2fa2f00d3a4845b9f318b173af7664a6">ToGLLines</a> (this IEnumerable&lt; Vector3 &gt; pts, bool closed=false)</td></tr>
 <tr class="memdesc:a2fa2f00d3a4845b9f318b173af7664a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate given point set with gl lines.  <br /></td></tr>
 <tr class="separator:a2fa2f00d3a4845b9f318b173af7664a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,8 +272,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a380063954e1d19bf3dfac26dc23d82ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae5f16c1ac861c9813c483c4d4d8fbb55" name="ae5f16c1ac861c9813c483c4d4d8fbb55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5f16c1ac861c9813c483c4d4d8fbb55">&#9670;&#160;</a></span>ArbitraryAxisAlghorithm()</h2>
+<a id="a3f6c5b35b540d674780a2fa86fcd6173" name="a3f6c5b35b540d674780a2fa86fcd6173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6c5b35b540d674780a2fa86fcd6173">&#9670;&#160;</a></span>ArbitraryAxisAlghorithm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +284,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static void ArbitraryAxisAlghorithm </td>
           <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
@@ -333,7 +333,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_ae5f16c1ac861c9813c483c4d4d8fbb55_icgraph.svg" width="312" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a3f6c5b35b540d674780a2fa86fcd6173_icgraph.svg" width="312" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1175,7 +1175,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <p><br  />
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a188bb9c02ffbf2da02f5eba3c778c000" title="Serialize to a string of 16 float space separated ( invariant ).">SearchAThing.OpenGL.Core.Toolkit.Serialize</a></dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a638e4d0b0918728c444f6e6aacc04d06" title="Serialize to a string of 16 float space separated ( invariant ).">SearchAThing.OpenGL.Core.Toolkit.Serialize</a></dd></dl>
 
 </div>
 </div>
@@ -1537,8 +1537,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa9b48ac54896c95fd4bbf68703b31ec8" name="aa9b48ac54896c95fd4bbf68703b31ec8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9b48ac54896c95fd4bbf68703b31ec8">&#9670;&#160;</a></span>MakeCCS()</h2>
+<a id="a919ce31c5a533586e7e9bf7ae1a6c28e" name="a919ce31c5a533586e7e9bf7ae1a6c28e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919ce31c5a533586e7e9bf7ae1a6c28e">&#9670;&#160;</a></span>MakeCCS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1549,19 +1549,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Matrix4x4 MakeCCS </td>
           <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>cameraPos</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>cameraTarget</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>cameraUp</em>&#160;</td>
         </tr>
         <tr>
@@ -1593,13 +1593,13 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_aa9b48ac54896c95fd4bbf68703b31ec8_icgraph.svg" width="258" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a919ce31c5a533586e7e9bf7ae1a6c28e_icgraph.svg" width="258" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a349121e6e1b4cb30f28f467faaf2e870" name="a349121e6e1b4cb30f28f467faaf2e870"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a349121e6e1b4cb30f28f467faaf2e870">&#9670;&#160;</a></span>MakeCS() <span class="overload">[1/4]</span></h2>
+<a id="a99b3225821fbf9d7a49d058cc794f821" name="a99b3225821fbf9d7a49d058cc794f821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b3225821fbf9d7a49d058cc794f821">&#9670;&#160;</a></span>MakeCS() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1610,19 +1610,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Matrix4x4 MakeCS </td>
           <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>origin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>baseX</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>baseY</em>&#160;</td>
         </tr>
         <tr>
@@ -1651,8 +1651,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="adf5153fd4b10be001aeded2d1726beca" name="adf5153fd4b10be001aeded2d1726beca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf5153fd4b10be001aeded2d1726beca">&#9670;&#160;</a></span>MakeCS() <span class="overload">[2/4]</span></h2>
+<a id="a4242e0f447a71298d62072250f680c40" name="a4242e0f447a71298d62072250f680c40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4242e0f447a71298d62072250f680c40">&#9670;&#160;</a></span>MakeCS() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1663,25 +1663,25 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Matrix4x4 MakeCS </td>
           <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>origin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>baseX</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>baseY</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>baseZ</em>&#160;</td>
         </tr>
         <tr>
@@ -1711,8 +1711,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7ac48162b12f2e3eecbc3ddfa8500b6e" name="a7ac48162b12f2e3eecbc3ddfa8500b6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ac48162b12f2e3eecbc3ddfa8500b6e">&#9670;&#160;</a></span>MakeCS() <span class="overload">[3/4]</span></h2>
+<a id="a43c917d212b0f100b147fc51a61da65f" name="a43c917d212b0f100b147fc51a61da65f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c917d212b0f100b147fc51a61da65f">&#9670;&#160;</a></span>MakeCS() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1723,13 +1723,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Matrix4x4 MakeCS </td>
           <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>origin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>N</em>&#160;</td>
         </tr>
         <tr>
@@ -1757,8 +1757,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a3bd48a1f7632aec0e21dd3cc8f815728" name="a3bd48a1f7632aec0e21dd3cc8f815728"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bd48a1f7632aec0e21dd3cc8f815728">&#9670;&#160;</a></span>MakeCS() <span class="overload">[4/4]</span></h2>
+<a id="ae3c7d76aa6008cd764dec9a42902038d" name="ae3c7d76aa6008cd764dec9a42902038d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c7d76aa6008cd764dec9a42902038d">&#9670;&#160;</a></span>MakeCS() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1769,19 +1769,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Matrix4x4 MakeCS </td>
           <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>origin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>vx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>vy</em>, </td>
         </tr>
         <tr>
@@ -1828,8 +1828,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8cbcccb35734cb6a1e6ac2eaf8d942be" name="a8cbcccb35734cb6a1e6ac2eaf8d942be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cbcccb35734cb6a1e6ac2eaf8d942be">&#9670;&#160;</a></span>MakeScreenCS()</h2>
+<a id="ae75ad4431e13ec9ae90fe3a84afbccc2" name="ae75ad4431e13ec9ae90fe3a84afbccc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75ad4431e13ec9ae90fe3a84afbccc2">&#9670;&#160;</a></span>MakeScreenCS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1840,7 +1840,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Matrix4x4 MakeScreenCS </td>
           <td>(</td>
-          <td class="paramtype">Vector3?&#160;</td>
+          <td class="paramtype">in Vector3?&#160;</td>
           <td class="paramname"><em>origin</em> = <code>null</code></td><td>)</td>
           <td></td>
         </tr>
@@ -1920,8 +1920,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a63ecd9eae3473098854dffbcff5ebd95" name="a63ecd9eae3473098854dffbcff5ebd95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63ecd9eae3473098854dffbcff5ebd95">&#9670;&#160;</a></span>MakeWCS() <span class="overload">[2/2]</span></h2>
+<a id="a5e75d38e9d74e767882780b736fe59f7" name="a5e75d38e9d74e767882780b736fe59f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e75d38e9d74e767882780b736fe59f7">&#9670;&#160;</a></span>MakeWCS() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1932,7 +1932,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Matrix4x4 MakeWCS </td>
           <td>(</td>
-          <td class="paramtype">Vector3?&#160;</td>
+          <td class="paramtype">in Vector3?&#160;</td>
           <td class="paramname"><em>origin</em> = <code>null</code></td><td>)</td>
           <td></td>
         </tr>
@@ -3067,8 +3067,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a33310d755e49d729e937f4da4a76c53a" name="a33310d755e49d729e937f4da4a76c53a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33310d755e49d729e937f4da4a76c53a">&#9670;&#160;</a></span>RightHandXFromYZ()</h2>
+<a id="a66bedc3c9819976161df1e3c111fc5df" name="a66bedc3c9819976161df1e3c111fc5df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bedc3c9819976161df1e3c111fc5df">&#9670;&#160;</a></span>RightHandXFromYZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3079,13 +3079,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static Vector3 RightHandXFromYZ </td>
           <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramtype">in Vector3&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
@@ -3113,7 +3113,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a33310d755e49d729e937f4da4a76c53a_icgraph.svg" width="455" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a66bedc3c9819976161df1e3c111fc5df_icgraph.svg" width="455" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3374,8 +3374,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a188bb9c02ffbf2da02f5eba3c778c000" name="a188bb9c02ffbf2da02f5eba3c778c000"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a188bb9c02ffbf2da02f5eba3c778c000">&#9670;&#160;</a></span>Serialize()</h2>
+<a id="a638e4d0b0918728c444f6e6aacc04d06" name="a638e4d0b0918728c444f6e6aacc04d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a638e4d0b0918728c444f6e6aacc04d06">&#9670;&#160;</a></span>Serialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3386,7 +3386,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static string Serialize </td>
           <td>(</td>
-          <td class="paramtype">Matrix4x4&#160;</td>
+          <td class="paramtype">in Matrix4x4&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>

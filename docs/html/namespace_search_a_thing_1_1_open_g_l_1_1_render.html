@@ -271,6 +271,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:adc0b109432dcccb74c8feb56ba629366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gl text alignment respect given insertion point.  <a href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#adc0b109432dcccb74c8feb56ba629366">More...</a><br /></td></tr>
 <tr class="separator:adc0b109432dcccb74c8feb56ba629366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44f891ad4c61c9b8c9d95ab9ccda03c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03c">GLNotificationType</a> { <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03caa82be0f551b8708bc08eb33cd9ded0cf">Information</a> = 0
+, <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03ca505a83f220c02df2f85c3810cd9ceb38">Success</a> = 1
+, <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03ca0eaadb4fcb48a0a0ed7bc9868be9fbaa">Warning</a> = 2
+, <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03ca902b0d55fddef6f8d651fe1035b7d4bd">Error</a> = 3
+ }</td></tr>
+<tr class="memdesc:ac44f891ad4c61c9b8c9d95ab9ccda03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of notification emitted by gl control.  <a href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03c">More...</a><br /></td></tr>
+<tr class="separator:ac44f891ad4c61c9b8c9d95ab9ccda03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -280,6 +287,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad9fd6b3c609a03040e1d0a1dcc171cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cae30ea17ed648a2204709bba4657db"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#a8cae30ea17ed648a2204709bba4657db">ModelViewInvalidated</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html">GLModel</a> model)</td></tr>
 <tr class="separator:a8cae30ea17ed648a2204709bba4657db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fdf3f1ee20dddfc9e04061a668716b"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ab9fdf3f1ee20dddfc9e04061a668716b">NotificationDelegate</a> (string title, string msg, <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03c">GLNotificationType</a> type=<a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03caa82be0f551b8708bc08eb33cd9ded0cf">GLNotificationType.Information</a>)</td></tr>
+<tr class="separator:ab9fdf3f1ee20dddfc9e04061a668716b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Render module contains abstractions over Silk.NET opengl library. </p>
@@ -406,6 +415,28 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a61fda52cb502dd9f1de03640659b6693ab86cff82475094baabb8e661191a5394" name="a61fda52cb502dd9f1de03640659b6693ab86cff82475094baabb8e661191a5394"></a>BottomTopRight&#160;</td><td class="fielddoc"><p>view otr </p>
 </td></tr>
+</table>
+
+</div>
+</div>
+<a id="ac44f891ad4c61c9b8c9d95ab9ccda03c" name="ac44f891ad4c61c9b8c9d95ab9ccda03c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44f891ad4c61c9b8c9d95ab9ccda03c">&#9670;&#160;</a></span>GLNotificationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03c">GLNotificationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of notification emitted by gl control. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac44f891ad4c61c9b8c9d95ab9ccda03caa82be0f551b8708bc08eb33cd9ded0cf" name="ac44f891ad4c61c9b8c9d95ab9ccda03caa82be0f551b8708bc08eb33cd9ded0cf"></a>Information&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac44f891ad4c61c9b8c9d95ab9ccda03ca505a83f220c02df2f85c3810cd9ceb38" name="ac44f891ad4c61c9b8c9d95ab9ccda03ca505a83f220c02df2f85c3810cd9ceb38"></a>Success&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac44f891ad4c61c9b8c9d95ab9ccda03ca0eaadb4fcb48a0a0ed7bc9868be9fbaa" name="ac44f891ad4c61c9b8c9d95ab9ccda03ca0eaadb4fcb48a0a0ed7bc9868be9fbaa"></a>Warning&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac44f891ad4c61c9b8c9d95ab9ccda03ca902b0d55fddef6f8d651fe1035b7d4bd" name="ac44f891ad4c61c9b8c9d95ab9ccda03ca902b0d55fddef6f8d651fe1035b7d4bd"></a>Error&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -544,6 +575,40 @@ Functions</h2></td></tr>
           <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html">GLModel</a>&#160;</td>
           <td class="paramname"><em>model</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9fdf3f1ee20dddfc9e04061a668716b" name="ab9fdf3f1ee20dddfc9e04061a668716b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9fdf3f1ee20dddfc9e04061a668716b">&#9670;&#160;</a></span>NotificationDelegate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void NotificationDelegate </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03c">GLNotificationType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03caa82be0f551b8708bc08eb33cd9ded0cf">GLNotificationType.Information</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
