@@ -262,8 +262,9 @@ public partial class GLControl
     };
 
     /// <summary>
-    /// Save actual view info to given pathfilename.
-    /// <seealso cref="ViewDefaultPathfilename"/>
+    /// Save actual view info to given pathfilename.<br/>
+    /// A Notification <see cref="GLControl.NotificationRequest"/> event emitted.
+    /// <seealso cref="ViewDefaultPathfilename"/>    
     /// </summary>    
     public void SaveView(string? pathfilename = null)
     {
@@ -271,7 +272,17 @@ public partial class GLControl
 
         if (pathfilename is null) pathfilename = ViewDefaultPathfilename;
 
-        File.WriteAllText(pathfilename, JsonConvert.SerializeObject(nfo, Formatting.Indented));
+        try
+        {
+            File.WriteAllText(pathfilename, JsonConvert.SerializeObject(nfo, Formatting.Indented));
+
+            NotificationRequest?.Invoke("GLControl view", $"View saved to\n[{pathfilename}]");
+        }
+        catch (Exception ex)
+        {
+            NotificationRequest?.Invoke("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
+                GLNotificationType.Error);
+        }
     }
 
     /// <summary>
