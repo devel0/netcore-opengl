@@ -729,6 +729,27 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    #region Title
+    
+    private string _Title = "";
+    /// <summary>
+    /// Title
+    /// </summary>
+    public string Title
+    {
+        get => _Title;
+        set
+        {
+             var changed = value != _Title;
+             if (changed)
+             {
+                 _Title = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
     #region ShowModelBBox
 
     private bool _ShowModelBBox = false;

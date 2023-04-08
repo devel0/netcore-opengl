@@ -66,7 +66,7 @@
 					<TextBlock desktop:GridAutoRow.Ref="RenderCount" Grid.Column="2" Text="{Binding RenderCount}" Classes="val" />
 
 					<TextBlock desktop:GridAutoRow.Ref="Title" Grid.Column="0" Text="Title" Classes="hdr" />
-					<TextBox desktop:GridAutoRow.Ref="Title" Grid.Column="2" Text="{Binding #uc.AvaloniaGLControl.Title}" Classes="val" />
+					<TextBox desktop:GridAutoRow.Ref="Title" Grid.Column="2" Text="{Binding #uc.AvaloniaGLControl.GLControl.Title}" Classes="val" />
 
 					<TextBlock desktop:GridAutoRow.Ref="FPS" Grid.Column="0" Text="FPS" Classes="hdr" />
 					<TextBlock desktop:GridAutoRow.Ref="FPS" Grid.Column="2" Text="{Binding FrameRate, StringFormat={}{0:0.0}}" Classes="val" />

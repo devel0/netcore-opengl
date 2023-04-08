@@ -247,6 +247,7 @@ public partial class GLControl
     /// <seealso cref="SaveView"/>
     public ViewNfo GetViewNfo() => new ViewNfo
     {
+        Title = Title,
         ModelMatrix = ModelMatrix,
         CameraPos = CameraPos,
         CameraTarget = CameraTarget,
@@ -292,6 +293,7 @@ public partial class GLControl
     /// <seealso cref="LoadView"/>
     public void SetViewNfo(ViewNfo nfo)
     {
+        Title = nfo.Title;
         ModelMatrix = nfo.ModelMatrix;
         CameraPos = nfo.CameraPos;
         CameraTarget = nfo.CameraTarget;

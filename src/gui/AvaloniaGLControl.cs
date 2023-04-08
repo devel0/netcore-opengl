@@ -39,6 +39,8 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
     #endregion
 
+    internal event EventHandler GLControlConnected;
+
     #region glControl
 
     private GLControl? _glControl = null;
@@ -68,6 +70,9 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             {
                 this.Notify(new Notification(title, msg, type.ToAvaloniaNotificationType()));
             };
+
+            GLControlConnected?.Invoke(this, EventArgs.Empty);            
+
             this.LayoutUpdated += AvaloniaGLControl_LayoutUpdated;
             SetDefaultKeyGestures();
 
@@ -204,29 +209,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
         }
     }
 
-    GLDevTool? devTool = null;
-
-    #region Title
-
-    private string _Title = "";
-    /// <summary>
-    /// Overlay title bound to <see cref="GLView"/> title control.
-    /// </summary>
-    public string Title
-    {
-        get => _Title;
-        set
-        {
-            var changed = value != _Title;
-            if (changed)
-            {
-                _Title = value;
-                OnPropertyChanged();
-            }
-        }
-    }
-
-    #endregion
+    GLDevTool? devTool = null;   
 
     /// <summary>
     /// Activates the <see cref="GLDevTool"/> developer tool.
@@ -286,24 +269,12 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// <summary>
     /// Retrieve an object that can be serialized to save current <see cref="GLControl"/> view config.
     /// </summary>    
-    public ViewNfo GetViewNfo()
-    {
-        var nfo = GLControl.GetViewNfo();
-
-        nfo.Title = Title;
-
-        return nfo;
-    }
+    public ViewNfo GetViewNfo() => GLControl.GetViewNfo();
 
     /// <summary>
     /// Restore <see cref="GLControl"/> view settings from given nfo object.
     /// </summary>    
-    public void SetViewNfo(ViewNfo nfo)
-    {
-        GLControl.SetViewNfo(nfo);
-
-        Title = nfo.Title;
-    }
+    public void SetViewNfo(ViewNfo nfo) => GLControl.SetViewNfo(nfo);            
 
     /// <summary>
     /// Save all <see cref="GLControl"/> view config to the given pathfilename.<br/>    
