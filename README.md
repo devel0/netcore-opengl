@@ -480,7 +480,7 @@ Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netc
 | x         | Toggle texture                 |
 | s         | Toggle shadow                  |
 | z         | Zoom fit                       |
-| i         | Invalidate view                |
+| Ctrl + i  | Invalidate view                |
 | Ctrl + x  | Toggle model bbox              |
 | Ctrl + c  | Toggle camera object           |
 

@@ -180,7 +180,7 @@ public static class Constants
     /// <summary>
     /// (Default) Invalidate view key gesture.
     /// </summary>
-    public static readonly KeyGesture DEFAULT_InvalidateGesture = new KeyGesture(Key.I);
+    public static readonly KeyGesture DEFAULT_InvalidateGesture = new KeyGesture(Key.I, KeyModifiers.Control);
 
     /// <summary>
     /// (Default) Open dev tool key gesture.
