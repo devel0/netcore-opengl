@@ -416,6 +416,27 @@ public class GLModel : IGLContextObject, INotifyPropertyChanged
     }
 
     /// <summary>
+    /// Resets and create predefined lights
+    /// </summary>
+    public void ResetLight()
+    {
+        PointLights.Clear();
+
+        var lbbox = LBBox;
+
+        var color1 = ColorTranslator.FromHtml("#ffffff");
+
+        var light1 = new GLPointLight(
+            lbbox.Max.X + lbbox.Size.X / 3,
+            lbbox.Min.Y,
+            lbbox.Max.Z + 2.5f * lbbox.Size.Z,
+            color1)
+        { Constant = 1f };
+
+        PointLights.Add(light1);
+    }
+
+    /// <summary>
     /// Configure light constant, linear, quadratic attenuation based on the model size.
     /// </summary>
     /// <param name="adjustConstant">Gl point light constant attenuation (Default:1f).</param>
