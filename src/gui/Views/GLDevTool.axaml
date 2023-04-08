@@ -19,6 +19,13 @@
 	</Window.Resources>
 
 	<TabControl>
+
+		<!--
+		==========================================================================================
+			GL CONTROL
+		========================================================================================== 
+		-->
+
 		<TabItem Header="GLControl">
 			<ScrollViewer VerticalScrollBarVisibility="Auto">
 				<Grid ColumnDefinitions="Auto,Auto,*"
@@ -148,10 +155,10 @@
 
 					<CheckBox desktop:GridAutoRow.Ref="BBox" Grid.Column="0" Grid.ColumnSpan="2"
 						Classes="hdr" Content="BBox" IsChecked="{Binding ShowModelBBox}" />
-
 					<!-- <TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="0" Text="BBox" Classes="hdr" /> -->
+
 					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="1" Text="[ local ]" Classes="mu" />
-					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="2" Text="{Binding GLModel.BBox}" Classes="val" />
+					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="2" Text="{Binding GLModel.LBBox}" Classes="val" />
 
 					<TextBlock desktop:GridAutoRow.Ref="MM" Grid.Column="0" Text="ModelMatrix" Classes="hdr" />
 					<TextBlock desktop:GridAutoRow.Ref="MM" Grid.Column="1" Text="[ local ]" Classes="mu" />
@@ -174,6 +181,12 @@
 				</Grid>
 			</ScrollViewer>
 		</TabItem>
+
+		<!--
+		==========================================================================================
+			FIGURES
+		========================================================================================== 
+		-->
 
 		<TabItem Header="Figures">
 			<Grid RowDefinitions="Auto,*">
@@ -223,6 +236,12 @@
 			</Grid>
 		</TabItem>
 
+		<!--
+		==========================================================================================
+			VERTEXES
+		========================================================================================== 
+		-->
+
 		<TabItem Header="Vertexes">
 			<Grid RowDefinitions="Auto, *">
 				<StackPanel Orientation="Horizontal">
@@ -261,6 +280,12 @@
 			</Grid>
 		</TabItem>
 
+		<!--
+		==========================================================================================
+			LIGHTS
+		========================================================================================== 
+		-->
+
 		<TabItem Header="Lights">
 
 			<Grid ColumnDefinitions="*,450">
@@ -268,6 +293,7 @@
 					<StackPanel Orientation="Horizontal">
 						<Button Content="Add" Click="PointLightsAddClick" />
 						<Button Content="Del" Click="PointLightsDelClick" Margin="10,0,0,0" />
+						<Button Content="Reset" Click="PointLightsResetClick" Margin="10,0,0,0" />
 					</StackPanel>
 					<DataGrid Grid.Row="1" Name="dgLights" AutoGenerateColumns="false"
 						Margin="0,0,10,10"
@@ -295,9 +321,34 @@
 					IsVisible="{Binding #dgLights.SelectedItem, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?IsNull true false}" />
 
 				<TabControl Grid.Column="1">
+
 					<TabItem Header="Position">
 
+						<Grid ColumnDefinitions="Auto,*,Auto,Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto">
+
+							<Grid.Styles>
+								<Style Selector="TextBlock.hdr">
+									<Setter Property="VerticalAlignment" Value="Center" />
+									<Setter Property="Width" Value="100" />
+								</Style>
+							</Grid.Styles>
+
+							<TextBlock Grid.Row="0" Grid.Column="0" Text="Local X" Classes="hdr" />
+							<Slider Grid.Row="0" Grid.Column="1" Minimum="{Binding #uc.LightPosMinX}" Maximum="{Binding #uc.LightPosMaxX}" Value="{Binding #uc.LightPosWrap.X}" />
+							<TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding #uc.LightPosWrap.X, StringFormat={}{0:0.000}}" Classes="hdr" />
+
+							<TextBlock Grid.Row="1" Grid.Column="0" Text="Local Y" Classes="hdr" />
+							<Slider Grid.Row="1" Grid.Column="1" Minimum="{Binding #uc.LightPosMinY}" Maximum="{Binding #uc.LightPosMaxY}" Value="{Binding #uc.LightPosWrap.Y}" />
+							<TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding #uc.LightPosWrap.Y, StringFormat={}{0:0.000}}" Classes="hdr" />
+
+							<TextBlock Grid.Row="2" Grid.Column="0" Text="Local Z" Classes="hdr" />
+							<Slider Grid.Row="2" Grid.Column="1" Minimum="{Binding #uc.LightPosMinZ}" Maximum="{Binding #uc.LightPosMaxZ}" Value="{Binding #uc.LightPosWrap.Z}" />
+							<TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding #uc.LightPosWrap.Z, StringFormat={}{0:0.000}}" Classes="hdr" />
+
+						</Grid>
+
 					</TabItem>
+
 					<TabItem Header="Color">
 						<Grid RowDefinitions="Auto,*">
 
@@ -351,11 +402,11 @@
 
 								<Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*,75" Margin="0,10,0,0">
 									<Grid.Styles>
-										<Style Selector="TextBlock.hdr">											
+										<Style Selector="TextBlock.hdr">
 											<Setter Property="Width" Value="100" />
 										</Style>
 									</Grid.Styles>
-									<TextBlock Grid.Row="0" Grid.Column="0" Text="Constant" Classes="hdr"/>
+									<TextBlock Grid.Row="0" Grid.Column="0" Text="Constant" Classes="hdr" />
 									<Slider Grid.Row="0" Grid.Column="1"
 										Minimum="0" Maximum="1"
 										Value="{Binding #dgLights.SelectedItem.Constant}" />
