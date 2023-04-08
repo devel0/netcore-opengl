@@ -128,25 +128,30 @@ class Program
 
                     var N = 10;
                     {
-                        float xi = 0f;
-                        var xi_delta = 1f / N;
+                        var section_off = 0d;
+                        var section_off_step = 1d / N;
                         Vector3? prevDisp = null;
                         Vector3? barPrevPos = null;
                         var lines = new List<GLLine>();
                         var dpts = new List<Vector3>();
                         var barLine = Line.FromTo(bar.StartNode.ToVector3(), bar.EndNode.ToVector3());
+
+                        // Iso Parametric Coordination system for BarElement with two nodes
+                        // ref: https://bfenet.readthedocs.io/en/latest/elements/finiteElements/Bar/coords.html#iso-parametric-coordination-system-for-barelement-with-two-nodes
+
                         for (int i = 0; i < N + 1; ++i)
                         {
+                            var xi = (2 * section_off) - 1;
                             var disp = bar.GetGlobalDisplacementAt(xi).ToVector3();
 
-                            Debug.WriteLine(Invariant($"evaluating bar displacement at off: [{xi}] = [{disp}]"));
-                            var barPos = barLine.From + barLine.V * xi;
+                            Debug.WriteLine(Invariant($"section off:[{section_off}] iso ξ:[{xi}] g.disp:[{disp}]"));
+                            var barPos = barLine.From + barLine.V * (float)section_off;
 
                             var dpt = barPos + disp;
                             dpts.Add(dpt);
 
-                            if (prevDisp is not null && barPrevPos is not null)                            
-                                lines.Add(GLLine.FromTo(barPrevPos.Value + prevDisp.Value, dpt));                            
+                            if (prevDisp is not null && barPrevPos is not null)
+                                lines.Add(GLLine.FromTo(barPrevPos.Value + prevDisp.Value, dpt));
 
                             glModel.AddFigure(glModel.MakeTextFigure(
                                 new GLText(XZCS.Move(dpt + .2f * Vector3.UnitX),
@@ -157,7 +162,7 @@ class Program
                             prevDisp = disp;
                             barPrevPos = barPos;
 
-                            xi = (float)Round(xi + xi_delta, 3);
+                            section_off += section_off_step;
                         }
                         glModel.AddFigure(new GLLineFigure(lines).SetColor(Color.Yellow));
                         glModel.AddFigure(new GLPointFigure(dpts).SetPointSize(5).SetColor(Color.Orange));

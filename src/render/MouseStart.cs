@@ -11,7 +11,7 @@ public class MouseStart
     public Vector2 StartPt { get; private set; }
     public GLMatrixes GLMatrixes { get; private set; }
 
-    public MouseStart(GLControl glControl, Vector2 startPt)
+    public MouseStart(GLControl glControl, in Vector2 startPt)
     {
         StartPt = startPt;
         GLMatrixes = glControl.GetGLMatrixes();

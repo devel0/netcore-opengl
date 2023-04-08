@@ -90,7 +90,7 @@ public class OffscreenRenderDevice : IRenderDevice, INotifyPropertyChanged
     /// </summary>
     /// <param name="pathfilename">Target bitmap pathfilename.</param>
     /// <param name="size">Size of image created.</param>
-    public OffscreenRenderDevice(string pathfilename, Size size)
+    public OffscreenRenderDevice(string pathfilename, in  Size size)
     {
         Size = size;
         _Pathfilename = pathfilename;

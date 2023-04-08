@@ -33,7 +33,7 @@ public static partial class Ext
     /// <param name="m">Input world matrix.</param>
     /// <param name="origin">New origin.</param>
     /// <returns>Origin repositioned world matrix.</returns>
-    public static Matrix4x4 SetOrigin(this in Matrix4x4 m, Vector3 origin) =>
+    public static Matrix4x4 SetOrigin(this in Matrix4x4 m, in Vector3 origin) =>
         MakeCS(origin, m.BaseX(), m.BaseY(), m.BaseZ());
 
     /// <summary>
@@ -42,7 +42,7 @@ public static partial class Ext
     /// <param name="m">Input world matrix.</param>
     /// <param name="delta">Delta to apply to the origin.</param>
     /// <returns>Origin moved world matrix.</returns>
-    public static Matrix4x4 Move(this Matrix4x4 m, Vector3? delta = null) =>
+    public static Matrix4x4 Move(this in Matrix4x4 m, in Vector3? delta = null) =>
         delta is null ? m : MakeCS(m.Origin() + delta.Value, m.BaseX(), m.BaseY(), m.BaseZ());
 
     /// <summary>
@@ -53,28 +53,28 @@ public static partial class Ext
     /// <param name="dy">Delta (y) to apply to the origin.</param>
     /// <param name="dz">Delta (z) to apply to the origin.</param>
     /// <returns>Origin moved world matrix.</returns>
-    public static Matrix4x4 Move(this Matrix4x4 m, float dx, float dy, float dz) =>
+    public static Matrix4x4 Move(this in Matrix4x4 m, float dx, float dy, float dz) =>
         MakeCS(m.Origin() + new Vector3(dx, dy, dz), m.BaseX(), m.BaseY(), m.BaseZ());
 
     /// <summary>
     /// Create a new world matrix copy of the given one but with x flipped ( then also the z ).
     /// </summary>
     /// <param name="m">Input world matrix.</param>    
-    public static Matrix4x4 FlipX(this Matrix4x4 m) =>
+    public static Matrix4x4 FlipX(this in Matrix4x4 m) =>
         MakeCS(m.Origin(), -m.BaseX(), m.BaseY(), -m.BaseZ());
 
     /// <summary>
     /// Create a new world matrix copy of the given one but with y flipped ( then also the z ).
     /// </summary>
     /// <param name="m">Input world matrix.</param>    
-    public static Matrix4x4 FlipY(this Matrix4x4 m) =>
+    public static Matrix4x4 FlipY(this in Matrix4x4 m) =>
         MakeCS(m.Origin(), m.BaseX(), -m.BaseY(), -m.BaseZ());
 
     /// <summary>
     /// Create a new world matrix copy of the given one but with z flipped ( then also the x ).
     /// </summary>
     /// <param name="m">Input world matrix.</param>    
-    public static Matrix4x4 FlipZ(this Matrix4x4 m) =>
+    public static Matrix4x4 FlipZ(this in Matrix4x4 m) =>
         MakeCS(m.Origin(), -m.BaseX(), m.BaseY(), -m.BaseZ());
 
     /// <summary>
@@ -82,7 +82,7 @@ public static partial class Ext
     /// </summary>    
     /// <param name="m">Input matrix.</param>
     /// <returns>Inverse matrix.</returns>
-    public static Matrix4x4 Inverse(this Matrix4x4 m)
+    public static Matrix4x4 Inverse(this in Matrix4x4 m)
     {
         Matrix4x4 invMat;
         if (!Matrix4x4.Invert(m, out invMat))
@@ -97,7 +97,7 @@ public static partial class Ext
     /// <param name="dec">Decimal places to show in formatted string.</param>
     /// <param name="width">Nr. of characters foreach component.</param>
     /// <returns>String formatted representation of the matrix.</returns>
-    public static string Fmt(this Matrix4x4 m, int dec, int width = 10)
+    public static string Fmt(this in Matrix4x4 m, int dec, int width = 10)
     {
         var sb = new StringBuilder();
 
@@ -141,7 +141,7 @@ public static partial class Toolkit
     /// <param name="x">Computed xbase..</param>
     /// <param name="y">Computed ybase.</param>
     /// <param name="z">Computed zbase.</param>
-    public static void ArbitraryAxisAlghorithm(Vector3 n, out Vector3 x, out Vector3 y, out Vector3 z)
+    public static void ArbitraryAxisAlghorithm(in Vector3 n, out Vector3 x, out Vector3 y, out Vector3 z)
     {
         if (Abs(n.X) < aaaSmall && Abs(n.Y) < aaaSmall)
             x = Vector3.Cross(Vector3.UnitY, n);
@@ -158,7 +158,7 @@ public static partial class Toolkit
     /// <param name="origin">Origin to set to the created world matrix.</param>
     /// <param name="N">Normalized normal vector.</param>
     /// <returns>World matrix.</returns>
-    public static Matrix4x4 MakeCS(Vector3 origin, Vector3 N)
+    public static Matrix4x4 MakeCS(in Vector3 origin, in Vector3 N)
     {
         ArbitraryAxisAlghorithm(N, out var baseX, out var baseY, out var baseZ);
 
@@ -181,7 +181,7 @@ public static partial class Toolkit
     /// - baseX = Normalize(vx)<br/>
     /// - baseY = baseZ x baseX<br/></param>
     /// <returns>World matrix with basex aligned to given vx.</returns>
-    public static Matrix4x4 MakeCS(Vector3 origin, Vector3 vx, Vector3 vy, bool makeOrthonormalization = false)
+    public static Matrix4x4 MakeCS(in Vector3 origin, in Vector3 vx, in Vector3 vy, bool makeOrthonormalization = false)
     {
         Vector3 baseX, baseY, baseZ;
 
@@ -213,7 +213,7 @@ public static partial class Toolkit
     /// <param name="baseX">World basex.</param>
     /// <param name="baseY">World basey.</param>
     /// <returns>World matrix.</returns>
-    public static Matrix4x4 MakeCS(Vector3 origin, Vector3 baseX, Vector3 baseY) =>
+    public static Matrix4x4 MakeCS(in Vector3 origin, in Vector3 baseX, in Vector3 baseY) =>
         MakeCS(origin, baseX, baseY, makeOrthonormalization: false);
 
     /// <summary>
@@ -224,7 +224,7 @@ public static partial class Toolkit
     /// <param name="baseY">World basey.</param>
     /// <param name="baseZ">World basez.</param>
     /// <returns>World matrix.</returns>
-    public static Matrix4x4 MakeCS(Vector3 origin, Vector3 baseX, Vector3 baseY, Vector3 baseZ) =>
+    public static Matrix4x4 MakeCS(in Vector3 origin, in Vector3 baseX, in Vector3 baseY, in Vector3 baseZ) =>
         new Matrix4x4(
             baseX.X, baseX.Y, baseX.Z, 0, // WorldAxisX
             baseY.X, baseY.Y, baseY.Z, 0, // WorldAxisY        
@@ -236,7 +236,7 @@ public static partial class Toolkit
     /// </summary>
     /// <param name="origin">World origin.</param>
     /// <returns>World matrix.</returns>
-    public static Matrix4x4 MakeWCS(Vector3? origin = null) =>
+    public static Matrix4x4 MakeWCS(in Vector3? origin = null) =>
         MakeCS(origin is null ? Vector3.Zero : origin.Value, Vector3.UnitX, Vector3.UnitY);
 
     /// <summary>
@@ -255,7 +255,7 @@ public static partial class Toolkit
     /// </summary>
     /// <param name="origin">Screen origin.</param>
     /// <returns>Screen matrix.</returns>
-    public static Matrix4x4 MakeScreenCS(Vector3? origin = null) => WCS.Move(origin).FlipY();
+    public static Matrix4x4 MakeScreenCS(in Vector3? origin = null) => WCS.Move(origin).FlipY();
 
     /// <summary>
     /// Detect basex from given normalized basey and basez vectors using right-hand rule.
@@ -263,7 +263,7 @@ public static partial class Toolkit
     /// <param name="y">Basey versor.</param>
     /// <param name="z">Basez versor.</param>
     /// <returns>Basex versor.</returns>
-    public static Vector3 RightHandXFromYZ(Vector3 y, Vector3 z) => Vector3.Cross(y, z);
+    public static Vector3 RightHandXFromYZ(in Vector3 y, in Vector3 z) => Vector3.Cross(y, z);
 
     /// <summary>
     /// Make a world matrix that represent the one used by the camera [world].<br/>
@@ -274,7 +274,7 @@ public static partial class Toolkit
     /// <param name="cameraTarget">Camera target [world].</param>
     /// <param name="cameraUp">Camera up versor [world].</param>
     /// <returns></returns>
-    public static Matrix4x4 MakeCCS(Vector3 cameraPos, Vector3 cameraTarget, Vector3 cameraUp)
+    public static Matrix4x4 MakeCCS(in Vector3 cameraPos, in Vector3 cameraTarget, in Vector3 cameraUp)
     {
         var baseZ = Vector3.Normalize(cameraPos - cameraTarget);
         var baseY = Vector3.Normalize(cameraUp);

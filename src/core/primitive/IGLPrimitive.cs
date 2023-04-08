@@ -67,6 +67,6 @@ public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
     /// Bounding box of the primitive.
     /// </summary>
     /// <param name="cs">(Optional) cs for oriented bounding box.</param>    
-    BBox BBox(Matrix4x4? cs = null);
+    BBox BBox(in Matrix4x4? cs = null);
 
 }

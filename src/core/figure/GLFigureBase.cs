@@ -290,7 +290,7 @@ public abstract class GLFigureBase : IGLFigure
     /// <param name="coord">Delta vector3 [object]</param>
     /// <param name="relative">If true (default) sum the given delta elsewhere replace the object matrix translation.</param>    
     /// <returns>This figure reference.</returns>
-    public GLFigureBase Move(Vector3 coord, bool relative = true)
+    public GLFigureBase Move(in Vector3 coord, bool relative = true)
     {
         ObjectMatrix = ObjectMatrix.SetOrigin(
             relative ? ObjectMatrix.Origin() + coord : coord);
@@ -298,7 +298,7 @@ public abstract class GLFigureBase : IGLFigure
         return this;
     }
 
-    public BBox OBBox(Matrix4x4? cs = null)
+    public BBox OBBox(in Matrix4x4? cs = null)
     {
         var res = new BBox(cs);
 
@@ -323,14 +323,14 @@ public abstract class GLFigureBase : IGLFigure
     /// </summary>
     /// <param name="color">Color to set on vertexes.</param>
     /// <returns>This figure.</returns>
-    public GLFigureBase SetColor(Color color) => SetColor(color.ToVector4());
+    public GLFigureBase SetColor(in Color color) => SetColor(color.ToVector4());
 
     /// <summary>
     /// Set color on primitives vertexes of this figure.
     /// </summary>
     /// <param name="rgbaColor">Color to set on vertexes.</param>
     /// <returns>This figure.</returns>
-    public GLFigureBase SetColor(Vector4 rgbaColor)
+    public GLFigureBase SetColor(in Vector4 rgbaColor)
     {
         foreach (var primitive in Primitives)
             foreach (var vertex in primitive.Vertexes)

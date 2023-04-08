@@ -9,7 +9,7 @@ public static partial class Ext
     /// <remarks>
     /// If size height is zero returns 1, width / height elsewhere.
     /// </remarks>
-    public static float AspectRatio(this Size size) =>
+    public static float AspectRatio(this in Size size) =>
         size.Height == 0 ? 1 : (float)size.Width / (float)size.Height;
 
 }

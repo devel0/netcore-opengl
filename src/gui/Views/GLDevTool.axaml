@@ -19,6 +19,13 @@
 	</Window.Resources>
 
 	<TabControl>
+
+		<!--
+		==========================================================================================
+			GL CONTROL
+		========================================================================================== 
+		-->
+
 		<TabItem Header="GLControl">
 			<ScrollViewer VerticalScrollBarVisibility="Auto">
 				<Grid ColumnDefinitions="Auto,Auto,*"
@@ -65,7 +72,7 @@
 					<TextBlock desktop:GridAutoRow.Ref="FPS" Grid.Column="2" Text="{Binding FrameRate, StringFormat={}{0:0.0}}" Classes="val" />
 
 					<CheckBox desktop:GridAutoRow.Ref="IsRenderInvalidated" Grid.Column="0" Grid.ColumnSpan="3" Content="IsRenderInvalidated" IsChecked="{Binding IsRenderInvalidated, Mode=OneWay}" />
-					
+
 					<CheckBox desktop:GridAutoRow.Ref="Perspective" Grid.Column="0" Grid.ColumnSpan="3" Content="Perspective" IsChecked="{Binding Perspective}" />
 					<CheckBox desktop:GridAutoRow.Ref="UseShadow" Grid.Column="0" Grid.ColumnSpan="3" Content="UseShadow" IsChecked="{Binding UseShadow}" />
 					<CheckBox desktop:GridAutoRow.Ref="UseTexture" Grid.Column="0" Grid.ColumnSpan="3" Content="UseTexture" IsChecked="{Binding UseTexture}" />
@@ -148,10 +155,10 @@
 
 					<CheckBox desktop:GridAutoRow.Ref="BBox" Grid.Column="0" Grid.ColumnSpan="2"
 						Classes="hdr" Content="BBox" IsChecked="{Binding ShowModelBBox}" />
-
 					<!-- <TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="0" Text="BBox" Classes="hdr" /> -->
+
 					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="1" Text="[ local ]" Classes="mu" />
-					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="2" Text="{Binding GLModel.BBox}" Classes="val" />
+					<TextBlock desktop:GridAutoRow.Ref="BBox" Grid.Column="2" Text="{Binding GLModel.LBBox}" Classes="val" />
 
 					<TextBlock desktop:GridAutoRow.Ref="MM" Grid.Column="0" Text="ModelMatrix" Classes="hdr" />
 					<TextBlock desktop:GridAutoRow.Ref="MM" Grid.Column="1" Text="[ local ]" Classes="mu" />
@@ -174,6 +181,12 @@
 				</Grid>
 			</ScrollViewer>
 		</TabItem>
+
+		<!--
+		==========================================================================================
+			FIGURES
+		========================================================================================== 
+		-->
 
 		<TabItem Header="Figures">
 			<Grid RowDefinitions="Auto,*">
@@ -223,14 +236,20 @@
 			</Grid>
 		</TabItem>
 
+		<!--
+		==========================================================================================
+			VERTEXES
+		========================================================================================== 
+		-->
+
 		<TabItem Header="Vertexes">
 			<Grid RowDefinitions="Auto, *">
 				<StackPanel Orientation="Horizontal">
 					<Button Content="Export Xlsx" Click="ExportXlsxClick" />
 				</StackPanel>
 
-				<DataGrid Grid.Row="1" Name="dgVertexes" 
-					AutoGenerateColumns="false" IsReadOnly="true"					
+				<DataGrid Grid.Row="1" Name="dgVertexes"
+					AutoGenerateColumns="false" IsReadOnly="true"
 					Items="{Binding #uc.HighlightedVertexes}">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Normal" Width="3*"
@@ -261,30 +280,156 @@
 			</Grid>
 		</TabItem>
 
+		<!--
+		==========================================================================================
+			LIGHTS
+		========================================================================================== 
+		-->
+
 		<TabItem Header="Lights">
-			<Grid RowDefinitions="100,*">
-				<DataGrid Name="dgLights" AutoGenerateColumns="false"
-					Items="{Binding GLModel.PointLights}">
-					<DataGrid.Columns>
 
-						<DataGridTextColumn Header="Pos"
-							Binding="{Binding Position, Converter={x:Static gui:Vector3TextConverter.Instance}}"
-							IsReadOnly="false" />
+			<Grid ColumnDefinitions="*,450">
+				<Grid RowDefinitions="Auto,*" Margin="0,0,10,0">
+					<StackPanel Orientation="Horizontal">
+						<Button Content="Add" Click="PointLightsAddClick" />
+						<Button Content="Del" Click="PointLightsDelClick" Margin="10,0,0,0" />
+						<Button Content="Reset" Click="PointLightsResetClick" Margin="10,0,0,0" />
+					</StackPanel>
+					<DataGrid Grid.Row="1" Name="dgLights" AutoGenerateColumns="false"
+						Margin="0,0,10,10"
+						Items="{Binding GLModel.PointLights}">
+						<DataGrid.Columns>
 
-						<DataGridTemplateColumn Header="ShowPoint" IsReadOnly="false">
-							<DataGridTemplateColumn.CellTemplate>
-								<DataTemplate>
-									<CheckBox PointerPressed="cbpress" IsChecked="{Binding ShowPoint}" />
-								</DataTemplate>
-							</DataGridTemplateColumn.CellTemplate>
-						</DataGridTemplateColumn>
+							<DataGridTextColumn Header="Pos"
+								Binding="{Binding Position, Converter={x:Static gui:Vector3TextConverter.Instance}}"
+								IsReadOnly="false" />
 
-					</DataGrid.Columns>
-				</DataGrid>
-				<StackPanel Grid.Row="1">
-					<Button Content="Add" Click="PointLightsAddClick" />
-					<Button Content="Del" Click="PointLightsDelClick" />
-				</StackPanel>
+							<DataGridTemplateColumn Header="ShowPoint" IsReadOnly="false">
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<CheckBox PointerPressed="cbpress" IsChecked="{Binding ShowPoint}" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
+						</DataGrid.Columns>
+					</DataGrid>
+				</Grid>
+
+				<GridSplitter Grid.Column="0" HorizontalAlignment="Right" Width="10" Background="{DynamicResource DarkGrayBrush}" />
+
+				<Border Grid.Column="1" Background="#70000000" ZIndex="1" Grid.RowSpan="2"
+					IsVisible="{Binding #dgLights.SelectedItem, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?IsNull true false}" />
+
+				<TabControl Grid.Column="1">
+
+					<TabItem Header="Position">
+
+						<Grid ColumnDefinitions="Auto,*,Auto,Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto">
+
+							<Grid.Styles>
+								<Style Selector="TextBlock.hdr">
+									<Setter Property="VerticalAlignment" Value="Center" />
+									<Setter Property="Width" Value="100" />
+								</Style>
+							</Grid.Styles>
+
+							<TextBlock Grid.Row="0" Grid.Column="0" Text="Local X" Classes="hdr" />
+							<Slider Grid.Row="0" Grid.Column="1" Minimum="{Binding #uc.LightPosMinX}" Maximum="{Binding #uc.LightPosMaxX}" Value="{Binding #uc.LightPosWrap.X}" />
+							<TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding #uc.LightPosWrap.X, StringFormat={}{0:0.000}}" Classes="hdr" />
+
+							<TextBlock Grid.Row="1" Grid.Column="0" Text="Local Y" Classes="hdr" />
+							<Slider Grid.Row="1" Grid.Column="1" Minimum="{Binding #uc.LightPosMinY}" Maximum="{Binding #uc.LightPosMaxY}" Value="{Binding #uc.LightPosWrap.Y}" />
+							<TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding #uc.LightPosWrap.Y, StringFormat={}{0:0.000}}" Classes="hdr" />
+
+							<TextBlock Grid.Row="2" Grid.Column="0" Text="Local Z" Classes="hdr" />
+							<Slider Grid.Row="2" Grid.Column="1" Minimum="{Binding #uc.LightPosMinZ}" Maximum="{Binding #uc.LightPosMaxZ}" Value="{Binding #uc.LightPosWrap.Z}" />
+							<TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding #uc.LightPosWrap.Z, StringFormat={}{0:0.000}}" Classes="hdr" />
+
+						</Grid>
+
+					</TabItem>
+
+					<TabItem Header="Color">
+						<Grid RowDefinitions="Auto,*">
+
+							<Grid Grid.Row="0" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*,10,*,10,*">
+								<TextBlock Grid.Row="0" Grid.ColumnSpan="5"
+									Text="Color" FontWeight="Bold" TextAlignment="Center" />
+
+								<TextBlock Grid.Row="1" Grid.Column="0" Text="Ambient" TextAlignment="Center" />
+								<ColorSpectrum Grid.Row="2" Grid.Column="0"
+									Color="{Binding #dgLights.SelectedItem.Ambient, Converter={x:Static gui:AColorConverter.Instance}}"
+									CornerRadius="10"
+									Height="128" Width="128" />
+								<TextBox Grid.Row="3" Grid.Column="0">
+									<Interaction.Behaviors>
+										<gui:LostFocusUpdateBindingBehavior Text="{Binding #dgLights.SelectedItem.Ambient, Converter={x:Static gui:ColorHexStringConverter.Instance}}" />
+									</Interaction.Behaviors>
+								</TextBox>
+
+								<TextBlock Grid.Row="1" Grid.Column="2" Text="Diffuse" TextAlignment="Center" />
+								<ColorSpectrum Grid.Row="2" Grid.Column="2"
+									Color="{Binding #dgLights.SelectedItem.Diffuse, Converter={x:Static gui:AColorConverter.Instance}}"
+									CornerRadius="10"
+									Height="128" Width="128" />
+								<TextBox Grid.Row="3" Grid.Column="2">
+									<Interaction.Behaviors>
+										<gui:LostFocusUpdateBindingBehavior Text="{Binding #dgLights.SelectedItem.Diffuse, Converter={x:Static gui:ColorHexStringConverter.Instance}}" />
+									</Interaction.Behaviors>
+								</TextBox>
+
+								<TextBlock Grid.Row="1" Grid.Column="4" Text="Specular" TextAlignment="Center" />
+								<ColorSpectrum Grid.Row="2" Grid.Column="4"
+									Color="{Binding #dgLights.SelectedItem.Specular, Converter={x:Static gui:AColorConverter.Instance}}"
+									CornerRadius="10"
+									Height="128" Width="128" />
+								<TextBox Grid.Row="3" Grid.Column="4">
+									<Interaction.Behaviors>
+										<gui:LostFocusUpdateBindingBehavior Text="{Binding #dgLights.SelectedItem.Specular, Converter={x:Static gui:ColorHexStringConverter.Instance}}" />
+									</Interaction.Behaviors>
+								</TextBox>
+							</Grid>
+
+							<StackPanel Grid.Row="1" Margin="0,10,0,0">
+								<StackPanel.Styles>
+									<Style Selector="TextBlock">
+										<Setter Property="VerticalAlignment" Value="Center" />
+									</Style>
+								</StackPanel.Styles>
+
+								<TextBlock HorizontalAlignment="Stretch"
+									Text="Attenuation" FontWeight="Bold" TextAlignment="Center" />
+
+								<Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*,75" Margin="0,10,0,0">
+									<Grid.Styles>
+										<Style Selector="TextBlock.hdr">
+											<Setter Property="Width" Value="100" />
+										</Style>
+									</Grid.Styles>
+									<TextBlock Grid.Row="0" Grid.Column="0" Text="Constant" Classes="hdr" />
+									<Slider Grid.Row="0" Grid.Column="1"
+										Minimum="0" Maximum="1"
+										Value="{Binding #dgLights.SelectedItem.Constant}" />
+									<TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Constant, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
+
+									<TextBlock Grid.Row="1" Grid.Column="0" Text="Linear" Classes="hdr" />
+									<Slider Grid.Row="1" Grid.Column="1"
+										Minimum="0" Maximum="1"
+										Value="{Binding #dgLights.SelectedItem.Linear}" />
+									<TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Linear, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
+
+									<TextBlock Grid.Row="2" Grid.Column="0" Text="Quadratic" Classes="hdr" />
+									<Slider Grid.Row="2" Grid.Column="1"
+										Minimum="0" Maximum="1"
+										Value="{Binding #dgLights.SelectedItem.Quadratic}" />
+									<TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Quadratic, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
+								</Grid>
+							</StackPanel>
+						</Grid>
+					</TabItem>
+				</TabControl>
+
+
 			</Grid>
 		</TabItem>
 	</TabControl>

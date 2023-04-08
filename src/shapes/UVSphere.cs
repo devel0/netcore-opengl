@@ -21,7 +21,7 @@ public class UVSphere
     /// </summary>
     /// <param name="center">Center of the sphere.</param>
     /// <param name="radius">Radius of the sphere.</param>
-    public UVSphere(Vector3 center, float radius)
+    public UVSphere(in Vector3 center, float radius)
     {
         Center = center;
         Radius = radius;

@@ -129,7 +129,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="from">From position.</param>
     /// <param name="to">To position.</param>
     /// <param name="color">(Optional) color.</param>    
-    public static GLLine FromTo(Vector3 from, Vector3 to, Color? color = null) =>
+    public static GLLine FromTo(in Vector3 from, in Vector3 to, in Color? color = null) =>
         new GLLine(new GLVertex(from, color), new GLVertex(to, color));
 
     /// <summary>
@@ -138,7 +138,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="from">From position.</param>
     /// <param name="to">To position.</param>
     /// <param name="color">(Optional) color.</param>    
-    public static GLLine FromTo(Vector2 from, Vector2 to, Color? color = null) =>
+    public static GLLine FromTo(in Vector2 from, in Vector2 to, in Color? color = null) =>
         new GLLine(new GLVertex(from.ToVector3(), color), new GLVertex(to.ToVector3(), color));
 
     /// <summary>
@@ -148,7 +148,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="to">To position.</param>
     /// <param name="colorFrom">From vertex color.</param>
     /// <param name="colorTo">To vertex color.</param>    
-    public static GLLine FromTo(Vector3 from, Vector3 to, Color colorFrom, Color colorTo) =>
+    public static GLLine FromTo(in Vector3 from, in Vector3 to, in Color colorFrom, in Color colorTo) =>
         new GLLine(new GLVertex(from, colorFrom), new GLVertex(to, colorTo));
 
     /// <summary>
@@ -173,7 +173,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="v">Extension vector.</param>
     /// <param name="color">Color to apply the line ( from, to vertexes ).</param>
     /// <returns></returns>
-    public static GLLine PointV(Vector3 point, Vector3 v, Color? color = null) =>
+    public static GLLine PointV(in Vector3 point, in Vector3 v, in Color? color = null) =>
         PointV(new GLVertex(point, color), new GLVertex(v, color));
 
     /// <summary>
@@ -183,7 +183,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="point">From position.</param>
     /// <param name="v">Extension vector.</param>
     /// <param name="color">(Optional) color to set.</param>    
-    public static GLLine PointV(Vector2 point, Vector2 v, Color? color = null) =>
+    public static GLLine PointV(in Vector2 point, in Vector2 v, in Color? color = null) =>
         PointV(new GLVertex(point.ToVector3(), color), new GLVertex(v.ToVector3(), color));
 
     /// <summary>
@@ -193,7 +193,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="v">Extension vector.</param>
     /// <param name="colorFrom">From vertex color.</param>
     /// <param name="colorTo">To vertex color.</param>    
-    public static GLLine PointV(Vector3 point, Vector3 v, Color colorFrom, Color colorTo) =>
+    public static GLLine PointV(in Vector3 point, in Vector3 v, in Color colorFrom, in Color colorTo) =>
         PointV(new GLVertex(point, colorFrom), new GLVertex(v, colorTo));
 
     public override IEnumerable<GLVertex> Vertexes
@@ -211,7 +211,7 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="plane">World matrix plane.</param>
     /// <seealso cref="SearchAThing.OpenGL.Core.Toolkit.MakeCS"/>
     /// <returns>Intersection point or null if no intersection found.</returns>
-    public Vector3? Intersect(Matrix4x4 plane) => Line.FromTo(From.Position, To.Position).Intersect(plane);    
+    public Vector3? Intersect(in Matrix4x4 plane) => Line.FromTo(From.Position, To.Position).Intersect(plane);    
 
     public override string ToString() => Invariant($"{From} {To}");
 }

@@ -16,7 +16,7 @@ public static partial class Toolkit
     /// <param name="h">Height of rectangle.</param>
     /// <param name="color">Color.</param>
     /// <returns>Rectangle line figure.</returns>
-    public static GLLineFigure MakeRectangle(Matrix4x4 csCenter, float w, float h,
+    public static GLLineFigure MakeRectangle(in Matrix4x4 csCenter, float w, float h,
         Color? color = null)
     {
         var center = csCenter.Origin();

@@ -51,7 +51,7 @@ public class GLFontChar
     public GLFontChar(GLContext glContext,
         char c,
         float measure,
-        SKRect textBounds,
+        in SKRect textBounds,
         SKBitmap bitmap,
         SKFont font)
     {

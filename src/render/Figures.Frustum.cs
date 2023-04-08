@@ -21,9 +21,9 @@ public static partial class Toolkit
     /// <param name="fov">Field of view (rad).</param>
     /// <param name="mm">Model matrix [world].</param>
     /// <returns>frustum figures</returns>
-    public static List<GLFigureBase> MakeFrustum(Vector3 cameraPos, Vector3 cameraTarget, Vector3 cameraUp,
+    public static List<GLFigureBase> MakeFrustum(in Vector3 cameraPos, in Vector3 cameraTarget, in Vector3 cameraUp,
         float near, float far, float fov,
-        Matrix4x4 mm)
+        in Matrix4x4 mm)
     {
         var figures = new List<GLFigureBase>();
 

@@ -10,7 +10,7 @@ public static partial class Ext
     /// <summary>
     /// Convert given screen size (width, height) to a vector2 (x, y).
     /// </summary>    
-    public static Vector2 ToVector2(this Size size) => new Vector2(size.Width, size.Height);    
+    public static Vector2 ToVector2(this in Size size) => new Vector2(size.Width, size.Height);    
 
     #endregion
 
@@ -21,7 +21,7 @@ public static partial class Ext
     /// Alpha=1 (full opaque).<br/>
     /// Alpha=0 (full transparent).
     /// </summary>    
-    public static Color SetAlphaF(this Color color, float alpha) =>
+    public static Color SetAlphaF(this in Color color, float alpha) =>
         Color.FromArgb((int)(alpha * 255), color.R, color.G, color.B);
 
     #endregion    

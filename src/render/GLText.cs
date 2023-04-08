@@ -243,7 +243,7 @@ public class GLText : INotifyPropertyChanged
     /// <param name="color">Text color.</param>
     /// <param name="alignment">Text alignment.</param>    
     public GLText(
-        Matrix4x4 cs,
+        in Matrix4x4 cs,
         string text,
         float? height = null,
         Color? color = null,

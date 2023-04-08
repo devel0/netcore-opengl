@@ -71,7 +71,7 @@ public class Box
     /// If false it represents the cs placed in the middle of lower face.</param>
     /// <param name="setTextureST">If true textureST coordinates will applied to box sides triangles.</param>
     /// <seealso cref="SearchAThing.OpenGL.Core.Ext.GetTriangles"/>.
-    public Box(Matrix4x4 cs, Vector3 csSize, Color? color = null,
+    public Box(in Matrix4x4 cs, in Vector3 csSize, Color? color = null,
         bool csBaseIsMiddle = false,
         bool setTextureST = false)
     {

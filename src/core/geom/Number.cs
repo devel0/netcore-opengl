@@ -73,7 +73,7 @@ public static partial class Ext
     /// <summary>
     /// Retrieve the maxest component between x, y, z of given vector3.
     /// </summary>    
-    public static float Max(this Vector3 v) => System.Math.Max(v.X, System.Math.Max(v.Y, v.Z));
+    public static float Max(this in Vector3 v) => System.Math.Max(v.X, System.Math.Max(v.Y, v.Z));
 
     /// <summary>
     /// Retrieve the magnitude of given number.

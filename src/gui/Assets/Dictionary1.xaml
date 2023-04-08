@@ -5,4 +5,6 @@
 
     <!-- icons generated using https://github.com/ahopper/Avalonia.IconPacks -->
 
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="{x:Static gui:Constants.GRID_SPLITTER_MANAGER_SplitterColor}"/>
+
 </ResourceDictionary>

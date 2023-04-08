@@ -110,7 +110,7 @@ public static partial class Ext
     /// </summary>
     /// <param name="vertex">Vertex which change the color.</param>
     /// <param name="color">Color to apply.</param>
-    public static IGLVertex SetColor(this IGLVertex vertex, Color color) =>
+    public static IGLVertex SetColor(this IGLVertex vertex, in Color color) =>
         vertex.SetColor(color.ToVector4());
 
     /// <summary>
@@ -118,7 +118,7 @@ public static partial class Ext
     /// </summary>
     /// <param name="vertex">Vertex which change the color.</param>
     /// <param name="rgbaColor">Color to apply encoded in vector4 (range 0..1) as (red, green, blue, alpha).<br/>Alpha=1 (full opaque).<br/>Alpha=0 (full transparent).</param>
-    public static IGLVertex SetColor(this IGLVertex vertex, Vector4 rgbaColor)
+    public static IGLVertex SetColor(this IGLVertex vertex, in Vector4 rgbaColor)
     {
         vertex.MaterialColor = rgbaColor;
         return vertex;

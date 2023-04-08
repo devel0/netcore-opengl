@@ -30,7 +30,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
     public GLControl GLControl => glSplit.FocusedControl!.AvaloniaGLControl.GLControl;
 
     public GLModel GLModel => GLControl.GLModel;
-    
+
     GLVertexManager vtxMgr => GLModel.GLVertexManager;
 
     GLVertexManager devVtxMgr = new GLVertexManager();
@@ -95,7 +95,161 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
 
     #endregion
 
-    public GLDevTool(AvaloniaGLControlSplit glSplit)//GridSplitterManager<GLView> glSplit)
+    #region LightPosWrap
+
+    private Vector3Wrap? _LightPosWrap = null;
+    /// <summary>
+    /// LightPosWrap
+    /// </summary>
+    public Vector3Wrap? LightPosWrap
+    {
+        get => _LightPosWrap;
+        set
+        {
+            var changed = value != _LightPosWrap;
+            if (changed)
+            {
+                _LightPosWrap = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region LightPosMinX
+
+    private float _LightPosMinX = 0;
+    /// <summary>
+    /// LightPosMinX
+    /// </summary>
+    public float LightPosMinX
+    {
+        get => _LightPosMinX;
+        set
+        {
+            var changed = value != _LightPosMinX;
+            if (changed)
+            {
+                _LightPosMinX = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region LightPosMaxX
+
+    private float _LightPosMaxX = 1;
+    /// <summary>
+    /// LightPosMaxX
+    /// </summary>
+    public float LightPosMaxX
+    {
+        get => _LightPosMaxX;
+        set
+        {
+            var changed = value != _LightPosMaxX;
+            if (changed)
+            {
+                _LightPosMaxX = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region LightPosMinY
+
+    private float _LightPosMinY = 0;
+    /// <summary>
+    /// LightPosMinY
+    /// </summary>
+    public float LightPosMinY
+    {
+        get => _LightPosMinY;
+        set
+        {
+            var changed = value != _LightPosMinY;
+            if (changed)
+            {
+                _LightPosMinY = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region LightPosMaxY
+
+    private float _LightPosMaxY = 0;
+    /// <summary>
+    /// LightPosMaxY
+    /// </summary>
+    public float LightPosMaxY
+    {
+        get => _LightPosMaxY;
+        set
+        {
+            var changed = value != _LightPosMaxY;
+            if (changed)
+            {
+                _LightPosMaxY = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region LightPosMinZ
+
+    private float _LightPosMinZ = 0;
+    /// <summary>
+    /// LightPosMinZ
+    /// </summary>
+    public float LightPosMinZ
+    {
+        get => _LightPosMinZ;
+        set
+        {
+            var changed = value != _LightPosMinZ;
+            if (changed)
+            {
+                _LightPosMinZ = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region LightPosMaxZ
+
+    private float _LightPosMaxZ = 0;
+    /// <summary>
+    /// LightPosMaxZ
+    /// </summary>
+    public float LightPosMaxZ
+    {
+        get => _LightPosMaxZ;
+        set
+        {
+            var changed = value != _LightPosMaxZ;
+            if (changed)
+            {
+                _LightPosMaxZ = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    public GLDevTool(AvaloniaGLControlSplit glSplit)
     {
         InitializeComponent();
 
@@ -107,7 +261,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         glSplit.PropertyChanged += (a, b) =>
         {
             if (b.PropertyName == nameof(GridSplitterManager<GLView>.FocusedControl))
-            {                
+            {
                 AvaloniaGLControl = glSplit.FocusedControl?.AvaloniaGLControl;
                 this.DataContext = glSplit.FocusedControl?.AvaloniaGLControl.GLControl;
             }
@@ -122,12 +276,51 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         GLModel.AddCustomVertexManager(devVtxMgr);
         dgFigures.SelectionChanged += dgFigure_SelectionChanged;
         dgVertexes.SelectionChanged += dgVertexes_SelectionChanged;
-        
+
         GLModel.ViewInvalidated += (model) => GLControl.Invalidate();
 
         CbHighlight.IsCheckedChanged += (a, b) => RefreshHighlightedFigures();
 
+        dgLights.SelectionChanged += dgLights_SelectionChanged;
+
         this.Closed += GLDevTool_Closed;
+    }
+
+    private void dgLights_SelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        var lbbox = GLModel.LBBox;
+
+        LightPosMinX = lbbox.Min.X - lbbox.Size.X * 1e1f;
+        LightPosMaxX = lbbox.Max.X + lbbox.Size.X * 1e1f;
+
+        LightPosMinY = lbbox.Min.Y - lbbox.Size.Y * 1e1f;
+        LightPosMaxY = lbbox.Max.Y + lbbox.Size.Y * 1e1f;
+
+        LightPosMinZ = lbbox.Min.Z - lbbox.Size.Z * 1e1f;
+        LightPosMaxZ = lbbox.Max.Z + lbbox.Size.Z * 1e1f;
+
+        if (dgLights.SelectedItem is GLPointLight pl)
+        {
+            LightPosWrap = new Vector3Wrap(pl, nameof(GLPointLight.Position));
+        }
+    }
+
+    private void PointLightsAddClick(object? sender, RoutedEventArgs e)
+    {
+        GLModel.PointLights.Add(new GLPointLight());
+    }
+
+    private void PointLightsDelClick(object? sender, RoutedEventArgs e)
+    {
+        var selectedLight = dgLights.SelectedItems.OfType<GLPointLight>().FirstOrDefault();
+        if (selectedLight is null) return;
+
+        GLModel.PointLights.Remove(selectedLight);
+    }
+
+    private void PointLightsResetClick(object? sender, RoutedEventArgs e)
+    {
+        GLModel.ResetLight();           
     }
 
     private void SaveViewClick(object? sender, RoutedEventArgs e)
@@ -155,7 +348,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
             foreach (var selVtxGrpItem in selVtxGrps)
             {
                 var fig = selVtxGrpItem.Key;
-                var selVtx = selVtxGrpItem.First();                
+                var selVtx = selVtxGrpItem.First();
 
                 var pointFig = new GLPointFigure(
                     new GLPoint(new GLVertex(selVtx.Vertex.Position, Color.Yellow)))
@@ -180,7 +373,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
     }
 
     void RefreshHighlightedFigures()
-    {        
+    {
         var selectedFigures = dgFigures.SelectedItems.OfType<GLFigureBase>().ToHashSet();
 
         foreach (var fig in GLModel.Figures)
@@ -197,7 +390,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         foreach (var vertex in vertexes)
             HighlightedVertexes.Add(new PointTransformNfo(GLControl, vertex));
 
-        glSplit.Invalidate();        
+        glSplit.Invalidate();
     }
 
     private async void ExportXlsxClick(object? sender, RoutedEventArgs e)
@@ -295,7 +488,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
     }
 
     private void GLDevTool_Closed(object? sender, EventArgs e)
-    {        
+    {
     }
 
     private void GLControl_PropertyChanged(object? sender, PropertyChangedEventArgs e)
@@ -309,18 +502,6 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         }
     }
 
-    private void PointLightsAddClick(object? sender, RoutedEventArgs e)
-    {
-        GLModel.PointLights.Add(new GLPointLight());
-    }
-
-    private void PointLightsDelClick(object? sender, RoutedEventArgs e)
-    {
-        var selectedLight = dgLights.SelectedItems.OfType<GLPointLight>().FirstOrDefault();
-        if (selectedLight is null) return;
-
-        GLModel.PointLights.Remove(selectedLight);
-    }
 
     private void GLModel_LightPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
@@ -346,11 +527,12 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
                 break;
 
             default:
+                GLControl.Invalidate();
                 //FIXME - 
                 //throw new NotImplementedException($"obc action {e.Action}");
                 break;
 
-        }    
+        }
     }
 
     private void GLModel_LightsClearing(object? sender, IList<GLPointLight> items) =>

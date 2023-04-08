@@ -318,7 +318,7 @@ public class GLPipeline : IGLContextObject
     /// </summary>
     /// <param name="name">Uniform variable name.</param>
     /// <param name="value">Value to set.</param>
-    public void SetVec2(string name, Vector2 value)
+    public void SetVec2(string name, in Vector2 value)
     {
         var location = GetUniformLocation(name);
         if (location is not null) GL.Uniform2((int)location, value);
@@ -329,7 +329,7 @@ public class GLPipeline : IGLContextObject
     /// </summary>
     /// <param name="name">Uniform variable name.</param>
     /// <param name="value">Value to set.</param>
-    public void SetVec3(string name, Vector3 value)
+    public void SetVec3(string name, in Vector3 value)
     {
         var location = GetUniformLocation(name);
         if (location is not null) GL.Uniform3((int)location, value);
@@ -340,7 +340,7 @@ public class GLPipeline : IGLContextObject
     /// </summary>
     /// <param name="name">Uniform variable name.</param>
     /// <param name="value">Value to set.</param>
-    public void SetVec4(string name, Vector4 value)
+    public void SetVec4(string name, in Vector4 value)
     {
         var location = GetUniformLocation(name);
         if (location is not null) GL.Uniform4((int)location, value);

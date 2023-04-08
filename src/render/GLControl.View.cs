@@ -233,7 +233,7 @@ public partial class GLControl
     /// <param name="invalidate">If true refresh the scene.</param>
     /// <seealso cref="Core.Toolkit.CameraTilt"/>
     public void Tilt(float angleDeg = TILT_LITTLE_DEG, bool invalidate = DEFAULT_INVALIDATE)
-    {        
+    {
         Core.Toolkit.CameraTilt(angleDeg.ToRad(), CameraUp, out var cuTilted);
 
         CameraUp = cuTilted;
@@ -257,12 +257,14 @@ public partial class GLControl
         Near = Near,
         Far = Far,
         ShadeWithEdge = ShadeWithEdge,
-        ShowCameraObject = ShowCameraObject
+        ShowCameraObject = ShowCameraObject,
+        Lights = GLModel.PointLights.ToList()
     };
 
     /// <summary>
-    /// Save actual view info to given pathfilename.
-    /// <seealso cref="ViewDefaultPathfilename"/>
+    /// Save actual view info to given pathfilename.<br/>
+    /// A Notification <see cref="GLControl.NotificationRequest"/> event emitted.
+    /// <seealso cref="ViewDefaultPathfilename"/>    
     /// </summary>    
     public void SaveView(string? pathfilename = null)
     {
@@ -270,7 +272,17 @@ public partial class GLControl
 
         if (pathfilename is null) pathfilename = ViewDefaultPathfilename;
 
-        File.WriteAllText(pathfilename, JsonConvert.SerializeObject(nfo, Formatting.Indented));
+        try
+        {
+            File.WriteAllText(pathfilename, JsonConvert.SerializeObject(nfo, Formatting.Indented));
+
+            NotificationRequest?.Invoke("GLControl view", $"View saved to\n[{pathfilename}]");
+        }
+        catch (Exception ex)
+        {
+            NotificationRequest?.Invoke("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
+                GLNotificationType.Error);
+        }
     }
 
     /// <summary>
@@ -291,6 +303,14 @@ public partial class GLControl
         Far = nfo.Far;
         ShadeWithEdge = nfo.ShadeWithEdge;
         ShowCameraObject = nfo.ShowCameraObject;
+        if (nfo.Lights is not null)
+        {
+            GLModel.PointLights.Clear();
+            foreach (var light in nfo.Lights)
+            {
+                GLModel.PointLights.Add(light);
+            }
+        }
 
         LastCameraView = CameraViewType.Manual;
     }
@@ -342,7 +362,7 @@ public partial class GLControl
         else
         {
             OrthoZoomFit(
-                pts: GLModel.LBBox.Points,                
+                pts: GLModel.LBBox.Points,
                 Size(),
                 ModelMatrix, ViewMatrix, ProjectionMatrix,
                 OrthoZoom, Near, Far,

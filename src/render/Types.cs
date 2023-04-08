@@ -57,4 +57,18 @@ public class ViewNfo
     public float Far { get; set; }
     public bool ShadeWithEdge { get; set; }
     public bool ShowCameraObject { get; set; }
+    public List<GLPointLight>? Lights { get; set; }
 }
+
+/// <summary>
+/// Type of notification emitted by gl control.
+/// </summary>
+public enum GLNotificationType
+{
+    Information = 0,
+    Success = 1,
+    Warning = 2,
+    Error = 3
+}
+
+public delegate void NotificationDelegate(string title, string msg, GLNotificationType type = GLNotificationType.Information);
