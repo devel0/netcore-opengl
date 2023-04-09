@@ -54,9 +54,16 @@ public partial class GLView : UserControl, INotifyPropertyChanged
 
         this.AvaloniaGLControl = new SearchAThing.OpenGL.GUI.AvaloniaGLControl();
 
-        var a = TitleTblk.Bind(
-            TextBlock.TextProperty,
-            new Binding(nameof(AvaloniaGLControl.Title)) { Source = AvaloniaGLControl });
+        AvaloniaGLControl.GLControlConnected += (sender, e) =>
+        {
+            var a = TitleTblk.Bind(
+                TextBlock.TextProperty,
+                new Binding(nameof(GLControl.Title)) { Source = AvaloniaGLControl.GLControl });
+
+            var b = Overlay1Tblk.Bind(
+                TextBlock.TextProperty,
+                new Binding(nameof(GLControl.ControlOverlay1)) { Source = AvaloniaGLControl.GLControl });
+        };
 
         grRoot.Children.Add(AvaloniaGLControl);
     }

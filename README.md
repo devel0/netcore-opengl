@@ -269,7 +269,7 @@ Most of technical documentation is directly integrated with [API documentation](
 
 - **Object**, **Model**, **View** and **Projection** matrixes are used by the gl pipeline at the [vertex shader set gl position].
 - **Clip**, **NDC** and finally **Screen** spaces are handled by the gl pipeline as further stages where size of render device was set by the [gl control render][set of gl viewport].
-- Forward and backward coordinate transform can be done through provided core helper functions; these methods exists and used in order to allow preview what will be computed by the gpu in the zoomfit functions such as [compute screen bbox] or in the backward case to detect a [local ray cast].
+- Forward and backward coordinate transform can be done through provided core helper functions; these methods exists to preview gl transformations done by the gpu on client side and are used forwardly by the zoomfit in [compute screen bbox] or in the backward case to detect local point from screen through [local ray cast].
   - [forward transform](src/core/calc/ForwardTransform.cs)
   - [backward transform](src/core/calc/BackwardTransform.cs)
 
@@ -454,6 +454,7 @@ Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netc
 | r         | View Right                     |
 | f         | View Front                     |
 | b         | View Back                      |
+| i         | Identify coord                 |
 | Ctrl + ⬆  | Camera zoom in                 |
 | Ctrl + ⬇  | Camera zoom out                |
 | Shift + ⬅ | Camera pan left                |
@@ -480,7 +481,7 @@ Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netc
 | x         | Toggle texture                 |
 | s         | Toggle shadow                  |
 | z         | Zoom fit                       |
-| i         | Invalidate view                |
+| Ctrl + i  | Invalidate view                |
 | Ctrl + x  | Toggle model bbox              |
 | Ctrl + c  | Toggle camera object           |
 

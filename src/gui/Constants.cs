@@ -9,7 +9,7 @@ public static class Constants
     /// (Default) gl split focused control border thickness ( screen pixels ).
     /// </summary>
     public const double GRID_SPLITTER_MANAGER_FocusedControlBorderThickness = 2;
-    
+
     /// <summary>
     /// (Default) gl split focused control border brush.
     /// </summary>    
@@ -180,7 +180,12 @@ public static class Constants
     /// <summary>
     /// (Default) Invalidate view key gesture.
     /// </summary>
-    public static readonly KeyGesture DEFAULT_InvalidateGesture = new KeyGesture(Key.I);
+    public static readonly KeyGesture DEFAULT_InvalidateGesture = new KeyGesture(Key.I, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Toggle identify coord key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_ToggleIdentifyCoordGesture = new KeyGesture(Key.I);
 
     /// <summary>
     /// (Default) Open dev tool key gesture.
