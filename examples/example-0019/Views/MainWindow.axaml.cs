@@ -396,7 +396,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             });
 
         //! [DebounceExample]
-        var debouncedInvalidate = new DebounceAction(TimeSpan.FromMilliseconds(500), () =>
+        var debouncedInvalidate = new DebounceAction<object?>(TimeSpan.FromMilliseconds(500), (args) =>
         {
             Dispatcher.UIThread.Post(() =>
             {
@@ -414,7 +414,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 e.PropertyName == nameof(Radius) || e.PropertyName == nameof(SurfaceDivisions) ||
                 e.PropertyName == nameof(TypeSphere) || e.PropertyName == nameof(TypePlate))
             {
-                debouncedInvalidate.Hit();
+                debouncedInvalidate.Hit(null);
             }
         };
         //! [DebounceExample]

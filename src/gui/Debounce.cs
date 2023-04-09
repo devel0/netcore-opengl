@@ -3,12 +3,12 @@
 /// Example follows:<br/>
 /// \snippet{'trimleft'} examples/example-0019/Views/MainWindow.axaml.cs DebounceExample
 /// </summary>
-public class DebounceAction
+public class DebounceAction<T>
 {
 
     public TimeSpan TimeSpan { get; private set; }
 
-    Action Action;
+    Action<T> Action;
 
     CancellationTokenSource cts = new CancellationTokenSource();
 
@@ -18,7 +18,7 @@ public class DebounceAction
     /// <param name="timeSpan">Timeout after which the given action executes.</param>
     /// <param name="action">Action to execute when time expired and no <see cref="Hit"/> called.<br/>
     /// If a hit happens before previous hit expired the previous will cancelled and start over.</param>
-    public DebounceAction(TimeSpan timeSpan, Action action)
+    public DebounceAction(TimeSpan timeSpan, Action<T> action)
     {
         TimeSpan = timeSpan;
         Action = action;
@@ -28,7 +28,7 @@ public class DebounceAction
     /// Cancel scheduled action and starts a new one that will executes
     /// if no further hit happens before timeout.
     /// </summary>
-    public void Hit()
+    public void Hit(T args)
     {
         cts.Cancel();
 
@@ -46,7 +46,7 @@ public class DebounceAction
             }
             if (newCts.Token.IsCancellationRequested) return;
 
-            Action.Invoke();
+            Action.Invoke(args);
         });
     }
 
