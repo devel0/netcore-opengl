@@ -27,7 +27,7 @@ class Program
                 if (glSplit.FocusedControl is GLView initialGlView)
                 {
                     initialGlView.AvaloniaGLControl.GLControl.CameraView(CameraViewType.Front);
-                    initialGlView.AvaloniaGLControl.Title = "Front";
+                    initialGlView.AvaloniaGLControl.GLControl.Title = "Front";
 
                     // split current (1) horizontally toward 2
 
@@ -42,7 +42,7 @@ class Program
                         var glCtl = aControl.GLControl;
                         glCtl.Wireframe = true;
                         glCtl.CameraView(CameraViewType.Top);
-                        aControl.Title = "Top";
+                        glCtl.Title = "Top";
                     }
 
                     // split current (2) vertically toward 3
@@ -56,7 +56,7 @@ class Program
                         var glCtl = aControl.GLControl;
                         glCtl.Wireframe = true;
                         glCtl.CameraView(CameraViewType.Right);
-                        aControl.Title = "Right";
+                        glCtl.Title = "Right";
                     }
 
                     // split current (3) horizontally toward 4
@@ -71,7 +71,7 @@ class Program
                         var glCtl = aControl.GLControl;
                         glCtl.Wireframe = true;
                         glCtl.CameraView(CameraViewType.FrontBottomLeft);
-                        aControl.Title = "FrontBottomLeft";
+                        glCtl.Title = "FrontBottomLeft";
                     }
 
                     // back to initial control
@@ -88,7 +88,7 @@ class Program
                         var glCtl = aControl.GLControl;
                         glCtl.Wireframe = true;
                         glCtl.CameraView(CameraViewType.Front);
-                        aControl.Title = "Front";
+                        glCtl.Title = "Front";
                     }
 
                 }
