@@ -129,4 +129,11 @@ var menudata={children:[
 {text:"x",url:"functions_prop_x.html#index_x"},
 {text:"y",url:"functions_prop_y.html#index_y"},
 {text:"z",url:"functions_prop_z.html#index_z"}]},
-{text:"Events",url:"functions_evnt.html"}]}]}]}
+{text:"Events",url:"functions_evnt.html",children:[
+{text:"f",url:"functions_evnt.html#index_f"},
+{text:"g",url:"functions_evnt.html#index_g"},
+{text:"i",url:"functions_evnt.html#index_i"},
+{text:"n",url:"functions_evnt.html#index_n"},
+{text:"p",url:"functions_evnt.html#index_p"},
+{text:"r",url:"functions_evnt.html#index_r"},
+{text:"v",url:"functions_evnt.html#index_v"}]}]}]}]}

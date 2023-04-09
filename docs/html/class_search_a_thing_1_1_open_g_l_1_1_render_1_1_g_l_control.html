@@ -112,6 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af03e469595e2636fc8b4d591fe242110"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#af03e469595e2636fc8b4d591fe242110">GLControl</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html">GLControl</a> template, <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_render_1_1_i_render_device.html">IRenderDevice</a> device)</td></tr>
 <tr class="memdesc:af03e469595e2636fc8b4d591fe242110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new gl control using the same control properties of the given template.  <br /></td></tr>
 <tr class="separator:af03e469595e2636fc8b4d591fe242110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc121d2337a9ed7a91a2b9e0cb1ee68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a9fc121d2337a9ed7a91a2b9e0cb1ee68">SendNotification</a> (string title, string msg, <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03c">GLNotificationType</a> notifyType=<a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03caa82be0f551b8708bc08eb33cd9ded0cf">GLNotificationType.Information</a>)</td></tr>
+<tr class="memdesc:a9fc121d2337a9ed7a91a2b9e0cb1ee68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send notification to frontend that manage this gl control.  <br /></td></tr>
+<tr class="separator:a9fc121d2337a9ed7a91a2b9e0cb1ee68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7ba7c829d73293844b8d0b84dcf2f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#abc7ba7c829d73293844b8d0b84dcf2f5">CaptureImage</a> (string offscreenPathfilename)</td></tr>
 <tr class="memdesc:abc7ba7c829d73293844b8d0b84dcf2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capture an image of current control using offscreen render device and actual rendere device size.  <br /></td></tr>
 <tr class="separator:abc7ba7c829d73293844b8d0b84dcf2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e2efcd721af8aba50e8e1736db54b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a3e2efcd721af8aba50e8e1736db54b77">Render</a> (<a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_render_1_1_i_render_device.html">IRenderDevice</a>? device=null)</td></tr>
 <tr class="memdesc:a3e2efcd721af8aba50e8e1736db54b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main gl render process.  <br /></td></tr>
 <tr class="separator:a3e2efcd721af8aba50e8e1736db54b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff9c8e17894b0454cac121b7de8c0e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a5ff9c8e17894b0454cac121b7de8c0e8">ToggleIdentifyCoord</a> ()</td></tr>
+<tr class="memdesc:a5ff9c8e17894b0454cac121b7de8c0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle identify vertex coord.  <br /></td></tr>
+<tr class="separator:a5ff9c8e17894b0454cac121b7de8c0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76c43e4f8ae0b22ca87fbe6ab37c3c23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a76c43e4f8ae0b22ca87fbe6ab37c3c23">ToggleShowModelBBox</a> (bool invalidate=DEFAULT_INVALIDATE)</td></tr>
 <tr class="memdesc:a76c43e4f8ae0b22ca87fbe6ab37c3c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle display of model bounding box ( generated at runtime through a temporary vertex manager ).  <br /></td></tr>
 <tr class="separator:a76c43e4f8ae0b22ca87fbe6ab37c3c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -371,9 +377,18 @@ Properties</h2></td></tr>
 <tr class="memitem:a5ee373b76e8c124230309be31c5d6eeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a5ee373b76e8c124230309be31c5d6eeb">UseShadow</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a5ee373b76e8c124230309be31c5d6eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true and at least one point light exists in the gl model shadows are dropped, no shadow elsewhere (default:true).  <br /></td></tr>
 <tr class="separator:a5ee373b76e8c124230309be31c5d6eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b633091e7820b835d04d0d5fc197c7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#aa7b633091e7820b835d04d0d5fc197c7">Title</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa7b633091e7820b835d04d0d5fc197c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Title.  <br /></td></tr>
+<tr class="separator:aa7b633091e7820b835d04d0d5fc197c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa25badd8e6a6ea25480c53220850735"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#afa25badd8e6a6ea25480c53220850735">ControlOverlay1</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:afa25badd8e6a6ea25480c53220850735"><td class="mdescLeft">&#160;</td><td class="mdescRight">ControlOverlay1 ( used for IdentifyCoord output )  <br /></td></tr>
+<tr class="separator:afa25badd8e6a6ea25480c53220850735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b9531da5475e4cfb35a05a1eced515e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a5b9531da5475e4cfb35a05a1eced515e">ShowModelBBox</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a5b9531da5475e4cfb35a05a1eced515e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true the model bbox as lines are displayed using a temporary vertex manager at runtime.  <br /></td></tr>
 <tr class="separator:a5b9531da5475e4cfb35a05a1eced515e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f0d9d5ee6fb3df82aea30e6ef1ca51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a89f0d9d5ee6fb3df82aea30e6ef1ca51">IdentifyCoord</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a89f0d9d5ee6fb3df82aea30e6ef1ca51"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true an overlay display vertex under mouse coord.  <br /></td></tr>
+<tr class="separator:a89f0d9d5ee6fb3df82aea30e6ef1ca51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a537b073aab3c5d8c721ac7924349281e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a537b073aab3c5d8c721ac7924349281e">ShowCameraObject</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a537b073aab3c5d8c721ac7924349281e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true a green camera frustum object represented with lines are displayed using a temporary vertex manager at runtime.  <br /></td></tr>
 <tr class="separator:a537b073aab3c5d8c721ac7924349281e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1462,6 +1477,55 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a9fc121d2337a9ed7a91a2b9e0cb1ee68" name="a9fc121d2337a9ed7a91a2b9e0cb1ee68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc121d2337a9ed7a91a2b9e0cb1ee68">&#9670;&#160;</a></span>SendNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SendNotification </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03c">GLNotificationType</a>&#160;</td>
+          <td class="paramname"><em>notifyType</em> = <code><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_render.html#ac44f891ad4c61c9b8c9d95ab9ccda03caa82be0f551b8708bc08eb33cd9ded0cf">GLNotificationType.Information</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send notification to frontend that manage this gl control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Title of notification.</td></tr>
+    <tr><td class="paramname">msg</td><td>Message to display, it can contains newlines.</td></tr>
+    <tr><td class="paramname">notifyType</td><td>Level type of notification (Default:Information).</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control_a9fc121d2337a9ed7a91a2b9e0cb1ee68_icgraph.svg" width="275" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a49ead26a2e238c42fdcec4b67e7e29f3" name="a49ead26a2e238c42fdcec4b67e7e29f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49ead26a2e238c42fdcec4b67e7e29f3">&#9670;&#160;</a></span>SetViewNfo()</h2>
 
@@ -1485,7 +1549,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>Loadview</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>LoadView</dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1619,6 +1683,27 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5ff9c8e17894b0454cac121b7de8c0e8" name="a5ff9c8e17894b0454cac121b7de8c0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff9c8e17894b0454cac121b7de8c0e8">&#9670;&#160;</a></span>ToggleIdentifyCoord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ToggleIdentifyCoord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Toggle identify vertex coord. </p>
+<p><br  />
+ </p>
 
 </div>
 </div>
@@ -2005,6 +2090,30 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="afa25badd8e6a6ea25480c53220850735" name="afa25badd8e6a6ea25480c53220850735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa25badd8e6a6ea25480c53220850735">&#9670;&#160;</a></span>ControlOverlay1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ControlOverlay1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ControlOverlay1 ( used for IdentifyCoord output ) </p>
+
+</div>
+</div>
 <a id="accf29353cd5bfb7c5f0aa70dc6a20931" name="accf29353cd5bfb7c5f0aa70dc6a20931"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#accf29353cd5bfb7c5f0aa70dc6a20931">&#9670;&#160;</a></span>DepthShader</h2>
 
@@ -2220,6 +2329,30 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>unique control ID </p>
+
+</div>
+</div>
+<a id="a89f0d9d5ee6fb3df82aea30e6ef1ca51" name="a89f0d9d5ee6fb3df82aea30e6ef1ca51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f0d9d5ee6fb3df82aea30e6ef1ca51">&#9670;&#160;</a></span>IdentifyCoord</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IdentifyCoord</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true an overlay display vertex under mouse coord. </p>
 
 </div>
 </div>
@@ -2812,6 +2945,30 @@ Here is the caller graph for this function:</div>
 <p>If true a geometry shader will create yellow vertex normals using a size specified by a factor of the bbox. </p>
 <dl class="section see"><dt>See also</dt><dd>GLModel.NormalFactor</dd></dl>
 <p>. </p>
+
+</div>
+</div>
+<a id="aa7b633091e7820b835d04d0d5fc197c7" name="aa7b633091e7820b835d04d0d5fc197c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7b633091e7820b835d04d0d5fc197c7">&#9670;&#160;</a></span>Title</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Title</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Title. </p>
 
 </div>
 </div>
