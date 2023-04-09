@@ -17,6 +17,7 @@ help()
         serve     Start webserver
         view      Open default app to view documentation
         commit    build + commit doc into docs branch        
+        push      push docs branch to origin
         umlet     export uxf to svg
 
     options
@@ -95,6 +96,12 @@ if [ "$1" == "commit" ]; then
   git commit -a -m "doc" && \
   git checkout master && \
   git stash pop
+fi
+
+#--[ push ]
+if [ "$1" == "push" ]; then
+  cd "$exdir"
+  git push origin docs
 fi
 
 #--[ umlet ]
