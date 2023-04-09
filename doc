@@ -87,12 +87,14 @@ fi
 #--[ commit ]
 if [ "$1" == "commit" ]; then
   cd "$exdir"
-  git checkout docs
-  git merge master --commit --no-edit
-  ./doc build
-  git add -A
-  git commit -a -m "doc"
-  git checkout master
+  git stash push && \
+  git checkout docs && \
+  git merge master --commit --no-edit && \
+  ./doc build && \
+  git add -A docs && \
+  git commit -a -m "doc" && \
+  git checkout master && \
+  git stash pop
 fi
 
 #--[ umlet ]
