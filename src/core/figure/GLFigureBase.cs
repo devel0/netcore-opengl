@@ -360,8 +360,8 @@ public static partial class Ext
 {
 
     /// <summary>
-    /// Distinct vertexes belonging this figure [object].
-    /// </summary>    
+    /// Vertexes belonging this figure [object].
+    /// </summary>        
     public static IEnumerable<GLVertex> Vertexes(this IGLFigure figure)
     {
         var vertexes = new HashSet<GLVertex>();
