@@ -16,4 +16,9 @@ public static partial class Ext
         return (float)d;
     }
 
+    /// <summary>
+    /// Invariant representation X Y Z
+    /// </summary>
+    public static string Fmt(this in Vector3 v) => $"{v.X} {v.Y} {v.Z}";
+
 }
