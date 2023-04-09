@@ -750,6 +750,29 @@ public partial class GLControl : INotifyPropertyChanged
     }
     
     #endregion
+
+    #region ControlOverlay1
+    
+    private string _ControlOverlay1 = "";
+    /// <summary>
+    /// ControlOverlay1 ( used for IdentifyCoord output )
+    /// </summary>
+    public string ControlOverlay1
+    {
+        get => _ControlOverlay1;
+        set
+        {
+             var changed = value != _ControlOverlay1;
+             if (changed)
+             {
+                 _ControlOverlay1 = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     #region ShowModelBBox
 
     private bool _ShowModelBBox = false;
@@ -771,6 +794,28 @@ public partial class GLControl : INotifyPropertyChanged
         }
     }
 
+    #endregion
+
+    #region IdentifyCoord
+    
+    private bool _IdentifyCoord = false;
+    /// <summary>
+    /// If true an overlay display vertex under mouse coord.
+    /// </summary>
+    public bool IdentifyCoord
+    {
+        get => _IdentifyCoord;
+        set
+        {
+             var changed = value != _IdentifyCoord;
+             if (changed)
+             {
+                 _IdentifyCoord = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
     #endregion
 
     #region ShowCameraObject

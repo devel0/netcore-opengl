@@ -1,3 +1,5 @@
+using Avalonia.Threading;
+
 namespace SearchAThing.OpenGL.GUI;
 
 /// <summary>
@@ -79,6 +81,9 @@ public partial class AvaloniaGLControl
 
     // HashSet<GLFigure<IGLPrimitive>> highlightEntities = new HashSet<GLFigure<IGLPrimitive>>();
 
+    DebounceAction<Vector2>? IdentifyCoordDebounce = null;
+    GLVertexManager? IdentifyCoordVtxMgr = null;
+
     protected override void OnPointerMoved(PointerEventArgs e)
     {
         base.OnPointerMoved(e);
@@ -100,6 +105,67 @@ public partial class AvaloniaGLControl
         var pm = GLControl.ProjectionMatrix;
         var size = GLControl.Size();
         var isPerspective = GLControl.Perspective;
+
+        if (GLControl.IdentifyCoord)
+        {
+            if (IdentifyCoordDebounce is null)
+            {
+                var glModel = GLControl.GLModel;
+
+                IdentifyCoordVtxMgr = new GLVertexManager(expandModelBBox: false);
+                glModel.AddCustomVertexManager(IdentifyCoordVtxMgr);
+
+                IdentifyCoordDebounce = new DebounceAction<Vector2>(TimeSpan.FromMilliseconds(500), (mouse_coord) =>
+                {
+                    Dispatcher.UIThread.Post(() =>
+                    {
+                        var vtxs = GLControl.GLModel.Vertexes.ToList();
+
+                        var lraycast = GLControl.RayCastLocal(screen: mouse_coord);
+
+                        var tol = glModel.LBBox.Size.Max() / 50;
+
+                        var q = glModel.Figures
+                            .Where(fig => fig.Visible)
+                            .SelectMany(fig => fig.Vertexes().Select(vtx => new { fig = fig, vtx = vtx }))
+                            .GroupBy(nfo => nfo.fig)
+                            .Select(nfo => new
+                            {
+                                vtxs = nfo.Select(v => v.vtx),
+                                fig = nfo.Key,
+                                oraycast = nfo.Key.ObjectMatrixIsIdentity ? lraycast : lraycast.Transform(nfo.Key.ObjectMatrix.Inverse())
+                            })
+                            .SelectMany(nfo => nfo.vtxs
+                            .Select(vtx => new
+                            {
+                                projDst = nfo.oraycast.Contains(tol, vtx.Position),
+                                ocoord = Vector3.Transform(vtx.Position, nfo.fig.ObjectMatrix.Inverse()),
+                                vtx = vtx
+                            })
+                            .Where(nfo => nfo.projDst is not null)
+                            .OrderBy(nfo => nfo.projDst))
+                            .ToList();
+
+                        IdentifyCoordVtxMgr.Clear();
+
+                        if (q.Count > 0)
+                        {
+                            IdentifyCoordVtxMgr.AddFigure(new GLPointFigure(q[0].ocoord) { PointSize = 10 }
+                                .SetOrder(1)
+                                .SetColor(Color.Magenta));
+                            GLControl.ControlOverlay1 = $"tol:{tol} cnt:{q.Count} ==> {q[0].ocoord.Fmt()}";
+                        }
+
+                        else
+                            GLControl.ControlOverlay1 = "";
+
+                        GLControl.Invalidate();
+                    });
+                });
+            }
+
+            IdentifyCoordDebounce.Hit(mouse_cur);
+        }
 
         #region pan
         if (PanStart is not null)
@@ -136,6 +202,16 @@ public partial class AvaloniaGLControl
                 mFrom: glMatrixesFrom);
         }
         #endregion
+    }
+
+    void StartIdentifyCoord()
+    {
+        GLControl.ControlOverlay1 = "";
+    }
+
+    void StopIdentifyCoord()
+    {
+        GLControl.ControlOverlay1 = "";
     }
 
 }

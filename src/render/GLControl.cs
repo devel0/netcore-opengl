@@ -924,6 +924,11 @@ public partial class GLControl : INotifyPropertyChanged
     }
 
     /// <summary>
+    /// Toggle identify vertex coord.
+    /// </summary>    
+    public void ToggleIdentifyCoord() => IdentifyCoord = !IdentifyCoord;
+
+    /// <summary>
     /// Toggle display of model bounding box ( generated at runtime through a temporary vertex manager ).
     /// </summary>
     /// <param name="invalidate">If true refresh the scene.</param>

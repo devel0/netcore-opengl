@@ -454,6 +454,7 @@ Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netc
 | r         | View Right                     |
 | f         | View Front                     |
 | b         | View Back                      |
+| i         | Identify coord                 |
 | Ctrl + ⬆  | Camera zoom in                 |
 | Ctrl + ⬇  | Camera zoom out                |
 | Shift + ⬅ | Camera pan left                |

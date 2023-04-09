@@ -71,7 +71,21 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
                 this.Notify(new Notification(title, msg, type.ToAvaloniaNotificationType()));
             };
 
-            GLControlConnected?.Invoke(this, EventArgs.Empty);            
+            // used by GLView to listen for GLControl prop changes ( Title, Overlay )
+            GLControlConnected?.Invoke(this, EventArgs.Empty);
+
+            _glControl.PropertyChanged += (sender, e) =>
+            {
+                if (e.PropertyName == nameof(GLControl.IdentifyCoord))
+                {
+                    var identifyCoord = GLControl.IdentifyCoord;
+
+                    if (identifyCoord)
+                        StartIdentifyCoord();
+                    else
+                        StopIdentifyCoord();
+                }
+            };
 
             this.LayoutUpdated += AvaloniaGLControl_LayoutUpdated;
             SetDefaultKeyGestures();
@@ -209,7 +223,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
         }
     }
 
-    GLDevTool? devTool = null;   
+    GLDevTool? devTool = null;
 
     /// <summary>
     /// Activates the <see cref="GLDevTool"/> developer tool.
@@ -274,7 +288,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// <summary>
     /// Restore <see cref="GLControl"/> view settings from given nfo object.
     /// </summary>    
-    public void SetViewNfo(ViewNfo nfo) => GLControl.SetViewNfo(nfo);            
+    public void SetViewNfo(ViewNfo nfo) => GLControl.SetViewNfo(nfo);
 
     /// <summary>
     /// Save all <see cref="GLControl"/> view config to the given pathfilename.<br/>    
