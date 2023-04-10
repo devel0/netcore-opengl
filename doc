@@ -86,15 +86,16 @@ if [ "$1" == "view" ]; then
 fi
 
 #--[ commit ]
+DEFAULT_BRANCH=master
 if [ "$1" == "commit" ]; then
   cd "$exdir"
   git stash push && \
   git checkout docs && \
-  git merge master --commit --no-edit && \
+  git merge $DEFAULT_BRANCH --commit --no-edit && \
   ./doc build && \
   git add -A docs && \
   git commit -a -m "doc" && \
-  git checkout master && \
+  git checkout $DEFAULT_BRANCH && \
   git stash pop
 fi
 
