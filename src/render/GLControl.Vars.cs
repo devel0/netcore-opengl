@@ -1003,4 +1003,33 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure);
+
+    #region ControlFigureVisible
+    
+    private ControlFigureVisibileDelegate? _ControlFigureVisible = null;
+    /// <summary>    
+    /// Control specific custom figure visibility.<br/>    
+    /// If null default model figure visibiltiy not changes.<br/>
+    /// Args: (GLControl glControl, GLFigureBase figure).
+    /// </summary>
+    /// <remarks>
+    /// Keep delegated function as light as possible to avoid performance penalty.
+    /// </remarks>
+    public ControlFigureVisibileDelegate? ControlFigureVisible
+    {
+        get => _ControlFigureVisible;
+        set
+        {
+             var changed = value != _ControlFigureVisible;
+             if (changed)
+             {
+                 _ControlFigureVisible = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
 }
