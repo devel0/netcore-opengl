@@ -47,6 +47,16 @@ public class GLPoint : GLPrimitiveBase, IGLPoint
 
     /// <summary>
     /// Create an opengl point by given coordinate and optional vertex color.
+    /// </summary>    
+    /// <param name="x">Point coord x [object].</param>
+    /// <param name="y">Point coord y [object].</param>
+    /// <param name="z">Point coord z [object].</param>
+    /// <param name="color">Point color.</param>        
+    /// <returns></returns>
+    public GLPoint(float x, float y, float z, in Color? color = null) : this(new Vector3(x, y, z), color) { }
+
+    /// <summary>
+    /// Create an opengl point by given coordinate and optional vertex color.
     /// </summary>
     /// <param name="coord">Point position [object].</param>
     /// <param name="color">Point color.</param>    
