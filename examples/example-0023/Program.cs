@@ -5,7 +5,7 @@ using BriefFiniteElementNet.Materials;
 namespace example;
 
 // example-0023
-// TODO: doc
+// Show 1-D fem element displacement.
 
 class Program
 {
@@ -193,4 +193,5 @@ public static partial class Ext
     /// </summary>
     public static Vector3 ToVector3(this Displacement disp) =>
         new Vector3(disp.DX.ToFloat(), disp.DY.ToFloat(), disp.DZ.ToFloat());
+        
 }

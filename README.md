@@ -188,7 +188,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |                      |
 | [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |                      |
 | [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |                      |
-| [0023][es23]        | [![img][e23]][e23] | Display bar displacement                                                                                                                                      | [BriefFiniteElement] |
+| [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement.                                                                                                                            | [BriefFiniteElement] |
 
 [brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
 [es0]: examples/example-0000/Program.cs
