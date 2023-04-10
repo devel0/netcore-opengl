@@ -107,16 +107,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac726dcd8b02d9b38baa84ec879bf2bc8"><td class="memItemLeft" align="right" valign="top">abstract ? <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#ac726dcd8b02d9b38baa84ec879bf2bc8">Mirror</a> (in Matrix4x4 xyPlane)</td></tr>
 <tr class="memdesc:ac726dcd8b02d9b38baa84ec879bf2bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a mirrored figure against given xy plane.  <br /></td></tr>
 <tr class="separator:ac726dcd8b02d9b38baa84ec879bf2bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24b77a0148bd6c16122aaa418a62ca93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#a24b77a0148bd6c16122aaa418a62ca93">Move</a> (float dx, float dy, float dz, bool relative=true)</td></tr>
-<tr class="memdesc:a24b77a0148bd6c16122aaa418a62ca93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the figure by the given delta.<br  />
- <br  />
-  <br /></td></tr>
-<tr class="separator:a24b77a0148bd6c16122aaa418a62ca93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0157b433a4e49583993a420b4bc7d58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#ab0157b433a4e49583993a420b4bc7d58">Move</a> (in Vector3 coord, bool relative=true)</td></tr>
-<tr class="memdesc:ab0157b433a4e49583993a420b4bc7d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the figure by the given delta.<br  />
- <br  />
-  <br /></td></tr>
-<tr class="separator:ab0157b433a4e49583993a420b4bc7d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab42b278455aacd384cac670aec8746e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#ab42b278455aacd384cac670aec8746e8">OBBox</a> (in Matrix4x4? cs=null)</td></tr>
 <tr class="memdesc:ab42b278455aacd384cac670aec8746e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object space bbox of this figure vertexes.  <br /></td></tr>
 <tr class="separator:ab42b278455aacd384cac670aec8746e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -439,109 +429,6 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Mirrored figure.</dd></dl>
-
-</div>
-</div>
-<a id="a24b77a0148bd6c16122aaa418a62ca93" name="a24b77a0148bd6c16122aaa418a62ca93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24b77a0148bd6c16122aaa418a62ca93">&#9670;&#160;</a></span>Move() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> Move </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>relative</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Move the figure by the given delta.<br  />
- <br  />
- </p>
-<ul>
-<li>No vertex change, but only the object matrix associated to this figure.</li>
-<li>Object matrix will replaced with a single translation. </li>
-</ul>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dx</td><td>Delta (x) [object]</td></tr>
-    <tr><td class="paramname">dy</td><td>Delta (y) [object]</td></tr>
-    <tr><td class="paramname">dz</td><td>Delta (z) [object]</td></tr>
-    <tr><td class="paramname">relative</td><td>If true (default) sum the given delta elsewhere replace the object matrix translation.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>This figure reference.</dd></dl>
-
-</div>
-</div>
-<a id="ab0157b433a4e49583993a420b4bc7d58" name="ab0157b433a4e49583993a420b4bc7d58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0157b433a4e49583993a420b4bc7d58">&#9670;&#160;</a></span>Move() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> Move </td>
-          <td>(</td>
-          <td class="paramtype">in Vector3&#160;</td>
-          <td class="paramname"><em>coord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>relative</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Move the figure by the given delta.<br  />
- <br  />
- </p>
-<ul>
-<li>No vertex change, but only the object matrix associated to this figure.</li>
-<li>Object matrix will replaced with a single translation. </li>
-</ul>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coord</td><td>Delta vector3 [object]</td></tr>
-    <tr><td class="paramname">relative</td><td>If true (default) sum the given delta elsewhere replace the object matrix translation.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><br  />
- </p><dl class="section return"><dt>Returns</dt><dd>This figure reference.</dd></dl>
 
 </div>
 </div>

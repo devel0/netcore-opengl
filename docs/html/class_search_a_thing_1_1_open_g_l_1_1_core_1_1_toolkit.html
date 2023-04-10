@@ -270,6 +270,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a380063954e1d19bf3dfac26dc23d82ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default triangle compute normal function:<br  />
  Normalize((V2-V1) x (V3-V1))  <br /></td></tr>
 <tr class="separator:a380063954e1d19bf3dfac26dc23d82ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abccdb5d845069533bcafcf38794c5836"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#abccdb5d845069533bcafcf38794c5836">GetContourColor</a> (float offset, int hueFrom=240, int hueTo=300, bool decreaseHue=true)</td></tr>
+<tr class="memdesc:abccdb5d845069533bcafcf38794c5836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve color that is in the given offset in given hue range.<br  />
+ Default: hue range [240, 300] generating gradients in offeset range [0, 1] traversing following colors ( [blue, cyan, green, yellow, orange, red, fuchsia].<br  />
+ <br  />
+ Following some colors hue values:<br  />
+  <br /></td></tr>
+<tr class="separator:abccdb5d845069533bcafcf38794c5836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3f6c5b35b540d674780a2fa86fcd6173" name="a3f6c5b35b540d674780a2fa86fcd6173"></a>
@@ -1326,6 +1333,91 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a1a8dc0cd22e3ab33172c0b4e7880a0ac_icgraph.svg" width="682" height="236"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+
+</div>
+</div>
+<a id="abccdb5d845069533bcafcf38794c5836" name="abccdb5d845069533bcafcf38794c5836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abccdb5d845069533bcafcf38794c5836">&#9670;&#160;</a></span>GetContourColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color GetContourColor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hueFrom</em> = <code>240</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hueTo</em> = <code>300</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>decreaseHue</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve color that is in the given offset in given hue range.<br  />
+ Default: hue range [240, 300] generating gradients in offeset range [0, 1] traversing following colors ( [blue, cyan, green, yellow, orange, red, fuchsia].<br  />
+ <br  />
+ Following some colors hue values:<br  />
+ </p>
+<ul>
+<li>240 = Blue (0,0,255)<br  />
+</li>
+<li>180 = Cyan (0,255,255)<br  />
+</li>
+<li>120 = Green (0,255,0)<br  />
+</li>
+<li>60 = Yellow (255,255,0)<br  />
+</li>
+<li>30 = Orange (255,128,0)<br  />
+</li>
+<li>0 = Red (255,0,0)<br  />
+</li>
+<li>300 = Fuchsia (255,0,255)<br  />
+</li>
+<li>270 = Violet (128,0,255)<br  />
+ <br  />
+ ref: <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">https://en.wikipedia.org/wiki/HSL_and_HSV</a> <br  />
+ <br  />
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>Offset in range [0,1] of the color to choose in given hue range.</td></tr>
+    <tr><td class="paramname">hueFrom</td><td>Hue of color range from.</td></tr>
+    <tr><td class="paramname">hueTo</td><td>Hue of color range to.</td></tr>
+    <tr><td class="paramname">decreaseHue</td><td>If true (default) offset traverse hue range decreasing hue starting by "from" toward "to". Otherwise "to" hue will reached by the "from" through increment of hue.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Color corresponding given range offset.</dd></dl>
+</li>
+</ul>
 
 </div>
 </div>
@@ -3576,6 +3668,7 @@ Here is the caller graph for this function:</div>
 <li>src/core/geom/Matrix4x4.cs</li>
 <li>src/core/primitive/GLLine.cs</li>
 <li>src/core/primitive/IGLTriangle.cs</li>
+<li>src/core/types/Utils.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -83,11 +83,38 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a894a011a11f0187434683f76e9db207f"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a894a011a11f0187434683f76e9db207f">Vertexes</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a> figure)</td></tr>
-<tr class="memdesc:a894a011a11f0187434683f76e9db207f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distinct vertexes belonging this figure [object].  <br /></td></tr>
+<tr class="memdesc:a894a011a11f0187434683f76e9db207f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertexes belonging this figure [object].  <br /></td></tr>
 <tr class="separator:a894a011a11f0187434683f76e9db207f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ccd691d8f3aa892f32d7bdd3d804ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a20ccd691d8f3aa892f32d7bdd3d804ed">OBBox</a> (this IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> &gt; figures, in Matrix4x4? cs=null)</td></tr>
+<tr class="memdesc:a20ccd691d8f3aa892f32d7bdd3d804ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object space bbox of given figures vertexes.  <br /></td></tr>
+<tr class="separator:a20ccd691d8f3aa892f32d7bdd3d804ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35a6b1540ec2cfad91b8b44d6d69727"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ad35a6b1540ec2cfad91b8b44d6d69727">Center</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a> figure)</td></tr>
 <tr class="memdesc:ad35a6b1540ec2cfad91b8b44d6d69727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean of figure vertexes.  <br /></td></tr>
 <tr class="separator:ad35a6b1540ec2cfad91b8b44d6d69727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4bbd5fa92af6236f39849c4e431764"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#afc4bbd5fa92af6236f39849c4e431764">SetScreenMode&lt; T &gt;</a> (this T figure, bool screenCoordMode)</td></tr>
+<tr class="memdesc:afc4bbd5fa92af6236f39849c4e431764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets IGLFigure.ScreenCoordMode on given figure.  <br /></td></tr>
+<tr class="separator:afc4bbd5fa92af6236f39849c4e431764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2911503424888a7201b3ac7d49c7cf83"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a2911503424888a7201b3ac7d49c7cf83">SetScreenMode&lt; T &gt;</a> (this IEnumerable&lt; T &gt; figures, bool screenCoordMode)</td></tr>
+<tr class="memdesc:a2911503424888a7201b3ac7d49c7cf83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets IGLFigure.ScreenCoordMode on given figures.  <br /></td></tr>
+<tr class="separator:a2911503424888a7201b3ac7d49c7cf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2240ae57dd5a62eb5334cd5745a10b66"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a2240ae57dd5a62eb5334cd5745a10b66">Move&lt; T &gt;</a> (this T figure, float dx, float dy, float dz, bool relative=true)</td></tr>
+<tr class="memdesc:a2240ae57dd5a62eb5334cd5745a10b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the figure by the given delta.<br  />
+ <br  />
+  <br /></td></tr>
+<tr class="separator:a2240ae57dd5a62eb5334cd5745a10b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace639ea5eb9eac7bf2b478f68f46efaa"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ace639ea5eb9eac7bf2b478f68f46efaa">Move&lt; T &gt;</a> (this T figure, in Vector3 coord, bool relative=true)</td></tr>
+<tr class="memdesc:ace639ea5eb9eac7bf2b478f68f46efaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the figure by the given delta.<br  />
+ <br  />
+  <br /></td></tr>
+<tr class="separator:ace639ea5eb9eac7bf2b478f68f46efaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70aa125339e8296681e8a09f1533ac52"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a70aa125339e8296681e8a09f1533ac52">Move&lt; T &gt;</a> (this IEnumerable&lt; T &gt; figures, Vector3 coord, bool relative=true)</td></tr>
+<tr class="memdesc:a70aa125339e8296681e8a09f1533ac52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move given figures by the given delta.<br  />
+ <br  />
+  <br /></td></tr>
+<tr class="separator:a70aa125339e8296681e8a09f1533ac52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad775a33ded968506ba4c58332b801860"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html">GLTriangleFigure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ad775a33ded968506ba4c58332b801860">ToFigure</a> (this IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html">GLTriangle</a> &gt; triangles)</td></tr>
+<tr class="memdesc:ad775a33ded968506ba4c58332b801860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a gl figure from given gl triangles.  <br /></td></tr>
+<tr class="separator:ad775a33ded968506ba4c58332b801860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12af31ac1c6f69cb57908ff3a98f95cd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line_figure.html">GLLineFigure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a12af31ac1c6f69cb57908ff3a98f95cd">MakeFigure</a> (this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> bbox, in Color? color)</td></tr>
 <tr class="memdesc:a12af31ac1c6f69cb57908ff3a98f95cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create wcs lines figure that represents the given bounding box.  <br /></td></tr>
 <tr class="separator:a12af31ac1c6f69cb57908ff3a98f95cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +274,21 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:abbe84118f7ce911bbf40358867c15faf"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#abbe84118f7ce911bbf40358867c15faf">Fmt</a> (this in Vector3 v)</td></tr>
 <tr class="memdesc:abbe84118f7ce911bbf40358867c15faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invariant representation X Y Z.  <br /></td></tr>
 <tr class="separator:abbe84118f7ce911bbf40358867c15faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b86344f3d56f6d12530b8dd8d9f09c6"><td class="memItemLeft" align="right" valign="top">static ColorHelper.RGB&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a9b86344f3d56f6d12530b8dd8d9f09c6">ToRGB</a> (this Color color)</td></tr>
+<tr class="memdesc:a9b86344f3d56f6d12530b8dd8d9f09c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve ColorHelper RGB color from given system drawing color.  <br /></td></tr>
+<tr class="separator:a9b86344f3d56f6d12530b8dd8d9f09c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53198b818f1416113934a5571e902dcb"><td class="memItemLeft" align="right" valign="top">static ColorHelper.HSV&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a53198b818f1416113934a5571e902dcb">ToHSV</a> (this Color color)</td></tr>
+<tr class="memdesc:a53198b818f1416113934a5571e902dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve ColorHelper HSV color from given system drawing color.  <br /></td></tr>
+<tr class="separator:a53198b818f1416113934a5571e902dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c8ff19bb24c7cd55d91bf8242697bc"><td class="memItemLeft" align="right" valign="top">static ColorHelper.RGB&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a17c8ff19bb24c7cd55d91bf8242697bc">ToRGB</a> (this ColorHelper.HSV hsv)</td></tr>
+<tr class="memdesc:a17c8ff19bb24c7cd55d91bf8242697bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve ColorHelper RGB color from given ColorHelper HSV color.  <br /></td></tr>
+<tr class="separator:a17c8ff19bb24c7cd55d91bf8242697bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db8cc9a42e1314b75b168d0927da622"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a6db8cc9a42e1314b75b168d0927da622">ToColor</a> (this ColorHelper.RGB rgb)</td></tr>
+<tr class="memdesc:a6db8cc9a42e1314b75b168d0927da622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve system drawing color from given ColorHelper RGB color.  <br /></td></tr>
+<tr class="separator:a6db8cc9a42e1314b75b168d0927da622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77067f369a114b85c29edd18dfef2310"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a77067f369a114b85c29edd18dfef2310">ToColor</a> (this ColorHelper.HSV hsv)</td></tr>
+<tr class="memdesc:a77067f369a114b85c29edd18dfef2310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve system drawing color from given ColorHelper HSV color.  <br /></td></tr>
+<tr class="separator:a77067f369a114b85c29edd18dfef2310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40cf5fc2312799df49c036dfd99971d7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a40cf5fc2312799df49c036dfd99971d7">SetColor</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a> vertex, in Color color)</td></tr>
 <tr class="memdesc:a40cf5fc2312799df49c036dfd99971d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the color of the vertex.  <br /></td></tr>
 <tr class="separator:a40cf5fc2312799df49c036dfd99971d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,6 +301,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fb03a782b1737645eb82ae4f8a80630"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a2fb03a782b1737645eb82ae4f8a80630">EnsureDetached</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html">IGLVertexManagerObject</a> obj)</td></tr>
 <tr class="memdesc:a2fb03a782b1737645eb82ae4f8a80630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws an exception if this object isn't detached from any vertex managers.  <br /></td></tr>
 <tr class="separator:a2fb03a782b1737645eb82ae4f8a80630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09002c1b2a2d659f1f232692b0bd0dd5"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a09002c1b2a2d659f1f232692b0bd0dd5">PositionSignature</a> (this Vector3 position, float tol)</td></tr>
+<tr class="memdesc:a09002c1b2a2d659f1f232692b0bd0dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve vector3 position signature within given tolerance.  <br /></td></tr>
+<tr class="separator:a09002c1b2a2d659f1f232692b0bd0dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb7b99f536e72288c12ade4c9bee521"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a2cb7b99f536e72288c12ade4c9bee521">PositionSignature</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a> glVertex, float tol)</td></tr>
+<tr class="memdesc:a2cb7b99f536e72288c12ade4c9bee521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve vertex position signature within given tolerance.  <br /></td></tr>
+<tr class="separator:a2cb7b99f536e72288c12ade4c9bee521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f47682d40a299c0d92b33de49e44601"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a0f47682d40a299c0d92b33de49e44601">BuildVertexPosDict</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a> figure, float tol)</td></tr>
+<tr class="memdesc:a0f47682d40a299c0d92b33de49e44601"><td class="mdescLeft">&#160;</td><td class="mdescRight">From given figure create a vertex position based dictionary suitable to be queries through vertex PositionSignature.  <br /></td></tr>
+<tr class="separator:a0f47682d40a299c0d92b33de49e44601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b1593c5c42df54eab73b694cdb9b83"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ab5b1593c5c42df54eab73b694cdb9b83">BuildVertexPosDict</a> (this IEnumerable&lt; <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a> &gt; figures, float tol)</td></tr>
+<tr class="memdesc:ab5b1593c5c42df54eab73b694cdb9b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">From given list of figures create a vertex position based dictionary suitable to be queries through vertex PositionSignature.  <br /></td></tr>
+<tr class="separator:ab5b1593c5c42df54eab73b694cdb9b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4379ba3ab7982697dea4a6b125f46002" name="a4379ba3ab7982697dea4a6b125f46002"></a>
@@ -381,6 +435,98 @@ Static Public Member Functions</h2></td></tr>
 <p>Extract basez (m3[1..3]) from the given world matrix. </p>
 <p><br  />
  </p>
+
+</div>
+</div>
+<a id="ab5b1593c5c42df54eab73b694cdb9b83" name="ab5b1593c5c42df54eab73b694cdb9b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b1593c5c42df54eab73b694cdb9b83">&#9670;&#160;</a></span>BuildVertexPosDict() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Dictionary&lt; string, List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> &gt; &gt; BuildVertexPosDict </td>
+          <td>(</td>
+          <td class="paramtype">this IEnumerable&lt; <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a> &gt;&#160;</td>
+          <td class="paramname"><em>figures</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>From given list of figures create a vertex position based dictionary suitable to be queries through vertex PositionSignature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figures</td><td>Gl figures which retrieve vertexes.</td></tr>
+    <tr><td class="paramname">tol</td><td>Vertex position tolerance to group them.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dictionary gl vertex position signature to list of gl vertexes within that position.</dd></dl>
+
+</div>
+</div>
+<a id="a0f47682d40a299c0d92b33de49e44601" name="a0f47682d40a299c0d92b33de49e44601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f47682d40a299c0d92b33de49e44601">&#9670;&#160;</a></span>BuildVertexPosDict() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Dictionary&lt; string, List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> &gt; &gt; BuildVertexPosDict </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a>&#160;</td>
+          <td class="paramname"><em>figure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>From given figure create a vertex position based dictionary suitable to be queries through vertex PositionSignature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figure</td><td>Gl figure which retrieve vertexes.</td></tr>
+    <tr><td class="paramname">tol</td><td>Vertex position tolerance to group them.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dictionary gl vertex position signature to list of gl vertexes within that position.</dd></dl>
 
 </div>
 </div>
@@ -1624,6 +1770,237 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a70aa125339e8296681e8a09f1533ac52" name="a70aa125339e8296681e8a09f1533ac52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70aa125339e8296681e8a09f1533ac52">&#9670;&#160;</a></span>Move&lt; T &gt;() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt; T &gt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a93ad2f007704d637d95f721299de8213">Move</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this IEnumerable&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>figures</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>relative</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move given figures by the given delta.<br  />
+ <br  />
+ </p>
+<ul>
+<li>No vertex change, but only the object matrix associated to this figure.</li>
+<li>Object matrix will replaced with a single translation. </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figures</td><td>Figures to move.</td></tr>
+    <tr><td class="paramname">coord</td><td>Delta vector3 [object]</td></tr>
+    <tr><td class="paramname">relative</td><td>If true (default) sum the given delta elsewhere replace the object matrix translation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>This figure reference.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IGLFigure</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figures.Act</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figs</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figs.ForEach</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>fig</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>fig.Move</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>coord</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>relative</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a2240ae57dd5a62eb5334cd5745a10b66" name="a2240ae57dd5a62eb5334cd5745a10b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2240ae57dd5a62eb5334cd5745a10b66">&#9670;&#160;</a></span>Move&lt; T &gt;() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a93ad2f007704d637d95f721299de8213">Move</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this T&#160;</td>
+          <td class="paramname"><em>figure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>relative</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move the figure by the given delta.<br  />
+ <br  />
+ </p>
+<ul>
+<li>No vertex change, but only the object matrix associated to this figure.</li>
+<li>Object matrix will replaced with a single translation. </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figure</td><td>Figure to move.</td></tr>
+    <tr><td class="paramname">dx</td><td>Delta (x) [object]</td></tr>
+    <tr><td class="paramname">dy</td><td>Delta (y) [object]</td></tr>
+    <tr><td class="paramname">dz</td><td>Delta (z) [object]</td></tr>
+    <tr><td class="paramname">relative</td><td>If true (default) sum the given delta elsewhere replace the object matrix translation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This figure reference.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IGLFigure</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figure.Move</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>new</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>Vector3</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>dx</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>dy</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>dz</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>relative</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="ace639ea5eb9eac7bf2b478f68f46efaa" name="ace639ea5eb9eac7bf2b478f68f46efaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace639ea5eb9eac7bf2b478f68f46efaa">&#9670;&#160;</a></span>Move&lt; T &gt;() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a93ad2f007704d637d95f721299de8213">Move</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this T&#160;</td>
+          <td class="paramname"><em>figure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in Vector3&#160;</td>
+          <td class="paramname"><em>coord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>relative</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move the figure by the given delta.<br  />
+ <br  />
+ </p>
+<ul>
+<li>No vertex change, but only the object matrix associated to this figure.</li>
+<li>Object matrix will replaced with a single translation. </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figure</td><td>Figure to move.</td></tr>
+    <tr><td class="paramname">coord</td><td>Delta vector3 [object]</td></tr>
+    <tr><td class="paramname">relative</td><td>If true (default) sum the given delta elsewhere replace the object matrix translation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>This figure reference.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IGLFigure</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
 <a id="a460e755edb27a4894ceee04e767231a2" name="a460e755edb27a4894ceee04e767231a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a460e755edb27a4894ceee04e767231a2">&#9670;&#160;</a></span>MRound()</h2>
 
@@ -1694,6 +2071,53 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a20ccd691d8f3aa892f32d7bdd3d804ed" name="a20ccd691d8f3aa892f32d7bdd3d804ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ccd691d8f3aa892f32d7bdd3d804ed">&#9670;&#160;</a></span>OBBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> OBBox </td>
+          <td>(</td>
+          <td class="paramtype">this IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> &gt;&#160;</td>
+          <td class="paramname"><em>figures</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in Matrix4x4?&#160;</td>
+          <td class="paramname"><em>cs</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Object space bbox of given figures vertexes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figures</td><td>Gl figures to compute bbox.</td></tr>
+    <tr><td class="paramname">cs</td><td>Optional coordinate system to use in bbox detection ( Default: WCS ).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><br  />
+ </p><dl class="section return"><dt>Returns</dt><dd>Figures bbox [object].</dd></dl>
+
+</div>
+</div>
 <a id="a8d654265e31a2674635b464ec2d4f5d7" name="a8d654265e31a2674635b464ec2d4f5d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d654265e31a2674635b464ec2d4f5d7">&#9670;&#160;</a></span>Origin()</h2>
 
@@ -1719,6 +2143,86 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Extract the origin (m4[1..3]) from the given world matrix. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a2cb7b99f536e72288c12ade4c9bee521" name="a2cb7b99f536e72288c12ade4c9bee521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb7b99f536e72288c12ade4c9bee521">&#9670;&#160;</a></span>PositionSignature() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string PositionSignature </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a>&#160;</td>
+          <td class="paramname"><em>glVertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve vertex position signature within given tolerance. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a09002c1b2a2d659f1f232692b0bd0dd5" name="a09002c1b2a2d659f1f232692b0bd0dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09002c1b2a2d659f1f232692b0bd0dd5">&#9670;&#160;</a></span>PositionSignature() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string PositionSignature </td>
+          <td>(</td>
+          <td class="paramtype">this Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve vector3 position signature within given tolerance. </p>
 <p><br  />
  </p>
 
@@ -2118,8 +2622,174 @@ Alpha=0 (full transparent).</td></tr>
 
 </div>
 </div>
+<a id="a2911503424888a7201b3ac7d49c7cf83" name="a2911503424888a7201b3ac7d49c7cf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2911503424888a7201b3ac7d49c7cf83">&#9670;&#160;</a></span>SetScreenMode&lt; T &gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt; T &gt; SetScreenMode&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this IEnumerable&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>figures</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>screenCoordMode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets IGLFigure.ScreenCoordMode on given figures. </p>
+<p><br  />
+ </p>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IGLFigure</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figures.Act</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figs</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figs.ForEach</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>fig</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>fig.ScreenCoordMode</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>screenCoordMode</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="afc4bbd5fa92af6236f39849c4e431764" name="afc4bbd5fa92af6236f39849c4e431764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4bbd5fa92af6236f39849c4e431764">&#9670;&#160;</a></span>SetScreenMode&lt; T &gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T SetScreenMode&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this T&#160;</td>
+          <td class="paramname"><em>figure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>screenCoordMode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets IGLFigure.ScreenCoordMode on given figure. </p>
+<p><br  />
+ </p>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IGLFigure</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>figure.Act</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>fig</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>fig.ScreenCoordMode</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>screenCoordMode</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a77067f369a114b85c29edd18dfef2310" name="a77067f369a114b85c29edd18dfef2310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77067f369a114b85c29edd18dfef2310">&#9670;&#160;</a></span>ToColor() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color ToColor </td>
+          <td>(</td>
+          <td class="paramtype">this ColorHelper.HSV&#160;</td>
+          <td class="paramname"><em>hsv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve system drawing color from given ColorHelper HSV color. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a6db8cc9a42e1314b75b168d0927da622" name="a6db8cc9a42e1314b75b168d0927da622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db8cc9a42e1314b75b168d0927da622">&#9670;&#160;</a></span>ToColor() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color ToColor </td>
+          <td>(</td>
+          <td class="paramtype">this ColorHelper.RGB&#160;</td>
+          <td class="paramname"><em>rgb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve system drawing color from given ColorHelper RGB color. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
 <a id="a7cb5aadcbb3e545ea423622c248c4513" name="a7cb5aadcbb3e545ea423622c248c4513"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cb5aadcbb3e545ea423622c248c4513">&#9670;&#160;</a></span>ToColor()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb5aadcbb3e545ea423622c248c4513">&#9670;&#160;</a></span>ToColor() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2151,6 +2821,36 @@ Alpha=0 (full transparent).</td></tr>
   </table>
   </dd>
 </dl>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="ad775a33ded968506ba4c58332b801860" name="ad775a33ded968506ba4c58332b801860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad775a33ded968506ba4c58332b801860">&#9670;&#160;</a></span>ToFigure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html">GLTriangleFigure</a> ToFigure </td>
+          <td>(</td>
+          <td class="paramtype">this IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html">GLTriangle</a> &gt;&#160;</td>
+          <td class="paramname"><em>triangles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a gl figure from given gl triangles. </p>
 <p><br  />
  </p>
 
@@ -2287,6 +2987,96 @@ Alpha=0 (full transparent).</td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>GL line primitive.</dd></dl>
+
+</div>
+</div>
+<a id="a53198b818f1416113934a5571e902dcb" name="a53198b818f1416113934a5571e902dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53198b818f1416113934a5571e902dcb">&#9670;&#160;</a></span>ToHSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ColorHelper.HSV ToHSV </td>
+          <td>(</td>
+          <td class="paramtype">this Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve ColorHelper HSV color from given system drawing color. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a9b86344f3d56f6d12530b8dd8d9f09c6" name="a9b86344f3d56f6d12530b8dd8d9f09c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b86344f3d56f6d12530b8dd8d9f09c6">&#9670;&#160;</a></span>ToRGB() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ColorHelper.RGB ToRGB </td>
+          <td>(</td>
+          <td class="paramtype">this Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve ColorHelper RGB color from given system drawing color. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a17c8ff19bb24c7cd55d91bf8242697bc" name="a17c8ff19bb24c7cd55d91bf8242697bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c8ff19bb24c7cd55d91bf8242697bc">&#9670;&#160;</a></span>ToRGB() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ColorHelper.RGB ToRGB </td>
+          <td>(</td>
+          <td class="paramtype">this ColorHelper.HSV&#160;</td>
+          <td class="paramname"><em>hsv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve ColorHelper RGB color from given ColorHelper HSV color. </p>
+<p><br  />
+ </p>
 
 </div>
 </div>
@@ -2704,7 +3494,7 @@ If not specified given color alpha will taken.</td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Distinct vertexes belonging this figure [object]. </p>
+<p>Vertexes belonging this figure [object]. </p>
 <p><br  />
  </p>
 
@@ -2713,6 +3503,7 @@ If not specified given color alpha will taken.</td></tr>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/figure/GLFigureBase.cs</li>
 <li>src/core/figure/IGLFigure.cs</li>
+<li>src/core/figure/IGLTriangleFigure.cs</li>
 <li>src/core/geom/BBox.cs</li>
 <li>src/core/geom/Line.cs</li>
 <li>src/core/geom/Matrix4x4.cs</li>
@@ -2726,6 +3517,7 @@ If not specified given color alpha will taken.</td></tr>
 <li>src/core/types/Utils.cs</li>
 <li>src/core/vertex/IGLVertex.cs</li>
 <li>src/core/vertex/IGLVertexManagerObject.cs</li>
+<li>src/core/vertex/Utils.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

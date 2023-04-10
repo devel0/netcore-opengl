@@ -10,7 +10,8 @@ var searchData=
   ['isattached_7',['IsAttached',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a5e141df13447eb325b8eea48a1b910ad',1,'SearchAThing.OpenGL.Core.GLVertex.IsAttached'],['../interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a5e141df13447eb325b8eea48a1b910ad',1,'SearchAThing.OpenGL.Core.IGLVertex.IsAttached']]],
   ['iscontrolinvalidated_8',['IsControlInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a2c582fe709e0238eba3dabc517f12f4c',1,'SearchAThing::OpenGL::Render::GLControl']]],
   ['isempty_9',['IsEmpty',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#aaaa6c7dd3bd14dc2ce7f0780de528bb1',1,'SearchAThing::OpenGL::Core::BBox']]],
-  ['isinvalidated_10',['IsInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html#adb95a437baa779b955ef5d5e0b8659a7',1,'SearchAThing::OpenGL::Render::GLModel']]],
-  ['isrendering_11',['IsRendering',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#aec7867fbea649e5808d143299114cc13',1,'SearchAThing::OpenGL::Render::GLControl']]],
-  ['isrenderinvalidated_12',['IsRenderInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a4325a2f4ce3bdd633d1e31fe3644469c',1,'SearchAThing::OpenGL::Render::GLControl']]]
+  ['isinitial_10',['IsInitial',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a29d922802cc095c38290437cfb7353af',1,'SearchAThing::OpenGL::Render::GLControl']]],
+  ['isinvalidated_11',['IsInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html#adb95a437baa779b955ef5d5e0b8659a7',1,'SearchAThing::OpenGL::Render::GLModel']]],
+  ['isrendering_12',['IsRendering',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#aec7867fbea649e5808d143299114cc13',1,'SearchAThing::OpenGL::Render::GLControl']]],
+  ['isrenderinvalidated_13',['IsRenderInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a4325a2f4ce3bdd633d1e31fe3644469c',1,'SearchAThing::OpenGL::Render::GLControl']]]
 ];

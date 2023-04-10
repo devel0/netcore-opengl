@@ -35,7 +35,8 @@ var searchData=
   ['isattached_32',['IsAttached',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a5e141df13447eb325b8eea48a1b910ad',1,'SearchAThing.OpenGL.Core.GLVertex.IsAttached'],['../interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a5e141df13447eb325b8eea48a1b910ad',1,'SearchAThing.OpenGL.Core.IGLVertex.IsAttached'],['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ae2a2738b588f3d085e0be3da760541d4',1,'SearchAThing.OpenGL.Core.Ext.IsAttached()']]],
   ['iscontrolinvalidated_33',['IsControlInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a2c582fe709e0238eba3dabc517f12f4c',1,'SearchAThing::OpenGL::Render::GLControl']]],
   ['isempty_34',['IsEmpty',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#aaaa6c7dd3bd14dc2ce7f0780de528bb1',1,'SearchAThing::OpenGL::Core::BBox']]],
-  ['isinvalidated_35',['IsInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html#adb95a437baa779b955ef5d5e0b8659a7',1,'SearchAThing::OpenGL::Render::GLModel']]],
-  ['isrendering_36',['IsRendering',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#aec7867fbea649e5808d143299114cc13',1,'SearchAThing::OpenGL::Render::GLControl']]],
-  ['isrenderinvalidated_37',['IsRenderInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a4325a2f4ce3bdd633d1e31fe3644469c',1,'SearchAThing::OpenGL::Render::GLControl']]]
+  ['isinitial_35',['IsInitial',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a29d922802cc095c38290437cfb7353af',1,'SearchAThing::OpenGL::Render::GLControl']]],
+  ['isinvalidated_36',['IsInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html#adb95a437baa779b955ef5d5e0b8659a7',1,'SearchAThing::OpenGL::Render::GLModel']]],
+  ['isrendering_37',['IsRendering',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#aec7867fbea649e5808d143299114cc13',1,'SearchAThing::OpenGL::Render::GLControl']]],
+  ['isrenderinvalidated_38',['IsRenderInvalidated',['../class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a4325a2f4ce3bdd633d1e31fe3644469c',1,'SearchAThing::OpenGL::Render::GLControl']]]
 ];
