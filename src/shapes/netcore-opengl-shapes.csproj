@@ -11,9 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\core\netcore-opengl-core.csproj" />
+    <ProjectReference Include="..\render\netcore-opengl-render.csproj" />
 
     <Compile Include="../../src/core/usings.core.cs" />
+    <Compile Include="../../src/render/usings.render.cs" />
   </ItemGroup>
 
   <ItemGroup>
