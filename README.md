@@ -52,7 +52,7 @@ The library is composed by following modules:
 | **core** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)       | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common]                 | math for opengl                 |
 | **render** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
 | **gui** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)          | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
-| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [core], [G-Shark]                                      | box, cone, sphere, arrow shapes |
+| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [render], [G-Shark]                                    | box, cone, sphere, arrow shapes |
 
 [core]: https://www.nuget.org/packages/netcore-opengl-core
 [render]: https://www.nuget.org/packages/netcore-opengl-render
@@ -189,6 +189,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |                      |
 | [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |                      |
 | [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement.                                                                                                                            | [BriefFiniteElement] |
+| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data.                 | [BriefFiniteElement] |
 
 [brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
 [es0]: examples/example-0000/Program.cs
@@ -214,6 +215,7 @@ Click on the `example code` link to open source code of the example, read top to
 [es20]: examples/example-0020/Program.cs
 [es21]: examples/example-0021/Views/MainWindow.axaml.cs
 [es23]: examples/example-0023/Program.cs
+[es24]: examples/example-0024/Program.cs
 [e0]: data/images/examples/0000.png
 [e1]: data/images/examples/0001.png
 [e2]: data/images/examples/0002.png
@@ -236,6 +238,7 @@ Click on the `example code` link to open source code of the example, read top to
 [e19]: data/images/examples/0019.png
 [e21]: data/images/examples/0021.gif
 [e23]: data/images/examples/0023.png
+[e24]: data/images/examples/0024.png
 
 ### Running examples from console
 
