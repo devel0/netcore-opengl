@@ -54,6 +54,28 @@ public partial class GLControl : INotifyPropertyChanged
 
     internal Size? glControlLastKnownSize = null;
 
+    #region IsInitial
+    
+    private bool _IsInitial = false;
+    /// <summary>
+    /// States if this gl control is the initial created into a gl split view.
+    /// </summary>
+    public bool IsInitial
+    {
+        get => _IsInitial;
+        private set
+        {
+             var changed = value != _IsInitial;
+             if (changed)
+             {
+                 _IsInitial = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     #region ID
 
     private string _ID = "";

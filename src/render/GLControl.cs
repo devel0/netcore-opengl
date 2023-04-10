@@ -34,6 +34,8 @@ public partial class GLControl : INotifyPropertyChanged
         Device = device;
         ID = $"{IDs++}";
 
+        IsInitial = true;
+
         ListenModelChanges();
     }
 
