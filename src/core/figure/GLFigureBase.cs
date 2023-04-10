@@ -263,40 +263,7 @@ public abstract class GLFigureBase : IGLFigure
 
             return new uint[] { };
         }
-    }
-
-    /// <summary>
-    /// Move the figure by the given delta.<br/>    
-    /// </summary>
-    /// <remarks>
-    /// - No vertex change, but only the object matrix associated to this figure.
-    /// - Object matrix will replaced with a single translation.
-    /// </remarks>
-    /// <param name="dx">Delta (x) [object]</param>
-    /// <param name="dy">Delta (y) [object]</param>
-    /// <param name="dz">Delta (z) [object]</param>
-    /// <param name="relative">If true (default) sum the given delta elsewhere replace the object matrix translation.</param>
-    /// <returns>This figure reference.</returns>
-    public GLFigureBase Move(float dx, float dy, float dz, bool relative = true) =>
-        Move(new Vector3(dx, dy, dz), relative);
-
-    /// <summary>
-    /// Move the figure by the given delta.<br/>    
-    /// </summary>
-    /// <remarks>
-    /// - No vertex change, but only the object matrix associated to this figure.
-    /// - Object matrix will replaced with a single translation.
-    /// </remarks>
-    /// <param name="coord">Delta vector3 [object]</param>
-    /// <param name="relative">If true (default) sum the given delta elsewhere replace the object matrix translation.</param>    
-    /// <returns>This figure reference.</returns>
-    public GLFigureBase Move(in Vector3 coord, bool relative = true)
-    {
-        ObjectMatrix = ObjectMatrix.SetOrigin(
-            relative ? ObjectMatrix.Origin() + coord : coord);
-
-        return this;
-    }
+    }   
 
     public BBox OBBox(in Matrix4x4? cs = null)
     {
@@ -373,6 +340,22 @@ public static partial class Ext
         }
 
         return vertexes;
+    }
+
+    /// <summary>
+    /// Object space bbox of given figures vertexes.
+    /// </summary>
+    /// <param name="figures">Gl figures to compute bbox.</param>
+    /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
+    /// <returns>Figures bbox [object].</returns>
+    public static BBox OBBox(this IEnumerable<GLFigureBase> figures, in Matrix4x4? cs = null)
+    {
+        var res = new BBox(cs);
+
+        foreach (var figure in figures)
+            res.ApplyUnion(figure.OBBox(cs));
+
+        return res;
     }
 
 }
