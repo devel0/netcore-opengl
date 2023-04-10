@@ -138,12 +138,73 @@ public static partial class Constants
 }
 
 public static partial class Ext
-{    
+{
 
     /// <summary>
     /// Mean of figure vertexes.
     /// </summary>    
     public static Vector3 Center(this IGLFigure figure) =>
         figure.Vertexes().Select(w => w.Position).Mean();
+
+    /// <summary>
+    /// Sets <see cref="IGLFigure.ScreenCoordMode"/> on given figure.
+    /// </summary>    
+    public static T SetScreenMode<T>(this T figure, bool screenCoordMode) where T : IGLFigure =>
+        figure.Act(fig => fig.ScreenCoordMode = screenCoordMode);
+
+    /// <summary>
+    /// Sets <see cref="IGLFigure.ScreenCoordMode"/> on given figures.
+    /// </summary>    
+    public static IEnumerable<T> SetScreenMode<T>(this IEnumerable<T> figures, bool screenCoordMode) where T : IGLFigure =>
+        figures.Act(figs => figs.ForEach(fig => fig.ScreenCoordMode = screenCoordMode));
+
+    /// <summary>
+    /// Move the figure by the given delta.<br/>    
+    /// </summary>
+    /// <remarks>
+    /// - No vertex change, but only the object matrix associated to this figure.
+    /// - Object matrix will replaced with a single translation.
+    /// </remarks>
+    /// <param name="figure">Figure to move.</param>
+    /// <param name="dx">Delta (x) [object]</param>
+    /// <param name="dy">Delta (y) [object]</param>
+    /// <param name="dz">Delta (z) [object]</param>
+    /// <param name="relative">If true (default) sum the given delta elsewhere replace the object matrix translation.</param>
+    /// <returns>This figure reference.</returns>
+    public static T Move<T>(this T figure, float dx, float dy, float dz, bool relative = true) where T : IGLFigure =>
+        figure.Move(new Vector3(dx, dy, dz), relative);
+
+    /// <summary>
+    /// Move the figure by the given delta.<br/>    
+    /// </summary>
+    /// <remarks>
+    /// - No vertex change, but only the object matrix associated to this figure.
+    /// - Object matrix will replaced with a single translation.
+    /// </remarks>
+    /// <param name="figure">Figure to move.</param>
+    /// <param name="coord">Delta vector3 [object]</param>
+    /// <param name="relative">If true (default) sum the given delta elsewhere replace the object matrix translation.</param>    
+    /// <returns>This figure reference.</returns>
+    public static T Move<T>(this T figure, in Vector3 coord, bool relative = true) where T : IGLFigure
+    {
+        figure.ObjectMatrix = figure.ObjectMatrix.SetOrigin(
+            relative ? figure.ObjectMatrix.Origin() + coord : coord);
+
+        return figure;
+    }
+
+    /// <summary>
+    /// Move given figures by the given delta.<br/>    
+    /// </summary>
+    /// <remarks>
+    /// - No vertex change, but only the object matrix associated to this figure.
+    /// - Object matrix will replaced with a single translation.
+    /// </remarks>
+    /// <param name="figures">Figures to move.</param>
+    /// <param name="coord">Delta vector3 [object]</param>
+    /// <param name="relative">If true (default) sum the given delta elsewhere replace the object matrix translation.</param>    
+    /// <returns>This figure reference.</returns>
+    public static IEnumerable<T> Move<T>(this IEnumerable<T> figures, Vector3 coord, bool relative = true) where T : IGLFigure =>
+        figures.Act(figs => figs.ForEach(fig => fig.Move(coord, relative)));
 
 }

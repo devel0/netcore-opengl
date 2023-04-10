@@ -54,6 +54,28 @@ public partial class GLControl : INotifyPropertyChanged
 
     internal Size? glControlLastKnownSize = null;
 
+    #region IsInitial
+    
+    private bool _IsInitial = false;
+    /// <summary>
+    /// States if this gl control is the initial created into a gl split view.
+    /// </summary>
+    public bool IsInitial
+    {
+        get => _IsInitial;
+        private set
+        {
+             var changed = value != _IsInitial;
+             if (changed)
+             {
+                 _IsInitial = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     #region ID
 
     private string _ID = "";
@@ -730,7 +752,7 @@ public partial class GLControl : INotifyPropertyChanged
     #endregion
 
     #region Title
-    
+
     private string _Title = "";
     /// <summary>
     /// Title
@@ -740,19 +762,19 @@ public partial class GLControl : INotifyPropertyChanged
         get => _Title;
         set
         {
-             var changed = value != _Title;
-             if (changed)
-             {
-                 _Title = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _Title;
+            if (changed)
+            {
+                _Title = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ControlOverlay1
-    
+
     private string _ControlOverlay1 = "";
     /// <summary>
     /// ControlOverlay1 ( used for IdentifyCoord output )
@@ -762,15 +784,15 @@ public partial class GLControl : INotifyPropertyChanged
         get => _ControlOverlay1;
         set
         {
-             var changed = value != _ControlOverlay1;
-             if (changed)
-             {
-                 _ControlOverlay1 = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _ControlOverlay1;
+            if (changed)
+            {
+                _ControlOverlay1 = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ShowModelBBox
@@ -797,7 +819,7 @@ public partial class GLControl : INotifyPropertyChanged
     #endregion
 
     #region IdentifyCoord
-    
+
     private bool _IdentifyCoord = false;
     /// <summary>
     /// If true an overlay display vertex under mouse coord.
@@ -807,15 +829,15 @@ public partial class GLControl : INotifyPropertyChanged
         get => _IdentifyCoord;
         set
         {
-             var changed = value != _IdentifyCoord;
-             if (changed)
-             {
-                 _IdentifyCoord = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _IdentifyCoord;
+            if (changed)
+            {
+                _IdentifyCoord = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ShowCameraObject
@@ -994,13 +1016,64 @@ public partial class GLControl : INotifyPropertyChanged
     {
         get
         {
-            if (_PointerLRayCast is null)            
+            if (_PointerLRayCast is null)
                 _PointerLRayCast = RayCastLocal(PointerCoord);
-            
+
             return _PointerLRayCast;
         }
     }
 
+    #endregion
+
+    #region Tag
+
+    private object? _Tag = null;
+    /// <summary>
+    /// User defined object.
+    /// </summary>
+    public object? Tag
+    {
+        get => _Tag;
+        set
+        {
+            var changed = value != _Tag;
+            if (changed)
+            {
+                _Tag = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion         
+
+    public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure);
+
+    #region ControlFigureVisible
+    
+    private ControlFigureVisibileDelegate? _ControlFigureVisible = null;
+    /// <summary>    
+    /// Control specific custom figure visibility.<br/>    
+    /// If null default model figure visibiltiy not changes.<br/>
+    /// Args: (GLControl glControl, GLFigureBase figure).
+    /// </summary>
+    /// <remarks>
+    /// Keep delegated function as light as possible to avoid performance penalty.
+    /// </remarks>
+    public ControlFigureVisibileDelegate? ControlFigureVisible
+    {
+        get => _ControlFigureVisible;
+        set
+        {
+             var changed = value != _ControlFigureVisible;
+             if (changed)
+             {
+                 _ControlFigureVisible = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
     #endregion
 
 }

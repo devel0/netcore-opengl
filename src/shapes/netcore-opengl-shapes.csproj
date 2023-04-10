@@ -5,15 +5,16 @@
   <PropertyGroup>
     <RootNamespace>SearchAThing.OpenGL.Shapes</RootNamespace>
     <PackageId>netcore-opengl-shapes</PackageId>
-    <PackageVersion>2.4.0</PackageVersion>
+    <PackageVersion>2.5.0</PackageVersion>
     <Title>net core opengl</Title>
     <Description>Shapes module provides some common figures such as box, cone, sphere, arrow.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\core\netcore-opengl-core.csproj" />
+    <ProjectReference Include="..\render\netcore-opengl-render.csproj" />
 
     <Compile Include="../../src/core/usings.core.cs" />
+    <Compile Include="../../src/render/usings.render.cs" />
   </ItemGroup>
 
   <ItemGroup>

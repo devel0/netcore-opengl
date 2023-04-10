@@ -299,6 +299,13 @@
 						Margin="0,0,10,10"
 						Items="{Binding GLModel.PointLights}">
 						<DataGrid.Columns>
+							<DataGridTemplateColumn Header="Active" IsReadOnly="false">
+								<DataGridTemplateColumn.CellTemplate>
+									<DataTemplate>
+										<CheckBox PointerPressed="cbpress" IsChecked="{Binding Active}" HorizontalAlignment="Center" />
+									</DataTemplate>
+								</DataGridTemplateColumn.CellTemplate>
+							</DataGridTemplateColumn>
 
 							<DataGridTextColumn Header="Pos"
 								Binding="{Binding Position, Converter={x:Static gui:Vector3TextConverter.Instance}}"
@@ -307,10 +314,12 @@
 							<DataGridTemplateColumn Header="ShowPoint" IsReadOnly="false">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
-										<CheckBox PointerPressed="cbpress" IsChecked="{Binding ShowPoint}" />
+										<CheckBox PointerPressed="cbpress" IsChecked="{Binding ShowPoint}" HorizontalAlignment="Center" />
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
+
+
 						</DataGrid.Columns>
 					</DataGrid>
 				</Grid>

@@ -5,7 +5,7 @@
     <PropertyGroup>
         <RootNamespace>SearchAThing.OpenGL.Core</RootNamespace>
         <PackageId>netcore-opengl-core</PackageId>
-        <PackageVersion>2.4.0</PackageVersion>
+        <PackageVersion>2.5.0</PackageVersion>
         <Title>net core opengl (core)</Title>
         <Description>Core module contains everything useful for gl calculations and view management.</Description>
 
@@ -14,7 +14,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="netcore-ext" Version="1.5.1" />
+        <PackageReference Include="ColorHelper" Version="1.8.1" />
+        <PackageReference Include="netcore-ext" Version="1.6.0" />
         <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
     </ItemGroup>
 

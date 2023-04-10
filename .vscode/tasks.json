@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/examples/example-0023/example-0023.csproj",
+                "${workspaceFolder}/examples/example-0024/example-0024.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/examples/example-0023/example-0023.csproj",
+                "${workspaceFolder}/examples/example-0024/example-0024.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/examples/example-0023/example-0023.csproj"
+                "${workspaceFolder}/examples/example-0024/example-0024.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

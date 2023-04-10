@@ -34,6 +34,8 @@ public partial class GLControl : INotifyPropertyChanged
         Device = device;
         ID = $"{IDs++}";
 
+        IsInitial = true;
+
         ListenModelChanges();
     }
 
@@ -261,7 +263,7 @@ public partial class GLControl : INotifyPropertyChanged
     /// <param name="ptLights">List of point lights.</param>
     /// <param name="shadowTransform">(Optional) list of shadow map cube view matrixes.</param>
     void RenderVertexManager(
-        Func<IGLFigure, bool> figureMatch,
+        Func<GLFigureBase, bool> figureMatch,
         GLPipeline shader,
         GLVertexManager vtxMgr,
         GLPointLightStruct[] ptLights,
@@ -373,7 +375,9 @@ public partial class GLControl : INotifyPropertyChanged
                 }
                 off += compCnt * compSize;
 
-                //--                    
+                //------------------------------------------------------------------------------
+                // FIGURES LOOP
+                //------------------------------------------------------------------------------
 
                 IEnumerable<IGLFigure> figures = vtxMgr.Figures
                     .Where(r => figureMatch(r) && r.Visible && (!shadowMapMode || r.EvalInShadowMap))
@@ -490,7 +494,7 @@ public partial class GLControl : INotifyPropertyChanged
     /// <param name="shadowTransform">(Optional) list of shadow map cube view matrixes.</param>
     /// <param name="clear">Clear the scene ( Default: true ).</param>
     void RenderScene(
-        Func<IGLFigure, bool> figureMatch,
+        Func<GLFigureBase, bool> figureMatch,
         GLPipeline shader,
         GLPointLightStruct[] ptLightStructs,
         GLMatrix4x4Struct[]? shadowTransform = null,
@@ -560,7 +564,7 @@ public partial class GLControl : INotifyPropertyChanged
     /// <param name="shader">Shader to use in this gl rendering stage.</param>
     /// <param name="ptLightStructs">List of point lights.</param>    
     /// <param name="clear">Clear the scene ( Default: true ).</param>
-    void DoShader(Func<IGLFigure, bool> figureMatch, GLPipeline shader, GLPointLightStruct[] ptLightStructs, bool clear = true)
+    void DoShader(Func<GLFigureBase, bool> figureMatch, GLPipeline shader, GLPointLightStruct[] ptLightStructs, bool clear = true)
     {
         shader.Use();
 
@@ -872,26 +876,35 @@ public partial class GLControl : INotifyPropertyChanged
             // Clear(shadowMode: false, ClearColor);
 
             DoShader(
-                fig => fig.PrimitiveType != GLPrimitiveType.Triangle,
+                fig =>
+                    fig.PrimitiveType != GLPrimitiveType.Triangle &&
+                    (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
                 MainShader,
                 ptLightStructs);
 
             if (!Wireframe && ShadeWithEdge)
                 DoShader(
-                    fig => fig.PrimitiveType == GLPrimitiveType.Triangle && !fig.ExcludeFromShadeWithEdge,
+                    fig =>
+                        fig.PrimitiveType == GLPrimitiveType.Triangle &&
+                        !fig.ExcludeFromShadeWithEdge &&
+                        (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
                     ShadeWithEdgeShader,
                     ptLightStructs,
                     clear: false);
 
             if (ShowNormals)
                 DoShader(
-                    fig => fig.PrimitiveType == GLPrimitiveType.Triangle,
+                    fig =>
+                        fig.PrimitiveType == GLPrimitiveType.Triangle &&
+                        (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
                     NormalShader,
                     ptLightStructs,
                     clear: false);
 
             DoShader(
-                fig => fig.PrimitiveType == GLPrimitiveType.Triangle,
+                fig =>
+                    fig.PrimitiveType == GLPrimitiveType.Triangle &&
+                    (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
                 MainShader,
                 ptLightStructs,
                 clear: false);
