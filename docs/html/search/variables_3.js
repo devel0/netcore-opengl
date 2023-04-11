@@ -90,6 +90,6 @@ var searchData=
   ['defaultcomputenormal_87',['DefaultComputeNormal',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#ae500d8096fb3c1a49f783d5cc853a4e4',1,'SearchAThing::OpenGL::Core::GLTriangleFigure']]],
   ['devtool_5fheight_88',['DEVTOOL_HEIGHT',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_constants.html#a3bf0f4236196b83dc5044b7ce939efe0',1,'SearchAThing::OpenGL::GUI::Constants']]],
   ['devtool_5fwidth_89',['DEVTOOL_WIDTH',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_constants.html#a29b8a89022c186d4e9d879bfa9c4d152',1,'SearchAThing::OpenGL::GUI::Constants']]],
-  ['diffuse_90',['Diffuse',['../struct_search_a_thing_1_1_open_g_l_1_1_core_1_1_material_properties.html#adb7f20f4dcd655a7f4299aa19ab8b68d',1,'SearchAThing::OpenGL::Core::MaterialProperties']]],
-  ['diffuse_91',['diffuse',['../struct_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_point_light_struct.html#a91bbb5d8511be4b06177772979653ddb',1,'SearchAThing::OpenGL::Render::GLPointLightStruct']]]
+  ['diffuse_90',['diffuse',['../struct_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_point_light_struct.html#a91bbb5d8511be4b06177772979653ddb',1,'SearchAThing::OpenGL::Render::GLPointLightStruct']]],
+  ['diffuse_91',['Diffuse',['../struct_search_a_thing_1_1_open_g_l_1_1_core_1_1_material_properties.html#adb7f20f4dcd655a7f4299aa19ab8b68d',1,'SearchAThing::OpenGL::Core::MaterialProperties']]]
 ];
