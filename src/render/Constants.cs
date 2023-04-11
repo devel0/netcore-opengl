@@ -15,56 +15,64 @@ public static class Constants
     #region assembly resources
 
     /// <summary>
-    /// SearchAThing.OpenGL.Render assembly name
+    /// SearchAThing.OpenGL.Render assembly name (regex).
     /// </summary>
     public const string NETCORE_OPENGL_RENDER_ASSEMBLY_NAME = "netcore-opengl-render";
 
     /// <summary>
-    /// SearchAThing.OpenGL.Render
+    /// SearchAThing.OpenGL.Render (regex).
     /// </summary>
-    public const string RESOURCE_NAMESPACE_BASE = "SearchAThing.OpenGL.Render(?<my>(\\.shaders)?)";
+    public static readonly string RESOURCE_NAMESPACE_BASE =
+        Regex.Escape("SearchAThing.OpenGL.Render") + "(?<my>(\\.shaders)?)";
 
     /// <summary>
-    /// Shader "1.depth.vs" resource name.
+    /// Shader "1.depth.vs" resource name (regex).
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_DEPTH_VERT = $"{RESOURCE_NAMESPACE_BASE}.1.depth.vs";
+    public static readonly string SHADER_RESOURCE_DEPTH_VERT =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".1.depth.vs");
 
     /// <summary>
-    /// Shader "2.depth.gs" resource name.
+    /// Shader "2.depth.gs" resource name (regex).
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_DEPTH_GEOM = $"{RESOURCE_NAMESPACE_BASE}.2.depth.gs";
+    public static readonly string SHADER_RESOURCE_DEPTH_GEOM =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".2.depth.gs");
 
     /// <summary>
-    /// Shader "3.depth.fs" resource name.
+    /// Shader "3.depth.fs" resource name (regex).
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_DEPTH_FRAG = $"{RESOURCE_NAMESPACE_BASE}.3.depth.fs";
+    public static readonly string SHADER_RESOURCE_DEPTH_FRAG =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".3.depth.fs");
 
     /// <summary>
-    /// Shader "4.main.vs" resource name.
+    /// Shader "4.main.vs" resource name (regex).
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_VERT = $"{RESOURCE_NAMESPACE_BASE}.4.main.vs";
+    public static readonly string SHADER_RESOURCE_MAIN_VERT =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".4.main.vs");
 
     /// <summary>
-    /// Shader "5.shadewithedge.gs" resource name.
+    /// Shader "5.shadewithedge.gs" resource name (regex).
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE = $"{RESOURCE_NAMESPACE_BASE}.5.shadewithedge.gs";
+    public static readonly string SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.shadewithedge.gs");
 
     /// <summary>
-    /// Shader "5.normal.gs" resource name.
+    /// Shader "5.normal.gs" resource name (regex).
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_GEOM_NORMAL = $"{RESOURCE_NAMESPACE_BASE}.5.normal.gs";
+    public static readonly string SHADER_RESOURCE_MAIN_GEOM_NORMAL =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.normal.gs");
 
     /// <summary>
-    /// Shader "6.main.fs" resource name.
+    /// Shader "6.main.fs" resource name (regex).
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_FRAG = $"{RESOURCE_NAMESPACE_BASE}.6.main.fs";
+    public static readonly string SHADER_RESOURCE_MAIN_FRAG =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".6.main.fs");
 
     #endregion
 
