@@ -286,6 +286,61 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         this.Closed += GLDevTool_Closed;
     }
 
+    private async void ExportDxfClick(object? sender, RoutedEventArgs e)
+    {
+        var file = await this.StorageProvider.SaveFilePickerAsync(new Avalonia.Platform.Storage.FilePickerSaveOptions
+        {
+            FileTypeChoices = new List<FilePickerFileType>()
+            {
+                new FilePickerFileType("dxf") { Patterns = new List<string>() { "*.dxf" } }
+            }
+        });
+
+        if (file is not null)
+        {
+            try
+            {
+                var dxf = new netDxf.DxfDocument();
+                var glModel = GLControl.GLModel;
+
+                foreach (var fig in glModel.Figures.Where(r => r.Visible))
+                {
+                    switch (fig.PrimitiveType)
+                    {
+                        case GLPrimitiveType.Point:
+                            {
+                                foreach (var pt in fig.Primitives.OfType<GLPoint>())
+                                    dxf.Entities.Add(pt.ToDxfPoint());
+                            }
+                            break;
+
+                        case GLPrimitiveType.Line:
+                            {
+                                foreach (var line in fig.Primitives.OfType<GLLine>())
+                                    dxf.Entities.Add(line.ToDxfLine());
+                            }
+                            break;
+
+                        case GLPrimitiveType.Triangle:
+                            {
+                                foreach (var tri in fig.Primitives.OfType<GLTriangle>())
+                                    dxf.Entities.Add(tri.ToDxfFace3D());
+                            }
+                            break;
+                    }
+                }
+
+                dxf.Save(file.Path.AbsolutePath, isBinary: true);
+
+                GLControl.SendNotification("Export dxf", $"Saved to [{file.Path.AbsolutePath}]", GLNotificationType.Success);
+            }
+            catch (Exception ex)
+            {
+                GLControl.SendNotification("Export dxf", $"Error saving to [{file.Path.AbsolutePath}]\n{ex.Message}", GLNotificationType.Error);
+            }
+        }
+    }
+
     private void dgLights_SelectionChanged(object? sender, SelectionChangedEventArgs e)
     {
         var lbbox = GLModel.LBBox;
@@ -320,7 +375,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
 
     private void PointLightsResetClick(object? sender, RoutedEventArgs e)
     {
-        GLModel.ResetLight();           
+        GLModel.ResetLight();
     }
 
     private void SaveViewClick(object? sender, RoutedEventArgs e)

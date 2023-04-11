@@ -175,6 +175,7 @@
 					<StackPanel desktop:GridAutoRow.Ref="ViewBtns" Grid.ColumnSpan="3" Orientation="Horizontal">
 						<Button Content="Save view" Click="SaveViewClick" />
 						<Button Content="Restore view" Margin="10,0,0,0" Click="RestoreViewClick" />
+						<Button Content="Export dxf" Margin="10,0,0,0" Click="ExportDxfClick" />
 					</StackPanel>
 
 					<!-- <TextBlock desktop:GridAutoRow.Ref="Bottom" Text="YYYY"/> -->
