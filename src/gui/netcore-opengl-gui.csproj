@@ -5,7 +5,7 @@
   <PropertyGroup>
     <RootNamespace>SearchAThing.OpenGL.GUI</RootNamespace>
     <PackageId>netcore-opengl-gui</PackageId>
-    <PackageVersion>2.5.5</PackageVersion>
+    <PackageVersion>2.6.0</PackageVersion>
     <Title>net core opengl (gui)</Title>
     <Description>GUI module uses Avalonia window in stand-alone console apps and in mvvm applications to transfer gl pixels from the GL framebuffer to the control drawing context.</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
