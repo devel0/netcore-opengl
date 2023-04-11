@@ -44,5 +44,8 @@ public static partial class Ext
             // distinct gl vertex by ref ( content uniqueness already ensure by gl vertex manager from where they come )
             .ToDictionary(grp => grp.Key, grp => grp.Distinct().Select(g => g.vtx).ToList());
 
-
+    /// <summary>
+    /// Convert given system numerics vector3 to dxf vector3
+    /// </summary>
+    public static netDxf.Vector3 ToDxfVector3(this in Vector3 v) => new netDxf.Vector3(v.X, v.Y, v.Z);
 }

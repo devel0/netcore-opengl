@@ -46,6 +46,11 @@ public static partial class Ext
     /// </summary>    
     public static Color ToColor(this ColorHelper.HSV hsv) => ColorConverterPatch.HsvToRgb(hsv).ToColor();
 
+    /// <summary>
+    /// Convert system drawing color to dxf color.
+    /// </summary>    
+    public static netDxf.AciColor ToDxfColor(this Color color) => netDxf.AciColor.FromTrueColor(color.ToArgb());
+
 }
 
 public static partial class Toolkit

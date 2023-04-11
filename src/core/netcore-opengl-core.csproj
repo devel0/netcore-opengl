@@ -15,7 +15,8 @@
 
     <ItemGroup>
         <PackageReference Include="ColorHelper" Version="1.8.1" />
-        <PackageReference Include="netcore-ext" Version="1.6.0" />
+        <PackageReference Include="netcore-ext" Version="1.6.0" />        
+        <PackageReference Include="netDxf-devel0" Version="3.0.3.1" />        
         <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
     </ItemGroup>
 

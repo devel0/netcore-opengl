@@ -81,4 +81,19 @@ public static partial class Ext
             new GLVertex(line.From, colorFrom),
             new GLVertex(line.To, colorTo));
 
+    /// <summary>
+    /// Average color of lines vertexes color.
+    /// </summary>
+    public static Color AverageColor(this IGLLine line) =>
+        ((line.From.MaterialColor + line.To.MaterialColor) / 2).ToColor();
+
+    /// <summary>
+    /// Create dxf line from given gl line.
+    /// </summary>    
+    public static netDxf.Entities.Line ToDxfLine(this IGLLine line) =>
+        new netDxf.Entities.Line(line.From.Position.ToDxfVector3(), line.To.Position.ToDxfVector3())
+        {
+            Color = line.AverageColor().ToDxfColor()
+        };
+
 }

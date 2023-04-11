@@ -40,7 +40,7 @@ public interface IGLTriangle : IGLPrimitive
     /// States if given point is contained in the triangle, borders included.
     /// </summary>
     /// <param name="point">Point to test.</param>    
-    bool Contains(in Vector3 point);   
+    bool Contains(in Vector3 point);
 
 }
 
@@ -56,6 +56,21 @@ public static partial class Toolkit
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector3 DefaultTriangleNormal(this IGLTriangle tri) =>
         Vector3.Normalize(Vector3.Cross(tri.V2.Position - tri.V1.Position, tri.V3.Position - tri.V1.Position));
+
+    /// <summary>
+    /// Average color of triangles vertexes color.
+    /// </summary>    
+    public static Color AverageColor(this IGLTriangle tri) =>
+        ((tri.V1.MaterialColor + tri.V2.MaterialColor + tri.V3.MaterialColor) / 3).ToColor();
+
+    /// <summary>
+    /// Retrieve dxf face from given triangle.
+    /// </summary>
+    /// <param name="tri">Gl triangle.</param>
+    /// <returns>Dxf face.</returns>
+    public static netDxf.Entities.Face3D ToDxfFace3D(this IGLTriangle tri) =>
+        new netDxf.Entities.Face3D(tri.V1.ToDxfVector3(), tri.V2.ToDxfVector3(), tri.V3.ToDxfVector3())
+        { Color = tri.AverageColor().ToDxfColor() };
 
 }
 
