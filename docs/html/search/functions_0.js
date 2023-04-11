@@ -18,5 +18,6 @@ var searchData=
   ['avaloniacontrolevent_15',['AvaloniaControlEvent',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_toolkit.html#ad7321344af9c969af1220d053b79e779',1,'SearchAThing::OpenGL::GUI::Toolkit']]],
   ['avaloniacontrolinitialevent_16',['AvaloniaControlInitialEvent',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_toolkit.html#a4397c2fe9620cccbf4bef98983e15bac',1,'SearchAThing::OpenGL::GUI::Toolkit']]],
   ['avaloniaglcontrol_17',['AvaloniaGLControl',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#aadd365147a99c939b627b8de8ee0bebb',1,'SearchAThing::OpenGL::GUI::AvaloniaGLControl']]],
-  ['avaloniaglcontrolsplit_18',['AvaloniaGLControlSplit',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control_split.html#a985dae0286202c50e2edf19b303f8d63',1,'SearchAThing::OpenGL::GUI::AvaloniaGLControlSplit']]]
+  ['avaloniaglcontrolsplit_18',['AvaloniaGLControlSplit',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control_split.html#a985dae0286202c50e2edf19b303f8d63',1,'SearchAThing::OpenGL::GUI::AvaloniaGLControlSplit']]],
+  ['averagecolor_19',['AverageColor',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ac4e6900095a6a48122f0de92364aaa26',1,'SearchAThing.OpenGL.Core.Ext.AverageColor()'],['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a3087f605fd54bab64aedcd386876ba57',1,'SearchAThing.OpenGL.Core.Toolkit.AverageColor()']]]
 ];

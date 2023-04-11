@@ -274,6 +274,15 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ade64314e932e3ecec259ae717cace3ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line.html">GLLine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ade64314e932e3ecec259ae717cace3ee">ToGLLine</a> (this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> line, in Color colorFrom, in Color colorTo)</td></tr>
 <tr class="memdesc:ade64314e932e3ecec259ae717cace3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a gl line primitive from given line geometry applying given from, to colors.  <br /></td></tr>
 <tr class="separator:ade64314e932e3ecec259ae717cace3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e6900095a6a48122f0de92364aaa26"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ac4e6900095a6a48122f0de92364aaa26">AverageColor</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_line.html">IGLLine</a> line)</td></tr>
+<tr class="memdesc:ac4e6900095a6a48122f0de92364aaa26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average color of lines vertexes color.  <br /></td></tr>
+<tr class="separator:ac4e6900095a6a48122f0de92364aaa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc205e775414f8ed75f4c18360c1dbda"><td class="memItemLeft" align="right" valign="top">static netDxf.Entities.Line&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#abc205e775414f8ed75f4c18360c1dbda">ToDxfLine</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_line.html">IGLLine</a> line)</td></tr>
+<tr class="memdesc:abc205e775414f8ed75f4c18360c1dbda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create dxf line from given gl line.  <br /></td></tr>
+<tr class="separator:abc205e775414f8ed75f4c18360c1dbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f66b3017acceb4e1e972a46eb575cd"><td class="memItemLeft" align="right" valign="top">static netDxf.Entities.Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a37f66b3017acceb4e1e972a46eb575cd">ToDxfPoint</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_point.html">IGLPoint</a> point)</td></tr>
+<tr class="memdesc:a37f66b3017acceb4e1e972a46eb575cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create dxf point from given gl point.  <br /></td></tr>
+<tr class="separator:a37f66b3017acceb4e1e972a46eb575cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea3bd52c345de7533b431df7e1212fbd"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#aea3bd52c345de7533b431df7e1212fbd">ToFloat</a> (this double d)</td></tr>
 <tr class="memdesc:aea3bd52c345de7533b431df7e1212fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert given double to float ensuring not exceed the float range.  <br /></td></tr>
 <tr class="separator:aea3bd52c345de7533b431df7e1212fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,12 +304,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a77067f369a114b85c29edd18dfef2310"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a77067f369a114b85c29edd18dfef2310">ToColor</a> (this ColorHelper.HSV hsv)</td></tr>
 <tr class="memdesc:a77067f369a114b85c29edd18dfef2310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve system drawing color from given ColorHelper HSV color.  <br /></td></tr>
 <tr class="separator:a77067f369a114b85c29edd18dfef2310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2c435006a6fcc4cce6de9471f8305e"><td class="memItemLeft" align="right" valign="top">static netDxf.AciColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a7d2c435006a6fcc4cce6de9471f8305e">ToDxfColor</a> (this Color color)</td></tr>
+<tr class="memdesc:a7d2c435006a6fcc4cce6de9471f8305e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert system drawing color to dxf color.  <br /></td></tr>
+<tr class="separator:a7d2c435006a6fcc4cce6de9471f8305e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40cf5fc2312799df49c036dfd99971d7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a40cf5fc2312799df49c036dfd99971d7">SetColor</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a> vertex, in Color color)</td></tr>
 <tr class="memdesc:a40cf5fc2312799df49c036dfd99971d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the color of the vertex.  <br /></td></tr>
 <tr class="separator:a40cf5fc2312799df49c036dfd99971d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d076710ec4b26ec1711abd3b6b713d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ab4d076710ec4b26ec1711abd3b6b713d">SetColor</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a> vertex, in Vector4 rgbaColor)</td></tr>
 <tr class="memdesc:ab4d076710ec4b26ec1711abd3b6b713d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the color of the vertex.  <br /></td></tr>
 <tr class="separator:ab4d076710ec4b26ec1711abd3b6b713d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0aecfc7503705b99201d108bc207f4"><td class="memItemLeft" align="right" valign="top">static netDxf.Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#abc0aecfc7503705b99201d108bc207f4">ToDxfVector3</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a> vertex)</td></tr>
+<tr class="memdesc:abc0aecfc7503705b99201d108bc207f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert given gl vertex to dxf vector3.  <br /></td></tr>
+<tr class="separator:abc0aecfc7503705b99201d108bc207f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2a2738b588f3d085e0be3da760541d4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ae2a2738b588f3d085e0be3da760541d4">IsAttached</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html">IGLVertexManagerObject</a> obj)</td></tr>
 <tr class="memdesc:ae2a2738b588f3d085e0be3da760541d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this object is currently attached to a gl vertex manager.  <br /></td></tr>
 <tr class="separator:ae2a2738b588f3d085e0be3da760541d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -319,6 +334,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5b1593c5c42df54eab73b694cdb9b83"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ab5b1593c5c42df54eab73b694cdb9b83">BuildVertexPosDict</a> (this IEnumerable&lt; <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a> &gt; figures, float tol)</td></tr>
 <tr class="memdesc:ab5b1593c5c42df54eab73b694cdb9b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">From given list of figures create a vertex position based dictionary suitable to be queries through vertex PositionSignature.  <br /></td></tr>
 <tr class="separator:ab5b1593c5c42df54eab73b694cdb9b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4656aa9527d1a1ec52a3b1a34128e52c"><td class="memItemLeft" align="right" valign="top">static netDxf.Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a4656aa9527d1a1ec52a3b1a34128e52c">ToDxfVector3</a> (this in Vector3 v)</td></tr>
+<tr class="memdesc:a4656aa9527d1a1ec52a3b1a34128e52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert given system numerics vector3 to dxf vector3.  <br /></td></tr>
+<tr class="separator:a4656aa9527d1a1ec52a3b1a34128e52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4379ba3ab7982697dea4a6b125f46002" name="a4379ba3ab7982697dea4a6b125f46002"></a>
@@ -351,6 +369,34 @@ Static Public Member Functions</h2></td></tr>
 <p><br  />
  </p>
 <p>If size height is zero returns 1, width / height elsewhere. </p>
+
+</div>
+</div>
+<a id="ac4e6900095a6a48122f0de92364aaa26" name="ac4e6900095a6a48122f0de92364aaa26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e6900095a6a48122f0de92364aaa26">&#9670;&#160;</a></span>AverageColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color AverageColor </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_line.html">IGLLine</a>&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Average color of lines vertexes color. </p>
 
 </div>
 </div>
@@ -2832,6 +2878,154 @@ Alpha=0 (full transparent).</td></tr>
 
 </div>
 </div>
+<a id="a7d2c435006a6fcc4cce6de9471f8305e" name="a7d2c435006a6fcc4cce6de9471f8305e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2c435006a6fcc4cce6de9471f8305e">&#9670;&#160;</a></span>ToDxfColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static netDxf.AciColor ToDxfColor </td>
+          <td>(</td>
+          <td class="paramtype">this Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert system drawing color to dxf color. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="abc205e775414f8ed75f4c18360c1dbda" name="abc205e775414f8ed75f4c18360c1dbda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc205e775414f8ed75f4c18360c1dbda">&#9670;&#160;</a></span>ToDxfLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static netDxf.Entities.Line ToDxfLine </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_line.html">IGLLine</a>&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create dxf line from given gl line. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a37f66b3017acceb4e1e972a46eb575cd" name="a37f66b3017acceb4e1e972a46eb575cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f66b3017acceb4e1e972a46eb575cd">&#9670;&#160;</a></span>ToDxfPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static netDxf.Entities.Point ToDxfPoint </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_point.html">IGLPoint</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create dxf point from given gl point. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="abc0aecfc7503705b99201d108bc207f4" name="abc0aecfc7503705b99201d108bc207f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0aecfc7503705b99201d108bc207f4">&#9670;&#160;</a></span>ToDxfVector3() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static netDxf.Vector3 ToDxfVector3 </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html">IGLVertex</a>&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert given gl vertex to dxf vector3. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a4656aa9527d1a1ec52a3b1a34128e52c" name="a4656aa9527d1a1ec52a3b1a34128e52c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4656aa9527d1a1ec52a3b1a34128e52c">&#9670;&#160;</a></span>ToDxfVector3() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static netDxf.Vector3 ToDxfVector3 </td>
+          <td>(</td>
+          <td class="paramtype">this in Vector3&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert given system numerics vector3 to dxf vector3. </p>
+
+</div>
+</div>
 <a id="a53a885bffd3743cddbb3689971340701" name="a53a885bffd3743cddbb3689971340701"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53a885bffd3743cddbb3689971340701">&#9670;&#160;</a></span>ToFigure() <span class="overload">[1/3]</span></h2>
 
@@ -3581,6 +3775,7 @@ If not specified given color alpha will taken.</td></tr>
 <li>src/core/primitive/GLPrimitiveBase.cs</li>
 <li>src/core/primitive/GLTriangle.cs</li>
 <li>src/core/primitive/IGLLine.cs</li>
+<li>src/core/primitive/IGLPoint.cs</li>
 <li>src/core/types/Utils.cs</li>
 <li>src/core/vertex/IGLVertex.cs</li>
 <li>src/core/vertex/IGLVertexManagerObject.cs</li>

@@ -276,6 +276,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a380063954e1d19bf3dfac26dc23d82ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default triangle compute normal function:<br  />
  Normalize((V2-V1) x (V3-V1))  <br /></td></tr>
 <tr class="separator:a380063954e1d19bf3dfac26dc23d82ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3087f605fd54bab64aedcd386876ba57"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a3087f605fd54bab64aedcd386876ba57">AverageColor</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle.html">IGLTriangle</a> tri)</td></tr>
+<tr class="memdesc:a3087f605fd54bab64aedcd386876ba57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average color of triangles vertexes color.  <br /></td></tr>
+<tr class="separator:a3087f605fd54bab64aedcd386876ba57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5631ea34d72df36c940c5030322c86"><td class="memItemLeft" align="right" valign="top">static netDxf.Entities.Face3D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a9e5631ea34d72df36c940c5030322c86">ToDxfFace3D</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle.html">IGLTriangle</a> tri)</td></tr>
+<tr class="memdesc:a9e5631ea34d72df36c940c5030322c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve dxf face from given triangle.  <br /></td></tr>
+<tr class="separator:a9e5631ea34d72df36c940c5030322c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abccdb5d845069533bcafcf38794c5836"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#abccdb5d845069533bcafcf38794c5836">GetContourColor</a> (float offset, int hueFrom=240, int hueTo=300, bool decreaseHue=true)</td></tr>
 <tr class="memdesc:abccdb5d845069533bcafcf38794c5836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve color that is in the given offset in given hue range.<br  />
  Default: hue range [240, 300] generating gradients in offeset range [0, 1] traversing following colors ( [blue, cyan, green, yellow, orange, red, fuchsia].<br  />
@@ -348,6 +354,36 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a3f6c5b35b540d674780a2fa86fcd6173_icgraph.svg" width="312" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+
+</div>
+</div>
+<a id="a3087f605fd54bab64aedcd386876ba57" name="a3087f605fd54bab64aedcd386876ba57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3087f605fd54bab64aedcd386876ba57">&#9670;&#160;</a></span>AverageColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color AverageColor </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle.html">IGLTriangle</a>&#160;</td>
+          <td class="paramname"><em>tri</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Average color of triangles vertexes color. </p>
+<p><br  />
+ </p>
 
 </div>
 </div>
@@ -3504,6 +3540,41 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <p><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a9de8ad2640f0fadcb8c11fbd4ca521ef" title="Deserialize to a Matrix4x4 from a string of 16 float space separated ( invariant ).">SearchAThing.OpenGL.Core.Toolkit.DeserializeMatrix4x4</a> </p>
+
+</div>
+</div>
+<a id="a9e5631ea34d72df36c940c5030322c86" name="a9e5631ea34d72df36c940c5030322c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5631ea34d72df36c940c5030322c86">&#9670;&#160;</a></span>ToDxfFace3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static netDxf.Entities.Face3D ToDxfFace3D </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle.html">IGLTriangle</a>&#160;</td>
+          <td class="paramname"><em>tri</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve dxf face from given triangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tri</td><td>Gl triangle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dxf face.</dd></dl>
 
 </div>
 </div>
