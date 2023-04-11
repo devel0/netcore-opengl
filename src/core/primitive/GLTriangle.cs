@@ -194,9 +194,19 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
         {
             yield return V1;
             yield return V2;
-            yield return V3;
+            yield return V3;            
         }
     }
 
     public override string ToString() => Invariant($"{V1} {V2} {V3}");
+}
+
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Create a gl figure from given gl triangles.
+    /// </summary>    
+    public static GLTriangleFigure ToFigure(this IEnumerable<GLTriangle> triangles) => new GLTriangleFigure(triangles);
+
 }

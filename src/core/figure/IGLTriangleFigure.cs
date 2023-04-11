@@ -39,13 +39,3 @@ public interface IGLTriangleFigure : IGLFigure
     void Remove(GLTriangle point);
 
 }
-
-public static partial class Ext
-{
-
-    /// <summary>
-    /// Create a gl figure from given gl triangles.
-    /// </summary>    
-    public static GLTriangleFigure ToFigure(this IEnumerable<GLTriangle> triangles) => new GLTriangleFigure(triangles);
-
-}

@@ -211,13 +211,23 @@ public class GLLine : GLPrimitiveBase, IGLLine
     /// <param name="plane">World matrix plane.</param>
     /// <seealso cref="SearchAThing.OpenGL.Core.Toolkit.MakeCS"/>
     /// <returns>Intersection point or null if no intersection found.</returns>
-    public Vector3? Intersect(in Matrix4x4 plane) => Line.FromTo(From.Position, To.Position).Intersect(plane);    
+    public Vector3? Intersect(in Matrix4x4 plane) => Line.FromTo(From.Position, To.Position).Intersect(plane);
 
     public override string ToString() => Invariant($"{From} {To}");
 }
 
 public static partial class Toolkit
 {
+
+    /// <summary>
+    /// Create line figure from given line set.
+    /// </summary>    
+    public static GLLineFigure ToFigure(this IEnumerable<GLLine> lines) => new GLLineFigure(lines);
+
+    /// <summary>
+    /// Create line figure from given line set.
+    /// </summary>    
+    public static GLLineFigure ToFigure(this IEnumerable<Line> lines) => lines.Select(line => new GLLine(line)).ToFigure();
 
     /// <summary>
     /// Enumerate given point set with gl lines.
