@@ -91,6 +91,19 @@ public class GLPoint : GLPrimitiveBase, IGLPoint
         }
     }
 
+}
 
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Create point figure from given point set.
+    /// </summary>    
+    public static GLPointFigure ToFigure(this IEnumerable<GLPoint> points) => new GLPointFigure(points);
+
+    /// <summary>
+    /// Create point figure from given point set.
+    /// </summary>    
+    public static GLPointFigure ToFigure(this IEnumerable<Vector3> points) => points.Select(v => new GLPoint(v)).ToFigure();
 
 }

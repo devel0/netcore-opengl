@@ -15,51 +15,56 @@ public static class Constants
     #region assembly resources
 
     /// <summary>
+    /// SearchAThing.OpenGL.Render assembly name
+    /// </summary>
+    public const string NETCORE_OPENGL_RENDER_ASSEMBLY_NAME = "netcore-opengl-render";
+
+    /// <summary>
     /// SearchAThing.OpenGL.Render
     /// </summary>
-    public const string RESOURCE_NAMESPACE_BASE = "SearchAThing.OpenGL.Render";
+    public const string RESOURCE_NAMESPACE_BASE = "SearchAThing.OpenGL.Render(?<my>(\\.shaders)?)";
 
     /// <summary>
     /// Shader "1.depth.vs" resource name.
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_DEPTH_VERT = $"{RESOURCE_NAMESPACE_BASE}.shaders.1.depth.vs";
+    public const string SHADER_RESOURCE_DEPTH_VERT = $"{RESOURCE_NAMESPACE_BASE}.1.depth.vs";
 
     /// <summary>
     /// Shader "2.depth.gs" resource name.
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_DEPTH_GEOM = $"{RESOURCE_NAMESPACE_BASE}.shaders.2.depth.gs";
+    public const string SHADER_RESOURCE_DEPTH_GEOM = $"{RESOURCE_NAMESPACE_BASE}.2.depth.gs";
 
     /// <summary>
     /// Shader "3.depth.fs" resource name.
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_DEPTH_FRAG = $"{RESOURCE_NAMESPACE_BASE}.shaders.3.depth.fs";
+    public const string SHADER_RESOURCE_DEPTH_FRAG = $"{RESOURCE_NAMESPACE_BASE}.3.depth.fs";
 
     /// <summary>
     /// Shader "4.main.vs" resource name.
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_VERT = $"{RESOURCE_NAMESPACE_BASE}.shaders.4.main.vs";
+    public const string SHADER_RESOURCE_MAIN_VERT = $"{RESOURCE_NAMESPACE_BASE}.4.main.vs";
 
     /// <summary>
     /// Shader "5.shadewithedge.gs" resource name.
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE = $"{RESOURCE_NAMESPACE_BASE}.shaders.5.shadewithedge.gs";
+    public const string SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE = $"{RESOURCE_NAMESPACE_BASE}.5.shadewithedge.gs";
 
     /// <summary>
     /// Shader "5.normal.gs" resource name.
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_GEOM_NORMAL = $"{RESOURCE_NAMESPACE_BASE}.shaders.5.normal.gs";
+    public const string SHADER_RESOURCE_MAIN_GEOM_NORMAL = $"{RESOURCE_NAMESPACE_BASE}.5.normal.gs";
 
     /// <summary>
     /// Shader "6.main.fs" resource name.
     /// </summary>
     /// <value></value>
-    public const string SHADER_RESOURCE_MAIN_FRAG = $"{RESOURCE_NAMESPACE_BASE}.shaders.6.main.fs";
+    public const string SHADER_RESOURCE_MAIN_FRAG = $"{RESOURCE_NAMESPACE_BASE}.6.main.fs";
 
     #endregion
 

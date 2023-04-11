@@ -5,7 +5,7 @@
   <PropertyGroup>
     <RootNamespace>SearchAThing.OpenGL.Render</RootNamespace>
     <PackageId>netcore-opengl-render</PackageId>
-    <PackageVersion>2.5.0</PackageVersion>
+    <PackageVersion>2.5.1</PackageVersion>
     <Title>net core opengl</Title>
     <Description>Render module contains abstractions over Silk.NET opengl library.</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
