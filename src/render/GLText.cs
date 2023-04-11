@@ -136,7 +136,7 @@ public class GLText : INotifyPropertyChanged
                     var resourceName = $"{RESOURCE_NAMESPACE_BASE}.fonts.{BUILTIN_FONTFILE}";
 
                     var buf = GetEmbeddedResourceNames(GLContext.netcore_opengl_render_assembly)
-                        .First(w => w.Contains(resourceName))
+                        .First(w => w.RegexMatch(resourceName) > 0)
                         .Fn(name => GetEmbeddedFileContentBytes(GLContext.netcore_opengl_render_assembly, name));
 
                     if (buf is null) throw new Exception($"can't read embedded resource [{resourceName}] from assembly [{GLContext.netcore_opengl_render_assembly.FullName}]");
