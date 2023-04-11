@@ -216,4 +216,9 @@ public partial class GLWindow : Window, INotifyPropertyChanged
         areFinished.WaitOne();
     }
 
+    /// <summary>
+    /// Invalidate gl control split.
+    /// </summary>
+    public void Invalidate() => GLControlSplit?.Invalidate();
+
 }

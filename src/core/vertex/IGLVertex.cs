@@ -124,4 +124,9 @@ public static partial class Ext
         return vertex;
     }
 
+    /// <summary>
+    /// Convert given gl vertex to dxf vector3.
+    /// </summary>    
+    public static netDxf.Vector3 ToDxfVector3(this IGLVertex vertex) => vertex.Position.ToDxfVector3();
+
 }

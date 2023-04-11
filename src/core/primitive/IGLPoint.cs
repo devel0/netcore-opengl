@@ -12,3 +12,15 @@ public interface IGLPoint : IGLPrimitive
     GLVertex Vertex { get; set; }
 
 }
+
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Create dxf point from given gl point.
+    /// </summary>    
+    public static netDxf.Entities.Point ToDxfPoint(this IGLPoint point) =>
+        new netDxf.Entities.Point(point.Vertex.Position.ToDxfVector3())
+        { Color = point.Vertex.MaterialColor.ToColor().ToDxfColor() };
+
+}

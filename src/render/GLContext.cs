@@ -257,8 +257,17 @@ public class GLContext : IDisposable
                     .GetAssemblies()
                     .FirstOrDefault(a => a.GetName().Name == NETCORE_OPENGL_RENDER_ASSEMBLY_NAME);
 
+                // foreach (var x in AppDomain.CurrentDomain.GetAssemblies())
+                // {
+                //     var name = x.GetName().Name;
+                //     if (name?.Contains("netcore-opengl") == true)
+                //         System.Console.WriteLine($"assembly: {name}");
+                // }
+
                 if (q is null)
+                {
                     throw new Exception($"unable to find [netcore-opengl-render] assembly");
+                }
 
                 _netcore_opengl_render_assembly = q;
             }
@@ -267,10 +276,19 @@ public class GLContext : IDisposable
         }
     }
 
-    string GetResourceContentAsString(string regex) =>
-        GetEmbeddedResourceNames(netcore_opengl_render_assembly)
+    string GetResourceContentAsString(string regex)
+    {
+        var names = GetEmbeddedResourceNames(netcore_opengl_render_assembly);
+
+        // foreach (var name in names)
+        // {
+        //     System.Console.WriteLine($"resource name [{name}]");
+        // }
+
+        return names
             .First(w => w.RegexMatch(regex) > 0)
             .Fn(resourcename => GetEmbeddedFileContentString(netcore_opengl_render_assembly, resourcename));
+    }
 
     void EnableDebug()
     {

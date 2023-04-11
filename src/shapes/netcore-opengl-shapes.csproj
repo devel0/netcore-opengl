@@ -5,7 +5,7 @@
   <PropertyGroup>
     <RootNamespace>SearchAThing.OpenGL.Shapes</RootNamespace>
     <PackageId>netcore-opengl-shapes</PackageId>
-    <PackageVersion>2.5.1</PackageVersion>
+    <PackageVersion>2.6.0</PackageVersion>
     <Title>net core opengl</Title>
     <Description>Shapes module provides some common figures such as box, cone, sphere, arrow.</Description>
   </PropertyGroup>
@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GShark" Version="$(GSharkVersion)" />    
-    <!--<ProjectReference Include="..\..\..\G-Shark\src\GShark\GShark.csproj" />-->
+    <!-- <PackageReference Include="GShark" Version="$(GSharkVersion)" />     -->
+    <ProjectReference Include="..\..\..\G-Shark\src\GShark\GShark.csproj" />
   </ItemGroup>
 
 </Project>
