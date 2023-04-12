@@ -6,8 +6,18 @@ public static partial class Ext
     /// <summary>
     /// Retrieve vector3 position signature within given tolerance.
     /// </summary>    
-    public static string PositionSignature(this Vector3 position, float tol) =>
-        Invariant($"{position.X.MRound(tol)}_{position.Y.MRound(tol)}_{position.Z.MRound(tol)}");
+    public static string PositionSignature(this Vector3 position, float tol)
+    {
+        var _x = position.X.MRound(tol);
+        var _y = position.Y.MRound(tol);
+        var _z = position.Z.MRound(tol);
+
+        if (_x.EqualsTol(tol, 0)) _x = Abs(_x);
+        if (_y.EqualsTol(tol, 0)) _y = Abs(_y);
+        if (_z.EqualsTol(tol, 0)) _z = Abs(_z);
+        
+        return Invariant($"{_x}_{_y}_{_z}");
+    }
 
     /// <summary>
     /// Retrieve vertex position signature within given tolerance.
