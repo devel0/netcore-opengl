@@ -47,12 +47,12 @@
 
 The library is composed by following modules:
 
-| module                               | framework        | dependencies                                                                                            | description                                                            |
-| ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| module                               | framework        | dependencies                                                                                            | description                                                       |
+| ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | **core** [![core-badge]][core]       | NET Standard 2.0 | [netcore-ext], [System.Drawing.Common], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz], [netdxf-devel0] | gl calculations, render abstraction over Silk.NET opengl library. |
-| **gui** [![gui-badge]][gui]          | NET 7            | [core], [Avalonia], [netcore-desktop]                                                                   | desktop gl widget                                                      |
-| **shapes** [![shapes-badge]][shapes] | NET 7            | [core]                                                                                                  | box, cone, sphere, arrow shapes                                        |
-| **nurbs** [![nurbs-badge]][nurbs]    | NET 7            | [core], [G-Shark]                                                                                       | nurbs figures                                                          |
+| **gui** [![gui-badge]][gui]          | NET Standard 2.0 | [core], [Avalonia], [netcore-desktop]                                                                   | desktop gl widget                                                 |
+| **shapes** [![shapes-badge]][shapes] | NET Standard 2.0 | [core]                                                                                                  | box, cone, sphere, arrow shapes                                   |
+| **nurbs** [![nurbs-badge]][nurbs]    | NET Standard 2.0 | [core], [G-Shark]                                                                                       | nurbs figures                                                     |
 
 [core-badge]: https://buildstats.info/nuget/netcore-opengl-core
 [gui-badge]: https://buildstats.info/nuget/netcore-opengl-gui
