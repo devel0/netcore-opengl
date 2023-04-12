@@ -17,7 +17,7 @@
 		<!-- <AvaloniaVersion>11.0.999</AvaloniaVersion> -->
 		<XamlNameReferenceGeneratorVersion>1.5.1</XamlNameReferenceGeneratorVersion>
 		<GSharkVersion>2.2.0</GSharkVersion>
-		<NetCoreOpenGLVersion>3.1.0</NetCoreOpenGLVersion>
+		<NetCoreOpenGLVersion>3.1.1</NetCoreOpenGLVersion>
 	</PropertyGroup>
 
 </Project>
