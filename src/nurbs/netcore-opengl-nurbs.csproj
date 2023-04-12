@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- NOTE : Default PropertyGroup in Directory.Build.props -->
+
+  <PropertyGroup>
+    <RootNamespace>SearchAThing.OpenGL.Nurbs</RootNamespace>
+    <PackageId>netcore-opengl-nurbs</PackageId>
+    <PackageVersion>2.6.0</PackageVersion>
+    <Title>net core opengl</Title>
+    <Description>Nurbs module provides nurbs support through G-Shark library.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\core\netcore-opengl-core.csproj" />
+
+    <Compile Include="../../src/core/usings.core.cs" />    
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GShark" Version="$(GSharkVersion)" />    
+    <!-- <ProjectReference Include="..\..\..\G-Shark\src\GShark\GShark.csproj" /> -->
+  </ItemGroup>
+
+</Project>

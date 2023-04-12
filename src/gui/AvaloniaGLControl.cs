@@ -319,13 +319,15 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             };
 
         else
+        {
+            var uidView = new Dictionary<int, ViewNfo>();
+            uidView.Add(0, GLControl.GetViewNfo());
+
             viewLayoutNfo = new ViewLayoutNfo
             {
-                UIDView = new Dictionary<int, ViewNfo>(new[]
-                {
-                    new KeyValuePair<int, ViewNfo>(0, GLControl.GetViewNfo())
-                }),
+                UIDView = uidView
             };
+        }
 
         viewLayoutNfo.FocusedUIDView = focusedUID;
 

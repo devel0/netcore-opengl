@@ -11,7 +11,7 @@ public static partial class Toolkit
         float FIG_RADIUS = 300.0f,
         float TUBE_SPAN = 1000.0f)
     {
-        var circleCenter = new Point3();
+        var circleCenter = new Point3();                
         var NcircleCenter = circleCenter.ToVector3();
 
         var revolveCenter = TUBE_SPAN * new Point3(1, 0, 0);

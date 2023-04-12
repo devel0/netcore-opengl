@@ -31,12 +31,10 @@
       Version="$(XamlNameReferenceGeneratorVersion)" /> -->
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\render\netcore-opengl-render.csproj" />
+  <ItemGroup>    
     <ProjectReference Include="..\..\src\gui\netcore-opengl-gui.csproj" />
 
-    <Compile Include="../../src/core/usings.core.cs"/>
-    <Compile Include="../../src/render/usings.render.cs" />
+    <Compile Include="../../src/core/usings.core.cs"/>    
     <Compile Include="../../src/gui/usings.gui.cs" />
   </ItemGroup>
 </Project>

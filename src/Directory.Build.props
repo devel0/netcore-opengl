@@ -3,7 +3,7 @@
 	<!-- NOTE : Default PropertyGroup in Directory.Build.props -->
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>netstandard2.0</TargetFramework>
 		<LangVersion>11</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>		
 		<Nullable>enable</Nullable>		

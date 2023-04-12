@@ -47,26 +47,30 @@
 
 The library is composed by following modules:
 
-| module                                                                                                                                  | framework        | dependencies                                           | description                     |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------ | ------------------------------- |
-| **core** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-core)](https://www.nuget.org/packages/netcore-opengl-core/)       | NET Standard 2.1 | [netcore-ext], [System.Drawing.Common], [netdxf-devel0]                 | math for opengl, dxf types conversion                 |
-| **render** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-render)](https://www.nuget.org/packages/netcore-opengl-render/) | NET 7            | [core], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz] | opengl pipeline rendering, text |
-| **gui** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-gui)](https://www.nuget.org/packages/netcore-opengl-gui/)          | NET 7            | [render], [Avalonia], [netcore-desktop]                | desktop gl widget               |
-| **shapes** [![NuGet Badge](https://buildstats.info/nuget/netcore-opengl-shapes)](https://www.nuget.org/packages/netcore-opengl-shapes/) | NET 7            | [render], [G-Shark]                                    | box, cone, sphere, arrow shapes |
+| module                               | framework        | dependencies                                                                                            | description                                                            |
+| ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **core** [![core-badge]][core]       | NET Standard 2.0 | [netcore-ext], [System.Drawing.Common], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz], [netdxf-devel0] | gl calculations, render abstraction over Silk.NET opengl library. |
+| **gui** [![gui-badge]][gui]          | NET 7            | [core], [Avalonia], [netcore-desktop]                                                                   | desktop gl widget                                                      |
+| **shapes** [![shapes-badge]][shapes] | NET 7            | [core]                                                                                                  | box, cone, sphere, arrow shapes                                        |
+| **nurbs** [![nurbs-badge]][nurbs]    | NET 7            | [core], [G-Shark]                                                                                       | nurbs figures                                                          |
 
+[core-badge]: https://buildstats.info/nuget/netcore-opengl-core
+[gui-badge]: https://buildstats.info/nuget/netcore-opengl-gui
+[shapes-badge]: https://buildstats.info/nuget/netcore-opengl-shapes
+[nurbs-badge]: https://buildstats.info/nuget/netcore-opengl-nurbs
 [core]: https://www.nuget.org/packages/netcore-opengl-core
-[render]: https://www.nuget.org/packages/netcore-opengl-render
 [gui]: https://www.nuget.org/packages/netcore-opengl-gui
 [shapes]: https://www.nuget.org/packages/netcore-opengl-shapes
+[nurbs]: https://www.nuget.org/packages/netcore-opengl-nurbs
 [netcore-ext]: https://www.nuget.org/packages/netcore-ext
+[netdxf-devel0]: https://www.nuget.org/packages/netDxf-devel0
+[netcore-desktop]: https://www.nuget.org/packages/netcore-desktop
 [system.drawing.common]: https://www.nuget.org/packages/System.Drawing.Common
 [silk.net]: https://www.nuget.org/packages/Silk.NET
 [magick.net]: https://www.nuget.org/packages/Magick.NET-Q8-AnyCPU
 [skiasharp.harfbuzz]: https://www.nuget.org/packages/SkiaSharp.HarfBuzz
 [avalonia]: https://www.nuget.org/packages/Avalonia
-[netcore-desktop]: https://www.nuget.org/packages/netcore-desktop
 [g-shark]: https://www.nuget.org/packages/GShark
-[netdxf-devel0]: https://www.nuget.org/packages/netDxf-devel0
 
 ## Quickstart
 
@@ -90,7 +94,6 @@ using Vector3 = System.Numerics.Vector3;
 using Color = System.Drawing.Color;
 using SearchAThing.OpenGL.Core;
 using static SearchAThing.OpenGL.Core.Constants;
-using SearchAThing.OpenGL.Render;
 using SearchAThing.OpenGL.GUI;
 using static SearchAThing.OpenGL.GUI.Toolkit;
 using SearchAThing.OpenGL.Shapes;
@@ -190,7 +193,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |                      |
 | [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |                      |
 | [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement.                                                                                                                            | [BriefFiniteElement] |
-| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data.                 | [BriefFiniteElement] |
+| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data.                   | [BriefFiniteElement] |
 
 [brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
 [es0]: examples/example-0000/Program.cs
@@ -391,10 +394,9 @@ global using Color = System.Drawing.Color;
 global using Size = System.Drawing.Size;
 global using ColorTranslator = System.Drawing.ColorTranslator;
 global using System.Reflection;
+
 global using SearchAThing.Ext;
 global using static SearchAThing.Ext.Toolkit;
-
-// render ( deps )
 global using SkiaSharp;
 global using Silk.NET.OpenGL;
 global using System.Threading;
@@ -413,11 +415,6 @@ global using Avalonia.Data.Converters;
 global using SearchAThing.OpenGL.Core;
 global using static SearchAThing.OpenGL.Core.Toolkit;
 global using static SearchAThing.OpenGL.Core.Constants;
-
-// render
-global using SearchAThing.OpenGL.Render;
-global using static SearchAThing.OpenGL.Render.Constants;
-global using static SearchAThing.OpenGL.Render.Toolkit;
 
 // gui
 global using SearchAThing.OpenGL.GUI;

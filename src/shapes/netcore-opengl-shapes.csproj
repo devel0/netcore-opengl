@@ -11,15 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\render\netcore-opengl-render.csproj" />
+    <ProjectReference Include="..\core\netcore-opengl-core.csproj" />    
 
-    <Compile Include="../../src/core/usings.core.cs" />
-    <Compile Include="../../src/render/usings.render.cs" />
+    <Compile Include="../../src/core/usings.core.cs" />    
   </ItemGroup>
-
-  <ItemGroup>
-    <!-- <PackageReference Include="GShark" Version="$(GSharkVersion)" />     -->
-    <ProjectReference Include="..\..\..\G-Shark\src\GShark\GShark.csproj" />
-  </ItemGroup>
-
+  
 </Project>

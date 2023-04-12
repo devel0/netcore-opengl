@@ -16,10 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>    
-    <ProjectReference Include="..\render\netcore-opengl-render.csproj" />
+    <ProjectReference Include="..\core\netcore-opengl-core.csproj" />
 
-    <Compile Include="../../src/core/usings.core.cs" />
-    <Compile Include="../../src/render/usings.render.cs" />
+    <Compile Include="../../src/core/usings.core.cs" />    
 
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
@@ -32,7 +31,7 @@
     <PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Xaml.Behaviors" Version="$(AvaloniaVersion)" />
 
-    <PackageReference Include="netcore-desktop" Version="2.3.3" />
+    <PackageReference Include="netcore-desktop" Version="2.4.0" />
     <!-- <ProjectReference Include="..\..\..\netcore-desktop\src\desktop\netcore-desktop.csproj" /> -->
   </ItemGroup>
 

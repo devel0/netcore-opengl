@@ -1,8 +1,6 @@
 ﻿using Avalonia.Threading;
 using GShark.Geometry;
 
-using static example.Toolkit;
-
 namespace example;
 
 // example-0006
