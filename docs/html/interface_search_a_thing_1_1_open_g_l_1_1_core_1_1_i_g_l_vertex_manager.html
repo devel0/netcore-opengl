@@ -107,10 +107,10 @@ Public Member Functions</h2></td></tr>
  All vertexes belonging to the figure's primitives will be removed. Emits FigureRemoved event.  <br /></td></tr>
 <tr class="separator:a2fb4c6218470cf38add8dd3a062d0098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae13b3b84442555e5f836483c2cf358ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_struct.html">GLVertexStruct</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager.html#ae13b3b84442555e5f836483c2cf358ad">GetVboArray</a> ()</td></tr>
-<tr class="memdesc:ae13b3b84442555e5f836483c2cf358ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used internally by the SearchAThing.OpenGL.Render.GLModel.RenderVertexManager to render the scene.<br  />
+<tr class="memdesc:ae13b3b84442555e5f836483c2cf358ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used internally by the GLModel.RenderVertexManager to render the scene.<br  />
  <br  />
  Contains the list of vertex structs directly mapped to the gpu.<br  />
- This array will be built each time a vertex changes from the ToArray() of the list GLVertexManager.Vertexes. To avoid performance penalty in a scenario where you need to change the position of a figure you can use IGLFigure.ObjectMatrix that doesn't affects at all vertexes because is a figure related information forwarded to the gl pipeline shader through <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_constants.html#a52780f59c281ca60e0f9127a0855d142" title="Name of the uniform shader variable for the object matrix [object].">SearchAThing.OpenGL.Render.Constants.UNINAME_uObject</a>.  <br /></td></tr>
+ This array will be built each time a vertex changes from the ToArray() of the list GLVertexManager.Vertexes. To avoid performance penalty in a scenario where you need to change the position of a figure you can use IGLFigure.ObjectMatrix that doesn't affects at all vertexes because is a figure related information forwarded to the gl pipeline shader through Constants.UNINAME_uObject.  <br /></td></tr>
 <tr class="separator:ae13b3b84442555e5f836483c2cf358ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa71d36872f416feaa853788a7a7a7ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager.html#aa71d36872f416feaa853788a7a7a7ef8">Clear</a> ()</td></tr>
 <tr class="memdesc:aa71d36872f416feaa853788a7a7a7ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all vertexes and figures from the vertex manager, and emit IGLVertexManager.FiguresCleared and IGLVertexManager.Invalidated event.  <br /></td></tr>
@@ -156,7 +156,7 @@ Events</h2></td></tr>
 <tr class="memitem:ad522259a6b6432ae6551921f123117e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#aba4c48b0b6c2240217fe5687949eb45b">VertexManagerInvalidatedDelegate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager.html#ad522259a6b6432ae6551921f123117e1">Invalidated</a></td></tr>
 <tr class="memdesc:ad522259a6b6432ae6551921f123117e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event emitted when a vertex was added or removed or all vertexes cleared.<br  />
  <br  />
- Its used by the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a> to track the model changes and emit a <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html#a823d2ba9dd76e47ca521412d2a89b90d" title="Event emitted when a vertex of the model changes.  Useful to keep in sync the view calling the GLCont...">SearchAThing.OpenGL.Render.GLModel.ViewInvalidated</a> event.  <br /></td></tr>
+ Its used by the GLModel to track the model changes and emit a GLModel.ViewInvalidated event.  <br /></td></tr>
 <tr class="separator:ad522259a6b6432ae6551921f123117e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -228,10 +228,10 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Used internally by the SearchAThing.OpenGL.Render.GLModel.RenderVertexManager to render the scene.<br  />
+<p>Used internally by the GLModel.RenderVertexManager to render the scene.<br  />
  <br  />
  Contains the list of vertex structs directly mapped to the gpu.<br  />
- This array will be built each time a vertex changes from the ToArray() of the list GLVertexManager.Vertexes. To avoid performance penalty in a scenario where you need to change the position of a figure you can use IGLFigure.ObjectMatrix that doesn't affects at all vertexes because is a figure related information forwarded to the gl pipeline shader through <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_constants.html#a52780f59c281ca60e0f9127a0855d142" title="Name of the uniform shader variable for the object matrix [object].">SearchAThing.OpenGL.Render.Constants.UNINAME_uObject</a>. </p>
+ This array will be built each time a vertex changes from the ToArray() of the list GLVertexManager.Vertexes. To avoid performance penalty in a scenario where you need to change the position of a figure you can use IGLFigure.ObjectMatrix that doesn't affects at all vertexes because is a figure related information forwarded to the gl pipeline shader through Constants.UNINAME_uObject. </p>
 <p><br  />
  </p>
 
@@ -505,7 +505,7 @@ Events</h2></td></tr>
 
 <p>Event emitted when a vertex was added or removed or all vertexes cleared.<br  />
  <br  />
- Its used by the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a> to track the model changes and emit a <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html#a823d2ba9dd76e47ca521412d2a89b90d" title="Event emitted when a vertex of the model changes.  Useful to keep in sync the view calling the GLCont...">SearchAThing.OpenGL.Render.GLModel.ViewInvalidated</a> event. </p>
+ Its used by the GLModel to track the model changes and emit a GLModel.ViewInvalidated event. </p>
 <dl class="section see"><dt>See also</dt><dd>Clear</dd></dl>
 
 </div>

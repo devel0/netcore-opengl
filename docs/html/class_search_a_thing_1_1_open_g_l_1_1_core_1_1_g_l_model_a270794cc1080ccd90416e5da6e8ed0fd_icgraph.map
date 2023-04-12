@@ -1,0 +1,4 @@
+<map id="RemoveCustomVertexManager" name="RemoveCustomVertexManager">
+<area shape="rect" id="node1" title="Detach given custom manager from the model." alt="" coords="109,5,335,31"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#a6a14f4dbc8345813a2a2c2f597095b71" title="Clear the model removing all entities from vertex manager, deregistering custom vertex manager and cl..." alt="" coords="5,5,61,31"/>
+</map>

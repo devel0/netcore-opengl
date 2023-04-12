@@ -1,5 +1,0 @@
-<map id="ZoomFit" name="ZoomFit">
-<area shape="rect" id="node1" title="Fit gl model into the view." alt="" coords="193,31,269,56"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a609ac6af33cb1c1fc525aff164df9543" title="Set the view using given cube view type." alt="" coords="23,5,128,31"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a809dcd2f46e1da7c985e0ba750f5c389" title="Toggle perspective mode." alt="" coords="5,55,145,80"/>
-</map>

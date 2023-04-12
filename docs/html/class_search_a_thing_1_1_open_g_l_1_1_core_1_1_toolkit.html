@@ -84,7 +84,7 @@ $(function() {
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac76e49b14e5894460335a276510a0a2f"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ac76e49b14e5894460335a276510a0a2f">ScreenToNDC_virtual</a> (in Vector2 screen, in Vector2 size)</td></tr>
 <tr class="memdesc:ac76e49b14e5894460335a276510a0a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts given screen coord to virtual normalized device coord (z=0).<br  />
- Actual <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants.html#a2948b4f1cdc5ca89d59ce9c8f0322ad2" title="Y axis orientation [screen].">SearchAThing.OpenGL.Core.Constants.YAxisOrientation</a> will considered.  <br /></td></tr>
+ Actual Constants.YAxisOrientation will considered.  <br /></td></tr>
 <tr class="separator:ac76e49b14e5894460335a276510a0a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a61b9382a77b7dc125f24c1837d9157"><td class="memItemLeft" align="right" valign="top">static Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a7a61b9382a77b7dc125f24c1837d9157">NDCToClip_virtual</a> (in Vector3 ndc, float w=1)</td></tr>
 <tr class="memdesc:a7a61b9382a77b7dc125f24c1837d9157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts given normalized device coord to virtual clip space coord (w=1). <br  />
@@ -282,6 +282,23 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e5631ea34d72df36c940c5030322c86"><td class="memItemLeft" align="right" valign="top">static netDxf.Entities.Face3D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a9e5631ea34d72df36c940c5030322c86">ToDxfFace3D</a> (this <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle.html">IGLTriangle</a> tri)</td></tr>
 <tr class="memdesc:a9e5631ea34d72df36c940c5030322c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve dxf face from given triangle.  <br /></td></tr>
 <tr class="separator:a9e5631ea34d72df36c940c5030322c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02b62dd5dcba3413f5d65392d5e3017"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa02b62dd5dcba3413f5d65392d5e3017">MakeFrustum</a> (this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html">GLControl</a> glControl)</td></tr>
+<tr class="memdesc:aa02b62dd5dcba3413f5d65392d5e3017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a gl figure that represents the camera frustum object.  <br /></td></tr>
+<tr class="separator:aa02b62dd5dcba3413f5d65392d5e3017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21b12f58d8b6c6406a51954d67433be"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa21b12f58d8b6c6406a51954d67433be">MakeFrustum</a> (in Vector3 cameraPos, in Vector3 cameraTarget, in Vector3 cameraUp, float near, float far, float fov, in Matrix4x4 mm)</td></tr>
+<tr class="memdesc:aa21b12f58d8b6c6406a51954d67433be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a gl figure that represent the camera frustum object.  <br /></td></tr>
+<tr class="separator:aa21b12f58d8b6c6406a51954d67433be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aac4c38e0d4beb30a472911ebea7dc3"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html">GLTriangleFigure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a0aac4c38e0d4beb30a472911ebea7dc3">MakeTextFigure</a> (this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html">GLModel</a> glModel, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_text.html">GLText</a> glText)</td></tr>
+<tr class="memdesc:a0aac4c38e0d4beb30a472911ebea7dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a triangle figure textured to represents the given GLText  <br /></td></tr>
+<tr class="separator:a0aac4c38e0d4beb30a472911ebea7dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa0a24e0ae58599c9d521a5fac0a7477"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html">GLTriangleFigure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aaa0a24e0ae58599c9d521a5fac0a7477">MakeTextFigure</a> (this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_context.html">GLContext</a> glContext, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_text.html">GLText</a> glText)</td></tr>
+<tr class="memdesc:aaa0a24e0ae58599c9d521a5fac0a7477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a triangle figure textured to represents the given GLText<br  />
+ <br  />
+  <br /></td></tr>
+<tr class="separator:aaa0a24e0ae58599c9d521a5fac0a7477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8f109452b9cbfd262919f2878b1970"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a0e8f109452b9cbfd262919f2878b1970">SetupClosedXMLFonts</a> ()</td></tr>
+<tr class="memdesc:a0e8f109452b9cbfd262919f2878b1970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to overcome ClosedXML font issue when adjust columns contents of an xlsx document.  <br /></td></tr>
+<tr class="separator:a0e8f109452b9cbfd262919f2878b1970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abccdb5d845069533bcafcf38794c5836"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#abccdb5d845069533bcafcf38794c5836">GetContourColor</a> (float offset, int hueFrom=240, int hueTo=300, bool decreaseHue=true)</td></tr>
 <tr class="memdesc:abccdb5d845069533bcafcf38794c5836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve color that is in the given offset in given hue range.<br  />
  Default: hue range [240, 300] generating gradients in offeset range [0, 1] traversing following colors ( [blue, cyan, green, yellow, orange, red, fuchsia].<br  />
@@ -1727,7 +1744,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a919ce31c5a533586e7e9bf7ae1a6c28e_icgraph.svg" width="258" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a919ce31c5a533586e7e9bf7ae1a6c28e_icgraph.svg" width="258" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1962,6 +1979,117 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="aa21b12f58d8b6c6406a51954d67433be" name="aa21b12f58d8b6c6406a51954d67433be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21b12f58d8b6c6406a51954d67433be">&#9670;&#160;</a></span>MakeFrustum() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> &gt; MakeFrustum </td>
+          <td>(</td>
+          <td class="paramtype">in Vector3&#160;</td>
+          <td class="paramname"><em>cameraPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in Vector3&#160;</td>
+          <td class="paramname"><em>cameraTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in Vector3&#160;</td>
+          <td class="paramname"><em>cameraUp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>near</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>far</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fov</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in Matrix4x4&#160;</td>
+          <td class="paramname"><em>mm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a gl figure that represent the camera frustum object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cameraPos</td><td>Camera position [world].</td></tr>
+    <tr><td class="paramname">cameraTarget</td><td>Camera target [world].</td></tr>
+    <tr><td class="paramname">cameraUp</td><td>Camera up [world].</td></tr>
+    <tr><td class="paramname">near</td><td>Near plane [world].</td></tr>
+    <tr><td class="paramname">far</td><td>Far plane [world].</td></tr>
+    <tr><td class="paramname">fov</td><td>Field of view (rad).</td></tr>
+    <tr><td class="paramname">mm</td><td>Model matrix [world].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>frustum figures</dd></dl>
+
+</div>
+</div>
+<a id="aa02b62dd5dcba3413f5d65392d5e3017" name="aa02b62dd5dcba3413f5d65392d5e3017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02b62dd5dcba3413f5d65392d5e3017">&#9670;&#160;</a></span>MakeFrustum() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a> &gt; MakeFrustum </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html">GLControl</a>&#160;</td>
+          <td class="paramname"><em>glControl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a gl figure that represents the camera frustum object. </p>
+<p><br  />
+ </p>
+
+</div>
+</div>
 <a id="ae75ad4431e13ec9ae90fe3a84afbccc2" name="ae75ad4431e13ec9ae90fe3a84afbccc2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae75ad4431e13ec9ae90fe3a84afbccc2">&#9670;&#160;</a></span>MakeScreenCS()</h2>
 
@@ -1995,6 +2123,102 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Screen matrix.</dd></dl>
+
+</div>
+</div>
+<a id="aaa0a24e0ae58599c9d521a5fac0a7477" name="aaa0a24e0ae58599c9d521a5fac0a7477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa0a24e0ae58599c9d521a5fac0a7477">&#9670;&#160;</a></span>MakeTextFigure() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html">GLTriangleFigure</a> &gt; MakeTextFigure </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_context.html">GLContext</a>&#160;</td>
+          <td class="paramname"><em>glContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_text.html">GLText</a>&#160;</td>
+          <td class="paramname"><em>glText</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a triangle figure textured to represents the given GLText<br  />
+ <br  />
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">glContext</td><td>Gl context ( used to access GLFontCharManager ).</td></tr>
+    <tr><td class="paramname">glText</td><td>Gl text.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Gl triangle figure.</dd></dl>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a0aac4c38e0d4beb30a472911ebea7dc3" name="a0aac4c38e0d4beb30a472911ebea7dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aac4c38e0d4beb30a472911ebea7dc3">&#9670;&#160;</a></span>MakeTextFigure() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html">GLTriangleFigure</a> &gt; MakeTextFigure </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html">GLModel</a>&#160;</td>
+          <td class="paramname"><em>glModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_text.html">GLText</a>&#160;</td>
+          <td class="paramname"><em>glText</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a triangle figure textured to represents the given GLText </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">glModel</td><td>Gl model ( used to access GLFontCharManager ).</td></tr>
+    <tr><td class="paramname">glText</td><td>Gl text.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Gl triangle figure.</dd></dl>
 
 </div>
 </div>
@@ -3247,7 +3471,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a66bedc3c9819976161df1e3c111fc5df_icgraph.svg" width="455" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_a66bedc3c9819976161df1e3c111fc5df_icgraph.svg" width="455" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3494,7 +3718,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Converts given screen coord to virtual normalized device coord (z=0).<br  />
- Actual <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_constants.html#a2948b4f1cdc5ca89d59ce9c8f0322ad2" title="Y axis orientation [screen].">SearchAThing.OpenGL.Core.Constants.YAxisOrientation</a> will considered. </p>
+ Actual Constants.YAxisOrientation will considered. </p>
 <p><br  />
  </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3540,6 +3764,33 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <p><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a9de8ad2640f0fadcb8c11fbd4ca521ef" title="Deserialize to a Matrix4x4 from a string of 16 float space separated ( invariant ).">SearchAThing.OpenGL.Core.Toolkit.DeserializeMatrix4x4</a> </p>
+
+</div>
+</div>
+<a id="a0e8f109452b9cbfd262919f2878b1970" name="a0e8f109452b9cbfd262919f2878b1970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8f109452b9cbfd262919f2878b1970">&#9670;&#160;</a></span>SetupClosedXMLFonts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SetupClosedXMLFonts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper to overcome ClosedXML font issue when adjust columns contents of an xlsx document. </p>
 
 </div>
 </div>
@@ -3789,7 +4040,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_af4c4bdd9850a31c802146226e7e9ce68_icgraph.svg" width="276" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_af4c4bdd9850a31c802146226e7e9ce68_icgraph.svg" width="276" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3805,6 +4056,9 @@ Here is the caller graph for this function:</div>
 <li>src/core/geom/Matrix4x4.cs</li>
 <li>src/core/primitive/GLLine.cs</li>
 <li>src/core/primitive/IGLTriangle.cs</li>
+<li>src/core/render/Figures.Frustum.cs</li>
+<li>src/core/render/Figures.Text.cs</li>
+<li>src/core/render/Toolkit.cs</li>
 <li>src/core/types/Utils.cs</li>
 </ul>
 </div><!-- contents -->

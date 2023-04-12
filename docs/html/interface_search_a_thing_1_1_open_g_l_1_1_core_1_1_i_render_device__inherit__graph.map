@@ -1,0 +1,6 @@
+<map id="IRenderDevice" name="IRenderDevice">
+<area shape="rect" id="node1" title="A render device will read pixels from given gl context through ReadPixels and write to an appropriate..." alt="" coords="127,79,244,104"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_dummy_render_device.html" title="A render device that doesn&#39;t write GL pixel anywhere. &#160;This object can be used for testing purpouse." alt="" coords="5,152,171,177"/>
+<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_offscreen_render_device.html" title="Render device for offscreen mode that acts as a bitmap file writer." alt="" coords="195,152,370,177"/>
+<area shape="rect" id="node2" title=" " alt="" coords="97,5,274,31"/>
+</map>

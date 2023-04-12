@@ -150,7 +150,7 @@ Protected Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a3499d9cb2f057bd76387441caf9bc0cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html">GLVertexManager</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#a3499d9cb2f057bd76387441caf9bc0cd">ParentVertexManager</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a3499d9cb2f057bd76387441caf9bc0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex manager which this object is registered to.<br  />
- Before the object is added to the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a>, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
+ Before the object is added to the GLModel, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
 <tr class="separator:a3499d9cb2f057bd76387441caf9bc0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb7e47a9c206fd8872da28b185cc32f9"><td class="memItemLeft" align="right" valign="top">abstract ReadOnlyObservableCollection&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html">GLPrimitiveBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#aeb7e47a9c206fd8872da28b185cc32f9">Primitives</a><code> [get]</code></td></tr>
 <tr class="memdesc:aeb7e47a9c206fd8872da28b185cc32f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A figure can contains primitives that in turn can contains vertexes.  <br /></td></tr>
@@ -197,7 +197,7 @@ Properties</h2></td></tr>
 <tr class="separator:ab715c200d856467c3cb630f1fddfb030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9e7167db3d30b01969e99ba2961be2c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#aa9e7167db3d30b01969e99ba2961be2c">EvalInShadowMap</a><code> [get]</code></td></tr>
 <tr class="memdesc:aa9e7167db3d30b01969e99ba2961be2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this figure has to be considered for building of the shadow map.<br  />
- While is true by default in GLFigureBase, is overriden to false by <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_text_char_figure.html" title="Triangles figure with texture mapped to represent a char.">SearchAThing.OpenGL.Render.GLTextCharFigure</a> specialization of GLTriangleFigure in order to avoid dropping shadows of the triangles used by the font textures.  <br /></td></tr>
+ While is true by default in GLFigureBase, is overriden to false by GLTextCharFigure specialization of GLTriangleFigure in order to avoid dropping shadows of the triangles used by the font textures.  <br /></td></tr>
 <tr class="separator:aa9e7167db3d30b01969e99ba2961be2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a></td></tr>
 <tr class="memitem:a68c5f16a6da6e7ce344ec87052cd27f9 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">ReadOnlyObservableCollection&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html">GLPrimitiveBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a68c5f16a6da6e7ce344ec87052cd27f9">Primitives</a><code> [get]</code></td></tr>
@@ -239,7 +239,7 @@ Properties</h2></td></tr>
 <tr class="separator:ab715c200d856467c3cb630f1fddfb030 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9865fa32d7a38d012beabd00fe33ea15 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a9865fa32d7a38d012beabd00fe33ea15">EvalInShadowMap</a><code> [get]</code></td></tr>
 <tr class="memdesc:a9865fa32d7a38d012beabd00fe33ea15 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this figure has to be considered for building of the shadow map.<br  />
- While is true by default in GLFigureBase, is overriden to false by <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_text_char_figure.html" title="Triangles figure with texture mapped to represent a char.">SearchAThing.OpenGL.Render.GLTextCharFigure</a> specialization of GLTriangleFigure in order to avoid dropping shadows of the triangles used by the font textures.  <br /></td></tr>
+ While is true by default in GLFigureBase, is overriden to false by GLTextCharFigure specialization of GLTriangleFigure in order to avoid dropping shadows of the triangles used by the font textures.  <br /></td></tr>
 <tr class="separator:a9865fa32d7a38d012beabd00fe33ea15 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc56e531661dab4dc15a8ae4150bcad1 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">object?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#abc56e531661dab4dc15a8ae4150bcad1">Tag</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:abc56e531661dab4dc15a8ae4150bcad1 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">User object.  <br /></td></tr>
@@ -247,7 +247,7 @@ Properties</h2></td></tr>
 <tr class="inherit_header properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html">IGLVertexManagerObject</a></td></tr>
 <tr class="memitem:a3499d9cb2f057bd76387441caf9bc0cd inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html">GLVertexManager</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html#a3499d9cb2f057bd76387441caf9bc0cd">ParentVertexManager</a><code> [get]</code></td></tr>
 <tr class="memdesc:a3499d9cb2f057bd76387441caf9bc0cd inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex manager which this object is registered to.<br  />
- Before the object is added to the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a>, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
+ Before the object is added to the GLModel, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
 <tr class="separator:a3499d9cb2f057bd76387441caf9bc0cd inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
@@ -258,7 +258,7 @@ Events</h2></td></tr>
 <tr class="separator:a7671c164299812cb7b44d37f6b129813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header events_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td colspan="2" onclick="javascript:toggleInherit('events_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure')"><img src="closed.png" alt="-"/>&#160;Events inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a></td></tr>
 <tr class="memitem:a7671c164299812cb7b44d37f6b129813 inherit events_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#a0adce33589e6b6a1e2c4fc128dbe1121">FigureInvalidatedDelegate</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a7671c164299812cb7b44d37f6b129813">FigureInvalidated</a></td></tr>
-<tr class="memdesc:a7671c164299812cb7b44d37f6b129813 inherit events_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">This event is managed internally by the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a> and signal that a model figure changed some of its vertex propertties.<br  />
+<tr class="memdesc:a7671c164299812cb7b44d37f6b129813 inherit events_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">This event is managed internally by the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Core.GLModel</a> and signal that a model figure changed some of its vertex propertties.<br  />
  When a model figure emit this event the model emit ViewInvalidated.  <br /></td></tr>
 <tr class="separator:a7671c164299812cb7b44d37f6b129813 inherit events_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -613,7 +613,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>States if this figure has to be considered for building of the shadow map.<br  />
- While is true by default in GLFigureBase, is overriden to false by <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_text_char_figure.html" title="Triangles figure with texture mapped to represent a char.">SearchAThing.OpenGL.Render.GLTextCharFigure</a> specialization of GLTriangleFigure in order to avoid dropping shadows of the triangles used by the font textures. </p>
+ While is true by default in GLFigureBase, is overriden to false by GLTextCharFigure specialization of GLTriangleFigure in order to avoid dropping shadows of the triangles used by the font textures. </p>
 <p><br  />
  </p>
 
@@ -815,7 +815,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Vertex manager which this object is registered to.<br  />
- Before the object is added to the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a>, therefore to the GLVertexManager, or after the object is removed from, this pointer is null. </p>
+ Before the object is added to the GLModel, therefore to the GLVertexManager, or after the object is removed from, this pointer is null. </p>
 <p><br  />
  </p>
 

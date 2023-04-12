@@ -9,5 +9,5 @@ var searchData=
   ['camerazoomingesture_6',['CameraZoomInGesture',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#a1da965e406c3059e7f86cdbed0773197',1,'SearchAThing::OpenGL::GUI::AvaloniaGLControl']]],
   ['camerazoomoutgesture_7',['CameraZoomOutGesture',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#acca5c0635421893a504059c1b5e02f55',1,'SearchAThing::OpenGL::GUI::AvaloniaGLControl']]],
   ['col_5fcnt_8',['col_cnt',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_toolkit.html#aea322d275680d6839d75f25f7f0d868d',1,'SearchAThing::OpenGL::GUI::Toolkit']]],
-  ['constant_9',['constant',['../struct_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_point_light_struct.html#a88de168fce6d89f37e5ceff0317b9f06',1,'SearchAThing::OpenGL::Render::GLPointLightStruct']]]
+  ['constant_9',['constant',['../struct_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point_light_struct.html#a88de168fce6d89f37e5ceff0317b9f06',1,'SearchAThing::OpenGL::Core::GLPointLightStruct']]]
 ];

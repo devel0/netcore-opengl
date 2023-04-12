@@ -1,4 +1,0 @@
-<map id="GetStorageBlockBinding" name="GetStorageBlockBinding">
-<area shape="rect" id="node1" title="Eetrieve program resource index of given ssbo and retrieve associated binding. a shader unique shared..." alt="" coords="376,13,556,38"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_shader_storage_block.html#aa989276a39da33c02997e2e461d69b8a" title="Execute glGenBuffer to create buffer handle and glBindBuffer() on given target, finally glBufferData(..." alt="" coords="5,5,328,45"/>
-</map>

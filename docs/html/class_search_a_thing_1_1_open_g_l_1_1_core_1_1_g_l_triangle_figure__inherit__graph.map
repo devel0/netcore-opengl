@@ -1,5 +1,6 @@
 <map id="GLTriangleFigure" name="GLTriangleFigure">
 <area shape="rect" id="node1" title="Specialization of typed figure within the GLTriangle primitive." alt="" coords="165,225,295,251"/>
+<area shape="rect" id="node7" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_text_char_figure.html" title="Triangles figure with texture mapped to represent a char." alt="" coords="163,299,297,324"/>
 <area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html" title=" " alt="" coords="5,152,244,177"/>
 <area shape="rect" id="node3" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html" title="Specialization of IGLFigure for the type GLTriangle." alt="" coords="269,152,402,177"/>
 <area shape="rect" id="node4" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html" title="This is the direct child of a vertex manager. &#160;A figure contains primitives and primitive contains ve..." alt="" coords="294,79,377,104"/>

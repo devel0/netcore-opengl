@@ -154,13 +154,13 @@ Properties</h2></td></tr>
 <tr class="separator:aa8549dd3f50bb65da3127527bd223672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3499d9cb2f057bd76387441caf9bc0cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html">GLVertexManager</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a3499d9cb2f057bd76387441caf9bc0cd">ParentVertexManager</a><code> [get]</code></td></tr>
 <tr class="memdesc:a3499d9cb2f057bd76387441caf9bc0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex manager which this object is registered to.<br  />
- Before the object is added to the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a>, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
+ Before the object is added to the GLModel, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
 <tr class="separator:a3499d9cb2f057bd76387441caf9bc0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a9a536dcc6338f318a4a3f4f146d28b"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a1a9a536dcc6338f318a4a3f4f146d28b">Position</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a1a9a536dcc6338f318a4a3f4f146d28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex position [local].  <br /></td></tr>
 <tr class="separator:a1a9a536dcc6338f318a4a3f4f146d28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebef0c3f2bb23b177f7397ca533234e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a2ebef0c3f2bb23b177f7397ca533234e">ScreenCoordMode</a><code> [get]</code></td></tr>
-<tr class="memdesc:a2ebef0c3f2bb23b177f7397ca533234e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluated through parent IGLFigure it states if this vertex has to be processed in the gl shader pipeline within <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_constants.html#a2ee2d00eec1b741360ad2230e7c5b12e" title="Name of the uniform shader variable that enable screen coord mode vertex evaluation [object].">SearchAThing.OpenGL.Render.Constants.UNINAME_uFigureScreenCoord</a> uniform flag.  <br /></td></tr>
+<tr class="memdesc:a2ebef0c3f2bb23b177f7397ca533234e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluated through parent IGLFigure it states if this vertex has to be processed in the gl shader pipeline within Constants.UNINAME_uFigureScreenCoord uniform flag.  <br /></td></tr>
 <tr class="separator:a2ebef0c3f2bb23b177f7397ca533234e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1359379df158a3d17afcd9d04ed13ce0"><td class="memItemLeft" align="right" valign="top">Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html#a1359379df158a3d17afcd9d04ed13ce0">MaterialColor</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a1359379df158a3d17afcd9d04ed13ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color encoded in vector4 (range 0..1) as (red, green, blue, alpha).<br  />
@@ -232,12 +232,12 @@ Properties</h2></td></tr>
 <tr class="memdesc:ab1a27bc669d041fe23ec05792737849f inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="mdescLeft">&#160;</td><td class="mdescRight">String signature of this vertex, used by GLVertexManager to keep a unique vertex array of GLVertexStruct.  <br /></td></tr>
 <tr class="separator:ab1a27bc669d041fe23ec05792737849f inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebef0c3f2bb23b177f7397ca533234e inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a2ebef0c3f2bb23b177f7397ca533234e">ScreenCoordMode</a><code> [get]</code></td></tr>
-<tr class="memdesc:a2ebef0c3f2bb23b177f7397ca533234e inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluated through parent IGLFigure it states if this vertex has to be processed in the gl shader pipeline within <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_constants.html#a2ee2d00eec1b741360ad2230e7c5b12e" title="Name of the uniform shader variable that enable screen coord mode vertex evaluation [object].">SearchAThing.OpenGL.Render.Constants.UNINAME_uFigureScreenCoord</a> uniform flag.  <br /></td></tr>
+<tr class="memdesc:a2ebef0c3f2bb23b177f7397ca533234e inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluated through parent IGLFigure it states if this vertex has to be processed in the gl shader pipeline within Constants.UNINAME_uFigureScreenCoord uniform flag.  <br /></td></tr>
 <tr class="separator:a2ebef0c3f2bb23b177f7397ca533234e inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html">IGLVertexManagerObject</a></td></tr>
 <tr class="memitem:a3499d9cb2f057bd76387441caf9bc0cd inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html">GLVertexManager</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html#a3499d9cb2f057bd76387441caf9bc0cd">ParentVertexManager</a><code> [get]</code></td></tr>
 <tr class="memdesc:a3499d9cb2f057bd76387441caf9bc0cd inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex manager which this object is registered to.<br  />
- Before the object is added to the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a>, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
+ Before the object is added to the GLModel, therefore to the GLVertexManager, or after the object is removed from, this pointer is null.  <br /></td></tr>
 <tr class="separator:a3499d9cb2f057bd76387441caf9bc0cd inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
@@ -856,7 +856,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Vertex manager which this object is registered to.<br  />
- Before the object is added to the <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_model.html" title="Gl model.">SearchAThing.OpenGL.Render.GLModel</a>, therefore to the GLVertexManager, or after the object is removed from, this pointer is null. </p>
+ Before the object is added to the GLModel, therefore to the GLVertexManager, or after the object is removed from, this pointer is null. </p>
 <p><br  />
  </p>
 
@@ -912,8 +912,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Evaluated through parent IGLFigure it states if this vertex has to be processed in the gl shader pipeline within <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_constants.html#a2ee2d00eec1b741360ad2230e7c5b12e" title="Name of the uniform shader variable that enable screen coord mode vertex evaluation [object].">SearchAThing.OpenGL.Render.Constants.UNINAME_uFigureScreenCoord</a> uniform flag. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a23d28ad91dda40c4a513a1f8cd4473ba" title="Screen model matrix [world].">SearchAThing.OpenGL.Render.GLControl.ScreenModelMatrix</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a936b22099d9eebd26c0c8e0684ef20c4" title="ScreenProjectionMatrix [eye].">SearchAThing.OpenGL.Render.GLControl.ScreenProjectionMatrix</a></dd></dl>
+<p>Evaluated through parent IGLFigure it states if this vertex has to be processed in the gl shader pipeline within Constants.UNINAME_uFigureScreenCoord uniform flag. </p>
+<dl class="section see"><dt>See also</dt><dd>GLControl.ScreenModelMatrix, GLControl.ScreenProjectionMatrix</dd></dl>
 
 <p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html#a2ebef0c3f2bb23b177f7397ca533234e">IGLVertex</a>.</p>
 

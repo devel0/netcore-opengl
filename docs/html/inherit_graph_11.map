@@ -1,3 +1,45 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_contour_legend.html" title="Contour Legend." alt="" coords="5,5,125,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="62,228,131,253"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html" title="Avalonia gl control. &#160;It&#39;s a graphical ui IRenderDevice used to transfer GLControl pixels to the wind..." alt="" coords="236,252,379,277"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html" title=" " alt="" coords="439,5,653,31"/>
+<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line_figure.html" title="Specialization of typed figure within the GLLine primitive." alt="" coords="749,31,856,56"/>
+<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html" title=" " alt="" coords="435,153,657,179"/>
+<area shape="rect" id="node6" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point_figure.html" title="Specialization of typed figure within the GLPoint} primitive." alt="" coords="747,141,859,167"/>
+<area shape="rect" id="node7" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html" title=" " alt="" coords="427,203,665,228"/>
+<area shape="rect" id="node8" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html" title="Specialization of typed figure within the GLTriangle primitive." alt="" coords="738,215,867,240"/>
+<area shape="rect" id="node9" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_text_char_figure.html" title="Triangles figure with texture mapped to represent a char." alt="" coords="940,215,1075,240"/>
+<area shape="rect" id="node10" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html" title="Interface for GL objects such as IGLFigure, IGLPrimitive and IGLVertex. &#160;The purpose is to ensure tha..." alt="" coords="5,375,188,400"/>
+<area shape="rect" id="node11" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html" title="This is the direct child of a vertex manager. &#160;A figure contains primitives and primitive contains ve..." alt="" coords="266,301,349,327"/>
+<area shape="rect" id="node17" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_primitive.html" title="A primitive such a GLPoint, GLLine or GLTriangle can be added to a figure through its add method...." alt="" coords="256,375,359,400"/>
+<area shape="rect" id="node25" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex.html" title="Represent a vertex and its the base object managed by the GLVertexManager. &#160;Primitives such as GLPoin..." alt="" coords="265,424,349,449"/>
+<area shape="rect" id="node12" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html" title="Base abstract class for point, line, triangle figures." alt="" coords="491,301,601,327"/>
+<area shape="rect" id="node14" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_line_figure.html" title="Specialization of IGLFigure for the type GLLine." alt="" coords="491,55,601,80"/>
+<area shape="rect" id="node15" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_point_figure.html" title="Specialization of IGLFigure for the type GLPoint." alt="" coords="488,104,604,129"/>
+<area shape="rect" id="node16" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html" title="Specialization of IGLFigure for the type GLTriangle." alt="" coords="479,252,613,277"/>
+<area shape="rect" id="node13" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html" title="Template typed GLPrimitiveBase figure base operations such as Add and Remove primitives from the figu..." alt="" coords="713,301,892,327"/>
+<area shape="rect" id="node18" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html" title=" " alt="" coords="481,449,611,475"/>
+<area shape="rect" id="node22" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_line.html" title="Primitive for the GL_LINES opengl element." alt="" coords="511,351,581,376"/>
+<area shape="rect" id="node23" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_point.html" title="Primitive for GL_POINTS opengl element." alt="" coords="508,400,584,425"/>
+<area shape="rect" id="node24" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle.html" title="Primitive for GL_TRIANGLES opengl element." alt="" coords="499,499,593,524"/>
+<area shape="rect" id="node19" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line.html" title="Opengl line primitive." alt="" coords="769,375,836,400"/>
+<area shape="rect" id="node20" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point.html" title=" " alt="" coords="767,437,839,463"/>
+<area shape="rect" id="node21" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html" title=" " alt="" coords="758,487,847,512"/>
+<area shape="rect" id="node26" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html" title=" " alt="" coords="506,548,586,573"/>
+<area shape="rect" id="node27" title=" " alt="" coords="8,624,185,649"/>
+<area shape="rect" id="node28" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_dummy_render_device.html" title="A render device that doesn&#39;t write GL pixel anywhere. &#160;This object can be used for testing purpouse." alt="" coords="463,635,629,660"/>
+<area shape="rect" id="node29" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html" title="Provides basic opengl abstraction to create entities such as GLPoint, GLLine and GLTriangle...." alt="" coords="264,821,351,847"/>
+<area shape="rect" id="node30" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point_light.html" title="Gl point light." alt="" coords="255,473,359,499"/>
+<area shape="rect" id="node31" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_text.html" title="Gl text object." alt="" coords="275,523,340,548"/>
+<area shape="rect" id="node32" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager.html" title="Vertex manager primary purpose is to keep a linear sequence of distinct GLVertexStruct structs that w..." alt="" coords="237,772,378,797"/>
+<area shape="rect" id="node34" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_render_device.html" title="A render device will read pixels from given gl context through ReadPixels and write to an appropriate..." alt="" coords="249,723,366,748"/>
+<area shape="rect" id="node36" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_point_transform_nfo.html" title="Helper class used by SearchAThing.OpenGL.GUI.GLDevTool. &#160;Given the vertex, size, gl matrixes it will ..." alt="" coords="236,624,379,649"/>
+<area shape="rect" id="node37" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_g_l_dev_tool.html" title="Developer tool to inspect vertex manager at runtime." alt="" coords="262,920,353,945"/>
+<area shape="rect" id="node38" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_g_l_view.html" title="Avalonia control that hold a grRoot grid inside of which take place a title and an AvaloniaGLControl...." alt="" coords="272,969,343,995"/>
+<area shape="rect" id="node39" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_g_l_window.html" title="Used in stand&#45;alone application types ( console programs ) to create an application gl window...." alt="" coords="262,871,353,896"/>
+<area shape="rect" id="node40" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_vector3_wrap.html" title="Wrap X,Y,Z components of an object containing a INotifyPropertyChanged vector3." alt="" coords="255,673,360,699"/>
+<area shape="rect" id="node33" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html" title=" " alt="" coords="477,772,615,797"/>
+<area shape="rect" id="node35" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_offscreen_render_device.html" title="Render device for offscreen mode that acts as a bitmap file writer." alt="" coords="459,723,633,748"/>
+<area shape="rect" id="node41" title=" " alt="" coords="38,277,155,303"/>
+<area shape="rect" id="node42" title=" " alt="" coords="47,969,146,995"/>
+<area shape="rect" id="node43" title=" " alt="" coords="59,896,134,921"/>
 </map>

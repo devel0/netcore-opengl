@@ -1,4 +1,0 @@
-<map id="SendNotification" name="SendNotification">
-<area shape="rect" id="node1" title="Send notification to frontend that manage this gl control." alt="" coords="140,5,269,31"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_control.html#a4e29c2c60fb3537fbba7351813d54d41" title="Save actual view info to given pathfilename. &#160;A Notification GLControl.NotificationRequest event emit..." alt="" coords="5,5,92,31"/>
-</map>

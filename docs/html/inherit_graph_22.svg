@@ -11,9 +11,9 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="struct_search_a_thing_1_1_open_g_l_1_1_render_1_1_g_l_matrix4x4_struct.html" target="_top" xlink:title="Structure that contains a matrix4x4. &#160;It will be used by the SearchAThing.OpenGL.Render....">
+<g id="a_node1"><a xlink:href="struct_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point_light_struct.html" target="_top" xlink:title="Structure that contains gl point light info. &#160;It will be used by the GLControl.RenderVertexManager an...">
 <polygon fill="white" stroke="#666666" points="107,-19 0,-19 0,0 107,0 107,-19"/>
-<text text-anchor="middle" x="53.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">GLMatrix4x4Struct</text>
+<text text-anchor="middle" x="53.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">GLPointLightStruct</text>
 </a>
 </g>
 </g>
