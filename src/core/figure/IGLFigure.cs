@@ -15,7 +15,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
 {
 
     /// <summary>
-    /// This event is managed internally by the <see cref="SearchAThing.OpenGL.Render.GLModel"/> and signal that a model figure changed some of its vertex propertties.<br/>
+    /// This event is managed internally by the <see cref="SearchAThing.OpenGL.Core.GLModel"/> and signal that a model figure changed some of its vertex propertties.<br/>
     /// When a model figure emit this event the model emit ViewInvalidated.
     /// </summary>        
     event FigureInvalidatedDelegate? FigureInvalidated;
@@ -100,7 +100,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
 
     /// <summary>
     /// States if this figure has to be considered for building of the shadow map.<br/>
-    /// While is true by default in <see cref="GLFigureBase"/>, is overriden to false by <see cref="SearchAThing.OpenGL.Render.GLTextCharFigure"/> specialization of <see cref="GLTriangleFigure"/>
+    /// While is true by default in <see cref="GLFigureBase"/>, is overriden to false by <see cref="GLTextCharFigure"/> specialization of <see cref="GLTriangleFigure"/>
     /// in order to avoid dropping shadows of the triangles used by the font textures.
     /// </summary>    
     bool EvalInShadowMap { get; }

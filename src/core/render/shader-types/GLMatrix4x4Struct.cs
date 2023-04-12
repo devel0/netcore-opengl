@@ -4,8 +4,8 @@ namespace SearchAThing.OpenGL.Core;
 
 /// <summary>
 /// Structure that contains a matrix4x4.<br/>
-/// It will be used by the <see cref="SearchAThing.OpenGL.Render.GLControl.RenderVertexManager"/>
-/// and loaded into gpu pipeline through <see cref="SearchAThing.OpenGL.Render.GLShaderStorageBlock{T}"/>.
+/// It will be used by the <see cref="GLControl.RenderVertexManager"/>
+/// and loaded into gpu pipeline through <see cref="GLShaderStorageBlock{T}"/>.
 /// </summary>
 [StructLayout(LayoutKind.Explicit, Size = (4 * 4))]
 public unsafe struct GLMatrix4x4Struct

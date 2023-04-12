@@ -29,13 +29,13 @@ public static partial class Constants
     /// <summary>
     /// (Default) Absolute position along [eye] z axis of the near clipping plane.
     /// </summary>
-    /// <see cref="SearchAThing.OpenGL.Core.Toolkit.PreventZFighting"/>
+    /// <see cref="Toolkit.PreventZFighting"/>
     public const float DEFAULT_Near = 0.1f;
 
     /// <summary>
     /// (Default) Absolute position along [eye] z axis of the far clipping plane.
     /// </summary>
-    /// <see cref="SearchAThing.OpenGL.Core.Toolkit.PreventZFighting"/>
+    /// <see cref="Toolkit.PreventZFighting"/>
     public const float DEFAULT_Far = 50000.0f;
 
 }

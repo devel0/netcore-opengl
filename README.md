@@ -349,7 +349,7 @@ Unhandled exception. System.AggregateException: One or more errors occurred. (Ap
    at Silk.NET.Windowing.Glfw.GlfwWindow.CoreInitialize(WindowOptions opts)
    at Silk.NET.Windowing.Internals.WindowImplementationBase.CoreInitialize(ViewOptions opts)
    at Silk.NET.Windowing.Internals.ViewImplementationBase.Initialize()
-   at SearchAThing.OpenGL.Render.GLContext..ctor() in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLContext.cs:line 183
+   at SearchAThing.OpenGL.Core.GLContext..ctor() in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLContext.cs:line 183
 ```
 
 To overcome the issue you can execute with software rendered mesa graphics driver.

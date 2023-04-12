@@ -107,9 +107,9 @@ An unhandled exception of type 'Silk.NET.Core.Loader.SymbolLoadingException' occ
   at Silk.NET.OpenGL.GL._B.get__AJO()
   at Silk.NET.OpenGL.GL.DeleteTextures(UInt32 n, UInt32* textures)
   at Silk.NET.OpenGL.GL.DeleteTexture(UInt32 textures)
-  at SearchAThing.OpenGL.Render.GLTexture2D.Dispose(Boolean disposing) in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLTexture2D.cs:line 66
-  at SearchAThing.OpenGL.Render.GLTexture2D.Dispose() in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLTexture2D.cs:line 50
-  at SearchAThing.OpenGL.Render.GLTexture2D.Finalize() in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLTexture2D.cs:line 76
+  at SearchAThing.OpenGL.Core.GLTexture2D.Dispose(Boolean disposing) in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLTexture2D.cs:line 66
+  at SearchAThing.OpenGL.Core.GLTexture2D.Dispose() in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLTexture2D.cs:line 50
+  at SearchAThing.OpenGL.Core.GLTexture2D.Finalize() in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLTexture2D.cs:line 76
                     */
 
                 }

@@ -35,7 +35,7 @@ public enum GLPrimitiveType
 /// added to a figure through its add method.<br/>
 /// A primitive can consists of 1, 2 or 3 <see cref="GLVertex"/> that will be registered into
 /// <see cref="GLVertexManager"/> when the primitive added to the figure and figure to the model
-/// through <see cref="SearchAThing.OpenGL.Render.GLModel.AddFigure"/>.
+/// through <see cref="GLModel.AddFigure"/>.
 /// </summary>
 public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
 {

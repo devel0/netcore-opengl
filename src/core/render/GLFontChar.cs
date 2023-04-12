@@ -43,7 +43,7 @@ public class GLFontChar
     /// <param name="glContext">Gl context.</param>
     /// <param name="c">Font character code.</param>
     /// <param name="measure">Width of the (virtual) bitmap.<br/>
-    /// This value is computed through SKPaint.MeasureText(), its used by <see cref="SearchAThing.OpenGL.Render.Toolkit.MakeTextFigure"/>
+    /// This value is computed through SKPaint.MeasureText(), its used by <see cref="Toolkit.MakeTextFigure"/>
     /// for empty characters such as white space where TextBounds gives no useful information and bitmap is empty.</param>
     /// <param name="textBounds">Bounds of the character font rendered at <see cref="FONT_BITMAP_PIXEL"/> pixels.</param>
     /// <param name="bitmap">Bitmap that hold the White on transparent background image of the character.</param>
