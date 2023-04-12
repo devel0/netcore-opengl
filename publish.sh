@@ -2,7 +2,7 @@
 
 exdir=$(dirname `readlink -f "$0"`)
 
-modules="core render gui shapes"
+modules="core gui shapes nurbs"
 
 for module in $modules; do        
     rm -fr "$exdir"/src/$module/bin        
