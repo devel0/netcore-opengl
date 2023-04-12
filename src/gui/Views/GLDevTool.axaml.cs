@@ -429,7 +429,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
 
     void RefreshHighlightedFigures()
     {                
-        var selectedFigures = dgFigures.SelectedItems.OfType<GLFigureBase>().ToHashSet();
+        var selectedFigures = dgFigures.SelectedItems.OfType<GLFigureBase>().ToHashSetExt();
 
         foreach (var fig in GLModel.Figures)
         {
