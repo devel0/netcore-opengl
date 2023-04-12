@@ -5,7 +5,7 @@
   <PropertyGroup>
     <RootNamespace>SearchAThing.OpenGL.Nurbs</RootNamespace>
     <PackageId>netcore-opengl-nurbs</PackageId>
-    <PackageVersion>3.1.0</PackageVersion>
+    <PackageVersion>$(NetCoreOpenGLVersion)</PackageVersion>
     <Title>net core opengl</Title>
     <Description>Nurbs module provides nurbs support through G-Shark library.</Description>
   </PropertyGroup>
