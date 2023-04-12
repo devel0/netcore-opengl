@@ -1,5 +1,7 @@
 ﻿namespace SearchAThing.OpenGL.Shapes;
 
+using static SearchAThing.OpenGL.Shapes.Constants;
+
 /// <summary>
 /// Ellipse
 /// </summary>

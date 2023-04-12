@@ -1,0 +1,181 @@
+{
+  "Layout": {
+    "Parent": null,
+    "SplitDirection": 0,
+    "Index": 0,
+    "Sizes": [
+      1.0,
+      1.0
+    ],
+    "Children": [],
+    "LeafUIDs": [
+      0,
+      1
+    ]
+  },
+  "UIDView": {
+    "0": {
+      "Title": "",
+      "ModelMatrix": {
+        "M11": 0.9975868,
+        "M12": 0.007830504,
+        "M13": 0.06898844,
+        "M14": 0.0,
+        "M21": 0.051696792,
+        "M22": 0.57951105,
+        "M23": -0.813323,
+        "M24": 0.0,
+        "M31": -0.04634831,
+        "M32": 0.8149268,
+        "M33": 0.5777077,
+        "M34": 0.0,
+        "M41": 0.12794304,
+        "M42": 1.4342169,
+        "M43": -2.0128717,
+        "M44": 1.0,
+        "IsIdentity": false,
+        "Translation": {
+          "X": 0.12794304,
+          "Y": 1.4342169,
+          "Z": -2.0128717
+        }
+      },
+      "CameraPos": {
+        "X": 0.058812037,
+        "Y": 0.5160203,
+        "Z": 8.820123
+      },
+      "CameraTarget": {
+        "X": 0.058812037,
+        "Y": 0.5160203,
+        "Z": 7.8201227
+      },
+      "CameraUp": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "Wireframe": false,
+      "Perspective": true,
+      "OrthoZoom": 1.0,
+      "Near": 0.1,
+      "Far": 50000.0,
+      "ShadeWithEdge": true,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Active": true,
+          "Position": {
+            "X": 0.0,
+            "Y": -1.0,
+            "Z": 2.0
+          },
+          "Ambient": "White",
+          "Diffuse": "White",
+          "Specular": "White",
+          "Constant": 1.0,
+          "Linear": 0.0,
+          "Quadratic": 0.0,
+          "ShowPoint": false
+        },
+        {
+          "Active": true,
+          "Position": {
+            "X": 0.0,
+            "Y": -1.0,
+            "Z": 2.0
+          },
+          "Ambient": "White",
+          "Diffuse": "White",
+          "Specular": "White",
+          "Constant": 1.0,
+          "Linear": 0.0,
+          "Quadratic": 0.0,
+          "ShowPoint": false
+        }
+      ]
+    },
+    "1": {
+      "Title": "",
+      "ModelMatrix": {
+        "M11": 1.0,
+        "M12": 0.0,
+        "M13": 0.0,
+        "M14": 0.0,
+        "M21": 0.0,
+        "M22": 1.0,
+        "M23": 0.0,
+        "M24": 0.0,
+        "M31": 0.0,
+        "M32": 0.0,
+        "M33": 1.0,
+        "M34": 0.0,
+        "M41": 0.0,
+        "M42": 2.4748735,
+        "M43": 1.1920929E-07,
+        "M44": 1.0,
+        "IsIdentity": false,
+        "Translation": {
+          "X": 0.0,
+          "Y": 2.4748735,
+          "Z": 1.1920929E-07
+        }
+      },
+      "CameraPos": {
+        "X": 0.03262371,
+        "Y": 1.5386804,
+        "Z": 26.169756
+      },
+      "CameraTarget": {
+        "X": 0.03262371,
+        "Y": 1.5386804,
+        "Z": 25.169756
+      },
+      "CameraUp": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "Wireframe": true,
+      "Perspective": false,
+      "OrthoZoom": 0.006642806,
+      "Near": 0.25169754,
+      "Far": 81.50927,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Active": true,
+          "Position": {
+            "X": 0.0,
+            "Y": -1.0,
+            "Z": 2.0
+          },
+          "Ambient": "White",
+          "Diffuse": "White",
+          "Specular": "White",
+          "Constant": 1.0,
+          "Linear": 0.0,
+          "Quadratic": 0.0,
+          "ShowPoint": false
+        },
+        {
+          "Active": true,
+          "Position": {
+            "X": 0.0,
+            "Y": -1.0,
+            "Z": 2.0
+          },
+          "Ambient": "White",
+          "Diffuse": "White",
+          "Specular": "White",
+          "Constant": 1.0,
+          "Linear": 0.0,
+          "Quadratic": 0.0,
+          "ShowPoint": false
+        }
+      ]
+    }
+  },
+  "FocusedUIDView": 1
+}

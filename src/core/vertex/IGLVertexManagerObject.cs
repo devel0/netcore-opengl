@@ -11,7 +11,7 @@ public interface IGLVertexManagerObject
 
     /// <summary>
     /// Vertex manager which this object is registered to.<br/>
-    /// Before the object is added to the <see cref="SearchAThing.OpenGL.Render.GLModel"/>,
+    /// Before the object is added to the <see cref="GLModel"/>,
     /// therefore to the <see cref="GLVertexManager"/>,
     /// or after the object is removed from, this pointer is null.
     /// </summary>    

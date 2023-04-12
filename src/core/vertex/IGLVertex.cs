@@ -4,7 +4,7 @@ namespace SearchAThing.OpenGL.Core;
 /// Represent a vertex and its the base object managed by the <see cref="GLVertexManager"/>.<br/>
 /// Primitives such as <see cref="GLPoint"/>, <see cref="GLLine"/> and <see cref="GLTriangle"/> store 
 /// their vertex information using this type.<br/>
-/// When the gl render happens ( see <see cref="SearchAThing.OpenGL.Render.GLControl.Render"/> )
+/// When the gl render happens ( see <see cref="GLControl.Render"/> )
 /// all the model vertexes are mapped to the gpu ram and figures with their vertex indexes are feed into.<br/>
 /// Internally the <see cref="GLVertexManager"/> hold a struct projection of this object, the
 /// <see cref="GLVertexStruct"/>.
@@ -94,10 +94,10 @@ public interface IGLVertex : IGLVertexManagerObject, INotifyPropertyChanged
 
     /// <summary>
     /// Evaluated through parent <see cref="IGLFigure"/> it states if this vertex has to be processed in the
-    /// gl shader pipeline within <see cref="SearchAThing.OpenGL.Render.Constants.UNINAME_uFigureScreenCoord"/> uniform flag.
+    /// gl shader pipeline within <see cref="Constants.UNINAME_uFigureScreenCoord"/> uniform flag.
     /// </summary>
-    /// <seealso cref="SearchAThing.OpenGL.Render.GLControl.ScreenModelMatrix"/>
-    /// <seealso cref="SearchAThing.OpenGL.Render.GLControl.ScreenProjectionMatrix"/>
+    /// <seealso cref="GLControl.ScreenModelMatrix"/>
+    /// <seealso cref="GLControl.ScreenProjectionMatrix"/>
     bool ScreenCoordMode { get; }
 
 }

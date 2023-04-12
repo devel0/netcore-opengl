@@ -20,6 +20,10 @@ global using Size = System.Drawing.Size;
 global using ColorTranslator = System.Drawing.ColorTranslator;
 global using System.Reflection;
 
+global using SkiaSharp;
+
+global using Silk.NET.OpenGL;
+
 global using SearchAThing.Ext;
 global using static SearchAThing.Ext.Toolkit;
 

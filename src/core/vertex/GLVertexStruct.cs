@@ -5,9 +5,9 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Structure used by the vertex manager when register a vertex inside it.<br/>
 /// This structure has an explicit layout for unmanaged access by the gpu
-/// and its used in <seealso cref="SearchAThing.OpenGL.Render.GLControl"/> during the phase of rendering.<br/>
+/// and its used in <seealso cref="GLControl"/> during the phase of rendering.<br/>
 /// </summary>
-/// <seealso cref="SearchAThing.OpenGL.Render.GLVertexArrayObject"/>
+/// <seealso cref="GLVertexArrayObject"/>
 [StructLayout(LayoutKind.Explicit, Size = 12 + 12 + 16 + 12 + 8)]
 public struct GLVertexStruct
 {

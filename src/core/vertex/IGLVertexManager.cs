@@ -78,20 +78,20 @@ public interface IGLVertexManager : INotifyPropertyChanged
 
     /// <summary>
     /// Event emitted when a vertex was added or removed or all vertexes cleared.<br/>    
-    /// Its used by the <see cref="SearchAThing.OpenGL.Render.GLModel"/> to track the model changes
-    /// and emit a <see cref="SearchAThing.OpenGL.Render.GLModel.ViewInvalidated"/> event.
+    /// Its used by the <see cref="GLModel"/> to track the model changes
+    /// and emit a <see cref="GLModel.ViewInvalidated"/> event.
     /// </summary>
     /// <seealso cref="Clear"/>
     event VertexManagerInvalidatedDelegate Invalidated;
 
     /// <summary>
-    /// Used internally by the <see cref="SearchAThing.OpenGL.Render.GLModel.RenderVertexManager"/>
+    /// Used internally by the <see cref="GLModel.RenderVertexManager"/>
     /// to render the scene.<br/>    
     /// Contains the list of vertex structs directly mapped to the gpu.<br/>
     /// This array will be built each time a vertex changes from the ToArray() of the list <see cref="GLVertexManager.Vertexes"/>.
     /// To avoid performance penalty in a scenario where you need to change the position of a figure
     /// you can use <see cref="IGLFigure.ObjectMatrix"/> that doesn't affects at all vertexes because is a figure
-    /// related information forwarded to the gl pipeline shader through <see cref="SearchAThing.OpenGL.Render.Constants.UNINAME_uObject"/>.
+    /// related information forwarded to the gl pipeline shader through <see cref="Constants.UNINAME_uObject"/>.
     /// </summary>        
     GLVertexStruct[] GetVboArray();
 

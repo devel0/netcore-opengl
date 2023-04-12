@@ -77,7 +77,7 @@ public class GLVertexManager : IGLVertexManager
     public event VertexManagerInvalidatedDelegate? Invalidated;
 
     /// <summary>
-    /// Create a new gl vertex manager that can be added to the gl model through <see cref="SearchAThing.OpenGL.Render.GLModel.AddCustomVertexManager"/>.
+    /// Create a new gl vertex manager that can be added to the gl model through <see cref="GLModel.AddCustomVertexManager"/>.
     /// </summary>
     /// <param name="expandModelBBox">If false adding vertexes to this vertex manager doesn't affects the gl model bbox. (Default: true).</param>
     public GLVertexManager(bool expandModelBBox = true)

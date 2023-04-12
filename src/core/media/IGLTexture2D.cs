@@ -7,7 +7,7 @@ public interface IGLTexture2D
 {
 
     /// <summary>
-    /// Id of gl texture created through <see cref="SearchAThing.OpenGL.Render.GLTexture2D"/>
+    /// Id of gl texture created through <see cref="GLTexture2D"/>
     /// </summary>    
     uint TextureId { get; }
 

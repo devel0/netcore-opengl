@@ -5,23 +5,34 @@
     <PropertyGroup>
         <RootNamespace>SearchAThing.OpenGL.Core</RootNamespace>
         <PackageId>netcore-opengl-core</PackageId>
-        <PackageVersion>2.6.0</PackageVersion>
+        <PackageVersion>3.0.0</PackageVersion>
         <Title>net core opengl (core)</Title>
         <Description>Core module contains everything useful for gl calculations and view management.</Description>
-
-        <TargetFramework>netstandard2.1</TargetFramework>
-        <LangVersion>11</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>        
     </PropertyGroup>
 
     <ItemGroup>
+        <EmbeddedResource Include="render/fonts/*.?tf" />
+        <EmbeddedResource Include="render/shaders/*.vs" />
+        <EmbeddedResource Include="render/shaders/*.gs" />
+        <EmbeddedResource Include="render/shaders/*.fs" />
+      </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="ColorHelper" Version="1.8.1" />
-        <PackageReference Include="netcore-ext" Version="1.6.0" />        
-        <PackageReference Include="netDxf-devel0" Version="3.0.3.1" />        
+        <PackageReference Include="netcore-ext" Version="2.1.0" />
+        <PackageReference Include="netDxf-devel0" Version="3.0.3.2" />
         <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+        <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.3" />
+        <PackageReference Include="Silk.NET" Version="2.16.0" />
+        <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="12.2.2" />
+        <PackageReference Include="ClosedXML" Version="0.100.3" />
     </ItemGroup>
 
     <ItemGroup>
         <!-- <ProjectReference Include="..\..\..\netcore-ext\src\ext\netcore-ext.csproj" /> -->
+        <!-- <ProjectReference Include="..\..\..\..\..\opensource\netDxf\netDxf\netDxf.csproj" /> -->
+
     </ItemGroup>
 
 </Project>

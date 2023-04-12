@@ -9,7 +9,7 @@ public static partial class Toolkit
 
     /// <summary>
     /// Converts given screen coord to virtual normalized device coord (z=0).<br/>
-    /// Actual <see cref="SearchAThing.OpenGL.Core.Constants.YAxisOrientation"/> will considered.
+    /// Actual <see cref="Constants.YAxisOrientation"/> will considered.
     /// </summary>            
     /// <param name="screen">(x,y) screen coord</param>
     /// <param name="size">(x,y) screen size</param>    
