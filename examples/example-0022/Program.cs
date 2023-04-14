@@ -8,7 +8,7 @@ using SearchAThing.OpenGL.Nurbs;
 namespace example;
 
 // example-0022
-// TODO: doc
+// not yet implemented ( https://github.com/GSharker/G-Shark/pull/412 )
 
 class Program
 {
