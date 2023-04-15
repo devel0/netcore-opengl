@@ -55,6 +55,7 @@ public class ViewNfo
     public float OrthoZoom { get; set; }
     public float Near { get; set; }
     public float Far { get; set; }
+    public bool UseShadow { get; set; }
     public bool ShadeWithEdge { get; set; }
     public bool ShowCameraObject { get; set; }
     public List<GLPointLight>? Lights { get; set; }

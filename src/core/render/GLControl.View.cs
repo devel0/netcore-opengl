@@ -257,6 +257,7 @@ public partial class GLControl
         OrthoZoom = OrthoZoom,
         Near = Near,
         Far = Far,
+        UseShadow = UseShadow,
         ShadeWithEdge = ShadeWithEdge,
         ShowCameraObject = ShowCameraObject,
         Lights = GLModel.PointLights.ToList()
@@ -303,6 +304,7 @@ public partial class GLControl
         OrthoZoom = nfo.OrthoZoom;
         Near = nfo.Near;
         Far = nfo.Far;
+        UseShadow = nfo.UseShadow;        
         ShadeWithEdge = nfo.ShadeWithEdge;
         ShowCameraObject = nfo.ShowCameraObject;
         if (nfo.Lights is not null)
