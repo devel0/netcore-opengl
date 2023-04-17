@@ -3,6 +3,7 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Primitive for the GL_LINES opengl element.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLLine : IGLPrimitive
 {
 
@@ -16,6 +17,7 @@ public interface IGLLine : IGLPrimitive
     /// - set the value<br/>
     /// - use <see cref="SearchAThing.OpenGL.Core.GLVertexManager.AddVertex">AddVertex</see><br/>
     /// </remarks>
+    [JsonProperty]
     GLVertex From { get; set; }
 
     /// <summary>
@@ -28,6 +30,7 @@ public interface IGLLine : IGLPrimitive
     /// - set the value<br/>
     /// - use <see cref="GLVertexManager.AddVertex"/><br/>
     /// </remarks>    
+    [JsonProperty]
     GLVertex To { get; set; }
 
 }

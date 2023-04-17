@@ -1,8 +1,11 @@
+using Newtonsoft.Json;
+
 namespace SearchAThing.OpenGL.Core;
 
 /// <summary>
 /// Specialization of typed figure within the <see cref="GLLine"/> primitive.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public class GLLineFigure : GLFigureTypeBase<GLLine>, IGLLineFigure
 {
     public override GLPrimitiveType PrimitiveType => GLPrimitiveType.Line;
@@ -27,6 +30,11 @@ public class GLLineFigure : GLFigureTypeBase<GLLine>, IGLLineFigure
     protected override void CopySpecialized(GLFigureBase other) =>
         base.CopySpecialized(other);
 
+    [JsonConstructor]
+    GLLineFigure()
+    {
+    }
+
     public override GLFigureBase? Mirror(in Matrix4x4 xyPlane)
     {
         var mirroredPrimitives = new ObservableCollection<GLPrimitiveBase>();
@@ -39,7 +47,7 @@ public class GLLineFigure : GLFigureTypeBase<GLLine>, IGLLineFigure
         }
 
         var copy = (GLLineFigure)this.CopyBase();
-        
+
         copy.PrimitivesOBC = mirroredPrimitives;
 
         return copy;

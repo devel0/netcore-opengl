@@ -3,6 +3,7 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Handle reference to gl texture.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public class GLTexture2D : IGLContextObject, IGLTexture2D, IDisposable
 {
 
@@ -11,7 +12,7 @@ public class GLTexture2D : IGLContextObject, IGLTexture2D, IDisposable
     /// <summary>
     /// Gl context.
     /// </summary>
-    public GLContext GLContext { get; private set; }
+    public GLContext GLContext { get; set; }
 
     #endregion
 
@@ -22,33 +23,108 @@ public class GLTexture2D : IGLContextObject, IGLTexture2D, IDisposable
 
     /// <summary>
     /// Skia bitmap that hold texture bitmap.
-    /// </summary>    
+    /// </summary>            
     public SKBitmap Bitmap { get; private set; }
+
+    byte[]? _bmp;
+    [JsonProperty]
+    byte[] bmp
+    {
+        get
+        {
+            if (_bmp is null)
+            {
+                _bmp = Bitmap.GetPixelSpan().ToArray();
+            }
+            return _bmp;
+        }
+        set
+        {
+            _bmp = value;
+        }
+    }
+
+    uint? _TextureId = null;
 
     /// <summary>
     /// Texture id.
     /// </summary>    
-    public uint TextureId { get; internal set; }
+    public uint TextureId
+    {
+        get
+        {
+            if (_TextureId is null)
+            {
+                Bitmap = SKBitmap.FromImage(SKImage.FromPixelCopy(new SKImageInfo((int)Width, (int)Height), bmp));
+
+                GLContext.AutoCleanup();
+
+                CreateTexture();
+            }
+            return _TextureId!.Value;
+        }
+        internal set
+        {
+            _TextureId = value;
+        }
+    }
+
+    uint? _Width;
 
     /// <summary>
     /// Width of the bitmap (pixels).
     /// </summary>
-    public uint Width => (uint)Bitmap.Width;
+    [JsonProperty]
+    public uint Width
+    {
+        get
+        {
+            if (_Width is null)
+                _Width = (uint)Bitmap.Width;
+            return _Width.Value;
+        }
+        private set
+        {
+            _Width = value;
+        }
+    }
+
+    uint? _Height;
 
     /// <summary>
     /// Height of the bitmap (pixels).
     /// </summary>    
-    public uint Height => (uint)Bitmap.Height;
+    [JsonProperty]
+    public uint Height
+    {
+        get
+        {
+            if (_Height is null)
+                _Height = (uint)Bitmap.Height;
+            return _Height.Value;
+        }
+        private set
+        {
+            _Height = value;
+        }
+    }
 
     /// <summary>
     /// Gpu internal storage format.
     /// </summary>    
+    [JsonProperty]
     public InternalFormat InternalFormat { get; private set; }
 
     /// <summary>
     /// Image buffer format.
     /// </summary>
+    [JsonProperty]
     public PixelFormat PixelFormat { get; private set; }
+
+    [JsonConstructor]
+    GLTexture2D()
+    {
+    }
 
     /// <summary>
     /// Create gl texture 2d.

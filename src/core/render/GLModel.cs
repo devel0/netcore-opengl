@@ -13,7 +13,8 @@ public delegate void ModelViewInvalidated(GLModel model);
 /// - custom vertex managers <see cref="AddCustomVertexManager"/><br/>
 /// - contains the default build model action.<br/>
 /// </summary>
-public class GLModel : IGLContextObject
+[JsonObject(MemberSerialization.OptIn)]
+public partial class GLModel : IGLContextObject
 {
 
     #region property changed
@@ -35,7 +36,7 @@ public class GLModel : IGLContextObject
 
     /// <summary>
     /// Gl context.
-    /// </summary>
+    /// </summary>    
     public GLContext GLContext { get; private set; }
 
     #endregion
@@ -47,7 +48,8 @@ public class GLModel : IGLContextObject
     /// </summary>
     public event ModelViewInvalidated? ViewInvalidated;
 
-    ObservableCollection<GLFigureBase> FiguresOBC = new ObservableCollection<GLFigureBase>();
+    [JsonProperty]
+    ObservableCollection<GLFigureBase> FiguresOBC { get; set; } = new ObservableCollection<GLFigureBase>();
 
     #region Figures
     ReadOnlyObservableCollection<GLFigureBase>? _Figures = null;
@@ -83,7 +85,7 @@ public class GLModel : IGLContextObject
 
     /// <summary>
     /// Gl vertex manager.
-    /// </summary>
+    /// </summary>    
     public GLVertexManager GLVertexManager
     {
         get
@@ -325,6 +327,7 @@ public class GLModel : IGLContextObject
     /// Observable collection of model point lights.
     /// </summary>
     /// <seealso cref="GLPointLight"/>
+    [JsonProperty]
     public ObservableCollection2<GLPointLight> PointLights { get; private set; } =
         new ObservableCollection2<GLPointLight>();
 

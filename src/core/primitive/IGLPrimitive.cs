@@ -37,6 +37,7 @@ public enum GLPrimitiveType
 /// <see cref="GLVertexManager"/> when the primitive added to the figure and figure to the model
 /// through <see cref="GLModel.AddFigure"/>.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
 {
 
@@ -61,6 +62,7 @@ public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
     /// From the opengl point of view figures with higher order ( front ) are drawn firstly then lower order ( back ).<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    
+    [JsonProperty]
     int Order { get; set; }
 
     /// <summary>

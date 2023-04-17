@@ -38,6 +38,7 @@ public class GLPointFigure : GLFigureTypeBase<GLPoint>, IGLPointFigure
     /// <summary>
     /// Create an empty points figure.
     /// </summary>
+    [JsonConstructor]
     public GLPointFigure() : base() { }
 
     /// <summary>

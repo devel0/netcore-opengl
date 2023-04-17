@@ -15,12 +15,14 @@ namespace SearchAThing.OpenGL.Core;
 /// same gl vertex reference.<br/>
 /// Note: Internally the vertex manager doesn't duplicate any vertex equals to other existing.
 /// </remarks>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLVertex : IGLVertexManagerObject, INotifyPropertyChanged
 {
 
     /// <summary>
     /// Vertex position [local].
     /// </summary>    
+    [JsonProperty]
     Vector3 Position { get; set; }
 
     /// <summary>
@@ -28,22 +30,26 @@ public interface IGLVertex : IGLVertexManagerObject, INotifyPropertyChanged
     /// Alpha=1 (full opaque).<br/>
     /// Alpha=0 (full transparent).
     /// </summary>
+    [JsonProperty]
     Vector4 MaterialColor { get; set; }
 
     /// <summary>
     /// Describe the strength (0..1) of the ambient, diffuse, specular light effects.
     /// </summary>
+    [JsonProperty]
     Vector3 MaterialProperties { get; set; }
 
     /// <summary>
     /// Vertex normal [local].
     /// </summary>    
+    [JsonProperty]
     Vector3 Normal { get; set; }
 
     /// <summary>
     /// Invert the normal flag ( used by <see cref="GLVertex.Mirror"/>.    
     /// </summary>    
     /// <seealso cref="EffectiveNormal"/>
+    [JsonProperty]
     bool InvertNormal { get; set; }
 
     /// <summary>
@@ -54,6 +60,7 @@ public interface IGLVertex : IGLVertexManagerObject, INotifyPropertyChanged
     /// <summary>
     /// Vertex texture offset ( range [0,0] to [1,1] ).
     /// </summary>    
+    [JsonProperty]
     Vector2 TextureST { get; set; }
 
     /// <summary>

@@ -1,5 +1,6 @@
 namespace SearchAThing.OpenGL.Core;
 
+[JsonObject(MemberSerialization.OptIn)]
 public class GLTriangle : GLPrimitiveBase, IGLTriangle
 {
 
@@ -7,6 +8,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
     private GLVertex _V1 = new GLVertex();
 
+    [JsonProperty]
     public GLVertex V1
     {
         get => _V1;
@@ -36,6 +38,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
     private GLVertex _V2 = new GLVertex();
 
+    [JsonProperty]
     public GLVertex V2
     {
         get => _V2;
@@ -65,6 +68,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
     private GLVertex _V3 = new GLVertex();
 
+    [JsonProperty]
     public GLVertex V3
     {
         get => _V3;

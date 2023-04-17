@@ -428,7 +428,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
     }
 
     void RefreshHighlightedFigures()
-    {                
+    {
         var selectedFigures = dgFigures.SelectedItems.OfType<GLFigureBase>().ToHashSetExt();
 
         foreach (var fig in GLModel.Figures)
@@ -446,6 +446,48 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
             HighlightedVertexes.Add(new PointTransformNfo(GLControl, vertex));
 
         glSplit.Invalidate();
+    }
+
+    private void DeleteFigureClick(object sender, RoutedEventArgs e)
+    {
+        var selectedFigures = dgFigures.SelectedItems.OfType<GLFigureBase>().ToList();
+        if (selectedFigures.Count == 0) return;
+
+        foreach (var fig in selectedFigures)
+            GLModel.RemoveFigure(fig);
+
+        glSplit.Invalidate();
+    }
+
+    private async void SaveModelClick(object? sender, RoutedEventArgs e)
+    {
+        var file = await this.StorageProvider.SaveFilePickerAsync(new Avalonia.Platform.Storage.FilePickerSaveOptions
+        {
+            FileTypeChoices = new List<FilePickerFileType>()
+            {
+                new FilePickerFileType("json") { Patterns = new List<string>() { "*.json" } }
+            }
+        });
+
+        if (file is not null) GLModel.SerializeToFile(file.Path.AbsolutePath);        
+    }
+
+    private async void LoadModelClick(object? sender, RoutedEventArgs e)
+    {
+        var file = await this.StorageProvider.OpenFilePickerAsync(new Avalonia.Platform.Storage.FilePickerOpenOptions
+        {
+            FileTypeFilter = new List<FilePickerFileType>()
+            {
+                new FilePickerFileType("json") { Patterns = new List<string>() { "*.json" } }
+            }
+        });
+
+        if (file is not null && file.Count == 1)
+        {            
+            var figs = GLModel.DeserializeFiguresFromFile(file[0].Path.AbsolutePath);
+
+            GLModel.AddFigure(figs);            
+        }
     }
 
     private async void ExportXlsxClick(object? sender, RoutedEventArgs e)

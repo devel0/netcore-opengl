@@ -20,6 +20,8 @@ global using Size = System.Drawing.Size;
 global using ColorTranslator = System.Drawing.ColorTranslator;
 global using System.Reflection;
 
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Serialization;
 global using SkiaSharp;
 
 global using Silk.NET.OpenGL;

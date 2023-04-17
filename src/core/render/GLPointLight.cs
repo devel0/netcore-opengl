@@ -3,6 +3,7 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Gl point light.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public class GLPointLight : INotifyPropertyChanged
 {
 
@@ -51,6 +52,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Position [local].
     /// </summary>
+    [JsonProperty]
     public Vector3 Position
     {
         get => _Position;
