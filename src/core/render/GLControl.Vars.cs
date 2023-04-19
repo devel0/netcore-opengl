@@ -53,9 +53,10 @@ public partial class GLControl : INotifyPropertyChanged
     uint? shadow_texture = null;
 
     internal Size? glControlLastKnownSize = null;
+    (uint w, uint h)? glControlLastKnownShadowSize = null;
 
     #region IsInitial
-    
+
     private bool _IsInitial = false;
     /// <summary>
     /// States if this gl control is the initial created into a gl split view.
@@ -65,15 +66,15 @@ public partial class GLControl : INotifyPropertyChanged
         get => _IsInitial;
         private set
         {
-             var changed = value != _IsInitial;
-             if (changed)
-             {
-                 _IsInitial = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _IsInitial;
+            if (changed)
+            {
+                _IsInitial = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ID
@@ -165,7 +166,7 @@ public partial class GLControl : INotifyPropertyChanged
         }
     }
 
-    #endregion
+    #endregion        
 
     #region ModelMatrixFmt
 
@@ -751,6 +752,50 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    #region ShadowWidth
+
+    private uint _ShadowWidth = SHADOW_WIDTH;
+    /// <summary>
+    /// Shadow width (pixels)
+    /// </summary>
+    public uint ShadowWidth
+    {
+        get => _ShadowWidth;
+        set
+        {
+            var changed = value != _ShadowWidth;
+            if (changed)
+            {
+                _ShadowWidth = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region ShadowHeight
+
+    private uint _ShadowHeight = SHADOW_HEIGHT;
+    /// <summary>
+    /// Shadow height (pixels)
+    /// </summary>
+    public uint ShadowHeight
+    {
+        get => _ShadowHeight;
+        set
+        {
+            var changed = value != _ShadowHeight;
+            if (changed)
+            {
+                _ShadowHeight = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
     #region Title
 
     private string _Title = "";
@@ -1050,7 +1095,7 @@ public partial class GLControl : INotifyPropertyChanged
     public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure);
 
     #region ControlFigureVisible
-    
+
     private ControlFigureVisibileDelegate? _ControlFigureVisible = null;
     /// <summary>    
     /// Control specific custom figure visibility.<br/>    
@@ -1065,15 +1110,15 @@ public partial class GLControl : INotifyPropertyChanged
         get => _ControlFigureVisible;
         set
         {
-             var changed = value != _ControlFigureVisible;
-             if (changed)
-             {
-                 _ControlFigureVisible = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _ControlFigureVisible;
+            if (changed)
+            {
+                _ControlFigureVisible = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
 }

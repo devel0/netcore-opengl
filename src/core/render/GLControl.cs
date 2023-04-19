@@ -630,11 +630,16 @@ public partial class GLControl : INotifyPropertyChanged
 
         var sizeChanged = false;
 
-        if (glControlLastKnownSize is null || !glControlLastKnownSize.Value.Equals(ps))
+        if (glControlLastKnownSize is null ||
+            glControlLastKnownShadowSize is null ||
+            !glControlLastKnownSize.Value.Equals(ps) ||
+            glControlLastKnownShadowSize.Value.w != ShadowWidth ||
+            glControlLastKnownShadowSize.Value.h != ShadowHeight)
         {
             InvalidateProjectionMatrix();
 
             glControlLastKnownSize = ps;
+            glControlLastKnownShadowSize = (ShadowWidth, ShadowHeight);
 
             sizeChanged = true;
         }
@@ -683,7 +688,7 @@ public partial class GLControl : INotifyPropertyChanged
             }
 
             var prjMatrix = Matrix4x4.CreatePerspectiveFieldOfView((float)90d.ToRad(),
-                (float)SHADOW_WIDTH / (float)SHADOW_HEIGHT,
+                (float)ShadowWidth / (float)ShadowHeight,
                 nearPlaneDistance: Near,
                 farPlaneDistance: Far);
 
@@ -766,7 +771,7 @@ public partial class GLControl : INotifyPropertyChanged
                     GL.TexImage3D(TextureTarget.TextureCubeMapArray,
                         0, // level
                         InternalFormat.DepthComponent,
-                        SHADOW_WIDTH, SHADOW_HEIGHT,
+                        ShadowWidth, ShadowHeight,
                         (uint)(6 * ptLightStructs.Length), // the number of layers in a texture array
                         0, // border
                         PixelFormat.DepthComponent,
@@ -805,7 +810,7 @@ public partial class GLControl : INotifyPropertyChanged
 
                 DebugFramebufferStatus("SHADOW");
 
-                GL.Viewport(0, 0, SHADOW_WIDTH, SHADOW_HEIGHT);
+                GL.Viewport(0, 0, ShadowWidth, ShadowHeight);
 
                 for (int lightIdx = 0; lightIdx < ptLightStructs.Length; ++lightIdx)
                 {
