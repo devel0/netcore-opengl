@@ -51,6 +51,11 @@ public partial class AvaloniaGLControlSplit : GridSplitterManager<GLView>
                             glControl.CameraView(glControl.LastCameraView.Value);
                     };
 
+                    glControl.InvalidateAllRequest += (sender, e) =>
+                    {
+                        Invalidate();
+                    };
+
                     glView.AvaloniaGLControl.GLControl = glControl;
 
                     return glView;

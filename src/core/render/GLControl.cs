@@ -190,6 +190,13 @@ public partial class GLControl : INotifyPropertyChanged
         RenderInvalidated?.Invoke(this, new EventArgs());
     }
 
+    public event EventHandler InvalidateAllRequest;
+
+    /// <summary>
+    /// All gl split control invalidation.
+    /// </summary>
+    public void InvalidateAll() => InvalidateAllRequest.Invoke(this, EventArgs.Empty);
+
     public delegate void RenderPreviewDelegate(GLControl glControl);
 
     /// <summary>
