@@ -35,6 +35,8 @@ public partial class AvaloniaGLControl
         }
     }
 
+    DateTime? lastPressTimestamp = null;
+
     protected override void OnPointerPressed(PointerPressedEventArgs e)
     {
         base.OnPointerPressed(e);
@@ -46,22 +48,17 @@ public partial class AvaloniaGLControl
         if (cp.Properties.IsMiddleButtonPressed)
         {
             if (e.ClickCount == 2)
-            {
                 GLControl.ZoomFit();
-                GLControl.Invalidate();
-            }
+
             else
-            {
                 PanStart = new MouseStart(GLControl, cp_pos);
             }
-        }
 
         else if (cp.Properties.IsLeftButtonPressed)
         {
-            // TODO: gesture orbit
-
             OrbitStart = new MouseStart(GLControl, cp_pos);
 
+            lastPressTimestamp = DateTime.Now;
         }
     }
 
@@ -76,7 +73,51 @@ public partial class AvaloniaGLControl
             PanStart = null;
 
         if (OrbitStart is not null && !cp.Properties.IsLeftButtonPressed)
+        {
             OrbitStart = null;
+
+            if (lastPressTimestamp is not null)
+            {
+                var pressDurationMs = (DateTime.Now - lastPressTimestamp.Value).TotalMilliseconds;
+
+                // if a single click return
+                if (pressDurationMs <= 250 && glModel.SelectionMode)
+                {
+                    var lraycast = GLControl.RayCastLocal(cp.Position.ToVector2());
+
+                    var tol = glModel.LBBox.Size.Max() / 50;
+
+                    var mm = GLControl.ModelMatrix;
+                    var vm = GLControl.ViewMatrix;
+
+                    var hitNfo = glModel.Figures
+                        .Where(fig => fig.Visible)
+                        // retrieve nearest figure primitives to the raycast
+                        .SelectMany(fig => lraycast.Intersect(tol, fig))
+                        // sort camera nearest primitive
+                        .Select(hitTest => new
+                        {
+                            hitTest,
+                            eyeHitCoord = WordlToEye(LocalToWorld(ObjectToLocal(hitTest.HitCoord, hitTest.Figure.ObjectMatrix), mm), vm)
+                        })
+                        .ToList()
+                        .OrderBy(nfo => nfo.hitTest.Distance)
+                        .OrderByDescending(nfo => nfo.eyeHitCoord.Z)
+                        .FirstOrDefault();                    
+
+                    if (hitNfo is not null)
+                    {
+                        hitNfo.hitTest.Primitive.Vertexes.ForEach(vtx =>
+                        {
+                            vtx.ToggleFlags(GLVertexFlag.Selected);
+                        });                        
+
+                        GLControl.InvalidateAll();
+                        // GLControl.Invalidate();
+                    }
+                }
+            }
+        }
     }
 
     // HashSet<GLFigure<IGLPrimitive>> highlightEntities = new HashSet<GLFigure<IGLPrimitive>>();
@@ -89,9 +130,9 @@ public partial class AvaloniaGLControl
         base.OnPointerMoved(e);
         if (e.Handled) return;
 
-        if (model is null) return;
+        if (glModel is null) return;
 
-        var bbox = model.LBBox;
+        var bbox = glModel.LBBox;
         if (bbox.IsEmpty) return;
 
         var mouse_cur_pt = e.GetCurrentPoint(this);

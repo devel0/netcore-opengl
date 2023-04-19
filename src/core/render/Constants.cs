@@ -105,6 +105,11 @@ public static partial class Constants
     public const string ATTNAME_vTexCoord = "vTexCoord";
 
     /// <summary>
+    /// Name of vertex shader attribute ( flags ).
+    /// </summary>
+    public const string ATTNAME_vFlags = "vFlags";
+
+    /// <summary>
     /// Name of the uniform shader variable that describe the index of the light to evaluate. ( used in depth shader ).
     /// </summary>
     public const string UNINAME_uLightIdx = "uLightIdx";
@@ -337,6 +342,11 @@ public static partial class Constants
     /// (Default) gl control use shadow flag.
     /// </summary>
     public const bool DEFAULT_UseShadows = true;
+
+    /// <summary>
+    /// (Default) gl control selection mode flag.
+    /// </summary>
+    public const bool DEFAULT_SelectionMode = false;
 
     /// <summary>
     /// (Default) gl control angle view addition in standard cube views (deg).

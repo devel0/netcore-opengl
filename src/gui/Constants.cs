@@ -60,7 +60,12 @@ public static class Constants
     /// <summary>
     /// (Default) Toggle use shadow key gesture.
     /// </summary>
-    public static readonly KeyGesture DEFAULT_ToggleUseShadowGesture = new KeyGesture(Key.S);
+    public static readonly KeyGesture DEFAULT_ToggleUseShadowGesture = new KeyGesture(Key.S, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Toggle selection mode key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_ToggleSelectionModeGesture = new KeyGesture(Key.S);
 
     /// <summary>
     /// (Default) Camera pan left key gesture.

@@ -298,9 +298,9 @@ public partial class GLControl : INotifyPropertyChanged
             using (var Vao = new GLVertexArrayObject<GLVertexStruct>(GL))
             {
 
-                // VERTEX 1                                                      | VERTEX 2           | ...
-                // Position   Normal     MatColor   MatProp            TextureST | ...                | ...
-                // X Y Z      Nx Ny Nz   R G B A    lAmb lDiff lSpec   S T       | ...                | ...
+                // VERTEX 1                                                              | VERTEX 2           | ...
+                // Position   Normal     MatColor   MatProp            TextureST   Flags | ...                | ...
+                // X Y Z      Nx Ny Nz   R G B A    lAmb lDiff lSpec   S T         (uint)| ...                | ...
 
                 var off = 0;
                 var compCnt = 3;
@@ -379,6 +379,21 @@ public partial class GLControl : INotifyPropertyChanged
                         components: compCnt,
                         componentType: VertexAttribPointerType.Float,
                         normalized: false);
+                }
+                off += compCnt * compSize;
+
+                //--               
+
+                // Flags(uint)
+                compSize = sizeof(uint);
+                compCnt = 1;
+                loc = shader.GetAttributeLocation(ATTNAME_vFlags);
+                if (loc is not null)
+                {
+                    Vao.AttribIPointer(loc.Value,
+                        offset: off,
+                        components: compCnt,
+                        componentType: VertexAttribIType.UnsignedInt);
                 }
                 off += compCnt * compSize;
 

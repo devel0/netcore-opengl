@@ -292,6 +292,28 @@ public partial class GLModel : IGLContextObject
 
     #endregion
 
+    #region SelectionMode
+    
+    private bool _SelectionMode = DEFAULT_SelectionMode;
+    /// <summary>
+    /// If true figures can be selected, useful to change rotation center.<br/>    
+    /// </summary>
+    public bool SelectionMode
+    {
+        get => _SelectionMode;
+        set
+        {
+             var changed = value != _SelectionMode;
+             if (changed)
+             {
+                 _SelectionMode = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     List<GLVertexManager> _CustomVertexManagers = new List<GLVertexManager>();
 
     /// <summary>

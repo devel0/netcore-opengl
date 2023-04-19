@@ -19,9 +19,9 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
     #region forwarders
 
-    GLModel model => GLControl.GLModel;
+    GLModel glModel => GLControl.GLModel;
 
-    public GLContext GLContext => model.GLContext;
+    public GLContext GLContext => glModel.GLContext;
 
     internal GL GL => GLContext.GL;
 
@@ -74,7 +74,39 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             // used by GLView to listen for GLControl prop changes ( Title, Overlay )
             GLControlConnected?.Invoke(this, EventArgs.Empty);
 
-            _glControl.PropertyChanged += (sender, e) =>
+            _glControl.PropertyChanged += GLControl_PropertyChanged;
+            _glControl.GLModel.PropertyChanged += GLModel_PropertyChanged;
+
+            this.LayoutUpdated += AvaloniaGLControl_LayoutUpdated;
+            SetDefaultKeyGestures();
+            SetCursor();
+
+            OnPropertyChanged();
+        }
+    }
+
+    #endregion
+
+    void SetCursor()
+    {
+        var selectionMode = glModel.SelectionMode;
+
+        if (selectionMode)
+            this.Cursor = new Cursor(StandardCursorType.Hand);
+
+        else
+            this.Cursor = Cursor.Default;
+    }
+
+    private void GLModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(GLModel.SelectionMode))
+        {
+            SetCursor();
+        }
+    }
+
+    private void GLControl_PropertyChanged(object sender, PropertyChangedEventArgs e)
             {
                 if (e.PropertyName == nameof(GLControl.IdentifyCoord))
                 {

@@ -35,6 +35,7 @@ in VertexData
     vec4 matColor;
     vec3 matProp;
     vec2 texCoord;
+    flat uint flags;
     // camera pos [world]
     vec3 cameraPos;
 }
@@ -64,6 +65,7 @@ out VertexData
     vec4 matColor;
     vec3 matProp;
     vec2 texCoord;
+    flat uint flags;
     // camera pos [world]
     vec3 cameraPos;
 }
@@ -93,6 +95,7 @@ void main()
     vs_out.matProp = vec3(1, 1, 1);
     vs_out.texCoord = vec2(0, 0);
     vs_out.cameraPos = vec3(0, 0, 0);
+    vs_out.flags = 0;
 
     for (int i = 0; i < 3; ++i) {
         int idx = i;

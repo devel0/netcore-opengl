@@ -80,6 +80,15 @@ public partial class GLControl
         if (invalidate) Invalidate();
     }
 
+    /// <summary>
+    /// Toggle (model) selection mode.
+    /// </summary>
+    /// <param name="invalidate">If true refresh the scene.</param>    
+    public void ToggleSelectionMode(bool invalidate = DEFAULT_INVALIDATE)
+    {
+        GLModel.SelectionMode = !GLModel.SelectionMode;
+        if (invalidate) Invalidate();
+    }
 
     /// <summary>
     /// Zoom eye space by given scale factor.

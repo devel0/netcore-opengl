@@ -24,7 +24,8 @@ public class GLVertex : IGLVertex
         Normal = EffectiveNormal,
         MatColor = MaterialColor,
         MatProp = MaterialProperties,
-        TextureST = TextureST
+        TextureST = TextureST,
+        Flags = (uint)Flags
     };
 
     public uint? Index { get; internal set; }
@@ -150,7 +151,7 @@ public class GLVertex : IGLVertex
                 _Normal = value;
 
                 if (ParentFigure is not null)
-                    ((GLVertexManager?)ParentVertexManager)?.AddVertex(this);
+                    ((GLVertexManager?)ParentVertexManager)?.AddVertex(this, computeNormal: false);
 
                 OnPropertyChanged();
 
@@ -236,10 +237,37 @@ public class GLVertex : IGLVertex
         }
     }
 
+    #endregion    
+
+    #region Flags
+
+    private GLVertexFlag _Flags = 0;
+    
+    public GLVertexFlag Flags
+    {
+        get => _Flags;
+        set
+        {
+            var changed = value != _Flags;
+            if (changed)
+            {
+                if (ParentFigure is not null)
+                    ((GLVertexManager?)ParentVertexManager)?.RemoveVertex(this);
+
+                _Flags = value;
+
+                if (ParentFigure is not null)
+                    ((GLVertexManager?)ParentVertexManager)?.AddVertex(this);
+
+                OnPropertyChanged();
+            }
+        }
+    }
+
     #endregion
 
     public string Signature =>
-        Invariant($"{Position}_{(ScreenCoordMode ? 1 : 0)}_{MaterialColor}_{MaterialProperties}_{Normal}_{TextureST}");
+        Invariant($"{Position}_{(ScreenCoordMode ? 1 : 0)}_{MaterialColor}_{MaterialProperties}_{Normal}_{TextureST}_{(long)Flags}");
 
     /// <summary>
     /// Create a gl vertex ( default 0,0,0 ) [object].
@@ -337,5 +365,7 @@ public static partial class Constants
     /// (Default) vertex texture mapping coordinate (0,0).
     /// </summary>
     public static readonly Vector2 DEFAULT_TexCoord = Vector2.Zero;
+
+    
 
 }

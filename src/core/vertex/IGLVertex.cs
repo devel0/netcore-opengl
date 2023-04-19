@@ -1,6 +1,17 @@
 namespace SearchAThing.OpenGL.Core;
 
 /// <summary>
+/// 32bit vertex flags
+/// </summary>
+public enum GLVertexFlag
+{
+    /// <summary>
+    /// VERTEX_FLAG_SELECTED : if set the vertex will coloured to appears as selected.
+    /// </summary>    
+    Selected = (1 << 0),
+};
+
+/// <summary>
 /// Represent a vertex and its the base object managed by the <see cref="GLVertexManager"/>.<br/>
 /// Primitives such as <see cref="GLPoint"/>, <see cref="GLLine"/> and <see cref="GLTriangle"/> store 
 /// their vertex information using this type.<br/>
@@ -62,6 +73,14 @@ public interface IGLVertex : IGLVertexManagerObject, INotifyPropertyChanged
     /// </summary>    
     [JsonProperty]
     Vector2 TextureST { get; set; }
+
+    /// <summary>
+    /// Vertex flags can used to switch some vertex feature.<br/>
+    /// By default no flags are active.
+    /// <seealso cref="GLVertexFlag"/>
+    /// </summary>
+    [JsonProperty]
+    GLVertexFlag Flags { get; set; }
 
     /// <summary>
     /// Primitive referencing this vertex in one of their components.<br/>
@@ -135,5 +154,44 @@ public static partial class Ext
     /// Convert given gl vertex to dxf vector3.
     /// </summary>    
     public static netDxf.Vector3 ToDxfVector3(this IGLVertex vertex) => vertex.Position.ToDxfVector3();
+
+    /// <summary>
+    /// Set given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which sets flags.</param>
+    /// <param name="mask">Flags to set.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static IGLVertex SetFlags(this IGLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags |= mask;
+        return vertex;
+    }
+
+    /// <summary>
+    /// Clear given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which clear flags.</param>
+    /// <param name="mask">Flags to clear.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static IGLVertex ClearFlags(this IGLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags &= mask;
+        return vertex;
+    }
+
+    /// <summary>
+    /// Toggle given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which toggle flags.</param>
+    /// <param name="mask">Flags to toggle.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static IGLVertex ToggleFlags(this IGLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags ^= mask;
+        return vertex;
+    }
 
 }
