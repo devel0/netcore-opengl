@@ -211,6 +211,28 @@ public abstract class GLFigureBase : IGLFigure
 
     #endregion
 
+    #region Selected
+    
+    private bool _Selected = false;
+    /// <summary>
+    /// Selected.
+    /// </summary>
+    public bool Selected
+    {
+        get => _Selected;
+        set
+        {
+             var changed = value != _Selected;
+             if (changed)
+             {
+                 _Selected = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     #region ScreenCoord
 
     private bool _ScreenCoord = DEFAULT_ScreenCoord;

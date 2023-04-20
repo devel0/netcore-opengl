@@ -85,7 +85,7 @@ public partial class AvaloniaGLControl
                 {
                     var lraycast = GLControl.RayCastLocal(cp.Position.ToVector2());
 
-                    var tol = glModel.LBBox.Size.Max() / 50;
+                    var tol = glModel.LBBox.TolHint;
 
                     var mm = GLControl.ModelMatrix;
                     var vm = GLControl.ViewMatrix;
@@ -107,20 +107,14 @@ public partial class AvaloniaGLControl
 
                     if (hitNfo is not null)
                     {
-                        hitNfo.hitTest.Primitive.Vertexes.ForEach(vtx =>
-                        {
-                            vtx.ToggleFlags(GLVertexFlag.Selected);
-                        });                        
+                        glModel.ToggleSelectPrimitives(new[] { hitNfo.hitTest.Primitive });
 
                         GLControl.InvalidateAll();
-                        // GLControl.Invalidate();
                     }
                 }
             }
         }
     }
-
-    // HashSet<GLFigure<IGLPrimitive>> highlightEntities = new HashSet<GLFigure<IGLPrimitive>>();
 
     DebounceAction<Vector2>? IdentifyCoordDebounce = null;
     GLVertexManager? IdentifyCoordVtxMgr = null;
@@ -147,6 +141,9 @@ public partial class AvaloniaGLControl
         var size = GLControl.Size();
         var isPerspective = GLControl.Perspective;
 
+        if (mouse_cur_pt.Properties.IsLeftButtonPressed)
+            lastPressTimestamp = null; // avoid false click on move
+
         if (GLControl.IdentifyCoord)
         {
             if (IdentifyCoordDebounce is null)
@@ -164,37 +161,35 @@ public partial class AvaloniaGLControl
 
                         var lraycast = GLControl.RayCastLocal(screen: mouse_coord);
 
-                        var tol = glModel.LBBox.Size.Max() / 50;
+                        var tol = glModel.LBBox.TolHint;
 
-                        var q = glModel.Figures
+                        var hitNfo = glModel.Figures
                             .Where(fig => fig.Visible)
-                            .SelectMany(fig => fig.Vertexes().Select(vtx => new { fig = fig, vtx = vtx }))
-                            .GroupBy(nfo => nfo.fig)
-                            .Select(nfo => new
+                            // retrieve nearest figure primitives to the raycast
+                            .SelectMany(fig => lraycast.Intersect(tol, fig))
+                            // sort camera nearest primitive
+                            .Select(hitTest => new
                             {
-                                vtxs = nfo.Select(v => v.vtx),
-                                fig = nfo.Key,
-                                oraycast = nfo.Key.ObjectMatrixIsIdentity ? lraycast : lraycast.Transform(nfo.Key.ObjectMatrix.Inverse())
+                                hitTest,
+                                eyeHitCoord = WordlToEye(LocalToWorld(ObjectToLocal(hitTest.HitCoord, hitTest.Figure.ObjectMatrix), mm), vm)
                             })
-                            .SelectMany(nfo => nfo.vtxs
-                            .Select(vtx => new
-                            {
-                                projDst = nfo.oraycast.Contains(tol, vtx.Position),
-                                ocoord = Vector3.Transform(vtx.Position, nfo.fig.ObjectMatrix.Inverse()),
-                                vtx = vtx
-                            })
-                            .Where(nfo => nfo.projDst is not null)
-                            .OrderBy(nfo => nfo.projDst))
-                            .ToList();
+                            .ToList()
+                            .OrderBy(nfo => nfo.hitTest.Distance)
+                            .OrderByDescending(nfo => nfo.eyeHitCoord.Z)
+                            .FirstOrDefault();
 
                         IdentifyCoordVtxMgr.Clear();
 
-                        if (q.Count > 0)
+                        if (hitNfo is not null)
                         {
-                            IdentifyCoordVtxMgr.AddFigure(new GLPointFigure(q[0].ocoord) { PointSize = 10 }
+                            IdentifyCoordVtxMgr.AddFigure(new GLPointFigure(hitNfo.hitTest.HitCoord) 
+                                {
+                                    PointSize = 10,
+                                    ObjectMatrix = hitNfo.hitTest.Figure.ObjectMatrix
+                                }
                                 .SetOrder(1)
                                 .SetColor(Color.Magenta));
-                            GLControl.ControlOverlay1 = $"tol:{tol} cnt:{q.Count} ==> {q[0].ocoord.Fmt()}";
+                            GLControl.ControlOverlay1 = $"tol:{tol} ==> {hitNfo.hitTest.HitCoord.Fmt()}";
                         }
 
                         else

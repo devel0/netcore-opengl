@@ -242,6 +242,11 @@ public static class Constants
     /// </summary>
     public static readonly KeyGesture DEFAULT_ToggleCameraObject = new KeyGesture(Key.C, KeyModifiers.Control);
 
+    /// <summary>
+    /// (Default) Set clear selection key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_ClearSelectionGesture = new KeyGesture(Key.Escape);
+
     #endregion
 
     #region views

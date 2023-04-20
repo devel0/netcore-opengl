@@ -243,6 +243,11 @@ public class GLVertex : IGLVertex
 
     private GLVertexFlag _Flags = 0;
     
+    /// <summary>
+    /// Vertex flags can used to switch some vertex feature.<br/>
+    /// By default no flags are active.
+    /// <seealso cref="GLVertexFlag"/>
+    /// </summary>
     public GLVertexFlag Flags
     {
         get => _Flags;
@@ -345,6 +350,59 @@ public class GLVertex : IGLVertex
     }
 
     public override string ToString() => Invariant($"{Position}");
+
+}
+
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Test given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which test flags.</param>
+    /// <param name="mask">Flags to test.</param>
+    /// <returns>True if all mask bits are set.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static bool TestFlags(this GLVertex vertex, GLVertexFlag mask) => (vertex.Flags & mask) == mask;
+
+    /// <summary>
+    /// Set given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which sets flags.</param>
+    /// <param name="mask">Flags to set.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static GLVertex SetFlags(this GLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags |= mask;
+        return vertex;
+    }
+
+    /// <summary>
+    /// Clear given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which clear flags.</param>
+    /// <param name="mask">Flags to clear.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static GLVertex ClearFlags(this GLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags &= ~mask;
+        return vertex;
+    }
+
+    /// <summary>
+    /// Toggle given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which toggle flags.</param>
+    /// <param name="mask">Flags to toggle.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static GLVertex ToggleFlags(this GLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags ^= mask;
+        return vertex;
+    }
 
 }
 

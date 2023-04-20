@@ -79,6 +79,90 @@ public partial class GLModel : IGLContextObject
 
     #endregion
 
+    #region SelectedFigures
+
+    ObservableCollection<GLFigureBase> SelectedFiguresOBC { get; set; } =
+        new HSObservableCollection<GLFigureBase>();
+
+    ReadOnlyObservableCollection<GLFigureBase>? _SelectedFigures = null;
+
+    /// <summary>
+    /// Selected figures.
+    /// </summary>    
+    public ReadOnlyObservableCollection<GLFigureBase> SelectedFigures
+    {
+        get
+        {
+            if (_SelectedFigures is null)
+                _SelectedFigures = new ReadOnlyObservableCollection<GLFigureBase>(SelectedFiguresOBC);
+
+            return _SelectedFigures;
+        }
+    }
+
+    #endregion
+
+    #region SelectedPrimitives
+
+    ObservableCollection<GLPrimitiveBase> SelectedPrimitiveOBC { get; set; } =
+        new HSObservableCollection<GLPrimitiveBase>();
+
+    ReadOnlyObservableCollection<GLPrimitiveBase>? _SelectedPrimitives = null;
+
+    /// <summary>
+    /// Selected primitives.
+    /// </summary>    
+    public ReadOnlyObservableCollection<GLPrimitiveBase> SelectedPrimitives
+    {
+        get
+        {
+            if (_SelectedPrimitives is null)
+                _SelectedPrimitives = new ReadOnlyObservableCollection<GLPrimitiveBase>(SelectedPrimitiveOBC);
+
+            return _SelectedPrimitives;
+        }
+    }
+
+    #endregion
+
+    public void ToggleSelectPrimitives(IEnumerable<GLPrimitiveBase> primitives)
+    {
+        foreach (var primitive in primitives)
+        {
+            if (SelectedPrimitiveOBC.Contains(primitive))
+                SelectedPrimitiveOBC.Remove(primitive);
+
+            else
+                SelectedPrimitiveOBC.Add(primitive);
+
+            foreach (var vtx in primitive.Vertexes)
+            {
+                vtx.ToggleFlags(GLVertexFlag.Selected);
+            }
+        }
+    }
+
+    public void ClearSelection()
+    {
+        {
+            var selectedPrimitives = SelectedPrimitiveOBC.ToList();
+            foreach (var primitive in selectedPrimitives)
+            {
+                foreach (var vtx in primitive.Vertexes)
+                    vtx.ClearFlags(GLVertexFlag.Selected);
+            }
+            SelectedPrimitiveOBC.Clear();
+        }
+
+        {
+            var selectedFigures = SelectedFiguresOBC.ToList();
+            foreach (var figure in selectedFigures)
+                figure.Selected = false;
+
+            SelectedFiguresOBC.Clear();
+        }
+    }
+
     #region GLVertexManager
 
     private GLVertexManager? _VtxMgr = null;
