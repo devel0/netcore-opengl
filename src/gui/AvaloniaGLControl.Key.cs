@@ -161,7 +161,7 @@ public partial class AvaloniaGLControl
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.ToggleIdentifyCoord"/>.
     /// </summary>
-    public KeyGesture? ToggleIdentifyCoord = null;
+    public KeyGesture? ToggleIdentifyCoordGesture = null;
 
     /// <summary>
     /// Key gesture associated to <see cref="AvaloniaGLControl.ShowDevTool"/>.
@@ -278,6 +278,7 @@ public partial class AvaloniaGLControl
         SplitViewCloseGesture =
 
         ToggleModelBBoxGesture =
+        ToggleIdentifyCoordGesture =
         SetRotationCenterGesture =
 
         null;
@@ -326,7 +327,7 @@ public partial class AvaloniaGLControl
 
         ZoomFitGesture = DEFAULT_ZoomFitGesture;
         InvalidateGesture = DEFAULT_InvalidateGesture;
-        ToggleIdentifyCoord = DEFAULT_ToggleIdentifyCoordGesture;
+        ToggleIdentifyCoordGesture = DEFAULT_ToggleIdentifyCoordGesture;
 
         ShowDevToolGesture = DEFAULT_DevTool;
         SaveViewGesture = DEFAULT_SaveView;
@@ -399,7 +400,7 @@ public partial class AvaloniaGLControl
 
         if (MatchGesture(ZoomFitGesture)) { GLControl.ZoomFit(); e.Handled = true; return; }
         if (MatchGesture(InvalidateGesture)) { GLControl.Invalidate(InvalidateEnum.RebuildModelAndRedraw); e.Handled = true; return; }
-        if (MatchGesture(ToggleIdentifyCoord)) { GLControl.ToggleIdentifyCoord(); e.Handled = true; return; }
+        if (MatchGesture(ToggleIdentifyCoordGesture)) { GLControl.ToggleIdentifyCoord(); e.Handled = true; return; }
 
         //
 

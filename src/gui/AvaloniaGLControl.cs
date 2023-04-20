@@ -2,7 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Media.Imaging;
 using Avalonia.Threading;
-using Newtonsoft.Json;
+
 
 namespace SearchAThing.OpenGL.GUI;
 
@@ -90,9 +90,13 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     void SetCursor()
     {
         var selectionMode = glModel.SelectionMode;
+        var identifyMode = GLControl.IdentifyCoord;
 
         if (selectionMode)
             this.Cursor = new Cursor(StandardCursorType.Hand);
+
+        else if (identifyMode)
+            this.Cursor = new Cursor(StandardCursorType.Cross);
 
         else
             this.Cursor = Cursor.Default;
@@ -107,26 +111,19 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     }
 
     private void GLControl_PropertyChanged(object sender, PropertyChangedEventArgs e)
-            {
-                if (e.PropertyName == nameof(GLControl.IdentifyCoord))
-                {
-                    var identifyCoord = GLControl.IdentifyCoord;
+    {
+        if (e.PropertyName == nameof(GLControl.IdentifyCoord))
+        {
+            var identifyCoord = GLControl.IdentifyCoord;
 
-                    if (identifyCoord)
-                        StartIdentifyCoord();
-                    else
-                        StopIdentifyCoord();
-                }
-            };
+            if (identifyCoord)
+                StartIdentifyCoord();
+            else
+                StopIdentifyCoord();
 
-            this.LayoutUpdated += AvaloniaGLControl_LayoutUpdated;
-            SetDefaultKeyGestures();
-
-            OnPropertyChanged();
+            SetCursor();
         }
     }
-
-    #endregion
 
     #region Size
 
