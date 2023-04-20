@@ -69,7 +69,17 @@ public static partial class Ext
         if (oLen == 0) throw new Exception($"project on null vector");
 
         return Vector3.Dot(v, other) / oLen * Vector3.Normalize(other);
-    }
+    }    
+
+    /// <summary>
+    /// States if two vectors are parallel.
+    /// </summary>
+    /// <param name="v">This vector.</param>
+    /// <param name="tol">Length tolerance (use <see cref="Sci.Constants.NormalizedLengthTolerance"/> for normalized vectors).</param>
+    /// <param name="other">Other vector.</param>
+    /// <returns>True if two vectors are parallel.</returns>
+    public static bool IsParallel(this in Vector3 v, float tol, in Vector3 other) =>
+        v.ToVector3D().IsParallelTo(tol, other);
 
     /// <summary>
     /// Project this vector to given xy plane.

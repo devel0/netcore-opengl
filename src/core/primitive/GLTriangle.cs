@@ -198,7 +198,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
         {
             yield return V1;
             yield return V2;
-            yield return V3;            
+            yield return V3;
         }
     }
 
@@ -222,5 +222,30 @@ public static partial class Ext
     /// Create a gl figure from given gl triangles.
     /// </summary>    
     public static GLTriangleFigure ToFigure(this IEnumerable<GLTriangle> triangles) => new GLTriangleFigure(triangles);
+
+    /// <summary>
+    /// Create sci Triangle3D from given gl triangle.
+    /// </summary>
+    public static Triangle3D ToTriangle3D(this GLTriangle tri) =>
+        new Triangle3D(tri.V1.Position.ToVector3D(), tri.V2.Position.ToVector3D(), tri.V3.Position.ToVector3D());
+
+    /// <summary>
+    /// Retrieve intersection segment if exists between given two triangles.
+    /// </summary>
+    /// <param name="tol">Length comparision tolerance.</param>
+    /// <param name="tri1">First triangle.</param>
+    /// <param name="tri2">Second triangle.</param>
+    /// <returns></returns>
+    public static Line? Intersect(this GLTriangle tri1, float tol, GLTriangle tri2)
+    {
+        if (tri1.LBBox().Contains(tol, tri2.LBBox(), testZ: true))
+        {
+            var q = tri1.ToTriangle3D().Intersect(tol, tri2.ToTriangle3D());
+            if (q is not null)
+                return q.ToLine();
+        }
+
+        return null;
+    }
 
 }

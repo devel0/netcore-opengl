@@ -304,7 +304,7 @@ public abstract class GLFigureBase : IGLFigure
         var res = new BBox(cs);
 
         foreach (var primitive in Primitives)
-            res.ApplyUnion(primitive.BBox(cs).Transform(ObjectMatrix));
+            res.ApplyUnion(primitive.LBBox(cs).Transform(ObjectMatrix));
 
         return res;
     }

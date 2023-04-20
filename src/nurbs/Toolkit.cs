@@ -1,7 +1,7 @@
 ﻿namespace SearchAThing.OpenGL.Nurbs;
 
 using GShark.Geometry;
- 
+
 public static partial class Toolkit
 {
 
@@ -12,13 +12,15 @@ public static partial class Toolkit
     /// <param name="color">color of triangles generated</param>
     /// <param name="N">number of nurb divisions</param>
     /// <returns>triangles mesh of the nurb</returns>
-    public static IEnumerable<GLTriangle> NurbToGL(this NurbsSurface nurb, Color color, int N = 6)
+    public static IEnumerable<GLTriangle> NurbToGL(this NurbsSurface nurb, Color? color = null, int N = 6)
     {
         var u1 = 0d;
         var u2 = 0d;
         var v1 = 0d;
         var v2 = 0d;
-        var step = 1d / N;        
+        var step = 1d / N;
+
+        int triCnt = 0;
 
         for (int ui = 0; ui < N; ++ui)
         {
@@ -36,11 +38,13 @@ public static partial class Toolkit
                 var p3 = nurb.PointAt(u2, v2).ToVector3();
                 var p4 = nurb.PointAt(u1, v2).ToVector3();
 
-                var plate = new Plate(p1, p2, p3, p4);
+                var plate = new Plate(p1, p2, p3, p4);                
 
                 foreach (var tri in plate.GetTriangles(color))
-                {
+                {                  
                     yield return tri;
+
+                    ++triCnt;
                 }
 
                 v1 += step;

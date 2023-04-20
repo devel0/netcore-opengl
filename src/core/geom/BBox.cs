@@ -370,6 +370,20 @@ public class BBox
     /// <returns>Transformed bbox.</returns>
     public BBox Transform(Matrix4x4 m) => new BBox(Points.Select(pt => Vector3.Transform(pt, m)));
 
+    /// <summary>
+    /// Retrieve length comparision tolerance hint from bbox size.<br/>
+    /// If bbox empty a default tolerance <see cref="DefaultTolerance"/> will retrieved.
+    /// </summary>    
+    public float TolHint
+    {
+        get
+        {            
+            var bboxSize = Size.Max();
+            if (IsEmpty || bboxSize == 0) return DefaultTolerance;
+            return bboxSize * DefaultTolerance;
+        }
+    }
+
     public override string ToString() => IsEmpty ? "Empty" : $"Min:{Min} Max:{Max} Δ:{Size}";
 
 }
