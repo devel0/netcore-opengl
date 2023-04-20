@@ -36,38 +36,66 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
 
     #region ComputeNormal
 
-    private ComputeTriangleNormalDelegate _ComputeNormal = DefaultComputeNormal;
+    public ComputeTriangleNormalDelegate ComputeNormal { get; private set; } = DefaultComputeNormal;
 
-    public ComputeTriangleNormalDelegate ComputeNormal
+    public bool ComputeNormalMean { get; private set; }
+
+    public void SetupComputeNormal(bool mean = false, ComputeTriangleNormalDelegate? computeNormal = null)
     {
-        get => _ComputeNormal;
-        set
-        {
-            var changed = value != _ComputeNormal;
-            if (changed)
-            {
-                _ComputeNormal = value;
+        ComputeNormalMean = mean;
+
+        if (computeNormal is null)
+            ComputeNormal = DefaultComputeNormal;
+
+        else
+            ComputeNormal = computeNormal;
 
                 RebuildNormal();
 
-                OnPropertyChanged();
-            }
-        }
+        OnPropertyChanged(nameof(ComputeNormal));
+        OnPropertyChanged(nameof(ComputeNormalMean));
     }
 
     #endregion
 
+
     /// <summary>
-    /// Execute <see cref="ComputeNormal"/> function foreach triangle of this figure updating <see cref="GLVertex.Normal"/>.
+    /// Execute <see cref="ComputeNormal"/> function foreach triangle of this figure updating <see cref="GLVertex.Normal"/>.<br/>
+    /// Optionally mean these values if <see cref="ComputeNormalMean"/> was set.
     /// </summary>
-    public void RebuildNormal()
+    /// <param name="onlyMean">If true, vertex normal will not recomputed, only mean on their values will be set.</param>
+    public void RebuildNormal(bool onlyMean = false)
     {
         if (this.IsAttached())
         {
+            var tol = ParentVertexManager!.LBBox.TolHint;
+
             foreach (var triangle in PrimitivesOBC.OfType<GLTriangle>())
             {
                 foreach (var vertex in triangle.Vertexes)
+                {
                     vertex.Normal = ComputeNormal(triangle, vertex);
+                }
+            }
+
+            if (ComputeNormalMean)
+            {
+                this.Vertexes()
+                    .GroupBy(vtx => vtx.PositionSignature(tol))
+                    .ToList()
+                    .ForEach(grp =>
+                    {
+                        int cnt = 0;
+                        var n = Vector3.Zero;
+                        foreach (var vtx in grp)
+                        {
+                            n += vtx.Normal;
+                            ++cnt;
+                        }
+                        n /= cnt;
+                        foreach (var vtx in grp)
+                            vtx.Normal = n;
+                    });
             }
         }
     }

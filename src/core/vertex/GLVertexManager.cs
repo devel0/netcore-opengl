@@ -112,7 +112,7 @@ public class GLVertexManager : IGLVertexManager
         }
     }
 
-    #endregion
+    #endregion   
 
     public bool ExpandModelBBox { get; private set; }
 
@@ -142,11 +142,11 @@ public class GLVertexManager : IGLVertexManager
 
     #region vertex
 
-    internal void AddVertex(GLVertex vertex)
+    internal void AddVertex(GLVertex vertex, bool computeNormal = true)
     {
         if (vertex.Index is not null) throw new Exception($"vertex already added");
 
-        if (vertex.ParentPrimitive is GLTriangle tri && vertex.ParentFigure is GLTriangleFigure triFig)
+        if (computeNormal && vertex.ParentPrimitive is GLTriangle tri && vertex.ParentFigure is GLTriangleFigure triFig)
         {
             var normal = triFig.ComputeNormal(tri, vertex);
             vertex.SetNormal(normal);
@@ -282,6 +282,9 @@ public class GLVertexManager : IGLVertexManager
         {
             AddPrimitive(primitive, figure);
         }
+
+        if (figure is GLTriangleFigure triFig && triFig.ComputeNormalMean)        
+            triFig.RebuildNormal(onlyMean: true);        
 
         FiguresHS.Add(figure);
         FigureAdded?.Invoke(this, figure);

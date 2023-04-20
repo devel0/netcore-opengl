@@ -36,10 +36,7 @@ public class UVSphere
     {
         var fig = new GLTriangleFigure(Triangles(divisions));
 
-        fig.ComputeNormal = (tri, v) =>
-        {
-            return Vector3.Normalize(v.Position - Center);
-        };
+        fig.SetupComputeNormal(computeNormal: (tri, v) => Vector3.Normalize(v.Position - Center));
 
         return fig;
     }

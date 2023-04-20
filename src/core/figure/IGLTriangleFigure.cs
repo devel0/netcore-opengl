@@ -19,14 +19,16 @@ public interface IGLTriangleFigure : IGLFigure
     /// TextureST vertex coords of triangles vertexes will be used to map the texture.<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>
-    IGLTexture2D? Texture2D { get; set; }
+    GLTexture2D? Texture2D { get; set; }    
 
     /// <summary>
-    /// Compute triangle normal function ( Default: <see cref="GLTriangleFigure.DefaultComputeNormal"/> ).<br/>
-    /// Arguments are IGLTriangle, IGLVertex.<br/>
+    /// Set the triangle compute normal function.<br/>
+    /// If no argument given a default per triangle normal compute will be done.<br/>    
     /// Changing this property imply <see cref="GLTriangleFigure.RebuildNormal"/> event.
-    /// </summary>    
-    ComputeTriangleNormalDelegate ComputeNormal { get; set; }
+    /// </summary>
+    /// <param name="mean">If true a mean of normals triangle vertexes grouped by position will be computed.</param>
+    /// <param name="computeNormal">Allow to override default triangle normal function <see cref="GLTriangleFigure.DefaultComputeNormal"/>.</param>
+    void SetupComputeNormal(bool mean, ComputeTriangleNormalDelegate? computeNormal);
 
     /// <summary>
     /// Add given point to the figure primitives set.
