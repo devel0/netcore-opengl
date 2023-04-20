@@ -264,12 +264,12 @@ public static partial class Constants
     /// <summary>
     /// Width (pixels) of the cube depth shadow.
     /// </summary>
-    public const uint SHADOW_WIDTH = 1024;
+    public static uint SHADOW_WIDTH = 1000;
 
     /// <summary>
     /// Height (pixels) of the cube depth shadow.
     /// </summary>
-    public const uint SHADOW_HEIGHT = 1024;
+    public static uint SHADOW_HEIGHT = 1000;
 
     #endregion
 
@@ -492,5 +492,5 @@ public static partial class Constants
     public static readonly Color DEFAULT_CameraObjectColor = Color.Green;
 
     #endregion
-    
+
 }

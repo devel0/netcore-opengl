@@ -211,6 +211,8 @@ public partial class AvaloniaGLControl
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.ShowCameraObject"/>.
     /// </summary>
+    public KeyGesture? ToggleCameraObjectGesture = null;
+
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.SetRotationCenter"/>.
     /// </summary>
@@ -278,6 +280,7 @@ public partial class AvaloniaGLControl
         SplitViewCloseGesture =
 
         ToggleModelBBoxGesture =
+        ToggleCameraObjectGesture =
         ToggleIdentifyCoordGesture =
         SetRotationCenterGesture =
 
@@ -340,6 +343,7 @@ public partial class AvaloniaGLControl
         SplitViewCloseGesture = DEFAULT_SplitViewClose;
 
         ToggleModelBBoxGesture = DEFAULT_ToggleModelBBox;
+        ToggleCameraObjectGesture = DEFAULT_ToggleCameraObject;
         SetRotationCenterGesture = DEFAULT_SetRotationCenterGesture;
         ClearSelectionGesture = DEFAULT_ClearSelectionGesture;
     }
@@ -441,7 +445,7 @@ public partial class AvaloniaGLControl
             return;
         }
 
-        if (MatchGesture(ToggleCameraObject))
+        if (MatchGesture(ToggleCameraObjectGesture))
         {
             GLControl.ToggleCameraObject();
             return;
