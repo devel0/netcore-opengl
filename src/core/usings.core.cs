@@ -29,6 +29,9 @@ global using Silk.NET.OpenGL;
 global using SearchAThing.Ext;
 global using static SearchAThing.Ext.Toolkit;
 
+global using SearchAThing.Sci;
+global using static SearchAThing.Sci.Toolkit;
+
 global using SearchAThing.OpenGL.Core;
 global using static SearchAThing.OpenGL.Core.Toolkit;
 global using static SearchAThing.OpenGL.Core.Constants;
