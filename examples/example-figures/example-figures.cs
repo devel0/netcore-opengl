@@ -11,7 +11,7 @@ public static partial class Toolkit
         float FIG_RADIUS = 300.0f,
         float TUBE_SPAN = 1000.0f)
     {
-        var circleCenter = new Point3();                
+        var circleCenter = new Point3();
         var NcircleCenter = circleCenter.ToVector3();
 
         var revolveCenter = TUBE_SPAN * new Point3(1, 0, 0);
@@ -57,16 +57,16 @@ public static partial class Toolkit
 
         var revolvePathNurb = new NurbsCurve(revolve_path, 3);
 
-        return new GLTriangleFigure(glNurb.AsEnumerable())
+        var fig = new GLTriangleFigure(glNurb.AsEnumerable());
+
+        fig.SetupComputeNormal(computeNormal: (tri, vtx) =>
         {
-            ComputeNormal = (tri, vtx) =>
-            {                
-                var q = revolvePathNurb!.ClosestPoint(vtx.Position.ToPoint3());
+            var q = revolvePathNurb!.ClosestPoint(vtx.Position.ToPoint3());
 
-                return Vector3.Normalize(vtx.Position - q.ToVector3());
-            }
-        };
+            return Vector3.Normalize(vtx.Position - q.ToVector3());
+        });
 
+        return fig;
     }
 
 }
