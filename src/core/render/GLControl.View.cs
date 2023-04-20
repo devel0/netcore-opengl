@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace SearchAThing.OpenGL.Core;
 
 public partial class GLControl
@@ -313,7 +311,7 @@ public partial class GLControl
         OrthoZoom = nfo.OrthoZoom;
         Near = nfo.Near;
         Far = nfo.Far;
-        UseShadow = nfo.UseShadow;        
+        UseShadow = nfo.UseShadow;
         ShadeWithEdge = nfo.ShadeWithEdge;
         ShowCameraObject = nfo.ShowCameraObject;
         if (nfo.Lights is not null)
@@ -342,6 +340,23 @@ public partial class GLControl
         SetViewNfo(nfo);
 
         Invalidate();
+    }
+
+    public void SetRotationCenter()
+    {
+        var bbox = new BBox();
+
+        foreach (var primitive in GLModel.SelectedPrimitives)
+            bbox.ApplyUnion(primitive.LBBox());
+
+        foreach (var figure in GLModel.SelectedFigures)
+            bbox.ApplyUnion(figure.LBBox());
+
+        if (!bbox.IsEmpty)
+            RotationCenter = bbox.Middle;
+
+        else
+            RotationCenter = this.GLModel.LBBox.Middle;
     }
 
     /// <summary>

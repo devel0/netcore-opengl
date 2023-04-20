@@ -1121,4 +1121,31 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    #region RotationCenter
+    
+    private Vector3? _RotationCenter = null;
+    /// <summary>
+    /// Rotation center [local].
+    /// </summary>
+    public Vector3 RotationCenter
+    {
+        get
+        {
+            if (_RotationCenter is null) return GLModel.LBBox.Middle;
+            
+            return _RotationCenter.Value;
+        }
+        internal set
+        {
+             var changed = value != _RotationCenter;
+             if (changed)
+             {
+                 _RotationCenter = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
 }

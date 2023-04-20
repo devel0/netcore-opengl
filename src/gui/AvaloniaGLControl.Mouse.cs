@@ -17,6 +17,8 @@ public partial class AvaloniaGLControl
         base.OnPointerWheelChanged(e);
         if (e.Handled) return;
 
+        if (GLControl.GLModel.LBBox.IsEmpty) return;
+
         if (e.Delta.Y < 0)
             GLControl.CameraZoomOut();
         else
@@ -52,7 +54,7 @@ public partial class AvaloniaGLControl
 
             else
                 PanStart = new MouseStart(GLControl, cp_pos);
-            }
+        }
 
         else if (cp.Properties.IsLeftButtonPressed)
         {
@@ -103,7 +105,7 @@ public partial class AvaloniaGLControl
                         .ToList()
                         .OrderBy(nfo => nfo.hitTest.Distance)
                         .OrderByDescending(nfo => nfo.eyeHitCoord.Z)
-                        .FirstOrDefault();                    
+                        .FirstOrDefault();
 
                     if (hitNfo is not null)
                     {
@@ -181,7 +183,7 @@ public partial class AvaloniaGLControl
                         IdentifyCoordVtxMgr.Clear();
 
                         if (hitNfo is not null)
-                        {
+                        {                            
                             IdentifyCoordVtxMgr.AddFigure(new GLPointFigure(hitNfo.hitTest.HitCoord) 
                                 {
                                     PointSize = 10,
@@ -213,7 +215,7 @@ public partial class AvaloniaGLControl
 
             // PanStart = null;
         }
-        #endregion
+        #endregion        
 
         #region orbit
         else if (OrbitStart is not null)
@@ -234,7 +236,7 @@ public partial class AvaloniaGLControl
 
             GLControl.ModelRotate(
                 angleXRad, angleYRad,
-                rot_center: bbox.Middle,
+                rot_center: GLControl.RotationCenter,
                 mFrom: glMatrixesFrom);
         }
         #endregion
