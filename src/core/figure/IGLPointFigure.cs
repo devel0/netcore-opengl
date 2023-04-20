@@ -3,6 +3,7 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Specialization of <see cref="IGLFigure"/> for the type <see cref="GLPoint"/>.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLPointFigure : IGLFigure, INotifyPropertyChanged
 {
 
@@ -10,6 +11,7 @@ public interface IGLPointFigure : IGLFigure, INotifyPropertyChanged
     /// Size of the point in pixels [screen] ( Default: 10 ).<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary> 
+    [JsonProperty]
     float PointSize { get; set; }
 
     /// <summary>

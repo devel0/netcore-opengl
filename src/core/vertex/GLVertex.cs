@@ -242,12 +242,13 @@ public class GLVertex : IGLVertex
     #region Flags
 
     private GLVertexFlag _Flags = 0;
-    
+
     /// <summary>
     /// Vertex flags can used to switch some vertex feature.<br/>
     /// By default no flags are active.
     /// <seealso cref="GLVertexFlag"/>
     /// </summary>
+    [JsonProperty]
     public GLVertexFlag Flags
     {
         get => _Flags;
@@ -269,7 +270,7 @@ public class GLVertex : IGLVertex
         }
     }
 
-    #endregion
+    #endregion    
 
     public string Signature =>
         Invariant($"{Position}_{(ScreenCoordMode ? 1 : 0)}_{MaterialColor}_{MaterialProperties}_{Normal}_{TextureST}_{(long)Flags}");
@@ -424,6 +425,6 @@ public static partial class Constants
     /// </summary>
     public static readonly Vector2 DEFAULT_TexCoord = Vector2.Zero;
 
-    
+
 
 }

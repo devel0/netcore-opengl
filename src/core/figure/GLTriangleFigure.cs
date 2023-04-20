@@ -15,9 +15,10 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
 
     #region Texture2D
 
-    private IGLTexture2D? _Texture2D;
+    private GLTexture2D? _Texture2D;
 
-    public IGLTexture2D? Texture2D
+    [JsonProperty]
+    public GLTexture2D? Texture2D
     {
         get => _Texture2D;
         set
@@ -50,7 +51,7 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
         else
             ComputeNormal = computeNormal;
 
-                RebuildNormal();
+        RebuildNormal();
 
         OnPropertyChanged(nameof(ComputeNormal));
         OnPropertyChanged(nameof(ComputeNormalMean));
@@ -58,11 +59,15 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
 
     #endregion
 
+    [JsonConstructor]
+    GLTriangleFigure()
+    {
+    }
 
     /// <summary>
     /// Execute <see cref="ComputeNormal"/> function foreach triangle of this figure updating <see cref="GLVertex.Normal"/>.<br/>
     /// Optionally mean these values if <see cref="ComputeNormalMean"/> was set.
-    /// </summary>
+    /// </summary>        
     /// <param name="onlyMean">If true, vertex normal will not recomputed, only mean on their values will be set.</param>
     public void RebuildNormal(bool onlyMean = false)
     {
