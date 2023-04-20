@@ -94,8 +94,8 @@ public abstract class GLPrimitiveBase : IGLPrimitive
     }
 
     #endregion
-
-    public BBox BBox(in Matrix4x4? cs = null)
+    
+    public BBox LBBox(in Matrix4x4? cs = null)
     {
         var res = new BBox(cs);
 
@@ -126,6 +126,8 @@ public abstract class GLPrimitiveBase : IGLPrimitive
 
         return this;
     }
+
+    public abstract string SimpleCmd(bool includeHeader = true);
 
 }
 

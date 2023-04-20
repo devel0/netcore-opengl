@@ -60,8 +60,8 @@
 						</Style>
 					</Grid.Styles>
 
-					<TextBlock desktop:GridAutoRow.Ref="ModelBtns" Text="Model" Classes="hdr"/>
-					<StackPanel desktop:GridAutoRow.Ref="ModelBtns" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">						
+					<TextBlock desktop:GridAutoRow.Ref="ModelBtns" Text="Model" Classes="hdr" />
+					<StackPanel desktop:GridAutoRow.Ref="ModelBtns" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
 						<Button Content="Save" Click="SaveModelClick" />
 						<Button Content="Load" Margin="10,0,0,0" Click="LoadModelClick" />
 						<Button Content="Export dxf" Margin="10,0,0,0" Click="ExportDxfClick" />
@@ -181,7 +181,7 @@
 
 					<StackPanel desktop:GridAutoRow.Ref="ViewBtns" Grid.ColumnSpan="3" Orientation="Horizontal">
 						<Button Content="Save view" Click="SaveViewClick" />
-						<Button Content="Restore view" Margin="10,0,0,0" Click="RestoreViewClick" />						
+						<Button Content="Restore view" Margin="10,0,0,0" Click="RestoreViewClick" />
 					</StackPanel>
 
 					<!-- <TextBlock desktop:GridAutoRow.Ref="Bottom" Text="YYYY"/> -->
@@ -216,6 +216,7 @@
 					<CheckBox Content="Highlight" Name="CbHighlight"
 						IsChecked="true"
 						Margin="10,0,0,0" />
+					<Button Content="Copy" Click="CopyFigureClick" />
 					<Button Content="Delete" Click="DeleteFigureClick" />
 				</StackPanel>
 

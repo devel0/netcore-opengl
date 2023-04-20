@@ -66,9 +66,16 @@ public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
     int Order { get; set; }
 
     /// <summary>
-    /// Bounding box of the primitive.
+    /// Bounding box of the primitive [local].
     /// </summary>
     /// <param name="cs">(Optional) cs for oriented bounding box.</param>    
-    BBox BBox(in Matrix4x4? cs = null);
+    BBox LBBox(in Matrix4x4? cs = null);
+
+    /// <summary>
+    /// Retrieve e simple cmd representation of this primtiive.<br/>
+    /// Its a textual representation of primitive information useful to regen in a separate tool.
+    /// </summary>    
+    /// <param name="includeHeader">If true header will prepended to form a complete command.</param>    
+    string SimpleCmd(bool includeHeader = true);
 
 }

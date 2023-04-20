@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace SearchAThing.OpenGL.Core;
 
 /// <summary>
@@ -52,5 +50,7 @@ public class GLLineFigure : GLFigureTypeBase<GLLine>, IGLLineFigure
 
         return copy;
     }
+
+    public override string SimpleCmd() => $"{SIMPLE_CMD_LINE} " + string.Join(";", Primitives.Select(w => w.SimpleCmd(false)));
 
 }

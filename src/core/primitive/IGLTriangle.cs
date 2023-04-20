@@ -56,7 +56,7 @@ public static partial class Toolkit
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector3 DefaultTriangleNormal(this IGLTriangle tri) =>
         Vector3.Normalize(Vector3.Cross(tri.V2.Position - tri.V1.Position, tri.V3.Position - tri.V1.Position));
-
+    
     /// <summary>
     /// Average color of triangles vertexes color.
     /// </summary>    
@@ -74,3 +74,28 @@ public static partial class Toolkit
 
 }
 
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Retrieve gl triangle segments {v1,v2},{v2,v3},{v3,v1} [object].
+    /// </summary>    
+    public static IEnumerable<Line> Segments(this IGLTriangle tri)
+    {
+        var v1 = tri.V1.Position;
+        var v2 = tri.V2.Position;
+        var v3 = tri.V3.Position;
+
+        if (tri.ParentFigure is not null && tri.ParentFigure.ObjectMatrix is Matrix4x4 om)
+        {
+            v1 = LocalToObject(v1, om);
+            v2 = LocalToObject(v2, om);
+            v3 = LocalToObject(v3, om);
+        }
+
+        yield return Line.FromTo(v1, v2);
+        yield return Line.FromTo(v2, v3);
+        yield return Line.FromTo(v3, v1);
+    }
+
+}

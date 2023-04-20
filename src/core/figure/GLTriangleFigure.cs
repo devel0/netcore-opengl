@@ -147,4 +147,12 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
     /// </summary>    
     public GLTriangleFigure(IEnumerable<GLTriangle> triangles) : base(triangles) { }
 
+    /// <summary>
+    /// Retrieve simple cmd for a list of triangles.<br/>
+    /// Coordinates of v1,v2,v3 are separated with comma so there are 9 float separated by comma.<br/>
+    /// Further triangles are appended by semi-colon separator.
+    /// [t ]ax1,ay1,az1,ax2,ay2,az2,ax3,ay3,az3;bx1,by1,bz1,bx2,by2,bz2,bx3,by3,bz3;...
+    /// </summary>   
+    public override string SimpleCmd() => $"{SIMPLE_CMD_TRIANGLE} " + string.Join(";", Primitives.Select(w => w.SimpleCmd(false)));
+
 }

@@ -11,6 +11,7 @@ public delegate void FigureInvalidatedDelegate(IGLFigure figure);
 /// <remarks>
 /// All properties are INotifyPropertyChanged managed and allow to be ui reactive.
 /// </remarks>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
 {
 
@@ -50,6 +51,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// While each control has separate model/view/projection matrixes, the figure object matrix
     /// is common to all controls that uses the same model containing this figure instance.
     /// </remarks>
+    [JsonProperty]
     Matrix4x4 ObjectMatrix { get; set; }
 
     /// <summary>
@@ -59,6 +61,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// <remarks>
     /// Changing visbility of a figure affects all controls that uses the same model containing this figure instance.
     /// </remarks>
+    [JsonProperty]
     bool Visible { get; set; }
 
     /// <summary>
@@ -67,6 +70,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// From the opengl point of view figures with higher order ( front ) are drawn firstly then lower order ( back ).<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    
+    [JsonProperty]
     int Order { get; set; }
 
     /// <summary>
@@ -77,6 +81,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// with a model translated by (-sw/2, -sh/2) where sw,sh = screen width,height.<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    
+    [JsonProperty]
     bool ScreenCoordMode { get; set; }
 
     /// <summary>
@@ -91,6 +96,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// mapped as opengl ElementArrayBuffer.
     /// </summary>    
     IEnumerable<uint> Indexes { get; }
+
+    /// <summary>
+    /// Local space bbox of this figure vertexes.
+    /// </summary>
+    /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
+    BBox LBBox(in Matrix4x4? cs = null);
 
     /// <summary>
     /// Object space bbox of this figure vertexes.
@@ -109,6 +120,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// User object
     /// </summary>
     object? Tag { get; set; }
+
+    /// <summary>
+    /// Retrieve e simple cmd representation of this figure.<br/>
+    /// Its a textual representation of figure information useful to regen in a separate tool.
+    /// </summary>
+    string SimpleCmd();
 
 }
 

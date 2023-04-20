@@ -610,4 +610,39 @@ public partial class GLModel : IGLContextObject
         return sb.ToString();
     }
 
+    /// <summary>
+    /// Load figures from simple cmd.<br/>
+    /// <seealso cref="GLPointFigure.SimpleCmd"/>
+    /// <seealso cref="GLLineFigure.SimpleCmd"/>
+    /// <seealso cref="GLTriangleFigure.SimpleCmd"/>
+    /// </summary>
+    public IEnumerable<GLFigureBase> FromSimpleCmd(string simpleCmd)
+    {
+        foreach (var line in simpleCmd.Lines())
+        {
+            if (line.StartsWith(SIMPLE_CMD_POINT))
+            {
+                var pts = ParseVector3(line.StripBegin(SIMPLE_CMD_POINT).Trim(), pointCnt: 1);
+
+                yield return new GLPointFigure(pts);
+            }
+
+            else if (line.StartsWith(SIMPLE_CMD_LINE))
+            {
+
+            }
+
+            else if (line.StartsWith(SIMPLE_CMD_TRIANGLE))
+            {
+                var pts = ParseVector3(line.StripBegin(SIMPLE_CMD_TRIANGLE).Trim(), pointCnt: 3).ToList();
+
+                for (int i = 0; i < pts.Count; i += 3)
+                {
+                    var tri = new GLTriangle(pts[i], pts[i + 1], pts[i + 2]);
+                    yield return new GLTriangleFigure(tri);
+                }
+            }
+        }
+    }
+
 }

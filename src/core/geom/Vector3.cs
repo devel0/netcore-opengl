@@ -90,4 +90,9 @@ public static partial class Ext
     public static string ToString(this in Vector3 v, int digits = 3) =>
         Invariant($"({v.X.ToString(digits)}, {v.Y.ToString(digits)}, {v.Z.ToString(digits)})");
 
+    /// <summary>
+    /// Retrieve x,y,z invariant representation of given Vector3 suitable for usage in SimpleCmd.
+    /// </summary>    
+    internal static string SimpleCmd(this in Vector3 v) => Invariant($"{v.X},{v.Y},{v.Z}");
+
 }

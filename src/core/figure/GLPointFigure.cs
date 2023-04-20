@@ -98,4 +98,6 @@ public class GLPointFigure : GLFigureTypeBase<GLPoint>, IGLPointFigure
     /// <returns>This figure.</returns>
     public GLPointFigure SetPointSize(float pointSize) => this.Act(fig => fig.PointSize = pointSize);
 
+    public override string SimpleCmd() => $"{SIMPLE_CMD_POINT} " + string.Join(";", Primitives.Select(w => w.SimpleCmd(false)));
+
 }

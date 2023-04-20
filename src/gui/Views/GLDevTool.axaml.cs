@@ -448,6 +448,27 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         glSplit.Invalidate();
     }
 
+    private async void CopyFigureClick(object sender, RoutedEventArgs e)
+    {
+        var selectedFigures = dgFigures.SelectedItems.OfType<GLFigureBase>().ToList();
+        if (selectedFigures.Count == 0) return;
+
+        var sb = new StringBuilder();
+
+        foreach (var fig in selectedFigures)
+        {
+            sb.AppendLine(fig.SimpleCmd());
+        }
+
+        var clip = Application.Current?.Clipboard;
+
+        if (clip is not null)
+        {
+            await clip!.SetTextAsync(sb.ToString());
+            GLControl.SendNotification("Clipboard", $"{selectedFigures.Count} figures copied to clipboard");
+        }
+    }
+
     private void DeleteFigureClick(object sender, RoutedEventArgs e)
     {
         var selectedFigures = dgFigures.SelectedItems.OfType<GLFigureBase>().ToList();
@@ -469,7 +490,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
             }
         });
 
-        if (file is not null) GLModel.SerializeToFile(file.Path.AbsolutePath);        
+        if (file is not null) GLModel.SerializeToFile(file.Path.AbsolutePath);
     }
 
     private async void LoadModelClick(object? sender, RoutedEventArgs e)
@@ -483,10 +504,10 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         });
 
         if (file is not null && file.Count == 1)
-        {            
+        {
             var figs = GLModel.DeserializeFiguresFromFile(file[0].Path.AbsolutePath);
 
-            GLModel.AddFigure(figs);            
+            GLModel.AddFigure(figs);
         }
     }
 
@@ -598,7 +619,6 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
             }
         }
     }
-
 
     private void GLModel_LightPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {

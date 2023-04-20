@@ -203,6 +203,16 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
     }
 
     public override string ToString() => Invariant($"{V1} {V2} {V3}");
+
+    /// <summary>
+    /// [t ]x1,y1,z1,x2,y2,z2,x3,y3,z3
+    /// </summary>    
+    public override string SimpleCmd(bool includeHeader = true)
+    {
+        var res = includeHeader ? $"{SIMPLE_CMD_TRIANGLE} " : "";
+
+        return res + $"{V1.Position.SimpleCmd()},{V2.Position.SimpleCmd()},{V3.Position.SimpleCmd()}";
+    }
 }
 
 public static partial class Ext

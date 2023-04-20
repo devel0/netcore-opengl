@@ -252,6 +252,8 @@ public abstract class GLFigureBase : IGLFigure
 
     #endregion
 
+    public abstract string SimpleCmd();
+
     public IEnumerable<uint> Indexes
     {
         get
@@ -264,6 +266,16 @@ public abstract class GLFigureBase : IGLFigure
             return new uint[] { };
         }
     }   
+
+    public BBox LBBox(in Matrix4x4? cs = null)
+    {
+        var res = new BBox(cs);
+
+        foreach (var primitive in Primitives)
+            res.ApplyUnion(primitive.LBBox(cs));
+
+        return res;
+    }
 
     public BBox OBBox(in Matrix4x4? cs = null)
     {

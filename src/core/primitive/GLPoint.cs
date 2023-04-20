@@ -91,6 +91,13 @@ public class GLPoint : GLPrimitiveBase, IGLPoint
         }
     }
 
+    public override string SimpleCmd(bool includeHeader = true)
+    {
+        var res = includeHeader ? $"{SIMPLE_CMD_LINE} " : "";
+
+        return res + Vertex.Position.SimpleCmd();
+    }
+
 }
 
 public static partial class Ext
