@@ -285,11 +285,11 @@ public partial class GLControl
         {
             File.WriteAllText(pathfilename, JsonConvert.SerializeObject(nfo, Formatting.Indented));
 
-            SendNotification("GLControl view", $"View saved to\n[{pathfilename}]");
+            GLModel.SendNotification("GLControl view", $"View saved to\n[{pathfilename}]");
         }
         catch (Exception ex)
         {
-            SendNotification("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
+            GLModel.SendNotification("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
                 GLNotificationType.Error);
         }
     }

@@ -487,6 +487,7 @@ Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netc
 | Ctrl + i         | Invalidate view                    |
 | Ctrl + x         | Toggle model bbox                  |
 | Ctrl + Shift + c | Toggle camera object               |
+| Ctrl + c         | Copy SimpleCmd of active selection |
 
 ## Unit tests
 

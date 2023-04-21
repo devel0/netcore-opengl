@@ -73,3 +73,5 @@ public enum GLNotificationType
 }
 
 public delegate void NotificationDelegate(string title, string msg, GLNotificationType type = GLNotificationType.Information);
+
+public delegate void CopyToClipboardDelegate(string text);

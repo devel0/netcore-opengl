@@ -252,6 +252,11 @@ public static class Constants
     /// </summary>
     public static readonly KeyGesture DEFAULT_ClearSelectionGesture = new KeyGesture(Key.Escape);
 
+    /// <summary>
+    /// (Default) Copy SimpleCmd of selection key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_CopySimpleCmdOfSelectionGesture = new KeyGesture(Key.C, KeyModifiers.Control);
+
     #endregion
 
     #region views

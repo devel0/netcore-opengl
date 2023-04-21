@@ -159,11 +159,6 @@ public partial class AvaloniaGLControl
     public KeyGesture? InvalidateGesture = null;
 
     /// <summary>
-    /// Key gesture associated to <see cref="GLControl.ToggleIdentifyCoord"/>.
-    /// </summary>
-    public KeyGesture? ToggleIdentifyCoordGesture = null;
-
-    /// <summary>
     /// Key gesture associated to <see cref="AvaloniaGLControl.ShowDevTool"/>.
     /// </summary>
     public KeyGesture? ShowDevToolGesture = null;
@@ -214,6 +209,11 @@ public partial class AvaloniaGLControl
     public KeyGesture? ToggleCameraObjectGesture = null;
 
     /// <summary>
+    /// Key gesture associated to <see cref="GLControl.ToggleIdentifyCoord"/>.
+    /// </summary>
+    public KeyGesture? ToggleIdentifyCoordGesture = null;
+
+    /// <summary>
     /// Key gesture associated to <see cref="GLControl.SetRotationCenter"/>.
     /// </summary>
     public KeyGesture? SetRotationCenterGesture = null;
@@ -222,6 +222,11 @@ public partial class AvaloniaGLControl
     /// Key gesture associated to <see cref="GLModel.ClearSelection"/>.
     /// </summary>
     public KeyGesture? ClearSelectionGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLModel.CopySimpleCmdOfSelection"/>.
+    /// </summary>
+    public KeyGesture? CopySimpleCmdOfSelectionGesture = null;
 
     //    
 
@@ -284,6 +289,9 @@ public partial class AvaloniaGLControl
         ToggleIdentifyCoordGesture =
         SetRotationCenterGesture =
 
+        ClearSelectionGesture =
+        CopySimpleCmdOfSelectionGesture =
+
         null;
     }
 
@@ -345,7 +353,9 @@ public partial class AvaloniaGLControl
         ToggleModelBBoxGesture = DEFAULT_ToggleModelBBox;
         ToggleCameraObjectGesture = DEFAULT_ToggleCameraObject;
         SetRotationCenterGesture = DEFAULT_SetRotationCenterGesture;
+
         ClearSelectionGesture = DEFAULT_ClearSelectionGesture;
+        CopySimpleCmdOfSelectionGesture = DEFAULT_CopySimpleCmdOfSelectionGesture;
     }
 
     public void HandleKeyDown(KeyEventArgs e)
@@ -451,10 +461,19 @@ public partial class AvaloniaGLControl
             return;
         }
 
+        //
+
         if (MatchGesture(ClearSelectionGesture))
         {
             GLControl.GLModel.ClearSelection();
             GridSplitterManager.Invalidate();
+            return;
+        }
+
+        if (MatchGesture(CopySimpleCmdOfSelectionGesture))
+        {
+            GLControl.GLModel.CopySimpleCmdOfSelection();
+            GLControl.GLModel.SendNotification("Copy", "Selection (SimpleCmd) copied");
             return;
         }
 

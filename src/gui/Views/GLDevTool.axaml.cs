@@ -332,11 +332,11 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
 
                 dxf.Save(file.Path.AbsolutePath, isBinary: true);
 
-                GLControl.SendNotification("Export dxf", $"Saved to [{file.Path.AbsolutePath}]", GLNotificationType.Success);
+                GLModel.SendNotification("Export dxf", $"Saved to [{file.Path.AbsolutePath}]", GLNotificationType.Success);
             }
             catch (Exception ex)
             {
-                GLControl.SendNotification("Export dxf", $"Error saving to [{file.Path.AbsolutePath}]\n{ex.Message}", GLNotificationType.Error);
+                GLModel.SendNotification("Export dxf", $"Error saving to [{file.Path.AbsolutePath}]\n{ex.Message}", GLNotificationType.Error);
             }
         }
     }
@@ -465,7 +465,7 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         if (clip is not null)
         {
             await clip!.SetTextAsync(sb.ToString());
-            GLControl.SendNotification("Clipboard", $"{selectedFigures.Count} figures copied to clipboard");
+            GLModel.SendNotification("Clipboard", $"{selectedFigures.Count} figures copied to clipboard");
         }
     }
 

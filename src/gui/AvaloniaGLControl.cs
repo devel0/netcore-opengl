@@ -42,7 +42,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     internal event EventHandler GLControlConnected;
 
     #region glControl
-
+    
     private GLControl? _glControl = null;
     /// <summary>
     /// Gl control allow operations on the gl model.
@@ -65,11 +65,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             {
                 if (sender is GLControl glControl && !glControl.IsRendering)
                     InvalidateVisual();
-            };
-            _glControl.NotificationRequest += (title, msg, type) =>
-            {
-                this.Notify(new Notification(title, msg, type.ToAvaloniaNotificationType()));
-            };
+            };            
 
             // used by GLView to listen for GLControl prop changes ( Title, Overlay )
             GLControlConnected?.Invoke(this, EventArgs.Empty);

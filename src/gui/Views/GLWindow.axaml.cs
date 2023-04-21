@@ -113,6 +113,15 @@ public partial class GLWindow : Window, INotifyPropertyChanged
 
         GLModel = new GLModel(new GLContext());
 
+        GLModel.NotificationRequest += (title, msg, type) =>
+            this.NotificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));
+
+        GLModel.CopyToClipboardRequest += async (txt) =>
+        {
+            var clip = Application.Current?.Clipboard;
+            if (clip is not null) await clip!.SetTextAsync(txt);
+        };
+
         this.AttachGLControlSplit(RootGrid, GLModel,
             setGLControlSplit: x =>
             {
