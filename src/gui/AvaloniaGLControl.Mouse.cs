@@ -103,6 +103,7 @@ public partial class AvaloniaGLControl
                             eyeHitCoord = WordlToEye(LocalToWorld(ObjectToLocal(hitTest.HitCoord, hitTest.Figure.ObjectMatrix), mm), vm)
                         })
                         .ToList()
+                        .OrderByDescending(nfo => nfo.hitTest.Figure.Order)
                         .OrderBy(nfo => nfo.hitTest.Distance)
                         .OrderByDescending(nfo => nfo.eyeHitCoord.Z)
                         .FirstOrDefault();
@@ -183,12 +184,12 @@ public partial class AvaloniaGLControl
                         IdentifyCoordVtxMgr.Clear();
 
                         if (hitNfo is not null)
-                        {                            
-                            IdentifyCoordVtxMgr.AddFigure(new GLPointFigure(hitNfo.hitTest.HitCoord) 
-                                {
-                                    PointSize = 10,
-                                    ObjectMatrix = hitNfo.hitTest.Figure.ObjectMatrix
-                                }
+                        {
+                            IdentifyCoordVtxMgr.AddFigure(new GLPointFigure(hitNfo.hitTest.HitCoord)
+                            {
+                                PointSize = 10,
+                                ObjectMatrix = hitNfo.hitTest.Figure.ObjectMatrix
+                            }
                                 .SetOrder(1)
                                 .SetColor(Color.Magenta));
                             GLControl.ControlOverlay1 = $"tol:{tol} ==> {hitNfo.hitTest.HitCoord.Fmt()}";
