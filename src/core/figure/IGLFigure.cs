@@ -98,16 +98,14 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     IEnumerable<uint> Indexes { get; }
 
     /// <summary>
-    /// Local space bbox of this figure vertexes.
-    /// </summary>
-    /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
-    BBox LBBox(in Matrix4x4? cs = null);
+    /// (cached) Bounding box of this figure vertexes [local].
+    /// </summary>    
+    BBox LBBox { get; }
 
     /// <summary>
-    /// Object space bbox of this figure vertexes.
-    /// </summary>
-    /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
-    BBox OBBox(in Matrix4x4? cs = null);
+    /// Bounding bbox of this figure vertexes [object].
+    /// </summary>    
+    BBox OBBox { get; }
 
     /// <summary>
     /// States if this figure has to be considered for building of the shadow map.<br/>

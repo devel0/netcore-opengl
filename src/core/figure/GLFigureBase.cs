@@ -212,7 +212,7 @@ public abstract class GLFigureBase : IGLFigure
     #endregion
 
     #region Selected
-    
+
     private bool _Selected = false;
     /// <summary>
     /// Selected.
@@ -222,15 +222,15 @@ public abstract class GLFigureBase : IGLFigure
         get => _Selected;
         set
         {
-             var changed = value != _Selected;
-             if (changed)
-             {
-                 _Selected = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _Selected;
+            if (changed)
+            {
+                _Selected = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ScreenCoord
@@ -287,27 +287,23 @@ public abstract class GLFigureBase : IGLFigure
 
             return new uint[] { };
         }
-    }   
-
-    public BBox LBBox(in Matrix4x4? cs = null)
-    {
-        var res = new BBox(cs);
-
-        foreach (var primitive in Primitives)
-            res.ApplyUnion(primitive.LBBox(cs));
-
-        return res;
     }
 
-    public BBox OBBox(in Matrix4x4? cs = null)
+    BBox? _LBBox = null;
+    // TODO: manage figure vertex invalidation
+
+    public BBox LBBox
     {
-        var res = new BBox(cs);
+        get
+        {
+            if (_LBBox is null)
+                _LBBox = new BBox(Primitives.Select(w => w.LBBox));
 
-        foreach (var primitive in Primitives)
-            res.ApplyUnion(primitive.LBBox(cs).Transform(ObjectMatrix));
-
-        return res;
+            return _LBBox;
+        }
     }
+
+    public BBox OBBox => new BBox(Primitives.Select(w => w.LBBox.Transform(ObjectMatrix)));
 
     public virtual bool EvalInShadowMap => true;
 
@@ -379,17 +375,8 @@ public static partial class Ext
     /// <summary>
     /// Object space bbox of given figures vertexes.
     /// </summary>
-    /// <param name="figures">Gl figures to compute bbox.</param>
-    /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
+    /// <param name="figures">Gl figures to compute bbox.</param>    
     /// <returns>Figures bbox [object].</returns>
-    public static BBox OBBox(this IEnumerable<GLFigureBase> figures, in Matrix4x4? cs = null)
-    {
-        var res = new BBox(cs);
-
-        foreach (var figure in figures)
-            res.ApplyUnion(figure.OBBox(cs));
-
-        return res;
-    }
+    public static BBox OBBox(this IEnumerable<GLFigureBase> figures) => new BBox(figures.Select(w => w.OBBox));
 
 }

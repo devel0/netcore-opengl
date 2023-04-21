@@ -94,17 +94,19 @@ public abstract class GLPrimitiveBase : IGLPrimitive
     }
 
     #endregion
-    
-    public BBox LBBox(in Matrix4x4? cs = null)
+
+    BBox? _LBBox = null;
+    // TODO: manage primitive vertex invalidation
+
+    public BBox LBBox
     {
-        var res = new BBox(cs);
-
-        foreach (var vertex in Vertexes)
+        get
         {
-            res.ApplyUnion(vertex.Position);
-        }
+            if (_LBBox is null)
+                _LBBox = new BBox(Vertexes.Select(v => v.Position));
 
-        return res;
+            return _LBBox;
+        }
     }
 
     /// <summary>

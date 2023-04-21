@@ -66,10 +66,9 @@ public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
     int Order { get; set; }
 
     /// <summary>
-    /// Bounding box of the primitive [local].
-    /// </summary>
-    /// <param name="cs">(Optional) cs for oriented bounding box.</param>    
-    BBox LBBox(in Matrix4x4? cs = null);
+    /// (cached) Bounding box of the primitive [local].
+    /// </summary>    
+    BBox LBBox { get; }
 
     /// <summary>
     /// Retrieve e simple cmd representation of this primtiive.<br/>

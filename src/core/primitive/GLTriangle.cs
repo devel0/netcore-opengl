@@ -238,7 +238,7 @@ public static partial class Ext
     /// <returns></returns>
     public static Line? Intersect(this GLTriangle tri1, float tol, GLTriangle tri2)
     {
-        if (tri1.LBBox().Contains(tol, tri2.LBBox(), testZ: true))
+        if (tri1.LBBox.Contains(tol, tri2.LBBox, testZ: true))
         {
             var q = tri1.ToTriangle3D().Intersect(tol, tri2.ToTriangle3D());
             if (q is not null)

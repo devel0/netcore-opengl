@@ -344,13 +344,9 @@ public partial class GLControl
 
     public void SetRotationCenter()
     {
-        var bbox = new BBox();
-
-        foreach (var primitive in GLModel.SelectedPrimitives)
-            bbox.ApplyUnion(primitive.LBBox());
-
-        foreach (var figure in GLModel.SelectedFigures)
-            bbox.ApplyUnion(figure.LBBox());
+        var bbox = new BBox(
+            GLModel.SelectedPrimitives.Select(w => w.LBBox)
+            .Union(GLModel.SelectedFigures.Select(w => w.LBBox)));
 
         if (!bbox.IsEmpty)
             RotationCenter = bbox.Middle;
