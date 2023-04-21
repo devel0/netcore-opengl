@@ -101,7 +101,7 @@ public class GLVertexManager : IGLVertexManager
     public BBox LBBox
     {
         get => _LBBox;
-        set
+        private set
         {
             var changed = value != _LBBox;
             if (changed)
@@ -186,10 +186,19 @@ public class GLVertexManager : IGLVertexManager
 
         if (!vertex.ScreenCoordMode)
         {
-            var om = vertex.ParentFigure?.ObjectMatrix;
             var bbox_changed = false;
-            if (om is not null)
-                bbox_changed = LBBox.ApplyUnion(Vector3.Transform(vertex.Position, om.Value));
+
+            var fig = vertex.ParentFigure;
+            if (fig is not null)
+            {
+                if (fig.ExpandBBox)
+                {
+                    var om = vertex.ParentFigure?.ObjectMatrix;
+
+                    if (om is not null)
+                        bbox_changed = LBBox.ApplyUnion(Vector3.Transform(vertex.Position, om.Value));
+                }
+            }
             else
                 bbox_changed = LBBox.ApplyUnion(vertex.Position);
 
@@ -283,8 +292,8 @@ public class GLVertexManager : IGLVertexManager
             AddPrimitive(primitive, figure);
         }
 
-        if (figure is GLTriangleFigure triFig && triFig.ComputeNormalMean)        
-            triFig.RebuildNormal(onlyMean: true);        
+        if (figure is GLTriangleFigure triFig && triFig.ComputeNormalMean)
+            triFig.RebuildNormal(onlyMean: true);
 
         FiguresHS.Add(figure);
         FigureAdded?.Invoke(this, figure);

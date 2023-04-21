@@ -274,6 +274,26 @@ public abstract class GLFigureBase : IGLFigure
 
     #endregion
 
+    #region ExpandBBox
+    
+    private bool _ExpandBBox = true;
+        
+    public bool ExpandBBox
+    {
+        get => _ExpandBBox;
+        set
+        {
+             var changed = value != _ExpandBBox;
+             if (changed)
+             {
+                 _ExpandBBox = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     public abstract string SimpleCmd();
 
     public IEnumerable<uint> Indexes

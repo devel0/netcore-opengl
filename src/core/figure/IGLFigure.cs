@@ -108,6 +108,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     BBox OBBox { get; }
 
     /// <summary>
+    /// States if this figure is considered in bbox expansion (Default: true).<br/>
+    /// Useful to avoid cs figure or non related to content of interest to decrease view and zoom experience.
+    /// </summary>    
+    bool ExpandBBox { get; set; }
+
+    /// <summary>
     /// States if this figure has to be considered for building of the shadow map.<br/>
     /// While is true by default in <see cref="GLFigureBase"/>, is overriden to false by <see cref="GLTextCharFigure"/> specialization of <see cref="GLTriangleFigure"/>
     /// in order to avoid dropping shadows of the triangles used by the font textures.
