@@ -6,7 +6,7 @@ namespace example;
 // animation, object matrix versus model matrix versus view matrix
 //
 // - observe the effect of camera moving and the effect of object matrix
-// - use 'ctrl+c' to toggle camera object
+// - use 'ctrl+shift+c' to toggle camera object
 
 class Program
 {

@@ -240,7 +240,7 @@ public static class Constants
     /// <summary>
     /// (Default) Toggle camera object key gesture.
     /// </summary>
-    public static readonly KeyGesture DEFAULT_ToggleCameraObject = new KeyGesture(Key.C, KeyModifiers.Control);
+    public static readonly KeyGesture DEFAULT_ToggleCameraObject = new KeyGesture(Key.C, KeyModifiers.Control | KeyModifiers.Shift);
 
     /// <summary>
     /// (Default) Set rotation center key gesture.

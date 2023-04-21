@@ -441,50 +441,52 @@ global using static SearchAThing.OpenGL.Shapes.Constants;
 
 Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netcore-opengl/blob/3943766b7cb98ae46149fbf14e54497f84ecf41f/examples/example-0020/Program.cs#L19-L23) ).
 
-| Key       | Description                    |
-| --------- | ------------------------------ |
-| F1        | Open dev tool                  |
-| F2        | Save current view              |
-| F3        | Restore last saved view        |
-| Ctrl + F2 | Save current view layout       |
-| Ctrl + F3 | Restore last saved view layout |
-| a         | Toggle ObjectMatrix animate    |
-| o         | View bOttom                    |
-| t         | View Top                       |
-| l         | View Left                      |
-| r         | View Right                     |
-| f         | View Front                     |
-| b         | View Back                      |
-| i         | Identify coord                 |
-| Ctrl + ⬆  | Camera zoom in                 |
-| Ctrl + ⬇  | Camera zoom out                |
-| Shift + ⬅ | Camera pan left                |
-| Shift + ➡ | Camera pan right               |
-| Shift + ⬆ | Camera pan up                  |
-| Shift + ⬇ | Camera pan up                  |
-| ⬅         | Model rotate left              |
-| ➡         | Model rotate right             |
-| ⬆         | Model rotate up                |
-| ⬇         | Model rotate down              |
-| Ctrl + ⬅  | Camera tilt left               |
-| Ctrl + ➡  | Camera tilt right              |
-| Alt + ⬅   | Camera rotate left             |
-| Alt + ➡   | Camera rotate right            |
-| Alt + ⬆   | Camera rotate up               |
-| Alt + ⬇   | Camera rotate down             |
-| h         | Split view horizontal          |
-| v         | Split view vertical            |
-| c         | Close current view             |
-| w         | Toggle wireframe               |
-| Ctrl + w  | Toggle shade with edges        |
-| n         | Toggle show normals            |
-| p         | Toggle perspective             |
-| x         | Toggle texture                 |
-| s         | Toggle shadow                  |
-| z         | Zoom fit                       |
-| Ctrl + i  | Invalidate view                |
-| Ctrl + x  | Toggle model bbox              |
-| Ctrl + c  | Toggle camera object           |
+| Key              | Description                        |
+| ---------------- | ---------------------------------- |
+| F1               | Open dev tool                      |
+| F2               | Save current view                  |
+| F3               | Restore last saved view            |
+| Ctrl + F2        | Save current view layout           |
+| Ctrl + F3        | Restore last saved view layout     |
+| a                | Toggle ObjectMatrix animate        |
+| o                | View bOttom                        |
+| t                | View Top                           |
+| l                | View Left                          |
+| r                | View Right                         |
+| f                | View Front                         |
+| b                | View Back                          |
+| i                | Identify coord                     |
+| s                | Toggle selection mode              |
+| Ctrl + r         | Change rotation center             |
+| Ctrl + ⬆         | Camera zoom in                     |
+| Ctrl + ⬇         | Camera zoom out                    |
+| Shift + ⬅        | Camera pan left                    |
+| Shift + ➡        | Camera pan right                   |
+| Shift + ⬆        | Camera pan up                      |
+| Shift + ⬇        | Camera pan up                      |
+| ⬅                | Model rotate left                  |
+| ➡                | Model rotate right                 |
+| ⬆                | Model rotate up                    |
+| ⬇                | Model rotate down                  |
+| Ctrl + ⬅         | Camera tilt left                   |
+| Ctrl + ➡         | Camera tilt right                  |
+| Alt + ⬅          | Camera rotate left                 |
+| Alt + ➡          | Camera rotate right                |
+| Alt + ⬆          | Camera rotate up                   |
+| Alt + ⬇          | Camera rotate down                 |
+| h                | Split view horizontal              |
+| v                | Split view vertical                |
+| c                | Close current view                 |
+| w                | Toggle wireframe                   |
+| Ctrl + w         | Toggle shade with edges            |
+| n                | Toggle show normals                |
+| p                | Toggle perspective                 |
+| x                | Toggle texture                     |
+| Ctrl + s         | Toggle shadow                      |
+| z                | Zoom fit                           |
+| Ctrl + i         | Invalidate view                    |
+| Ctrl + x         | Toggle model bbox                  |
+| Ctrl + Shift + c | Toggle camera object               |
 
 ## Unit tests
 
