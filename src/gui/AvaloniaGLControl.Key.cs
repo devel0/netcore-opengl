@@ -226,7 +226,7 @@ public partial class AvaloniaGLControl
     public KeyGesture? ClearSelectionGesture = null;
 
     /// <summary>
-    /// Key gesture associated to <see cref="GLModel.CopySimpleCmdOfSelection"/>.
+    /// Key gesture associated to <see cref="GLModel.GetSelectionSimpleCmd"/>.
     /// </summary>
     public KeyGesture? CopySimpleCmdOfSelectionGesture = null;
 

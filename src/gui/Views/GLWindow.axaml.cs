@@ -4,11 +4,26 @@ using Avalonia.Threading;
 
 namespace SearchAThing.OpenGL.GUI;
 
+/// <summary>
+/// Delegate used by the <see cref="GLWindow"/> to customize action following the creation of the gl control into the window.
+/// </summary>
+/// <param name="avaloniaGLControl">Avalonia gl control reference.</param>
 public delegate void GLControlCreatedDelegate(AvaloniaGLControl avaloniaGLControl);
 
+/// <summary>
+/// Delegate used by the <see cref="GLWindow"/> to customize action following the attachment of the gl split into the window.
+/// </summary>
+/// <param name="glSplit">Gl split reference.</param>
 public delegate void GLSplitAttachedDelegate(AvaloniaGLControlSplit glSplit);
 
-public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, AvaloniaGLControl avaloniaGLControl, bool isInitial);
+/// <summary>
+/// Delegate used by the <see cref="GLWindow"/> to customize action following change of focused gl control.
+/// </summary>
+/// <param name="glSplit">Gl split reference.</param>
+/// <param name="avaloniaGLControl">Focused avalonia gl control.</param>
+/// <param name="isInitial">True if this is the first-est focused control of the gl split.</param>
+public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, 
+    AvaloniaGLControl avaloniaGLControl, bool isInitial);
 
 /// <summary>
 /// Used in stand-alone application types ( console programs ) to create an application gl window.<br/>

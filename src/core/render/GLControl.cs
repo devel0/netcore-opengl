@@ -1,6 +1,12 @@
 namespace SearchAThing.OpenGL.Core;
 
 /// <summary>
+/// Used by <see cref="GLControl.NotEmptyRenderPreview"/> when notify the first non empty bbox render.
+/// </summary>
+/// <param name="glControl">GL control reference.</param>
+public delegate void RenderPreviewDelegate(GLControl glControl);
+
+/// <summary>
 /// Provides basic opengl abstraction to create entities such as <see cref="GLPoint"/>, <see cref="GLLine"/> and <see cref="GLTriangle"/>.
 /// It provides high level functions to manage camera view and related pan/zoom functions.<br/>
 /// The <see cref="Invalidate"/> emit a <see cref="GLControl.RenderInvalidated"/> event that 
@@ -182,8 +188,6 @@ public partial class GLControl : INotifyPropertyChanged
     /// All gl split control invalidation.
     /// </summary>
     public void InvalidateAll() => InvalidateAllRequest.Invoke(this, EventArgs.Empty);
-
-    public delegate void RenderPreviewDelegate(GLControl glControl);
 
     /// <summary>
     /// Event generated at first non bbox empty render generated.

@@ -1,5 +1,14 @@
 namespace SearchAThing.OpenGL.Core;
 
+/// <summary>
+/// Delegate for <see cref="GLControl.ControlFigureVisible"/>.<br/>
+/// It allow to customize the visilibty of a figure in relation within a Gl control.<br/>
+/// </summary>
+/// <param name="glControl">GL control reference.</param>
+/// <param name="figure">GL figure for which state visibility in given control.</param>
+/// <returns>True if figure must shown in the gl control, false otherwise.</returns>
+public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure);
+
 public partial class GLControl : INotifyPropertyChanged
 {
 
@@ -1090,9 +1099,7 @@ public partial class GLControl : INotifyPropertyChanged
         }
     }
 
-    #endregion         
-
-    public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure);
+    #endregion             
 
     #region ControlFigureVisible
 
@@ -1103,7 +1110,7 @@ public partial class GLControl : INotifyPropertyChanged
     /// Args: (GLControl glControl, GLFigureBase figure).
     /// </summary>
     /// <remarks>
-    /// Keep delegated function as light as possible to avoid performance penalty.
+    /// Keep delegate function as light as possible to avoid performance penalty.
     /// </remarks>
     public ControlFigureVisibileDelegate? ControlFigureVisible
     {

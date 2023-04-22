@@ -2,8 +2,18 @@ using Avalonia.Controls;
 
 namespace SearchAThing.OpenGL.GUI;
 
+/// <summary>
+/// Used by <see cref="Toolkit.AttachGLControlSplit"/> to notify focused control change.
+/// </summary>
+/// <param name="split">GL split belonging the focused control.</param>
+/// <param name="ctl">Gl focused control</param>
+/// <param name="isInitial">True if this is the firstest control that the gl split has focused.</param>
 public delegate void AvaloniaControlInitialEvent(AvaloniaGLControlSplit split, AvaloniaGLControl ctl, bool isInitial);
 
+/// <summary>
+/// Generic delegate used by <see cref="Toolkit.AttachGLControlSplit"/> for control create/remove events.
+/// </summary>
+/// <param name="ctl">Gl control reference.</param>
 public delegate void AvaloniaControlEvent(AvaloniaGLControl ctl);
 
 /// <summary>

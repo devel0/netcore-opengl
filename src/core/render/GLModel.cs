@@ -1,9 +1,27 @@
 namespace SearchAThing.OpenGL.Core;
 
-public delegate void ModelFigureEvent(GLModel model, IGLVertexManager vertexManager, GLFigureBase figure);
-public delegate void ModelFiguresEvent(GLModel model, IGLVertexManager vertexManager, GLFigureBase[] figures);
-
+/// <summary>
+/// Use for <see cref="GLModel.ViewInvalidated"/> event emitted when a vertex of the model change.
+/// </summary>
+/// <param name="model">GL model reference.</param>
 public delegate void ModelViewInvalidated(GLModel model);
+
+/// <summary>
+/// Build model action that will executed each time the model requires a full rebuild because invalidated.
+/// </summary>
+/// <param name="glControl">GL control belonging to model that requires rebuild.</param>
+/// <param name="initialCall">True is this is the first-est call to the build model.</param>
+public delegate void GLBuildModelDelegate(GLControl glControl, bool initialCall);
+
+/// <summary>
+/// Used by the avalonia GL control to listen for notification coming from the model.<br/>
+/// These notification will displayed using gui notification manager.
+/// </summary>
+/// <param name="title">Title of notification.</param>
+/// <param name="msg">Message of notification.</param>
+/// <param name="type">Icon/color type of notification.</param>
+public delegate void NotificationDelegate(string title, string msg, 
+    GLNotificationType type = GLNotificationType.Information);
 
 /// <summary>
 /// Gl model.<br/>

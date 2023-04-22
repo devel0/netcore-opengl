@@ -1,5 +1,10 @@
 namespace SearchAThing.OpenGL.Core;
 
+/// <summary>
+/// Delegate for <see cref="IGLFigure.FigureInvalidated"/>.<br/>
+/// This event is managed internally by the <see cref="SearchAThing.OpenGL.Core.GLModel"/> and signal that a model figure changed some of its vertex propertties.<br/>
+/// </summary>
+/// <param name="figure">GL figure invalidated.</param>
 public delegate void FigureInvalidatedDelegate(IGLFigure figure);
 
 /// <summary>
