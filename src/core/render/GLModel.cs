@@ -143,66 +143,6 @@ public partial class GLModel : IGLContextObject
 
     #endregion
 
-    public void ToggleSelectPrimitives(IEnumerable<GLPrimitiveBase> primitives)
-    {
-        foreach (var primitive in primitives)
-        {
-            if (SelectedPrimitiveOBC.Contains(primitive))
-                SelectedPrimitiveOBC.Remove(primitive);
-
-            else
-                SelectedPrimitiveOBC.Add(primitive);
-
-            foreach (var vtx in primitive.Vertexes)
-            {
-                vtx.ToggleFlags(GLVertexFlag.Selected);
-            }
-        }
-    }
-
-    public void ClearSelection()
-    {
-        {
-            var selectedPrimitives = SelectedPrimitiveOBC.ToList();
-            foreach (var primitive in selectedPrimitives)
-            {
-                foreach (var vtx in primitive.Vertexes)
-                    vtx.ClearFlags(GLVertexFlag.Selected);
-            }
-            SelectedPrimitiveOBC.Clear();
-        }
-
-        {
-            var selectedFigures = SelectedFiguresOBC.ToList();
-            foreach (var figure in selectedFigures)
-                figure.Selected = false;
-
-            SelectedFiguresOBC.Clear();
-        }
-    }
-
-    public string CopySimpleCmdOfSelection()
-    {
-        var sb = new StringBuilder();
-
-        foreach (var primitive in SelectedPrimitiveOBC)
-            sb.AppendLine(primitive.SimpleCmd());
-
-        foreach (var figure in SelectedFiguresOBC)
-            sb.AppendLine(figure.SimpleCmd());
-
-        return sb.ToString();
-    }
-
-    public IEnumerable<IGLFigure> PasteSimpleCmd(string simpleCmd)
-    {
-        var figures = this.FiguresFromSimpleCmd(simpleCmd);
-
-        AddFigure(figures);
-
-        return figures;
-    }
-
     /// <summary>
     /// Event emitted when gl control would to notify something. This will handled by <see cref="SearchAThing.OpenGL.GUI.AvaloniaGLControl"/>.
     /// </summary>
@@ -733,9 +673,7 @@ public partial class GLModel : IGLContextObject
         return false;
     }
 
-    internal HashSet<GLControl> ShowCameraObjectControls = new HashSet<GLControl>();
-
-    public delegate void GLBuildModelDelegate(GLControl glControl, bool initialCall);
+    internal HashSet<GLControl> ShowCameraObjectControls = new HashSet<GLControl>();    
 
     /// <summary>
     /// Build model action that will executed each time the model requires a full rebuild because invalidated.<br/>
@@ -890,6 +828,37 @@ public partial class GLModel : IGLContextObject
         }
 
         SelectionMode = SelectionMode.None;
+    }
+
+    /// <summary>
+    /// Retrieve <see cref="IGLPrimitive.SimpleCmd(bool)"/> representation of selected primitives and figure primitives.
+    /// </summary>    
+    public string GetSelectionSimpleCmd()
+    {
+        var sb = new StringBuilder();
+
+        foreach (var primitive in SelectedPrimitiveOBC)
+            sb.AppendLine(primitive.SimpleCmd());
+
+        foreach (var figure in SelectedFiguresOBC)
+            sb.AppendLine(figure.SimpleCmd());
+
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// Add to the model figures coming from given <see cref="IGLPrimitive.SimpleCmd(bool)"/>.<br/>
+    /// Generated figures are primitives coming from the cmd grouped by primitive type.
+    /// </summary>
+    /// <param name="simpleCmd">Simple cmd representation.</param>
+    /// <returns>Figures added to the model.</returns>
+    public IEnumerable<IGLFigure> PasteSimpleCmd(string simpleCmd)
+    {
+        var figures = this.FiguresFromSimpleCmd(simpleCmd);
+
+        AddFigure(figures);
+
+        return figures;
     }
 
 }

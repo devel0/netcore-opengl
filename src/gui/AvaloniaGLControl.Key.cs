@@ -481,7 +481,7 @@ public partial class AvaloniaGLControl
 
         if (MatchGesture(CopySimpleCmdOfSelectionGesture))
         {
-            var txt = GLControl.GLModel.CopySimpleCmdOfSelection();
+            var txt = GLControl.GLModel.GetSelectionSimpleCmd();
             Task.Run(async () =>
             {
                 var clip = Application.Current?.Clipboard;
