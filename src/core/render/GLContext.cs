@@ -255,14 +255,7 @@ public class GLContext : IDisposable
             {
                 var q = AppDomain.CurrentDomain
                     .GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == NETCORE_OPENGL_CORE_ASSEMBLY_NAME);
-
-                // foreach (var x in AppDomain.CurrentDomain.GetAssemblies())
-                // {
-                //     var name = x.GetName().Name;
-                //     if (name?.Contains("netcore-opengl") == true)
-                //         System.Console.WriteLine($"assembly: {name}");
-                // }
+                    .FirstOrDefault(a => a.GetName().Name == NETCORE_OPENGL_CORE_ASSEMBLY_NAME); 
 
                 if (q is null)
                 {
@@ -278,13 +271,8 @@ public class GLContext : IDisposable
 
     string GetResourceContentAsString(string regex)
     {
-        var names = GetEmbeddedResourceNames(netcore_opengl_core_assembly);
-
-        // foreach (var name in names)
-        // {
-        //     System.Console.WriteLine($"resource name [{name}]");
-        // }
-
+        var names = GetEmbeddedResourceNames(netcore_opengl_core_assembly); 
+        
         return names
             .First(w => w.RegexMatch(regex) > 0)
             .Fn(resourcename => GetEmbeddedFileContentString(netcore_opengl_core_assembly, resourcename));

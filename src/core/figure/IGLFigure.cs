@@ -91,6 +91,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     bool Highlight { get; set; }
 
     /// <summary>
+    /// States if figure is actually selected.<br/>
+    /// It true the figure is listed in model selected figures <see cref="GLModel.SelectedFigures"/>.
+    /// </summary>    
+    bool Selected { get; }
+
+    /// <summary>
     /// Allow to change alpha (0:full transparent, 1:full opaque) of the figure without the need to change primitives color. If null figure primitives alpha will not overriden. (Default: null)<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    

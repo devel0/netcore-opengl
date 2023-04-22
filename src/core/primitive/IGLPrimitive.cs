@@ -77,4 +77,10 @@ public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
     /// <param name="includeHeader">If true header will prepended to form a complete command.</param>    
     string SimpleCmd(bool includeHeader = true);
 
+    /// <summary>
+    /// States if primitive is actually selected.<br/>
+    /// It true the primitive is listed in model selected primitives <see cref="GLModel.SelectedPrimitives"/>.
+    /// </summary>    
+    bool Selected { get; }
+
 }

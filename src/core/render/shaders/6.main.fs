@@ -64,6 +64,7 @@ uniform bool uEvalLight;
 uniform bool uIsText;
 uniform vec4 uTextColor;
 uniform bool uFigureHighlight;
+uniform bool uFigureSelected;
 uniform float uFigureAlpha;
 
 uniform float uOverrideAmbient;
@@ -131,7 +132,7 @@ void main()
     if (uFigureHighlight)
         materialColor = vec4(1, 1, 0, 1);
 
-    if ((fs_in.flags & VERTEX_FLAG_SELECTED) != 0)
+    if (uFigureSelected || (fs_in.flags & VERTEX_FLAG_SELECTED) != 0)
         materialColor = vec4(0, 1, 0, 1);
 
     if (uFigureScreenCoord) {

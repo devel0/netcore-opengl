@@ -95,6 +95,26 @@ public abstract class GLPrimitiveBase : IGLPrimitive
 
     #endregion
 
+    #region Selected
+    
+    private bool _Selected = false;
+    
+    public bool Selected
+    {
+        get => _Selected;
+        internal set
+        {
+             var changed = value != _Selected;
+             if (changed)
+             {
+                 _Selected = value;
+                 OnPropertyChanged();
+             }
+        }
+    }
+    
+    #endregion
+
     BBox? _LBBox = null;
     // TODO: manage primitive vertex invalidation
 

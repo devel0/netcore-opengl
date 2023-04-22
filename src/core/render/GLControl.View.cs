@@ -79,12 +79,25 @@ public partial class GLControl
     }
 
     /// <summary>
-    /// Toggle (model) selection mode.
+    /// Switch (model) selection mode.
     /// </summary>
     /// <param name="invalidate">If true refresh the scene.</param>    
-    public void ToggleSelectionMode(bool invalidate = DEFAULT_INVALIDATE)
+    public void SwitchSelectionMode(bool invalidate = DEFAULT_INVALIDATE)
     {
-        GLModel.SelectionMode = !GLModel.SelectionMode;
+        switch (GLModel.SelectionMode)
+        {
+            case SelectionMode.None:
+                GLModel.SelectionMode = SelectionMode.Primitive;
+                break;
+
+            case SelectionMode.Primitive:
+                GLModel.SelectionMode = SelectionMode.Figure;
+                break;
+
+            case SelectionMode.Figure:
+                GLModel.SelectionMode = SelectionMode.None;
+                break;
+        }
         if (invalidate) Invalidate();
     }
 

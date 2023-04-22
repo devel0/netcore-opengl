@@ -414,11 +414,14 @@ public partial class GLModel : IGLContextObject
 
     #region SelectionMode
 
-    private bool _SelectionMode = DEFAULT_SelectionMode;
+    private SelectionMode _SelectionMode = DEFAULT_SelectionMode;
     /// <summary>
-    /// If true figures can be selected, useful to change rotation center.<br/>    
+    /// Current selection mode.<br/>    
     /// </summary>
-    public bool SelectionMode
+    /// <remarks>
+    /// Select primitive together with set rotation center gesture can be used to change default rotation center.
+    /// </remarks>
+    public SelectionMode SelectionMode
     {
         get => _SelectionMode;
         set
@@ -802,6 +805,73 @@ public partial class GLModel : IGLContextObject
             }
         }
 
+    }
+
+    /// <summary>
+    /// Select/Deselect given primitives.
+    /// </summary>
+    /// <param name="primitives">Primitives for which toggle selection.</param>
+    public void ToggleSelectPrimitives(IEnumerable<GLPrimitiveBase> primitives)
+    {
+        foreach (var primitive in primitives)
+        {
+            if (SelectedPrimitiveOBC.Contains(primitive))
+                SelectedPrimitiveOBC.Remove(primitive);
+
+            else
+                SelectedPrimitiveOBC.Add(primitive);
+
+            primitive.Selected = !primitive.Selected;
+
+            foreach (var vtx in primitive.Vertexes)
+            {
+                vtx.ToggleFlags(GLVertexFlag.Selected);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Select/Deselect given figures.
+    /// </summary>
+    /// <param name="figures">Figures for which toggle selection.</param>
+    public void ToggleSelectFigures(IEnumerable<GLFigureBase> figures)
+    {
+        foreach (var figure in figures)
+        {
+            if (SelectedFiguresOBC.Contains(figure))
+                SelectedFiguresOBC.Remove(figure);
+
+            else
+                SelectedFiguresOBC.Add(figure);
+
+            figure.Selected = !figure.Selected;
+        }
+    }
+
+    /// <summary>
+    /// Clear current selection ( of figures, primitives ) and cancel select command.
+    /// </summary>
+    public void ClearSelection()
+    {
+        {
+            var selectedPrimitives = SelectedPrimitiveOBC.ToList();
+            foreach (var primitive in selectedPrimitives)
+            {
+                foreach (var vtx in primitive.Vertexes)
+                    vtx.ClearFlags(GLVertexFlag.Selected);
+            }
+            SelectedPrimitiveOBC.Clear();
+        }
+
+        {
+            var selectedFigures = SelectedFiguresOBC.ToList();
+            foreach (var figure in selectedFigures)
+                figure.Selected = false;
+
+            SelectedFiguresOBC.Clear();
+        }
+
+        SelectionMode = SelectionMode.None;
     }
 
 }

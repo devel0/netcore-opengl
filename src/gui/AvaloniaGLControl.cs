@@ -42,7 +42,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     internal event EventHandler GLControlConnected;
 
     #region glControl
-    
+
     private GLControl? _glControl = null;
     /// <summary>
     /// Gl control allow operations on the gl model.
@@ -65,7 +65,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             {
                 if (sender is GLControl glControl && !glControl.IsRendering)
                     InvalidateVisual();
-            };            
+            };
 
             // used by GLView to listen for GLControl prop changes ( Title, Overlay )
             GLControlConnected?.Invoke(this, EventArgs.Empty);
@@ -83,19 +83,63 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
     #endregion
 
+    static Assembly? _netcore_opengl_gui_assembly = null;
+
+    internal static Assembly netcore_opengl_gui_assembly
+    {
+        get
+        {
+            if (_netcore_opengl_gui_assembly is null)
+            {
+                var q = AppDomain.CurrentDomain
+                    .GetAssemblies()
+                    .FirstOrDefault(a => a.GetName().Name == NETCORE_OPENGL_GUI_ASSEMBLY_NAME);
+
+                if (q is null)
+                {
+                    throw new Exception($"unable to find [netcore-opengl-gui] assembly");
+                }
+
+                _netcore_opengl_gui_assembly = q;
+            }
+
+            return _netcore_opengl_gui_assembly;
+        }
+    }
+
     void SetCursor()
     {
         var selectionMode = glModel.SelectionMode;
         var identifyMode = GLControl.IdentifyCoord;
 
-        if (selectionMode)
-            this.Cursor = new Cursor(StandardCursorType.Hand);
+        if (selectionMode != Core.SelectionMode.None)
+        {
+            switch (selectionMode)
+            {
+                case Core.SelectionMode.Primitive:
+                    {
+                        var iconStream = netcore_opengl_gui_assembly
+                            .GetManifestResourceStream(GuiAssetResourceName(RESOURCE_FILENAME_SelectPrimitiveCursor_32));
+
+                        var bitmap = new Bitmap(iconStream);
+
+                        Cursor = new Cursor(bitmap, new PixelPoint(15, 0));
+                    }
+                    break;
+
+                case Core.SelectionMode.Figure:
+                    {
+                        Cursor = new Cursor(StandardCursorType.Hand);
+                    }
+                    break;
+            }          
+        }
 
         else if (identifyMode)
-            this.Cursor = new Cursor(StandardCursorType.Cross);
+            Cursor = new Cursor(StandardCursorType.Cross);
 
         else
-            this.Cursor = Cursor.Default;
+            Cursor = Cursor.Default;
     }
 
     private void GLModel_PropertyChanged(object sender, PropertyChangedEventArgs e)

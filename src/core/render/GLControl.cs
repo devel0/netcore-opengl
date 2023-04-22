@@ -396,6 +396,7 @@ public partial class GLControl : INotifyPropertyChanged
                     if (!shadowMapMode)
                     {
                         shader.SetBool(UNINAME_uFigureHighlight, fig.Highlight);
+                        shader.SetBool(UNINAME_uFigureSelected, fig.Selected);
                         if (fig.Alpha.HasValue)
                             shader.SetFloat(UNINAME_uFigureAlpha, fig.Alpha.Value);
                         else
@@ -468,10 +469,12 @@ public partial class GLControl : INotifyPropertyChanged
                                 shader.SetBool(UNINAME_uEvalLight, false);
                                 shader.SetBool(UNINAME_uUseTexture, false);
                             }
+
                             else if (fig.PrimitiveType == GLPrimitiveType.Line)
                             {
                                 shader.SetBool(UNINAME_uEvalLight, false);
                             }
+
                             else
                             {
                                 shader.SetBool(UNINAME_uEvalLight, true);

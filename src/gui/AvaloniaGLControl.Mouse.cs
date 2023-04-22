@@ -83,7 +83,7 @@ public partial class AvaloniaGLControl
                 var pressDurationMs = (DateTime.Now - lastPressTimestamp.Value).TotalMilliseconds;
 
                 // if a single click return
-                if (pressDurationMs <= 250 && glModel.SelectionMode)
+                if (pressDurationMs <= 250 && glModel.SelectionMode != SelectionMode.None)
                 {
                     var lraycast = GLControl.RayCastLocal(cp.Position.ToVector2());
 
@@ -110,7 +110,16 @@ public partial class AvaloniaGLControl
 
                     if (hitNfo is not null)
                     {
-                        glModel.ToggleSelectPrimitives(new[] { hitNfo.hitTest.Primitive });
+                        switch (glModel.SelectionMode)
+                        {
+                            case SelectionMode.Primitive:
+                                glModel.ToggleSelectPrimitives(new[] { hitNfo.hitTest.Primitive });
+                                break;
+
+                            case SelectionMode.Figure:
+                                glModel.ToggleSelectFigures(new[] { hitNfo.hitTest.Figure });
+                                break;
+                        }
 
                         GLControl.InvalidateAll();
                     }

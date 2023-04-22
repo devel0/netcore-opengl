@@ -178,6 +178,11 @@ public static partial class Constants
     public const string UNINAME_uFigureHighlight = "uFigureHighlight";
 
     /// <summary>
+    /// Name of the uniform shader variable for the figure selected flag.
+    /// </summary>
+    public const string UNINAME_uFigureSelected = "uFigureSelected";
+
+    /// <summary>
     /// Name of the uniform shader variable for the figure alpha.
     /// <seealso cref="IGLFigure.Alpha"/>.
     /// </summary>
@@ -350,9 +355,9 @@ public static partial class Constants
     public const bool DEFAULT_UseShadows = true;
 
     /// <summary>
-    /// (Default) gl control selection mode flag.
+    /// (Default) gl control selection mode.
     /// </summary>
-    public const bool DEFAULT_SelectionMode = false;
+    public const SelectionMode DEFAULT_SelectionMode = SelectionMode.None;
 
     /// <summary>
     /// (Default) gl control angle view addition in standard cube views (deg).

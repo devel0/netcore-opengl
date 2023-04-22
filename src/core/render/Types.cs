@@ -23,6 +23,24 @@ public enum InvalidateEnum
 
 }
 
+public enum SelectionMode
+{
+    /// <summary>
+    /// No selection on click.
+    /// </summary>
+    None,
+
+    /// <summary>
+    /// Select primitive under cursor.
+    /// </summary>
+    Primitive,
+
+    /// <summary>
+    /// Select figure under cursor.
+    /// </summary>
+    Figure
+}
+
 /// <summary>
 /// Gl text alignment respect given insertion point.
 /// </summary>
@@ -71,7 +89,3 @@ public enum GLNotificationType
     Warning = 2,
     Error = 3
 }
-
-public delegate void NotificationDelegate(string title, string msg, GLNotificationType type = GLNotificationType.Information);
-
-public delegate void CopyToClipboardDelegate(string text);

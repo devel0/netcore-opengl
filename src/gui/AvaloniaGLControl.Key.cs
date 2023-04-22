@@ -36,9 +36,9 @@ public partial class AvaloniaGLControl
     public KeyGesture? ToggleUseShadowGesture = null;
 
     /// <summary>
-    /// Key gesture associated to <see cref="GLControl.ToggleSelectionMode"/>.
+    /// Key gesture associated to <see cref="GLControl.SwitchSelectionMode"/>.
     /// </summary>
-    public KeyGesture? ToggleSelectionModeGesture = null;
+    public KeyGesture? SwitchSelectionModeGesture = null;
 
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.PanLeft"/>.
@@ -248,7 +248,7 @@ public partial class AvaloniaGLControl
         TogglePerspectiveGesture =
         ToggleUseTextureGesture =
         ToggleUseShadowGesture =
-        ToggleSelectionModeGesture =
+        SwitchSelectionModeGesture =
 
         PanLeftGesture =
         PanRightGesture =
@@ -314,7 +314,7 @@ public partial class AvaloniaGLControl
         TogglePerspectiveGesture = DEFAULT_TogglePerspectiveGesture;
         ToggleUseTextureGesture = DEFAULT_ToggleUseTextureGesture;
         ToggleUseShadowGesture = DEFAULT_ToggleUseShadowGesture;
-        ToggleSelectionModeGesture = DEFAULT_ToggleSelectionModeGesture;
+        SwitchSelectionModeGesture = DEFAULT_SwitchSelectionModeGesture;
 
         PanLeftGesture = DEFAULT_CameraPanLeftGesture;
         PanRightGesture = DEFAULT_CameraPanRightGesture;
@@ -377,7 +377,7 @@ public partial class AvaloniaGLControl
         if (MatchGesture(TogglePerspectiveGesture)) { GLControl.TogglePerspective(); e.Handled = true; return; }
         if (MatchGesture(ToggleUseTextureGesture)) { GLControl.ToggleUseTexture(); e.Handled = true; return; }
         if (MatchGesture(ToggleUseShadowGesture)) { GLControl.ToggleUseShadow(); e.Handled = true; return; }
-        if (MatchGesture(ToggleSelectionModeGesture)) { GLControl.ToggleSelectionMode(); e.Handled = true; return; }
+        if (MatchGesture(SwitchSelectionModeGesture)) { GLControl.SwitchSelectionMode(); e.Handled = true; return; }
 
         //
 

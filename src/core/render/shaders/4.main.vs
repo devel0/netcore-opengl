@@ -15,6 +15,7 @@ uniform mat4 uProjection;
 uniform vec3 uCameraPos;
 
 uniform bool uFigureHighlight;
+uniform bool uFigureSelected;
 uniform float uFigureAlpha;
 uniform bool uFigureScreenCoord;
 uniform mat4 uScreenProjection;

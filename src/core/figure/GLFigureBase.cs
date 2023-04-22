@@ -235,20 +235,20 @@ public abstract class GLFigureBase : IGLFigure
     #region Selected
 
     private bool _Selected = false;
-    /// <summary>
-    /// Selected.
-    /// TODO: doc
-    /// </summary>
+        
     public bool Selected
     {
         get => _Selected;
-        set
+        internal set
         {
             var changed = value != _Selected;
             if (changed)
             {
                 _Selected = value;
-                OnPropertyChanged();
+                OnPropertyChanged();                
+
+               
+
             }
         }
     }
