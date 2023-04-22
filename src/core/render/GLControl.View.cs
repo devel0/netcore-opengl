@@ -355,6 +355,9 @@ public partial class GLControl
         Invalidate();
     }
 
+    /// <summary>
+    /// Set the rotation center for model and camera.
+    /// </summary>
     public void SetRotationCenter()
     {
         var bbox = new BBox(
@@ -365,7 +368,7 @@ public partial class GLControl
             RotationCenter = bbox.Middle;
 
         else
-            RotationCenter = this.GLModel.LBBox.Middle;
+            RotationCenter = this.GLModel.LBBox.Middle;        
     }
 
     /// <summary>

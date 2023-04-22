@@ -51,19 +51,19 @@ public static partial class Toolkit
         out Vector3 cuTilted) =>
         cuTilted = Vector3.Transform(cu, Matrix4x4.CreateRotationZ(-angleRad));
 
-    /// <summary>
-    /// Rotate the camera [view] a given rotation center [local].
-    /// REVIEW: add rotation center parameter and document
+
+    /// <summary>    
+    /// Rotate the camera [view] a given rotation center [local].        
     /// </summary>
-    /// <param name="sAngleXRad"></param>
-    /// <param name="sAngleYRad"></param>
-    /// <param name="wCameraPos"></param>
-    /// <param name="wCameraTarget"></param>
-    /// <param name="wCameraUp"></param>
-    /// <param name="wRotatedCameraTarget"></param>
-    /// <param name="wRotatedCameraUp"></param>
+    /// <param name="sAngleXRad">Camera rotation screen X angle (rad)..</param>
+    /// <param name="sAngleYRad">Camera rotation screen Y angle (rad).</param>
+    /// <param name="wCameraPos">Actual camera position [world].</param>
+    /// <param name="wCameraTarget">Actual camera target [world].</param>
+    /// <param name="wCameraUp">Actual camera up [world].</param>
+    /// <param name="wRotatedCameraTarget">Rotated camera target [world].</param>
+    /// <param name="wRotatedCameraUp">Rotated camera up [world].</param>
     public static void CameraRotate(
-        float sAngleXRad, float sAngleYRad,        
+        float sAngleXRad, float sAngleYRad,
         in Vector3 wCameraPos, in Vector3 wCameraTarget, in Vector3 wCameraUp,
         out Vector3 wRotatedCameraTarget, out Vector3 wRotatedCameraUp)
     {
