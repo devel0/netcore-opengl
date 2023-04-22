@@ -2,6 +2,10 @@ using Avalonia.Controls;
 
 namespace SearchAThing.OpenGL.GUI;
 
+public delegate void AvaloniaControlInitialEvent(AvaloniaGLControlSplit split, AvaloniaGLControl ctl, bool isInitial);
+
+public delegate void AvaloniaControlEvent(AvaloniaGLControl ctl);
+
 /// <summary>
 /// Gl split control attached to <see cref="GLWindow"/> for stand-alone application or <see cref="Window"/>
 /// on mvvm applications.<br/>
@@ -95,10 +99,6 @@ public partial class AvaloniaGLControlSplit : GridSplitterManager<GLView>
 public static partial class Toolkit
 {
 
-    public delegate void AvaloniaControlInitialEvent(AvaloniaGLControlSplit split, AvaloniaGLControl ctl, bool isInitial);
-
-    public delegate void AvaloniaControlEvent(AvaloniaGLControl ctl);
-
     /// <summary>
     /// Attach gl split to the given avalonia window.<br/>
     /// It's automatically invoked in the stand-alone console application through
@@ -120,6 +120,10 @@ public static partial class Toolkit
         AvaloniaControlEvent? onControlRemoved = null)
     {
         bool firstActivate = true;
+
+        if (owner is not GLWindow)
+            owner.AttachGLBindings(grid, glModel);
+
         owner.Opened += (a, b) =>
         {
             if (firstActivate)

@@ -4,6 +4,12 @@ using Avalonia.Threading;
 
 namespace SearchAThing.OpenGL.GUI;
 
+public delegate void GLControlCreatedDelegate(AvaloniaGLControl avaloniaGLControl);
+
+public delegate void GLSplitAttachedDelegate(AvaloniaGLControlSplit glSplit);
+
+public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, AvaloniaGLControl avaloniaGLControl, bool isInitial);
+
 /// <summary>
 /// Used in stand-alone application types ( console programs ) to create an application gl window.<br/>
 /// This control automatically keeps track of created gl control and listen for their property change
@@ -84,12 +90,6 @@ public partial class GLWindow : Window, INotifyPropertyChanged
 
     #endregion
 
-    public delegate void GLControlCreatedDelegate(AvaloniaGLControl avaloniaGLControl);
-
-    public delegate void GLSplitAttachedDelegate(AvaloniaGLControlSplit glSplit);
-
-    public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, AvaloniaGLControl avaloniaGLControl, bool isInitial);
-
     public GLWindow()
     {
         ;
@@ -114,13 +114,7 @@ public partial class GLWindow : Window, INotifyPropertyChanged
         GLModel = new GLModel(new GLContext());
 
         GLModel.NotificationRequest += (title, msg, type) =>
-            this.NotificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));
-
-        GLModel.CopyToClipboardRequest += async (txt) =>
-        {
-            var clip = Application.Current?.Clipboard;
-            if (clip is not null) await clip!.SetTextAsync(txt);
-        };
+            this.NotificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));        
 
         this.AttachGLControlSplit(RootGrid, GLModel,
             setGLControlSplit: x =>
@@ -229,5 +223,31 @@ public partial class GLWindow : Window, INotifyPropertyChanged
     /// Invalidate gl control split.
     /// </summary>
     public void Invalidate() => GLControlSplit?.Invalidate();
+
+}
+
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Attach bindings such as notification manager.
+    /// </summary>    
+    internal static void AttachGLBindings(this Window window, Grid grGL, GLModel glModel)
+    {
+        WindowNotificationManager? notificationManager = null;
+
+        window.Opened += (sender, e) =>
+        {
+            notificationManager = new WindowNotificationManager(TopLevel.GetTopLevel(grGL));
+        };
+
+        glModel.NotificationRequest += (title, msg, type) =>
+            notificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));
+        
+        window.Closed += (sender, e) =>
+        {
+
+        };
+    }
 
 }
