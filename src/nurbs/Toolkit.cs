@@ -38,10 +38,10 @@ public static partial class Toolkit
                 var p3 = nurb.PointAt(u2, v2).ToVector3();
                 var p4 = nurb.PointAt(u1, v2).ToVector3();
 
-                var plate = new Plate(p1, p2, p3, p4);                
+                var plate = new Plate(p1, p2, p3, p4);
 
                 foreach (var tri in plate.GetTriangles(color))
-                {                  
+                {
                     yield return tri;
 
                     ++triCnt;
@@ -53,5 +53,30 @@ public static partial class Toolkit
             u1 += step;
         }
     }
+
+    /// <summary>
+    /// G-Shark nurb to GLLine helper
+    /// </summary>
+    /// <param name="curve">nurb curve</param>    
+    /// <param name="N">number of nurb divisions</param>
+    /// <returns>lines representing given nurb curve</returns>
+    public static IEnumerable<OpenGL.Core.Line> NurbToGL(this NurbsCurve curve, int N = 6)
+    {
+        var t = 0d;
+        var step = 1d / N;
+
+        var p = curve.PointAt(0);
+
+        for (int i = 0; i < N; ++i)
+        {
+            var nextp = curve.PointAt(t + step);
+            yield return OpenGL.Core.Line.FromTo(p.ToVector3(), nextp.ToVector3());
+
+            p = nextp;
+
+            t += step;
+        }
+    }
+
 
 }
