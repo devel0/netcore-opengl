@@ -257,6 +257,11 @@ public static class Constants
     /// </summary>
     public static readonly KeyGesture DEFAULT_CopySimpleCmdOfSelectionGesture = new KeyGesture(Key.C, KeyModifiers.Control);
 
+    /// <summary>
+    /// (Default) Paste SimpleCmd key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_PasteSimpleCmdGesture = new KeyGesture(Key.V, KeyModifiers.Control);
+
     #endregion
 
     #region views

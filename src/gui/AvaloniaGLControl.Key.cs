@@ -1,3 +1,5 @@
+using Avalonia.Threading;
+
 namespace SearchAThing.OpenGL.GUI;
 
 public partial class AvaloniaGLControl
@@ -228,6 +230,11 @@ public partial class AvaloniaGLControl
     /// </summary>
     public KeyGesture? CopySimpleCmdOfSelectionGesture = null;
 
+    /// <summary>
+    /// Key gesture associated to <see cref="GLModel.PasteSimpleCmd"/>.
+    /// </summary>
+    public KeyGesture? PasteSimpleCmdGesture = null;
+
     //    
 
     /// <summary>
@@ -291,6 +298,7 @@ public partial class AvaloniaGLControl
 
         ClearSelectionGesture =
         CopySimpleCmdOfSelectionGesture =
+        PasteSimpleCmdGesture =
 
         null;
     }
@@ -356,6 +364,7 @@ public partial class AvaloniaGLControl
 
         ClearSelectionGesture = DEFAULT_ClearSelectionGesture;
         CopySimpleCmdOfSelectionGesture = DEFAULT_CopySimpleCmdOfSelectionGesture;
+        PasteSimpleCmdGesture = DEFAULT_PasteSimpleCmdGesture;
     }
 
     public void HandleKeyDown(KeyEventArgs e)
@@ -472,8 +481,43 @@ public partial class AvaloniaGLControl
 
         if (MatchGesture(CopySimpleCmdOfSelectionGesture))
         {
-            GLControl.GLModel.CopySimpleCmdOfSelection();
+            var txt = GLControl.GLModel.CopySimpleCmdOfSelection();
+            Task.Run(async () =>
+            {
+                var clip = Application.Current?.Clipboard;
+                if (clip is not null) await clip!.SetTextAsync(txt);
+            });
+            // CopyToClipboardRequest?.Invoke(sb.ToString());
             GLControl.GLModel.SendNotification("Copy", "Selection (SimpleCmd) copied");
+            return;
+        }
+
+        if (MatchGesture(PasteSimpleCmdGesture))
+        {
+            Task.Run(async () =>
+            {
+                try
+                {
+                    var clip = Application.Current?.Clipboard;
+                    if (clip is not null)
+                    {
+                        var txt = await clip!.GetTextAsync();
+                        var figs = GLControl.GLModel.PasteSimpleCmd(txt).ToList();
+                        var primitivesCnt = figs.Select(w => w.Primitives.Count).Sum();
+
+                        Dispatcher.UIThread.Post(() =>
+                        {
+                            GLControl.InvalidateAll();
+                            GLControl.GLModel.SendNotification("Paste", $"{figs.Count} figures ({primitivesCnt} primitives) pasted.");
+                        });
+                    }
+                }
+                catch
+                {
+                    Dispatcher.UIThread.Post(() =>
+                        GLControl.GLModel.SendNotification("Paste", "Paste of given SimpleCmd failed."));
+                }
+            });
             return;
         }
 

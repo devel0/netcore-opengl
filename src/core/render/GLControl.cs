@@ -170,7 +170,7 @@ public partial class GLControl : INotifyPropertyChanged
 
         if (invalidate == InvalidateEnum.RebuildModelAndRedraw)
         {
-            GLModel.Invalidate();
+            GLModel.InvalidateModel();
         }
 
         RenderInvalidated?.Invoke(this, new EventArgs());
