@@ -20,7 +20,7 @@ public delegate void GLBuildModelDelegate(GLControl glControl, bool initialCall)
 /// <param name="title">Title of notification.</param>
 /// <param name="msg">Message of notification.</param>
 /// <param name="type">Icon/color type of notification.</param>
-public delegate void NotificationDelegate(string title, string msg, 
+public delegate void NotificationDelegate(string title, string msg,
     GLNotificationType type = GLNotificationType.Information);
 
 /// <summary>
@@ -457,6 +457,20 @@ public partial class GLModel : IGLContextObject
 
             return _LBbox;
         }
+        private set
+        {            
+            _LBbox = value;
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>
+    /// Invalidate and recalc bounding box [local].<br/>
+    /// Used internally after delete of figures/primitives.
+    /// </summary>
+    public void RecomputeLBBox()
+    {
+        LBBox = GLVertexManager.RecomputeLBBox();
     }
 
     /// <summary>
@@ -673,7 +687,7 @@ public partial class GLModel : IGLContextObject
         return false;
     }
 
-    internal HashSet<GLControl> ShowCameraObjectControls = new HashSet<GLControl>();    
+    internal HashSet<GLControl> ShowCameraObjectControls = new HashSet<GLControl>();
 
     /// <summary>
     /// Build model action that will executed each time the model requires a full rebuild because invalidated.<br/>
@@ -859,6 +873,26 @@ public partial class GLModel : IGLContextObject
         AddFigure(figures);
 
         return figures;
+    }
+
+    /// <summary>
+    /// Delete selected primitives/figures.
+    /// </summary>
+    public void DeleteSelected()
+    {
+        var primitivesToRemove = SelectedPrimitiveOBC.ToList();
+        var figuresToRemove = SelectedFiguresOBC.ToList();
+
+        RemoveFigure(figuresToRemove);
+
+        foreach (var primitive in primitivesToRemove)
+        {
+            primitive.ParentFigure?.RemovePrimitive(primitive);
+        }
+
+        RecomputeLBBox();
+
+        ClearSelection();
     }
 
 }

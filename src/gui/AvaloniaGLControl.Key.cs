@@ -235,6 +235,11 @@ public partial class AvaloniaGLControl
     /// </summary>
     public KeyGesture? PasteSimpleCmdGesture = null;
 
+    /// <summary>
+    /// Key gesture associated to <see cref="GLModel.DeleteSelected"/>.
+    /// </summary>
+    public KeyGesture? DeleteSelectedGesture = null;
+
     //    
 
     /// <summary>
@@ -299,6 +304,7 @@ public partial class AvaloniaGLControl
         ClearSelectionGesture =
         CopySimpleCmdOfSelectionGesture =
         PasteSimpleCmdGesture =
+        DeleteSelectedGesture =
 
         null;
     }
@@ -365,6 +371,7 @@ public partial class AvaloniaGLControl
         ClearSelectionGesture = DEFAULT_ClearSelectionGesture;
         CopySimpleCmdOfSelectionGesture = DEFAULT_CopySimpleCmdOfSelectionGesture;
         PasteSimpleCmdGesture = DEFAULT_PasteSimpleCmdGesture;
+        DeleteSelectedGesture = DEFAULT_DeleteSelectedGesture;
     }
 
     public void HandleKeyDown(KeyEventArgs e)
@@ -502,7 +509,7 @@ public partial class AvaloniaGLControl
                     if (clip is not null)
                     {
                         var txt = await clip!.GetTextAsync();
-                        
+
                         Dispatcher.UIThread.Post(() =>
                         {
                             var figs = GLControl.GLModel.PasteSimpleCmd(txt).ToList();
@@ -519,6 +526,13 @@ public partial class AvaloniaGLControl
                         GLControl.GLModel.SendNotification("Paste", "Paste of given SimpleCmd failed."));
                 }
             });
+            return;
+        }
+
+        if (MatchGesture(DeleteSelectedGesture))
+        {
+            GLControl.GLModel.DeleteSelected();
+            GridSplitterManager.Invalidate();
             return;
         }
 

@@ -23,6 +23,11 @@ public abstract class GLFigureTypeBase<P> : GLFigureBase where P : GLPrimitiveBa
     [JsonProperty]
     protected ObservableCollection<GLPrimitiveBase> PrimitivesOBC = new ObservableCollection<GLPrimitiveBase>();
 
+    public override void RemovePrimitive(GLPrimitiveBase primitive)
+    {
+        PrimitivesOBC.Remove(primitive);
+    }
+
     /// <summary>
     /// Add given primitive to this figure.
     /// </summary>

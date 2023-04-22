@@ -280,6 +280,11 @@ public static class Constants
     /// </summary>
     public static readonly KeyGesture DEFAULT_PasteSimpleCmdGesture = new KeyGesture(Key.V, KeyModifiers.Control);
 
+    /// <summary>
+    /// (Default) Delete selected primitives/figures key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_DeleteSelectedGesture = new KeyGesture(Key.Delete);
+
     #endregion
 
     #region views

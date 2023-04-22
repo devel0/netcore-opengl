@@ -114,6 +114,41 @@ public class GLVertexManager : IGLVertexManager
 
     #endregion   
 
+    /// <summary>
+    /// Recompute bbox [local] of all figure/primitive vertexes upading <see cref="LBBox"/>.<br/>
+    /// Used internally after figure/primitive deletion.
+    /// REVIEW: may improved
+    /// </summary>
+    public BBox RecomputeLBBox()
+    {
+        var bbox = new BBox();
+
+        foreach (var figure in Figures)
+        {
+            if (figure.ScreenCoordMode) continue;
+
+            if (figure.ExpandBBox)
+            {
+                var om = figure.ObjectMatrix;
+
+                if (!om.IsIdentity)
+                {
+                    foreach (var vertex in figure.Vertexes())
+                        bbox.ApplyUnion(Vector3.Transform(vertex.Position, om));
+                }
+                else
+                {
+                    foreach (var vertex in figure.Vertexes())
+                        bbox.ApplyUnion(vertex.Position);
+                }
+            }
+        }
+
+        LBBox = bbox;
+
+        return bbox;
+    }
+
     public bool ExpandModelBBox { get; private set; }
 
     public void Clear()
@@ -380,8 +415,8 @@ public class GLVertexManager : IGLVertexManager
             RemoveVertex(vertex);
 
             vertex.ParentPrimitive = null;
-        }
-
+        }        
+        
         primitive.ParentFigure = null;
         if (primitive.PrimitiveType == GLPrimitiveType.Triangle) --TriangleCount;
     }

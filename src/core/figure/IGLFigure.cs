@@ -38,6 +38,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     ReadOnlyObservableCollection<GLPrimitiveBase> Primitives { get; }
 
     /// <summary>
+    /// Remove primitive from this figure.
+    /// </summary>
+    /// <param name="primitive">Gl primitive to remove.</param>
+    void RemovePrimitive(GLPrimitiveBase primitive);
+
+    /// <summary>
     /// Enum that describe which type underlying to the instance.
     /// </summary>   
     GLPrimitiveType PrimitiveType { get; }

@@ -78,6 +78,8 @@ public abstract class GLFigureBase : IGLFigure
 
     public abstract ReadOnlyObservableCollection<GLPrimitiveBase> Primitives { get; }
 
+    public abstract void RemovePrimitive(GLPrimitiveBase primitive);
+
     public abstract GLPrimitiveType PrimitiveType { get; }
 
     #region ExcludeFromShadeWithEdge
@@ -235,7 +237,7 @@ public abstract class GLFigureBase : IGLFigure
     #region Selected
 
     private bool _Selected = false;
-        
+
     public bool Selected
     {
         get => _Selected;
@@ -245,9 +247,9 @@ public abstract class GLFigureBase : IGLFigure
             if (changed)
             {
                 _Selected = value;
-                OnPropertyChanged();                
+                OnPropertyChanged();
 
-               
+
 
             }
         }
@@ -325,7 +327,9 @@ public abstract class GLFigureBase : IGLFigure
             if (this.IsAttached())
                 return Primitives
                     .OrderByDescending(w => w.Order)
-                    .SelectMany(primitive => primitive.Vertexes.Select(vertex => vertex.Index!.Value));
+                    .SelectMany(primitive => primitive.Vertexes
+                        // .Where(vertex => vertex.Index is not null)
+                        .Select(vertex => vertex.Index!.Value));
 
             return new uint[] { };
         }
@@ -356,7 +360,7 @@ public abstract class GLFigureBase : IGLFigure
     /// </summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Invalidate() => FigureInvalidated?.Invoke(this);
-  
+
 
     public override string ToString()
     {
