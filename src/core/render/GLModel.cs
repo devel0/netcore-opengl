@@ -163,9 +163,7 @@ public partial class GLModel : IGLContextObject
         }
     }
 
-    public CopyToClipboardDelegate CopyToClipboardRequest;
-
-    public void CopySimpleCmdOfSelection()
+    public string CopySimpleCmdOfSelection()
     {
         var sb = new StringBuilder();
 
@@ -175,7 +173,16 @@ public partial class GLModel : IGLContextObject
         foreach (var figure in SelectedFiguresOBC)
             sb.AppendLine(figure.SimpleCmd());
 
-        CopyToClipboardRequest?.Invoke(sb.ToString());
+        return sb.ToString();
+    }
+
+    public IEnumerable<IGLFigure> PasteSimpleCmd(string simpleCmd)
+    {
+        var figures = this.FiguresFromSimpleCmd(simpleCmd);
+
+        AddFigure(figures);
+
+        return figures;
     }
 
     /// <summary>
@@ -668,10 +675,11 @@ public partial class GLModel : IGLContextObject
     }
 
     /// <summary>
-    /// Invalidate the gl model.<br/>    
-    /// </summary>
-    /// <seealso cref="IsInvalidated"/>.
-    public void Invalidate() => IsInvalidated = true;
+    /// Invalidate the gl model.<br/>        
+    /// This cause <see cref="BuildModel"/> to be invoked at next render.
+    /// </summary>    
+    /// <seealso cref="IsInvalidated"/>.        
+    public void InvalidateModel() => IsInvalidated = true;
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     void InvalidateView() => ViewInvalidated?.Invoke(this);
@@ -724,12 +732,12 @@ public partial class GLModel : IGLContextObject
     }
 
     /// <summary>
-    /// Load figures from simple cmd.<br/>
+    /// Load figure primitives from simple cmd ( newlines supported ).<br/>
     /// <seealso cref="GLPointFigure.SimpleCmd"/>
     /// <seealso cref="GLLineFigure.SimpleCmd"/>
     /// <seealso cref="GLTriangleFigure.SimpleCmd"/>
     /// </summary>
-    public IEnumerable<GLFigureBase> FromSimpleCmd(string simpleCmd)
+    public IEnumerable<GLPrimitiveBase> PrimitivesFromSimpleCmd(string simpleCmd)
     {
         foreach (var line in simpleCmd.Lines())
         {
@@ -737,12 +745,18 @@ public partial class GLModel : IGLContextObject
             {
                 var pts = ParseVector3(line.StripBegin(SIMPLE_CMD_POINT).Trim(), pointCnt: 1);
 
-                yield return new GLPointFigure(pts);
+                foreach (var p in pts) yield return new GLPoint(p);
             }
 
             else if (line.StartsWith(SIMPLE_CMD_LINE))
             {
+                var pts = ParseVector3(line.StripBegin(SIMPLE_CMD_LINE).Trim(), pointCnt: 2).ToList();
 
+                for (int i = 0; i < pts.Count; i += 2)
+                {
+                    var glline = GLLine.FromTo(pts[i], pts[i + 1]);
+                    yield return glline;
+                }
             }
 
             else if (line.StartsWith(SIMPLE_CMD_TRIANGLE))
@@ -752,10 +766,42 @@ public partial class GLModel : IGLContextObject
                 for (int i = 0; i < pts.Count; i += 3)
                 {
                     var tri = new GLTriangle(pts[i], pts[i + 1], pts[i + 2]);
-                    yield return new GLTriangleFigure(tri);
+                    yield return tri;
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Load primitives from given simgple cmd and group them by primitive type creating figures ( newlines supported ).<br/>
+    /// <seealso cref="GLPointFigure.SimpleCmd"/>
+    /// <seealso cref="GLLineFigure.SimpleCmd"/>
+    /// <seealso cref="GLTriangleFigure.SimpleCmd"/>
+    /// </summary>
+    public IEnumerable<GLFigureBase> FiguresFromSimpleCmd(string simpleCmd)
+    {
+        var grps = PrimitivesFromSimpleCmd(simpleCmd)
+            .GroupBy(primitive => primitive.PrimitiveType)
+            .ToList();
+
+        foreach (var grp in grps)
+        {
+            switch (grp.Key)
+            {
+                case GLPrimitiveType.Point:
+                    yield return new GLPointFigure(grp.OfType<GLPoint>());
+                    break;
+
+                case GLPrimitiveType.Line:
+                    yield return new GLLineFigure(grp.OfType<GLLine>());
+                    break;
+
+                case GLPrimitiveType.Triangle:
+                    yield return new GLTriangleFigure(grp.OfType<GLTriangle>());
+                    break;
+            }
+        }
+
     }
 
 }
