@@ -105,6 +105,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// Allow to change alpha (0:full transparent, 1:full opaque) of the figure without the need to change primitives color. If null figure primitives alpha will not overriden. (Default: null)<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    
+    [JsonProperty]
     float? Alpha { get; set; }
 
     /// <summary>
