@@ -1,8 +1,6 @@
 using Avalonia.Controls;
-using Avalonia.Controls.Notifications;
 using Avalonia.Media.Imaging;
 using Avalonia.Threading;
-
 
 namespace SearchAThing.OpenGL.GUI;
 
@@ -106,7 +104,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             return _netcore_opengl_gui_assembly;
         }
     }
-
+    
     void SetCursor()
     {
         var selectionMode = glModel.SelectionMode;
@@ -370,6 +368,8 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
         var focusedCtl = GridSplitterManager.FocusedControl;
         var focusedUID = 0;
+
+        // GridSplitterManager.PrintStructure(Console.Out);
 
         var layout = GridSplitterManager.SaveStructure(emitControl: (ctl, uid) =>
         {
