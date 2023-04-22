@@ -235,15 +235,19 @@ public static partial class Ext
     /// <param name="tol">Length comparision tolerance.</param>
     /// <param name="tri1">First triangle.</param>
     /// <param name="tri2">Second triangle.</param>
-    /// <returns></returns>
-    public static Line? Intersect(this GLTriangle tri1, float tol, GLTriangle tri2)
+    /// <param name="bboxSkipped">True if intersect test skipped due to non intersecting bboxes.</param>
+    /// <returns>Intersection line between two triangles or null if no intersection exists.</returns>
+    public static Line? Intersect(this GLTriangle tri1, float tol, GLTriangle tri2, out bool bboxSkipped)
     {
-        if (tri1.LBBox.Contains(tol, tri2.LBBox, testZ: true))
+        if (tri1.LBBox.Intersects(tol, tri2.LBBox))
         {
+            bboxSkipped = false;
             var q = tri1.ToTriangle3D().Intersect(tol, tri2.ToTriangle3D());
             if (q is not null)
                 return q.ToLine();
         }
+
+        bboxSkipped = true;
 
         return null;
     }

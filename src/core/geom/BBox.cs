@@ -310,14 +310,77 @@ public class BBox
     public BBox Move(in Vector3 delta) => new BBox(CS, Min + delta, Max + delta);
 
     /// <summary>
+    /// Test if this bbox and the other given intersects.
+    /// </summary>    
+    /// <param name="other">Other bbox to test intersects with.</param>
+    /// <returns>True if one of two box have at least one point inside the other.<br/>
+    /// Returns false if one of the given boxes is empty.</returns>
+    public bool Intersects(BBox other)
+    {
+        if (this.IsEmpty || other.IsEmpty) return false;
+
+        var xOverlap =
+            (Min.X >= other.Min.X && Min.X <= other.Max.X)
+            ||
+            (other.Min.X >= Min.X && other.Min.X <= Max.X);
+        if (!xOverlap) return false;
+
+        var yOverlap =
+            (Min.Y >= other.Min.Y && Min.Y <= other.Max.Y)
+            ||
+            (other.Min.Y >= Min.Y && other.Min.Y <= Max.Y);
+        if (!yOverlap) return false;
+
+        var zOverlap =
+            (Min.Z >= other.Min.Z && Min.Z <= other.Max.Z)
+            ||
+            (other.Min.Z >= Min.Z && other.Min.Z <= Max.Z);
+        if (!zOverlap) return false;
+
+        return true;
+    }
+
+    /// <summary>
+    /// Test if this bbox and the other given intersects.
+    /// </summary>
+    /// <param name="tol">Comparision length tolerance.</param>
+    /// <param name="other">Other bbox to test intersects with.</param>
+    /// <returns>True if one of two box have at least one point inside the other.<br/>
+    /// Returns false if one of the given boxes is empty.</returns>
+    public bool Intersects(float tol, BBox other)
+    {
+        if (this.IsEmpty || other.IsEmpty) return false;
+
+        var xOverlap =
+            (Min.X.GreatThanOrEqualsTol(tol, other.Min.X) && Min.X.LessThanOrEqualsTol(tol, other.Max.X))
+            ||
+            (other.Min.X.GreatThanOrEqualsTol(tol, Min.X) && other.Min.X.LessThanOrEqualsTol(tol, Max.X));
+        if (!xOverlap) return false;
+
+        var yOverlap =
+            (Min.Y.GreatThanOrEqualsTol(tol, other.Min.Y) && Min.Y.LessThanOrEqualsTol(tol, other.Max.Y))
+            ||
+            (other.Min.Y.GreatThanOrEqualsTol(tol, Min.Y) && other.Min.Y.LessThanOrEqualsTol(tol, Max.Y));
+        if (!yOverlap) return false;
+
+        var zOverlap =
+            (Min.Z.GreatThanOrEqualsTol(tol, other.Min.Z) && Min.Z.LessThanOrEqualsTol(tol, other.Max.Z))
+            ||
+            (other.Min.Z.GreatThanOrEqualsTol(tol, Min.Z) && other.Min.Z.LessThanOrEqualsTol(tol, Max.Z));
+        if (!zOverlap) return false;
+
+        return true;
+    }
+
+    /// <summary>
     /// WCS tests if given other bounding box is contained (with tolerance) to this one.
     /// </summary>
     /// <param name="tol">Comparision tolerance.</param>
     /// <param name="other">Other bbox to test if contained into this one.</param>
     /// <param name="strictly">If true, test will fails if one wcs ordinate of other bbox extensions equals to this one.</param>
-    /// <param name="testZ">If false tests acts only for x, y bounding box extension components.</param>
+    /// <param name="testZ">If false tests acts only for x, y bounding box extension components (Default: true).</param>
     /// <returns>True if test succeeded.</returns>
-    public bool Contains(float tol, BBox other, bool strictly = false, bool testZ = false)
+    public bool Contains(float tol, BBox other, bool strictly = false, bool testZ = true)
     {
         if (IsEmpty) return false;
 
@@ -377,7 +440,7 @@ public class BBox
     public float TolHint
     {
         get
-        {            
+        {
             var bboxSize = Size.Max();
             if (IsEmpty || bboxSize == 0) return DefaultTolerance;
             return bboxSize * DefaultTolerance;
