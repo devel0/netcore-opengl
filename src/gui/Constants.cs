@@ -3,6 +3,24 @@ namespace SearchAThing.OpenGL.GUI;
 public static class Constants
 {
 
+    #region resources
+
+    /// <summary>
+    /// SearchAThing.OpenGL.Gui assembly name (regex).
+    /// </summary>
+    public const string NETCORE_OPENGL_GUI_ASSEMBLY_NAME = "netcore-opengl-gui";
+
+    /// <summary>
+    /// Retrieve resource name of gui asset.
+    /// </summary>
+    /// <param name="filename">File name of the asset resource.</param>    
+    public static string GuiAssetResourceName(string filename) =>
+        $"SearchAThing.OpenGL.GUI.Assets.{filename}";
+
+    internal const string RESOURCE_FILENAME_SelectPrimitiveCursor_32 = "SelectPrimitiveCursor-32.png";
+
+    #endregion
+
     #region colors
 
     /// <summary>
@@ -63,9 +81,9 @@ public static class Constants
     public static readonly KeyGesture DEFAULT_ToggleUseShadowGesture = new KeyGesture(Key.S, KeyModifiers.Control);
 
     /// <summary>
-    /// (Default) Toggle selection mode key gesture.
+    /// (Default) Switch selection mode key gesture.
     /// </summary>
-    public static readonly KeyGesture DEFAULT_ToggleSelectionModeGesture = new KeyGesture(Key.S);
+    public static readonly KeyGesture DEFAULT_SwitchSelectionModeGesture = new KeyGesture(Key.S);
 
     /// <summary>
     /// (Default) Camera pan left key gesture.
