@@ -87,7 +87,7 @@ public partial class AvaloniaGLControl
                 {
                     var lraycast = GLControl.RayCastLocal(cp.Position.ToVector2());
 
-                    var tol = glModel.LBBox.TolHint;
+                    var tol = DefaultHitTestTolerance;
 
                     var mm = GLControl.ModelMatrix;
                     var vm = GLControl.ViewMatrix;
@@ -164,7 +164,7 @@ public partial class AvaloniaGLControl
 
                         var lraycast = GLControl.RayCastLocal(screen: mouse_coord);
 
-                        var tol = glModel.LBBox.TolHint;
+                        var tol = DefaultHitTestTolerance;
 
                         var hitNfo = glModel.Figures
                             .Where(fig => fig.Visible)
@@ -192,7 +192,7 @@ public partial class AvaloniaGLControl
                             }
                                 .SetOrder(1)
                                 .SetColor(Color.Magenta));
-                            GLControl.ControlOverlay1 = $"tol:{tol} ==> {hitNfo.hitTest.HitCoord.Fmt()}";
+                            GLControl.ControlOverlay1 = $"tol:{tol} (dprj:{hitNfo.hitTest.Distance}) ==> {hitNfo.hitTest.HitCoord.Fmt()}";
                         }
 
                         else
