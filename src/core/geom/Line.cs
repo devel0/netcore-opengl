@@ -102,16 +102,16 @@ public class Line
         var perpSeg = tLine.ApparentIntersect(oLine);
 
         dst = 0;
-        
+
         if (perpSeg is not null && perpSeg.From.EqualsTol(tol, perpSeg.To))
         {
-            if (thisAsSegment && !tLine.SegmentContainsPoint(tol, perpSeg.From)) return null;            
+            if (thisAsSegment && !tLine.SegmentContainsPoint(tol, perpSeg.From)) return null;
             if (otherAsSegment && !oLine.SegmentContainsPoint(tol, perpSeg.To)) return null;
 
             dst = (float)perpSeg.Length;
 
             return perpSeg.MidPoint.ToNVector3();
-        }        
+        }
 
         return null;
 
@@ -171,7 +171,7 @@ public class Line
         }
         else
         {
-            prj = Vector3.Zero;            
+            prj = Vector3.Zero;
         }
 
         return null;
@@ -248,7 +248,7 @@ public static partial class Ext
                     {
                         var _line = Line.FromTo(line.From.Position, line.To.Position);
 
-                        var qip = oraycast.Intersect(tol, _line, out var dst, otherAsSegment: true);                        
+                        var qip = oraycast.Intersect(tol, _line, out var dst, otherAsSegment: true);
 
                         if (qip is not null)
                             yield return new RayCastHitTest(figure, line, qip.Value, dst);
@@ -267,6 +267,302 @@ public static partial class Ext
                 }
                 break;
         }
+    }
+
+    public static IEnumerable<Vector3> DistinctPoints(this IEnumerable<Line> lines, float tol) =>
+        lines.ToList().DistinctPoints(tol);
+
+    /// <summary>
+    /// From the given set of consecutive lines (from,to not required to be adjacent between)
+    /// retrieve the sorted points of the line sequence without duplicates.
+    /// </summary>
+    /// <param name="lines">Input lines.</param>
+    /// <param name="tol">Comparision length tolerance.</param>
+    /// <returns>Sorted lines points.</returns>
+    public static IEnumerable<Vector3> DistinctPoints(this IList<Line> lines, float tol)
+    {
+        if (lines.Count == 1)
+        {
+            yield return lines[0].From;
+            yield return lines[0].To;
+            yield break;
+        }
+
+        var q = lines
+            .Select(line => new
+            {
+                line,
+                fromKey = line.From.PositionSignature(tol),
+                toKey = line.To.PositionSignature(tol)
+            })
+            .ToList();
+
+        for (int i = 0; i < q.Count - 1; ++i)
+        {
+            var line = q[i].line;
+            var fromKey = q[i].fromKey;
+            var toKey = q[i].toKey;
+
+            var nextLine = q[i + 1].line;
+            var nextFromKey = q[i + 1].fromKey;
+            var nextToKey = q[i + 1].toKey;
+
+            // [f1,t1] [f2,t2]
+            if (toKey == nextFromKey)
+            {
+                if (i == 0) yield return line.From;
+                yield return line.To;
+                if (i == q.Count - 2) yield return nextLine.To;
+            }
+
+            // [f1,t1] [t2,f2]
+            else if (toKey == nextToKey)
+            {
+                if (i == 0) yield return line.From;
+                yield return line.To;
+                if (i == q.Count - 2) yield return nextLine.From;
+            }
+
+            // [t1,f1] [f2,t2]
+            else if (fromKey == nextFromKey)
+            {
+                if (i == 0) yield return line.To;
+                yield return line.From;
+                if (i == q.Count - 2) yield return nextLine.To;
+            }
+
+            // [t1,f1] [t2,f2]
+            else if (fromKey == nextToKey)
+            {
+                if (i == 0) yield return line.To;
+                yield return line.From;
+                if (i == q.Count - 2) yield return nextLine.From;
+            }
+
+        }
+    }
+
+}
+
+public static partial class Toolkit
+{
+
+    /// <summary>
+    /// From a set of lines makes groups of them where each group is a set of lines
+    /// that constitute a single polyline within lines sorted by adjacency (from,to not necessary contiguous).<br/>    
+    /// Lines with zero length will discarded.
+    /// </summary>
+    /// <param name="tol">Comparision length tolerance.</param>
+    /// <param name="lines">Input lines.</param>
+    /// <returns>Line groups.</returns>    
+    /// <seealso cref="Ext.DistinctPoints(IEnumerable{Line}, float)"/>
+    public static List<List<Line>> GroupByAdjacency(float tol, IEnumerable<Line> lines) =>
+        GroupByAdjacency(tol, lines.Where(r => !r.Length.EqualsTol(tol, 0)).ToList(), debug: null);
+
+    internal static List<List<Line>> GroupByAdjacency(float tol, IList<Line> lines, DebugVtxMgr? debug)
+    {
+        var tmpres = new List<List<Line>>();
+
+        // hash pos
+
+        var posToLine = new Dictionary<string, List<Line>>();
+
+        foreach (var line in lines)
+        {
+            var fromKey = line.From.PositionSignature(tol);
+            var toKey = line.To.PositionSignature(tol);
+            {
+                if (!posToLine.TryGetValue(fromKey, out var flist))
+                {
+                    flist = new List<Line>();
+                    posToLine.Add(fromKey, flist);
+                }
+                flist.Add(line);
+            }
+
+            {
+                if (!posToLine.TryGetValue(toKey, out var flist))
+                {
+                    flist = new List<Line>();
+                    posToLine.Add(toKey, flist);
+                }
+                flist.Add(line);
+            }
+        }
+
+        // search group members
+
+        var processed = new HashSet<Line>();
+
+        for (int i = 0; i < lines.Count; ++i)
+        {
+            var line = lines[i];
+            if (processed.Contains(line)) continue;
+
+            var fromKey = line.From.PositionSignature(tol);
+            var toKey = line.To.PositionSignature(tol);
+
+            processed.Add(line);
+            var group = new List<Line>() { line };
+            while (processed.Count < lines.Count)
+            {
+                var foundCnt = 0;
+                var qFrom = posToLine[fromKey];
+                if (qFrom.Count > 1)
+                {
+                    var qPrev = qFrom.FirstOrDefault(w => w != line && !processed.Contains(w));
+                    if (qPrev is not null)
+                    {
+                        processed.Add(qPrev);
+                        group.Add(qPrev);
+                        var prevFromKey = qPrev.From.PositionSignature(tol);
+                        var prevToKey = qPrev.To.PositionSignature(tol);
+                        if (prevFromKey == fromKey)
+                            fromKey = prevToKey;
+                        else
+                            fromKey = prevFromKey;
+                        ++foundCnt;
+                    }
+                }
+
+                var qTo = posToLine[toKey];
+                if (qTo.Count > 1)
+                {
+                    var qNext = qTo.FirstOrDefault(w => w != line && !processed.Contains(w));
+                    if (qNext is not null)
+                    {
+                        processed.Add(qNext);
+                        group.Add(qNext);
+                        var nextFromKey = qNext.From.PositionSignature(tol);
+                        var nextToKey = qNext.To.PositionSignature(tol);
+                        if (nextFromKey == toKey)
+                            toKey = nextToKey;
+                        else
+                            toKey = nextFromKey;
+                        ++foundCnt;
+                    }
+                }
+
+                if (foundCnt == 0) break;
+            }
+
+            tmpres.Add(group);
+        }
+
+        // sort
+
+        var res = new List<List<Line>>();
+
+        foreach (var group in tmpres)
+        {
+            res.Add(SortByAdjacency(tol, group, debug));
+        }
+
+        return res;
+    }
+
+    /// <summary>
+    /// Sort given line list by adjacency.
+    /// </summary>
+    /// <param name="tol">Comparision length tolerance.</param>
+    /// <param name="lines">Input lines.</param>
+    /// <returns>List of lines sorted by their adjacency.</returns>
+    public static List<Line> SortByAdjacency(float tol, IList<Line> lines) => SortByAdjacency(tol, lines, debug: null);
+
+    public static List<Line> SortByAdjacency(float tol, IList<Line> lines, DebugVtxMgr? debug)
+    {
+        var posToLine = new Dictionary<string, List<Line>>();
+        {
+            foreach (var line in lines)
+            {
+                var fromKey = line.From.PositionSignature(tol);
+                var toKey = line.To.PositionSignature(tol);
+                {
+                    if (!posToLine.TryGetValue(fromKey, out var flist))
+                    {
+                        flist = new List<Line>();
+                        posToLine.Add(fromKey, flist);
+                    }
+                    flist.Add(line);
+                }
+
+                {
+                    if (!posToLine.TryGetValue(toKey, out var flist))
+                    {
+                        flist = new List<Line>();
+                        posToLine.Add(toKey, flist);
+                    }
+                    flist.Add(line);
+                }
+            }
+        }
+
+        var res = new List<Line>();
+        {
+            var processed = new HashSet<Line>();
+
+            var startScanLine = lines.First();
+            res.Add(startScanLine);
+            processed.Add(startScanLine);
+
+            var line = startScanLine;
+
+            if (debug is not null)
+            {
+                debug.VtxMgr.AddFigure(new[] { line }.ToFigure().SetColor(Color.Red).SetOrder(100));
+                debug.Invalidate();
+            }
+
+            var nextKey = line.To.PositionSignature(tol);
+            while (processed.Count != lines.Count)
+            {
+                var q = posToLine[nextKey].Where(l => l != line).ToList();
+                if (q.Count == 0)
+                    break;
+                line = q[0];
+                res.Add(line);
+                if (debug is not null)
+                {
+                    debug.VtxMgr.AddFigure(new[] { line }.ToFigure().SetColor(Color.Red).SetOrder(100));
+                    debug.Invalidate();
+                }
+                processed.Add(line);
+                var nextFromKey = line.From.PositionSignature(tol);
+                var nextToKey = line.To.PositionSignature(tol);
+                if (nextFromKey == nextKey)
+                    nextKey = nextToKey;
+                else
+                    nextKey = nextFromKey;
+            }
+            if (res.Count == lines.Count)
+                return res;
+
+            res.Reverse();
+            nextKey = startScanLine.From.PositionSignature(tol);
+            line = startScanLine;
+            while (processed.Count != lines.Count)
+            {
+                var q = posToLine[nextKey].Where(l => l != line).ToList();
+                if (q.Count == 0)
+                    break;
+                line = q[0];
+                res.Add(line);
+                if (debug is not null)
+                {
+                    debug.VtxMgr.AddFigure(new[] { line }.ToFigure().SetColor(Color.Red).SetOrder(100));
+                    debug.Invalidate();
+                }
+                processed.Add(line);
+                var nextFromKey = line.From.PositionSignature(tol);
+                var nextToKey = line.To.PositionSignature(tol);
+                if (nextFromKey == nextKey)
+                    nextKey = nextToKey;
+                else
+                    nextKey = nextFromKey;
+            }
+        }
+
+        return res;
     }
 
 }
