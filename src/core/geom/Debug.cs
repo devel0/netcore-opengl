@@ -11,11 +11,12 @@ public class DebugVtxMgr
 
     public GLControl GLControl { get; private set; }
 
-    public void Invalidate() => GLControl.InvalidateAll();
+    public Action Invalidate { get; private set; }
 
-    public DebugVtxMgr(GLVertexManager vtxMgr, GLControl glControl)
+    public DebugVtxMgr(GLVertexManager vtxMgr, GLControl glControl, Action invalidate)
     {
         VtxMgr = vtxMgr;
         GLControl = glControl;
+        Invalidate = invalidate;
     }
 }

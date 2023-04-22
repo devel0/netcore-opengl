@@ -502,17 +502,18 @@ public partial class AvaloniaGLControl
                     if (clip is not null)
                     {
                         var txt = await clip!.GetTextAsync();
-                        var figs = GLControl.GLModel.PasteSimpleCmd(txt).ToList();
-                        var primitivesCnt = figs.Select(w => w.Primitives.Count).Sum();
-
+                        
                         Dispatcher.UIThread.Post(() =>
                         {
+                            var figs = GLControl.GLModel.PasteSimpleCmd(txt).ToList();
+                            var primitivesCnt = figs.Select(w => w.Primitives.Count).Sum();
+
                             GLControl.InvalidateAll();
                             GLControl.GLModel.SendNotification("Paste", $"{figs.Count} figures ({primitivesCnt} primitives) pasted.");
                         });
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
                     Dispatcher.UIThread.Post(() =>
                         GLControl.GLModel.SendNotification("Paste", "Paste of given SimpleCmd failed."));
