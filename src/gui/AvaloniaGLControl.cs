@@ -404,7 +404,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
         var settings = new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
         File.WriteAllText(pathfilename, JsonConvert.SerializeObject(viewLayoutNfo, Formatting.Indented, settings));
 
-        this.Notify(new Notification(NOTIFICATION_TITLE_INPUT_OUTPUT, $"Saved view to\n{pathfilename}", NotificationType.Information));
+        glModel.SendNotification(NOTIFICATION_TITLE_INPUT_OUTPUT, $"Saved view to\n{pathfilename}");
     }
 
     /// <summary>
@@ -418,10 +418,10 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
         if (!File.Exists(pathfilename))
         {
-            this.Notify(new Notification(
+            glModel.SendNotification(
                 NOTIFICATION_TITLE_INPUT_OUTPUT,
                 $"View layout file\n{pathfilename}\nnot found",
-                NotificationType.Warning, TimeSpan.Zero));
+                GLNotificationType.Warning);
 
             return;
         }
@@ -453,13 +453,6 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// Retrieve gl window associated to this avalonia gl control.
     /// </summary>    
     public GLWindow? GLWindow => this.SearchParent<GLWindow>();
-
-    /// <summary>
-    /// Create an avalonia notification message.
-    /// </summary>
-    /// <param name="notification">Use new Notification() to create standard messages.</param>
-    public void Notify(INotification notification) =>
-        GLWindow?.NotificationManager?.Show(notification);
 
 }
 
