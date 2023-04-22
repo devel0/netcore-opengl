@@ -178,6 +178,12 @@ public static partial class Constants
     public const string UNINAME_uFigureHighlight = "uFigureHighlight";
 
     /// <summary>
+    /// Name of the uniform shader variable for the figure alpha.
+    /// <seealso cref="IGLFigure.Alpha"/>.
+    /// </summary>
+    public const string UNINAME_uFigureAlpha = "uFigureAlpha";
+
+    /// <summary>
     /// Name of the uniform shader variable to override vertex material ambient strength (0..1).
     /// </summary>
     public const string UNINAME_uOverrideAmbient = "uOverrideAmbient";

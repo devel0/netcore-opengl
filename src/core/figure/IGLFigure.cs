@@ -91,6 +91,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     bool Highlight { get; set; }
 
     /// <summary>
+    /// Allow to change alpha (0:full transparent, 1:full opaque) of the figure without the need to change primitives color. If null figure primitives alpha will not overriden. (Default: null)<br/>
+    /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
+    /// </summary>    
+    float? Alpha { get; set; }
+
+    /// <summary>
     /// List of vertex manager vertex indexes used by this figure.<br/>
     /// Used in the final render phase where GL.DrawElements take place to 
     /// mapped as opengl ElementArrayBuffer.
@@ -227,5 +233,55 @@ public static partial class Ext
     /// <returns>This figure reference.</returns>
     public static IEnumerable<T> Move<T>(this IEnumerable<T> figures, Vector3 coord, bool relative = true) where T : IGLFigure =>
         figures.Act(figs => figs.ForEach(fig => fig.Move(coord, relative)));
+
+    /// <summary>
+    /// Set figure alpha ( 0:full transparent, 1:full opaque ).<br/>    
+    /// <seealso cref="IGLFigure.Alpha"/>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="alpha">Alpha (0:transparent, 1:opaque).</param>
+    /// </summary>
+    public static T SetAlpha<T>(this T fig, float? alpha) where T : IGLFigure
+    {
+        fig.Alpha = alpha;
+        return fig;
+    }
+
+    /// <summary>
+    /// Change the figure order.
+    /// </summary>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="order">Order to set.</param>
+    /// <seealso cref="IGLFigure.Order"/>
+    /// <returns>This figure.</returns>
+    public static T SetOrder<T>(this T fig, int order) where T : IGLFigure
+    {
+        fig.Order = order;
+        return fig;
+    }
+
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="color">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public static T SetColor<T>(this T fig, in Color color) where T : IGLFigure =>
+        SetColor(fig, color.ToVector4());
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="rgbaColor">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public static T SetColor<T>(this T fig, in Vector4 rgbaColor) where T : IGLFigure
+    {
+        foreach (var primitive in fig.Primitives)
+            foreach (var vertex in primitive.Vertexes)
+                vertex.MaterialColor = rgbaColor;
+
+        return fig;
+    }
 
 }

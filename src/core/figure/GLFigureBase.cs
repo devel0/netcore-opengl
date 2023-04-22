@@ -211,11 +211,33 @@ public abstract class GLFigureBase : IGLFigure
 
     #endregion
 
+    #region Alpha
+
+    private float? _Alpha = null;
+
+    public float? Alpha
+    {
+        get => _Alpha;
+        set
+        {
+            var changed = value != _Alpha;
+            if (changed)
+            {
+                _Alpha = value;
+                OnPropertyChanged();
+                Invalidate();
+            }
+        }
+    }
+
+    #endregion
+
     #region Selected
 
     private bool _Selected = false;
     /// <summary>
     /// Selected.
+    /// TODO: doc
     /// </summary>
     public bool Selected
     {
@@ -275,23 +297,23 @@ public abstract class GLFigureBase : IGLFigure
     #endregion
 
     #region ExpandBBox
-    
+
     private bool _ExpandBBox = true;
-        
+
     public bool ExpandBBox
     {
         get => _ExpandBBox;
         set
         {
-             var changed = value != _ExpandBBox;
-             if (changed)
-             {
-                 _ExpandBBox = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _ExpandBBox;
+            if (changed)
+            {
+                _ExpandBBox = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     public abstract string SimpleCmd();
@@ -334,35 +356,7 @@ public abstract class GLFigureBase : IGLFigure
     /// </summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Invalidate() => FigureInvalidated?.Invoke(this);
-
-    /// <summary>
-    /// Set color on primitives vertexes of this figure.
-    /// </summary>
-    /// <param name="color">Color to set on vertexes.</param>
-    /// <returns>This figure.</returns>
-    public GLFigureBase SetColor(in Color color) => SetColor(color.ToVector4());
-
-    /// <summary>
-    /// Set color on primitives vertexes of this figure.
-    /// </summary>
-    /// <param name="rgbaColor">Color to set on vertexes.</param>
-    /// <returns>This figure.</returns>
-    public GLFigureBase SetColor(in Vector4 rgbaColor)
-    {
-        foreach (var primitive in Primitives)
-            foreach (var vertex in primitive.Vertexes)
-                vertex.MaterialColor = rgbaColor;
-
-        return this;
-    }
-
-    /// <summary>
-    /// Change the figure order.
-    /// </summary>
-    /// <param name="order">Order to set.</param>
-    /// <seealso cref="Order"/>
-    /// <returns>This figure.</returns>
-    public GLFigureBase SetOrder(int order) => this.Act(fig => fig.Order = order);
+  
 
     public override string ToString()
     {

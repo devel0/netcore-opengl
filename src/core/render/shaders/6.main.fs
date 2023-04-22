@@ -64,6 +64,7 @@ uniform bool uEvalLight;
 uniform bool uIsText;
 uniform vec4 uTextColor;
 uniform bool uFigureHighlight;
+uniform float uFigureAlpha;
 
 uniform float uOverrideAmbient;
 uniform bool uOverrideAmbientEnabled;
@@ -123,6 +124,9 @@ void main()
             materialColor = tColor;
         }
     }
+
+    if (uFigureAlpha >= 0)
+        materialColor = vec4(materialColor.xyz, uFigureAlpha);
 
     if (uFigureHighlight)
         materialColor = vec4(1, 1, 0, 1);

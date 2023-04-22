@@ -396,7 +396,13 @@ public partial class GLControl : INotifyPropertyChanged
                     if (!shadowMapMode)
                     {
                         shader.SetBool(UNINAME_uFigureHighlight, fig.Highlight);
+                        if (fig.Alpha.HasValue)
+                            shader.SetFloat(UNINAME_uFigureAlpha, fig.Alpha.Value);
+                        else
+                            shader.SetFloat(UNINAME_uFigureAlpha, -1);
                     }
+                    else
+                        shader.SetFloat(UNINAME_uFigureAlpha, -1);
 
                     var glChar = fig as GLTextCharFigure;
 
