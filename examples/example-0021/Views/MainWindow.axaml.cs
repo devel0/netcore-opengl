@@ -400,7 +400,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         this.KeyDown += MainWindow_KeyDown;
         this.PointerMoved += MainWindow_PointerMoved;
         this.PointerPressed += MainWindow_PointerPressed;
-        this.PointerReleased += MainWindow_PointerRelease;
     }
 
     private void IdPoint_Click(object? sender, RoutedEventArgs e)
@@ -494,41 +493,32 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
     }
 
-    DateTime? dtLastLeftPointerPressed = null;
-
     private void MainWindow_PointerPressed(object? sender, PointerPressedEventArgs e)
     {
         if (this.GLControlSplit?.FocusedControl is not GLView glView) return;
 
         var cp = e.GetCurrentPoint(glView.AvaloniaGLControl);
 
-        // save timestamp to detect if it is a click instead of a pan
-        if (cp.Properties.IsLeftButtonPressed)
-            dtLastLeftPointerPressed = DateTime.Now;
-    }
-
-    private void MainWindow_PointerRelease(object? sender, PointerReleasedEventArgs e)
-    {
-        // if not a click if could a pan, in that case return
-        if (dtLastLeftPointerPressed is null || (DateTime.Now - dtLastLeftPointerPressed.Value).TotalMilliseconds > 250) return;
-
-        switch (cmdType)
+        if (cp.Properties.IsLeftButtonPressed && e.ClickCount == 1)
         {
-            case CommandType.cmdPickUCS:
-                {
-                    if (lastVertexHitTest is not null)
+            switch (cmdType)
+            {
+                case CommandType.cmdPickUCS:
                     {
-                        var pickUcsIdxList = pickUCS.WithIndex().Where(r => r.item is null).ToList();
-                        if (pickUcsIdxList is not null)
+                        if (lastVertexHitTest is not null)
                         {
-                            // store picked wcs vertex transforming from GLVertex figure objectmatrix if any
-                            pickUCS[pickUcsIdxList[0].idx] =
-                                Vector3.Transform(lastVertexHitTest.Position, lastVertexHitTest.ParentFigure!.ObjectMatrix);
-                            ProcessCmd();
+                            var pickUcsIdxList = pickUCS.WithIndex().Where(r => r.item is null).ToList();
+                            if (pickUcsIdxList is not null)
+                            {
+                                // store picked wcs vertex transforming from GLVertex figure objectmatrix if any
+                                pickUCS[pickUcsIdxList[0].idx] =
+                                    Vector3.Transform(lastVertexHitTest.Position, lastVertexHitTest.ParentFigure!.ObjectMatrix);
+                                ProcessCmd();
+                            }
                         }
                     }
-                }
-                break;
+                    break;
+            }
         }
     }
 
@@ -569,7 +559,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 .SelectMany(nfo => nfo.vtxs
                 .Select(vtx => new
                 {
-                    projDst = nfo.oraycast.Contains(5e-2f, vtx.Position),
+                    projDst = nfo.oraycast.Contains(5e-2f, vtx.Position, out var prj),
                     ocoord = Vector3.Transform(vtx.Position, nfo.fig.ObjectMatrix.Inverse()),
                     vtx = vtx
                 })
