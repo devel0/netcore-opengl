@@ -168,32 +168,33 @@ Click on the `example code` link to open source code of the example, read top to
 
 ### List of examples
 
-| example code        | image              | description                                                                                                                                                   | example dependencies |
-| ------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                          |                      |
-| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                             |                      |
-| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                      |                      |
-| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                             |                      |
-| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |                      |
-| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |                      |
-| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |                      |
-| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                      |                      |
-| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                     |                      |
-| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                 |                      |
-| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |                      |
-| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |                      |
-| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |                      |
-| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                               |                      |
-| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                               |                      |
-| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                 |                      |
-| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                          |                      |
-| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                    |                      |
-| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum. |                      |
-| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |                      |
-| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |                      |
-| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |                      |
-| [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement.                                                                                                                            | [BriefFiniteElement] |
-| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data.                   | [BriefFiniteElement] |
+| example code        | image              | description                                                                                                                                                                  |
+| ------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                                         |
+| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                                            |
+| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                                     |
+| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                                            |
+| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                                   |
+| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                                         |
+| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                                        |
+| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                                     |
+| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                                    |
+| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                                |
+| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                                      |
+| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                                        |
+| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                                           |
+| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                                              |
+| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                                              |
+| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                                |
+| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                                         |
+| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                                   |
+| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum.                |
+| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                                           |
+| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                                       |
+| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                                        |
+| [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement using. Dependency: [BriefFiniteElement].                                                                                                   |
+| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: [BriefFiniteElement] |
+| [0025][es25]        | [![img][e25]][e25] | Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method. |
 
 [brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
 [es0]: examples/example-0000/Program.cs
@@ -220,6 +221,7 @@ Click on the `example code` link to open source code of the example, read top to
 [es21]: examples/example-0021/Views/MainWindow.axaml.cs
 [es23]: examples/example-0023/Program.cs
 [es24]: examples/example-0024/Program.cs
+[es25]: examples/example-0025/Program.cs
 [e0]: data/images/examples/0000.png
 [e1]: data/images/examples/0001.png
 [e2]: data/images/examples/0002.png
@@ -243,6 +245,8 @@ Click on the `example code` link to open source code of the example, read top to
 [e21]: data/images/examples/0021.gif
 [e23]: data/images/examples/0023.png
 [e24]: data/images/examples/0024.png
+[e25]: data/images/examples/0025.png
+[FeasibleTriIntersectionTests]: https://github.com/devel0/netcore-opengl/blob/0ce534f6fcbb62279d814b0eca08f5be97ec8f98/src/core/primitive/IGLTriangle.cs#L113
 
 ### Running examples from console
 

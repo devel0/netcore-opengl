@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
@@ -74,6 +74,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example-0024", "examples\example-0024\example-0024.csproj", "{4DD70ABA-EB92-4188-809E-E02C754B15DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netcore-opengl-nurbs", "src\nurbs\netcore-opengl-nurbs.csproj", "{59DC2D75-F7C5-4B80-B1FB-CDF1A157345E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example-0025", "examples\example-0025\example-0025.csproj", "{D5FB460B-00A0-4654-8524-1B4E40F545CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -220,6 +222,10 @@ Global
 		{59DC2D75-F7C5-4B80-B1FB-CDF1A157345E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59DC2D75-F7C5-4B80-B1FB-CDF1A157345E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59DC2D75-F7C5-4B80-B1FB-CDF1A157345E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5FB460B-00A0-4654-8524-1B4E40F545CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FB460B-00A0-4654-8524-1B4E40F545CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FB460B-00A0-4654-8524-1B4E40F545CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FB460B-00A0-4654-8524-1B4E40F545CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F5E3CDDB-F28F-45D9-9660-B2740CF8CD14} = {89EC3276-D9A8-472D-BF5F-4B51E2FF5F09}
@@ -256,5 +262,6 @@ Global
 		{1B3687A4-FA1F-43A7-B7C4-09C95ABC45BC} = {FD57C411-3D0B-49DB-8C1E-B7CDBE17D462}
 		{4DD70ABA-EB92-4188-809E-E02C754B15DC} = {FD57C411-3D0B-49DB-8C1E-B7CDBE17D462}
 		{59DC2D75-F7C5-4B80-B1FB-CDF1A157345E} = {89EC3276-D9A8-472D-BF5F-4B51E2FF5F09}
+		{D5FB460B-00A0-4654-8524-1B4E40F545CB} = {FD57C411-3D0B-49DB-8C1E-B7CDBE17D462}
 	EndGlobalSection
 EndGlobal
