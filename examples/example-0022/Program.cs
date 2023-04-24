@@ -1,14 +1,11 @@
-﻿using GShark.Core;
-using GShark.Geometry;
-using Plane = GShark.Geometry.Plane;
-
-using SearchAThing.OpenGL.Nurbs;
-
+﻿using GShark.Geometry;
 
 namespace example;
 
 // example-0022
-// not yet implemented ( https://github.com/GSharker/G-Shark/pull/412 )
+// Nurb surface join on two tubes
+//
+// - use 'space' application key to toggle joint visiblity
 
 class Program
 {
@@ -17,7 +14,22 @@ class Program
     {
         InitAvalonia();
 
+        GLPointFigure? profilePtsFig = null;
+
         var w = GLWindow.Create(
+
+            // customize ControlFigureVisible to not show green profile dots on "RENDER" titled views
+            onGLControlCreated: (avaloniaGLControl) =>
+            {
+                avaloniaGLControl.GLControl.ControlFigureVisible = (glControl, glFigure) =>
+                {
+                    if (glControl.Title.StartsWith("RENDER"))
+                        return glFigure != profilePtsFig;
+
+                    return true;
+                };
+            },
+
             onFocusedControlChanged: (split, AvaloniaGLControl, isInitial) =>
             {
                 if (isInitial)
@@ -33,9 +45,9 @@ class Program
 
             var glModel = glCtl.GLModel;
 
-            var RAIL_DIVS = 4;
-            var TUBE_DIVS = 20;
-            var GLNURB_DIVS = TUBE_DIVS;
+            const int JOINT_DIV = 8;
+            const int TUBE_DIV = JOINT_DIV;
+            const int RAIL_DIVS = 4;
 
             glModel.Clear();
 
@@ -43,74 +55,92 @@ class Program
 
             var tube1 = new Cone(
                 baseCS: (WCS * Matrix4x4.CreateRotationX((float)(PI / 2)) * Matrix4x4.CreateRotationZ(-(float)(PI / 4)))
-                    .Move(-1f, -1f, 0),
-                baseRadius: 1, topRadius: 1, height: 6,
-                bottomCap: false, topCap: false).Figure(divisions: TUBE_DIVS);
+                    .Move((float)(-3 * Cos(45d.ToRad())), (float)(-3 * Sin(45d.ToRad())), 0),
+                baseRadius: 2, topRadius: 2, height: 6,
+                bottomCap: false, topCap: false).Figure(JOINT_DIV);
 
+            // mirror tube1 respect the YZ plane
             var tube2 = tube1.Mirror(YZCS)!;
 
             glModel.AddFigure(tube1);
             glModel.AddFigure(tube2);
 
-            glModel.PointLights.Add(new GLPointLight(0, -1, 2));
-
             // grab tube vertexes near join as profile to sweep
 
-            var profilePts = tube1.Vertexes().Where(r => r.Position.Length() < 2).Select(w => w.Position).ToList();
-            // var profileCenter = profilePts[0];
-            var profileCenter = profilePts.Mean();
-            // var profileCenter = new Vector3(-1, -1, 0);
+            var _profilePts = tube1
+                .BuildVertexPosDict(tol: 1e-5f)
+                .Select(w => w.Value.First())
+                .Where(r => r.Position.Length() < 5).Select(w => new
+                {
+                    vtx = w,
+                    sig = w.PositionSignature(1e-5f),
+                    pos = w.Position
+                }).ToList();
+            var profilePts = _profilePts.Select(w => w.pos).ToList();
 
-            glModel.AddFigure(new GLPointFigure(profilePts).SetColor(Color.Green));
+            var profilePtsMean = profilePts.Mean();
+            
+            var profileCenter = profilePtsMean;
+            var profilePlane = MakeCS(profilePtsMean,
+                profilePts[JOINT_DIV / 4] - profilePtsMean,
+                profilePts[0] - profilePtsMean,
+                makeOrthonormalization: true);
+
+            Debug.WriteLine($"profilePlane START: {profilePlane.BaseZ()}");
+
+            profilePts.Add(profilePts[0]);
+
+            profilePtsFig = new GLPointFigure(profilePts).SetColor(Color.Green);
+            glModel.AddFigure(profilePtsFig);
 
             var railPts = new List<Vector3>();
             {
                 var N = RAIL_DIVS;
                 var alpha = 0f;
                 var alphaStep = (float)(PI / 2 / N);
-                var rotCenter = new Vector3(0, -2f, 0);
+                var rotCenter = new Vector3(0, (float)(-3 * Sqrt(2)), 0);
                 for (int i = 0; i < N + 1; ++i)
                 {
                     railPts.Add(Vector3.Transform(profileCenter, Matrix4x4.CreateRotationZ(-alpha, rotCenter)));
+
                     alpha += alphaStep;
                 }
             }
 
-            var rail = new NurbsCurve(railPts.ToPoint3().ToList(), 1);             
-
-            var sw = new Stopwatch();
-            sw.Start();
-            var sweepNurb = NurbsSurface.FromSweep(
-                rail,
-                new NurbsCurve(profilePts.ToPoint3().ToList(), 1));
-            sw.Stop();
-            Debug.WriteLine($"FromSweep time:{sw.Elapsed}");
-
+            for (int i = 0; i < railPts.Count; ++i)
             {
-                var (tValues, _) = GShark.Sampling.Curve.AdaptiveSample(rail, GSharkMath.MaxTolerance);
-                var frames = rail.PerpendicularFrames(tValues);
-                foreach (var frame in frames)
-                {
-                    var cs = MakeCS(frame.Origin.ToVector3(), frame.XAxis.ToVector3(), frame.YAxis.ToVector3(), frame.ZAxis.ToVector3());
-                    glModel.AddFigure(MakeCSFigure(cs));
-                }
+                var railPt = railPts[i];
+                System.Console.WriteLine($"rail [{i}]: {railPt}");
             }
+
+            System.Console.WriteLine($"profile CENTER : {profileCenter}");
+
+            for (int i = 0; i < profilePts.Count; ++i)
+            {
+                var profilePt = profilePts[i];
+                System.Console.WriteLine($"profile [{i}]: {profilePt}");
+            }
+
+            var sweepNurb = NurbsSurface.FromSweep(
+                new NurbsCurve(railPts.ToPoint3().ToList(), 1),
+                new NurbsCurve(profilePts.ToPoint3().ToList(), 1),
+                startTangent: new GShark.Geometry.Vector3(0.7071068, 0.70710677, 0),
+                endTangent: new GShark.Geometry.Vector3(0.7071068, -0.70710677, 0));
 
             var railFig = new GLPointFigure(railPts).SetColor(Color.Yellow);
             glModel.AddFigure(railFig);
 
-            joinFig = sweepNurb.NurbToGL(Color.Red, N: GLNURB_DIVS).ToFigure(); ;
+            joinFig = sweepNurb.NurbToGL(Color.Red, N: TUBE_DIV).ToFigure();
             glModel.AddFigure(joinFig);
-
-            // glCtl.CameraView(CameraViewType.Top);
-            // glCtl.LoadView();
         };
 
         w.KeyDown += (sender, e) =>
         {
             if (e.Key == Key.Space)
             {
-                if (joinFig is not null) { joinFig.Visible = !joinFig.Visible; w.GLControlSplit?.Invalidate(); }
+                if (joinFig is not null) joinFig.Visible = !joinFig.Visible;
+
+                w.Invalidate();
             }
         };
 

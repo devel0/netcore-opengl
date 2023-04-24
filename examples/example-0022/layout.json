@@ -1,54 +1,137 @@
 {
   "Layout": {
-    "Parent": null,
     "SplitDirection": 0,
-    "Index": 0,
     "Sizes": [
       1.0,
       1.0
     ],
-    "Children": [],
-    "LeafUIDs": [
-      0,
-      1
-    ]
+    "Children": [
+      {
+        "SplitDirection": 1,
+        "Sizes": [
+          560.0,
+          176.0
+        ],
+        "Children": [
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 0,
+            "Index": 0,
+            "Debug": "21951804"
+          },
+          {
+            "SplitDirection": 0,
+            "Sizes": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Children": [
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 1,
+                "Index": 0,
+                "Debug": "52568400"
+              },
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 2,
+                "Index": 1,
+                "Debug": "21438230"
+              },
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 3,
+                "Index": 2,
+                "Debug": "5511595"
+              }
+            ],
+            "LeafUID": null,
+            "Index": 1,
+            "Debug": null
+          }
+        ],
+        "LeafUID": null,
+        "Index": 0,
+        "Debug": null
+      },
+      {
+        "SplitDirection": 1,
+        "Sizes": [
+          1.0,
+          1.0
+        ],
+        "Children": [
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 4,
+            "Index": 0,
+            "Debug": "3784538"
+          },
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 5,
+            "Index": 1,
+            "Debug": "55520647"
+          }
+        ],
+        "LeafUID": null,
+        "Index": 1,
+        "Debug": null
+      }
+    ],
+    "LeafUID": null,
+    "Index": 0,
+    "Debug": null
   },
   "UIDView": {
     "0": {
-      "Title": "",
+      "Title": "RENDER",
       "ModelMatrix": {
-        "M11": 0.9975868,
-        "M12": 0.007830504,
-        "M13": 0.06898844,
+        "M11": 0.99999386,
+        "M12": -1.2243292E-05,
+        "M13": -0.0034990201,
         "M14": 0.0,
-        "M21": 0.051696792,
-        "M22": 0.57951105,
-        "M23": -0.813323,
+        "M21": 0.0,
+        "M22": 0.99999386,
+        "M23": -0.0034990415,
         "M24": 0.0,
-        "M31": -0.04634831,
-        "M32": 0.8149268,
-        "M33": 0.5777077,
+        "M31": 0.0034990415,
+        "M32": 0.0034990201,
+        "M33": 0.9999877,
         "M34": 0.0,
-        "M41": 0.12794304,
-        "M42": 1.4342169,
-        "M43": -2.0128717,
+        "M41": 6.256774E-10,
+        "M42": 3.3890665,
+        "M43": -0.011858379,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": 0.12794304,
-          "Y": 1.4342169,
-          "Z": -2.0128717
+          "X": 6.256774E-10,
+          "Y": 3.3890665,
+          "Z": -0.011858379
         }
       },
       "CameraPos": {
-        "X": 0.058812037,
-        "Y": 0.5160203,
-        "Z": 8.820123
+        "X": -0.010976054,
+        "Y": 0.010979621,
+        "Z": 26.337206
       },
       "CameraTarget": {
-        "X": 0.058812037,
-        "Y": 0.5160203,
-        "Z": 7.8201227
+        "X": -0.010976054,
+        "Y": 0.010979621,
+        "Z": 25.337206
       },
       "CameraUp": {
         "X": 0.0,
@@ -58,44 +141,167 @@
       "Wireframe": false,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.1,
-      "Far": 50000.0,
-      "ShadeWithEdge": true,
+      "Near": 0.24294657,
+      "Far": 85.13927,
+      "UseShadow": false,
+      "ShadeWithEdge": false,
       "ShowCameraObject": false,
-      "Lights": [
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.0,
-            "Y": -1.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.0,
-            "Y": -1.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        }
-      ]
+      "Lights": null
     },
     "1": {
+      "Title": "",
+      "ModelMatrix": {
+        "M11": 0.6427878,
+        "M12": -3.3484874E-08,
+        "M13": -0.7660446,
+        "M14": 0.0,
+        "M21": -0.7660446,
+        "M22": -2.8097146E-08,
+        "M23": -0.6427878,
+        "M24": 0.0,
+        "M31": 0.0,
+        "M32": 1.0,
+        "M33": -4.371139E-08,
+        "M34": 0.0,
+        "M41": -2.5961914,
+        "M42": 8.359031E-08,
+        "M43": -2.178463,
+        "M44": 1.0,
+        "IsIdentity": false,
+        "Translation": {
+          "X": -2.5961914,
+          "Y": 8.359031E-08,
+          "Z": -2.178463
+        }
+      },
+      "CameraPos": {
+        "X": 0.71875376,
+        "Y": 0.022004435,
+        "Z": 19.459797
+      },
+      "CameraTarget": {
+        "X": 0.71875376,
+        "Y": 0.022004435,
+        "Z": 18.459797
+      },
+      "CameraUp": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "Wireframe": false,
+      "Perspective": true,
+      "OrthoZoom": 1.0,
+      "Near": 0.106801145,
+      "Far": 84.71843,
+      "UseShadow": false,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": null
+    },
+    "2": {
+      "Title": "",
+      "ModelMatrix": {
+        "M11": 1.0,
+        "M12": 0.0,
+        "M13": 0.0,
+        "M14": 0.0,
+        "M21": 0.0,
+        "M22": -4.371139E-08,
+        "M23": -1.0,
+        "M24": 0.0,
+        "M31": 0.0,
+        "M32": 1.0,
+        "M33": -4.371139E-08,
+        "M34": 0.0,
+        "M41": 0.0,
+        "M42": 3.0672226E-08,
+        "M43": -3.3890872,
+        "M44": 1.0,
+        "IsIdentity": false,
+        "Translation": {
+          "X": 0.0,
+          "Y": 3.0672226E-08,
+          "Z": -3.3890872
+        }
+      },
+      "CameraPos": {
+        "X": -0.03466244,
+        "Y": 0.034643196,
+        "Z": 26.298073
+      },
+      "CameraTarget": {
+        "X": -0.03466244,
+        "Y": 0.034643196,
+        "Z": 25.298073
+      },
+      "CameraUp": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "Wireframe": false,
+      "Perspective": true,
+      "OrthoZoom": 1.0,
+      "Near": 0.21908985,
+      "Far": 92.06148,
+      "UseShadow": false,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": null
+    },
+    "3": {
+      "Title": "",
+      "ModelMatrix": {
+        "M11": 0.6427878,
+        "M12": 3.3484874E-08,
+        "M13": 0.7660446,
+        "M14": 0.0,
+        "M21": 0.7660446,
+        "M22": -2.8097146E-08,
+        "M23": -0.6427878,
+        "M24": 0.0,
+        "M31": 0.0,
+        "M32": 1.0,
+        "M33": -4.371139E-08,
+        "M34": 0.0,
+        "M41": 2.5961914,
+        "M42": 8.359031E-08,
+        "M43": -2.178463,
+        "M44": 1.0,
+        "IsIdentity": false,
+        "Translation": {
+          "X": 2.5961914,
+          "Y": 8.359031E-08,
+          "Z": -2.178463
+        }
+      },
+      "CameraPos": {
+        "X": -0.2896151,
+        "Y": 0.07106866,
+        "Z": 20.423172
+      },
+      "CameraTarget": {
+        "X": -0.2896151,
+        "Y": 0.07106866,
+        "Z": 19.423172
+      },
+      "CameraUp": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "Wireframe": false,
+      "Perspective": true,
+      "OrthoZoom": 1.0,
+      "Near": 0.116434895,
+      "Far": 87.60856,
+      "UseShadow": false,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": null
+    },
+    "4": {
       "Title": "",
       "ModelMatrix": {
         "M11": 1.0,
@@ -111,25 +317,25 @@
         "M33": 1.0,
         "M34": 0.0,
         "M41": 0.0,
-        "M42": 2.4748735,
-        "M43": 1.1920929E-07,
+        "M42": 3.3890872,
+        "M43": 1.7881393E-07,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
           "X": 0.0,
-          "Y": 2.4748735,
-          "Z": 1.1920929E-07
+          "Y": 3.3890872,
+          "Z": 1.7881393E-07
         }
       },
       "CameraPos": {
-        "X": 0.03262371,
-        "Y": 1.5386804,
-        "Z": 26.169756
+        "X": -0.012075424,
+        "Y": 0.01209116,
+        "Z": 1.0
       },
       "CameraTarget": {
-        "X": 0.03262371,
-        "Y": 1.5386804,
-        "Z": 25.169756
+        "X": -0.012075424,
+        "Y": 0.01209116,
+        "Z": 0.0
       },
       "CameraUp": {
         "X": 0.0,
@@ -138,44 +344,97 @@
       },
       "Wireframe": true,
       "Perspective": false,
-      "OrthoZoom": 0.006642806,
-      "Near": 0.25169754,
-      "Far": 81.50927,
+      "OrthoZoom": 0.024115864,
+      "Near": 0.17603666,
+      "Far": 64.811,
+      "UseShadow": false,
       "ShadeWithEdge": false,
       "ShowCameraObject": false,
-      "Lights": [
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.0,
-            "Y": -1.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.0,
-            "Y": -1.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
+      "Lights": null
+    },
+    "5": {
+      "Title": "RENDER",
+      "ModelMatrix": {
+        "M11": -0.99982524,
+        "M12": -0.0056212656,
+        "M13": 0.017829796,
+        "M14": 0.0,
+        "M21": 0.018694926,
+        "M22": -0.3006328,
+        "M23": 0.9535568,
+        "M24": 0.0,
+        "M31": 2.6286749E-08,
+        "M32": 0.95372343,
+        "M33": 0.30068535,
+        "M34": 0.0,
+        "M41": 0.06335873,
+        "M42": -1.0188708,
+        "M43": 3.231687,
+        "M44": 1.0,
+        "IsIdentity": false,
+        "Translation": {
+          "X": 0.06335873,
+          "Y": -1.0188708,
+          "Z": 3.231687
         }
-      ]
+      },
+      "CameraPos": {
+        "X": -0.01036967,
+        "Y": 0.010384429,
+        "Z": 16.280195
+      },
+      "CameraTarget": {
+        "X": -0.01036967,
+        "Y": 0.010384429,
+        "Z": 15.280194
+      },
+      "CameraUp": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "Wireframe": false,
+      "Perspective": true,
+      "OrthoZoom": 1.0,
+      "Near": 0.113548964,
+      "Far": 63.616478,
+      "UseShadow": false,
+      "ShadeWithEdge": true,
+      "ShowCameraObject": false,
+      "Lights": null
     }
   },
-  "FocusedUIDView": 1
+  "Lights": [
+    {
+      "Active": true,
+      "Position": {
+        "X": 12.963624,
+        "Y": -7.7781744,
+        "Z": 12.0
+      },
+      "Ambient": "255, 255, 255",
+      "Diffuse": "255, 255, 255",
+      "Specular": "255, 255, 255",
+      "Constant": 0.717393,
+      "Linear": 0.0039627934,
+      "Quadratic": 0.0,
+      "ShowPoint": false
+    },
+    {
+      "Active": true,
+      "Position": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 3.0
+      },
+      "Ambient": "205, 205, 205",
+      "Diffuse": "205, 205, 205",
+      "Specular": "205, 205, 205",
+      "Constant": 0.6446496,
+      "Linear": 0.014906846,
+      "Quadratic": 0.0,
+      "ShowPoint": false
+    }
+  ],
+  "FocusedUIDView": 0
 }
