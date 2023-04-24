@@ -984,7 +984,7 @@ public partial class GLControl : INotifyPropertyChanged
     public void ToggleCameraObject(bool invalidate = DEFAULT_INVALIDATE)
     {
         ShowCameraObject = !ShowCameraObject;
-        if (invalidate) Invalidate();
+        if (invalidate) InvalidateAll();
     }
 
     /// <summary>
