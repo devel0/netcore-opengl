@@ -328,7 +328,6 @@
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
 
-
 						</DataGrid.Columns>
 					</DataGrid>
 				</Grid>
@@ -426,19 +425,19 @@
 									</Grid.Styles>
 									<TextBlock Grid.Row="0" Grid.Column="0" Text="Constant" Classes="hdr" />
 									<Slider Grid.Row="0" Grid.Column="1"
-										Minimum="0" Maximum="1"
+										Minimum="0" Maximum="2"
 										Value="{Binding #dgLights.SelectedItem.Constant}" />
 									<TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Constant, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
 
 									<TextBlock Grid.Row="1" Grid.Column="0" Text="Linear" Classes="hdr" />
 									<Slider Grid.Row="1" Grid.Column="1"
-										Minimum="0" Maximum="1"
+										Minimum="0" Maximum="0.1"
 										Value="{Binding #dgLights.SelectedItem.Linear}" />
 									<TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Linear, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
 
 									<TextBlock Grid.Row="2" Grid.Column="0" Text="Quadratic" Classes="hdr" />
 									<Slider Grid.Row="2" Grid.Column="1"
-										Minimum="0" Maximum="1"
+										Minimum="0" Maximum="0.01"
 										Value="{Binding #dgLights.SelectedItem.Quadratic}" />
 									<TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Quadratic, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
 								</Grid>
