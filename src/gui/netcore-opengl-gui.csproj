@@ -32,7 +32,7 @@
     <PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Xaml.Behaviors" Version="$(AvaloniaVersion)" />
 
-    <PackageReference Include="netcore-desktop" Version="2.5.0" />
+    <PackageReference Include="netcore-desktop" Version="3.0.0" />
     <!-- <ProjectReference Include="..\..\..\netcore-desktop\src\desktop\netcore-desktop.csproj" /> -->
   </ItemGroup>
 
