@@ -185,12 +185,12 @@ public partial class GLModel : IGLContextObject
 
     private float _OverrideAmbient = DEFAULT_MaterialProperties.Ambient;
     /// <summary>
-    /// Override ambient (default:0.8).    
+    /// Override ambient strength (default:0.8).    
     /// </summary>
     /// <remarks>
     /// Requires <see cref="OverrideAmbient"/> to be effective.
     /// </remarks>
-    /// <seealso cref="Override"/>    
+    /// <seealso cref="OverrideLightStrengths"/>    
     public float OverrideAmbient
     {
         get => _OverrideAmbient;
@@ -211,7 +211,7 @@ public partial class GLModel : IGLContextObject
 
     private bool _OverrideAmbientEnabled = false;
     /// <summary>
-    /// Override ambient enabled.    
+    /// Override ambient strength enabled.    
     /// </summary>
     public bool OverrideAmbientEnabled
     {
@@ -233,12 +233,12 @@ public partial class GLModel : IGLContextObject
 
     private float _OverrideDiffuse = DEFAULT_MaterialProperties.Diffuse;
     /// <summary>
-    /// Override diffuse (default:0.6).    
+    /// Override diffuse strength (default:0.6).    
     /// </summary>
     /// <remarks>
     /// Requires <see cref="OverrideDiffuse"/> to be effective.
     /// </remarks>
-    /// <seealso cref="Override"/>    
+    /// <seealso cref="OverrideLightStrengths"/>    
     public float OverrideDiffuse
     {
         get => _OverrideDiffuse;
@@ -259,7 +259,7 @@ public partial class GLModel : IGLContextObject
 
     private bool _OverrideDiffuseEnabled = false;
     /// <summary>
-    /// Override diffuse enabled.
+    /// Override diffuse strength enabled.
     /// </summary>
     public bool OverrideDiffuseEnabled
     {
@@ -281,12 +281,12 @@ public partial class GLModel : IGLContextObject
 
     private float _OverrideSpecular = DEFAULT_MaterialProperties.Specular;
     /// <summary>
-    /// Override specular (default:0.6).    
+    /// Override specular strength (default:0.6).    
     /// </summary>
     /// <remarks>
     /// Requires <see cref="OverrideSpecular"/> to be effective.
     /// </remarks>
-    /// <seealso cref="Override"/>  
+    /// <seealso cref="OverrideLightStrengths"/>  
     public float OverrideSpecular
     {
         get => _OverrideSpecular;
@@ -307,7 +307,7 @@ public partial class GLModel : IGLContextObject
 
     private bool _OverrideSpecularEnabled = false;
     /// <summary>
-    /// Override specular enabled.
+    /// Override specular strength enabled.
     /// </summary>
     public bool OverrideSpecularEnabled
     {
@@ -331,7 +331,7 @@ public partial class GLModel : IGLContextObject
     /// <summary>
     /// States if model is invalidated thus <see cref="BuildModel"/> will be automatically invoked at first render.
     /// </summary>
-    public bool IsInvalidated
+    public bool IsInvalidated   
     {
         get => _IsInvalidated;
         set
@@ -458,7 +458,7 @@ public partial class GLModel : IGLContextObject
             return _LBbox;
         }
         private set
-        {            
+        {
             _LBbox = value;
             OnPropertyChanged();
         }
@@ -515,7 +515,7 @@ public partial class GLModel : IGLContextObject
     /// <param name="ambient">Ambient light strength (Default:0.8).</param>
     /// <param name="diffuse">Diffuse light strength (Default:0.6).</param>
     /// <param name="specular">Specular light strength (Default:0.6).</param>
-    public void Override(float? ambient = null, float? diffuse = null, float? specular = null)
+    public void OverrideLightStrengths(float? ambient = null, float? diffuse = null, float? specular = null)
     {
         if (ambient is not null)
         {

@@ -360,12 +360,14 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// <summary>
     /// Retrieve an object that can be serialized to save current <see cref="GLControl"/> view config.
     /// </summary>    
-    public ViewNfo GetViewNfo() => GLControl.GetViewNfo();
+    /// <param name="includeLights">If true (default) lights will saved within view nfo.</param>    
+    public ViewNfo GetViewNfo(bool includeLights = true) => GLControl.GetViewNfo(includeLights);
 
     /// <summary>
-    /// Restore <see cref="GLControl"/> view settings from given nfo object.
+    /// Restore <see cref="GLControl"/> view settings from given nfo object.    
     /// </summary>    
-    public void SetViewNfo(ViewNfo nfo) => GLControl.SetViewNfo(nfo);
+    /// <param name="includeLights">If true (default) lights set to the model.</param>    
+    public void SetViewNfo(ViewNfo nfo, bool includeLights = true) => GLControl.SetViewNfo(nfo, includeLights);
 
     /// <summary>
     /// Save all <see cref="GLControl"/> view config to the given pathfilename.<br/>    
@@ -379,11 +381,11 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
         var focusedCtl = GridSplitterManager.FocusedControl;
         var focusedUID = 0;
 
-        // GridSplitterManager.PrintStructure(Console.Out);
+        // GridSplitterManager.PrintStructure(Console.Out);        
 
         var layout = GridSplitterManager.SaveStructure(emitControl: (ctl, uid) =>
         {
-            uidToViewConfig.Add(uid, ctl.AvaloniaGLControl.GetViewNfo());
+            uidToViewConfig.Add(uid, ctl.AvaloniaGLControl.GetViewNfo(includeLights: false));
 
             if (ctl == focusedCtl) focusedUID = uid;
         });
@@ -394,7 +396,8 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             viewLayoutNfo = new ViewLayoutNfo
             {
                 Layout = layout,
-                UIDView = uidToViewConfig
+                UIDView = uidToViewConfig,
+                Lights = glModel.PointLights.ToList()
             };
 
         else
@@ -404,11 +407,16 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
             viewLayoutNfo = new ViewLayoutNfo
             {
-                UIDView = uidView
+                UIDView = uidView,
+                Lights = glModel.PointLights.ToList()
             };
         }
 
         viewLayoutNfo.FocusedUIDView = focusedUID;
+
+        viewLayoutNfo.OverrideAmbient = glModel.OverrideAmbientEnabled ? glModel.OverrideAmbient : null;
+        viewLayoutNfo.OverrideDiffuse = glModel.OverrideDiffuseEnabled ? glModel.OverrideDiffuse : null;
+        viewLayoutNfo.OverrideSpecular = glModel.OverrideSpecularEnabled ? glModel.OverrideSpecular : null;
 
         if (pathfilename is null) pathfilename = LayoutDefaultPathfilename;
         var settings = new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
@@ -448,13 +456,24 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
             GridSplitterManager.LoadStructure(nfo.Layout, reconfigureControl: (glview, uid) =>
             {
-                glview.AvaloniaGLControl.SetViewNfo(nfo.UIDView[uid]);
+                glview.AvaloniaGLControl.SetViewNfo(nfo.UIDView[uid], includeLights: false);
                 if (nfo.FocusedUIDView == uid)
                     viewToFocus = glview;
             });
 
             GridSplitterManager.FocusedControl = viewToFocus;
         }
+
+        if (nfo.Lights is not null)
+        {
+            glModel.PointLights.Clear();
+            foreach (var light in nfo.Lights)
+            {
+                glModel.PointLights.Add(light);
+            }
+        }
+
+        glModel.OverrideLightStrengths(nfo.OverrideAmbient, nfo.OverrideDiffuse, nfo.OverrideSpecular);
 
         GLControl.Invalidate();
     }

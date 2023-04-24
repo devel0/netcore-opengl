@@ -43,7 +43,7 @@ public class ViewTest
 
         //-----------
 
-        glModel.Override(ambient: 1f);
+        glModel.OverrideLightStrengths(ambient: 1f);
 
         glCtl.Wireframe = false;
         glCtl.UseShadow = false;

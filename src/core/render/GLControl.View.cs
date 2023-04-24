@@ -265,7 +265,8 @@ public partial class GLControl
     /// Retrieve actual view config.
     /// </summary>
     /// <seealso cref="SaveView"/>
-    public ViewNfo GetViewNfo() => new ViewNfo
+    /// <param name="includeLights">If true (default) lights will saved within view nfo.</param>    
+    public ViewNfo GetViewNfo(bool includeLights = true) => new ViewNfo
     {
         Title = Title,
         ModelMatrix = ModelMatrix,
@@ -280,13 +281,13 @@ public partial class GLControl
         UseShadow = UseShadow,
         ShadeWithEdge = ShadeWithEdge,
         ShowCameraObject = ShowCameraObject,
-        Lights = GLModel.PointLights.ToList()
+        Lights = includeLights ? GLModel.PointLights.ToList() : null
     };
 
     /// <summary>
     /// Save actual view info to given pathfilename.<br/>
-    /// A Notification <see cref="GLControl.NotificationRequest"/> event emitted.
-    /// <seealso cref="ViewDefaultPathfilename"/>    
+    /// A Notification <see cref="GLControl.NotificationRequest"/> event emitted.    
+    /// <seealso cref="ViewDefaultPathfilename"/>        
     /// </summary>    
     public void SaveView(string? pathfilename = null)
     {
@@ -311,8 +312,9 @@ public partial class GLControl
     /// Restore current view config.
     /// </summary>
     /// <param name="nfo">view config object</param>
-    /// <seealso cref="LoadView"/>
-    public void SetViewNfo(ViewNfo nfo)
+    /// <param name="includeLights">If true (default) lights set to the model.</param>    
+    /// <seealso cref="LoadView"/>    
+    public void SetViewNfo(ViewNfo nfo, bool includeLights = true)
     {
         Title = nfo.Title;
         ModelMatrix = nfo.ModelMatrix;
@@ -327,7 +329,7 @@ public partial class GLControl
         UseShadow = nfo.UseShadow;
         ShadeWithEdge = nfo.ShadeWithEdge;
         ShowCameraObject = nfo.ShowCameraObject;
-        if (nfo.Lights is not null)
+        if (includeLights && nfo.Lights is not null)
         {
             GLModel.PointLights.Clear();
             foreach (var light in nfo.Lights)

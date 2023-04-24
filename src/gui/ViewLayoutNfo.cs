@@ -17,8 +17,17 @@ public class ViewLayoutNfo
     public Dictionary<int, ViewNfo> UIDView { get; set; }
 
     /// <summary>
+    /// List of model lights.
+    /// </summary>    
+    public List<GLPointLight> Lights { get; set; }
+
+    /// <summary>
     /// UID of view focused between all of the layout.
     /// </summary>    
     public int FocusedUIDView { get; set; }
+
+    public float? OverrideAmbient { get; set; }    
+    public float? OverrideDiffuse { get; set; }    
+    public float? OverrideSpecular { get; set; }    
 
 }
