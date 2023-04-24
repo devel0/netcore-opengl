@@ -249,6 +249,14 @@ Click on the `example code` link to open source code of the example, read top to
 [e25]: data/images/examples/0025.png
 [FeasibleTriIntersectionTests]: https://github.com/devel0/netcore-opengl/blob/0ce534f6fcbb62279d814b0eca08f5be97ec8f98/src/core/primitive/IGLTriangle.cs#L113
 
+### Build solution
+
+```sh
+cd netcore-opengl
+git submodule update --init
+dotnet build
+```
+
 ### Running examples from console
 
 ```sh
