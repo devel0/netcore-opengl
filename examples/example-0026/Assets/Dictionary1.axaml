@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui">
+
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="{x:Static gui:Constants.GRID_SPLITTER_MANAGER_SplitterColor}" />
+
+    <GeometryDrawing x:Key="Modern.ClearReflectHorizontal" Brush="#FFFFFFFF"
+        Geometry="M12.25,7.496 L10.3,5.538 L12.25,3.58 L11.23,2.56 L9.276,4.518 L7.318,2.56 L6.298,3.58 L8.256,5.538 L6.298,7.496 L7.318,8.516 L9.276,6.558 L11.23,8.516 L12.25,7.496 z M0.5793,6.936 L4.119,10.48 C4.556,10.91 4.925,11.08 5.716,11.08 L14.02,11.08 C15.11,11.08 16,10.19 16,9.098 L16,1.978 C16,0.8855 15.11,0 14.02,0 L5.716,0 C4.925,0 4.556,0.1627 4.119,0.5992 L0.5793,4.139 C-0.1931,4.912 -0.1931,6.164 0.5793,6.936 z M5.716,9.889 C5.32,9.889 5.164,9.842 4.959,9.637 L1.418,6.097 C1.109,5.788 1.109,5.287 1.418,4.978 L4.959,1.438 C5.164,1.233 5.32,1.187 5.716,1.187 L14.02,1.187 C14.46,1.187 14.81,1.541 14.81,1.978 L14.81,9.098 C14.81,9.535 14.46,9.889 14.02,9.889 L5.716,9.889 z" />
+
+</ResourceDictionary>

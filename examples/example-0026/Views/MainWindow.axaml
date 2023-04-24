@@ -1,0 +1,87 @@
+<Window xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" x:Class="example.Views.MainWindow"
+    xmlns:gui="clr-namespace:SearchAThing.OpenGL.GUI;assembly=netcore-opengl-gui"
+    xmlns:desktop="clr-namespace:SearchAThing.Desktop;assembly=netcore-desktop"
+    Icon="/Assets/avalonia-logo.ico" Title="example"
+    x:Name="uc">
+
+    <!-- Resources defined in Assets/Dictionary1.axaml -->
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <Border Grid.Row="0" BorderThickness="0,0,0,1" BorderBrush="{DynamicResource DarkGrayBrush}">
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Identify point" Click="IdPoint_Click" Margin="10,0,0,0" />
+
+                <Button Content="Pick another CS" Click="PickCS_Click" Margin="10,0,0,0" />
+
+                <Button Content="Restore WCS" Click="RestoreWCS_Click" Margin="10,0,0,0" />
+            </StackPanel>
+
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid x:Name="grGL" />
+
+            <Grid HorizontalAlignment="Right" VerticalAlignment="Top"
+                RowDefinitions="Auto,Auto,Auto" Margin="0,0,10,0"
+                ColumnDefinitions="Auto,100,100,100">
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="wcs coord" FontWeight="Bold" />
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="cs coord" FontWeight="Bold" />
+
+                <TextBlock Grid.Row="0" Grid.Column="1" TextAlignment="Right" Text="X" FontWeight="Bold" />
+                <TextBlock Grid.Row="0" Grid.Column="2" TextAlignment="Right" Text="Y" FontWeight="Bold" />
+                <TextBlock Grid.Row="0" Grid.Column="3" TextAlignment="Right" Text="Z" FontWeight="Bold" />
+
+                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right"
+                    Foreground="{Binding #uc.WCSCoord_X, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?gte 0 White #ff7e80}"
+                    Text="{Binding #uc.WCSCoord_X, StringFormat={}{0:0.000000}}" />
+
+                <TextBlock Grid.Row="1" Grid.Column="2" TextAlignment="Right"
+                    Foreground="{Binding #uc.WCSCoord_Y, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?gte 0 White #ff7e80}"
+                    Text="{Binding #uc.WCSCoord_Y, StringFormat={}{0:0.000000}}" />
+
+                <TextBlock Grid.Row="1" Grid.Column="3" TextAlignment="Right"
+                    Foreground="{Binding #uc.WCSCoord_Z, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?gte 0 White #ff7e80}"
+                    Text="{Binding #uc.WCSCoord_Z, StringFormat={}{0:0.000000}}" />
+
+                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right"
+                    Foreground="{Binding #uc.CSCoord_X, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?gte 0 White #ff7e80}"
+                    Text="{Binding #uc.CSCoord_X, StringFormat={}{0:0.000000}}" />
+
+                <TextBlock Grid.Row="2" Grid.Column="2" TextAlignment="Right"
+                    Foreground="{Binding #uc.CSCoord_Y, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?gte 0 White #ff7e80}"
+                    Text="{Binding #uc.CSCoord_Y, StringFormat={}{0:0.000000}}" />
+
+                <TextBlock Grid.Row="2" Grid.Column="3" TextAlignment="Right"
+                    Foreground="{Binding #uc.CSCoord_Z, Converter={x:Static desktop:SmartConverter.Instance}, ConverterParameter=?gte 0 White #ff7e80}"
+                    Text="{Binding #uc.CSCoord_Z, StringFormat={}{0:0.000000}}" />
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="10,0,0,0">
+            <Border BorderThickness="0,1,0,0" BorderBrush="{DynamicResource DarkGrayBrush}">
+                <Grid RowDefinitions="Auto,Auto">
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <TextBlock Text="SimpleCmd" FontWeight="Bold" Margin="0,0,10,0" VerticalAlignment="Center" />
+                        <TextBox Grid.Column="1" Text="{Binding #uc.CommandLine}" x:Name="cmdTbox" />
+                        <Button Grid.Column="2" Click="ClearCmdClick">
+                            <Image Width="24" Height="24">
+                                <Image.Source>
+                                    <DrawingImage Drawing="{DynamicResource Modern.ClearReflectHorizontal}" />
+                                </Image.Source>
+                            </Image>
+                        </Button>
+                    </Grid>
+                    <TextBlock Grid.Row="1" Text="{Binding #uc.Status}" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

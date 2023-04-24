@@ -196,6 +196,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement using. Dependency: [BriefFiniteElement].                                                                                                   |
 | [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: [BriefFiniteElement] |
 | [0025][es25]        | [![img][e25]][e25] | Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method.                                                                      |
+| [0025][es26]        | [![img][e26]][e26] | Shows 2 triangle intersection and SimpleCmd management.|
 
 [brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
 [es0]: examples/example-0000/Program.cs
@@ -223,6 +224,7 @@ Click on the `example code` link to open source code of the example, read top to
 [es23]: examples/example-0023/Program.cs
 [es24]: examples/example-0024/Program.cs
 [es25]: examples/example-0025/Program.cs
+[es26]: examples/example-0026/Views/MainWindow.axaml.cs
 [e0]: data/images/examples/0000.png
 [e1]: data/images/examples/0001.png
 [e2]: data/images/examples/0002.png
@@ -247,6 +249,7 @@ Click on the `example code` link to open source code of the example, read top to
 [e23]: data/images/examples/0023.png
 [e24]: data/images/examples/0024.png
 [e25]: data/images/examples/0025.png
+[e26]: data/images/examples/0026.png
 [FeasibleTriIntersectionTests]: https://github.com/devel0/netcore-opengl/blob/0ce534f6fcbb62279d814b0eca08f5be97ec8f98/src/core/primitive/IGLTriangle.cs#L113
 
 ### Build solution
