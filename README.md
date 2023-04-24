@@ -47,12 +47,12 @@
 
 The library is composed by following modules:
 
-| module                               | framework        | dependencies                                                                                            | description                                                       |
-| ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| **core** [![core-badge]][core]       | NET Standard 2.0 | [netcore-ext], [System.Drawing.Common], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz], [netdxf-devel0] | gl calculations, render abstraction over Silk.NET opengl library. |
-| **gui** [![gui-badge]][gui]          | NET Standard 2.0 | [core], [Avalonia], [netcore-desktop]                                                                   | desktop gl widget                                                 |
-| **shapes** [![shapes-badge]][shapes] | NET Standard 2.0 | [core]                                                                                                  | box, cone, sphere, arrow shapes                                   |
-| **nurbs** [![nurbs-badge]][nurbs]    | NET Standard 2.0 | [core], [G-Shark]                                                                                       | nurbs figures                                                     |
+| module                               | framework        | dependencies                                                                                                           | description                                                       |
+| ------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **core** [![core-badge]][core]       | NET Standard 2.0 | [netcore-ext], [netcore-sci], [System.Drawing.Common], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz], [netdxf-devel0] | gl calculations, render abstraction over Silk.NET opengl library. |
+| **gui** [![gui-badge]][gui]          | NET Standard 2.0 | [core], [Avalonia], [netcore-desktop]                                                                                  | desktop gl widget                                                 |
+| **shapes** [![shapes-badge]][shapes] | NET Standard 2.0 | [core]                                                                                                                 | box, cone, sphere, arrow shapes                                   |
+| **nurbs** [![nurbs-badge]][nurbs]    | NET Standard 2.0 | [core], [G-Shark]                                                                                                      | nurbs figures                                                     |
 
 [core-badge]: https://buildstats.info/nuget/netcore-opengl-core
 [gui-badge]: https://buildstats.info/nuget/netcore-opengl-gui
@@ -63,6 +63,7 @@ The library is composed by following modules:
 [shapes]: https://www.nuget.org/packages/netcore-opengl-shapes
 [nurbs]: https://www.nuget.org/packages/netcore-opengl-nurbs
 [netcore-ext]: https://www.nuget.org/packages/netcore-ext
+[netcore-sci]: https://www.nuget.org/packages/netcore-sci
 [netdxf-devel0]: https://www.nuget.org/packages/netDxf-devel0
 [netcore-desktop]: https://www.nuget.org/packages/netcore-desktop
 [system.drawing.common]: https://www.nuget.org/packages/System.Drawing.Common
@@ -194,7 +195,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                                        |
 | [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement using. Dependency: [BriefFiniteElement].                                                                                                   |
 | [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: [BriefFiniteElement] |
-| [0025][es25]        | [![img][e25]][e25] | Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method. |
+| [0025][es25]        | [![img][e25]][e25] | Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method.                                                                      |
 
 [brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
 [es0]: examples/example-0000/Program.cs
