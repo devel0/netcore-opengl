@@ -35,7 +35,7 @@ class Program
             {
                 textHeight = .8f;
             }
-            
+
             void addText(Vector3 insPt, string text, GLTextVHAlignment alignment)
             {
                 // show insertion point with a point ( 10 pixel [screen] )
@@ -50,7 +50,7 @@ class Program
                 glModel.AddFigure(fig);
 
                 // show text bbox with a yellow rectangle
-                var figBBox = new BBox(fig.Select(w => w.OBBox()))
+                var figBBox = new BBox(fig.Select(w => w.OBBox))
                     .MakeFigure(Color.Yellow);
                 glModel.AddFigure(figBBox);
             }

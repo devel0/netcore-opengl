@@ -1,0 +1,4 @@
+[submodule "thirdy/G-Shark"]
+	path = thirdy/G-Shark
+	url = https://github.com/SearchAThing-forks/G-Shark.git
+	branch = dev/devel0/perp-frames-startend-tangent
