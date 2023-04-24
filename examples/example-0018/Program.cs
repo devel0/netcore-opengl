@@ -156,7 +156,7 @@ class Program
                 showPoint: true));
 
             glModel.SetupLightAttenuation();
-            glModel.Override(ambient: .9f);
+            glModel.OverrideLightStrengths(ambient: .9f);
 
             // glCtl.CameraView(CameraViewType.Top);
 
