@@ -1,81 +1,113 @@
 {
   "Layout": {
-    "Parent": null,
     "SplitDirection": 0,
-    "Index": 0,
     "Sizes": [
       1.0,
       1.0
     ],
     "Children": [
       {
+        "SplitDirection": null,
+        "Sizes": null,
+        "Children": null,
+        "LeafUID": 0,
+        "Index": 0
+      },
+      {
         "SplitDirection": 1,
-        "Index": 1,
         "Sizes": [
           1.0,
           1.0
         ],
-        "Children": [],
-        "LeafUIDs": [
-          1,
-          2
-        ]
+        "Children": [
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 1,
+            "Index": 0
+          },
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 2,
+            "Index": 1
+          }
+        ],
+        "LeafUID": null,
+        "Index": 1
       }
     ],
-    "LeafUIDs": [
-      0,
-      null
-    ]
+    "LeafUID": null,
+    "Index": 0
   },
   "UIDView": {
     "0": {
       "Title": "ROTATING CAMERA",
       "ModelMatrix": {
-        "M11": 1.0,
-        "M12": 0.0,
-        "M13": 0.0,
+        "M11": 0.7145133,
+        "M12": 0.45633453,
+        "M13": -0.5303111,
         "M14": 0.0,
-        "M21": 0.0,
-        "M22": 1.0,
-        "M23": 0.0,
+        "M21": -0.69825566,
+        "M22": 0.41778702,
+        "M23": -0.58128583,
         "M24": 0.0,
-        "M31": 0.0,
-        "M32": 0.0,
-        "M33": 1.0,
+        "M31": -0.043703586,
+        "M32": 0.785629,
+        "M33": 0.6171526,
         "M34": 0.0,
-        "M41": 0.0,
-        "M42": 0.0,
-        "M43": 0.0,
+        "M41": -14.0883465,
+        "M42": -59.411316,
+        "M43": 43.035614,
         "M44": 1.0,
-        "IsIdentity": true,
+        "IsIdentity": false,
         "Translation": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 0.0
+          "X": -14.0883465,
+          "Y": -59.411316,
+          "Z": 43.035614
         }
       },
       "CameraPos": {
-        "X": 13.063221,
-        "Y": 336.30548,
-        "Z": 180.0
+        "X": -0.14169651,
+        "Y": 0.14169,
+        "Z": 436.9385
       },
       "CameraTarget": {
-        "X": 60.0,
-        "Y": 40.0,
-        "Z": 19.5
+        "X": -0.14169651,
+        "Y": 0.14169,
+        "Z": 435.9385
       },
       "CameraUp": {
         "X": 0.0,
-        "Y": 0.0,
-        "Z": 1.0
+        "Y": 1.0,
+        "Z": 0.0
       },
       "Wireframe": false,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 2.296814,
-      "Far": 1352.3695,
+      "Near": 3.1312718,
+      "Far": 1682.2496,
+      "UseShadow": true,
       "ShadeWithEdge": false,
-      "ShowCameraObject": true
+      "ShowCameraObject": true,
+      "Lights": [
+        {
+          "Position": {
+            "X": 60.0,
+            "Y": 40.0,
+            "Z": 200.0
+          }
+        },
+        {
+          "Position": {
+            "X": 60.0,
+            "Y": 40.0,
+            "Z": 200.0
+          }
+        }
+      ]
     },
     "1": {
       "Title": "TOP",
@@ -105,13 +137,13 @@
       },
       "CameraPos": {
         "X": -0.27441043,
-        "Y": 0.27474338,
-        "Z": 821.5365
+        "Y": 0.27474967,
+        "Z": 746.8514
       },
       "CameraTarget": {
         "X": -0.27441043,
-        "Y": 0.27474338,
-        "Z": 820.5365
+        "Y": 0.27474967,
+        "Z": 745.8514
       },
       "CameraUp": {
         "X": 0.0,
@@ -121,10 +153,27 @@
       "Wireframe": false,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 8.010365,
-      "Far": 2526.1094,
+      "Near": 7.2635136,
+      "Far": 2302.0542,
+      "UseShadow": true,
       "ShadeWithEdge": false,
-      "ShowCameraObject": false
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 60.0,
+            "Y": 40.0,
+            "Z": 200.0
+          }
+        },
+        {
+          "Position": {
+            "X": 60.0,
+            "Y": 40.0,
+            "Z": 200.0
+          }
+        }
+      ]
     },
     "2": {
       "Title": "FRONT",
@@ -155,12 +204,12 @@
       "CameraPos": {
         "X": -0.109826505,
         "Y": 0.10998177,
-        "Z": 593.54895
+        "Z": 652.9039
       },
       "CameraTarget": {
         "X": -0.109826505,
         "Y": 0.10998177,
-        "Z": 592.54895
+        "Z": 651.9039
       },
       "CameraUp": {
         "X": 0.0,
@@ -170,10 +219,27 @@
       "Wireframe": false,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 4.935489,
-      "Far": 2080.647,
+      "Near": 5.5290384,
+      "Far": 2258.7117,
+      "UseShadow": true,
       "ShadeWithEdge": false,
-      "ShowCameraObject": false
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 60.0,
+            "Y": 40.0,
+            "Z": 200.0
+          }
+        },
+        {
+          "Position": {
+            "X": 60.0,
+            "Y": 40.0,
+            "Z": 200.0
+          }
+        }
+      ]
     }
   },
   "FocusedUIDView": 0

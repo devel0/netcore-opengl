@@ -158,7 +158,7 @@ class Program
             glModel.SetupLightAttenuation();
             glModel.Override(ambient: .9f);
 
-            glCtl.CameraView(CameraViewType.Top);
+            // glCtl.CameraView(CameraViewType.Top);
 
             if (w.GLControlSplit is not null)
                 ToggleAnim(w.GLControlSplit);

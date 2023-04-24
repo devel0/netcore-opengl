@@ -203,7 +203,7 @@ class Program
                 .Act(fig =>
                 {
                     fig.Order = 1;
-                    fig.SetColor(Color.Red);
+                    fig.SetColor(Color.White);
                 });
 
             glModel.AddFigure(testedTriFig);
