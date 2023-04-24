@@ -104,7 +104,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             return _netcore_opengl_gui_assembly;
         }
     }
-    
+
     void SetCursor()
     {
         var selectionMode = glModel.SelectionMode;
@@ -130,7 +130,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
                         Cursor = new Cursor(StandardCursorType.Hand);
                     }
                     break;
-            }          
+            }
         }
 
         else if (identifyMode)
@@ -335,12 +335,22 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// <summary>
     /// Split current view horizontally.
     /// </summary>
-    public void SplitHorizontal() => GridSplitterManager.Split(GridSplitDirection.Horizontally);
+    public void SplitHorizontal() => Split(GridSplitDirection.Horizontally);
 
     /// <summary>
     /// Split current view vertically.
     /// </summary>
-    public void SplitVertical() => GridSplitterManager.Split(GridSplitDirection.Vertically);
+    public void SplitVertical() => Split(GridSplitDirection.Vertically);
+
+    /// <summary>
+    /// Split current view in given direction.
+    /// </summary>
+    /// <param name="direction">Split direction.</param>
+    public void Split(GridSplitDirection direction)
+    {
+        var newCtl = GridSplitterManager.Split(direction);
+        newCtl?.AvaloniaGLControl.SetViewNfo(GetViewNfo());
+    }
 
     /// <summary>
     /// Close current view ( if not is the last one ).
