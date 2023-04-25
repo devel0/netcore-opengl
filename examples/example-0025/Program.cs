@@ -179,8 +179,8 @@ class Program
                 }
 
                 Dispatcher.UIThread.Post(() => glModel.SendNotification("Stats",
-                    $"- Adjacency groups: {grps.Count}" +
-                    $"\n- {CNT} tris test in {sw.ElapsedMilliseconds} ms",
+                    $"Adjacency groups: {grps.Count}\n" +
+                    $"- {CNT} tris test in {sw.ElapsedMilliseconds} ms",
                     grps.Count == 4 ? GLNotificationType.Information : GLNotificationType.Warning));
 
                 return res;
