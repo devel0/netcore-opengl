@@ -156,35 +156,217 @@ Click on the `example code` link to open source code of the example, read top to
 
 ### List of examples
 
-| example code        | image              | description                                                                                                                                                                  |
-| ------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                                         |
-| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                                            |
-| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                                     |
-| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                                            |
-| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                                   |
-| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                                         |
-| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                                        |
-| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                                     |
-| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                                    |
-| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                                |
-| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                                      |
-| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                                        |
-| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                                           |
-| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                                              |
-| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                                              |
-| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                                |
-| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                                         |
-| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                                   |
-| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum.                |
-| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                                           |
-| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                                       |
-| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                                        |
-| [0022][es22]        | [![img][e22]][e22] | Nurb surface join on two tubes                                                                                                                                               |
-| [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement using. Dependency: [BriefFiniteElement].                                                                                                   |
-| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: [BriefFiniteElement] |
-| [0025][es25]        | [![img][e25]][e25] | Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method.                                                                      |
-| [0025][es26]        | [![img][e26]][e26] | Shows 2 triangle intersection and SimpleCmd management.                                                                                                                      |
+<hr/>
+
+Code: [0000][es0]
+
+Draw a triangle with 3 colors (one for each vertex).
+
+[![img][e0]][e0]
+
+<hr/>
+
+Code: [0001][es1]
+
+Random lines ( console program ).
+
+[![img][e1]][e1]
+
+<hr/>
+
+Code: [0002][es2] (mvvm)
+
+Random lines ( avalonia AXAML program ).
+
+[![img][e2]][e2]
+
+<hr/>
+
+Code: [0003][es3]
+
+Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.
+
+[![img][e3]][e3]
+
+<hr/>
+
+Code: [0004][es4]
+
+Draw text.
+
+[![img][e4]][e4]
+
+<hr/>
+
+Code: [0005][es5]
+
+Draw box with keyboard face toggler.
+
+[![img][e5]][e5]
+
+<hr/>
+
+Code: [0006][es6]
+
+Draw nurb surface with triangles normal and animation, layout loaded from saved file.
+
+[![img][e6]][e6]
+
+<hr/>
+
+Code: [0007][es7]
+
+Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.
+
+[![img][e7]][e7]
+
+<hr/>
+
+Code: [0008][es8] (mvvm)
+
+Draw nurb tube with lighting tunable from mvvm interface.
+
+[![img][e8]][e8]
+
+<hr/>
+
+Code: [0009][es9]
+
+Generate two captures of different sizes from the same scene.
+
+<hr/>
+
+Code: [0010][es10]
+
+Draw 3d shapes on a textured cube face.
+
+[![img][e10]][e10]
+
+<hr/>
+
+Code: [0011][es11]
+
+Texture, light and text transparency.
+
+[![img][e11]][e11]
+
+<hr/>
+
+Code: [0012][es12]
+
+Show text alignment types with their bounding box.
+
+[![img][e12]][e12]
+
+<hr/>
+
+Code: [0013][es13]
+
+Multiline text.
+
+[![img][e13]][e13]
+
+<hr/>
+
+Code: [0014][es14]
+
+Scalability benchmark for text.
+
+[![img][e14]][e14]
+
+<hr/>
+
+Code: [0015][es15]
+
+Raycast in orthogonal mode for snapping test.
+
+[![img][e15]][e15]
+
+<hr/>
+
+Code: [0016][es16] (mvvm)
+
+Invalidate control on vertex change.
+
+[![img][e16]][e16]
+
+<hr/>
+
+Code: [0017][es17]
+
+Figure using screen coord.
+
+[![img][e17]][e17]
+
+<hr/>
+
+Code: [0018][es18]
+
+Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum.
+
+[![img][e18]][e18]
+
+<hr/>
+
+Code: [0019][es19] (mvvm)
+
+Sphere vertex render and hittest scalability test.
+
+[![img][e19]][e19]
+
+<hr/>
+
+Code: [0020][es20]
+
+Customize key gesture.
+
+<hr/>
+
+Code: [0021][es21]
+
+Use of raycast to pick vertexes and define a new ucs.
+
+[![img][e21]][e21]
+
+<hr/>
+
+Code: [0022][es22]
+
+Nurb surface join on two tubes.
+
+[![img][e22]][e22]
+
+<hr/>
+
+Code: [0023][es23]
+
+Show 1-D fem element displacement using. Dependency: [BriefFiniteElement].
+
+[![img][e23]][e23]
+
+<hr/>
+
+Code: [0024][es24]
+
+Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: [BriefFiniteElement]
+
+[![img][e24]][e24]
+
+<hr/>
+
+Code: [0025][es25]
+
+Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method.
+
+[![img][e25]][e25]
+
+<hr/>
+
+Code: [0026][es26]
+
+Shows 2 triangle intersection and SimpleCmd management.
+
+[![img][e26]][e26]
 
 ### Build solution
 
