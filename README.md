@@ -460,16 +460,6 @@ For example a WCS object figure composed of 3 lines is expressed as follow Simpl
 l 0,0,0,1,0,0;0,0,0,0,1,0;0,0,0,0,0,1
 ```
 
-#### Cursor mode
-
-Cursor mode can be changed using `s` key as follows:
-
-| Cursor mode | Description                                |
-| ----------- | ------------------------------------------ |
-| View        | Normal scale/rotate/pan view gestures.     |
-| Primitive   | Primitive selection toggler on click over. |
-| Figure      | Figure selection toggler on click over.    |
-
 #### Change rotation center
 
 ![](data/images/change-rotation.gif)
