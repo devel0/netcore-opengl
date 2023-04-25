@@ -23,12 +23,12 @@ public enum InvalidateEnum
 
 }
 
-public enum SelectionMode
+public enum CursorMode
 {
     /// <summary>
-    /// No selection on click.
+    /// Normal scale/rotate/pan view gestures.
     /// </summary>
-    None,
+    View,
 
     /// <summary>
     /// Select primitive under cursor.

@@ -107,14 +107,14 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
     void SetCursor()
     {
-        var selectionMode = glModel.SelectionMode;
+        var selectionMode = glModel.CursorMode;
         var identifyMode = GLControl.IdentifyCoord;
 
-        if (selectionMode != Core.SelectionMode.None)
+        if (selectionMode != Core.CursorMode.View)
         {
             switch (selectionMode)
             {
-                case Core.SelectionMode.Primitive:
+                case Core.CursorMode.Primitive:
                     {
                         var iconStream = netcore_opengl_gui_assembly
                             .GetManifestResourceStream(GuiAssetResourceName(RESOURCE_FILENAME_SelectPrimitiveCursor_32));
@@ -125,7 +125,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
                     }
                     break;
 
-                case Core.SelectionMode.Figure:
+                case Core.CursorMode.Figure:
                     {
                         Cursor = new Cursor(StandardCursorType.Hand);
                     }
@@ -142,7 +142,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
     private void GLModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName == nameof(GLModel.SelectionMode))
+        if (e.PropertyName == nameof(GLModel.CursorMode))
         {
             SetCursor();
         }
@@ -438,7 +438,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
         {
             glModel.SendNotification(
                 NOTIFICATION_TITLE_INPUT_OUTPUT,
-                $"View layout file\n{pathfilename}\nnot found",
+                $"View layout file not found\n {pathfilename}",
                 GLNotificationType.Warning);
 
             return;

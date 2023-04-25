@@ -372,22 +372,20 @@ public partial class GLModel : IGLContextObject
 
     #region SelectionMode
 
-    private SelectionMode _SelectionMode = DEFAULT_SelectionMode;
+    private CursorMode _CursorMode = DEFAULT_CursorMode;
     /// <summary>
-    /// Current selection mode.<br/>    
+    /// Current cursor mode.<br/>    
     /// </summary>
-    /// <remarks>
-    /// Select primitive together with set rotation center gesture can be used to change default rotation center.
-    /// </remarks>
-    public SelectionMode SelectionMode
+    /// <seealso cref="CursorMode"/>
+    public CursorMode CursorMode
     {
-        get => _SelectionMode;
+        get => _CursorMode;
         set
         {
-            var changed = value != _SelectionMode;
+            var changed = value != _CursorMode;
             if (changed)
             {
-                _SelectionMode = value;
+                _CursorMode = value;
                 OnPropertyChanged();
             }
         }
@@ -821,7 +819,8 @@ public partial class GLModel : IGLContextObject
     /// <summary>
     /// Clear current selection ( of figures, primitives ) and cancel select command.
     /// </summary>
-    public void ClearSelection()
+    /// <param name="resetToViewMode">If true (Default) cursor back to <see cref="CursorMode.View"/>.</param>
+    public void ClearSelection(bool resetToViewMode = true)
     {
         {
             var selectedPrimitives = SelectedPrimitiveOBC.ToList();
@@ -841,7 +840,7 @@ public partial class GLModel : IGLContextObject
             SelectedFiguresOBC.Clear();
         }
 
-        SelectionMode = SelectionMode.None;
+        CursorMode = CursorMode.View;
     }
 
     /// <summary>

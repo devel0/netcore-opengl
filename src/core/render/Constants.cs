@@ -355,9 +355,9 @@ public static partial class Constants
     public const bool DEFAULT_UseShadows = true;
 
     /// <summary>
-    /// (Default) gl control selection mode.
+    /// (Default) gl control cursor mode.
     /// </summary>
-    public const SelectionMode DEFAULT_SelectionMode = SelectionMode.None;
+    public const CursorMode DEFAULT_CursorMode = CursorMode.View;
 
     /// <summary>
     /// (Default) gl control angle view addition in standard cube views (deg).

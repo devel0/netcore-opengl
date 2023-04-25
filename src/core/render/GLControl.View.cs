@@ -84,18 +84,18 @@ public partial class GLControl
     /// <param name="invalidate">If true refresh the scene.</param>    
     public void SwitchSelectionMode(bool invalidate = DEFAULT_INVALIDATE)
     {
-        switch (GLModel.SelectionMode)
+        switch (GLModel.CursorMode)
         {
-            case SelectionMode.None:
-                GLModel.SelectionMode = SelectionMode.Primitive;
+            case CursorMode.View:
+                GLModel.CursorMode = CursorMode.Primitive;
                 break;
 
-            case SelectionMode.Primitive:
-                GLModel.SelectionMode = SelectionMode.Figure;
+            case CursorMode.Primitive:
+                GLModel.CursorMode = CursorMode.Figure;
                 break;
 
-            case SelectionMode.Figure:
-                GLModel.SelectionMode = SelectionMode.None;
+            case CursorMode.Figure:
+                GLModel.CursorMode = CursorMode.View;
                 break;
         }
         if (invalidate) Invalidate();
@@ -303,7 +303,7 @@ public partial class GLControl
         }
         catch (Exception ex)
         {
-            GLModel.SendNotification("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
+            GLModel.SendNotification("GLControl view", $"Error saving to\n[{pathfilename}]. {ex.Message}",
                 GLNotificationType.Error);
         }
     }
@@ -359,18 +359,24 @@ public partial class GLControl
 
     /// <summary>
     /// Set the rotation center for model and camera.
-    /// </summary>
-    public void SetRotationCenter()
+    /// </summary>    
+    /// <param name="keepSelection">If false (Default) the active selection will cleared and mode back to view gesture.</param>
+    public void SetRotationCenter(bool keepSelection = false)
     {
-        var bbox = new BBox(
+        var selection =
             GLModel.SelectedPrimitives.Select(w => w.LBBox)
-            .Union(GLModel.SelectedFigures.Select(w => w.LBBox)));
+            .Union(GLModel.SelectedFigures.Select(w => w.LBBox));
 
-        if (!bbox.IsEmpty)
+        var bbox = new BBox(selection);
+
+        if (selection.Count() != 0)
             RotationCenter = bbox.Middle;
 
         else
-            RotationCenter = this.GLModel.LBBox.Middle;        
+            RotationCenter = this.GLModel.LBBox.Middle;
+
+        if (!keepSelection)
+            GLModel.ClearSelection();
     }
 
     /// <summary>
