@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="coverlet.msbuild" Version="3.2.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -24,13 +28,13 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>    
-    <ProjectReference Include="..\gui\netcore-opengl-gui.csproj" />    
+  <ItemGroup>
+    <ProjectReference Include="..\gui\netcore-opengl-gui.csproj" />
     <ProjectReference Include="..\shapes\netcore-opengl-shapes.csproj" />
     <ProjectReference Include="..\nurbs\netcore-opengl-nurbs.csproj" />
     <ProjectReference Include="..\..\examples\example-figures\example-figures.csproj" />
 
-    <Compile Include="../../src/core/usings.core.cs" />    
+    <Compile Include="../../src/core/usings.core.cs" />
     <Compile Include="../../src/gui/usings.gui.cs" />
     <Compile Include="../../src/shapes/usings.shapes.cs" />
     <Compile Include="../../src/nurbs/usings.nurbs.cs" />
