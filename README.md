@@ -462,10 +462,10 @@ l 0,0,0,1,0,0;0,0,0,0,1,0;0,0,0,0,0,1
 
 #### Change rotation center
 
-![](data/images/change-rotation.gif)
-
-- select a primitive
+- select a primitive ( `s` to enable selection )
 - hit `ctrl+r`
+
+![](data/images/change-rotation.gif)
 
 To return at default rotation center hit `ctrl+r` again that is with no selection.
 
