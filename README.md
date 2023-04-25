@@ -19,7 +19,7 @@
   + [Coordinate spaces](#coordinate-spaces)
   + [GL Dev inspect tool](#gl-dev-inspect-tool)
   + [Primitives, figures interaction](#primitives-figures-interaction)
-    - [Selection](#selection)
+    - [Selection and coord identify](#selection-and-coord-identify)
     - [Removal](#removal)
     - [SimpleCmd](#simplecmd)
     - [Cursor mode](#cursor-mode)
@@ -245,15 +245,14 @@ Hit `F1` gesture to open gl dev tool useful to understand how conversion transla
 
 ### Primitives, figures interaction
 
-#### Selection
+#### Selection and coord identify
 
-Press `s` key to change current selection mode between:
-
-| cursor                   | type      | description                                              |
-| ------------------------ | --------- | -------------------------------------------------------- |
-| ![img][normal-cursor]    | normal    | Normal pan/zoom/rotate [gestures](#gestures).            |
-| ![img][primitive-cursor] | primitive | Camera nearest under cursor primitive selection toggler. |
-| ![img][figure-cursor]    | figure    | Camera nearest under cursor figure selection toggler.    |
+| cursor                   | type      | hotkey | description                                   |
+| ------------------------ | --------- | ------ | --------------------------------------------- |
+| ![img][normal-cursor]    | normal    | `s`    | Normal pan/zoom/rotate [gestures](#gestures). |
+| ![img][primitive-cursor] | primitive | `s`    | Primitive selection toggler.                  |
+| ![img][figure-cursor]    | figure    | `s`    | Figure selection toggler.                     |
+| ![img][identify-cursor]  | identify  | `i`    | Identify coord.                               |
 
 #### Removal
 
@@ -470,7 +469,7 @@ Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netc
 | r                | View Right                                                 |
 | f                | View Front                                                 |
 | b                | View Back                                                  |
-| i                | Identify coord                                             |
+| i                | Toggle Identify coord                                      |
 | s                | Toggle selection mode                                      |
 | Ctrl + r         | Change rotation center                                     |
 | Ctrl + ⬆         | Camera zoom in                                             |
@@ -493,7 +492,8 @@ Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netc
 | v                | Split view vertical                                        |
 | c                | Close current view                                         |
 | w                | Toggle wireframe                                           |
-| Ctrl + w         | Toggle shade with edges                                    |
+| Ctrl + w         | Toggle (geom shader) shade with edges                      |
+| Alt + v          | Toggle (geom shader) vertex visibility                     |
 | n                | Toggle show normals                                        |
 | p                | Toggle perspective                                         |
 | x                | Toggle texture                                             |
@@ -616,6 +616,7 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 [normal-cursor]: data/images/cursors/normal.png
 [primitive-cursor]: data/images/cursors/primitive.png
 [figure-cursor]: data/images/cursors/figure.png
+[identify-cursor]: data/images/cursors/identify.png
 [vertex shader set gl position]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/render/shaders/4.main.vs#L74
 [set of gl viewport]: https://github.com/devel0/netcore-opengl/blob/3dbf0e483007c9eea979d091547e5fa08a85e082/src/render/GLControl.cs#L855
 [local ray cast]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/core/calc/BackwardTransform.cs#L176
