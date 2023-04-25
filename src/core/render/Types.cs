@@ -23,6 +23,24 @@ public enum InvalidateEnum
 
 }
 
+public enum CursorMode
+{
+    /// <summary>
+    /// Normal scale/rotate/pan view gestures.
+    /// </summary>
+    View,
+
+    /// <summary>
+    /// Select primitive under cursor.
+    /// </summary>
+    Primitive,
+
+    /// <summary>
+    /// Select figure under cursor.
+    /// </summary>
+    Figure
+}
+
 /// <summary>
 /// Gl text alignment respect given insertion point.
 /// </summary>
@@ -55,7 +73,9 @@ public class ViewNfo
     public float OrthoZoom { get; set; }
     public float Near { get; set; }
     public float Far { get; set; }
+    public bool UseShadow { get; set; }
     public bool ShadeWithEdge { get; set; }
+    public bool VertexVisibility { get; set; }
     public bool ShowCameraObject { get; set; }
     public List<GLPointLight>? Lights { get; set; }
 }
@@ -70,5 +90,3 @@ public enum GLNotificationType
     Warning = 2,
     Error = 3
 }
-
-public delegate void NotificationDelegate(string title, string msg, GLNotificationType type = GLNotificationType.Information);

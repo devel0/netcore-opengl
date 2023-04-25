@@ -402,7 +402,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             {
                 // invalidating the model imply recall of the BuildModel
                 // at the first time the control will be invalidated too
-                glModel.Invalidate();
+                glModel.InvalidateModel();
 
                 GLControlSplit?.Invalidate();
             });

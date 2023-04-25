@@ -159,8 +159,18 @@ public class VertexManagerTest
         var fig1 = new GLLineFigure(GLLine.FromTo(a, b));
         var fig2 = new GLLineFigure(GLLine.FromTo(a, c));
 
-        vtxMgr.AddFigure(fig1);        
+        vtxMgr.AddFigure(fig1);
         Assert.Throws<Exception>(() => vtxMgr.AddFigure(fig2));
+    }
+
+    [Fact]
+    public void Test5()
+    {
+        var v1 = new GLVertex(new Vector3(1, 2, 1e-7f));
+        var v2 = new GLVertex(new Vector3(1, 2, -1e-7f));
+
+        Assert.Equal("1_2_0", v1.PositionSignature(1e-5f));
+        Assert.Equal("1_2_0", v2.PositionSignature(1e-5f));
     }
 
 }

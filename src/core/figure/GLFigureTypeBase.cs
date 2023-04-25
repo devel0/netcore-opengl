@@ -6,7 +6,7 @@ namespace SearchAThing.OpenGL.Core;
 public abstract class GLFigureTypeBase<P> : GLFigureBase where P : GLPrimitiveBase
 {
 
-    ReadOnlyObservableCollection<GLPrimitiveBase>? _Primitives = null;
+    ReadOnlyObservableCollection<GLPrimitiveBase>? _Primitives = null;    
     public override ReadOnlyObservableCollection<GLPrimitiveBase> Primitives
     {
         get
@@ -20,7 +20,13 @@ public abstract class GLFigureTypeBase<P> : GLFigureBase where P : GLPrimitiveBa
     /// <summary>
     /// Observable collection of primitives in this figure.<br/>    
     /// </summary>            
+    [JsonProperty]
     protected ObservableCollection<GLPrimitiveBase> PrimitivesOBC = new ObservableCollection<GLPrimitiveBase>();
+
+    public override void RemovePrimitive(GLPrimitiveBase primitive)
+    {
+        PrimitivesOBC.Remove(primitive);
+    }
 
     /// <summary>
     /// Add given primitive to this figure.
@@ -30,7 +36,7 @@ public abstract class GLFigureTypeBase<P> : GLFigureBase where P : GLPrimitiveBa
     {
         primitive.EnsureDetached();
 
-        PrimitivesOBC.Add(primitive);        
+        PrimitivesOBC.Add(primitive);
 
         ParentVertexManager?.AddPrimitive(primitive, this);
     }
@@ -48,7 +54,7 @@ public abstract class GLFigureTypeBase<P> : GLFigureBase where P : GLPrimitiveBa
 
     /// <summary>
     /// Create an empty figure.
-    /// </summary>
+    /// </summary>    
     public GLFigureTypeBase()
     {
     }

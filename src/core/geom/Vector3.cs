@@ -69,7 +69,17 @@ public static partial class Ext
         if (oLen == 0) throw new Exception($"project on null vector");
 
         return Vector3.Dot(v, other) / oLen * Vector3.Normalize(other);
-    }
+    }    
+
+    /// <summary>
+    /// States if two vectors are parallel.
+    /// </summary>
+    /// <param name="v">This vector.</param>
+    /// <param name="tol">Length tolerance (use <see cref="Sci.Constants.NormalizedLengthTolerance"/> for normalized vectors).</param>
+    /// <param name="other">Other vector.</param>
+    /// <returns>True if two vectors are parallel.</returns>
+    public static bool IsParallel(this in Vector3 v, float tol, in Vector3 other) =>
+        v.ToVector3D().IsParallelTo(tol, other);
 
     /// <summary>
     /// Project this vector to given xy plane.
@@ -89,5 +99,10 @@ public static partial class Ext
 
     public static string ToString(this in Vector3 v, int digits = 3) =>
         Invariant($"({v.X.ToString(digits)}, {v.Y.ToString(digits)}, {v.Z.ToString(digits)})");
+
+    /// <summary>
+    /// Retrieve x,y,z invariant representation of given Vector3 suitable for usage in SimpleCmd.
+    /// </summary>    
+    internal static string SimpleCmd(this in Vector3 v) => Invariant($"{v.X},{v.Y},{v.Z}");
 
 }

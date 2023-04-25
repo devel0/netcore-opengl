@@ -5,36 +5,41 @@
 - [API Documentation][api]
 - [Changelog][changelog]
 
-[api]: https://devel0.github.io/netcore-opengl/html/annotated.html
-[changelog]: https://github.com/devel0/netcore-opengl/commits/master
-
 <hr/>
 
 <!-- TOC -->
-
-- [Introduction](#introduction)
-- [Quickstart](#quickstart)
-- [Examples](#examples)
-  - [List of examples](#list-of-examples)
-  - [Running examples from console](#running-examples-from-console)
-  - [Running examples from vscode](#running-examples-from-vscode)
-- [Development key notes](#development-key-notes)
-  - [Coordinate spaces](#coordinate-spaces)
-  - [GL Dev inspect tool](#gl-dev-inspect-tool)
-  - [Opengl debugging tools](#opengl-debugging-tools)
-  - [Multiplatform](#multiplatform)
-  - [Docker (mesa)](#docker-mesa)
-  - [Software rendered (mesa)](#software-rendered-mesa)
-  - [C# global usings (full)](#c%23-global-usings-full)
-  - [Gestures](#gestures)
+* [Introduction](#introduction)
+* [Quickstart](#quickstart)
+* [Examples](#examples)
+  + [List of examples](#list-of-examples)
+  + [Build solution](#build-solution)
+  + [Running examples from console](#running-examples-from-console)
+  + [Running examples from vscode](#running-examples-from-vscode)
+* [Development key notes](#development-key-notes)
+  + [Coordinate spaces](#coordinate-spaces)
+  + [GL Dev inspect tool](#gl-dev-inspect-tool)
+  + [Primitives, figures interaction](#primitives-figures-interaction)
+    - [Selection and coord identify](#selection-and-coord-identify)
+    - [Removal](#removal)
+    - [SimpleCmd](#simplecmd)
+    - [Cursor mode](#cursor-mode)
+    - [Change rotation center](#change-rotation-center)
+  + [Send notification](#send-notification)
+  + [View invalidation model](#view-invalidation-model)
+  + [Opengl debugging tools](#opengl-debugging-tools)
+  + [Multiplatform](#multiplatform)
+  + [Docker (mesa)](#docker-mesa)
+  + [Software rendered (mesa)](#software-rendered-mesa)
+  + [C# global usings (full)](#c%23-global-usings-full)
+  + [Gestures](#gestures)
     - [Mouse gestures](#mouse-gestures)
     - [Keybindings](#keybindings)
-- [Unit tests](#unit-tests)
-- [How this project was built](#how-this-project-was-built)
-  - [Documentation (github pages)](#documentation-github-pages)
+* [Unit tests](#unit-tests)
+* [How this project was built](#how-this-project-was-built)
+  + [Documentation (github pages)](#documentation-github-pages)
     - [Build and view locally](#build-and-view-locally)
     - [Build and commit into docs branch](#build-and-commit-into-docs-branch)
-- [References](#references)
+* [References](#references)
 <!-- TOCEND -->
 
 <hr/>
@@ -47,30 +52,12 @@
 
 The library is composed by following modules:
 
-| module                               | framework        | dependencies                                                                                            | description                                                       |
-| ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| **core** [![core-badge]][core]       | NET Standard 2.0 | [netcore-ext], [System.Drawing.Common], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz], [netdxf-devel0] | gl calculations, render abstraction over Silk.NET opengl library. |
-| **gui** [![gui-badge]][gui]          | NET Standard 2.0 | [core], [Avalonia], [netcore-desktop]                                                                   | desktop gl widget                                                 |
-| **shapes** [![shapes-badge]][shapes] | NET Standard 2.0 | [core]                                                                                                  | box, cone, sphere, arrow shapes                                   |
-| **nurbs** [![nurbs-badge]][nurbs]    | NET Standard 2.0 | [core], [G-Shark]                                                                                       | nurbs figures                                                     |
-
-[core-badge]: https://buildstats.info/nuget/netcore-opengl-core
-[gui-badge]: https://buildstats.info/nuget/netcore-opengl-gui
-[shapes-badge]: https://buildstats.info/nuget/netcore-opengl-shapes
-[nurbs-badge]: https://buildstats.info/nuget/netcore-opengl-nurbs
-[core]: https://www.nuget.org/packages/netcore-opengl-core
-[gui]: https://www.nuget.org/packages/netcore-opengl-gui
-[shapes]: https://www.nuget.org/packages/netcore-opengl-shapes
-[nurbs]: https://www.nuget.org/packages/netcore-opengl-nurbs
-[netcore-ext]: https://www.nuget.org/packages/netcore-ext
-[netdxf-devel0]: https://www.nuget.org/packages/netDxf-devel0
-[netcore-desktop]: https://www.nuget.org/packages/netcore-desktop
-[system.drawing.common]: https://www.nuget.org/packages/System.Drawing.Common
-[silk.net]: https://www.nuget.org/packages/Silk.NET
-[magick.net]: https://www.nuget.org/packages/Magick.NET-Q8-AnyCPU
-[skiasharp.harfbuzz]: https://www.nuget.org/packages/SkiaSharp.HarfBuzz
-[avalonia]: https://www.nuget.org/packages/Avalonia
-[g-shark]: https://www.nuget.org/packages/GShark
+| module                               | framework        | dependencies                                                                                                           | description                                                       |
+| ------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **core** [![core-badge]][core]       | NET Standard 2.0 | [netcore-ext], [netcore-sci], [System.Drawing.Common], [Silk.NET], [Magick.NET], [SkiaSharp.HarfBuzz], [netdxf-devel0] | gl calculations, render abstraction over Silk.NET opengl library. |
+| **gui** [![gui-badge]][gui]          | NET Standard 2.0 | [core], [Avalonia], [netcore-desktop]                                                                                  | desktop gl widget                                                 |
+| **shapes** [![shapes-badge]][shapes] | NET Standard 2.0 | [core]                                                                                                                 | box, cone, sphere, arrow shapes                                   |
+| **nurbs** [![nurbs-badge]][nurbs]    | NET Standard 2.0 | [core], [G-Shark]                                                                                                      | nurbs figures                                                     |
 
 ## Quickstart
 
@@ -168,81 +155,42 @@ Click on the `example code` link to open source code of the example, read top to
 
 ### List of examples
 
-| example code        | image              | description                                                                                                                                                   | example dependencies |
-| ------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                          |                      |
-| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                             |                      |
-| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                      |                      |
-| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                             |                      |
-| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                    |                      |
-| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                          |                      |
-| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                         |                      |
-| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                      |                      |
-| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                     |                      |
-| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                 |                      |
-| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                       |                      |
-| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                         |                      |
-| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                            |                      |
-| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                               |                      |
-| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                               |                      |
-| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                 |                      |
-| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                          |                      |
-| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                    |                      |
-| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum. |                      |
-| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                            |                      |
-| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                        |                      |
-| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                         |                      |
-| [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement.                                                                                                                            | [BriefFiniteElement] |
-| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data.                   | [BriefFiniteElement] |
+| example code        | image              | description                                                                                                                                                                  |
+| ------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [0000][es0]         | [![img][e0]][e0]   | Draw a triangle with 3 colors (one for each vertex).                                                                                                                         |
+| [0001][es1]         | [![img][e1]][e1]   | Random lines ( console program ).                                                                                                                                            |
+| [0002][es2] (mvvm)  | [![img][e2]][e2]   | Random lines ( avalonia AXAML program ).                                                                                                                                     |
+| [0003][es3]         | [![img][e3]][e3]   | Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.                                                                            |
+| [0004][es4]         | [![img][e4]][e4]   | Draw text.                                                                                                                                                                   |
+| [0005][es5]         | [![img][e5]][e5]   | Draw box with keyboard face toggler.                                                                                                                                         |
+| [0006][es6]         | [![img][e6]][e6]   | Draw nurb surface with triangles normal and animation, layout loaded from saved file.                                                                                        |
+| [0007][es7]         | [![img][e7]][e7]   | Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.                                     |
+| [0008][es8] (mvvm)  | [![img][e8]][e8]   | Draw nurb tube with lighting tunable from mvvm interface.                                                                                                                    |
+| [0009][es9]         | offscreen render   | Generate two captures of different sizes from the same scene.                                                                                                                |
+| [0010][es10]        | [![img][e10]][e10] | Draw 3d shapes on a textured cube face.                                                                                                                                      |
+| [0011][es11]        | [![img][e11]][e11] | Texture, light and text transparency.                                                                                                                                        |
+| [0012][es12]        | [![img][e12]][e12] | Show text alignment types with their bounding box.                                                                                                                           |
+| [0013][es13]        | [![img][e13]][e13] | Multiline text.                                                                                                                                                              |
+| [0014][es14]        | [![img][e14]][e14] | Scalability benchmark for text.                                                                                                                                              |
+| [0015][es15]        | [![img][e15]][e15] | Raycast in orthogonal mode for snapping test.                                                                                                                                |
+| [0016][es16] (mvvm) | [![img][e16]][e16] | Invalidate control on vertex change.                                                                                                                                         |
+| [0017][es17]        | [![img][e17]][e17] | Figure using screen coord.                                                                                                                                                   |
+| [0018][es18]        | [![img][e18]][e18] | Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum.                |
+| [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                                           |
+| [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                                       |
+| [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                                        |
+| [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement using. Dependency: [BriefFiniteElement].                                                                                                   |
+| [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: [BriefFiniteElement] |
+| [0025][es25]        | [![img][e25]][e25] | Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method.                                                                      |
+| [0025][es26]        | [![img][e26]][e26] | Shows 2 triangle intersection and SimpleCmd management.                                                                                                                      |
 
-[brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
-[es0]: examples/example-0000/Program.cs
-[es1]: examples/example-0001/Program.cs
-[es2]: examples/example-0002/Views/MainWindow.axaml.cs
-[es3]: examples/example-0003/Program.cs
-[es4]: examples/example-0004/Program.cs
-[es5]: examples/example-0005/Program.cs
-[es6]: examples/example-0006/Program.cs
-[es7]: examples/example-0007/Program.cs
-[es8]: examples/example-0008/Views/MainWindow.axaml.cs
-[es9]: examples/example-0009/Program.cs
-[es10]: examples/example-0010/Program.cs
-[es11]: examples/example-0011/Program.cs
-[es12]: examples/example-0012/Program.cs
-[es13]: examples/example-0013/Program.cs
-[es14]: examples/example-0014/Program.cs
-[es15]: examples/example-0015/Program.cs
-[es16]: examples/example-0016/Views/MainWindow.axaml.cs
-[es17]: examples/example-0017/Program.cs
-[es18]: examples/example-0018/Program.cs
-[es19]: examples/example-0019/Views/MainWindow.axaml.cs
-[es20]: examples/example-0020/Program.cs
-[es21]: examples/example-0021/Views/MainWindow.axaml.cs
-[es23]: examples/example-0023/Program.cs
-[es24]: examples/example-0024/Program.cs
-[e0]: data/images/examples/0000.png
-[e1]: data/images/examples/0001.png
-[e2]: data/images/examples/0002.png
-[e3]: data/images/examples/0003.png
-[e4]: data/images/examples/0004.png
-[e5]: data/images/examples/0005.png
-[e6]: data/images/examples/0006.png
-[e7]: data/images/examples/0007.png
-[e8]: data/images/examples/0008.png
-[e9]: data/images/examples/0009.png
-[e10]: data/images/examples/0010.png
-[e11]: data/images/examples/0011.png
-[e12]: data/images/examples/0012.png
-[e13]: data/images/examples/0013.png
-[e14]: data/images/examples/0014.png
-[e15]: data/images/examples/0015.png
-[e16]: data/images/examples/0016.png
-[e17]: data/images/examples/0017.png
-[e18]: data/images/examples/0018.png
-[e19]: data/images/examples/0019.png
-[e21]: data/images/examples/0021.gif
-[e23]: data/images/examples/0023.png
-[e24]: data/images/examples/0024.png
+### Build solution
+
+```sh
+cd netcore-opengl
+git submodule update --init
+dotnet build
+```
 
 ### Running examples from console
 
@@ -280,11 +228,6 @@ Most of technical documentation is directly integrated with [API documentation](
   - [forward transform](src/core/calc/ForwardTransform.cs)
   - [backward transform](src/core/calc/BackwardTransform.cs)
 
-[vertex shader set gl position]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/render/shaders/4.main.vs#L74
-[set of gl viewport]: https://github.com/devel0/netcore-opengl/blob/3dbf0e483007c9eea979d091547e5fa08a85e082/src/render/GLControl.cs#L855
-[local ray cast]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/core/calc/BackwardTransform.cs#L176
-[compute screen bbox]: https://github.com/devel0/netcore-opengl/blob/ca1237b9b3b16c1a7fc2c673c9bf2de87160f12b/src/core/calc/Util.cs#L17
-
 ### GL Dev inspect tool
 
 Hit `F1` gesture to open gl dev tool useful to understand how conversion translates between spaces; it provides some basic support such as:
@@ -299,6 +242,73 @@ Hit `F1` gesture to open gl dev tool useful to understand how conversion transla
 - add, remove, set position, color of lights
 
 ![](data/images/gldevtool.gif)
+
+### Primitives, figures interaction
+
+#### Selection and coord identify
+
+| cursor                   | type      | hotkey | description                                   |
+| ------------------------ | --------- | ------ | --------------------------------------------- |
+| ![img][normal-cursor]    | normal    | `s`    | Normal pan/zoom/rotate [gestures](#gestures). |
+| ![img][primitive-cursor] | primitive | `s`    | Primitive selection toggler.                  |
+| ![img][figure-cursor]    | figure    | `s`    | Figure selection toggler.                     |
+| ![img][identify-cursor]  | identify  | `i`    | Identify coord.                               |
+
+#### Removal
+
+Select a primitive/figures then hit `d` key to delete from the model.
+
+#### SimpleCmd
+
+Each primitive/figure selected can be copied to clipboard by the `ctrl+c` key and can be pasted within `ctrl+v`.
+
+Actual implementation doesn't support color information but only geometric data:
+
+| Primitive | SimpleCmd                          |
+| --------- | ---------------------------------- |
+| point     | `p` x1,y1,z1;...                   |
+| line      | `l` x1,y1,z1,x2,y2,z2;...          |
+| triangle  | `t` x1,y1,z1,x2,y2,z2,x3,y3,z3;... |
+
+For example a WCS object figure composed of 3 lines is expressed as follow SimpleCmd:
+
+```
+l 0,0,0,1,0,0;0,0,0,0,1,0;0,0,0,0,0,1
+```
+
+#### Cursor mode
+
+Cursor mode can be changed using `s` key as follows:
+
+| Cursor mode | Description                                |
+| ----------- | ------------------------------------------ |
+| View        | Normal scale/rotate/pan view gestures.     |
+| Primitive   | Primitive selection toggler on click over. |
+| Figure      | Figure selection toggler on click over.    |
+
+#### Change rotation center
+
+![](data/images/change-rotation.gif)
+
+- select a primitive
+- hit `ctrl+r`
+
+To return at default rotation center hit `ctrl+r` again that is with no selection.
+
+### Send notification
+
+Use gl model send notification to display a message with following properties:
+
+- _title_
+- _message_
+- _level_ : Information, Success, Warning, Error
+
+### View invalidation model
+
+The view invalidation follow these rules:
+
+- View is refreshed automatically as a result of scale/rotate/pan predefined interactions.
+- Gl model changes doesn't imply an invalidation of the view and user have to request view update through gl model Invalidate method.
 
 ### Opengl debugging tools
 
@@ -372,7 +382,7 @@ Following is the list of global usings for app using gui and shapes modules.
 Just create a global.cs file and put into your solution to avoid `using` on each single .cs file.
 
 ```cs
-// core ( deps )
+// core
 global using System;
 global using System.Linq;
 global using System.Globalization;
@@ -395,14 +405,24 @@ global using Size = System.Drawing.Size;
 global using ColorTranslator = System.Drawing.ColorTranslator;
 global using System.Reflection;
 
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Serialization;
+global using SkiaSharp;
+
+global using Silk.NET.OpenGL;
+
 global using SearchAThing.Ext;
 global using static SearchAThing.Ext.Toolkit;
-global using SkiaSharp;
-global using Silk.NET.OpenGL;
-global using System.Threading;
 
-// gui ( deps )
-global using SearchAThing.Desktop;
+global using SearchAThing.Sci;
+global using static SearchAThing.Sci.Toolkit;
+
+global using SearchAThing.OpenGL.Core;
+global using static SearchAThing.OpenGL.Core.Toolkit;
+global using static SearchAThing.OpenGL.Core.Constants;
+
+// gui
+global using System.Threading;
 global using Avalonia;
 global using Avalonia.Input;
 global using Point = Avalonia.Point;
@@ -411,12 +431,8 @@ global using AColor = Avalonia.Media.Color;
 global using ABrush = Avalonia.Media.Brush;
 global using Avalonia.Data.Converters;
 
-// core
-global using SearchAThing.OpenGL.Core;
-global using static SearchAThing.OpenGL.Core.Toolkit;
-global using static SearchAThing.OpenGL.Core.Constants;
+global using SearchAThing.Desktop;
 
-// gui
 global using SearchAThing.OpenGL.GUI;
 global using static SearchAThing.OpenGL.GUI.Toolkit;
 global using static SearchAThing.OpenGL.GUI.Constants;
@@ -425,6 +441,10 @@ global using static SearchAThing.OpenGL.GUI.Constants;
 global using SearchAThing.OpenGL.Shapes;
 global using static SearchAThing.OpenGL.Shapes.Toolkit;
 global using static SearchAThing.OpenGL.Shapes.Constants;
+
+// nurbs
+global using SearchAThing.OpenGL.Nurbs;
+global using static SearchAThing.OpenGL.Nurbs.Toolkit;
 ```
 
 ### Gestures
@@ -441,50 +461,56 @@ global using static SearchAThing.OpenGL.Shapes.Constants;
 
 Key gesture can be overriden ( see [example-0020](https://github.com/devel0/netcore-opengl/blob/3943766b7cb98ae46149fbf14e54497f84ecf41f/examples/example-0020/Program.cs#L19-L23) ).
 
-| Key       | Description                    |
-| --------- | ------------------------------ |
-| F1        | Open dev tool                  |
-| F2        | Save current view              |
-| F3        | Restore last saved view        |
-| Ctrl + F2 | Save current view layout       |
-| Ctrl + F3 | Restore last saved view layout |
-| a         | Toggle ObjectMatrix animate    |
-| o         | View bOttom                    |
-| t         | View Top                       |
-| l         | View Left                      |
-| r         | View Right                     |
-| f         | View Front                     |
-| b         | View Back                      |
-| i         | Identify coord                 |
-| Ctrl + ⬆  | Camera zoom in                 |
-| Ctrl + ⬇  | Camera zoom out                |
-| Shift + ⬅ | Camera pan left                |
-| Shift + ➡ | Camera pan right               |
-| Shift + ⬆ | Camera pan up                  |
-| Shift + ⬇ | Camera pan up                  |
-| ⬅         | Model rotate left              |
-| ➡         | Model rotate right             |
-| ⬆         | Model rotate up                |
-| ⬇         | Model rotate down              |
-| Ctrl + ⬅  | Camera tilt left               |
-| Ctrl + ➡  | Camera tilt right              |
-| Alt + ⬅   | Camera rotate left             |
-| Alt + ➡   | Camera rotate right            |
-| Alt + ⬆   | Camera rotate up               |
-| Alt + ⬇   | Camera rotate down             |
-| h         | Split view horizontal          |
-| v         | Split view vertical            |
-| c         | Close current view             |
-| w         | Toggle wireframe               |
-| Ctrl + w  | Toggle shade with edges        |
-| n         | Toggle show normals            |
-| p         | Toggle perspective             |
-| x         | Toggle texture                 |
-| s         | Toggle shadow                  |
-| z         | Zoom fit                       |
-| Ctrl + i  | Invalidate view                |
-| Ctrl + x  | Toggle model bbox              |
-| Ctrl + c  | Toggle camera object           |
+| Key              | Description                                                |
+| ---------------- | ---------------------------------------------------------- |
+| o                | View bOttom                                                |
+| t                | View Top                                                   |
+| l                | View Left                                                  |
+| r                | View Right                                                 |
+| f                | View Front                                                 |
+| b                | View Back                                                  |
+| i                | Toggle Identify coord                                      |
+| s                | Toggle selection mode                                      |
+| Ctrl + r         | Change rotation center                                     |
+| Ctrl + ⬆         | Camera zoom in                                             |
+| Ctrl + ⬇         | Camera zoom out                                            |
+| Shift + ⬅        | Camera pan left                                            |
+| Shift + ➡        | Camera pan right                                           |
+| Shift + ⬆        | Camera pan up                                              |
+| Shift + ⬇        | Camera pan up                                              |
+| ⬅                | Model rotate left                                          |
+| ➡                | Model rotate right                                         |
+| ⬆                | Model rotate up                                            |
+| ⬇                | Model rotate down                                          |
+| Ctrl + ⬅         | Camera tilt left                                           |
+| Ctrl + ➡         | Camera tilt right                                          |
+| Alt + ⬅          | Camera rotate left                                         |
+| Alt + ➡          | Camera rotate right                                        |
+| Alt + ⬆          | Camera rotate up                                           |
+| Alt + ⬇          | Camera rotate down                                         |
+| h                | Split view horizontal                                      |
+| v                | Split view vertical                                        |
+| c                | Close current view                                         |
+| w                | Toggle wireframe                                           |
+| Ctrl + w         | Toggle (geom shader) shade with edges                      |
+| Alt + v          | Toggle (geom shader) vertex visibility                     |
+| n                | Toggle show normals                                        |
+| p                | Toggle perspective                                         |
+| x                | Toggle texture                                             |
+| Ctrl + s         | Toggle shadow                                              |
+| Ctrl + x         | Toggle model bbox                                          |
+| Ctrl + Shift + c | Toggle camera object                                       |
+| z                | Zoom fit                                                   |
+| Ctrl + c         | Copy selected primitives/figures to clipboard as SimpleCmd |
+| Ctrl + v         | Paste primitives/figures from clipboard SimpleCmd          |
+| Delete           | Delete selected primitives/figures                         |
+| Escape           | Cancel selection and back to view cursor mode              |
+| F1               | Open dev tool                                              |
+| F2               | Save current view                                          |
+| F3               | Restore last saved view                                    |
+| Shift + F2       | Save current view layout                                   |
+| Shift + F3       | Restore last saved view layout                             |
+| Ctrl + i         | Invalidate view                                            |
 
 ## Unit tests
 
@@ -564,3 +590,87 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 
 - [OpenGL Transformation](http://www.songho.ca/opengl/gl_transform.html)
 - [The Perspective and Orthographic Projection Matrix](https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/projection-matrix-GPU-rendering-pipeline-clipping.html)
+
+<!-- LINKS -->
+
+[api]: https://devel0.github.io/netcore-opengl/html/annotated.html
+[changelog]: https://github.com/devel0/netcore-opengl/commits/master
+[core-badge]: https://buildstats.info/nuget/netcore-opengl-core
+[gui-badge]: https://buildstats.info/nuget/netcore-opengl-gui
+[shapes-badge]: https://buildstats.info/nuget/netcore-opengl-shapes
+[nurbs-badge]: https://buildstats.info/nuget/netcore-opengl-nurbs
+[core]: https://www.nuget.org/packages/netcore-opengl-core
+[gui]: https://www.nuget.org/packages/netcore-opengl-gui
+[shapes]: https://www.nuget.org/packages/netcore-opengl-shapes
+[nurbs]: https://www.nuget.org/packages/netcore-opengl-nurbs
+[netcore-ext]: https://www.nuget.org/packages/netcore-ext
+[netcore-sci]: https://www.nuget.org/packages/netcore-sci
+[netdxf-devel0]: https://www.nuget.org/packages/netDxf-devel0
+[netcore-desktop]: https://www.nuget.org/packages/netcore-desktop
+[system.drawing.common]: https://www.nuget.org/packages/System.Drawing.Common
+[silk.net]: https://www.nuget.org/packages/Silk.NET
+[magick.net]: https://www.nuget.org/packages/Magick.NET-Q8-AnyCPU
+[skiasharp.harfbuzz]: https://www.nuget.org/packages/SkiaSharp.HarfBuzz
+[avalonia]: https://www.nuget.org/packages/Avalonia
+[g-shark]: https://www.nuget.org/packages/GShark
+[normal-cursor]: data/images/cursors/normal.png
+[primitive-cursor]: data/images/cursors/primitive.png
+[figure-cursor]: data/images/cursors/figure.png
+[identify-cursor]: data/images/cursors/identify.png
+[vertex shader set gl position]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/render/shaders/4.main.vs#L74
+[set of gl viewport]: https://github.com/devel0/netcore-opengl/blob/3dbf0e483007c9eea979d091547e5fa08a85e082/src/render/GLControl.cs#L855
+[local ray cast]: https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/core/calc/BackwardTransform.cs#L176
+[compute screen bbox]: https://github.com/devel0/netcore-opengl/blob/ca1237b9b3b16c1a7fc2c673c9bf2de87160f12b/src/core/calc/Util.cs#L17
+[brieffiniteelement]: https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net
+[es0]: examples/example-0000/Program.cs
+[es1]: examples/example-0001/Program.cs
+[es2]: examples/example-0002/Views/MainWindow.axaml.cs
+[es3]: examples/example-0003/Program.cs
+[es4]: examples/example-0004/Program.cs
+[es5]: examples/example-0005/Program.cs
+[es6]: examples/example-0006/Program.cs
+[es7]: examples/example-0007/Program.cs
+[es8]: examples/example-0008/Views/MainWindow.axaml.cs
+[es9]: examples/example-0009/Program.cs
+[es10]: examples/example-0010/Program.cs
+[es11]: examples/example-0011/Program.cs
+[es12]: examples/example-0012/Program.cs
+[es13]: examples/example-0013/Program.cs
+[es14]: examples/example-0014/Program.cs
+[es15]: examples/example-0015/Program.cs
+[es16]: examples/example-0016/Views/MainWindow.axaml.cs
+[es17]: examples/example-0017/Program.cs
+[es18]: examples/example-0018/Program.cs
+[es19]: examples/example-0019/Views/MainWindow.axaml.cs
+[es20]: examples/example-0020/Program.cs
+[es21]: examples/example-0021/Views/MainWindow.axaml.cs
+[es23]: examples/example-0023/Program.cs
+[es24]: examples/example-0024/Program.cs
+[es25]: examples/example-0025/Program.cs
+[es26]: examples/example-0026/Views/MainWindow.axaml.cs
+[e0]: data/images/examples/0000.png
+[e1]: data/images/examples/0001.png
+[e2]: data/images/examples/0002.png
+[e3]: data/images/examples/0003.png
+[e4]: data/images/examples/0004.png
+[e5]: data/images/examples/0005.png
+[e6]: data/images/examples/0006.png
+[e7]: data/images/examples/0007.png
+[e8]: data/images/examples/0008.png
+[e9]: data/images/examples/0009.png
+[e10]: data/images/examples/0010.png
+[e11]: data/images/examples/0011.png
+[e12]: data/images/examples/0012.png
+[e13]: data/images/examples/0013.png
+[e14]: data/images/examples/0014.png
+[e15]: data/images/examples/0015.png
+[e16]: data/images/examples/0016.png
+[e17]: data/images/examples/0017.png
+[e18]: data/images/examples/0018.png
+[e19]: data/images/examples/0019.png
+[e21]: data/images/examples/0021.gif
+[e23]: data/images/examples/0023.png
+[e24]: data/images/examples/0024.png
+[e25]: data/images/examples/0025.png
+[e26]: data/images/examples/0026.png
+[FeasibleTriIntersectionTests]: https://github.com/devel0/netcore-opengl/blob/0ce534f6fcbb62279d814b0eca08f5be97ec8f98/src/core/primitive/IGLTriangle.cs#L113

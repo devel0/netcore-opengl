@@ -1,16 +1,20 @@
 {
   "Layout": {
-    "Parent": null,
     "SplitDirection": 0,
-    "Index": 0,
     "Sizes": [
       1.0,
       1.0
     ],
     "Children": [
       {
+        "SplitDirection": null,
+        "Sizes": null,
+        "Children": null,
+        "LeafUID": 0,
+        "Index": 0
+      },
+      {
         "SplitDirection": 1,
-        "Index": 1,
         "Sizes": [
           1.0,
           1.0,
@@ -19,92 +23,123 @@
         "Children": [
           {
             "SplitDirection": 0,
-            "Index": 0,
             "Sizes": [
               1.0,
               1.0
             ],
-            "Children": [],
-            "LeafUIDs": [
-              1,
-              2
-            ]
+            "Children": [
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 1,
+                "Index": 0
+              },
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 2,
+                "Index": 1
+              }
+            ],
+            "LeafUID": null,
+            "Index": 0
           },
           {
             "SplitDirection": 0,
-            "Index": 1,
             "Sizes": [
               1.0,
               1.0
             ],
-            "Children": [],
-            "LeafUIDs": [
-              3,
-              4
-            ]
+            "Children": [
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 3,
+                "Index": 0
+              },
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 4,
+                "Index": 1
+              }
+            ],
+            "LeafUID": null,
+            "Index": 1
           },
           {
             "SplitDirection": 0,
-            "Index": 2,
             "Sizes": [
               1.0,
               1.0
             ],
-            "Children": [],
-            "LeafUIDs": [
-              5,
-              6
-            ]
+            "Children": [
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 5,
+                "Index": 0
+              },
+              {
+                "SplitDirection": null,
+                "Sizes": null,
+                "Children": null,
+                "LeafUID": 6,
+                "Index": 1
+              }
+            ],
+            "LeafUID": null,
+            "Index": 2
           }
         ],
-        "LeafUIDs": [
-          null,
-          null,
-          null
-        ]
+        "LeafUID": null,
+        "Index": 1
       }
     ],
-    "LeafUIDs": [
-      0,
-      null
-    ]
+    "LeafUID": null,
+    "Index": 0
   },
   "UIDView": {
     "0": {
       "Title": "",
       "ModelMatrix": {
-        "M11": 0.46338058,
-        "M12": -0.36685574,
-        "M13": -0.80665934,
+        "M11": 0.5220233,
+        "M12": -0.32926515,
+        "M13": -0.7868139,
         "M14": 0.0,
-        "M21": -0.8845746,
-        "M22": -0.13704647,
-        "M23": -0.44581255,
+        "M21": -0.85124844,
+        "M22": -0.25904208,
+        "M23": -0.45636967,
         "M24": 0.0,
-        "M31": 0.052998424,
-        "M32": 0.9201296,
-        "M33": -0.38801453,
+        "M31": -0.053551234,
+        "M32": 0.9080096,
+        "M33": -0.41551256,
         "M34": 0.0,
-        "M41": 1.7189296,
-        "M42": -2.9337099,
-        "M43": 7.9750156,
+        "M41": 1.9406562,
+        "M42": -2.0525177,
+        "M43": 8.501237,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": 1.7189296,
-          "Y": -2.9337099,
-          "Z": 7.9750156
+          "X": 1.9406562,
+          "Y": -2.0525177,
+          "Z": 8.501237
         }
       },
       "CameraPos": {
-        "X": -1.5192413,
-        "Y": -3.0600805,
-        "Z": 34.309055
+        "X": -0.22304386,
+        "Y": -2.7965,
+        "Z": 34.54757
       },
       "CameraTarget": {
-        "X": -1.5192413,
-        "Y": -3.0600805,
-        "Z": 33.309055
+        "X": -0.22304386,
+        "Y": -2.7965,
+        "Z": 33.54757
       },
       "CameraUp": {
         "X": 0.0,
@@ -114,9 +149,27 @@
       "Wireframe": false,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.24781983,
-      "Far": 89.357956,
-      "ShadeWithEdge": true
+      "Near": 0.24384283,
+      "Far": 134.13257,
+      "UseShadow": true,
+      "ShadeWithEdge": true,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        },
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        }
+      ]
     },
     "1": {
       "Title": "TOP",
@@ -133,26 +186,26 @@
         "M32": 0.0,
         "M33": 1.0,
         "M34": 0.0,
-        "M41": -4.565025,
-        "M42": -4.6755486,
-        "M43": -5.690901,
+        "M41": -5.0,
+        "M42": -5.0,
+        "M43": -5.5,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": -4.565025,
-          "Y": -4.6755486,
-          "Z": -5.690901
+          "X": -5.0,
+          "Y": -5.0,
+          "Z": -5.5
         }
       },
       "CameraPos": {
-        "X": -0.018432233,
-        "Y": 0.018454965,
-        "Z": 31.780672
+        "X": -0.016070604,
+        "Y": 0.016091742,
+        "Z": 29.553904
       },
       "CameraTarget": {
-        "X": -0.018432233,
-        "Y": 0.018454965,
-        "Z": 30.780672
+        "X": -0.016070604,
+        "Y": 0.016091742,
+        "Z": 28.553904
       },
       "CameraUp": {
         "X": 0.0,
@@ -162,9 +215,27 @@
       "Wireframe": true,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.22471572,
-      "Far": 82.943146,
-      "ShadeWithEdge": true
+      "Near": 0.20053901,
+      "Far": 117.161705,
+      "UseShadow": true,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        },
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        }
+      ]
     },
     "2": {
       "Title": "BOTTOM",
@@ -181,26 +252,26 @@
         "M32": 0.0,
         "M33": -1.0,
         "M34": 0.0,
-        "M41": 4.5650253,
-        "M42": -4.6755486,
-        "M43": 5.6909003,
+        "M41": 5.0000005,
+        "M42": -5.0,
+        "M43": 5.4999995,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": 4.5650253,
-          "Y": -4.6755486,
-          "Z": 5.6909003
+          "X": 5.0000005,
+          "Y": -5.0,
+          "Z": 5.4999995
         }
       },
       "CameraPos": {
-        "X": -0.018432943,
-        "Y": 0.018454965,
-        "Z": 31.780672
+        "X": -0.016072128,
+        "Y": 0.016091742,
+        "Z": 29.553904
       },
       "CameraTarget": {
-        "X": -0.018432943,
-        "Y": 0.018454965,
-        "Z": 30.780672
+        "X": -0.016072128,
+        "Y": 0.016091742,
+        "Z": 28.553904
       },
       "CameraUp": {
         "X": 0.0,
@@ -210,9 +281,27 @@
       "Wireframe": true,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.2208977,
-      "Far": 82.17954,
-      "ShadeWithEdge": true
+      "Near": 0.20053901,
+      "Far": 117.161705,
+      "UseShadow": true,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        },
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        }
+      ]
     },
     "3": {
       "Title": "FRONT",
@@ -229,26 +318,26 @@
         "M32": 1.0,
         "M33": -4.371139E-08,
         "M34": 0.0,
-        "M41": -4.565025,
-        "M42": -5.690901,
-        "M43": 4.675549,
+        "M41": -5.0,
+        "M42": -5.5,
+        "M43": 5.0000005,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": -4.565025,
-          "Y": -5.690901,
-          "Z": 4.675549
+          "X": -5.0,
+          "Y": -5.5,
+          "Z": 5.0000005
         }
       },
       "CameraPos": {
-        "X": -0.041230194,
-        "Y": 0.041289046,
-        "Z": 44.375675
+        "X": -0.040536605,
+        "Y": 0.040593766,
+        "Z": 43.102417
       },
       "CameraTarget": {
-        "X": -0.041230194,
-        "Y": 0.041289046,
-        "Z": 43.375675
+        "X": -0.040536605,
+        "Y": 0.040593766,
+        "Z": 42.102417
       },
       "CameraUp": {
         "X": 0.0,
@@ -258,9 +347,27 @@
       "Wireframe": true,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.39700127,
-      "Far": 99.40025,
-      "ShadeWithEdge": true
+      "Near": 0.38102415,
+      "Far": 144.30725,
+      "UseShadow": true,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        },
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        }
+      ]
     },
     "4": {
       "Title": "BACK",
@@ -277,26 +384,26 @@
         "M32": 1.0,
         "M33": 4.371139E-08,
         "M34": 0.0,
-        "M41": 4.5650244,
-        "M42": -5.690901,
-        "M43": -4.6755495,
+        "M41": 4.9999995,
+        "M42": -5.5,
+        "M43": -5.000001,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": 4.5650244,
-          "Y": -5.690901,
-          "Z": -4.6755495
+          "X": 4.9999995,
+          "Y": -5.5,
+          "Z": -5.000001
         }
       },
       "CameraPos": {
-        "X": -0.04123284,
-        "Y": 0.041289706,
-        "Z": 44.375675
+        "X": -0.040537886,
+        "Y": 0.040593766,
+        "Z": 43.102417
       },
       "CameraTarget": {
-        "X": -0.04123284,
-        "Y": 0.041289706,
-        "Z": 43.375675
+        "X": -0.040537886,
+        "Y": 0.040593766,
+        "Z": 42.102417
       },
       "CameraUp": {
         "X": 0.0,
@@ -306,9 +413,27 @@
       "Wireframe": true,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.39051223,
-      "Far": 98.10245,
-      "ShadeWithEdge": true
+      "Near": 0.38102415,
+      "Far": 144.30725,
+      "UseShadow": true,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        },
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        }
+      ]
     },
     "5": {
       "Title": "LEFT",
@@ -325,26 +450,26 @@
         "M32": 1.0,
         "M33": 1.9106855E-15,
         "M34": 0.0,
-        "M41": 4.675549,
-        "M42": -5.690901,
-        "M43": 4.565025,
+        "M41": 5.0000005,
+        "M42": -5.5,
+        "M43": 5.0,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": 4.675549,
-          "Y": -5.690901,
-          "Z": 4.565025
+          "X": 5.0000005,
+          "Y": -5.5,
+          "Z": 5.0
         }
       },
       "CameraPos": {
-        "X": -0.041250944,
-        "Y": 0.04130862,
-        "Z": 44.30305
+        "X": -0.040534034,
+        "Y": 0.040593766,
+        "Z": 43.102417
       },
       "CameraTarget": {
-        "X": -0.041250944,
-        "Y": 0.04130862,
-        "Z": 43.30305
+        "X": -0.040534034,
+        "Y": 0.040593766,
+        "Z": 42.102417
       },
       "CameraUp": {
         "X": 0.0,
@@ -354,9 +479,27 @@
       "Wireframe": true,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.39738026,
-      "Far": 99.47605,
-      "ShadeWithEdge": true
+      "Near": 0.38102415,
+      "Far": 144.30725,
+      "UseShadow": true,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        },
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        }
+      ]
     },
     "6": {
       "Title": "RIGHT",
@@ -373,26 +516,26 @@
         "M32": 1.0,
         "M33": 1.9106855E-15,
         "M34": 0.0,
-        "M41": -4.675549,
-        "M42": -5.690901,
-        "M43": -4.565025,
+        "M41": -5.0000005,
+        "M42": -5.5,
+        "M43": -5.0,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": -4.675549,
-          "Y": -5.690901,
-          "Z": -4.565025
+          "X": -5.0000005,
+          "Y": -5.5,
+          "Z": -5.0
         }
       },
       "CameraPos": {
-        "X": -0.0412567,
-        "Y": 0.04130862,
-        "Z": 44.30305
+        "X": -0.04053941,
+        "Y": 0.040593766,
+        "Z": 43.102417
       },
       "CameraTarget": {
-        "X": -0.0412567,
-        "Y": 0.04130862,
-        "Z": 43.30305
+        "X": -0.04053941,
+        "Y": 0.040593766,
+        "Z": 42.102417
       },
       "CameraUp": {
         "X": 0.0,
@@ -402,11 +545,28 @@
       "Wireframe": true,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.38868076,
-      "Far": 97.73615,
-      "ShadeWithEdge": true
+      "Near": 0.38102415,
+      "Far": 144.30725,
+      "UseShadow": true,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        },
+        {
+          "Position": {
+            "X": 7.0,
+            "Y": 8.0,
+            "Z": 14.0
+          }
+        }
+      ]
     }
   },
-  "FocusedUIDView": 0
-
+  "FocusedUIDView": 6
 }

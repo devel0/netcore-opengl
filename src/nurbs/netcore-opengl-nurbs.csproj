@@ -5,7 +5,7 @@
   <PropertyGroup>
     <RootNamespace>SearchAThing.OpenGL.Nurbs</RootNamespace>
     <PackageId>netcore-opengl-nurbs</PackageId>
-    <PackageVersion>3.1.0</PackageVersion>
+    <PackageVersion>$(NetCoreOpenGLVersion)</PackageVersion>
     <Title>net core opengl</Title>
     <Description>Nurbs module provides nurbs support through G-Shark library.</Description>
   </PropertyGroup>
@@ -13,11 +13,12 @@
   <ItemGroup>
     <ProjectReference Include="..\core\netcore-opengl-core.csproj" />
 
-    <Compile Include="../../src/core/usings.core.cs" />    
+    <Compile Include="../../src/core/usings.core.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GShark" Version="$(GSharkVersion)" />    
+    <!-- <PackageReference Include="GShark" Version="$(GSharkVersion)" />     -->
+    <ProjectReference Include="..\..\thirdy\G-Shark\src\GShark\GShark.csproj" />
     <!-- <ProjectReference Include="..\..\..\G-Shark\src\GShark\GShark.csproj" /> -->
   </ItemGroup>
 

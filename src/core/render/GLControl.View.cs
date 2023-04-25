@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace SearchAThing.OpenGL.Core;
 
 public partial class GLControl
@@ -26,6 +24,16 @@ public partial class GLControl
     public void ToggleShadeWithEdge(bool invalidate = DEFAULT_INVALIDATE)
     {
         ShadeWithEdge = !ShadeWithEdge;
+        if (invalidate) Invalidate();
+    }
+
+    /// <summary>
+    /// Toggle vertex visibility.
+    /// </summary>
+    /// <param name="invalidate">If true refresh the scene.</param>    
+    public void ToggleVertexVisibility(bool invalidate = DEFAULT_INVALIDATE)
+    {
+        VertexVisbiility = !VertexVisbiility;
         if (invalidate) Invalidate();
     }
 
@@ -80,6 +88,28 @@ public partial class GLControl
         if (invalidate) Invalidate();
     }
 
+    /// <summary>
+    /// Switch (model) selection mode.
+    /// </summary>
+    /// <param name="invalidate">If true refresh the scene.</param>    
+    public void SwitchSelectionMode(bool invalidate = DEFAULT_INVALIDATE)
+    {
+        switch (GLModel.CursorMode)
+        {
+            case CursorMode.View:
+                GLModel.CursorMode = CursorMode.Primitive;
+                break;
+
+            case CursorMode.Primitive:
+                GLModel.CursorMode = CursorMode.Figure;
+                break;
+
+            case CursorMode.Figure:
+                GLModel.CursorMode = CursorMode.View;
+                break;
+        }
+        if (invalidate) Invalidate();
+    }
 
     /// <summary>
     /// Zoom eye space by given scale factor.
@@ -245,7 +275,8 @@ public partial class GLControl
     /// Retrieve actual view config.
     /// </summary>
     /// <seealso cref="SaveView"/>
-    public ViewNfo GetViewNfo() => new ViewNfo
+    /// <param name="includeLights">If true (default) lights will saved within view nfo.</param>    
+    public ViewNfo GetViewNfo(bool includeLights = true) => new ViewNfo
     {
         Title = Title,
         ModelMatrix = ModelMatrix,
@@ -257,15 +288,17 @@ public partial class GLControl
         OrthoZoom = OrthoZoom,
         Near = Near,
         Far = Far,
+        UseShadow = UseShadow,
         ShadeWithEdge = ShadeWithEdge,
+        VertexVisibility = VertexVisbiility,
         ShowCameraObject = ShowCameraObject,
-        Lights = GLModel.PointLights.ToList()
+        Lights = includeLights ? GLModel.PointLights.ToList() : null
     };
 
     /// <summary>
     /// Save actual view info to given pathfilename.<br/>
-    /// A Notification <see cref="GLControl.NotificationRequest"/> event emitted.
-    /// <seealso cref="ViewDefaultPathfilename"/>    
+    /// A Notification <see cref="GLControl.NotificationRequest"/> event emitted.    
+    /// <seealso cref="ViewDefaultPathfilename"/>        
     /// </summary>    
     public void SaveView(string? pathfilename = null)
     {
@@ -277,11 +310,11 @@ public partial class GLControl
         {
             File.WriteAllText(pathfilename, JsonConvert.SerializeObject(nfo, Formatting.Indented));
 
-            SendNotification("GLControl view", $"View saved to\n[{pathfilename}]");
+            GLModel.SendNotification("GLControl view", $"View saved to\n[{pathfilename}]");
         }
         catch (Exception ex)
         {
-            SendNotification("GLControl view", $"Error saving to\n[{pathfilename}].\n{ex.Message}",
+            GLModel.SendNotification("GLControl view", $"Error saving to\n[{pathfilename}]. {ex.Message}",
                 GLNotificationType.Error);
         }
     }
@@ -290,8 +323,9 @@ public partial class GLControl
     /// Restore current view config.
     /// </summary>
     /// <param name="nfo">view config object</param>
-    /// <seealso cref="LoadView"/>
-    public void SetViewNfo(ViewNfo nfo)
+    /// <param name="includeLights">If true (default) lights set to the model.</param>    
+    /// <seealso cref="LoadView"/>    
+    public void SetViewNfo(ViewNfo nfo, bool includeLights = true)
     {
         Title = nfo.Title;
         ModelMatrix = nfo.ModelMatrix;
@@ -303,9 +337,11 @@ public partial class GLControl
         OrthoZoom = nfo.OrthoZoom;
         Near = nfo.Near;
         Far = nfo.Far;
+        UseShadow = nfo.UseShadow;
         ShadeWithEdge = nfo.ShadeWithEdge;
+        VertexVisbiility = nfo.VertexVisibility;
         ShowCameraObject = nfo.ShowCameraObject;
-        if (nfo.Lights is not null)
+        if (includeLights && nfo.Lights is not null)
         {
             GLModel.PointLights.Clear();
             foreach (var light in nfo.Lights)
@@ -331,6 +367,28 @@ public partial class GLControl
         SetViewNfo(nfo);
 
         Invalidate();
+    }
+
+    /// <summary>
+    /// Set the rotation center for model and camera.
+    /// </summary>    
+    /// <param name="keepSelection">If false (Default) the active selection will cleared and mode back to view gesture.</param>
+    public void SetRotationCenter(bool keepSelection = false)
+    {
+        var selection =
+            GLModel.SelectedPrimitives.Select(w => w.LBBox)
+            .Union(GLModel.SelectedFigures.Select(w => w.LBBox));
+
+        var bbox = new BBox(selection);
+
+        if (selection.Count() != 0)
+            RotationCenter = bbox.Middle;
+
+        else
+            RotationCenter = this.GLModel.LBBox.Middle;
+
+        if (!keepSelection)
+            GLModel.ClearSelection();
     }
 
     /// <summary>

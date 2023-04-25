@@ -6,7 +6,7 @@ namespace example;
 // animation, object matrix versus model matrix versus view matrix
 //
 // - observe the effect of camera moving and the effect of object matrix
-// - use 'ctrl+c' to toggle camera object
+// - use 'ctrl+shift+c' to toggle camera object
 
 class Program
 {
@@ -156,9 +156,9 @@ class Program
                 showPoint: true));
 
             glModel.SetupLightAttenuation();
-            glModel.Override(ambient: .9f);
+            glModel.OverrideLightStrengths(ambient: .9f);
 
-            glCtl.CameraView(CameraViewType.Top);
+            // glCtl.CameraView(CameraViewType.Top);
 
             if (w.GLControlSplit is not null)
                 ToggleAnim(w.GLControlSplit);

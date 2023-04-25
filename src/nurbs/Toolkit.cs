@@ -1,7 +1,7 @@
 ﻿namespace SearchAThing.OpenGL.Nurbs;
 
 using GShark.Geometry;
- 
+
 public static partial class Toolkit
 {
 
@@ -12,13 +12,15 @@ public static partial class Toolkit
     /// <param name="color">color of triangles generated</param>
     /// <param name="N">number of nurb divisions</param>
     /// <returns>triangles mesh of the nurb</returns>
-    public static IEnumerable<GLTriangle> NurbToGL(this NurbsSurface nurb, Color color, int N = 6)
+    public static IEnumerable<GLTriangle> NurbToGL(this NurbsSurface nurb, Color? color = null, int N = 6)
     {
         var u1 = 0d;
         var u2 = 0d;
         var v1 = 0d;
         var v2 = 0d;
-        var step = 1d / N;        
+        var step = 1d / N;
+
+        int triCnt = 0;
 
         for (int ui = 0; ui < N; ++ui)
         {
@@ -41,6 +43,8 @@ public static partial class Toolkit
                 foreach (var tri in plate.GetTriangles(color))
                 {
                     yield return tri;
+
+                    ++triCnt;
                 }
 
                 v1 += step;
@@ -49,5 +53,30 @@ public static partial class Toolkit
             u1 += step;
         }
     }
+
+    /// <summary>
+    /// G-Shark nurb to GLLine helper
+    /// </summary>
+    /// <param name="curve">nurb curve</param>    
+    /// <param name="N">number of nurb divisions</param>
+    /// <returns>lines representing given nurb curve</returns>
+    public static IEnumerable<OpenGL.Core.Line> NurbToGL(this NurbsCurve curve, int N = 6)
+    {
+        var t = 0d;
+        var step = 1d / N;
+
+        var p = curve.PointAt(0);
+
+        for (int i = 0; i < N; ++i)
+        {
+            var nextp = curve.PointAt(t + step);
+            yield return OpenGL.Core.Line.FromTo(p.ToVector3(), nextp.ToVector3());
+
+            p = nextp;
+
+            t += step;
+        }
+    }
+
 
 }

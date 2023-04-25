@@ -39,7 +39,7 @@ class Program
                 });
                 glModel.AddFigure(figs);
 
-                var figBBox = new BBox(figs.Select(fig => fig.OBBox()))
+                var figBBox = new BBox(figs.Select(fig => fig.OBBox))
                     .MakeFigure(Color.Yellow);
                 glModel.AddFigure(figBBox);
             }

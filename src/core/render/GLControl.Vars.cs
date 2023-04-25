@@ -1,5 +1,14 @@
 namespace SearchAThing.OpenGL.Core;
 
+/// <summary>
+/// Delegate for <see cref="GLControl.ControlFigureVisible"/>.<br/>
+/// It allow to customize the visilibty of a figure in relation within a Gl control.<br/>
+/// </summary>
+/// <param name="glControl">GL control reference.</param>
+/// <param name="figure">GL figure for which state visibility in given control.</param>
+/// <returns>True if figure must shown in the gl control, false otherwise.</returns>
+public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure);
+
 public partial class GLControl : INotifyPropertyChanged
 {
 
@@ -37,6 +46,16 @@ public partial class GLControl : INotifyPropertyChanged
     public GLPipeline ShadeWithEdgeShader => GLContext.ShadeWithEdgeShader;
 
     /// <summary>
+    /// Geometry shader used to show line vertexes if <see cref="GLControl.VertexVisbiility"/> enabled ( retrieved from gl context ).
+    /// </summary>
+    public GLPipeline VertexVisibilityLineShader => GLContext.VertexVisibilityLineShader;
+
+    /// <summary>
+    /// Geometry shader used to show triangle vertexes if <see cref="GLControl.VertexVisbiility"/> enabled ( retrieved from gl context ).
+    /// </summary>
+    public GLPipeline VertexVisibilityTriShader => GLContext.VertexVisibilityTriShader;    
+
+    /// <summary>
     /// Geometry shader used if <see cref="GLControl.ShowNormals"/> enabled ( retrieved from gl context ).
     /// </summary>
     public GLPipeline NormalShader => GLContext.NormalShader;
@@ -53,9 +72,10 @@ public partial class GLControl : INotifyPropertyChanged
     uint? shadow_texture = null;
 
     internal Size? glControlLastKnownSize = null;
+    (uint w, uint h)? glControlLastKnownShadowSize = null;
 
     #region IsInitial
-    
+
     private bool _IsInitial = false;
     /// <summary>
     /// States if this gl control is the initial created into a gl split view.
@@ -65,15 +85,15 @@ public partial class GLControl : INotifyPropertyChanged
         get => _IsInitial;
         private set
         {
-             var changed = value != _IsInitial;
-             if (changed)
-             {
-                 _IsInitial = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _IsInitial;
+            if (changed)
+            {
+                _IsInitial = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
     #region ID
@@ -165,7 +185,7 @@ public partial class GLControl : INotifyPropertyChanged
         }
     }
 
-    #endregion
+    #endregion        
 
     #region ModelMatrixFmt
 
@@ -751,6 +771,50 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    #region ShadowWidth
+
+    private uint _ShadowWidth = SHADOW_WIDTH;
+    /// <summary>
+    /// Shadow width (pixels)
+    /// </summary>
+    public uint ShadowWidth
+    {
+        get => _ShadowWidth;
+        set
+        {
+            var changed = value != _ShadowWidth;
+            if (changed)
+            {
+                _ShadowWidth = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    #region ShadowHeight
+
+    private uint _ShadowHeight = SHADOW_HEIGHT;
+    /// <summary>
+    /// Shadow height (pixels)
+    /// </summary>
+    public uint ShadowHeight
+    {
+        get => _ShadowHeight;
+        set
+        {
+            var changed = value != _ShadowHeight;
+            if (changed)
+            {
+                _ShadowHeight = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
     #region Title
 
     private string _Title = "";
@@ -935,6 +999,28 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    #region VertexVisbiility
+
+    private bool _VertexVisbiility = DEFAULT_VERTEX_VISIBILITY;
+    /// <summary>
+    /// If true a geometry shader will generate addictional point that marks primitive vertexes.
+    /// </summary>
+    public bool VertexVisbiility
+    {
+        get => _VertexVisbiility;
+        set
+        {
+            var changed = value != _VertexVisbiility;
+            if (changed)
+            {
+                _VertexVisbiility = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
     #region ShowNormals
 
     private bool _ShowNormals = DEFAULT_SHOW_NORMALS;
@@ -1045,12 +1131,10 @@ public partial class GLControl : INotifyPropertyChanged
         }
     }
 
-    #endregion         
-
-    public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure);
+    #endregion             
 
     #region ControlFigureVisible
-    
+
     private ControlFigureVisibileDelegate? _ControlFigureVisible = null;
     /// <summary>    
     /// Control specific custom figure visibility.<br/>    
@@ -1058,22 +1142,49 @@ public partial class GLControl : INotifyPropertyChanged
     /// Args: (GLControl glControl, GLFigureBase figure).
     /// </summary>
     /// <remarks>
-    /// Keep delegated function as light as possible to avoid performance penalty.
+    /// Keep delegate function as light as possible to avoid performance penalty.
     /// </remarks>
     public ControlFigureVisibileDelegate? ControlFigureVisible
     {
         get => _ControlFigureVisible;
         set
         {
-             var changed = value != _ControlFigureVisible;
-             if (changed)
-             {
-                 _ControlFigureVisible = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _ControlFigureVisible;
+            if (changed)
+            {
+                _ControlFigureVisible = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
+    #endregion
+
+    #region RotationCenter
+
+    private Vector3? _RotationCenter = null;
+    /// <summary>
+    /// Rotation center [local].
+    /// </summary>
+    public Vector3 RotationCenter
+    {
+        get
+        {
+            if (_RotationCenter is null) return GLModel.LBBox.Middle;
+
+            return _RotationCenter.Value;
+        }
+        internal set
+        {
+            var changed = value != _RotationCenter;
+            if (changed)
+            {
+                _RotationCenter = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
     #endregion
 
 }

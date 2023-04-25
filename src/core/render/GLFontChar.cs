@@ -30,7 +30,7 @@ public class GLFontChar
     /// <summary>
     /// Texture allocated at constructor using given gl context for the character bitmap.
     /// </summary>    
-    public IGLTexture2D? Texture { get; private set; }
+    public GLTexture2D? Texture { get; private set; }
 
     /// <summary>
     /// Pointer to the font associated.

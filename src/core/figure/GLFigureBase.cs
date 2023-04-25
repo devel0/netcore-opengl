@@ -78,6 +78,8 @@ public abstract class GLFigureBase : IGLFigure
 
     public abstract ReadOnlyObservableCollection<GLPrimitiveBase> Primitives { get; }
 
+    public abstract void RemovePrimitive(GLPrimitiveBase primitive);
+
     public abstract GLPrimitiveType PrimitiveType { get; }
 
     #region ExcludeFromShadeWithEdge
@@ -211,6 +213,50 @@ public abstract class GLFigureBase : IGLFigure
 
     #endregion
 
+    #region Alpha
+
+    private float? _Alpha = null;
+
+    public float? Alpha
+    {
+        get => _Alpha;
+        set
+        {
+            var changed = value != _Alpha;
+            if (changed)
+            {
+                _Alpha = value;
+                OnPropertyChanged();
+                Invalidate();
+            }
+        }
+    }
+
+    #endregion
+
+    #region Selected
+
+    private bool _Selected = false;
+
+    public bool Selected
+    {
+        get => _Selected;
+        internal set
+        {
+            var changed = value != _Selected;
+            if (changed)
+            {
+                _Selected = value;
+                OnPropertyChanged();
+
+
+
+            }
+        }
+    }
+
+    #endregion
+
     #region ScreenCoord
 
     private bool _ScreenCoord = DEFAULT_ScreenCoord;
@@ -252,6 +298,28 @@ public abstract class GLFigureBase : IGLFigure
 
     #endregion
 
+    #region ExpandBBox
+
+    private bool _ExpandBBox = true;
+
+    public bool ExpandBBox
+    {
+        get => _ExpandBBox;
+        set
+        {
+            var changed = value != _ExpandBBox;
+            if (changed)
+            {
+                _ExpandBBox = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
+    public abstract string SimpleCmd();
+
     public IEnumerable<uint> Indexes
     {
         get
@@ -259,21 +327,29 @@ public abstract class GLFigureBase : IGLFigure
             if (this.IsAttached())
                 return Primitives
                     .OrderByDescending(w => w.Order)
-                    .SelectMany(primitive => primitive.Vertexes.Select(vertex => vertex.Index!.Value));
+                    .SelectMany(primitive => primitive.Vertexes
+                        // .Where(vertex => vertex.Index is not null)
+                        .Select(vertex => vertex.Index!.Value));
 
             return new uint[] { };
         }
-    }   
-
-    public BBox OBBox(in Matrix4x4? cs = null)
-    {
-        var res = new BBox(cs);
-
-        foreach (var primitive in Primitives)
-            res.ApplyUnion(primitive.BBox(cs).Transform(ObjectMatrix));
-
-        return res;
     }
+
+    BBox? _LBBox = null;
+    // TODO: manage figure vertex invalidation
+
+    public BBox LBBox
+    {
+        get
+        {
+            if (_LBBox is null)
+                _LBBox = new BBox(Primitives.Select(w => w.LBBox));
+
+            return _LBBox;
+        }
+    }
+
+    public BBox OBBox => new BBox(Primitives.Select(w => w.LBBox.Transform(ObjectMatrix)));
 
     public virtual bool EvalInShadowMap => true;
 
@@ -285,34 +361,6 @@ public abstract class GLFigureBase : IGLFigure
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Invalidate() => FigureInvalidated?.Invoke(this);
 
-    /// <summary>
-    /// Set color on primitives vertexes of this figure.
-    /// </summary>
-    /// <param name="color">Color to set on vertexes.</param>
-    /// <returns>This figure.</returns>
-    public GLFigureBase SetColor(in Color color) => SetColor(color.ToVector4());
-
-    /// <summary>
-    /// Set color on primitives vertexes of this figure.
-    /// </summary>
-    /// <param name="rgbaColor">Color to set on vertexes.</param>
-    /// <returns>This figure.</returns>
-    public GLFigureBase SetColor(in Vector4 rgbaColor)
-    {
-        foreach (var primitive in Primitives)
-            foreach (var vertex in primitive.Vertexes)
-                vertex.MaterialColor = rgbaColor;
-
-        return this;
-    }
-
-    /// <summary>
-    /// Change the figure order.
-    /// </summary>
-    /// <param name="order">Order to set.</param>
-    /// <seealso cref="Order"/>
-    /// <returns>This figure.</returns>
-    public GLFigureBase SetOrder(int order) => this.Act(fig => fig.Order = order);
 
     public override string ToString()
     {
@@ -345,17 +393,8 @@ public static partial class Ext
     /// <summary>
     /// Object space bbox of given figures vertexes.
     /// </summary>
-    /// <param name="figures">Gl figures to compute bbox.</param>
-    /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
+    /// <param name="figures">Gl figures to compute bbox.</param>    
     /// <returns>Figures bbox [object].</returns>
-    public static BBox OBBox(this IEnumerable<GLFigureBase> figures, in Matrix4x4? cs = null)
-    {
-        var res = new BBox(cs);
-
-        foreach (var figure in figures)
-            res.ApplyUnion(figure.OBBox(cs));
-
-        return res;
-    }
+    public static BBox OBBox(this IEnumerable<GLFigureBase> figures) => new BBox(figures.Select(w => w.OBBox));
 
 }

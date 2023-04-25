@@ -149,7 +149,6 @@ class Program
             if (cp.Properties.PointerUpdateKind == Avalonia.Input.PointerUpdateKind.LeftButtonReleased)
             {
                 var sp = cp.Position.ToVector2();
-
                 var mm = glCtl.ModelMatrix;
                 var vm = glCtl.ViewMatrix;
                 var pm = glCtl.ProjectionMatrix;
@@ -166,54 +165,31 @@ class Program
                 // create static list of figures, because we create new figures inside the loop
                 var figures = glModel.Figures.ToList();
 
-                foreach (var fig in figures)
+                var hits = figures.SelectMany(fig => lraycast.Intersect(tol: 1e-5f, fig)).ToList();
+
+                foreach (var hit in hits)
                 {
-                    // lraycast is relative to local space coord
-                    //
-                    // testing figure vs lraycast could not work correctly because a figure
-                    // can have an object matrix applied that translates into different local space
-                    // respect those considered by the RayCastLocal where no figure concept exists thus ObjectMatrix=Identity.
-                    //
-                    // In order to compare intersection between lraycast and primitives of the figure
-                    // we need before to transform lraycast to an object raycast suitable to match the same space
-                    // where figure primitives lies.
-                    Line oraycast;
+                    if (hit.Primitive is not GLTriangle tri) continue;
 
-                    if (fig.ObjectMatrixIsIdentity) // no transform required if fig object matrix already an identity
-                        oraycast = lraycast;
+                    Debug.WriteLine($"hit tri [{tri}]");
+                    tri.SetColor(Color.Yellow);
+                    tri.Order = 1;
 
-                    else
-                        oraycast = lraycast.Transform(fig.ObjectMatrix.Inverse());
+                    // add a further line (orange) to hitted triangle
+                    var line = GLLine.FromTo(
+                        (GLVertex)tri.V1.Copy(),
+                        new GLVertex((tri.V2.Position + tri.V3.Position) / 2));
+                    var lineFig = new GLLineFigure(line) { Order = 1 };
+                    lineFig.SetColor(Color.DarkOrange);
 
-                    foreach (var tri in fig.Primitives.OfType<GLTriangle>())
-                    {
-                        var q = oraycast.Intersect(tri.Plane);
-                        //! [RayCast]
-                        if (q is not null && tri.Contains(q.Value))
-                        {
-                            // change the color and order ( default:0 ) to 1 in order to bring over the triangle
-                            // elsewhere edges of adjacent triangles can cover highlighted triangle edges
-                            Debug.WriteLine($"hit tri [{tri}]");
-                            tri.SetColor(Color.Yellow);
-                            tri.Order = 1;
-
-                            // add a further line (orange) to hitted triangle
-                            var line = GLLine.FromTo(
-                                (GLVertex)tri.V1.Copy(),
-                                new GLVertex((tri.V2.Position + tri.V3.Position) / 2));
-                            var lineFig = new GLLineFigure(line) { Order = 1 };
-                            lineFig.SetColor(Color.DarkOrange);
-
-                            // note: linefig built using [local] figure coordinates
-                            // so we need to copy the same object matrix to replicate effective position
-                            lineFig.ObjectMatrix = fig.ObjectMatrix;
-                            vtxMgr.AddFigure(lineFig);
-
-                            // invalidate all the layout views
-                            w.GLControlSplit?.Invalidate();
-                        }
-                    }
+                    // note: linefig built using [local] figure coordinates
+                    // so we need to copy the same object matrix to replicate effective position
+                    lineFig.ObjectMatrix = hit.Figure.ObjectMatrix;
+                    vtxMgr.AddFigure(lineFig);
                 }
+
+                // invalidate all the layout views
+                glCtl.InvalidateAll();
             }
         };
 

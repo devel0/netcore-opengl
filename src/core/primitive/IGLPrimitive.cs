@@ -37,6 +37,7 @@ public enum GLPrimitiveType
 /// <see cref="GLVertexManager"/> when the primitive added to the figure and figure to the model
 /// through <see cref="GLModel.AddFigure"/>.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
 {
 
@@ -61,12 +62,25 @@ public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
     /// From the opengl point of view figures with higher order ( front ) are drawn firstly then lower order ( back ).<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    
+    [JsonProperty]
     int Order { get; set; }
 
     /// <summary>
-    /// Bounding box of the primitive.
-    /// </summary>
-    /// <param name="cs">(Optional) cs for oriented bounding box.</param>    
-    BBox BBox(in Matrix4x4? cs = null);
+    /// (cached) Bounding box of the primitive [local].
+    /// </summary>    
+    BBox LBBox { get; }
+
+    /// <summary>
+    /// Retrieve e simple cmd representation of this primtiive.<br/>
+    /// Its a textual representation of primitive information useful to regen in a separate tool.
+    /// </summary>    
+    /// <param name="includeHeader">If true header will prepended to form a complete command.</param>    
+    string SimpleCmd(bool includeHeader = true);
+
+    /// <summary>
+    /// States if primitive is actually selected.<br/>
+    /// It true the primitive is listed in model selected primitives <see cref="GLModel.SelectedPrimitives"/>.
+    /// </summary>    
+    bool Selected { get; }
 
 }

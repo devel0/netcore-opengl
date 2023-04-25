@@ -5,6 +5,27 @@ using Avalonia.Threading;
 namespace SearchAThing.OpenGL.GUI;
 
 /// <summary>
+/// Delegate used by the <see cref="GLWindow"/> to customize action following the creation of the gl control into the window.
+/// </summary>
+/// <param name="avaloniaGLControl">Avalonia gl control reference.</param>
+public delegate void GLControlCreatedDelegate(AvaloniaGLControl avaloniaGLControl);
+
+/// <summary>
+/// Delegate used by the <see cref="GLWindow"/> to customize action following the attachment of the gl split into the window.
+/// </summary>
+/// <param name="glSplit">Gl split reference.</param>
+public delegate void GLSplitAttachedDelegate(AvaloniaGLControlSplit glSplit);
+
+/// <summary>
+/// Delegate used by the <see cref="GLWindow"/> to customize action following change of focused gl control.
+/// </summary>
+/// <param name="glSplit">Gl split reference.</param>
+/// <param name="avaloniaGLControl">Focused avalonia gl control.</param>
+/// <param name="isInitial">True if this is the first-est focused control of the gl split.</param>
+public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, 
+    AvaloniaGLControl avaloniaGLControl, bool isInitial);
+
+/// <summary>
 /// Used in stand-alone application types ( console programs ) to create an application gl window.<br/>
 /// This control automatically keeps track of created gl control and listen for their property change
 /// in order to invalidate their visual.<br/>
@@ -84,12 +105,6 @@ public partial class GLWindow : Window, INotifyPropertyChanged
 
     #endregion
 
-    public delegate void GLControlCreatedDelegate(AvaloniaGLControl avaloniaGLControl);
-
-    public delegate void GLSplitAttachedDelegate(AvaloniaGLControlSplit glSplit);
-
-    public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, AvaloniaGLControl avaloniaGLControl, bool isInitial);
-
     public GLWindow()
     {
         ;
@@ -112,6 +127,9 @@ public partial class GLWindow : Window, INotifyPropertyChanged
         InitializeComponent();
 
         GLModel = new GLModel(new GLContext());
+
+        GLModel.NotificationRequest += (title, msg, type) =>
+            this.NotificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));        
 
         this.AttachGLControlSplit(RootGrid, GLModel,
             setGLControlSplit: x =>
@@ -220,5 +238,31 @@ public partial class GLWindow : Window, INotifyPropertyChanged
     /// Invalidate gl control split.
     /// </summary>
     public void Invalidate() => GLControlSplit?.Invalidate();
+
+}
+
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Attach bindings such as notification manager.
+    /// </summary>    
+    internal static void AttachGLBindings(this Window window, Grid grGL, GLModel glModel)
+    {
+        WindowNotificationManager? notificationManager = null;
+
+        window.Opened += (sender, e) =>
+        {
+            notificationManager = new WindowNotificationManager(TopLevel.GetTopLevel(grGL));
+        };
+
+        glModel.NotificationRequest += (title, msg, type) =>
+            notificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));
+        
+        window.Closed += (sender, e) =>
+        {
+
+        };
+    }
 
 }

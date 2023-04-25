@@ -101,7 +101,7 @@ public class GLVertexManager : IGLVertexManager
     public BBox LBBox
     {
         get => _LBBox;
-        set
+        private set
         {
             var changed = value != _LBBox;
             if (changed)
@@ -112,7 +112,42 @@ public class GLVertexManager : IGLVertexManager
         }
     }
 
-    #endregion
+    #endregion   
+
+    /// <summary>
+    /// Recompute bbox [local] of all figure/primitive vertexes upading <see cref="LBBox"/>.<br/>
+    /// Used internally after figure/primitive deletion.
+    /// REVIEW: may improved
+    /// </summary>
+    public BBox RecomputeLBBox()
+    {
+        var bbox = new BBox();
+
+        foreach (var figure in Figures)
+        {
+            if (figure.ScreenCoordMode) continue;
+
+            if (figure.ExpandBBox)
+            {
+                var om = figure.ObjectMatrix;
+
+                if (!om.IsIdentity)
+                {
+                    foreach (var vertex in figure.Vertexes())
+                        bbox.ApplyUnion(Vector3.Transform(vertex.Position, om));
+                }
+                else
+                {
+                    foreach (var vertex in figure.Vertexes())
+                        bbox.ApplyUnion(vertex.Position);
+                }
+            }
+        }
+
+        LBBox = bbox;
+
+        return bbox;
+    }
 
     public bool ExpandModelBBox { get; private set; }
 
@@ -142,11 +177,11 @@ public class GLVertexManager : IGLVertexManager
 
     #region vertex
 
-    internal void AddVertex(GLVertex vertex)
+    internal void AddVertex(GLVertex vertex, bool computeNormal = true)
     {
         if (vertex.Index is not null) throw new Exception($"vertex already added");
 
-        if (vertex.ParentPrimitive is GLTriangle tri && vertex.ParentFigure is GLTriangleFigure triFig)
+        if (computeNormal && vertex.ParentPrimitive is GLTriangle tri && vertex.ParentFigure is GLTriangleFigure triFig)
         {
             var normal = triFig.ComputeNormal(tri, vertex);
             vertex.SetNormal(normal);
@@ -186,10 +221,19 @@ public class GLVertexManager : IGLVertexManager
 
         if (!vertex.ScreenCoordMode)
         {
-            var om = vertex.ParentFigure?.ObjectMatrix;
             var bbox_changed = false;
-            if (om is not null)
-                bbox_changed = LBBox.ApplyUnion(Vector3.Transform(vertex.Position, om.Value));
+
+            var fig = vertex.ParentFigure;
+            if (fig is not null)
+            {
+                if (fig.ExpandBBox)
+                {
+                    var om = vertex.ParentFigure?.ObjectMatrix;
+
+                    if (om is not null)
+                        bbox_changed = LBBox.ApplyUnion(Vector3.Transform(vertex.Position, om.Value));
+                }
+            }
             else
                 bbox_changed = LBBox.ApplyUnion(vertex.Position);
 
@@ -283,6 +327,9 @@ public class GLVertexManager : IGLVertexManager
             AddPrimitive(primitive, figure);
         }
 
+        if (figure is GLTriangleFigure triFig && triFig.ComputeNormalMean)
+            triFig.RebuildNormal(onlyMean: true);
+
         FiguresHS.Add(figure);
         FigureAdded?.Invoke(this, figure);
         FigureCount = FiguresHS.Count;
@@ -368,8 +415,8 @@ public class GLVertexManager : IGLVertexManager
             RemoveVertex(vertex);
 
             vertex.ParentPrimitive = null;
-        }
-
+        }        
+        
         primitive.ParentFigure = null;
         if (primitive.PrimitiveType == GLPrimitiveType.Triangle) --TriangleCount;
     }

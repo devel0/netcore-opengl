@@ -3,6 +3,24 @@ namespace SearchAThing.OpenGL.GUI;
 public static class Constants
 {
 
+    #region resources
+
+    /// <summary>
+    /// SearchAThing.OpenGL.Gui assembly name (regex).
+    /// </summary>
+    public const string NETCORE_OPENGL_GUI_ASSEMBLY_NAME = "netcore-opengl-gui";
+
+    /// <summary>
+    /// Retrieve resource name of gui asset.
+    /// </summary>
+    /// <param name="filename">File name of the asset resource.</param>    
+    public static string GuiAssetResourceName(string filename) =>
+        $"SearchAThing.OpenGL.GUI.Assets.{filename}";
+
+    internal const string RESOURCE_FILENAME_SelectPrimitiveCursor_32 = "SelectPrimitiveCursor-32.png";
+
+    #endregion
+
     #region colors
 
     /// <summary>
@@ -38,9 +56,14 @@ public static class Constants
     public static readonly KeyGesture DEFAULT_ToggleWireframeGesture = new KeyGesture(Key.W);
 
     /// <summary>
-    /// (Default) Toggle shade width dege key gesture.
+    /// (Default) Toggle shade width edge key gesture.
     /// </summary>
     public static readonly KeyGesture DEFAULT_ToggleShadeWithEdgeGesture = new KeyGesture(Key.W, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Toggle vertex visibility key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_ToggleVertexVisibilityGesture = new KeyGesture(Key.V, KeyModifiers.Alt);
 
     /// <summary>
     /// (Default) Toggle show normals key gesture.
@@ -60,7 +83,12 @@ public static class Constants
     /// <summary>
     /// (Default) Toggle use shadow key gesture.
     /// </summary>
-    public static readonly KeyGesture DEFAULT_ToggleUseShadowGesture = new KeyGesture(Key.S);
+    public static readonly KeyGesture DEFAULT_ToggleUseShadowGesture = new KeyGesture(Key.S, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Switch selection mode key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_SwitchSelectionModeGesture = new KeyGesture(Key.S);
 
     /// <summary>
     /// (Default) Camera pan left key gesture.
@@ -235,7 +263,32 @@ public static class Constants
     /// <summary>
     /// (Default) Toggle camera object key gesture.
     /// </summary>
-    public static readonly KeyGesture DEFAULT_ToggleCameraObject = new KeyGesture(Key.C, KeyModifiers.Control);
+    public static readonly KeyGesture DEFAULT_ToggleCameraObject = new KeyGesture(Key.C, KeyModifiers.Control | KeyModifiers.Shift);
+
+    /// <summary>
+    /// (Default) Set rotation center key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_SetRotationCenterGesture = new KeyGesture(Key.R, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Set clear selection key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_ClearSelectionGesture = new KeyGesture(Key.Escape);
+
+    /// <summary>
+    /// (Default) Copy SimpleCmd of selection key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_CopySimpleCmdOfSelectionGesture = new KeyGesture(Key.C, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Paste SimpleCmd key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_PasteSimpleCmdGesture = new KeyGesture(Key.V, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Delete selected primitives/figures key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_DeleteSelectedGesture = new KeyGesture(Key.Delete);
 
     #endregion
 

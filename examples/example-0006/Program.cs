@@ -56,21 +56,7 @@ class Program
             // build figure from nurb mesh
             triFig = new GLTriangleFigure(tris);
 
-            // define a custom vertex normal calc
-            triFig.ComputeNormal = (tri, vtx) =>
-            {
-                if (computeNurbNormals)
-                {
-                    var pos = vtx.Position;
-                    var uv = nurb.ClosestParameter(new Point3(pos.X, pos.Y, pos.Z));
-
-                    var q = nurb.EvaluateAt(uv.U, uv.V, GShark.Enumerations.EvaluateSurfaceDirection.Normal);
-
-                    return q.ToVector3();
-                }
-                else
-                    return GLTriangleFigure.DefaultComputeNormal(tri, vtx);
-            };
+            triFig.SetupComputeNormal(mean: computeNurbNormals);
 
             glModel.AddFigure(triFig);
 
@@ -128,7 +114,7 @@ class Program
 
                             angle += angleIncrement_rad;
 
-                            w.GLControlSplit?.Invalidate();
+                            glCtl.InvalidateAll();
                         });
 
                         await Task.Delay(50);
@@ -141,15 +127,11 @@ class Program
             {
                 computeNurbNormals = !computeNurbNormals;
 
-                if (triFig is not null)
-                {
-                    // recompute normal on vertexes because changed the type of calc
-                    // this will invoke custom ComputeNormal defined above
-                    triFig.RebuildNormal();
-                }
+                if (triFig is not null)                
+                    triFig.SetupComputeNormal(mean: computeNurbNormals);                
 
                 // note : there is no need to rebuild the model, invalidate will use updated vertex normals
-                glCtl.Invalidate(InvalidateEnum.RedrawOnly);
+                glCtl.InvalidateAll();
             }
         };
 

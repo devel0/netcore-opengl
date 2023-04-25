@@ -1,8 +1,6 @@
 using Avalonia.Controls;
-using Avalonia.Controls.Notifications;
 using Avalonia.Media.Imaging;
 using Avalonia.Threading;
-using Newtonsoft.Json;
 
 namespace SearchAThing.OpenGL.GUI;
 
@@ -19,9 +17,9 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
     #region forwarders
 
-    GLModel model => GLControl.GLModel;
+    GLModel glModel => GLControl.GLModel;
 
-    public GLContext GLContext => model.GLContext;
+    public GLContext GLContext => glModel.GLContext;
 
     internal GL GL => GLContext.GL;
 
@@ -66,35 +64,104 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
                 if (sender is GLControl glControl && !glControl.IsRendering)
                     InvalidateVisual();
             };
-            _glControl.NotificationRequest += (title, msg, type) =>
-            {
-                this.Notify(new Notification(title, msg, type.ToAvaloniaNotificationType()));
-            };
 
             // used by GLView to listen for GLControl prop changes ( Title, Overlay )
             GLControlConnected?.Invoke(this, EventArgs.Empty);
 
-            _glControl.PropertyChanged += (sender, e) =>
-            {
-                if (e.PropertyName == nameof(GLControl.IdentifyCoord))
-                {
-                    var identifyCoord = GLControl.IdentifyCoord;
-
-                    if (identifyCoord)
-                        StartIdentifyCoord();
-                    else
-                        StopIdentifyCoord();
-                }
-            };
+            _glControl.PropertyChanged += GLControl_PropertyChanged;
+            _glControl.GLModel.PropertyChanged += GLModel_PropertyChanged;
 
             this.LayoutUpdated += AvaloniaGLControl_LayoutUpdated;
             SetDefaultKeyGestures();
+            SetCursor();
 
             OnPropertyChanged();
         }
     }
 
     #endregion
+
+    static Assembly? _netcore_opengl_gui_assembly = null;
+
+    internal static Assembly netcore_opengl_gui_assembly
+    {
+        get
+        {
+            if (_netcore_opengl_gui_assembly is null)
+            {
+                var q = AppDomain.CurrentDomain
+                    .GetAssemblies()
+                    .FirstOrDefault(a => a.GetName().Name == NETCORE_OPENGL_GUI_ASSEMBLY_NAME);
+
+                if (q is null)
+                {
+                    throw new Exception($"unable to find [netcore-opengl-gui] assembly");
+                }
+
+                _netcore_opengl_gui_assembly = q;
+            }
+
+            return _netcore_opengl_gui_assembly;
+        }
+    }
+
+    void SetCursor()
+    {
+        var selectionMode = glModel.CursorMode;
+        var identifyMode = GLControl.IdentifyCoord;
+
+        if (selectionMode != Core.CursorMode.View)
+        {
+            switch (selectionMode)
+            {
+                case Core.CursorMode.Primitive:
+                    {
+                        var iconStream = netcore_opengl_gui_assembly
+                            .GetManifestResourceStream(GuiAssetResourceName(RESOURCE_FILENAME_SelectPrimitiveCursor_32));
+
+                        var bitmap = new Bitmap(iconStream);
+
+                        Cursor = new Cursor(bitmap, new PixelPoint(15, 0));
+                    }
+                    break;
+
+                case Core.CursorMode.Figure:
+                    {
+                        Cursor = new Cursor(StandardCursorType.Hand);
+                    }
+                    break;
+            }
+        }
+
+        else if (identifyMode)
+            Cursor = new Cursor(StandardCursorType.Cross);
+
+        else
+            Cursor = Cursor.Default;
+    }
+
+    private void GLModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(GLModel.CursorMode))
+        {
+            SetCursor();
+        }
+    }
+
+    private void GLControl_PropertyChanged(object sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(GLControl.IdentifyCoord))
+        {
+            var identifyCoord = GLControl.IdentifyCoord;
+
+            if (identifyCoord)
+                StartIdentifyCoord();
+            else
+                StopIdentifyCoord();
+
+            SetCursor();
+        }
+    }
 
     #region Size
 
@@ -268,12 +335,22 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// <summary>
     /// Split current view horizontally.
     /// </summary>
-    public void SplitHorizontal() => GridSplitterManager.Split(GridSplitDirection.Horizontally);
+    public void SplitHorizontal() => Split(GridSplitDirection.Horizontally);
 
     /// <summary>
     /// Split current view vertically.
     /// </summary>
-    public void SplitVertical() => GridSplitterManager.Split(GridSplitDirection.Vertically);
+    public void SplitVertical() => Split(GridSplitDirection.Vertically);
+
+    /// <summary>
+    /// Split current view in given direction.
+    /// </summary>
+    /// <param name="direction">Split direction.</param>
+    public void Split(GridSplitDirection direction)
+    {
+        var newCtl = GridSplitterManager.Split(direction);
+        newCtl?.AvaloniaGLControl.SetViewNfo(GetViewNfo());
+    }
 
     /// <summary>
     /// Close current view ( if not is the last one ).
@@ -283,12 +360,14 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// <summary>
     /// Retrieve an object that can be serialized to save current <see cref="GLControl"/> view config.
     /// </summary>    
-    public ViewNfo GetViewNfo() => GLControl.GetViewNfo();
+    /// <param name="includeLights">If true (default) lights will saved within view nfo.</param>    
+    public ViewNfo GetViewNfo(bool includeLights = true) => GLControl.GetViewNfo(includeLights);
 
     /// <summary>
-    /// Restore <see cref="GLControl"/> view settings from given nfo object.
+    /// Restore <see cref="GLControl"/> view settings from given nfo object.    
     /// </summary>    
-    public void SetViewNfo(ViewNfo nfo) => GLControl.SetViewNfo(nfo);
+    /// <param name="includeLights">If true (default) lights set to the model.</param>    
+    public void SetViewNfo(ViewNfo nfo, bool includeLights = true) => GLControl.SetViewNfo(nfo, includeLights);
 
     /// <summary>
     /// Save all <see cref="GLControl"/> view config to the given pathfilename.<br/>    
@@ -302,9 +381,11 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
         var focusedCtl = GridSplitterManager.FocusedControl;
         var focusedUID = 0;
 
+        // GridSplitterManager.PrintStructure(Console.Out);        
+
         var layout = GridSplitterManager.SaveStructure(emitControl: (ctl, uid) =>
         {
-            uidToViewConfig.Add(uid, ctl.AvaloniaGLControl.GetViewNfo());
+            uidToViewConfig.Add(uid, ctl.AvaloniaGLControl.GetViewNfo(includeLights: false));
 
             if (ctl == focusedCtl) focusedUID = uid;
         });
@@ -315,7 +396,8 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             viewLayoutNfo = new ViewLayoutNfo
             {
                 Layout = layout,
-                UIDView = uidToViewConfig
+                UIDView = uidToViewConfig,
+                Lights = glModel.PointLights.ToList()
             };
 
         else
@@ -325,17 +407,22 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
             viewLayoutNfo = new ViewLayoutNfo
             {
-                UIDView = uidView
+                UIDView = uidView,
+                Lights = glModel.PointLights.ToList()
             };
         }
 
         viewLayoutNfo.FocusedUIDView = focusedUID;
 
+        viewLayoutNfo.OverrideAmbient = glModel.OverrideAmbientEnabled ? glModel.OverrideAmbient : null;
+        viewLayoutNfo.OverrideDiffuse = glModel.OverrideDiffuseEnabled ? glModel.OverrideDiffuse : null;
+        viewLayoutNfo.OverrideSpecular = glModel.OverrideSpecularEnabled ? glModel.OverrideSpecular : null;
+
         if (pathfilename is null) pathfilename = LayoutDefaultPathfilename;
         var settings = new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
         File.WriteAllText(pathfilename, JsonConvert.SerializeObject(viewLayoutNfo, Formatting.Indented, settings));
 
-        this.Notify(new Notification(NOTIFICATION_TITLE_INPUT_OUTPUT, $"Saved view to\n{pathfilename}", NotificationType.Information));
+        glModel.SendNotification(NOTIFICATION_TITLE_INPUT_OUTPUT, $"Saved view to\n{pathfilename}");
     }
 
     /// <summary>
@@ -349,10 +436,10 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
         if (!File.Exists(pathfilename))
         {
-            this.Notify(new Notification(
+            glModel.SendNotification(
                 NOTIFICATION_TITLE_INPUT_OUTPUT,
-                $"View layout file\n{pathfilename}\nnot found",
-                NotificationType.Warning, TimeSpan.Zero));
+                $"View layout file not found\n {pathfilename}",
+                GLNotificationType.Warning);
 
             return;
         }
@@ -369,13 +456,24 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
             GridSplitterManager.LoadStructure(nfo.Layout, reconfigureControl: (glview, uid) =>
             {
-                glview.AvaloniaGLControl.SetViewNfo(nfo.UIDView[uid]);
+                glview.AvaloniaGLControl.SetViewNfo(nfo.UIDView[uid], includeLights: false);
                 if (nfo.FocusedUIDView == uid)
                     viewToFocus = glview;
             });
 
             GridSplitterManager.FocusedControl = viewToFocus;
         }
+
+        if (nfo.Lights is not null)
+        {
+            glModel.PointLights.Clear();
+            foreach (var light in nfo.Lights)
+            {
+                glModel.PointLights.Add(light);
+            }
+        }
+
+        glModel.OverrideLightStrengths(nfo.OverrideAmbient, nfo.OverrideDiffuse, nfo.OverrideSpecular);
 
         GLControl.Invalidate();
     }
@@ -384,13 +482,6 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
     /// Retrieve gl window associated to this avalonia gl control.
     /// </summary>    
     public GLWindow? GLWindow => this.SearchParent<GLWindow>();
-
-    /// <summary>
-    /// Create an avalonia notification message.
-    /// </summary>
-    /// <param name="notification">Use new Notification() to create standard messages.</param>
-    public void Notify(INotification notification) =>
-        GLWindow?.NotificationManager?.Show(notification);
 
 }
 

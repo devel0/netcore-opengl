@@ -20,6 +20,7 @@ in VertexData
     vec4 matColor;
     vec3 matProp;
     vec2 texCoord;
+    flat uint flags;
     // camera pos [world]
     vec3 cameraPos;
 }
@@ -49,6 +50,7 @@ out VertexData
     vec4 matColor;
     vec3 matProp;
     vec2 texCoord;
+    flat uint flags;
     // camera pos [world]
     vec3 cameraPos;
 }
@@ -87,6 +89,7 @@ void main()
         }
         vs_out.matProp = gs_in[idx].matProp;
         vs_out.texCoord = gs_in[idx].texCoord;
+        vs_out.flags = gs_in[idx].flags;
         vs_out.cameraPos = gs_in[idx].cameraPos;
         gl_Position = gl_in[idx].gl_Position;
         EmitVertex();

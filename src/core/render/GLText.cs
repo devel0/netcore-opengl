@@ -3,6 +3,7 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Gl text object.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public class GLText : INotifyPropertyChanged
 {
 
@@ -43,13 +44,14 @@ public class GLText : INotifyPropertyChanged
     #endregion
 
     #region Text
-
+    
     private string _Text;
 
     /// <summary>
     /// Text string.<br/>
     /// Supports multiline with '\n' newline character.
     /// </summary>    
+    [JsonProperty]
     public string Text
     {
         get => _Text;
@@ -73,6 +75,7 @@ public class GLText : INotifyPropertyChanged
     /// <summary>
     /// Text height.
     /// </summary>
+    [JsonProperty]
     public float Height
     {
         get => _Height;
@@ -97,6 +100,7 @@ public class GLText : INotifyPropertyChanged
     /// Text alignment.
     /// </summary>
     /// <seealso cref="GLTextVHAlignment"/>.
+    [JsonProperty]
     public GLTextVHAlignment Alignment
     {
         get => _Alignment;
@@ -194,6 +198,7 @@ public class GLText : INotifyPropertyChanged
     /// <summary>
     /// Text color.
     /// </summary>
+    [JsonProperty]
     public Color Color
     {
         get => _Color;
@@ -217,6 +222,7 @@ public class GLText : INotifyPropertyChanged
     /// <summary>
     /// Space between lines (em).
     /// </summary>
+    [JsonProperty]
     public float SpacingBetweenLines
     {
         get => _SpacingBetweenLines;

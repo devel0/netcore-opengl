@@ -15,6 +15,8 @@ uniform mat4 uProjection;
 uniform vec3 uCameraPos;
 
 uniform bool uFigureHighlight;
+uniform bool uFigureSelected;
+uniform float uFigureAlpha;
 uniform bool uFigureScreenCoord;
 uniform mat4 uScreenProjection;
 uniform mat4 uScreenModel;
@@ -38,6 +40,9 @@ layout(location = 3) in vec3 vMatProp;
 // vertex texcoord
 layout(location = 4) in vec2 vTexCoord;
 
+// vertex flags
+layout(location = 5) in uint vFlags;
+
 //---------------------------------------------------------------
 // variables to next stage
 //---------------------------------------------------------------
@@ -54,8 +59,9 @@ out VertexData
     vec4 matColor;
     vec3 matProp;
     vec2 texCoord;
+    flat uint flags;
     // camera pos [world]
-    vec3 cameraPos;    
+    vec3 cameraPos;        
 }
 vs_out;
 
@@ -80,5 +86,6 @@ void main()
     vs_out.matColor = vMatColor;
     vs_out.matProp = vMatProp;
     vs_out.texCoord = vTexCoord;
+    vs_out.flags = vFlags;
     vs_out.cameraPos = uCameraPos;    
 }

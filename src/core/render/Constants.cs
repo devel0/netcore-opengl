@@ -62,6 +62,20 @@ public static partial class Constants
         RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.shadewithedge.gs");
 
     /// <summary>
+    /// Shader "5.vertexvisibilityline.gs" resource name (regex).
+    /// </summary>
+    /// <value></value>
+    public static readonly string SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.vertexvisibilityline.gs");
+
+    /// <summary>
+    /// Shader "5.vertexvisibilitytri.gs" resource name (regex).
+    /// </summary>
+    /// <value></value>
+    public static readonly string SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.vertexvisibilitytri.gs");
+
+    /// <summary>
     /// Shader "5.normal.gs" resource name (regex).
     /// </summary>
     /// <value></value>
@@ -103,6 +117,11 @@ public static partial class Constants
     /// Name of vertex shader attribute ( texture coordinate mapping in the range [0,0]...[1,1] ). 
     /// </summary>
     public const string ATTNAME_vTexCoord = "vTexCoord";
+
+    /// <summary>
+    /// Name of vertex shader attribute ( flags ).
+    /// </summary>
+    public const string ATTNAME_vFlags = "vFlags";
 
     /// <summary>
     /// Name of the uniform shader variable that describe the index of the light to evaluate. ( used in depth shader ).
@@ -171,6 +190,17 @@ public static partial class Constants
     /// Name of the uniform shader variable for the figure highlight flag.
     /// </summary>
     public const string UNINAME_uFigureHighlight = "uFigureHighlight";
+
+    /// <summary>
+    /// Name of the uniform shader variable for the figure selected flag.
+    /// </summary>
+    public const string UNINAME_uFigureSelected = "uFigureSelected";
+
+    /// <summary>
+    /// Name of the uniform shader variable for the figure alpha.
+    /// <seealso cref="IGLFigure.Alpha"/>.
+    /// </summary>
+    public const string UNINAME_uFigureAlpha = "uFigureAlpha";
 
     /// <summary>
     /// Name of the uniform shader variable to override vertex material ambient strength (0..1).
@@ -259,12 +289,12 @@ public static partial class Constants
     /// <summary>
     /// Width (pixels) of the cube depth shadow.
     /// </summary>
-    public const uint SHADOW_WIDTH = 1024;
+    public static uint SHADOW_WIDTH = 1000;
 
     /// <summary>
     /// Height (pixels) of the cube depth shadow.
     /// </summary>
-    public const uint SHADOW_HEIGHT = 1024;
+    public static uint SHADOW_HEIGHT = 1000;
 
     #endregion
 
@@ -337,6 +367,11 @@ public static partial class Constants
     /// (Default) gl control use shadow flag.
     /// </summary>
     public const bool DEFAULT_UseShadows = true;
+
+    /// <summary>
+    /// (Default) gl control cursor mode.
+    /// </summary>
+    public const CursorMode DEFAULT_CursorMode = CursorMode.View;
 
     /// <summary>
     /// (Default) gl control angle view addition in standard cube views (deg).
@@ -424,9 +459,19 @@ public static partial class Constants
     public const bool DEFAULT_SHADE_WITH_EDGE = false;
 
     /// <summary>
+    /// (Default) gl control vertex visibility flag.
+    /// </summary>
+    public const bool DEFAULT_VERTEX_VISIBILITY = false;
+
+    /// <summary>
     /// (Default) gl control show normals flags.
     /// </summary>
     public const bool DEFAULT_SHOW_NORMALS = false;
+
+    /// <summary>
+    /// (Default) gl geometry shader vertex visibility point size.
+    /// </summary>
+    public const float DEFAULT_VERTEX_VISIBILITY_POINT_SIZE = 5;
 
     #endregion    
 
@@ -482,5 +527,5 @@ public static partial class Constants
     public static readonly Color DEFAULT_CameraObjectColor = Color.Green;
 
     #endregion
-    
+
 }

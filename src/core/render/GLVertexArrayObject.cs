@@ -78,6 +78,25 @@ public class GLVertexArrayObject<PacketStructure> : IDisposable
         GL.EnableVertexAttribArray(location);
     }
    
+    /// <summary>
+    /// Define and enable location to access vertex buffer object at i-th packet structure components (uint types).
+    /// </summary>
+    /// <param name="location">Index of attribute location.</param>
+    /// <param name="offset">Offset in bytes from the packet structure begin.</param>
+    /// <param name="components">Nr. of components (vec3=3; vec4=4).</param>
+    /// <param name="componentType">Component data type.</param>            
+    /// <param name="stride">Sizeof in bytes of packet structure or null to get sizeof packet structure.</param>                                
+    public unsafe void AttribIPointer(uint location, int offset,
+        int components,
+        VertexAttribIType componentType,        
+        uint? stride = null)
+    {        
+        GL.VertexAttribIPointer(location, components, componentType,
+            stride.HasValue ? stride.Value : (uint)sizeof(PacketStructure),
+            (void*)offset);
+        GL.EnableVertexAttribArray(location);
+    }
+   
     public override string ToString()
     {
         return $"{Handle}";

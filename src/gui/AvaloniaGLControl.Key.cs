@@ -1,3 +1,5 @@
+using Avalonia.Threading;
+
 namespace SearchAThing.OpenGL.GUI;
 
 public partial class AvaloniaGLControl
@@ -11,7 +13,12 @@ public partial class AvaloniaGLControl
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.ToggleShadeWithEdge"/>.
     /// </summary>
-    public KeyGesture? ToggleShadeWithEdge = null;
+    public KeyGesture? ToggleShadeWithEdgeGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLControl.ToggleVertexVisibility"/>.
+    /// </summary>
+    public KeyGesture? ToggleVertexVisibilityGesture = null;
 
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.ToggleShowNormals"/>.
@@ -32,6 +39,11 @@ public partial class AvaloniaGLControl
     /// Key gesture associated to <see cref="GLControl.ToggleUseShadow"/>.
     /// </summary>
     public KeyGesture? ToggleUseShadowGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLControl.SwitchSelectionMode"/>.
+    /// </summary>
+    public KeyGesture? SwitchSelectionModeGesture = null;
 
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.PanLeft"/>.
@@ -154,11 +166,6 @@ public partial class AvaloniaGLControl
     public KeyGesture? InvalidateGesture = null;
 
     /// <summary>
-    /// Key gesture associated to <see cref="GLControl.ToggleIdentifyCoord"/>.
-    /// </summary>
-    public KeyGesture? ToggleIdentifyCoord = null;
-
-    /// <summary>
     /// Key gesture associated to <see cref="AvaloniaGLControl.ShowDevTool"/>.
     /// </summary>
     public KeyGesture? ShowDevToolGesture = null;
@@ -206,7 +213,37 @@ public partial class AvaloniaGLControl
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.ShowCameraObject"/>.
     /// </summary>
-    public KeyGesture? ToggleCameraObject = null;
+    public KeyGesture? ToggleCameraObjectGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLControl.ToggleIdentifyCoord"/>.
+    /// </summary>
+    public KeyGesture? ToggleIdentifyCoordGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLControl.SetRotationCenter"/>.
+    /// </summary>
+    public KeyGesture? SetRotationCenterGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLModel.ClearSelection"/>.
+    /// </summary>
+    public KeyGesture? ClearSelectionGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLModel.GetSelectionSimpleCmd"/>.
+    /// </summary>
+    public KeyGesture? CopySimpleCmdOfSelectionGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLModel.PasteSimpleCmd"/>.
+    /// </summary>
+    public KeyGesture? PasteSimpleCmdGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLModel.DeleteSelected"/>.
+    /// </summary>
+    public KeyGesture? DeleteSelectedGesture = null;
 
     //    
 
@@ -216,11 +253,13 @@ public partial class AvaloniaGLControl
     public void ClearKeyGestures()
     {
         ToggleWireframeGesture =
-        ToggleShadeWithEdge =
+        ToggleShadeWithEdgeGesture =
+        ToggleVertexVisibilityGesture =
         ToggleShowNormals =
         TogglePerspectiveGesture =
         ToggleUseTextureGesture =
         ToggleUseShadowGesture =
+        SwitchSelectionModeGesture =
 
         PanLeftGesture =
         PanRightGesture =
@@ -264,7 +303,14 @@ public partial class AvaloniaGLControl
         SplitViewCloseGesture =
 
         ToggleModelBBoxGesture =
-        ToggleCameraObject =
+        ToggleCameraObjectGesture =
+        ToggleIdentifyCoordGesture =
+        SetRotationCenterGesture =
+
+        ClearSelectionGesture =
+        CopySimpleCmdOfSelectionGesture =
+        PasteSimpleCmdGesture =
+        DeleteSelectedGesture =
 
         null;
     }
@@ -275,11 +321,13 @@ public partial class AvaloniaGLControl
     public void SetDefaultKeyGestures()
     {
         ToggleWireframeGesture = DEFAULT_ToggleWireframeGesture;
-        ToggleShadeWithEdge = DEFAULT_ToggleShadeWithEdgeGesture;
+        ToggleVertexVisibilityGesture = DEFAULT_ToggleVertexVisibilityGesture;
+        ToggleShadeWithEdgeGesture = DEFAULT_ToggleShadeWithEdgeGesture;
         ToggleShowNormals = DEFAULT_ToggleShowNormalsGesture;
         TogglePerspectiveGesture = DEFAULT_TogglePerspectiveGesture;
         ToggleUseTextureGesture = DEFAULT_ToggleUseTextureGesture;
         ToggleUseShadowGesture = DEFAULT_ToggleUseShadowGesture;
+        SwitchSelectionModeGesture = DEFAULT_SwitchSelectionModeGesture;
 
         PanLeftGesture = DEFAULT_CameraPanLeftGesture;
         PanRightGesture = DEFAULT_CameraPanRightGesture;
@@ -311,7 +359,7 @@ public partial class AvaloniaGLControl
 
         ZoomFitGesture = DEFAULT_ZoomFitGesture;
         InvalidateGesture = DEFAULT_InvalidateGesture;
-        ToggleIdentifyCoord = DEFAULT_ToggleIdentifyCoordGesture;
+        ToggleIdentifyCoordGesture = DEFAULT_ToggleIdentifyCoordGesture;
 
         ShowDevToolGesture = DEFAULT_DevTool;
         SaveViewGesture = DEFAULT_SaveView;
@@ -324,7 +372,13 @@ public partial class AvaloniaGLControl
         SplitViewCloseGesture = DEFAULT_SplitViewClose;
 
         ToggleModelBBoxGesture = DEFAULT_ToggleModelBBox;
-        ToggleCameraObject = DEFAULT_ToggleCameraObject;
+        ToggleCameraObjectGesture = DEFAULT_ToggleCameraObject;
+        SetRotationCenterGesture = DEFAULT_SetRotationCenterGesture;
+
+        ClearSelectionGesture = DEFAULT_ClearSelectionGesture;
+        CopySimpleCmdOfSelectionGesture = DEFAULT_CopySimpleCmdOfSelectionGesture;
+        PasteSimpleCmdGesture = DEFAULT_PasteSimpleCmdGesture;
+        DeleteSelectedGesture = DEFAULT_DeleteSelectedGesture;
     }
 
     public void HandleKeyDown(KeyEventArgs e)
@@ -332,11 +386,13 @@ public partial class AvaloniaGLControl
         bool MatchGesture(KeyGesture? gesture) => gesture?.Matches(e) == true;
 
         if (MatchGesture(ToggleWireframeGesture)) { GLControl.ToggleWireframe(); e.Handled = true; return; }
-        if (MatchGesture(ToggleShadeWithEdge)) { GLControl.ToggleShadeWithEdge(); e.Handled = true; return; }
+        if (MatchGesture(ToggleShadeWithEdgeGesture)) { GLControl.ToggleShadeWithEdge(); e.Handled = true; return; }
+        if (MatchGesture(ToggleVertexVisibilityGesture)) { GLControl.ToggleVertexVisibility(); e.Handled = true; return; }
         if (MatchGesture(ToggleShowNormals)) { GLControl.ToggleShowNormals(); e.Handled = true; return; }
         if (MatchGesture(TogglePerspectiveGesture)) { GLControl.TogglePerspective(); e.Handled = true; return; }
         if (MatchGesture(ToggleUseTextureGesture)) { GLControl.ToggleUseTexture(); e.Handled = true; return; }
         if (MatchGesture(ToggleUseShadowGesture)) { GLControl.ToggleUseShadow(); e.Handled = true; return; }
+        if (MatchGesture(SwitchSelectionModeGesture)) { GLControl.SwitchSelectionMode(); e.Handled = true; return; }
 
         //
 
@@ -382,7 +438,7 @@ public partial class AvaloniaGLControl
 
         if (MatchGesture(ZoomFitGesture)) { GLControl.ZoomFit(); e.Handled = true; return; }
         if (MatchGesture(InvalidateGesture)) { GLControl.Invalidate(InvalidateEnum.RebuildModelAndRedraw); e.Handled = true; return; }
-        if (MatchGesture(ToggleIdentifyCoord)) { GLControl.ToggleIdentifyCoord(); e.Handled = true; return; }
+        if (MatchGesture(ToggleIdentifyCoordGesture)) { GLControl.ToggleIdentifyCoord(); e.Handled = true; return; }
 
         //
 
@@ -391,6 +447,7 @@ public partial class AvaloniaGLControl
         if (MatchGesture(RestoreViewLayoutGesture)) { LoadViewLayout(); e.Handled = true; return; };
         if (MatchGesture(SaveViewGesture)) { GLControl.SaveView(); e.Handled = true; return; };
         if (MatchGesture(RestoreViewGesture)) { GLControl.LoadView(); e.Handled = true; return; };
+        if (MatchGesture(SetRotationCenterGesture)) { GLControl.SetRotationCenter(); e.Handled = true; return; }
 
         //
 
@@ -422,9 +479,68 @@ public partial class AvaloniaGLControl
             return;
         }
 
-        if (MatchGesture(ToggleCameraObject))
+        if (MatchGesture(ToggleCameraObjectGesture))
         {
             GLControl.ToggleCameraObject();
+            return;
+        }
+
+        //
+
+        if (MatchGesture(ClearSelectionGesture))
+        {
+            GLControl.GLModel.ClearSelection();
+            GridSplitterManager.Invalidate();
+            return;
+        }
+
+        if (MatchGesture(CopySimpleCmdOfSelectionGesture))
+        {
+            var txt = GLControl.GLModel.GetSelectionSimpleCmd();
+            Task.Run(async () =>
+            {
+                var clip = Application.Current?.Clipboard;
+                if (clip is not null) await clip!.SetTextAsync(txt);
+            });
+            // CopyToClipboardRequest?.Invoke(sb.ToString());
+            GLControl.GLModel.SendNotification("Copy", "Selection (SimpleCmd) copied");
+            return;
+        }
+
+        if (MatchGesture(PasteSimpleCmdGesture))
+        {
+            Task.Run(async () =>
+            {
+                try
+                {
+                    var clip = Application.Current?.Clipboard;
+                    if (clip is not null)
+                    {
+                        var txt = await clip!.GetTextAsync();
+
+                        Dispatcher.UIThread.Post(() =>
+                        {
+                            var figs = GLControl.GLModel.PasteSimpleCmd(txt).ToList();
+                            var primitivesCnt = figs.Select(w => w.Primitives.Count).Sum();
+
+                            GLControl.InvalidateAll();
+                            GLControl.GLModel.SendNotification("Paste", $"{figs.Count} figures ({primitivesCnt} primitives) pasted.");
+                        });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Dispatcher.UIThread.Post(() =>
+                        GLControl.GLModel.SendNotification("Paste", "Paste of given SimpleCmd failed."));
+                }
+            });
+            return;
+        }
+
+        if (MatchGesture(DeleteSelectedGesture))
+        {
+            GLControl.GLModel.DeleteSelected();
+            GridSplitterManager.Invalidate();
             return;
         }
 

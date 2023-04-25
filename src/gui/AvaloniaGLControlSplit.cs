@@ -3,6 +3,20 @@ using Avalonia.Controls;
 namespace SearchAThing.OpenGL.GUI;
 
 /// <summary>
+/// Used by <see cref="Toolkit.AttachGLControlSplit"/> to notify focused control change.
+/// </summary>
+/// <param name="split">GL split belonging the focused control.</param>
+/// <param name="ctl">Gl focused control</param>
+/// <param name="isInitial">True if this is the firstest control that the gl split has focused.</param>
+public delegate void AvaloniaControlInitialEvent(AvaloniaGLControlSplit split, AvaloniaGLControl ctl, bool isInitial);
+
+/// <summary>
+/// Generic delegate used by <see cref="Toolkit.AttachGLControlSplit"/> for control create/remove events.
+/// </summary>
+/// <param name="ctl">Gl control reference.</param>
+public delegate void AvaloniaControlEvent(AvaloniaGLControl ctl);
+
+/// <summary>
 /// Gl split control attached to <see cref="GLWindow"/> for stand-alone application or <see cref="Window"/>
 /// on mvvm applications.<br/>
 /// It creates <see cref="GLView"/> at start then allow to create more when split activated
@@ -51,6 +65,11 @@ public partial class AvaloniaGLControlSplit : GridSplitterManager<GLView>
                             glControl.CameraView(glControl.LastCameraView.Value);
                     };
 
+                    glControl.InvalidateAllRequest += (sender, e) =>
+                    {
+                        Invalidate();
+                    };
+
                     glView.AvaloniaGLControl.GLControl = glControl;
 
                     return glView;
@@ -90,10 +109,6 @@ public partial class AvaloniaGLControlSplit : GridSplitterManager<GLView>
 public static partial class Toolkit
 {
 
-    public delegate void AvaloniaControlInitialEvent(AvaloniaGLControlSplit split, AvaloniaGLControl ctl, bool isInitial);
-
-    public delegate void AvaloniaControlEvent(AvaloniaGLControl ctl);
-
     /// <summary>
     /// Attach gl split to the given avalonia window.<br/>
     /// It's automatically invoked in the stand-alone console application through
@@ -115,6 +130,10 @@ public static partial class Toolkit
         AvaloniaControlEvent? onControlRemoved = null)
     {
         bool firstActivate = true;
+
+        if (owner is not GLWindow)
+            owner.AttachGLBindings(grid, glModel);
+
         owner.Opened += (a, b) =>
         {
             if (firstActivate)

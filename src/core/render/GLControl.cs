@@ -1,6 +1,12 @@
 namespace SearchAThing.OpenGL.Core;
 
 /// <summary>
+/// Used by <see cref="GLControl.NotEmptyRenderPreview"/> when notify the first non empty bbox render.
+/// </summary>
+/// <param name="glControl">GL control reference.</param>
+public delegate void RenderPreviewDelegate(GLControl glControl);
+
+/// <summary>
 /// Provides basic opengl abstraction to create entities such as <see cref="GLPoint"/>, <see cref="GLLine"/> and <see cref="GLTriangle"/>.
 /// It provides high level functions to manage camera view and related pan/zoom functions.<br/>
 /// The <see cref="Invalidate"/> emit a <see cref="GLControl.RenderInvalidated"/> event that 
@@ -72,20 +78,6 @@ public partial class GLControl : INotifyPropertyChanged
 
         ListenModelChanges();
     }
-
-    /// <summary>
-    /// Event emitted when gl control would to notify something. This will handled by <see cref="SearchAThing.OpenGL.GUI.AvaloniaGLControl"/>.
-    /// </summary>
-    public NotificationDelegate NotificationRequest;
-
-    /// <summary>
-    /// Send notification to frontend that manage this gl control.
-    /// </summary>
-    /// <param name="title">Title of notification.</param>
-    /// <param name="msg">Message to display, it can contains newlines.</param>
-    /// <param name="notifyType">Level type of notification (Default:Information).</param>
-    public void SendNotification(string title, string msg, GLNotificationType notifyType = GLNotificationType.Information) =>
-        NotificationRequest?.Invoke(title, msg, notifyType);
 
     void ListenModelChanges()
     {
@@ -184,13 +176,18 @@ public partial class GLControl : INotifyPropertyChanged
 
         if (invalidate == InvalidateEnum.RebuildModelAndRedraw)
         {
-            GLModel.Invalidate();
+            GLModel.InvalidateModel();
         }
 
         RenderInvalidated?.Invoke(this, new EventArgs());
     }
 
-    public delegate void RenderPreviewDelegate(GLControl glControl);
+    public event EventHandler InvalidateAllRequest;
+
+    /// <summary>
+    /// All gl split control invalidation.
+    /// </summary>
+    public void InvalidateAll() => InvalidateAllRequest.Invoke(this, EventArgs.Empty);
 
     /// <summary>
     /// Event generated at first non bbox empty render generated.
@@ -291,9 +288,9 @@ public partial class GLControl : INotifyPropertyChanged
             using (var Vao = new GLVertexArrayObject<GLVertexStruct>(GL))
             {
 
-                // VERTEX 1                                                      | VERTEX 2           | ...
-                // Position   Normal     MatColor   MatProp            TextureST | ...                | ...
-                // X Y Z      Nx Ny Nz   R G B A    lAmb lDiff lSpec   S T       | ...                | ...
+                // VERTEX 1                                                               | VERTEX 2           | ...
+                // Position   Normal     MatColor   MatProp            TextureST   Flags  | ...                | ...
+                // X Y Z      Nx Ny Nz   R G B A    lAmb lDiff lSpec   S T         (uint) | ...                | ...
 
                 var off = 0;
                 var compCnt = 3;
@@ -375,6 +372,21 @@ public partial class GLControl : INotifyPropertyChanged
                 }
                 off += compCnt * compSize;
 
+                //--               
+
+                // Flags(uint)
+                compSize = sizeof(uint);
+                compCnt = 1;
+                loc = shader.GetAttributeLocation(ATTNAME_vFlags);
+                if (loc is not null)
+                {
+                    Vao.AttribIPointer(loc.Value,
+                        offset: off,
+                        components: compCnt,
+                        componentType: VertexAttribIType.UnsignedInt);
+                }
+                off += compCnt * compSize;
+
                 //------------------------------------------------------------------------------
                 // FIGURES LOOP
                 //------------------------------------------------------------------------------
@@ -388,7 +400,14 @@ public partial class GLControl : INotifyPropertyChanged
                     if (!shadowMapMode)
                     {
                         shader.SetBool(UNINAME_uFigureHighlight, fig.Highlight);
+                        shader.SetBool(UNINAME_uFigureSelected, fig.Selected);
+                        if (fig.Alpha.HasValue)
+                            shader.SetFloat(UNINAME_uFigureAlpha, fig.Alpha.Value);
+                        else
+                            shader.SetFloat(UNINAME_uFigureAlpha, -1);
                     }
+                    else
+                        shader.SetFloat(UNINAME_uFigureAlpha, -1);
 
                     var glChar = fig as GLTextCharFigure;
 
@@ -454,10 +473,12 @@ public partial class GLControl : INotifyPropertyChanged
                                 shader.SetBool(UNINAME_uEvalLight, false);
                                 shader.SetBool(UNINAME_uUseTexture, false);
                             }
+
                             else if (fig.PrimitiveType == GLPrimitiveType.Line)
                             {
                                 shader.SetBool(UNINAME_uEvalLight, false);
                             }
+
                             else
                             {
                                 shader.SetBool(UNINAME_uEvalLight, true);
@@ -564,7 +585,10 @@ public partial class GLControl : INotifyPropertyChanged
     /// <param name="shader">Shader to use in this gl rendering stage.</param>
     /// <param name="ptLightStructs">List of point lights.</param>    
     /// <param name="clear">Clear the scene ( Default: true ).</param>
-    void DoShader(Func<GLFigureBase, bool> figureMatch, GLPipeline shader, GLPointLightStruct[] ptLightStructs, bool clear = true)
+    void DoShader(Func<GLFigureBase, bool> figureMatch,
+        GLPipeline shader,
+        GLPointLightStruct[] ptLightStructs,
+        bool clear = true)
     {
         shader.Use();
 
@@ -630,11 +654,16 @@ public partial class GLControl : INotifyPropertyChanged
 
         var sizeChanged = false;
 
-        if (glControlLastKnownSize is null || !glControlLastKnownSize.Value.Equals(ps))
+        if (glControlLastKnownSize is null ||
+            glControlLastKnownShadowSize is null ||
+            !glControlLastKnownSize.Value.Equals(ps) ||
+            glControlLastKnownShadowSize.Value.w != ShadowWidth ||
+            glControlLastKnownShadowSize.Value.h != ShadowHeight)
         {
             InvalidateProjectionMatrix();
 
             glControlLastKnownSize = ps;
+            glControlLastKnownShadowSize = (ShadowWidth, ShadowHeight);
 
             sizeChanged = true;
         }
@@ -683,7 +712,7 @@ public partial class GLControl : INotifyPropertyChanged
             }
 
             var prjMatrix = Matrix4x4.CreatePerspectiveFieldOfView((float)90d.ToRad(),
-                (float)SHADOW_WIDTH / (float)SHADOW_HEIGHT,
+                (float)ShadowWidth / (float)ShadowHeight,
                 nearPlaneDistance: Near,
                 farPlaneDistance: Far);
 
@@ -766,7 +795,7 @@ public partial class GLControl : INotifyPropertyChanged
                     GL.TexImage3D(TextureTarget.TextureCubeMapArray,
                         0, // level
                         InternalFormat.DepthComponent,
-                        SHADOW_WIDTH, SHADOW_HEIGHT,
+                        ShadowWidth, ShadowHeight,
                         (uint)(6 * ptLightStructs.Length), // the number of layers in a texture array
                         0, // border
                         PixelFormat.DepthComponent,
@@ -805,7 +834,7 @@ public partial class GLControl : INotifyPropertyChanged
 
                 DebugFramebufferStatus("SHADOW");
 
-                GL.Viewport(0, 0, SHADOW_WIDTH, SHADOW_HEIGHT);
+                GL.Viewport(0, 0, ShadowWidth, ShadowHeight);
 
                 for (int lightIdx = 0; lightIdx < ptLightStructs.Length; ++lightIdx)
                 {
@@ -882,6 +911,15 @@ public partial class GLControl : INotifyPropertyChanged
                 MainShader,
                 ptLightStructs);
 
+            if (ShowNormals)
+                DoShader(
+                    fig =>
+                        fig.PrimitiveType == GLPrimitiveType.Triangle &&
+                        (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
+                    NormalShader,
+                    ptLightStructs,
+                    clear: false);
+
             if (!Wireframe && ShadeWithEdge)
                 DoShader(
                     fig =>
@@ -892,22 +930,34 @@ public partial class GLControl : INotifyPropertyChanged
                     ptLightStructs,
                     clear: false);
 
-            if (ShowNormals)
+            if (VertexVisbiility)
+            {
+                GL.PointSize(DEFAULT_VERTEX_VISIBILITY_POINT_SIZE);
+
+                DoShader(
+                    fig =>
+                        fig.PrimitiveType == GLPrimitiveType.Line &&
+                        (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
+                    VertexVisibilityLineShader,
+                    ptLightStructs,
+                    clear: false);
+
                 DoShader(
                     fig =>
                         fig.PrimitiveType == GLPrimitiveType.Triangle &&
                         (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
-                    NormalShader,
+                    VertexVisibilityTriShader,
                     ptLightStructs,
                     clear: false);
+            }
 
             DoShader(
-                fig =>
-                    fig.PrimitiveType == GLPrimitiveType.Triangle &&
-                    (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
-                MainShader,
-                ptLightStructs,
-                clear: false);
+               fig =>
+                   fig.PrimitiveType == GLPrimitiveType.Triangle &&
+                   (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
+               MainShader,
+               ptLightStructs,
+               clear: false);
         }
         #endregion
 
@@ -958,7 +1008,7 @@ public partial class GLControl : INotifyPropertyChanged
     public void ToggleCameraObject(bool invalidate = DEFAULT_INVALIDATE)
     {
         ShowCameraObject = !ShowCameraObject;
-        if (invalidate) Invalidate();
+        if (invalidate) InvalidateAll();
     }
 
     /// <summary>

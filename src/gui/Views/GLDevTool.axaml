@@ -60,6 +60,13 @@
 						</Style>
 					</Grid.Styles>
 
+					<TextBlock desktop:GridAutoRow.Ref="ModelBtns" Text="Model" Classes="hdr" />
+					<StackPanel desktop:GridAutoRow.Ref="ModelBtns" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+						<Button Content="Save" Click="SaveModelClick" />
+						<Button Content="Load" Margin="10,0,0,0" Click="LoadModelClick" />
+						<Button Content="Export dxf" Margin="10,0,0,0" Click="ExportDxfClick" />
+					</StackPanel>
+
 					<!-- <TextBlock desktop:GridAutoRow.Name="Top" Text="XXXX"/> -->
 
 					<TextBlock desktop:GridAutoRow.Ref="RenderCount" Grid.Column="0" Text="RenderCount" Classes="hdr" />
@@ -175,7 +182,6 @@
 					<StackPanel desktop:GridAutoRow.Ref="ViewBtns" Grid.ColumnSpan="3" Orientation="Horizontal">
 						<Button Content="Save view" Click="SaveViewClick" />
 						<Button Content="Restore view" Margin="10,0,0,0" Click="RestoreViewClick" />
-						<Button Content="Export dxf" Margin="10,0,0,0" Click="ExportDxfClick" />
 					</StackPanel>
 
 					<!-- <TextBlock desktop:GridAutoRow.Ref="Bottom" Text="YYYY"/> -->
@@ -210,6 +216,8 @@
 					<CheckBox Content="Highlight" Name="CbHighlight"
 						IsChecked="true"
 						Margin="10,0,0,0" />
+					<Button Content="Copy" Click="CopyFigureClick" />
+					<Button Content="Delete" Click="DeleteFigureClick" />
 				</StackPanel>
 
 				<DataGrid Grid.Row="1" Name="dgFigures" AutoGenerateColumns="false"
@@ -320,7 +328,6 @@
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
 
-
 						</DataGrid.Columns>
 					</DataGrid>
 				</Grid>
@@ -418,19 +425,19 @@
 									</Grid.Styles>
 									<TextBlock Grid.Row="0" Grid.Column="0" Text="Constant" Classes="hdr" />
 									<Slider Grid.Row="0" Grid.Column="1"
-										Minimum="0" Maximum="1"
+										Minimum="0" Maximum="2"
 										Value="{Binding #dgLights.SelectedItem.Constant}" />
 									<TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Constant, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
 
 									<TextBlock Grid.Row="1" Grid.Column="0" Text="Linear" Classes="hdr" />
 									<Slider Grid.Row="1" Grid.Column="1"
-										Minimum="0" Maximum="1"
+										Minimum="0" Maximum="0.1"
 										Value="{Binding #dgLights.SelectedItem.Linear}" />
 									<TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Linear, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
 
 									<TextBlock Grid.Row="2" Grid.Column="0" Text="Quadratic" Classes="hdr" />
 									<Slider Grid.Row="2" Grid.Column="1"
-										Minimum="0" Maximum="1"
+										Minimum="0" Maximum="0.01"
 										Value="{Binding #dgLights.SelectedItem.Quadratic}" />
 									<TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding #dgLights.SelectedItem.Quadratic, StringFormat={}{0:0.000}}" Margin="10,0,0,0" />
 								</Grid>

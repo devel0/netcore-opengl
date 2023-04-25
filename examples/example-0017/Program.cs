@@ -71,7 +71,7 @@ class Program
 
                         if (showTextBBox)
                         {
-                            var bboxFig = new BBox(txtFigs.Select(w => w.OBBox())).MakeFigure(Color.Yellow);
+                            var bboxFig = new BBox(txtFigs.Select(w => w.OBBox)).MakeFigure(Color.Yellow);
                             bboxFig.ScreenCoordMode = true; // set screencoord for the figure
                             customVtxMgr.AddFigure(bboxFig);
                         }
@@ -86,7 +86,7 @@ class Program
 
                         if (showTextBBox)
                         {
-                            var bboxFig = new BBox(txtFigs.Select(w => w.OBBox())).MakeFigure(Color.Yellow);
+                            var bboxFig = new BBox(txtFigs.Select(w => w.OBBox)).MakeFigure(Color.Yellow);
                             customVtxMgr.AddFigure(bboxFig);
                         }
                     }

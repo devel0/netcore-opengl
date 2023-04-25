@@ -105,8 +105,7 @@ public static partial class Toolkit
     }
 
     /// <summary>
-    /// Compute best fitting near and far values based on local space bbox given.
-    /// REVIEW 
+    /// Compute best fitting near and far values based on local space bbox given.    
     /// </summary>
     /// <param name="bbox">Local space bbox of model for which compute best near, far [local].</param>
     /// <param name="mm">Model matrix [local].</param>

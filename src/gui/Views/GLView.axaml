@@ -13,12 +13,14 @@
 	<!-- Text="{Binding #AvaloniaGLControl.Title}" -->
 	<Grid Name="grRoot">
 		<TextBlock Name="TitleTblk"
+			Background="Black"
 			HorizontalAlignment="Right" VerticalAlignment="Top"
-			Margin="0,5,5,0" ZIndex="1" />		
+			Margin="0,5,5,0" ZIndex="1" />
 
 		<TextBlock Name="Overlay1Tblk"
+			Background="Black"
 			HorizontalAlignment="Right" VerticalAlignment="Bottom"
-			Margin="0,0,5,5" ZIndex="1" />		
+			Margin="0,0,5,5" ZIndex="1" />
 	</Grid>
 
 </UserControl>

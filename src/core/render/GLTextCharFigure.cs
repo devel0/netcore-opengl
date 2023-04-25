@@ -3,6 +3,7 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Triangles figure with texture mapped to represent a char.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public class GLTextCharFigure : GLTriangleFigure
 {
 
@@ -13,6 +14,7 @@ public class GLTextCharFigure : GLTriangleFigure
     /// <summary>
     /// Gl text object.
     /// </summary>
+    [JsonProperty]
     public GLText GLText
     {
         get => _GLText;
@@ -31,11 +33,12 @@ public class GLTextCharFigure : GLTriangleFigure
 
     #region TextOff
 
+    [JsonProperty]
     private int _TextOff = 0;
 
     /// <summary>
     /// Offset in <see cref="GLText.Text"/> for the char here representing.
-    /// </summary>
+    /// </summary>    
     public int TextOff
     {
         get => _TextOff;

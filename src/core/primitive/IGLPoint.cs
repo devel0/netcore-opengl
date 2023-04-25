@@ -3,12 +3,14 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Primitive for GL_POINTS opengl element.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLPoint : IGLPrimitive
 {
 
     /// <summary>
     /// Vertex of the gl point.
     /// </summary>    
+    [JsonProperty]
     GLVertex Vertex { get; set; }
 
 }

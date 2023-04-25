@@ -1,6 +1,14 @@
 ﻿namespace SearchAThing.OpenGL.Shapes;
 
 /// <summary>
+/// Delegate for <see cref="ContourLegend.CustomLegendLabel"/>.
+/// </summary>
+/// <param name="index">Index of the i-th contour legend entry.</param>
+/// <param name="val">Value of the i-th contour legend ventry.</param>
+/// <returns>String representation of the i-th contour legend.</returns>
+public delegate string CustomLegendLabelDelegate(int index, double val);
+
+/// <summary>
 /// Contour Legend
 /// </summary>
 public class ContourLegend
@@ -44,13 +52,8 @@ public class ContourLegend
     public float ContourBlockSize { get; private set; }
 
     /// <summary>
-    /// Delegate for <see cref="CustomLegendLabel"/>.
-    /// </summary>    
-    public delegate string CustomLegendLabelDelegate(int offset, double val);
-
-    /// <summary>
     /// If not null a function that will invoked to generate legend labels.<br/>
-    /// args:(int offset, double val) (Default:null).
+    /// args:(int index, double val) (Default:null).
     /// </summary>    
     public CustomLegendLabelDelegate? CustomLegendLabel { get; private set; }
 

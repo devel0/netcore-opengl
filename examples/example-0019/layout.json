@@ -1,31 +1,46 @@
 {
   "Layout": {
-    "Parent": null,
     "SplitDirection": 0,
-    "Index": 0,
     "Sizes": [
       1.0,
       1.0
     ],
     "Children": [
       {
+        "SplitDirection": null,
+        "Sizes": null,
+        "Children": null,
+        "LeafUID": 0,
+        "Index": 0
+      },
+      {
         "SplitDirection": 1,
-        "Index": 1,
         "Sizes": [
           1.0,
           1.0
         ],
-        "Children": [],
-        "LeafUIDs": [
-          1,
-          2
-        ]
+        "Children": [
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 1,
+            "Index": 0
+          },
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 2,
+            "Index": 1
+          }
+        ],
+        "LeafUID": null,
+        "Index": 1
       }
     ],
-    "LeafUIDs": [
-      0,
-      null
-    ]
+    "LeafUID": null,
+    "Index": 0
   },
   "UIDView": {
     "0": {
@@ -44,25 +59,25 @@
         "M33": 1.0,
         "M34": 0.0,
         "M41": 0.0,
-        "M42": 0.0,
+        "M42": 2.3841858E-07,
         "M43": 0.0,
         "M44": 1.0,
-        "IsIdentity": true,
+        "IsIdentity": false,
         "Translation": {
           "X": 0.0,
-          "Y": 0.0,
+          "Y": 2.3841858E-07,
           "Z": 0.0
         }
       },
       "CameraPos": {
-        "X": -0.018286513,
-        "Y": 0.01827677,
-        "Z": 65.39418
+        "X": -0.015659219,
+        "Y": 0.015651444,
+        "Z": 57.97277
       },
       "CameraTarget": {
-        "X": -0.018286513,
-        "Y": 0.01827677,
-        "Z": 64.39418
+        "X": -0.015659219,
+        "Y": 0.015651444,
+        "Z": 56.97277
       },
       "CameraUp": {
         "X": 0.0,
@@ -72,9 +87,27 @@
       "Wireframe": false,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.5539418,
-      "Far": 226.18254,
-      "ShadeWithEdge": true
+      "Near": 0.4797277,
+      "Far": 203.9183,
+      "UseShadow": true,
+      "ShadeWithEdge": true,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 20.0
+          }
+        },
+        {
+          "Position": {
+            "X": -20.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
+        }
+      ]
     },
     "1": {
       "Title": "",
@@ -92,25 +125,25 @@
         "M33": 1.0,
         "M34": 0.0,
         "M41": 0.0,
-        "M42": 0.0,
+        "M42": 2.3841858E-07,
         "M43": 0.0,
         "M44": 1.0,
-        "IsIdentity": true,
+        "IsIdentity": false,
         "Translation": {
           "X": 0.0,
-          "Y": 0.0,
+          "Y": 2.3841858E-07,
           "Z": 0.0
         }
       },
       "CameraPos": {
-        "X": -0.025815176,
-        "Y": 0.02583683,
-        "Z": 50.107807
+        "X": -0.018361889,
+        "Y": 0.018377418,
+        "Z": 40.080856
       },
       "CameraTarget": {
-        "X": -0.025815176,
-        "Y": 0.02583683,
-        "Z": 49.107807
+        "X": -0.018361889,
+        "Y": 0.018377418,
+        "Z": 39.080856
       },
       "CameraUp": {
         "X": 0.0,
@@ -120,9 +153,27 @@
       "Wireframe": true,
       "Perspective": true,
       "OrthoZoom": 1.0,
-      "Near": 0.40107808,
-      "Far": 180.32343,
-      "ShadeWithEdge": true
+      "Near": 0.30080855,
+      "Far": 150.24257,
+      "UseShadow": true,
+      "ShadeWithEdge": false,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 20.0
+          }
+        },
+        {
+          "Position": {
+            "X": -20.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
+        }
+      ]
     },
     "2": {
       "Title": "",
@@ -152,12 +203,12 @@
       },
       "CameraPos": {
         "X": -0.026543919,
-        "Y": 0.026569305,
+        "Y": 0.026565574,
         "Z": 50.107807
       },
       "CameraTarget": {
         "X": -0.026543919,
-        "Y": 0.026569305,
+        "Y": 0.026565574,
         "Z": 49.107807
       },
       "CameraUp": {
@@ -170,8 +221,26 @@
       "OrthoZoom": 1.0,
       "Near": 0.40107808,
       "Far": 180.32343,
-      "ShadeWithEdge": true
+      "UseShadow": true,
+      "ShadeWithEdge": true,
+      "ShowCameraObject": false,
+      "Lights": [
+        {
+          "Position": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 20.0
+          }
+        },
+        {
+          "Position": {
+            "X": -20.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
+        }
+      ]
     }
   },
-  "FocusedUIDView": 0
+  "FocusedUIDView": 2
 }

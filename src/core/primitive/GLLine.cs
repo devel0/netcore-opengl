@@ -214,6 +214,13 @@ public class GLLine : GLPrimitiveBase, IGLLine
     public Vector3? Intersect(in Matrix4x4 plane) => Line.FromTo(From.Position, To.Position).Intersect(plane);
 
     public override string ToString() => Invariant($"{From} {To}");
+
+    public override string SimpleCmd(bool includeHeader = true)
+    {
+        var res = includeHeader ? $"{SIMPLE_CMD_LINE} " : "";
+
+        return res + $"{From.Position.SimpleCmd()},{To.Position.SimpleCmd()}";
+    }
 }
 
 public static partial class Toolkit

@@ -20,12 +20,17 @@ global using Size = System.Drawing.Size;
 global using ColorTranslator = System.Drawing.ColorTranslator;
 global using System.Reflection;
 
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Serialization;
 global using SkiaSharp;
 
 global using Silk.NET.OpenGL;
 
 global using SearchAThing.Ext;
 global using static SearchAThing.Ext.Toolkit;
+
+global using SearchAThing.Sci;
+global using static SearchAThing.Sci.Toolkit;
 
 global using SearchAThing.OpenGL.Core;
 global using static SearchAThing.OpenGL.Core.Toolkit;

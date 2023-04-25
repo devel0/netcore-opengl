@@ -1,5 +1,7 @@
 #version 440 core
 
+#define VERTEX_FLAG_SELECTED 1
+
 // 6.main.fs
 
 //---------------------------------------------------------------
@@ -42,8 +44,9 @@ in VertexData
     vec4 matColor;
     vec3 matProp;
     vec2 texCoord;
+    flat uint flags;
     // camera pos [world]
-    vec3 cameraPos;    
+    vec3 cameraPos;
 }
 fs_in;
 
@@ -61,6 +64,8 @@ uniform bool uEvalLight;
 uniform bool uIsText;
 uniform vec4 uTextColor;
 uniform bool uFigureHighlight;
+uniform bool uFigureSelected;
+uniform float uFigureAlpha;
 
 uniform float uOverrideAmbient;
 uniform bool uOverrideAmbientEnabled;
@@ -121,8 +126,14 @@ void main()
         }
     }
 
+    if (uFigureAlpha >= 0)
+        materialColor = vec4(materialColor.xyz, uFigureAlpha);
+
     if (uFigureHighlight)
         materialColor = vec4(1, 1, 0, 1);
+
+    if (uFigureSelected || (fs_in.flags & VERTEX_FLAG_SELECTED) != 0)
+        materialColor = vec4(0, 1, 0, 1);
 
     if (uFigureScreenCoord) {
         FragColor = materialColor;

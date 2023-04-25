@@ -1,5 +1,6 @@
 namespace SearchAThing.OpenGL.Core;
 
+[JsonObject(MemberSerialization.OptIn)]
 public class GLTriangle : GLPrimitiveBase, IGLTriangle
 {
 
@@ -7,6 +8,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
     private GLVertex _V1 = new GLVertex();
 
+    [JsonProperty]
     public GLVertex V1
     {
         get => _V1;
@@ -36,6 +38,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
     private GLVertex _V2 = new GLVertex();
 
+    [JsonProperty]
     public GLVertex V2
     {
         get => _V2;
@@ -65,6 +68,7 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
 
     private GLVertex _V3 = new GLVertex();
 
+    [JsonProperty]
     public GLVertex V3
     {
         get => _V3;
@@ -194,11 +198,21 @@ public class GLTriangle : GLPrimitiveBase, IGLTriangle
         {
             yield return V1;
             yield return V2;
-            yield return V3;            
+            yield return V3;
         }
     }
 
     public override string ToString() => Invariant($"{V1} {V2} {V3}");
+
+    /// <summary>
+    /// [t ]x1,y1,z1,x2,y2,z2,x3,y3,z3
+    /// </summary>    
+    public override string SimpleCmd(bool includeHeader = true)
+    {
+        var res = includeHeader ? $"{SIMPLE_CMD_TRIANGLE} " : "";
+
+        return res + $"{V1.Position.SimpleCmd()},{V2.Position.SimpleCmd()},{V3.Position.SimpleCmd()}";
+    }
 }
 
 public static partial class Ext
@@ -208,5 +222,34 @@ public static partial class Ext
     /// Create a gl figure from given gl triangles.
     /// </summary>    
     public static GLTriangleFigure ToFigure(this IEnumerable<GLTriangle> triangles) => new GLTriangleFigure(triangles);
+
+    /// <summary>
+    /// Create sci Triangle3D from given gl triangle.
+    /// </summary>
+    public static Triangle3D ToTriangle3D(this GLTriangle tri) =>
+        new Triangle3D(tri.V1.Position.ToVector3D(), tri.V2.Position.ToVector3D(), tri.V3.Position.ToVector3D());
+
+    /// <summary>
+    /// Retrieve intersection segment if exists between given two triangles.
+    /// </summary>
+    /// <param name="tol">Length comparision tolerance.</param>
+    /// <param name="tri1">First triangle.</param>
+    /// <param name="tri2">Second triangle.</param>
+    /// <param name="bboxSkipped">True if intersect test skipped due to non intersecting bboxes.</param>
+    /// <returns>Intersection line between two triangles or null if no intersection exists.</returns>
+    public static Line? Intersect(this GLTriangle tri1, float tol, GLTriangle tri2, out bool bboxSkipped)
+    {
+        if (tri1.LBBox.Intersects(tol, tri2.LBBox))
+        {
+            bboxSkipped = false;
+            var q = tri1.ToTriangle3D().Intersect(tol, tri2.ToTriangle3D());
+            if (q is not null)
+                return q.ToLine();
+        }
+
+        bboxSkipped = true;
+
+        return null;
+    }
 
 }

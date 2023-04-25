@@ -15,9 +15,10 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
 
     #region Texture2D
 
-    private IGLTexture2D? _Texture2D;
+    private GLTexture2D? _Texture2D;
 
-    public IGLTexture2D? Texture2D
+    [JsonProperty]
+    public GLTexture2D? Texture2D
     {
         get => _Texture2D;
         set
@@ -36,38 +37,70 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
 
     #region ComputeNormal
 
-    private ComputeTriangleNormalDelegate _ComputeNormal = DefaultComputeNormal;
+    public ComputeTriangleNormalDelegate ComputeNormal { get; private set; } = DefaultComputeNormal;
 
-    public ComputeTriangleNormalDelegate ComputeNormal
+    public bool ComputeNormalMean { get; private set; }
+
+    public void SetupComputeNormal(bool mean = false, ComputeTriangleNormalDelegate? computeNormal = null)
     {
-        get => _ComputeNormal;
-        set
-        {
-            var changed = value != _ComputeNormal;
-            if (changed)
-            {
-                _ComputeNormal = value;
+        ComputeNormalMean = mean;
 
-                RebuildNormal();
+        if (computeNormal is null)
+            ComputeNormal = DefaultComputeNormal;
 
-                OnPropertyChanged();
-            }
-        }
+        else
+            ComputeNormal = computeNormal;
+
+        RebuildNormal();
+
+        OnPropertyChanged(nameof(ComputeNormal));
+        OnPropertyChanged(nameof(ComputeNormalMean));
     }
 
     #endregion
 
+    [JsonConstructor]
+    GLTriangleFigure()
+    {
+    }
+
     /// <summary>
-    /// Execute <see cref="ComputeNormal"/> function foreach triangle of this figure updating <see cref="GLVertex.Normal"/>.
-    /// </summary>
-    public void RebuildNormal()
+    /// Execute <see cref="ComputeNormal"/> function foreach triangle of this figure updating <see cref="GLVertex.Normal"/>.<br/>
+    /// Optionally mean these values if <see cref="ComputeNormalMean"/> was set.
+    /// </summary>        
+    /// <param name="onlyMean">If true, vertex normal will not recomputed, only mean on their values will be set.</param>
+    public void RebuildNormal(bool onlyMean = false)
     {
         if (this.IsAttached())
         {
+            var tol = ParentVertexManager!.LBBox.TolHint;
+
             foreach (var triangle in PrimitivesOBC.OfType<GLTriangle>())
             {
                 foreach (var vertex in triangle.Vertexes)
+                {
                     vertex.Normal = ComputeNormal(triangle, vertex);
+                }
+            }
+
+            if (ComputeNormalMean)
+            {
+                this.Vertexes()
+                    .GroupBy(vtx => vtx.PositionSignature(tol))
+                    .ToList()
+                    .ForEach(grp =>
+                    {
+                        int cnt = 0;
+                        var n = Vector3.Zero;
+                        foreach (var vtx in grp)
+                        {
+                            n += vtx.Normal;
+                            ++cnt;
+                        }
+                        n /= cnt;
+                        foreach (var vtx in grp)
+                            vtx.Normal = n;
+                    });
             }
         }
     }
@@ -118,5 +151,13 @@ public class GLTriangleFigure : GLFigureTypeBase<GLTriangle>, IGLTriangleFigure
     /// Create a triangle typed figure with the given set of <see cref="GLTriangle"/>.
     /// </summary>    
     public GLTriangleFigure(IEnumerable<GLTriangle> triangles) : base(triangles) { }
+
+    /// <summary>
+    /// Retrieve simple cmd for a list of triangles.<br/>
+    /// Coordinates of v1,v2,v3 are separated with comma so there are 9 float separated by comma.<br/>
+    /// Further triangles are appended by semi-colon separator.
+    /// [t ]ax1,ay1,az1,ax2,ay2,az2,ax3,ay3,az3;bx1,by1,bz1,bx2,by2,bz2,bx3,by3,bz3;...
+    /// </summary>   
+    public override string SimpleCmd() => $"{SIMPLE_CMD_TRIANGLE} " + string.Join(";", Primitives.Select(w => w.SimpleCmd(false)));
 
 }

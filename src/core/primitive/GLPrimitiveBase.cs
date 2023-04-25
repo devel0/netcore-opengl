@@ -95,16 +95,38 @@ public abstract class GLPrimitiveBase : IGLPrimitive
 
     #endregion
 
-    public BBox BBox(in Matrix4x4? cs = null)
+    #region Selected
+    
+    private bool _Selected = false;
+    
+    public bool Selected
     {
-        var res = new BBox(cs);
-
-        foreach (var vertex in Vertexes)
+        get => _Selected;
+        internal set
         {
-            res.ApplyUnion(vertex.Position);
+             var changed = value != _Selected;
+             if (changed)
+             {
+                 _Selected = value;
+                 OnPropertyChanged();
+             }
         }
+    }
+    
+    #endregion
 
-        return res;
+    BBox? _LBBox = null;
+    // TODO: manage primitive vertex invalidation
+
+    public BBox LBBox
+    {
+        get
+        {
+            if (_LBBox is null)
+                _LBBox = new BBox(Vertexes.Select(v => v.Position));
+
+            return _LBBox;
+        }
     }
 
     /// <summary>
@@ -126,6 +148,8 @@ public abstract class GLPrimitiveBase : IGLPrimitive
 
         return this;
     }
+
+    public abstract string SimpleCmd(bool includeHeader = true);
 
 }
 

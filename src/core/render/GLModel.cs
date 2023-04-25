@@ -1,9 +1,27 @@
 namespace SearchAThing.OpenGL.Core;
 
-public delegate void ModelFigureEvent(GLModel model, IGLVertexManager vertexManager, GLFigureBase figure);
-public delegate void ModelFiguresEvent(GLModel model, IGLVertexManager vertexManager, GLFigureBase[] figures);
-
+/// <summary>
+/// Use for <see cref="GLModel.ViewInvalidated"/> event emitted when a vertex of the model change.
+/// </summary>
+/// <param name="model">GL model reference.</param>
 public delegate void ModelViewInvalidated(GLModel model);
+
+/// <summary>
+/// Build model action that will executed each time the model requires a full rebuild because invalidated.
+/// </summary>
+/// <param name="glControl">GL control belonging to model that requires rebuild.</param>
+/// <param name="initialCall">True is this is the first-est call to the build model.</param>
+public delegate void GLBuildModelDelegate(GLControl glControl, bool initialCall);
+
+/// <summary>
+/// Used by the avalonia GL control to listen for notification coming from the model.<br/>
+/// These notification will displayed using gui notification manager.
+/// </summary>
+/// <param name="title">Title of notification.</param>
+/// <param name="msg">Message of notification.</param>
+/// <param name="type">Icon/color type of notification.</param>
+public delegate void NotificationDelegate(string title, string msg,
+    GLNotificationType type = GLNotificationType.Information);
 
 /// <summary>
 /// Gl model.<br/>
@@ -13,7 +31,8 @@ public delegate void ModelViewInvalidated(GLModel model);
 /// - custom vertex managers <see cref="AddCustomVertexManager"/><br/>
 /// - contains the default build model action.<br/>
 /// </summary>
-public class GLModel : IGLContextObject
+[JsonObject(MemberSerialization.OptIn)]
+public partial class GLModel : IGLContextObject
 {
 
     #region property changed
@@ -35,7 +54,7 @@ public class GLModel : IGLContextObject
 
     /// <summary>
     /// Gl context.
-    /// </summary>
+    /// </summary>    
     public GLContext GLContext { get; private set; }
 
     #endregion
@@ -47,7 +66,8 @@ public class GLModel : IGLContextObject
     /// </summary>
     public event ModelViewInvalidated? ViewInvalidated;
 
-    ObservableCollection<GLFigureBase> FiguresOBC = new ObservableCollection<GLFigureBase>();
+    [JsonProperty]
+    ObservableCollection<GLFigureBase> FiguresOBC { get; set; } = new ObservableCollection<GLFigureBase>();
 
     #region Figures
     ReadOnlyObservableCollection<GLFigureBase>? _Figures = null;
@@ -75,7 +95,67 @@ public class GLModel : IGLContextObject
         }
     }
 
+    #endregion    
+
+    #region SelectedFigures
+
+    ObservableCollection<GLFigureBase> SelectedFiguresOBC { get; set; } =
+        new HSObservableCollection<GLFigureBase>();
+
+    ReadOnlyObservableCollection<GLFigureBase>? _SelectedFigures = null;
+
+    /// <summary>
+    /// Selected figures.
+    /// </summary>    
+    public ReadOnlyObservableCollection<GLFigureBase> SelectedFigures
+    {
+        get
+        {
+            if (_SelectedFigures is null)
+                _SelectedFigures = new ReadOnlyObservableCollection<GLFigureBase>(SelectedFiguresOBC);
+
+            return _SelectedFigures;
+        }
+    }
+
     #endregion
+
+    #region SelectedPrimitives
+
+    ObservableCollection<GLPrimitiveBase> SelectedPrimitiveOBC { get; set; } =
+        new HSObservableCollection<GLPrimitiveBase>();
+
+    ReadOnlyObservableCollection<GLPrimitiveBase>? _SelectedPrimitives = null;
+
+    /// <summary>
+    /// Selected primitives.
+    /// </summary>    
+    public ReadOnlyObservableCollection<GLPrimitiveBase> SelectedPrimitives
+    {
+        get
+        {
+            if (_SelectedPrimitives is null)
+                _SelectedPrimitives = new ReadOnlyObservableCollection<GLPrimitiveBase>(SelectedPrimitiveOBC);
+
+            return _SelectedPrimitives;
+        }
+    }
+
+    #endregion
+
+    /// <summary>
+    /// Event emitted when gl control would to notify something. This will handled by <see cref="SearchAThing.OpenGL.GUI.AvaloniaGLControl"/>.
+    /// </summary>
+    public NotificationDelegate NotificationRequest;
+
+    /// <summary>
+    /// Send notification to frontend that manage this gl control.
+    /// </summary>
+    /// <param name="title">Title of notification.</param>
+    /// <param name="msg">Message to display, it can contains at most 1 newlines.</param>
+    /// <param name="notifyType">Level type of notification (Default:Information).</param>
+    public void SendNotification(string title, string msg, GLNotificationType notifyType = GLNotificationType.Information) =>
+        NotificationRequest?.Invoke(title, msg, notifyType);
 
     #region GLVertexManager
 
@@ -83,7 +163,7 @@ public class GLModel : IGLContextObject
 
     /// <summary>
     /// Gl vertex manager.
-    /// </summary>
+    /// </summary>    
     public GLVertexManager GLVertexManager
     {
         get
@@ -105,12 +185,12 @@ public class GLModel : IGLContextObject
 
     private float _OverrideAmbient = DEFAULT_MaterialProperties.Ambient;
     /// <summary>
-    /// Override ambient (default:0.8).    
+    /// Override ambient strength (default:0.8).    
     /// </summary>
     /// <remarks>
     /// Requires <see cref="OverrideAmbient"/> to be effective.
     /// </remarks>
-    /// <seealso cref="Override"/>    
+    /// <seealso cref="OverrideLightStrengths"/>    
     public float OverrideAmbient
     {
         get => _OverrideAmbient;
@@ -131,7 +211,7 @@ public class GLModel : IGLContextObject
 
     private bool _OverrideAmbientEnabled = false;
     /// <summary>
-    /// Override ambient enabled.    
+    /// Override ambient strength enabled.    
     /// </summary>
     public bool OverrideAmbientEnabled
     {
@@ -153,12 +233,12 @@ public class GLModel : IGLContextObject
 
     private float _OverrideDiffuse = DEFAULT_MaterialProperties.Diffuse;
     /// <summary>
-    /// Override diffuse (default:0.6).    
+    /// Override diffuse strength (default:0.6).    
     /// </summary>
     /// <remarks>
     /// Requires <see cref="OverrideDiffuse"/> to be effective.
     /// </remarks>
-    /// <seealso cref="Override"/>    
+    /// <seealso cref="OverrideLightStrengths"/>    
     public float OverrideDiffuse
     {
         get => _OverrideDiffuse;
@@ -179,7 +259,7 @@ public class GLModel : IGLContextObject
 
     private bool _OverrideDiffuseEnabled = false;
     /// <summary>
-    /// Override diffuse enabled.
+    /// Override diffuse strength enabled.
     /// </summary>
     public bool OverrideDiffuseEnabled
     {
@@ -201,12 +281,12 @@ public class GLModel : IGLContextObject
 
     private float _OverrideSpecular = DEFAULT_MaterialProperties.Specular;
     /// <summary>
-    /// Override specular (default:0.6).    
+    /// Override specular strength (default:0.6).    
     /// </summary>
     /// <remarks>
     /// Requires <see cref="OverrideSpecular"/> to be effective.
     /// </remarks>
-    /// <seealso cref="Override"/>  
+    /// <seealso cref="OverrideLightStrengths"/>  
     public float OverrideSpecular
     {
         get => _OverrideSpecular;
@@ -227,7 +307,7 @@ public class GLModel : IGLContextObject
 
     private bool _OverrideSpecularEnabled = false;
     /// <summary>
-    /// Override specular enabled.
+    /// Override specular strength enabled.
     /// </summary>
     public bool OverrideSpecularEnabled
     {
@@ -290,6 +370,29 @@ public class GLModel : IGLContextObject
 
     #endregion
 
+    #region SelectionMode
+
+    private CursorMode _CursorMode = DEFAULT_CursorMode;
+    /// <summary>
+    /// Current cursor mode.<br/>    
+    /// </summary>    
+    /// <seealso cref="CursorMode"/>
+    public CursorMode CursorMode
+    {
+        get => _CursorMode;
+        set
+        {
+            var changed = value != _CursorMode;
+            if (changed)
+            {
+                _CursorMode = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
     List<GLVertexManager> _CustomVertexManagers = new List<GLVertexManager>();
 
     /// <summary>
@@ -325,6 +428,7 @@ public class GLModel : IGLContextObject
     /// Observable collection of model point lights.
     /// </summary>
     /// <seealso cref="GLPointLight"/>
+    [JsonProperty]
     public ObservableCollection2<GLPointLight> PointLights { get; private set; } =
         new ObservableCollection2<GLPointLight>();
 
@@ -351,6 +455,20 @@ public class GLModel : IGLContextObject
 
             return _LBbox;
         }
+        private set
+        {
+            _LBbox = value;
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>
+    /// Invalidate and recalc bounding box [local].<br/>
+    /// Used internally after delete of figures/primitives.
+    /// </summary>
+    public void RecomputeLBBox()
+    {
+        LBBox = GLVertexManager.RecomputeLBBox();
     }
 
     /// <summary>
@@ -395,7 +513,7 @@ public class GLModel : IGLContextObject
     /// <param name="ambient">Ambient light strength (Default:0.8).</param>
     /// <param name="diffuse">Diffuse light strength (Default:0.6).</param>
     /// <param name="specular">Specular light strength (Default:0.6).</param>
-    public void Override(float? ambient = null, float? diffuse = null, float? specular = null)
+    public void OverrideLightStrengths(float? ambient = null, float? diffuse = null, float? specular = null)
     {
         if (ambient is not null)
         {
@@ -530,10 +648,11 @@ public class GLModel : IGLContextObject
     }
 
     /// <summary>
-    /// Invalidate the gl model.<br/>    
-    /// </summary>
-    /// <seealso cref="IsInvalidated"/>.
-    public void Invalidate() => IsInvalidated = true;
+    /// Invalidate the gl model.<br/>        
+    /// This cause <see cref="BuildModel"/> to be invoked at next render.
+    /// </summary>    
+    /// <seealso cref="IsInvalidated"/>.        
+    public void InvalidateModel() => IsInvalidated = true;
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     void InvalidateView() => ViewInvalidated?.Invoke(this);
@@ -568,8 +687,6 @@ public class GLModel : IGLContextObject
 
     internal HashSet<GLControl> ShowCameraObjectControls = new HashSet<GLControl>();
 
-    public delegate void GLBuildModelDelegate(GLControl glControl, bool initialCall);
-
     /// <summary>
     /// Build model action that will executed each time the model requires a full rebuild because invalidated.<br/>
     /// Arguments (<see cref="GLControl"/>, bool isInitial).
@@ -583,6 +700,198 @@ public class GLModel : IGLContextObject
         sb.Append(GLVertexManager.ToString());
 
         return sb.ToString();
+    }
+
+    /// <summary>
+    /// Load figure primitives from simple cmd ( newlines supported ).<br/>
+    /// <seealso cref="GLPointFigure.SimpleCmd"/>
+    /// <seealso cref="GLLineFigure.SimpleCmd"/>
+    /// <seealso cref="GLTriangleFigure.SimpleCmd"/>
+    /// </summary>
+    public IEnumerable<GLPrimitiveBase> PrimitivesFromSimpleCmd(string simpleCmd)
+    {
+        foreach (var line in simpleCmd.Lines())
+        {
+            if (line.StartsWith(SIMPLE_CMD_POINT))
+            {
+                var pts = ParseVector3(line.StripBegin(SIMPLE_CMD_POINT).Trim(), pointCnt: 1);
+
+                foreach (var p in pts) yield return new GLPoint(p);
+            }
+
+            else if (line.StartsWith(SIMPLE_CMD_LINE))
+            {
+                var pts = ParseVector3(line.StripBegin(SIMPLE_CMD_LINE).Trim(), pointCnt: 2).ToList();
+
+                for (int i = 0; i < pts.Count; i += 2)
+                {
+                    var glline = GLLine.FromTo(pts[i], pts[i + 1]);
+                    yield return glline;
+                }
+            }
+
+            else if (line.StartsWith(SIMPLE_CMD_TRIANGLE))
+            {
+                var pts = ParseVector3(line.StripBegin(SIMPLE_CMD_TRIANGLE).Trim(), pointCnt: 3).ToList();
+
+                for (int i = 0; i < pts.Count; i += 3)
+                {
+                    var tri = new GLTriangle(pts[i], pts[i + 1], pts[i + 2]);
+                    yield return tri;
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Load primitives from given simgple cmd and group them by primitive type creating figures ( newlines supported ).<br/>
+    /// <seealso cref="GLPointFigure.SimpleCmd"/>
+    /// <seealso cref="GLLineFigure.SimpleCmd"/>
+    /// <seealso cref="GLTriangleFigure.SimpleCmd"/>
+    /// </summary>
+    public IEnumerable<GLFigureBase> FiguresFromSimpleCmd(string simpleCmd)
+    {
+        var grps = PrimitivesFromSimpleCmd(simpleCmd)
+            .GroupBy(primitive => primitive.PrimitiveType)
+            .ToList();
+
+        foreach (var grp in grps)
+        {
+            switch (grp.Key)
+            {
+                case GLPrimitiveType.Point:
+                    yield return new GLPointFigure(grp.OfType<GLPoint>());
+                    break;
+
+                case GLPrimitiveType.Line:
+                    yield return new GLLineFigure(grp.OfType<GLLine>());
+                    break;
+
+                case GLPrimitiveType.Triangle:
+                    yield return new GLTriangleFigure(grp.OfType<GLTriangle>());
+                    break;
+            }
+        }
+
+    }
+
+    /// <summary>
+    /// Select/Deselect given primitives.
+    /// </summary>
+    /// <param name="primitives">Primitives for which toggle selection.</param>
+    public void ToggleSelectPrimitives(IEnumerable<GLPrimitiveBase> primitives)
+    {
+        foreach (var primitive in primitives)
+        {
+            if (SelectedPrimitiveOBC.Contains(primitive))
+                SelectedPrimitiveOBC.Remove(primitive);
+
+            else
+                SelectedPrimitiveOBC.Add(primitive);
+
+            primitive.Selected = !primitive.Selected;
+
+            foreach (var vtx in primitive.Vertexes)
+            {
+                vtx.ToggleFlags(GLVertexFlag.Selected);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Select/Deselect given figures.
+    /// </summary>
+    /// <param name="figures">Figures for which toggle selection.</param>
+    public void ToggleSelectFigures(IEnumerable<GLFigureBase> figures)
+    {
+        foreach (var figure in figures)
+        {
+            if (SelectedFiguresOBC.Contains(figure))
+                SelectedFiguresOBC.Remove(figure);
+
+            else
+                SelectedFiguresOBC.Add(figure);
+
+            figure.Selected = !figure.Selected;
+        }
+    }
+
+    /// <summary>
+    /// Clear current selection ( of figures, primitives ) and cancel select command.
+    /// </summary>
+    /// <param name="resetToViewMode">If true (Default) cursor back to <see cref="CursorMode.View"/>.</param>
+    public void ClearSelection(bool resetToViewMode = true)
+    {
+        {
+            var selectedPrimitives = SelectedPrimitiveOBC.ToList();
+            foreach (var primitive in selectedPrimitives)
+            {
+                foreach (var vtx in primitive.Vertexes)
+                    vtx.ClearFlags(GLVertexFlag.Selected);
+            }
+            SelectedPrimitiveOBC.Clear();
+        }
+
+        {
+            var selectedFigures = SelectedFiguresOBC.ToList();
+            foreach (var figure in selectedFigures)
+                figure.Selected = false;
+
+            SelectedFiguresOBC.Clear();
+        }
+
+        CursorMode = CursorMode.View;
+    }
+
+    /// <summary>
+    /// Retrieve <see cref="IGLPrimitive.SimpleCmd(bool)"/> representation of selected primitives and figure primitives.
+    /// </summary>    
+    public string GetSelectionSimpleCmd()
+    {
+        var sb = new StringBuilder();
+
+        foreach (var primitive in SelectedPrimitiveOBC)
+            sb.AppendLine(primitive.SimpleCmd());
+
+        foreach (var figure in SelectedFiguresOBC)
+            sb.AppendLine(figure.SimpleCmd());
+
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// Add to the model figures coming from given <see cref="IGLPrimitive.SimpleCmd(bool)"/>.<br/>
+    /// Generated figures are primitives coming from the cmd grouped by primitive type.
+    /// </summary>
+    /// <param name="simpleCmd">Simple cmd representation.</param>
+    /// <returns>Figures added to the model.</returns>
+    public IEnumerable<IGLFigure> PasteSimpleCmd(string simpleCmd)
+    {
+        var figures = this.FiguresFromSimpleCmd(simpleCmd);
+
+        AddFigure(figures);
+
+        return figures;
+    }
+
+    /// <summary>
+    /// Delete selected primitives/figures.
+    /// </summary>
+    public void DeleteSelected()
+    {
+        var primitivesToRemove = SelectedPrimitiveOBC.ToList();
+        var figuresToRemove = SelectedFiguresOBC.ToList();
+
+        RemoveFigure(figuresToRemove);
+
+        foreach (var primitive in primitivesToRemove)
+        {
+            primitive.ParentFigure?.RemovePrimitive(primitive);
+        }
+
+        RecomputeLBBox();
+
+        ClearSelection();
     }
 
 }

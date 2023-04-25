@@ -3,6 +3,7 @@ namespace SearchAThing.OpenGL.Core;
 /// <summary>
 /// Gl point light.
 /// </summary>
+[JsonObject(MemberSerialization.OptIn)]
 public class GLPointLight : INotifyPropertyChanged
 {
 
@@ -28,6 +29,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// If false light don't drop any shadow nor affects vertex colours.
     /// </summary>    
+    [JsonProperty]
     public bool Active
     {
         get => _Active;
@@ -51,6 +53,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Position [local].
     /// </summary>
+    [JsonProperty]
     public Vector3 Position
     {
         get => _Position;
@@ -73,6 +76,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Ambient light color (Default:White).
     /// </summary>
+    [JsonProperty]
     public Color Ambient
     {
         get => _Ambient;
@@ -95,6 +99,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Diffuse light color (Default:white).
     /// </summary>
+    [JsonProperty]
     public Color Diffuse
     {
         get => _Diffuse;
@@ -117,6 +122,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Specular light color (Default:white).
     /// </summary>
+    [JsonProperty]
     public Color Specular
     {
         get => _Specular;
@@ -139,6 +145,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Light attenuation constant factor.
     /// </summary>
+    [JsonProperty]
     public float Constant
     {
         get => _Constant;
@@ -161,6 +168,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Light attenuation linear factor.
     /// </summary>
+    [JsonProperty]
     public float Linear
     {
         get => _Linear;
@@ -183,6 +191,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// <summary>
     /// Light attenuation quadratica factor.
     /// </summary>
+    [JsonProperty]
     public float Quadratic
     {
         get => _Quadratic;
@@ -208,6 +217,7 @@ public class GLPointLight : INotifyPropertyChanged
     /// If true a Gl point will be shown where the light is positioned.<br/>
     /// Colored yellow if light is active, darkgray if inactive.
     /// </summary>
+    [JsonProperty]
     public bool ShowPoint
     {
         get => _ShowPoint;

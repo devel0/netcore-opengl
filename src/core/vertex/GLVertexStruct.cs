@@ -7,8 +7,8 @@ namespace SearchAThing.OpenGL.Core;
 /// This structure has an explicit layout for unmanaged access by the gpu
 /// and its used in <seealso cref="GLControl"/> during the phase of rendering.<br/>
 /// </summary>
-/// <seealso cref="GLVertexArrayObject"/>
-[StructLayout(LayoutKind.Explicit, Size = 12 + 12 + 16 + 12 + 8)]
+/// <seealso cref="GLVertexArrayObject{PacketStructure}"/>
+[StructLayout(LayoutKind.Explicit, Size = 12 + 12 + 16 + 12 + 8 + 4)]
 public struct GLVertexStruct
 {
 
@@ -44,6 +44,12 @@ public struct GLVertexStruct
     /// </summary>
     [FieldOffset(12 + 12 + 16 + 12)]
     public Vector2 TextureST;        
+
+    /// <summary>
+    /// Vertex flags.
+    /// </summary>
+    [FieldOffset(12 + 12 + 16 + 12 + 8)]
+    public uint Flags;        
     
-    public override string ToString() => $"pos:{Position} norm:{Normal} mcol:{MatColor} mprop:{MatProp} textureST:{TextureST}";
+    public override string ToString() => $"pos:{Position} norm:{Normal} mcol:{MatColor} mprop:{MatProp} textureST:{TextureST} flags:{Flags}";
 }

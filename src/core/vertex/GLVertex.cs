@@ -24,7 +24,8 @@ public class GLVertex : IGLVertex
         Normal = EffectiveNormal,
         MatColor = MaterialColor,
         MatProp = MaterialProperties,
-        TextureST = TextureST
+        TextureST = TextureST,
+        Flags = (uint)Flags
     };
 
     public uint? Index { get; internal set; }
@@ -150,7 +151,7 @@ public class GLVertex : IGLVertex
                 _Normal = value;
 
                 if (ParentFigure is not null)
-                    ((GLVertexManager?)ParentVertexManager)?.AddVertex(this);
+                    ((GLVertexManager?)ParentVertexManager)?.AddVertex(this, computeNormal: false);
 
                 OnPropertyChanged();
 
@@ -236,10 +237,43 @@ public class GLVertex : IGLVertex
         }
     }
 
-    #endregion
+    #endregion    
+
+    #region Flags
+
+    private GLVertexFlag _Flags = 0;
+
+    /// <summary>
+    /// Vertex flags can used to switch some vertex feature.<br/>
+    /// By default no flags are active.
+    /// <seealso cref="GLVertexFlag"/>
+    /// </summary>
+    [JsonProperty]
+    public GLVertexFlag Flags
+    {
+        get => _Flags;
+        set
+        {
+            var changed = value != _Flags;
+            if (changed)
+            {
+                if (ParentFigure is not null)
+                    ((GLVertexManager?)ParentVertexManager)?.RemoveVertex(this);
+
+                _Flags = value;
+
+                if (ParentFigure is not null)
+                    ((GLVertexManager?)ParentVertexManager)?.AddVertex(this);
+
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion    
 
     public string Signature =>
-        Invariant($"{Position}_{(ScreenCoordMode ? 1 : 0)}_{MaterialColor}_{MaterialProperties}_{Normal}_{TextureST}");
+        Invariant($"{Position}_{(ScreenCoordMode ? 1 : 0)}_{MaterialColor}_{MaterialProperties}_{Normal}_{TextureST}_{(long)Flags}");
 
     /// <summary>
     /// Create a gl vertex ( default 0,0,0 ) [object].
@@ -320,6 +354,59 @@ public class GLVertex : IGLVertex
 
 }
 
+public static partial class Ext
+{
+
+    /// <summary>
+    /// Test given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which test flags.</param>
+    /// <param name="mask">Flags to test.</param>
+    /// <returns>True if all mask bits are set.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static bool TestFlags(this GLVertex vertex, GLVertexFlag mask) => (vertex.Flags & mask) == mask;
+
+    /// <summary>
+    /// Set given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which sets flags.</param>
+    /// <param name="mask">Flags to set.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static GLVertex SetFlags(this GLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags |= mask;
+        return vertex;
+    }
+
+    /// <summary>
+    /// Clear given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which clear flags.</param>
+    /// <param name="mask">Flags to clear.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static GLVertex ClearFlags(this GLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags &= ~mask;
+        return vertex;
+    }
+
+    /// <summary>
+    /// Toggle given flags mask.
+    /// </summary>
+    /// <param name="vertex">Vertex which toggle flags.</param>
+    /// <param name="mask">Flags to toggle.</param>
+    /// <returns>This vertex.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static GLVertex ToggleFlags(this GLVertex vertex, GLVertexFlag mask)
+    {
+        vertex.Flags ^= mask;
+        return vertex;
+    }
+
+}
+
 public static partial class Constants
 {
 
@@ -337,5 +424,7 @@ public static partial class Constants
     /// (Default) vertex texture mapping coordinate (0,0).
     /// </summary>
     public static readonly Vector2 DEFAULT_TexCoord = Vector2.Zero;
+
+
 
 }

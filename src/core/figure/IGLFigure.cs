@@ -1,5 +1,10 @@
 namespace SearchAThing.OpenGL.Core;
 
+/// <summary>
+/// Delegate for <see cref="IGLFigure.FigureInvalidated"/>.<br/>
+/// This event is managed internally by the <see cref="SearchAThing.OpenGL.Core.GLModel"/> and signal that a model figure changed some of its vertex propertties.<br/>
+/// </summary>
+/// <param name="figure">GL figure invalidated.</param>
 public delegate void FigureInvalidatedDelegate(IGLFigure figure);
 
 /// <summary>
@@ -11,6 +16,7 @@ public delegate void FigureInvalidatedDelegate(IGLFigure figure);
 /// <remarks>
 /// All properties are INotifyPropertyChanged managed and allow to be ui reactive.
 /// </remarks>
+[JsonObject(MemberSerialization.OptIn)]
 public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
 {
 
@@ -32,6 +38,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     ReadOnlyObservableCollection<GLPrimitiveBase> Primitives { get; }
 
     /// <summary>
+    /// Remove primitive from this figure.
+    /// </summary>
+    /// <param name="primitive">Gl primitive to remove.</param>
+    void RemovePrimitive(GLPrimitiveBase primitive);
+
+    /// <summary>
     /// Enum that describe which type underlying to the instance.
     /// </summary>   
     GLPrimitiveType PrimitiveType { get; }
@@ -50,6 +62,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// While each control has separate model/view/projection matrixes, the figure object matrix
     /// is common to all controls that uses the same model containing this figure instance.
     /// </remarks>
+    [JsonProperty]
     Matrix4x4 ObjectMatrix { get; set; }
 
     /// <summary>
@@ -59,6 +72,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// <remarks>
     /// Changing visbility of a figure affects all controls that uses the same model containing this figure instance.
     /// </remarks>
+    [JsonProperty]
     bool Visible { get; set; }
 
     /// <summary>
@@ -67,6 +81,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// From the opengl point of view figures with higher order ( front ) are drawn firstly then lower order ( back ).<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    
+    [JsonProperty]
     int Order { get; set; }
 
     /// <summary>
@@ -77,6 +92,7 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// with a model translated by (-sw/2, -sh/2) where sw,sh = screen width,height.<br/>
     /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
     /// </summary>    
+    [JsonProperty]
     bool ScreenCoordMode { get; set; }
 
     /// <summary>
@@ -86,6 +102,19 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     bool Highlight { get; set; }
 
     /// <summary>
+    /// States if figure is actually selected.<br/>
+    /// It true the figure is listed in model selected figures <see cref="GLModel.SelectedFigures"/>.
+    /// </summary>    
+    bool Selected { get; }
+
+    /// <summary>
+    /// Allow to change alpha (0:full transparent, 1:full opaque) of the figure without the need to change primitives color. If null figure primitives alpha will not overriden. (Default: null)<br/>
+    /// Changing this property emits <see cref="IGLFigure.FigureInvalidated"/> event.
+    /// </summary>    
+    [JsonProperty]
+    float? Alpha { get; set; }
+
+    /// <summary>
     /// List of vertex manager vertex indexes used by this figure.<br/>
     /// Used in the final render phase where GL.DrawElements take place to 
     /// mapped as opengl ElementArrayBuffer.
@@ -93,10 +122,20 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     IEnumerable<uint> Indexes { get; }
 
     /// <summary>
-    /// Object space bbox of this figure vertexes.
-    /// </summary>
-    /// <param name="cs">Optional coordinate system to use in bbox detection ( Default: <see cref="WCS"/> ).</param>    
-    BBox OBBox(in Matrix4x4? cs = null);
+    /// (cached) Bounding box of this figure vertexes [local].
+    /// </summary>    
+    BBox LBBox { get; }
+
+    /// <summary>
+    /// Bounding bbox of this figure vertexes [object].
+    /// </summary>    
+    BBox OBBox { get; }
+
+    /// <summary>
+    /// States if this figure is considered in bbox expansion (Default: true).<br/>
+    /// Useful to avoid cs figure or non related to content of interest to decrease view and zoom experience.
+    /// </summary>    
+    bool ExpandBBox { get; set; }
 
     /// <summary>
     /// States if this figure has to be considered for building of the shadow map.<br/>
@@ -109,6 +148,12 @@ public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged
     /// User object
     /// </summary>
     object? Tag { get; set; }
+
+    /// <summary>
+    /// Retrieve e simple cmd representation of this figure.<br/>
+    /// Its a textual representation of figure information useful to regen in a separate tool.
+    /// </summary>
+    string SimpleCmd();
 
 }
 
@@ -206,5 +251,55 @@ public static partial class Ext
     /// <returns>This figure reference.</returns>
     public static IEnumerable<T> Move<T>(this IEnumerable<T> figures, Vector3 coord, bool relative = true) where T : IGLFigure =>
         figures.Act(figs => figs.ForEach(fig => fig.Move(coord, relative)));
+
+    /// <summary>
+    /// Set figure alpha ( 0:full transparent, 1:full opaque ).<br/>    
+    /// <seealso cref="IGLFigure.Alpha"/>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="alpha">Alpha (0:transparent, 1:opaque).</param>
+    /// </summary>
+    public static T SetAlpha<T>(this T fig, float? alpha) where T : IGLFigure
+    {
+        fig.Alpha = alpha;
+        return fig;
+    }
+
+    /// <summary>
+    /// Change the figure order.
+    /// </summary>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="order">Order to set.</param>
+    /// <seealso cref="IGLFigure.Order"/>
+    /// <returns>This figure.</returns>
+    public static T SetOrder<T>(this T fig, int order) where T : IGLFigure
+    {
+        fig.Order = order;
+        return fig;
+    }
+
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="color">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public static T SetColor<T>(this T fig, in Color color) where T : IGLFigure =>
+        SetColor(fig, color.ToVector4());
+
+    /// <summary>
+    /// Set color on primitives vertexes of this figure.
+    /// </summary>
+    /// <param name="fig">Figure on which operate.</param>
+    /// <param name="rgbaColor">Color to set on vertexes.</param>
+    /// <returns>This figure.</returns>
+    public static T SetColor<T>(this T fig, in Vector4 rgbaColor) where T : IGLFigure
+    {
+        foreach (var primitive in fig.Primitives)
+            foreach (var vertex in primitive.Vertexes)
+                vertex.MaterialColor = rgbaColor;
+
+        return fig;
+    }
 
 }

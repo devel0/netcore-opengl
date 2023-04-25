@@ -10,6 +10,14 @@ namespace example.Views;
 // - slide light positions
 // - toggle shade with edge using ctrl+w
 // - toggle show normals using n
+// - zoom to shadow curve and change shadow resolution using radio button on the left side controls
+
+public enum ShadowResTypeEnum
+{
+    LowRes,
+    Default,
+    HiRes,    
+}
 
 public partial class MainWindow : Window, INotifyPropertyChanged
 {
@@ -25,6 +33,57 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    #endregion
+
+    #region ShadowResType
+
+    private ShadowResTypeEnum _ShadowResType = ShadowResTypeEnum.Default;
+    /// <summary>
+    /// ShadowResType
+    /// </summary>
+    public ShadowResTypeEnum ShadowResType
+    {
+        get => _ShadowResType;
+        set
+        {
+            var changed = value != _ShadowResType;
+            if (changed)
+            {
+                _ShadowResType = value;
+                OnPropertyChanged();
+
+                if (AvaloniaGLControl is not null)
+                {
+                    switch (value)
+                    {
+                        case ShadowResTypeEnum.Default:
+                            {
+                                AvaloniaGLControl.GLControl.ShadowWidth = SHADOW_WIDTH;
+                                AvaloniaGLControl.GLControl.ShadowHeight = SHADOW_HEIGHT;
+                            }
+                            break;
+
+                        case ShadowResTypeEnum.LowRes:
+                            {
+                                AvaloniaGLControl.GLControl.ShadowWidth = SHADOW_WIDTH / 2;
+                                AvaloniaGLControl.GLControl.ShadowHeight = SHADOW_HEIGHT / 2;
+                            }
+                            break;
+
+                        case ShadowResTypeEnum.HiRes:
+                            {
+                                AvaloniaGLControl.GLControl.ShadowWidth = 2 * SHADOW_WIDTH;
+                                AvaloniaGLControl.GLControl.ShadowHeight = 2 * SHADOW_HEIGHT;
+                            }
+                            break;
+                    }
+
+                    AvaloniaGLControl?.GLControl.InvalidateAll();
+                }
+            }
+        }
     }
 
     #endregion

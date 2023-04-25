@@ -1,68 +1,83 @@
 {
   "Layout": {
-    "Parent": null,
     "SplitDirection": 0,
-    "Index": 0,
     "Sizes": [
-      857.0,
-      560.0
+      869.0,
+      548.0
     ],
     "Children": [
       {
+        "SplitDirection": null,
+        "Sizes": null,
+        "Children": null,
+        "LeafUID": 0,
+        "Index": 0
+      },
+      {
         "SplitDirection": 1,
-        "Index": 1,
         "Sizes": [
           1.0,
           1.0
         ],
-        "Children": [],
-        "LeafUIDs": [
-          1,
-          2
-        ]
+        "Children": [
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 1,
+            "Index": 0
+          },
+          {
+            "SplitDirection": null,
+            "Sizes": null,
+            "Children": null,
+            "LeafUID": 2,
+            "Index": 1
+          }
+        ],
+        "LeafUID": null,
+        "Index": 1
       }
     ],
-    "LeafUIDs": [
-      0,
-      null
-    ]
+    "LeafUID": null,
+    "Index": 0
   },
   "UIDView": {
     "0": {
       "Title": "",
       "ModelMatrix": {
-        "M11": 0.860486,
-        "M12": -0.21858272,
-        "M13": 0.46020168,
+        "M11": 0.7850374,
+        "M12": -0.1820384,
+        "M13": 0.5920967,
         "M14": 0.0,
-        "M21": 0.50889295,
-        "M22": 0.32562804,
-        "M23": -0.7968652,
+        "M21": 0.61944544,
+        "M22": 0.23360138,
+        "M23": -0.7494781,
         "M24": 0.0,
-        "M31": 0.02432651,
-        "M32": 0.9198848,
-        "M33": 0.3914336,
+        "M31": -0.001880819,
+        "M32": 0.9551401,
+        "M33": 0.29614866,
         "M34": 0.0,
-        "M41": -0.99988925,
-        "M42": -0.44132054,
-        "M43": -0.18703666,
+        "M41": -0.82368827,
+        "M42": -0.4849613,
+        "M43": -0.1547981,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": -0.99988925,
-          "Y": -0.44132054,
-          "Z": -0.18703666
+          "X": -0.82368827,
+          "Y": -0.4849613,
+          "Z": -0.1547981
         }
       },
       "CameraPos": {
-        "X": -0.3445446,
-        "Y": 0.08648535,
-        "Z": 3.554388
+        "X": -0.14561357,
+        "Y": 0.08462168,
+        "Z": 3.616659
       },
       "CameraTarget": {
-        "X": -0.3445446,
-        "Y": 0.08648535,
-        "Z": 2.554388
+        "X": -0.14561357,
+        "Y": 0.08462168,
+        "Z": 2.616659
       },
       "CameraUp": {
         "X": 0.0,
@@ -74,68 +89,16 @@
       "OrthoZoom": 1.0,
       "Near": 0.1,
       "Far": 50000.0,
+      "UseShadow": true,
       "ShadeWithEdge": false,
       "ShowCameraObject": false,
       "Lights": [
         {
-          "Active": true,
           "Position": {
             "X": 0.5,
             "Y": -2.0,
             "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
+          }
         }
       ]
     },
@@ -154,26 +117,26 @@
         "M32": 1.0,
         "M33": 4.371139E-08,
         "M34": 0.0,
-        "M41": 0.84999996,
-        "M42": -0.5035,
-        "M43": -0.50350004,
+        "M41": 0.6499999,
+        "M42": -0.5075,
+        "M43": -0.50750005,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": 0.84999996,
-          "Y": -0.5035,
-          "Z": -0.50350004
+          "X": 0.6499999,
+          "Y": -0.5075,
+          "Z": -0.50750005
         }
       },
       "CameraPos": {
-        "X": -0.0012989967,
-        "Y": 0.0013007417,
-        "Z": 3.052743
+        "X": -0.0013093923,
+        "Y": 0.0013111515,
+        "Z": 2.7972689
       },
       "CameraTarget": {
-        "X": -0.0012989967,
-        "Y": 0.0013007417,
-        "Z": 2.052743
+        "X": -0.0013093923,
+        "Y": 0.0013111515,
+        "Z": 1.7972689
       },
       "CameraUp": {
         "X": 0.0,
@@ -185,106 +148,54 @@
       "OrthoZoom": 1.0,
       "Near": 0.1,
       "Far": 50000.0,
+      "UseShadow": true,
       "ShadeWithEdge": false,
       "ShowCameraObject": false,
       "Lights": [
         {
-          "Active": true,
           "Position": {
             "X": 0.5,
             "Y": -2.0,
             "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
+          }
         }
       ]
     },
     "2": {
       "Title": "",
       "ModelMatrix": {
-        "M11": 0.860486,
-        "M12": -0.21858272,
-        "M13": 0.46020168,
+        "M11": 0.7850374,
+        "M12": -0.1820384,
+        "M13": 0.5920967,
         "M14": 0.0,
-        "M21": 0.50889295,
-        "M22": 0.32562804,
-        "M23": -0.7968652,
+        "M21": 0.61944544,
+        "M22": 0.23360138,
+        "M23": -0.7494781,
         "M24": 0.0,
-        "M31": 0.02432651,
-        "M32": 0.9198848,
-        "M33": 0.3914336,
+        "M31": -0.001880819,
+        "M32": 0.9551401,
+        "M33": 0.29614866,
         "M34": 0.0,
-        "M41": -0.99988925,
-        "M42": -0.44132054,
-        "M43": -0.18703666,
+        "M41": -0.82368827,
+        "M42": -0.4849613,
+        "M43": -0.1547981,
         "M44": 1.0,
         "IsIdentity": false,
         "Translation": {
-          "X": -0.99988925,
-          "Y": -0.44132054,
-          "Z": -0.18703666
+          "X": -0.82368827,
+          "Y": -0.4849613,
+          "Z": -0.1547981
         }
       },
       "CameraPos": {
-        "X": -0.26188457,
-        "Y": -0.03090173,
-        "Z": 3.3104982
+        "X": -0.084149696,
+        "Y": -0.059989624,
+        "Z": 3.6531925
       },
       "CameraTarget": {
-        "X": -0.26188457,
-        "Y": -0.03090173,
-        "Z": 2.3104985
+        "X": -0.084149696,
+        "Y": -0.059989624,
+        "Z": 2.6531925
       },
       "CameraUp": {
         "X": 0.0,
@@ -296,68 +207,16 @@
       "OrthoZoom": 1.0,
       "Near": 0.1,
       "Far": 50000.0,
+      "UseShadow": true,
       "ShadeWithEdge": false,
       "ShowCameraObject": false,
       "Lights": [
         {
-          "Active": true,
           "Position": {
             "X": 0.5,
             "Y": -2.0,
             "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
-        },
-        {
-          "Active": true,
-          "Position": {
-            "X": 0.5,
-            "Y": -2.0,
-            "Z": 2.0
-          },
-          "Ambient": "White",
-          "Diffuse": "White",
-          "Specular": "White",
-          "Constant": 1.0,
-          "Linear": 0.0,
-          "Quadratic": 0.0,
-          "ShowPoint": false
+          }
         }
       ]
     }

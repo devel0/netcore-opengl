@@ -22,7 +22,7 @@ public static partial class Constants
     /// Y axis orientation [screen].<br/>    
     /// </summary>    
     /// <remarks>
-    /// TODO: Actually tested only for YPositiveUp. It's a constant hard coded.
+    /// NOTE: Actually tested only for YPositiveUp. It's a constant hard coded.
     /// </remarks>    
     public const YAxisOrientationEnum YAxisOrientation = YAxisOrientationEnum.YPositiveUp;
 
