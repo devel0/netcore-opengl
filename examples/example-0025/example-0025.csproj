@@ -10,7 +10,7 @@
 	</PropertyGroup>	
 
 	<ItemGroup>
-		<!-- <None Include="layout.json" CopyToOutputDirectory="PreserveNewest" />     -->
+		<None Include="layout.json" CopyToOutputDirectory="PreserveNewest" />    
 	</ItemGroup>
 	
 	<ItemGroup>
