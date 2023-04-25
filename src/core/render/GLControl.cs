@@ -585,7 +585,10 @@ public partial class GLControl : INotifyPropertyChanged
     /// <param name="shader">Shader to use in this gl rendering stage.</param>
     /// <param name="ptLightStructs">List of point lights.</param>    
     /// <param name="clear">Clear the scene ( Default: true ).</param>
-    void DoShader(Func<GLFigureBase, bool> figureMatch, GLPipeline shader, GLPointLightStruct[] ptLightStructs, bool clear = true)
+    void DoShader(Func<GLFigureBase, bool> figureMatch,
+        GLPipeline shader,
+        GLPointLightStruct[] ptLightStructs,
+        bool clear = true)
     {
         shader.Use();
 
@@ -908,6 +911,15 @@ public partial class GLControl : INotifyPropertyChanged
                 MainShader,
                 ptLightStructs);
 
+            if (ShowNormals)
+                DoShader(
+                    fig =>
+                        fig.PrimitiveType == GLPrimitiveType.Triangle &&
+                        (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
+                    NormalShader,
+                    ptLightStructs,
+                    clear: false);
+
             if (!Wireframe && ShadeWithEdge)
                 DoShader(
                     fig =>
@@ -918,22 +930,34 @@ public partial class GLControl : INotifyPropertyChanged
                     ptLightStructs,
                     clear: false);
 
-            if (ShowNormals)
+            if (VertexVisbiility)
+            {
+                GL.PointSize(DEFAULT_VERTEX_VISIBILITY_POINT_SIZE);
+
+                DoShader(
+                    fig =>
+                        fig.PrimitiveType == GLPrimitiveType.Line &&
+                        (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
+                    VertexVisibilityLineShader,
+                    ptLightStructs,
+                    clear: false);
+
                 DoShader(
                     fig =>
                         fig.PrimitiveType == GLPrimitiveType.Triangle &&
                         (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
-                    NormalShader,
+                    VertexVisibilityTriShader,
                     ptLightStructs,
                     clear: false);
+            }
 
             DoShader(
-                fig =>
-                    fig.PrimitiveType == GLPrimitiveType.Triangle &&
-                    (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
-                MainShader,
-                ptLightStructs,
-                clear: false);
+               fig =>
+                   fig.PrimitiveType == GLPrimitiveType.Triangle &&
+                   (ControlFigureVisible is null || ControlFigureVisible(this, fig)),
+               MainShader,
+               ptLightStructs,
+               clear: false);
         }
         #endregion
 

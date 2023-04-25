@@ -13,7 +13,12 @@ public partial class AvaloniaGLControl
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.ToggleShadeWithEdge"/>.
     /// </summary>
-    public KeyGesture? ToggleShadeWithEdge = null;
+    public KeyGesture? ToggleShadeWithEdgeGesture = null;
+
+    /// <summary>
+    /// Key gesture associated to <see cref="GLControl.ToggleVertexVisibility"/>.
+    /// </summary>
+    public KeyGesture? ToggleVertexVisibilityGesture = null;
 
     /// <summary>
     /// Key gesture associated to <see cref="GLControl.ToggleShowNormals"/>.
@@ -248,7 +253,8 @@ public partial class AvaloniaGLControl
     public void ClearKeyGestures()
     {
         ToggleWireframeGesture =
-        ToggleShadeWithEdge =
+        ToggleShadeWithEdgeGesture =
+        ToggleVertexVisibilityGesture =
         ToggleShowNormals =
         TogglePerspectiveGesture =
         ToggleUseTextureGesture =
@@ -315,7 +321,8 @@ public partial class AvaloniaGLControl
     public void SetDefaultKeyGestures()
     {
         ToggleWireframeGesture = DEFAULT_ToggleWireframeGesture;
-        ToggleShadeWithEdge = DEFAULT_ToggleShadeWithEdgeGesture;
+        ToggleVertexVisibilityGesture = DEFAULT_ToggleVertexVisibilityGesture;
+        ToggleShadeWithEdgeGesture = DEFAULT_ToggleShadeWithEdgeGesture;
         ToggleShowNormals = DEFAULT_ToggleShowNormalsGesture;
         TogglePerspectiveGesture = DEFAULT_TogglePerspectiveGesture;
         ToggleUseTextureGesture = DEFAULT_ToggleUseTextureGesture;
@@ -379,7 +386,8 @@ public partial class AvaloniaGLControl
         bool MatchGesture(KeyGesture? gesture) => gesture?.Matches(e) == true;
 
         if (MatchGesture(ToggleWireframeGesture)) { GLControl.ToggleWireframe(); e.Handled = true; return; }
-        if (MatchGesture(ToggleShadeWithEdge)) { GLControl.ToggleShadeWithEdge(); e.Handled = true; return; }
+        if (MatchGesture(ToggleShadeWithEdgeGesture)) { GLControl.ToggleShadeWithEdge(); e.Handled = true; return; }
+        if (MatchGesture(ToggleVertexVisibilityGesture)) { GLControl.ToggleVertexVisibility(); e.Handled = true; return; }
         if (MatchGesture(ToggleShowNormals)) { GLControl.ToggleShowNormals(); e.Handled = true; return; }
         if (MatchGesture(TogglePerspectiveGesture)) { GLControl.TogglePerspective(); e.Handled = true; return; }
         if (MatchGesture(ToggleUseTextureGesture)) { GLControl.ToggleUseTexture(); e.Handled = true; return; }

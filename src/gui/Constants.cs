@@ -56,9 +56,14 @@ public static class Constants
     public static readonly KeyGesture DEFAULT_ToggleWireframeGesture = new KeyGesture(Key.W);
 
     /// <summary>
-    /// (Default) Toggle shade width dege key gesture.
+    /// (Default) Toggle shade width edge key gesture.
     /// </summary>
     public static readonly KeyGesture DEFAULT_ToggleShadeWithEdgeGesture = new KeyGesture(Key.W, KeyModifiers.Control);
+
+    /// <summary>
+    /// (Default) Toggle vertex visibility key gesture.
+    /// </summary>
+    public static readonly KeyGesture DEFAULT_ToggleVertexVisibilityGesture = new KeyGesture(Key.V, KeyModifiers.Alt);
 
     /// <summary>
     /// (Default) Toggle show normals key gesture.

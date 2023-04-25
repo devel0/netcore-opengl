@@ -62,6 +62,20 @@ public static partial class Constants
         RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.shadewithedge.gs");
 
     /// <summary>
+    /// Shader "5.vertexvisibilityline.gs" resource name (regex).
+    /// </summary>
+    /// <value></value>
+    public static readonly string SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.vertexvisibilityline.gs");
+
+    /// <summary>
+    /// Shader "5.vertexvisibilitytri.gs" resource name (regex).
+    /// </summary>
+    /// <value></value>
+    public static readonly string SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI =
+        RESOURCE_NAMESPACE_BASE + Regex.Escape(".5.vertexvisibilitytri.gs");
+
+    /// <summary>
     /// Shader "5.normal.gs" resource name (regex).
     /// </summary>
     /// <value></value>
@@ -445,9 +459,19 @@ public static partial class Constants
     public const bool DEFAULT_SHADE_WITH_EDGE = false;
 
     /// <summary>
+    /// (Default) gl control vertex visibility flag.
+    /// </summary>
+    public const bool DEFAULT_VERTEX_VISIBILITY = false;
+
+    /// <summary>
     /// (Default) gl control show normals flags.
     /// </summary>
     public const bool DEFAULT_SHOW_NORMALS = false;
+
+    /// <summary>
+    /// (Default) gl geometry shader vertex visibility point size.
+    /// </summary>
+    public const float DEFAULT_VERTEX_VISIBILITY_POINT_SIZE = 5;
 
     #endregion    
 

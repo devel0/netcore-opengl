@@ -79,6 +79,18 @@ public class GLContext : IDisposable
     public GLPipeline ShadeWithEdgeShader { get; private set; }
 
     /// <summary>
+    /// (geometry) Shader used to render triangles with point on their vertexes.
+    /// </summary>
+    /// <seealso cref="GLControl.VertexVisbiility"/>.
+    public GLPipeline VertexVisibilityTriShader { get; private set; }
+
+    /// <summary>
+    /// (geometry) Shader used to render lines with point on their vertexes.
+    /// </summary>
+    /// <seealso cref="GLControl.VertexVisbiility"/>.
+    public GLPipeline VertexVisibilityLineShader { get; private set; }
+
+    /// <summary>
     /// (geometry) Shader used to render triangle vertex normals.
     /// <seealso cref="GLControl.ShowNormals"/>.
     /// </summary>    
@@ -237,6 +249,24 @@ public class GLContext : IDisposable
 
         {
             var VertexShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_VERT);
+            var GeometryShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE);
+            var FragmentShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_FRAG);
+
+            VertexVisibilityLineShader = new GLPipeline(this, VertexShaderSource, GeometryShaderSource, FragmentShaderSource,
+                friendlyName: "MAIN_VERTEX_VISIBILITY_LINE");
+        }
+
+        {
+            var VertexShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_VERT);
+            var GeometryShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI);
+            var FragmentShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_FRAG);
+
+            VertexVisibilityTriShader = new GLPipeline(this, VertexShaderSource, GeometryShaderSource, FragmentShaderSource,
+                friendlyName: "MAIN_VERTEX_VISIBILITY_TRI");
+        }
+
+        {
+            var VertexShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_VERT);
             var GeometryShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_GEOM_NORMAL);
             var FragmentShaderSource = GetResourceContentAsString(SHADER_RESOURCE_MAIN_FRAG);
 
@@ -255,7 +285,7 @@ public class GLContext : IDisposable
             {
                 var q = AppDomain.CurrentDomain
                     .GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == NETCORE_OPENGL_CORE_ASSEMBLY_NAME); 
+                    .FirstOrDefault(a => a.GetName().Name == NETCORE_OPENGL_CORE_ASSEMBLY_NAME);
 
                 if (q is null)
                 {
@@ -271,8 +301,8 @@ public class GLContext : IDisposable
 
     string GetResourceContentAsString(string regex)
     {
-        var names = GetEmbeddedResourceNames(netcore_opengl_core_assembly); 
-        
+        var names = GetEmbeddedResourceNames(netcore_opengl_core_assembly);
+
         return names
             .First(w => w.RegexMatch(regex) > 0)
             .Fn(resourcename => GetEmbeddedFileContentString(netcore_opengl_core_assembly, resourcename));

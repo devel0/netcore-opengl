@@ -46,6 +46,16 @@ public partial class GLControl : INotifyPropertyChanged
     public GLPipeline ShadeWithEdgeShader => GLContext.ShadeWithEdgeShader;
 
     /// <summary>
+    /// Geometry shader used to show line vertexes if <see cref="GLControl.VertexVisbiility"/> enabled ( retrieved from gl context ).
+    /// </summary>
+    public GLPipeline VertexVisibilityLineShader => GLContext.VertexVisibilityLineShader;
+
+    /// <summary>
+    /// Geometry shader used to show triangle vertexes if <see cref="GLControl.VertexVisbiility"/> enabled ( retrieved from gl context ).
+    /// </summary>
+    public GLPipeline VertexVisibilityTriShader => GLContext.VertexVisibilityTriShader;    
+
+    /// <summary>
     /// Geometry shader used if <see cref="GLControl.ShowNormals"/> enabled ( retrieved from gl context ).
     /// </summary>
     public GLPipeline NormalShader => GLContext.NormalShader;
@@ -989,6 +999,28 @@ public partial class GLControl : INotifyPropertyChanged
 
     #endregion
 
+    #region VertexVisbiility
+
+    private bool _VertexVisbiility = DEFAULT_VERTEX_VISIBILITY;
+    /// <summary>
+    /// If true a geometry shader will generate addictional point that marks primitive vertexes.
+    /// </summary>
+    public bool VertexVisbiility
+    {
+        get => _VertexVisbiility;
+        set
+        {
+            var changed = value != _VertexVisbiility;
+            if (changed)
+            {
+                _VertexVisbiility = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    #endregion
+
     #region ShowNormals
 
     private bool _ShowNormals = DEFAULT_SHOW_NORMALS;
@@ -1129,7 +1161,7 @@ public partial class GLControl : INotifyPropertyChanged
     #endregion
 
     #region RotationCenter
-    
+
     private Vector3? _RotationCenter = null;
     /// <summary>
     /// Rotation center [local].
@@ -1139,20 +1171,20 @@ public partial class GLControl : INotifyPropertyChanged
         get
         {
             if (_RotationCenter is null) return GLModel.LBBox.Middle;
-            
+
             return _RotationCenter.Value;
         }
         internal set
         {
-             var changed = value != _RotationCenter;
-             if (changed)
-             {
-                 _RotationCenter = value;
-                 OnPropertyChanged();
-             }
+            var changed = value != _RotationCenter;
+            if (changed)
+            {
+                _RotationCenter = value;
+                OnPropertyChanged();
+            }
         }
     }
-    
+
     #endregion
 
 }

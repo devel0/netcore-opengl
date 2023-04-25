@@ -28,6 +28,16 @@ public partial class GLControl
     }
 
     /// <summary>
+    /// Toggle vertex visibility.
+    /// </summary>
+    /// <param name="invalidate">If true refresh the scene.</param>    
+    public void ToggleVertexVisibility(bool invalidate = DEFAULT_INVALIDATE)
+    {
+        VertexVisbiility = !VertexVisbiility;
+        if (invalidate) Invalidate();
+    }
+
+    /// <summary>
     /// Toggle show normals.
     /// </summary>
     /// <param name="invalidate">If true refresh the scene.</param>
@@ -280,6 +290,7 @@ public partial class GLControl
         Far = Far,
         UseShadow = UseShadow,
         ShadeWithEdge = ShadeWithEdge,
+        VertexVisibility = VertexVisbiility,
         ShowCameraObject = ShowCameraObject,
         Lights = includeLights ? GLModel.PointLights.ToList() : null
     };
@@ -328,6 +339,7 @@ public partial class GLControl
         Far = nfo.Far;
         UseShadow = nfo.UseShadow;
         ShadeWithEdge = nfo.ShadeWithEdge;
+        VertexVisbiility = nfo.VertexVisibility;
         ShowCameraObject = nfo.ShowCameraObject;
         if (includeLights && nfo.Lights is not null)
         {
