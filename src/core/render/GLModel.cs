@@ -152,7 +152,7 @@ public partial class GLModel : IGLContextObject
     /// Send notification to frontend that manage this gl control.
     /// </summary>
     /// <param name="title">Title of notification.</param>
-    /// <param name="msg">Message to display, it can contains newlines.</param>
+    /// <param name="msg">Message to display, it can contains at most 1 newlines.</param>
     /// <param name="notifyType">Level type of notification (Default:Information).</param>
     public void SendNotification(string title, string msg, GLNotificationType notifyType = GLNotificationType.Information) =>
         NotificationRequest?.Invoke(title, msg, notifyType);
@@ -331,7 +331,7 @@ public partial class GLModel : IGLContextObject
     /// <summary>
     /// States if model is invalidated thus <see cref="BuildModel"/> will be automatically invoked at first render.
     /// </summary>
-    public bool IsInvalidated   
+    public bool IsInvalidated
     {
         get => _IsInvalidated;
         set
@@ -375,7 +375,7 @@ public partial class GLModel : IGLContextObject
     private CursorMode _CursorMode = DEFAULT_CursorMode;
     /// <summary>
     /// Current cursor mode.<br/>    
-    /// </summary>
+    /// </summary>    
     /// <seealso cref="CursorMode"/>
     public CursorMode CursorMode
     {
