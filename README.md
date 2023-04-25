@@ -8,38 +8,39 @@
 <hr/>
 
 <!-- TOC -->
-* [Introduction](#introduction)
-* [Quickstart](#quickstart)
-* [Examples](#examples)
-  + [List of examples](#list-of-examples)
-  + [Build solution](#build-solution)
-  + [Running examples from console](#running-examples-from-console)
-  + [Running examples from vscode](#running-examples-from-vscode)
-* [Development key notes](#development-key-notes)
-  + [Coordinate spaces](#coordinate-spaces)
-  + [GL Dev inspect tool](#gl-dev-inspect-tool)
-  + [Primitives, figures interaction](#primitives-figures-interaction)
+
+- [Introduction](#introduction)
+- [Quickstart](#quickstart)
+- [Examples](#examples)
+  - [List of examples](#list-of-examples)
+  - [Build solution](#build-solution)
+  - [Running examples from console](#running-examples-from-console)
+  - [Running examples from vscode](#running-examples-from-vscode)
+- [Development key notes](#development-key-notes)
+  - [Coordinate spaces](#coordinate-spaces)
+  - [GL Dev inspect tool](#gl-dev-inspect-tool)
+  - [Primitives, figures interaction](#primitives-figures-interaction)
     - [Selection and coord identify](#selection-and-coord-identify)
     - [Removal](#removal)
     - [SimpleCmd](#simplecmd)
     - [Cursor mode](#cursor-mode)
     - [Change rotation center](#change-rotation-center)
-  + [Send notification](#send-notification)
-  + [View invalidation model](#view-invalidation-model)
-  + [Opengl debugging tools](#opengl-debugging-tools)
-  + [Multiplatform](#multiplatform)
-  + [Docker (mesa)](#docker-mesa)
-  + [Software rendered (mesa)](#software-rendered-mesa)
-  + [C# global usings (full)](#c%23-global-usings-full)
-  + [Gestures](#gestures)
+  - [Send notification](#send-notification)
+  - [View invalidation model](#view-invalidation-model)
+  - [Opengl debugging tools](#opengl-debugging-tools)
+  - [Multiplatform](#multiplatform)
+  - [Docker (mesa)](#docker-mesa)
+  - [Software rendered (mesa)](#software-rendered-mesa)
+  - [C# global usings (full)](#c%23-global-usings-full)
+  - [Gestures](#gestures)
     - [Mouse gestures](#mouse-gestures)
     - [Keybindings](#keybindings)
-* [Unit tests](#unit-tests)
-* [How this project was built](#how-this-project-was-built)
-  + [Documentation (github pages)](#documentation-github-pages)
+- [Unit tests](#unit-tests)
+- [How this project was built](#how-this-project-was-built)
+  - [Documentation (github pages)](#documentation-github-pages)
     - [Build and view locally](#build-and-view-locally)
     - [Build and commit into docs branch](#build-and-commit-into-docs-branch)
-* [References](#references)
+- [References](#references)
 <!-- TOCEND -->
 
 <hr/>
@@ -179,6 +180,7 @@ Click on the `example code` link to open source code of the example, read top to
 | [0019][es19] (mvvm) | [![img][e19]][e19] | Sphere vertex render and hittest scalability test.                                                                                                                           |
 | [0020][es20]        | customize gesture  | Customize key gesture.                                                                                                                                                       |
 | [0021][es21]        | [![img][e21]][e21] | Use of raycast to pick vertexes and define a new ucs.                                                                                                                        |
+| [0022][es22]        | [![img][e22]][e22] | Nurb surface join on two tubes                                                                                                                                               |
 | [0023][es23]        | [![img][e23]][e23] | Show 1-D fem element displacement using. Dependency: [BriefFiniteElement].                                                                                                   |
 | [0024][es24]        | [![img][e24]][e24] | Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: [BriefFiniteElement] |
 | [0025][es25]        | [![img][e25]][e25] | Nurb surface intersection generating nurb curves using [FeasibleTriIntersectionTests] extension method.                                                                      |
@@ -644,6 +646,7 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 [es19]: examples/example-0019/Views/MainWindow.axaml.cs
 [es20]: examples/example-0020/Program.cs
 [es21]: examples/example-0021/Views/MainWindow.axaml.cs
+[es22]: examples/example-0022/Program.cs
 [es23]: examples/example-0023/Program.cs
 [es24]: examples/example-0024/Program.cs
 [es25]: examples/example-0025/Program.cs
@@ -669,6 +672,7 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 [e18]: data/images/examples/0018.png
 [e19]: data/images/examples/0019.png
 [e21]: data/images/examples/0021.gif
+[e22]: data/images/examples/0022.png
 [e23]: data/images/examples/0023.png
 [e24]: data/images/examples/0024.png
 [e25]: data/images/examples/0025.png
