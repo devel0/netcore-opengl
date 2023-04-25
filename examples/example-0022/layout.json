@@ -18,8 +18,7 @@
             "Sizes": null,
             "Children": null,
             "LeafUID": 0,
-            "Index": 0,
-            "Debug": "21951804"
+            "Index": 0
           },
           {
             "SplitDirection": 0,
@@ -34,34 +33,29 @@
                 "Sizes": null,
                 "Children": null,
                 "LeafUID": 1,
-                "Index": 0,
-                "Debug": "52568400"
+                "Index": 0
               },
               {
                 "SplitDirection": null,
                 "Sizes": null,
                 "Children": null,
                 "LeafUID": 2,
-                "Index": 1,
-                "Debug": "21438230"
+                "Index": 1
               },
               {
                 "SplitDirection": null,
                 "Sizes": null,
                 "Children": null,
                 "LeafUID": 3,
-                "Index": 2,
-                "Debug": "5511595"
+                "Index": 2
               }
             ],
             "LeafUID": null,
-            "Index": 1,
-            "Debug": null
+            "Index": 1
           }
         ],
         "LeafUID": null,
-        "Index": 0,
-        "Debug": null
+        "Index": 0
       },
       {
         "SplitDirection": 1,
@@ -75,26 +69,22 @@
             "Sizes": null,
             "Children": null,
             "LeafUID": 4,
-            "Index": 0,
-            "Debug": "3784538"
+            "Index": 0
           },
           {
             "SplitDirection": null,
             "Sizes": null,
             "Children": null,
             "LeafUID": 5,
-            "Index": 1,
-            "Debug": "55520647"
+            "Index": 1
           }
         ],
         "LeafUID": null,
-        "Index": 1,
-        "Debug": null
+        "Index": 1
       }
     ],
     "LeafUID": null,
-    "Index": 0,
-    "Debug": null
+    "Index": 0
   },
   "UIDView": {
     "0": {
@@ -145,6 +135,7 @@
       "Far": 85.13927,
       "UseShadow": false,
       "ShadeWithEdge": false,
+      "VertexVisibility": false,
       "ShowCameraObject": false,
       "Lights": null
     },
@@ -196,6 +187,7 @@
       "Far": 84.71843,
       "UseShadow": false,
       "ShadeWithEdge": false,
+      "VertexVisibility": false,
       "ShowCameraObject": false,
       "Lights": null
     },
@@ -247,6 +239,7 @@
       "Far": 92.06148,
       "UseShadow": false,
       "ShadeWithEdge": false,
+      "VertexVisibility": false,
       "ShowCameraObject": false,
       "Lights": null
     },
@@ -298,6 +291,7 @@
       "Far": 87.60856,
       "UseShadow": false,
       "ShadeWithEdge": false,
+      "VertexVisibility": false,
       "ShowCameraObject": false,
       "Lights": null
     },
@@ -349,6 +343,7 @@
       "Far": 64.811,
       "UseShadow": false,
       "ShadeWithEdge": false,
+      "VertexVisibility": false,
       "ShowCameraObject": false,
       "Lights": null
     },
@@ -400,6 +395,7 @@
       "Far": 63.616478,
       "UseShadow": false,
       "ShadeWithEdge": true,
+      "VertexVisibility": false,
       "ShowCameraObject": false,
       "Lights": null
     }
@@ -412,9 +408,9 @@
         "Y": -7.7781744,
         "Z": 12.0
       },
-      "Ambient": "255, 255, 255",
-      "Diffuse": "255, 255, 255",
-      "Specular": "255, 255, 255",
+      "Ambient": "White",
+      "Diffuse": "White",
+      "Specular": "White",
       "Constant": 0.717393,
       "Linear": 0.0039627934,
       "Quadratic": 0.0,
@@ -436,5 +432,8 @@
       "ShowPoint": false
     }
   ],
-  "FocusedUIDView": 0
+  "FocusedUIDView": 0,
+  "OverrideAmbient": 0.45336235,
+  "OverrideDiffuse": 0.40417752,
+  "OverrideSpecular": 0.5873861
 }
