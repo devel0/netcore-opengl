@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pac-static-methods">Static Package Functions</a> &#124;
 <a href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Toolkit Class Reference</div></div>
 </div><!--header-->
@@ -194,7 +195,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab454eb37b2010c771b56c3a571ec3df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tilt camera [view] by rotating it's up vector around [view] z axis.  <br /></td></tr>
 <tr class="separator:ab454eb37b2010c771b56c3a571ec3df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add9448a2792ecb184dbf6bea89b1dbcc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#add9448a2792ecb184dbf6bea89b1dbcc">CameraRotate</a> (float sAngleXRad, float sAngleYRad, in Vector3 wCameraPos, in Vector3 wCameraTarget, in Vector3 wCameraUp, out Vector3 wRotatedCameraTarget, out Vector3 wRotatedCameraUp)</td></tr>
-<tr class="memdesc:add9448a2792ecb184dbf6bea89b1dbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the camera [view] a given rotation center [local]. REVIEW: add rotation center parameter and document.  <br /></td></tr>
+<tr class="memdesc:add9448a2792ecb184dbf6bea89b1dbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><br  />
+ Rotate the camera [view] a given rotation center [local]. <br  />
+  <br /></td></tr>
 <tr class="separator:add9448a2792ecb184dbf6bea89b1dbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a150f72f58dbe549c08e8b0b9105b573c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a150f72f58dbe549c08e8b0b9105b573c">ComputeSBBox</a> (IEnumerable&lt; Vector3 &gt; lPts, in Vector2 size, in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm, out Vector2 sMin, out Vector2 sMax, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>? lBBox=null)</td></tr>
 <tr class="memdesc:a150f72f58dbe549c08e8b0b9105b573c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the screen space bounding box (x,y) of all local space coordinates (x,y,z) given.  <br /></td></tr>
@@ -203,7 +206,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a34a2be2aea992e8ed01d06dd0c8fa180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the eye space bounding box (x,y,z) of all local space coordinates (x,y,z) given.  <br /></td></tr>
 <tr class="separator:a34a2be2aea992e8ed01d06dd0c8fa180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5695a180fa95a54f1310b72ad1d6343e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a5695a180fa95a54f1310b72ad1d6343e">PreventZFighting</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> bbox, in Matrix4x4 mm, in Matrix4x4 vm, in Vector3 cameraPos, out float near, out float far)</td></tr>
-<tr class="memdesc:a5695a180fa95a54f1310b72ad1d6343e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute best fitting near and far values based on local space bbox given. REVIEW.  <br /></td></tr>
+<tr class="memdesc:a5695a180fa95a54f1310b72ad1d6343e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute best fitting near and far values based on local space bbox given. <br  />
+  <br /></td></tr>
 <tr class="separator:a5695a180fa95a54f1310b72ad1d6343e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9de8ad2640f0fadcb8c11fbd4ca521ef"><td class="memItemLeft" align="right" valign="top">static Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a9de8ad2640f0fadcb8c11fbd4ca521ef">DeserializeMatrix4x4</a> (string txt)</td></tr>
 <tr class="memdesc:a9de8ad2640f0fadcb8c11fbd4ca521ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize to a Matrix4x4 from a string of 16 float space separated ( invariant ).<br  />
@@ -228,6 +232,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a477f49b72ab0d89c78fc58cae4895f37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a477f49b72ab0d89c78fc58cae4895f37">OrthoZoomFit</a> (IEnumerable&lt; Vector3 &gt; pts, in Vector2 size, in Matrix4x4 mm, in Matrix4x4 vm, in Matrix4x4 pm, float orthoZoom, float near, float far, Vector3 cameraPos, Vector3 cameraTarget, Vector3 cameraUp, out float fitOrthoZoom, out Vector3 panCameraPos, out Vector3 panCameraTarget)</td></tr>
 <tr class="memdesc:a477f49b72ab0d89c78fc58cae4895f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fit current model view for orthographic projection.  <br /></td></tr>
 <tr class="separator:a477f49b72ab0d89c78fc58cae4895f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae8313eec470130cc3fbc331e600b36"><td class="memItemLeft" align="right" valign="top">static List&lt; List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#acae8313eec470130cc3fbc331e600b36">GroupByAdjacency</a> (float tol, IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; lines)</td></tr>
+<tr class="memdesc:acae8313eec470130cc3fbc331e600b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">From a set of lines makes groups of them where each group is a set of lines that constitute a single polyline within lines sorted by adjacency (from,to not necessary contiguous).<br  />
+ <br  />
+ Lines with zero length will discarded.  <br /></td></tr>
+<tr class="separator:acae8313eec470130cc3fbc331e600b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa502fb55337b883a3515d971e923b94b"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa502fb55337b883a3515d971e923b94b">SortByAdjacency</a> (float tol, IList&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; lines)</td></tr>
+<tr class="memdesc:aa502fb55337b883a3515d971e923b94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort given line list by adjacency.  <br /></td></tr>
+<tr class="separator:aa502fb55337b883a3515d971e923b94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8136ef63b1bc53c6989e254d754919f0"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a8136ef63b1bc53c6989e254d754919f0">SortByAdjacency</a> (float tol, IList&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; lines, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_debug_vtx_mgr.html">DebugVtxMgr</a>? debug)</td></tr>
+<tr class="separator:a8136ef63b1bc53c6989e254d754919f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f6c5b35b540d674780a2fa86fcd6173"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a3f6c5b35b540d674780a2fa86fcd6173">ArbitraryAxisAlghorithm</a> (in Vector3 n, out Vector3 x, out Vector3 y, out Vector3 z)</td></tr>
 <tr class="memdesc:a3f6c5b35b540d674780a2fa86fcd6173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build world matrix using Arbitrary Axis Algorithm.  <br /></td></tr>
 <tr class="separator:a3f6c5b35b540d674780a2fa86fcd6173"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,6 +320,14 @@ Static Public Member Functions</h2></td></tr>
  Following some colors hue values:<br  />
   <br /></td></tr>
 <tr class="separator:abccdb5d845069533bcafcf38794c5836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f533f515b5ab52e7348d349be7ceb86"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; Vector3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a8f533f515b5ab52e7348d349be7ceb86">ParseVector3</a> (string vstr, int pointCnt=1)</td></tr>
+<tr class="memdesc:a8f533f515b5ab52e7348d349be7ceb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depending on given pointCnt argument make an invariant parse:  <br /></td></tr>
+<tr class="separator:a8f533f515b5ab52e7348d349be7ceb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-static-methods" name="pac-static-methods"></a>
+Static Package Functions</h2></td></tr>
+<tr class="memitem:aed3127fbfa7d45b8de5217f0e1832d8a"><td class="memItemLeft" align="right" valign="top">static List&lt; List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aed3127fbfa7d45b8de5217f0e1832d8a">GroupByAdjacency</a> (float tol, IList&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; lines, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_debug_vtx_mgr.html">DebugVtxMgr</a>? debug)</td></tr>
+<tr class="separator:aed3127fbfa7d45b8de5217f0e1832d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3f6c5b35b540d674780a2fa86fcd6173" name="a3f6c5b35b540d674780a2fa86fcd6173"></a>
@@ -468,16 +490,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Rotate the camera [view] a given rotation center [local]. REVIEW: add rotation center parameter and document. </p>
+<p><br  />
+ Rotate the camera [view] a given rotation center [local]. <br  />
+ </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sAngleXRad</td><td></td></tr>
-    <tr><td class="paramname">sAngleYRad</td><td></td></tr>
-    <tr><td class="paramname">wCameraPos</td><td></td></tr>
-    <tr><td class="paramname">wCameraTarget</td><td></td></tr>
-    <tr><td class="paramname">wCameraUp</td><td></td></tr>
-    <tr><td class="paramname">wRotatedCameraTarget</td><td></td></tr>
-    <tr><td class="paramname">wRotatedCameraUp</td><td></td></tr>
+    <tr><td class="paramname">sAngleXRad</td><td>Camera rotation screen X angle (rad)..</td></tr>
+    <tr><td class="paramname">sAngleYRad</td><td>Camera rotation screen Y angle (rad).</td></tr>
+    <tr><td class="paramname">wCameraPos</td><td>Actual camera position [world].</td></tr>
+    <tr><td class="paramname">wCameraTarget</td><td>Actual camera target [world].</td></tr>
+    <tr><td class="paramname">wCameraUp</td><td>Actual camera up [world].</td></tr>
+    <tr><td class="paramname">wRotatedCameraTarget</td><td>Rotated camera target [world].</td></tr>
+    <tr><td class="paramname">wRotatedCameraUp</td><td>Rotated camera up [world].</td></tr>
   </table>
   </dd>
 </dl>
@@ -1095,7 +1119,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a5695a180fa95a54f1310b72ad1d6343e" title="Compute best fitting near and far values based on local space bbox given. REVIEW.">SearchAThing.OpenGL.Core.Toolkit.PreventZFighting</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a5695a180fa95a54f1310b72ad1d6343e" title="Compute best fitting near and far values based on local space bbox given.">SearchAThing.OpenGL.Core.Toolkit.PreventZFighting</a></dd></dl>
 
 </div>
 </div>
@@ -1156,7 +1180,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ad9a376fbd100ab9feaf7101e98992043" title="Pan the view ( Orthogonal mode ) by the given screen translation coord generating new camera config.">SearchAThing.OpenGL.Core.Toolkit.OrthoPan</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a29118a66237c094ddfd5a935d5470dc5" title="Pan the view ( Perspective mode ) by the given screen translation coord generating new camera config.">SearchAThing.OpenGL.Core.Toolkit.PerspectivePan</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#add9448a2792ecb184dbf6bea89b1dbcc" title="Rotate the camera [view] a given rotation center [local]. REVIEW: add rotation center parameter and d...">SearchAThing.OpenGL.Core.Toolkit.CameraRotate</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ab454eb37b2010c771b56c3a571ec3df2" title="Tilt camera [view] by rotating it&#39;s up vector around [view] z axis.">SearchAThing.OpenGL.Core.Toolkit.CameraTilt</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a20cf96faf25b8c9335c595ddb25533bd" title="Zoom the view [eye] ( Perspective mode ) by the given scale factor.">SearchAThing.OpenGL.Core.Toolkit.PerspectiveZoom</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ad9a376fbd100ab9feaf7101e98992043" title="Pan the view ( Orthogonal mode ) by the given screen translation coord generating new camera config.">SearchAThing.OpenGL.Core.Toolkit.OrthoPan</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a29118a66237c094ddfd5a935d5470dc5" title="Pan the view ( Perspective mode ) by the given screen translation coord generating new camera config.">SearchAThing.OpenGL.Core.Toolkit.PerspectivePan</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#add9448a2792ecb184dbf6bea89b1dbcc" title="Rotate the camera [view] a given rotation center [local].">SearchAThing.OpenGL.Core.Toolkit.CameraRotate</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#ab454eb37b2010c771b56c3a571ec3df2" title="Tilt camera [view] by rotating it&#39;s up vector around [view] z axis.">SearchAThing.OpenGL.Core.Toolkit.CameraTilt</a>, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a20cf96faf25b8c9335c595ddb25533bd" title="Zoom the view [eye] ( Perspective mode ) by the given scale factor.">SearchAThing.OpenGL.Core.Toolkit.PerspectiveZoom</a></dd></dl>
 <p><br  />
   <br  />
   <br  />
@@ -1477,6 +1501,98 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>Color corresponding given range offset.</dd></dl>
 </li>
 </ul>
+
+</div>
+</div>
+<a id="acae8313eec470130cc3fbc331e600b36" name="acae8313eec470130cc3fbc331e600b36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae8313eec470130cc3fbc331e600b36">&#9670;&#160;</a></span>GroupByAdjacency() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; &gt; GroupByAdjacency </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt;&#160;</td>
+          <td class="paramname"><em>lines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>From a set of lines makes groups of them where each group is a set of lines that constitute a single polyline within lines sorted by adjacency (from,to not necessary contiguous).<br  />
+ <br  />
+ Lines with zero length will discarded. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tol</td><td>Comparision length tolerance.</td></tr>
+    <tr><td class="paramname">lines</td><td>Input lines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Line groups.</dd></dl>
+<p><br  />
+ </p><dl class="section see"><dt>See also</dt><dd>Ext.DistinctPoints(IEnumerable&lt;Line&gt;, float)</dd></dl>
+
+</div>
+</div>
+<a id="aed3127fbfa7d45b8de5217f0e1832d8a" name="aed3127fbfa7d45b8de5217f0e1832d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3127fbfa7d45b8de5217f0e1832d8a">&#9670;&#160;</a></span>GroupByAdjacency() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; &gt; GroupByAdjacency </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IList&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt;&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_debug_vtx_mgr.html">DebugVtxMgr</a>?&#160;</td>
+          <td class="paramname"><em>debug</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2818,6 +2934,49 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a8f533f515b5ab52e7348d349be7ceb86" name="a8f533f515b5ab52e7348d349be7ceb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f533f515b5ab52e7348d349be7ceb86">&#9670;&#160;</a></span>ParseVector3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt; Vector3 &gt; ParseVector3 </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>vstr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pointCnt</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Depending on given pointCnt argument make an invariant parse: </p>
+<ul>
+<li>(pointCnt=1) p1x,p1y,p1z;...</li>
+<li>(pointCnt=2) p1x,p1y,p1z,p2x,p2y,p2z;...</li>
+<li>(pointCnt=3) p1x,p1y,p1z,p2x,p2y,p2z,p3x,p3y,p3z;... </li>
+</ul>
+
+</div>
+</div>
 <a id="aa0108f9e641ec868a0bcf4c83c449366" name="aa0108f9e641ec868a0bcf4c83c449366"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0108f9e641ec868a0bcf4c83c449366">&#9670;&#160;</a></span>PerspectiveCenter()</h2>
 
@@ -3328,7 +3487,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Compute best fitting near and far values based on local space bbox given. REVIEW. </p>
+<p>Compute best fitting near and far values based on local space bbox given. <br  />
+ </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bbox</td><td>Local space bbox of model for which compute best near, far [local].</td></tr>
@@ -3794,6 +3954,99 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="aa502fb55337b883a3515d971e923b94b" name="aa502fb55337b883a3515d971e923b94b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa502fb55337b883a3515d971e923b94b">&#9670;&#160;</a></span>SortByAdjacency() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; SortByAdjacency </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IList&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt;&#160;</td>
+          <td class="paramname"><em>lines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sort given line list by adjacency. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tol</td><td>Comparision length tolerance.</td></tr>
+    <tr><td class="paramname">lines</td><td>Input lines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of lines sorted by their adjacency.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit_aa502fb55337b883a3515d971e923b94b_icgraph.svg" width="336" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8136ef63b1bc53c6989e254d754919f0" name="a8136ef63b1bc53c6989e254d754919f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8136ef63b1bc53c6989e254d754919f0">&#9670;&#160;</a></span>SortByAdjacency() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static List&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt; SortByAdjacency </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IList&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> &gt;&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_debug_vtx_mgr.html">DebugVtxMgr</a>?&#160;</td>
+          <td class="paramname"><em>debug</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9e5631ea34d72df36c940c5030322c86" name="a9e5631ea34d72df36c940c5030322c86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e5631ea34d72df36c940c5030322c86">&#9670;&#160;</a></span>ToDxfFace3D()</h2>
 
@@ -4053,6 +4306,7 @@ Here is the caller graph for this function:</div>
 <li>src/core/calc/Rotate.cs</li>
 <li>src/core/calc/Util.cs</li>
 <li>src/core/calc/Zoom.cs</li>
+<li>src/core/geom/Line.cs</li>
 <li>src/core/geom/Matrix4x4.cs</li>
 <li>src/core/primitive/GLLine.cs</li>
 <li>src/core/primitive/IGLTriangle.cs</li>
@@ -4060,6 +4314,7 @@ Here is the caller graph for this function:</div>
 <li>src/core/render/Figures.Text.cs</li>
 <li>src/core/render/Toolkit.cs</li>
 <li>src/core/types/Utils.cs</li>
+<li>src/core/types/Vector3.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

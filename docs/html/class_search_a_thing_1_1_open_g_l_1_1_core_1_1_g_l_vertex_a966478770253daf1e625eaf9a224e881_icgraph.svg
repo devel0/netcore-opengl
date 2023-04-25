@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a80a0f1dc40e83819a36c1e43ae4f9ac5" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a4cace370a2a4e2ed7955207d2190d772" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="783,-54 628,-54 628,-24 783,-24 783,-54"/>
 <text text-anchor="start" x="636" y="-42" font-family="Helvetica,sans-Serif" font-size="10.00">SearchAThing.OpenGL.Core.</text>
 <text text-anchor="middle" x="705.5" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">GLVertexManager.AddVertex</text>

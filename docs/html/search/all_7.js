@@ -5,6 +5,7 @@ var searchData=
   ['highlight_2',['Highlight',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#a6d4d2b7041ce81e2ed0051d9d118ec3a',1,'SearchAThing.OpenGL.Core.GLFigureBase.Highlight'],['../interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a6d4d2b7041ce81e2ed0051d9d118ec3a',1,'SearchAThing.OpenGL.Core.IGLFigure.Highlight']]],
   ['highlightedvertexes_3',['HighlightedVertexes',['../class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_g_l_dev_tool.html#a64e16f4ff71924d13022e0bdb45f1592',1,'SearchAThing::OpenGL::GUI::GLDevTool']]],
   ['hit_4',['Hit',['../class_debounce_action.html#a74b551942bdd68db2483000a30ce156f',1,'DebounceAction']]],
-  ['hsltorgb_5',['HslToRgb',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_color_converter_patch.html#a4c5011a797943901f7cfaf75ce955a20',1,'SearchAThing::OpenGL::Core::ColorConverterPatch']]],
-  ['hsvtorgb_6',['HsvToRgb',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_color_converter_patch.html#a15fbd9c285fdc44136b628e9bafde789',1,'SearchAThing::OpenGL::Core::ColorConverterPatch']]]
+  ['hitcoord_5',['HitCoord',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ray_cast_hit_test.html#afb3f628a4d3185f3a8740c009c4a6b47',1,'SearchAThing::OpenGL::Core::RayCastHitTest']]],
+  ['hsltorgb_6',['HslToRgb',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_color_converter_patch.html#a4c5011a797943901f7cfaf75ce955a20',1,'SearchAThing::OpenGL::Core::ColorConverterPatch']]],
+  ['hsvtorgb_7',['HsvToRgb',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_color_converter_patch.html#a15fbd9c285fdc44136b628e9bafde789',1,'SearchAThing::OpenGL::Core::ColorConverterPatch']]]
 ];

@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a80a0f1dc40e83819a36c1e43ae4f9ac5" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a4cace370a2a4e2ed7955207d2190d772" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="605,-40 538,-40 538,-21 605,-21 605,-40"/>
 <text text-anchor="middle" x="571.5" y="-28" font-family="Helvetica,sans-Serif" font-size="10.00">AddVertex</text>
 </a>

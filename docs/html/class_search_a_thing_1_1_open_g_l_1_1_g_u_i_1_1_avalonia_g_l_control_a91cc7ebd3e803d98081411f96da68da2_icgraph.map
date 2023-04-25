@@ -1,0 +1,4 @@
+<map id="GetViewNfo" name="GetViewNfo">
+<area shape="rect" id="node1" title="Retrieve an object that can be serialized to save current GLControl view config." alt="" coords="104,5,204,31"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#a748a5f720b44308da0d5468b9360d556" title="Split current view in given direction." alt="" coords="5,5,56,31"/>
+</map>

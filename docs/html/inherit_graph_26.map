@@ -1,12 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="24,112,123,137"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_context.html" title="Gl context object with purpose to:" alt="" coords="248,5,339,31"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_shader_storage_block.html" title="Manage mapping of given template typed data to gpu memory." alt="" coords="189,55,397,80"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_texture2_d.html" title="Handle reference to gl texture." alt="" coords="241,219,345,244"/>
-<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_array_object.html" title="Helper to define and enable Vertex Array Object in order to declare how to access vertex buffer objec..." alt="" coords="215,105,372,145"/>
-<area shape="rect" id="node6" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_buffer_object.html" title="Manage mapping of given template typed data to gpu memory." alt="" coords="194,169,393,195"/>
-<area shape="rect" id="node7" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_context_object.html" title="General inteface for objects that carrier a reference to Gl context." alt="" coords="5,268,141,293"/>
-<area shape="rect" id="node8" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html" title="Gl model." alt="" coords="254,268,333,293"/>
-<area shape="rect" id="node9" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_pipeline.html" title="Gl pipeline object. &#160;Contains vertex, geometry and fragment shaders where defined and helper method t..." alt="" coords="248,317,339,343"/>
-<area shape="rect" id="node10" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_texture2_d.html" title="Interface that describe the object hold a reference to a gl texture 2d." alt="" coords="19,219,127,244"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,159,31"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control_split.html" title="Gl split control attached to GLWindow for stand&#45;alone application or Window on mvvm applications...." alt="" coords="207,5,377,31"/>
 </map>

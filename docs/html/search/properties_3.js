@@ -6,5 +6,6 @@ var searchData=
   ['device_3',['Device',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html#a67560710a21b52e0cb7dba401d53853b',1,'SearchAThing::OpenGL::Core::GLControl']]],
   ['diameter_4',['Diameter',['../class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_arrow.html#a90c9c7c0eafa124c8fd3b3a3d95db7d4',1,'SearchAThing::OpenGL::Shapes::Arrow']]],
   ['diffuse_5',['Diffuse',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point_light.html#aef0491ce5e70471e8d966b75a042f7e7',1,'SearchAThing::OpenGL::Core::GLPointLight']]],
-  ['divisions_6',['Divisions',['../class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_contour_legend.html#a79798029253f41441e224e75cfe4aa00',1,'SearchAThing::OpenGL::Shapes::ContourLegend']]]
+  ['distance_6',['Distance',['../class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ray_cast_hit_test.html#ad387fb71b61baf6ce35cb7c4d5c16b17',1,'SearchAThing::OpenGL::Core::RayCastHitTest']]],
+  ['divisions_7',['Divisions',['../class_search_a_thing_1_1_open_g_l_1_1_shapes_1_1_contour_legend.html#a79798029253f41441e224e75cfe4aa00',1,'SearchAThing::OpenGL::Shapes::ContourLegend']]]
 ];

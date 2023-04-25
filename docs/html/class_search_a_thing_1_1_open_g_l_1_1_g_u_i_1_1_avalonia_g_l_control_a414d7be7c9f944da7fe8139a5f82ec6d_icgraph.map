@@ -1,6 +1,0 @@
-<map id="Notify" name="Notify">
-<area shape="rect" id="node1" title="Create an avalonia notification message." alt="" coords="361,31,423,56"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#a779fe8b859e5f40b443acbfc761b287e" title="Load all GLControl view config from the given pathfilename." alt="" coords="183,5,313,31"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#adf5cb467d2318481bab5edf66a3d5a54" title="Save all GLControl view config to the given pathfilename." alt="" coords="183,55,313,80"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_g_u_i_1_1_avalonia_g_l_control.html#a7d2bb81d6413a78c27bc49ad7ef0f158" title=" " alt="" coords="5,31,135,56"/>
-</map>

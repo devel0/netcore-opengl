@@ -95,9 +95,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af11045b81eaabadedbbafba012159e79"><td class="memItemLeft" align="right" valign="top">Vector3?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#af11045b81eaabadedbbafba012159e79">Intersect</a> (in Matrix4x4 plane)</td></tr>
 <tr class="memdesc:af11045b81eaabadedbbafba012159e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if this line intersect given plane and retrieve intersection point or null if no intersect.  <br /></td></tr>
 <tr class="separator:af11045b81eaabadedbbafba012159e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c0d241ed350710f5d8d74a740a653a4"><td class="memItemLeft" align="right" valign="top">float?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#a2c0d241ed350710f5d8d74a740a653a4">Contains</a> (float tol, in Vector3 p)</td></tr>
-<tr class="memdesc:a2c0d241ed350710f5d8d74a740a653a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this line contains given point within given tolerance.  <br /></td></tr>
-<tr class="separator:a2c0d241ed350710f5d8d74a740a653a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63832dd9e2ba3e1f80da3b567eea078c"><td class="memItemLeft" align="right" valign="top">Vector3?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#a63832dd9e2ba3e1f80da3b567eea078c">Intersect</a> (float tol, in <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a> other, out float dst, bool thisAsSegment=false, bool otherAsSegment=false)</td></tr>
+<tr class="memdesc:a63832dd9e2ba3e1f80da3b567eea078c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intresect this line to the given other.  <br /></td></tr>
+<tr class="separator:a63832dd9e2ba3e1f80da3b567eea078c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd918f5fd0c497eac1263b66e0f445c"><td class="memItemLeft" align="right" valign="top">float?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#addd918f5fd0c497eac1263b66e0f445c">Contains</a> (float tol, in Vector3 p, out Vector3 prj, bool segmentMode=false)</td></tr>
+<tr class="memdesc:addd918f5fd0c497eac1263b66e0f445c"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this line contains given point within given tolerance.  <br /></td></tr>
+<tr class="separator:addd918f5fd0c497eac1263b66e0f445c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa73e7c4dd1df5fd5fbf81c7764ee1533"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html#aa73e7c4dd1df5fd5fbf81c7764ee1533">ToString</a> ()</td></tr>
 <tr class="separator:aa73e7c4dd1df5fd5fbf81c7764ee1533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -134,8 +137,8 @@ Properties</h2></td></tr>
  Internally encoded as From and V vectors, where To = From + V.<br  />
  Can be created through static methods FromTo and PointV. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2c0d241ed350710f5d8d74a740a653a4" name="a2c0d241ed350710f5d8d74a740a653a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c0d241ed350710f5d8d74a740a653a4">&#9670;&#160;</a></span>Contains()</h2>
+<a id="addd918f5fd0c497eac1263b66e0f445c" name="addd918f5fd0c497eac1263b66e0f445c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd918f5fd0c497eac1263b66e0f445c">&#9670;&#160;</a></span>Contains()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -150,7 +153,19 @@ Properties</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in Vector3&#160;</td>
-          <td class="paramname"><em>p</em>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out Vector3&#160;</td>
+          <td class="paramname"><em>prj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>segmentMode</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -165,10 +180,17 @@ Properties</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">tol</td><td>Comparision tolerance.</td></tr>
     <tr><td class="paramname">p</td><td>Point to test if its contained in this line.</td></tr>
+    <tr><td class="paramname">prj</td><td>Point projected onto this line.</td></tr>
+    <tr><td class="paramname">segmentMode</td><td>If true line will treated as a segment ( Default: false ).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Null if line not contain given point, a non null float that represent distance to projected point if contained under given tolerance.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Distance to projected point if contained under given tolerance, null otherwise.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line_addd918f5fd0c497eac1263b66e0f445c_icgraph.svg" width="340" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -219,13 +241,72 @@ Properties</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line_a88d6552e1c778b684f64bf8745f4b21e_icgraph.svg" width="331" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line_a88d6552e1c778b684f64bf8745f4b21e_icgraph.svg" width="331" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
+<a id="a63832dd9e2ba3e1f80da3b567eea078c" name="a63832dd9e2ba3e1f80da3b567eea078c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63832dd9e2ba3e1f80da3b567eea078c">&#9670;&#160;</a></span>Intersect() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3? Intersect </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line.html">Line</a>&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>thisAsSegment</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>otherAsSegment</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Intresect this line to the given other. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tol</td><td>Length tolerance comparision.</td></tr>
+    <tr><td class="paramname">other</td><td>Other line.</td></tr>
+    <tr><td class="paramname">dst</td><td>Distance between two intersecting lines.</td></tr>
+    <tr><td class="paramname">thisAsSegment</td><td>Treat this line as a segment from,to.</td></tr>
+    <tr><td class="paramname">otherAsSegment</td><td>Treat other line as a segment from,to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Intersection point or null if line parallel or no intersects.</dd></dl>
+
+</div>
+</div>
 <a id="af11045b81eaabadedbbafba012159e79" name="af11045b81eaabadedbbafba012159e79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af11045b81eaabadedbbafba012159e79">&#9670;&#160;</a></span>Intersect()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af11045b81eaabadedbbafba012159e79">&#9670;&#160;</a></span>Intersect() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,6 +330,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Intersection point or null if no intersection found.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_line_af11045b81eaabadedbbafba012159e79_icgraph.svg" width="340" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>

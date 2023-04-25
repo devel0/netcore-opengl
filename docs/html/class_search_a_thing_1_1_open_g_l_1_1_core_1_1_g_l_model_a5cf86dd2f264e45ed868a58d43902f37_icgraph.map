@@ -1,0 +1,5 @@
+<map id="ClearSelection" name="ClearSelection">
+<area shape="rect" id="node1" title="Clear current selection ( of figures, primitives ) and cancel select command." alt="" coords="263,35,379,60"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#aa8624fb66af820e280c7457b6e1c814d" title="Delete selected primitives/figures." alt="" coords="49,5,171,31"/>
+<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html#a1f9d3b563e9020640d0bc4ed4680e7fe" title="Set the rotation center for model and camera." alt="" coords="5,55,215,95"/>
+</map>

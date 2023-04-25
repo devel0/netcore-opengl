@@ -132,9 +132,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26d94df3425e3f0f98fe8b51effca559"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#a26d94df3425e3f0f98fe8b51effca559">Move</a> (in Vector3 delta)</td></tr>
 <tr class="memdesc:a26d94df3425e3f0f98fe8b51effca559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new bounding box with Min, Max moved by the given wcs delta.  <br /></td></tr>
 <tr class="separator:a26d94df3425e3f0f98fe8b51effca559"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504e96fd7591cdc3e3e9f20766632e43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#a504e96fd7591cdc3e3e9f20766632e43">Contains</a> (float tol, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> other, bool strictly=false, bool testZ=false)</td></tr>
-<tr class="memdesc:a504e96fd7591cdc3e3e9f20766632e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">WCS tests if given other bounding box is contained (with tolerance) to this one.  <br /></td></tr>
-<tr class="separator:a504e96fd7591cdc3e3e9f20766632e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ebe670cbbab48a4676c0b582377b34"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#a95ebe670cbbab48a4676c0b582377b34">Intersects</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> other)</td></tr>
+<tr class="memdesc:a95ebe670cbbab48a4676c0b582377b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if this bbox and the other given intersects.  <br /></td></tr>
+<tr class="separator:a95ebe670cbbab48a4676c0b582377b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248cf4df1727b97ccdbfcdc32a90c37c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#a248cf4df1727b97ccdbfcdc32a90c37c">Intersects</a> (float tol, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> other)</td></tr>
+<tr class="memdesc:a248cf4df1727b97ccdbfcdc32a90c37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if this bbox and the other given intersects.  <br /></td></tr>
+<tr class="separator:a248cf4df1727b97ccdbfcdc32a90c37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3341846514e5f8ad0278e4188ebf4ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#ab3341846514e5f8ad0278e4188ebf4ab">Contains</a> (float tol, <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> other, bool strictly=false, bool testZ=true)</td></tr>
+<tr class="memdesc:ab3341846514e5f8ad0278e4188ebf4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">WCS tests if given other bounding box is contained (with tolerance) to this one.  <br /></td></tr>
+<tr class="separator:ab3341846514e5f8ad0278e4188ebf4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada68b183e8d8af4a85b31572fef4ab9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#ada68b183e8d8af4a85b31572fef4ab9a">Transform</a> (Matrix4x4 m)</td></tr>
 <tr class="memdesc:ada68b183e8d8af4a85b31572fef4ab9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new bbox that is the given one with extensions transformed by the given transform matrix.  <br /></td></tr>
 <tr class="separator:ada68b183e8d8af4a85b31572fef4ab9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +179,10 @@ Properties</h2></td></tr>
 <tr class="memitem:a8ff9e82f5ca20b5e0312c02b8ff76ce4"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; Vector3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#a8ff9e82f5ca20b5e0312c02b8ff76ce4">Points</a><code> [get]</code></td></tr>
 <tr class="memdesc:a8ff9e82f5ca20b5e0312c02b8ff76ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate bounding box eight points.  <br /></td></tr>
 <tr class="separator:a8ff9e82f5ca20b5e0312c02b8ff76ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4b9062381dbc3feb7501a4f20596ab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html#a3c4b9062381dbc3feb7501a4f20596ab">TolHint</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3c4b9062381dbc3feb7501a4f20596ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve length comparision tolerance hint from bbox size.<br  />
+ If bbox empty a default tolerance DefaultTolerance will retrieved.  <br /></td></tr>
+<tr class="separator:a3c4b9062381dbc3feb7501a4f20596ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Bounding box of a set of points.<br  />
@@ -440,8 +450,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a504e96fd7591cdc3e3e9f20766632e43" name="a504e96fd7591cdc3e3e9f20766632e43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a504e96fd7591cdc3e3e9f20766632e43">&#9670;&#160;</a></span>Contains()</h2>
+<a id="ab3341846514e5f8ad0278e4188ebf4ab" name="ab3341846514e5f8ad0278e4188ebf4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3341846514e5f8ad0278e4188ebf4ab">&#9670;&#160;</a></span>Contains()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,7 +478,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>testZ</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>testZ</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -484,7 +494,7 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">tol</td><td>Comparision tolerance.</td></tr>
     <tr><td class="paramname">other</td><td>Other bbox to test if contained into this one.</td></tr>
     <tr><td class="paramname">strictly</td><td>If true, test will fails if one wcs ordinate of other bbox extensions equals to this one.</td></tr>
-    <tr><td class="paramname">testZ</td><td>If false tests acts only for x, y bounding box extension components.</td></tr>
+    <tr><td class="paramname">testZ</td><td>If false tests acts only for x, y bounding box extension components (Default: true).</td></tr>
   </table>
   </dd>
 </dl>
@@ -527,6 +537,79 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if two bbox are equals (with tolerance).</dd></dl>
+
+</div>
+</div>
+<a id="a95ebe670cbbab48a4676c0b582377b34" name="a95ebe670cbbab48a4676c0b582377b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ebe670cbbab48a4676c0b582377b34">&#9670;&#160;</a></span>Intersects() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Intersects </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if this bbox and the other given intersects. </p>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Other bbox to test intersects with.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if one of two box have at least one point inside the other.<br  />
+ Returns false if one of the given boxes is empty.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box_a95ebe670cbbab48a4676c0b582377b34_icgraph.svg" width="348" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a248cf4df1727b97ccdbfcdc32a90c37c" name="a248cf4df1727b97ccdbfcdc32a90c37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248cf4df1727b97ccdbfcdc32a90c37c">&#9670;&#160;</a></span>Intersects() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Intersects </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if this bbox and the other given intersects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tol</td><td>Comparision length tolerance.</td></tr>
+    <tr><td class="paramname">other</td><td>Other bbox to test intersects with.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if one of two box have at least one point inside the other.<br  />
+ Returns false if one of the given boxes is empty.</dd></dl>
 
 </div>
 </div>
@@ -936,6 +1019,33 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Bounding box size [cs]. </p>
+
+</div>
+</div>
+<a id="a3c4b9062381dbc3feb7501a4f20596ab" name="a3c4b9062381dbc3feb7501a4f20596ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4b9062381dbc3feb7501a4f20596ab">&#9670;&#160;</a></span>TolHint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TolHint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve length comparision tolerance hint from bbox size.<br  />
+ If bbox empty a default tolerance DefaultTolerance will retrieved. </p>
+<p><br  />
+ </p>
 
 </div>
 </div>

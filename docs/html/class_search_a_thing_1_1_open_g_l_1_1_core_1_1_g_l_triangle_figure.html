@@ -98,9 +98,16 @@ Collaboration diagram for GLTriangleFigure:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a58c66bd897e3456ac375692c61843611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a58c66bd897e3456ac375692c61843611">RebuildNormal</a> ()</td></tr>
-<tr class="memdesc:a58c66bd897e3456ac375692c61843611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute ComputeNormal function foreach triangle of this figure updating GLVertex.Normal.  <br /></td></tr>
-<tr class="separator:a58c66bd897e3456ac375692c61843611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1376b783609151171384a003b3f24d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a7e1376b783609151171384a003b3f24d">SetupComputeNormal</a> (bool mean=false, <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a>? computeNormal=null)</td></tr>
+<tr class="memdesc:a7e1376b783609151171384a003b3f24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the triangle compute normal function.<br  />
+ If no argument given a default per triangle normal compute will be done.<br  />
+ <br  />
+ Changing this property imply GLTriangleFigure.RebuildNormal event.  <br /></td></tr>
+<tr class="separator:a7e1376b783609151171384a003b3f24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae4d6ebe2f077dddf326530cc61aefb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#adae4d6ebe2f077dddf326530cc61aefb">RebuildNormal</a> (bool onlyMean=false)</td></tr>
+<tr class="memdesc:adae4d6ebe2f077dddf326530cc61aefb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute ComputeNormal function foreach triangle of this figure updating GLVertex.Normal.<br  />
+ Optionally mean these values if ComputeNormalMean was set.  <br /></td></tr>
+<tr class="separator:adae4d6ebe2f077dddf326530cc61aefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ecce5c7ddfa52366005c431af8ffce4"><td class="memItemLeft" align="right" valign="top">override? <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html">GLFigureBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a8ecce5c7ddfa52366005c431af8ffce4">Mirror</a> (in Matrix4x4 xyPlane)</td></tr>
 <tr class="separator:a8ecce5c7ddfa52366005c431af8ffce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a435c2fb114135e8372d7fe0560f6749a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a435c2fb114135e8372d7fe0560f6749a">GLTriangleFigure</a> (params <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html">GLTriangle</a>[] triangles)</td></tr>
@@ -109,7 +116,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae16adf16ba57ef6dbeab1303d5f2cae6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#ae16adf16ba57ef6dbeab1303d5f2cae6">GLTriangleFigure</a> (IEnumerable&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html">GLTriangle</a> &gt; triangles)</td></tr>
 <tr class="memdesc:ae16adf16ba57ef6dbeab1303d5f2cae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a triangle typed figure with the given set of GLTriangle.  <br /></td></tr>
 <tr class="separator:ae16adf16ba57ef6dbeab1303d5f2cae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b2c90dc3fd16bde8e80a6485aba101"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a02b2c90dc3fd16bde8e80a6485aba101">SimpleCmd</a> ()</td></tr>
+<tr class="memdesc:a02b2c90dc3fd16bde8e80a6485aba101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve simple cmd for a list of triangles.<br  />
+ Coordinates of v1,v2,v3 are separated with comma so there are 9 float separated by comma.<br  />
+ Further triangles are appended by semi-colon separator. [t ]ax1,ay1,az1,ax2,ay2,az2,ax3,ay3,az3;bx1,by1,bz1,bx2,by2,bz2,bx3,by3,bz3;...  <br /></td></tr>
+<tr class="separator:a02b2c90dc3fd16bde8e80a6485aba101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html">GLFigureTypeBase&lt; GLTriangle &gt;</a></td></tr>
+<tr class="memitem:a868085a831e55e567dc4e0606a57a700 inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html#a868085a831e55e567dc4e0606a57a700">RemovePrimitive</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html">GLPrimitiveBase</a> primitive)</td></tr>
+<tr class="memdesc:a868085a831e55e567dc4e0606a57a700 inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove primitive from this figure.  <br /></td></tr>
+<tr class="separator:a868085a831e55e567dc4e0606a57a700 inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad529f19fecdcea43428f6d5760e549df inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html#ad529f19fecdcea43428f6d5760e549df">Add</a> (P primitive)</td></tr>
 <tr class="memdesc:ad529f19fecdcea43428f6d5760e549df inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add given primitive to this figure.  <br /></td></tr>
 <tr class="separator:ad529f19fecdcea43428f6d5760e549df inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +141,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afe4c76b898be1ea0da41170382323f03 inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a figure with the set of given primitives all of the same type.  <br /></td></tr>
 <tr class="separator:afe4c76b898be1ea0da41170382323f03 inherit pub_methods_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html">IGLTriangleFigure</a></td></tr>
+<tr class="memitem:aadd2b8da513fcd2a7b40036d1e79187d inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#aadd2b8da513fcd2a7b40036d1e79187d">SetupComputeNormal</a> (bool mean, <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a>? computeNormal)</td></tr>
+<tr class="memdesc:aadd2b8da513fcd2a7b40036d1e79187d inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the triangle compute normal function.<br  />
+ If no argument given a default per triangle normal compute will be done.<br  />
+ <br  />
+ Changing this property imply GLTriangleFigure.RebuildNormal event.  <br /></td></tr>
+<tr class="separator:aadd2b8da513fcd2a7b40036d1e79187d inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf043dea5f5cca5971083f4072e9a72 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#a6bf043dea5f5cca5971083f4072e9a72">Add</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html">GLTriangle</a> point)</td></tr>
 <tr class="memdesc:a6bf043dea5f5cca5971083f4072e9a72 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add given point to the figure primitives set.  <br /></td></tr>
 <tr class="separator:a6bf043dea5f5cca5971083f4072e9a72 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,9 +158,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab9adfea0e765ab447b8ce7730a6cd812 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke FigureInvalidated.<br  />
  Used for internal purpose by the GLPrimitiveBase.  <br /></td></tr>
 <tr class="separator:ab9adfea0e765ab447b8ce7730a6cd812 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab42b278455aacd384cac670aec8746e8 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#ab42b278455aacd384cac670aec8746e8">OBBox</a> (in Matrix4x4? cs=null)</td></tr>
-<tr class="memdesc:ab42b278455aacd384cac670aec8746e8 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object space bbox of this figure vertexes.  <br /></td></tr>
-<tr class="separator:ab42b278455aacd384cac670aec8746e8 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87298d83c0adfb590c5efc0ea5f98806 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a87298d83c0adfb590c5efc0ea5f98806">RemovePrimitive</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html">GLPrimitiveBase</a> primitive)</td></tr>
+<tr class="memdesc:a87298d83c0adfb590c5efc0ea5f98806 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove primitive from this figure.  <br /></td></tr>
+<tr class="separator:a87298d83c0adfb590c5efc0ea5f98806 inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64a102bff9af15b58f538d8873ca43a inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#ab64a102bff9af15b58f538d8873ca43a">SimpleCmd</a> ()</td></tr>
+<tr class="memdesc:ab64a102bff9af15b58f538d8873ca43a inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve e simple cmd representation of this figure.<br  />
+ Its a textual representation of figure information useful to regen in a separate tool.  <br /></td></tr>
+<tr class="separator:ab64a102bff9af15b58f538d8873ca43a inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html">IGLVertexManagerObject</a></td></tr>
 <tr class="memitem:ab455657ff8fe6ab2ad42f00cac28404c inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html">IGLVertexManagerObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html#ab455657ff8fe6ab2ad42f00cac28404c">Copy</a> ()</td></tr>
 <tr class="memdesc:ab455657ff8fe6ab2ad42f00cac28404c inherit pub_methods_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of this gl vertex manager object copying all relevant data except the ParentVertexManager that will default to null for copies object until added to a vertex manager.  <br /></td></tr>
@@ -165,16 +190,15 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a07158dfde12ee83dd5667011f19bd8ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_texture2_d.html">IGLTexture2D</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a07158dfde12ee83dd5667011f19bd8ab">Texture2D</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a07158dfde12ee83dd5667011f19bd8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional texture 2d object associated to this triangle.<br  />
+<tr class="memitem:ad25935fa49db7b58da08d25ede1c27a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_texture2_d.html">GLTexture2D</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#ad25935fa49db7b58da08d25ede1c27a2">Texture2D</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad25935fa49db7b58da08d25ede1c27a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional texture 2d object associated to this triangle.<br  />
  TextureST vertex coords of triangles vertexes will be used to map the texture.<br  />
  Changing this property emits IGLFigure.FigureInvalidated event.  <br /></td></tr>
-<tr class="separator:a07158dfde12ee83dd5667011f19bd8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91cd1fb44a5144be16e2a98794955939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a91cd1fb44a5144be16e2a98794955939">ComputeNormal</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a91cd1fb44a5144be16e2a98794955939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute triangle normal function ( Default: GLTriangleFigure.DefaultComputeNormal ).<br  />
- Arguments are IGLTriangle, IGLVertex.<br  />
- Changing this property imply GLTriangleFigure.RebuildNormal event.  <br /></td></tr>
+<tr class="separator:ad25935fa49db7b58da08d25ede1c27a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cd1fb44a5144be16e2a98794955939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a91cd1fb44a5144be16e2a98794955939">ComputeNormal</a> = <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#ae500d8096fb3c1a49f783d5cc853a4e4">DefaultComputeNormal</a><code> [get]</code></td></tr>
 <tr class="separator:a91cd1fb44a5144be16e2a98794955939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04ce63ce6145c33d90e0310732498b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#ab04ce63ce6145c33d90e0310732498b0">ComputeNormalMean</a><code> [get]</code></td></tr>
+<tr class="separator:ab04ce63ce6145c33d90e0310732498b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac08ecb7ecfd8828abc1f96ec5f326bc1"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#a24d2d8d5c26e731acd3ab7ac1814fb22">GLPrimitiveType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#ac08ecb7ecfd8828abc1f96ec5f326bc1">PrimitiveType</a><code> [get]</code></td></tr>
 <tr class="memdesc:ac08ecb7ecfd8828abc1f96ec5f326bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum that describe which type underlying to the instance.  <br /></td></tr>
 <tr class="separator:ac08ecb7ecfd8828abc1f96ec5f326bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,16 +210,11 @@ Properties</h2></td></tr>
 <tr class="memdesc:a8843e8cd85bf6704bc5cf653fcfcea3e inherit properties_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">A figure can contains primitives that in turn can contains vertexes.  <br /></td></tr>
 <tr class="separator:a8843e8cd85bf6704bc5cf653fcfcea3e inherit properties_class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html">IGLTriangleFigure</a></td></tr>
-<tr class="memitem:a07158dfde12ee83dd5667011f19bd8ab inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_texture2_d.html">IGLTexture2D</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#a07158dfde12ee83dd5667011f19bd8ab">Texture2D</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a07158dfde12ee83dd5667011f19bd8ab inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional texture 2d object associated to this triangle.<br  />
+<tr class="memitem:ad25935fa49db7b58da08d25ede1c27a2 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_texture2_d.html">GLTexture2D</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#ad25935fa49db7b58da08d25ede1c27a2">Texture2D</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad25935fa49db7b58da08d25ede1c27a2 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional texture 2d object associated to this triangle.<br  />
  TextureST vertex coords of triangles vertexes will be used to map the texture.<br  />
  Changing this property emits IGLFigure.FigureInvalidated event.  <br /></td></tr>
-<tr class="separator:a07158dfde12ee83dd5667011f19bd8ab inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91cd1fb44a5144be16e2a98794955939 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#a91cd1fb44a5144be16e2a98794955939">ComputeNormal</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a91cd1fb44a5144be16e2a98794955939 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute triangle normal function ( Default: GLTriangleFigure.DefaultComputeNormal ).<br  />
- Arguments are IGLTriangle, IGLVertex.<br  />
- Changing this property imply GLTriangleFigure.RebuildNormal event.  <br /></td></tr>
-<tr class="separator:a91cd1fb44a5144be16e2a98794955939 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad25935fa49db7b58da08d25ede1c27a2 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a></td></tr>
 <tr class="memitem:a68c5f16a6da6e7ce344ec87052cd27f9 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">ReadOnlyObservableCollection&lt; <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html">GLPrimitiveBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a68c5f16a6da6e7ce344ec87052cd27f9">Primitives</a><code> [get]</code></td></tr>
 <tr class="memdesc:a68c5f16a6da6e7ce344ec87052cd27f9 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">A figure can contains primitives that in turn can contains vertexes.  <br /></td></tr>
@@ -230,10 +249,28 @@ Properties</h2></td></tr>
  <br  />
  Changing this property emits IGLFigure.FigureInvalidated event.  <br /></td></tr>
 <tr class="separator:a6d4d2b7041ce81e2ed0051d9d118ec3a inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0486f226bd7cb1367f05050fae6159bf inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a0486f226bd7cb1367f05050fae6159bf">Selected</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0486f226bd7cb1367f05050fae6159bf inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if figure is actually selected.<br  />
+ It true the figure is listed in model selected figures GLModel.SelectedFigures.  <br /></td></tr>
+<tr class="separator:a0486f226bd7cb1367f05050fae6159bf inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bf1d2739f5da0ee58ef9fcea9e44fe inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">float?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a88bf1d2739f5da0ee58ef9fcea9e44fe">Alpha</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a88bf1d2739f5da0ee58ef9fcea9e44fe inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow to change alpha (0:full transparent, 1:full opaque) of the figure without the need to change primitives color. If null figure primitives alpha will not overriden. (Default: null)<br  />
+ Changing this property emits IGLFigure.FigureInvalidated event.  <br /></td></tr>
+<tr class="separator:a88bf1d2739f5da0ee58ef9fcea9e44fe inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab715c200d856467c3cb630f1fddfb030 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#ab715c200d856467c3cb630f1fddfb030">Indexes</a><code> [get]</code></td></tr>
 <tr class="memdesc:ab715c200d856467c3cb630f1fddfb030 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of vertex manager vertex indexes used by this figure.<br  />
  Used in the final render phase where GL.DrawElements take place to mapped as opengl ElementArrayBuffer.  <br /></td></tr>
 <tr class="separator:ab715c200d856467c3cb630f1fddfb030 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdae995505975f74a24122cd6ef66d8 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a5fdae995505975f74a24122cd6ef66d8">LBBox</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5fdae995505975f74a24122cd6ef66d8 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">(cached) Bounding box of this figure vertexes [local].  <br /></td></tr>
+<tr class="separator:a5fdae995505975f74a24122cd6ef66d8 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b7f23dfa5b0c49c95776c0fa41b231 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a99b7f23dfa5b0c49c95776c0fa41b231">OBBox</a><code> [get]</code></td></tr>
+<tr class="memdesc:a99b7f23dfa5b0c49c95776c0fa41b231 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding bbox of this figure vertexes [object].  <br /></td></tr>
+<tr class="separator:a99b7f23dfa5b0c49c95776c0fa41b231 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f794c58472c2c2734bc501248ba3d9e inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a9f794c58472c2c2734bc501248ba3d9e">ExpandBBox</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a9f794c58472c2c2734bc501248ba3d9e inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this figure is considered in bbox expansion (Default: true).<br  />
+ Useful to avoid cs figure or non related to content of interest to decrease view and zoom experience.  <br /></td></tr>
+<tr class="separator:a9f794c58472c2c2734bc501248ba3d9e inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9865fa32d7a38d012beabd00fe33ea15 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#a9865fa32d7a38d012beabd00fe33ea15">EvalInShadowMap</a><code> [get]</code></td></tr>
 <tr class="memdesc:a9865fa32d7a38d012beabd00fe33ea15 inherit properties_interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure"><td class="mdescLeft">&#160;</td><td class="mdescRight">States if this figure has to be considered for building of the shadow map.<br  />
  While is true by default in GLFigureBase, is overriden to false by GLTextCharFigure specialization of GLTriangleFigure in order to avoid dropping shadows of the triangles used by the font textures.  <br /></td></tr>
@@ -378,8 +415,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a58c66bd897e3456ac375692c61843611" name="a58c66bd897e3456ac375692c61843611"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58c66bd897e3456ac375692c61843611">&#9670;&#160;</a></span>RebuildNormal()</h2>
+<a id="adae4d6ebe2f077dddf326530cc61aefb" name="adae4d6ebe2f077dddf326530cc61aefb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae4d6ebe2f077dddf326530cc61aefb">&#9670;&#160;</a></span>RebuildNormal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -387,13 +424,94 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void RebuildNormal </td>
           <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>onlyMean</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute ComputeNormal function foreach triangle of this figure updating GLVertex.Normal.<br  />
+ Optionally mean these values if ComputeNormalMean was set. </p>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">onlyMean</td><td>If true, vertex normal will not recomputed, only mean on their values will be set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure_adae4d6ebe2f077dddf326530cc61aefb_icgraph.svg" width="344" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7e1376b783609151171384a003b3f24d" name="a7e1376b783609151171384a003b3f24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e1376b783609151171384a003b3f24d">&#9670;&#160;</a></span>SetupComputeNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetupComputeNormal </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>mean</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a>?&#160;</td>
+          <td class="paramname"><em>computeNormal</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the triangle compute normal function.<br  />
+ If no argument given a default per triangle normal compute will be done.<br  />
+ <br  />
+ Changing this property imply GLTriangleFigure.RebuildNormal event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mean</td><td>If true a mean of normals triangle vertexes grouped by position will be computed.</td></tr>
+    <tr><td class="paramname">computeNormal</td><td>Allow to override default triangle normal function GLTriangleFigure.DefaultComputeNormal.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#aadd2b8da513fcd2a7b40036d1e79187d">IGLTriangleFigure</a>.</p>
+
+</div>
+</div>
+<a id="a02b2c90dc3fd16bde8e80a6485aba101" name="a02b2c90dc3fd16bde8e80a6485aba101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b2c90dc3fd16bde8e80a6485aba101">&#9670;&#160;</a></span>SimpleCmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string SimpleCmd </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Execute ComputeNormal function foreach triangle of this figure updating GLVertex.Normal. </p>
+<p>Retrieve simple cmd for a list of triangles.<br  />
+ Coordinates of v1,v2,v3 are separated with comma so there are 9 float separated by comma.<br  />
+ Further triangles are appended by semi-colon separator. [t ]ax1,ay1,az1,ax2,ay2,az2,ax3,ay3,az3;bx1,by1,bz1,bx2,by2,bz2,bx3,by3,bz3;... </p>
+<p><br  />
+ </p>
+
+<p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html#ab64a102bff9af15b58f538d8873ca43a">IGLFigure</a>.</p>
 
 </div>
 </div>
@@ -439,23 +557,37 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a> ComputeNormal</td>
+          <td class="memname"><a class="el" href="namespace_search_a_thing_1_1_open_g_l_1_1_core.html#afb7e1e739a0986f085452121900c8377">ComputeTriangleNormalDelegate</a> ComputeNormal = <a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#ae500d8096fb3c1a49f783d5cc853a4e4">DefaultComputeNormal</a></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute triangle normal function ( Default: GLTriangleFigure.DefaultComputeNormal ).<br  />
- Arguments are IGLTriangle, IGLVertex.<br  />
- Changing this property imply GLTriangleFigure.RebuildNormal event. </p>
-<p><br  />
- </p>
+</div>
+</div>
+<a id="ab04ce63ce6145c33d90e0310732498b0" name="ab04ce63ce6145c33d90e0310732498b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04ce63ce6145c33d90e0310732498b0">&#9670;&#160;</a></span>ComputeNormalMean</h2>
 
-<p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#a91cd1fb44a5144be16e2a98794955939">IGLTriangleFigure</a>.</p>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ComputeNormalMean</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -487,8 +619,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a07158dfde12ee83dd5667011f19bd8ab" name="a07158dfde12ee83dd5667011f19bd8ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07158dfde12ee83dd5667011f19bd8ab">&#9670;&#160;</a></span>Texture2D</h2>
+<a id="ad25935fa49db7b58da08d25ede1c27a2" name="ad25935fa49db7b58da08d25ede1c27a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad25935fa49db7b58da08d25ede1c27a2">&#9670;&#160;</a></span>Texture2D</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,7 +629,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_texture2_d.html">IGLTexture2D</a>? Texture2D</td>
+          <td class="memname"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_texture2_d.html">GLTexture2D</a>? Texture2D</td>
         </tr>
       </table>
   </td>
@@ -511,7 +643,7 @@ Additional Inherited Members</h2></td></tr>
  TextureST vertex coords of triangles vertexes will be used to map the texture.<br  />
  Changing this property emits IGLFigure.FigureInvalidated event. </p>
 
-<p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#a07158dfde12ee83dd5667011f19bd8ab">IGLTriangleFigure</a>.</p>
+<p>Implements <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_triangle_figure.html#ad25935fa49db7b58da08d25ede1c27a2">IGLTriangleFigure</a>.</p>
 
 </div>
 </div>

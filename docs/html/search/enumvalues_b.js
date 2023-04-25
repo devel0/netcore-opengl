@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warning_0',['Warning',['../namespace_search_a_thing_1_1_open_g_l_1_1_core.html#ac44f891ad4c61c9b8c9d95ab9ccda03ca0eaadb4fcb48a0a0ed7bc9868be9fbaa',1,'SearchAThing::OpenGL::Core']]]
+  ['view_0',['View',['../namespace_search_a_thing_1_1_open_g_l_1_1_core.html#a3bbf59221044115f117dc97bb8930648a4351cfebe4b61d8aa5efa1d020710005',1,'SearchAThing::OpenGL::Core']]]
 ];

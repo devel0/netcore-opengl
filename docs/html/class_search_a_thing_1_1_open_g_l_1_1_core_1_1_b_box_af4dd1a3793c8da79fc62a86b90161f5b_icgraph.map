@@ -1,6 +1,6 @@
 <map id="ApplyUnion" name="ApplyUnion">
 <area shape="rect" id="node1" title="Create a cs oriented bounding box adding given bboxes wcs extensions." alt="" coords="1097,45,1195,70"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a80a0f1dc40e83819a36c1e43ae4f9ac5" title=" " alt="" coords="843,37,1049,77"/>
+<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a4cace370a2a4e2ed7955207d2190d772" title=" " alt="" coords="843,37,1049,77"/>
 <area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a42f143b4256f6d3cc598b9218dd2483f" title=" " alt="" coords="571,37,795,77"/>
 <area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html#ad529f19fecdcea43428f6d5760e549df" title="Add given primitive to this figure." alt="" coords="319,5,521,45"/>
 <area shape="rect" id="node6" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a2bbcedb4cd4febc767698ccea6ee4d9a" title="Adds given figure to the vertex manager. &#160;All vertexes belonging to the figure&#39;s primitives will be a..." alt="" coords="317,69,523,109"/>

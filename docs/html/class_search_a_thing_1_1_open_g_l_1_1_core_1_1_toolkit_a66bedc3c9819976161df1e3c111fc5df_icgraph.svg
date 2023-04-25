@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#add9448a2792ecb184dbf6bea89b1dbcc" target="_top" xlink:title="Rotate the camera [view] a given rotation center [local]. REVIEW: add rotation center parameter and d...">
+<g id="a_node3"><a xlink:href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#add9448a2792ecb184dbf6bea89b1dbcc" target="_top" xlink:title="Rotate the camera [view] a given rotation center [local].">
 <polygon fill="white" stroke="#666666" points="87,-56 0,-56 0,-37 87,-37 87,-56"/>
 <text text-anchor="middle" x="43.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">CameraRotate</text>
 </a>

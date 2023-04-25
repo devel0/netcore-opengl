@@ -105,6 +105,10 @@ Public Member Functions</h2></td></tr>
  Contains the list of vertex structs directly mapped to the gpu.<br  />
  This array will be built each time a vertex changes from the ToArray() of the list GLVertexManager.Vertexes. To avoid performance penalty in a scenario where you need to change the position of a figure you can use IGLFigure.ObjectMatrix that doesn't affects at all vertexes because is a figure related information forwarded to the gl pipeline shader through Constants.UNINAME_uObject.  <br /></td></tr>
 <tr class="separator:ae13b3b84442555e5f836483c2cf358ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04c976dd01cc48b49c7cac7e3d36419"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#ab04c976dd01cc48b49c7cac7e3d36419">RecomputeLBBox</a> ()</td></tr>
+<tr class="memdesc:ab04c976dd01cc48b49c7cac7e3d36419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recompute bbox [local] of all figure/primitive vertexes upading LBBox.<br  />
+ Used internally after figure/primitive deletion. REVIEW: may improved.  <br /></td></tr>
+<tr class="separator:ab04c976dd01cc48b49c7cac7e3d36419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa71d36872f416feaa853788a7a7a7ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#aa71d36872f416feaa853788a7a7a7ef8">Clear</a> ()</td></tr>
 <tr class="memdesc:aa71d36872f416feaa853788a7a7a7ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all vertexes and figures from the vertex manager, and emit IGLVertexManager.FiguresCleared and IGLVertexManager.Invalidated event.  <br /></td></tr>
 <tr class="separator:aa71d36872f416feaa853788a7a7a7ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,8 +162,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
-<tr class="memitem:a80a0f1dc40e83819a36c1e43ae4f9ac5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a80a0f1dc40e83819a36c1e43ae4f9ac5">AddVertex</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> vertex)</td></tr>
-<tr class="separator:a80a0f1dc40e83819a36c1e43ae4f9ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cace370a2a4e2ed7955207d2190d772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a4cace370a2a4e2ed7955207d2190d772">AddVertex</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> vertex, bool computeNormal=true)</td></tr>
+<tr class="separator:a4cace370a2a4e2ed7955207d2190d772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a924670fb0c77097efd94e86b9dc192de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a924670fb0c77097efd94e86b9dc192de">RemoveVertex</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a> vertex)</td></tr>
 <tr class="separator:a924670fb0c77097efd94e86b9dc192de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42f143b4256f6d3cc598b9218dd2483f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a42f143b4256f6d3cc598b9218dd2483f">AddPrimitive</a> (<a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html">GLPrimitiveBase</a> primitive, <a class="el" href="interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html">IGLFigure</a> parentFigure)</td></tr>
@@ -178,7 +182,7 @@ Properties</h2></td></tr>
 <tr class="memitem:a08aeb13e4c6a6ad8ad9af1d47cb258c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a08aeb13e4c6a6ad8ad9af1d47cb258c3">TriangleCount</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a08aeb13e4c6a6ad8ad9af1d47cb258c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual count of gl triangles belonging to added figures.  <br /></td></tr>
 <tr class="separator:a08aeb13e4c6a6ad8ad9af1d47cb258c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fdae995505975f74a24122cd6ef66d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a5fdae995505975f74a24122cd6ef66d8">LBBox</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a5fdae995505975f74a24122cd6ef66d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a5fdae995505975f74a24122cd6ef66d8">LBBox</a><code> [get]</code></td></tr>
 <tr class="memdesc:a5fdae995505975f74a24122cd6ef66d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">BBox of registered figure vertexes [local].  <br /></td></tr>
 <tr class="separator:a5fdae995505975f74a24122cd6ef66d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b51339dd7430d6323b8a34254f45af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a15b51339dd7430d6323b8a34254f45af">ExpandModelBBox</a><code> [get]</code></td></tr>
@@ -358,7 +362,7 @@ Events</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager_ad53ed2ee4a2434c14e13c02de94041cd_icgraph.svg" width="232" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager_ad53ed2ee4a2434c14e13c02de94041cd_icgraph.svg" width="348" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -404,8 +408,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a80a0f1dc40e83819a36c1e43ae4f9ac5" name="a80a0f1dc40e83819a36c1e43ae4f9ac5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80a0f1dc40e83819a36c1e43ae4f9ac5">&#9670;&#160;</a></span>AddVertex()</h2>
+<a id="a4cace370a2a4e2ed7955207d2190d772" name="a4cace370a2a4e2ed7955207d2190d772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cace370a2a4e2ed7955207d2190d772">&#9670;&#160;</a></span>AddVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,8 +421,18 @@ Here is the caller graph for this function:</div>
           <td class="memname">void AddVertex </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex.html">GLVertex</a>&#160;</td>
-          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td class="paramname"><em>vertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>computeNormal</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -430,7 +444,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager_a80a0f1dc40e83819a36c1e43ae4f9ac5_icgraph.svg" width="818" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager_a4cace370a2a4e2ed7955207d2190d772_icgraph.svg" width="818" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -545,6 +559,31 @@ Here is the caller graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager_a753c2a011a08133349095745dce634c9_icgraph.svg" width="1018" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab04c976dd01cc48b49c7cac7e3d36419" name="ab04c976dd01cc48b49c7cac7e3d36419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04c976dd01cc48b49c7cac7e3d36419">&#9670;&#160;</a></span>RecomputeLBBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_b_box.html">BBox</a> RecomputeLBBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recompute bbox [local] of all figure/primitive vertexes upading LBBox.<br  />
+ Used internally after figure/primitive deletion. REVIEW: may improved. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager_ab04c976dd01cc48b49c7cac7e3d36419_icgraph.svg" width="650" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -807,7 +846,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
