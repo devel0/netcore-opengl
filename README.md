@@ -10,11 +10,11 @@
 <!-- TOC -->
 * [Introduction](#introduction)
 * [Quickstart](#quickstart)
+* [Build solution](#build-solution)
 * [Examples](#examples)
-  + [List of examples](#list-of-examples)
-  + [Build solution](#build-solution)
   + [Running examples from console](#running-examples-from-console)
   + [Running examples from vscode](#running-examples-from-vscode)
+  + [List of examples](#list-of-examples)
 * [Development key notes](#development-key-notes)
   + [Coordinate spaces](#coordinate-spaces)
   + [GL Dev inspect tool](#gl-dev-inspect-tool)
@@ -136,7 +136,39 @@ results ( control can manipulated with [gestures](#gestures) ):
 
 [sample]: data/images/sample.png
 
+## Build solution
+
+```sh
+cd netcore-opengl
+git submodule update --init
+dotnet build
+```
+
 ## Examples
+
+### Running examples from console
+
+```sh
+cd netcore-opengl
+dotnet run --project examples/example-0000
+```
+
+### Running examples from vscode
+
+```sh
+cd netcore-opengl
+code .
+```
+
+C-S-p -> `NET: Generate Assets for Build and Debug`
+
+choose an example.
+
+Tip: to change startup example from bash `./set-startup-example xxxx` where xxxx is the nr of one of the examples provided.
+
+This will update `.vscode/launch.json` then hit F5 to start.
+
+### List of examples
 
 Click on the `example code` link to open source code of the example, read top tour instructions contained in each example to test functions, for example following in the top comment of example 0000:
 
@@ -151,8 +183,6 @@ Click on the `example code` link to open source code of the example, read top to
 // - 'z' to zoomfit
 // - ctrl + x to show bbox
 ```
-
-### List of examples
 
 <hr/>
 
@@ -365,36 +395,6 @@ Code: [0026][es26]
 Shows 2 triangle intersection and SimpleCmd management.
 
 [![img][e26]][e26]
-
-### Build solution
-
-```sh
-cd netcore-opengl
-git submodule update --init
-dotnet build
-```
-
-### Running examples from console
-
-```sh
-cd netcore-opengl
-dotnet run --project examples/example-0000
-```
-
-### Running examples from vscode
-
-```sh
-cd netcore-opengl
-code .
-```
-
-C-S-p -> `NET: Generate Assets for Build and Debug`
-
-choose an example.
-
-Tip: to change startup example from bash `./set-startup-example xxxx` where xxxx is the nr of one of the examples provided.
-
-This will update `.vscode/launch.json` then hit F5 to start.
 
 ## Development key notes
 
