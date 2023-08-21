@@ -60,7 +60,7 @@ class Program
         int NURBCURVE_DIVS = 50;
         var NURBSURF_FIGURE_DIVS = 40;
         var NURBSURF_CALC_DIVS = 20;
-        var USE_DISCRETE_SPACE = false; // set to false to try without discrete space
+        var USE_DISCRETE_SPACE = true; // set to false to try without discrete space
 
         void RedrawNurbCurves()
         {
