@@ -7,39 +7,37 @@
 
 <hr/>
 
-<!-- TOC -->
-* [Introduction](#introduction)
-* [Quickstart](#quickstart)
-* [Build solution](#build-solution)
-* [Examples](#examples)
-  + [Running examples from console](#running-examples-from-console)
-  + [Running examples from vscode](#running-examples-from-vscode)
-  + [List of examples](#list-of-examples)
-* [Development key notes](#development-key-notes)
-  + [Coordinate spaces](#coordinate-spaces)
-  + [GL Dev inspect tool](#gl-dev-inspect-tool)
-  + [Primitives, figures interaction](#primitives-figures-interaction)
+- [Introduction](#introduction)
+- [Quickstart](#quickstart)
+- [Build solution](#build-solution)
+- [Examples](#examples)
+  - [Running examples from console](#running-examples-from-console)
+  - [Running examples from vscode](#running-examples-from-vscode)
+  - [List of examples](#list-of-examples)
+- [Development key notes](#development-key-notes)
+  - [Coordinate spaces](#coordinate-spaces)
+  - [GL Dev inspect tool](#gl-dev-inspect-tool)
+  - [Primitives, figures interaction](#primitives-figures-interaction)
     - [Selection and coord identify](#selection-and-coord-identify)
     - [Removal](#removal)
     - [SimpleCmd](#simplecmd)
     - [Change rotation center](#change-rotation-center)
-  + [Send notification](#send-notification)
-  + [View invalidation model](#view-invalidation-model)
-  + [Opengl debugging tools](#opengl-debugging-tools)
-  + [Multiplatform](#multiplatform)
-  + [Docker (mesa)](#docker-mesa)
-  + [Software rendered (mesa)](#software-rendered-mesa)
-  + [C# global usings (full)](#c%23-global-usings-full)
-  + [Gestures](#gestures)
+  - [Send notification](#send-notification)
+  - [View invalidation model](#view-invalidation-model)
+  - [Opengl debugging tools](#opengl-debugging-tools)
+  - [Multiplatform](#multiplatform)
+  - [Docker (mesa)](#docker-mesa)
+  - [Software rendered (mesa)](#software-rendered-mesa)
+  - [C# global usings (full)](#c-global-usings-full)
+  - [Gestures](#gestures)
     - [Mouse gestures](#mouse-gestures)
     - [Keybindings](#keybindings)
-* [Unit tests](#unit-tests)
-* [How this project was built](#how-this-project-was-built)
-  + [Documentation (github pages)](#documentation-github-pages)
+- [Unit tests](#unit-tests)
+- [How this project was built](#how-this-project-was-built)
+  - [Documentation (github pages)](#documentation-github-pages)
     - [Build and view locally](#build-and-view-locally)
     - [Build and commit into docs branch](#build-and-commit-into-docs-branch)
-* [References](#references)
-<!-- TOCEND -->
+- [References](#references)
 
 <hr/>
 
@@ -395,6 +393,14 @@ Code: [0026][es26]
 Shows 2 triangle intersection and SimpleCmd management.
 
 [![img][e26]][e26]
+
+<hr/>
+
+Code: [0027][es27]
+
+Shows earth representation through a textured uv sphere.
+
+[![img][e27]][e27]
 
 ## Development key notes
 
@@ -821,6 +827,8 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 [es24]: examples/example-0024/Program.cs
 [es25]: examples/example-0025/Program.cs
 [es26]: examples/example-0026/Views/MainWindow.axaml.cs
+[es27]: examples/example-0027/Program.cs
+
 [e0]: data/images/examples/0000.png
 [e1]: data/images/examples/0001.png
 [e2]: data/images/examples/0002.png
@@ -847,4 +855,6 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 [e24]: data/images/examples/0024.png
 [e25]: data/images/examples/0025.png
 [e26]: data/images/examples/0026.png
+[e27]: data/images/examples/0027.png
+
 [FeasibleTriIntersectionTests]: https://github.com/devel0/netcore-opengl/blob/0ce534f6fcbb62279d814b0eca08f5be97ec8f98/src/core/primitive/IGLTriangle.cs#L113
