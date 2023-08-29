@@ -138,7 +138,7 @@ results ( control can manipulated with [gestures](#gestures) ):
 
 ```sh
 cd netcore-opengl
-git submodule update --init
+# git submodule update --init
 dotnet build
 ```
 
