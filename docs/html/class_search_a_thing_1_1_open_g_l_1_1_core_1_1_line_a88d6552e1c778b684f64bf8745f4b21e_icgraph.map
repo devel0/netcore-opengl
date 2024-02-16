@@ -1,6 +1,0 @@
-<map id="FromTo" name="FromTo">
-<area shape="rect" id="node1" title="Create a line by two given points." alt="" coords="256,77,325,102"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a23ed477e1ef16a6628458f28b9e5765c" title="Intersect given raycast to given figure primitives. &#160;Given [local] raycast will automatically backwar..." alt="" coords="5,5,208,45"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a8b88bca5ca7377d6aca5657c0c7a59a6" title="Create a raycast line [local] suitable to hit test of figure primitives." alt="" coords="5,69,208,109"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#ace2eb32a55c29525f29f400d8f72e3f9" title="Retrieve gl triangle segments {v1,v2},{v2,v3},{v3,v1} [object]." alt="" coords="5,133,208,173"/>
-</map>

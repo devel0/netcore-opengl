@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  commentId: T:SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  id: VertexManagerInvalidatedDelegate
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: VertexManagerInvalidatedDelegate
+  nameWithType: VertexManagerInvalidatedDelegate
+  fullName: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/core/vertex/IGLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: VertexManagerInvalidatedDelegate
+    path: src/core/vertex/IGLVertexManager.cs
+    startLine: 15
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Delegate for the <xref href="SearchAThing.OpenGL.Core.GLVertexManager.Invalidated" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public delegate void VertexManagerInvalidatedDelegate(IGLVertexManager vertexManager)
+    parameters:
+    - id: vertexManager
+      type: SearchAThing.OpenGL.Core.IGLVertexManager
+    content.vb: Public Delegate Sub VertexManagerInvalidatedDelegate(vertexManager As IGLVertexManager)
+references:
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.Invalidated
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.Invalidated
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_Invalidated
+  name: Invalidated
+  nameWithType: GLVertexManager.Invalidated
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.Invalidated
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html
+  name: IGLVertexManager
+  nameWithType: IGLVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager

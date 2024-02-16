@@ -1,7 +1,0 @@
-<map id="GLFigureTypeBase&lt; P &gt;" name="GLFigureTypeBase&lt; P &gt;">
-<area shape="rect" id="node1" title="Template typed GLPrimitiveBase figure base operations such as Add and Remove primitives from the figu..." alt="" coords="109,225,287,251"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html" title="Base abstract class for point, line, triangle figures." alt="" coords="143,152,253,177"/>
-<area shape="rect" id="node3" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_figure.html" title="This is the direct child of a vertex manager. &#160;A figure contains primitives and primitive contains ve..." alt="" coords="157,79,239,104"/>
-<area shape="rect" id="node4" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_g_l_vertex_manager_object.html" title="Interface for GL objects such as IGLFigure, IGLPrimitive and IGLVertex. &#160;The purpose is to ensure tha..." alt="" coords="5,5,188,31"/>
-<area shape="rect" id="node5" title=" " alt="" coords="212,5,389,31"/>
-</map>

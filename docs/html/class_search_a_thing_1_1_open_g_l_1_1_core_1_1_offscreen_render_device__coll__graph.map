@@ -1,5 +1,0 @@
-<map id="OffscreenRenderDevice" name="OffscreenRenderDevice">
-<area shape="rect" id="node1" title="Render device for offscreen mode that acts as a bitmap file writer." alt="" coords="7,152,181,177"/>
-<area shape="rect" id="node2" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_render_device.html" title="A render device will read pixels from given gl context through ReadPixels and write to an appropriate..." alt="" coords="35,79,153,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,183,31"/>
-</map>

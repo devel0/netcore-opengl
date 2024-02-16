@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.FigureEvent
+  commentId: T:SearchAThing.OpenGL.Core.FigureEvent
+  id: FigureEvent
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FigureEvent
+  nameWithType: FigureEvent
+  fullName: SearchAThing.OpenGL.Core.FigureEvent
+  type: Delegate
+  source:
+    remote:
+      path: src/core/vertex/IGLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FigureEvent
+    path: src/core/vertex/IGLVertexManager.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Generic figure event from the vertex manager.
+  example: []
+  syntax:
+    content: public delegate void FigureEvent(IGLVertexManager vertexManager, GLFigureBase figure)
+    parameters:
+    - id: vertexManager
+      type: SearchAThing.OpenGL.Core.IGLVertexManager
+    - id: figure
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+    content.vb: Public Delegate Sub FigureEvent(vertexManager As IGLVertexManager, figure As GLFigureBase)
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html
+  name: IGLVertexManager
+  nameWithType: IGLVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager
+- uid: SearchAThing.OpenGL.Core.GLFigureBase
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureBase
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase
+  nameWithType: GLFigureBase
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase

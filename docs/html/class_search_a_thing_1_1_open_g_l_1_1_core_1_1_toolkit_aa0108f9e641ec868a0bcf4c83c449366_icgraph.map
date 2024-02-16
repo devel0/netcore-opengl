@@ -1,4 +1,0 @@
-<map id="PerspectiveCenter" name="PerspectiveCenter">
-<area shape="rect" id="node1" title="Center the view ( Perspective mode ) by computing camera [world] position and target." alt="" coords="205,5,347,31"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa11500be262e3a1d3ac6911e302b7861" title="Fit current model view for perspective projection." alt="" coords="5,5,157,31"/>
-</map>

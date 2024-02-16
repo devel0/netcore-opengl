@@ -1,0 +1,828 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  commentId: T:SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  id: ViewLayoutNfo
+  parent: SearchAThing.OpenGL.GUI
+  children:
+  - SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView
+  - SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout
+  - SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights
+  - SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient
+  - SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse
+  - SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular
+  - SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView
+  langs:
+  - csharp
+  - vb
+  name: ViewLayoutNfo
+  nameWithType: ViewLayoutNfo
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  type: Class
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ViewLayoutNfo
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Object that holds information about gl split view configuration.
+  example: []
+  syntax:
+    content: public class ViewLayoutNfo
+    content.vb: Public Class ViewLayoutNfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout
+  commentId: P:SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout
+  id: Layout
+  parent: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  langs:
+  - csharp
+  - vb
+  name: Layout
+  nameWithType: ViewLayoutNfo.Layout
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout
+  type: Property
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Layout
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Sequence of splits.
+  example: []
+  syntax:
+    content: public GridSplitterManagerLayoutItem? Layout { get; set; }
+    parameters: []
+    return:
+      type: SearchAThing.Desktop.GridSplitterManagerLayoutItem
+    content.vb: Public Property Layout As GridSplitterManagerLayoutItem
+  overload: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout*
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView
+  commentId: P:SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView
+  id: UIDView
+  parent: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  langs:
+  - csharp
+  - vb
+  name: UIDView
+  nameWithType: ViewLayoutNfo.UIDView
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView
+  type: Property
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UIDView
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 16
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Dictionary UID view to view config itself.
+  example: []
+  syntax:
+    content: public Dictionary<int, ViewNfo> UIDView { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,SearchAThing.OpenGL.Core.ViewNfo}
+    content.vb: Public Property UIDView As Dictionary(Of Integer, ViewNfo)
+  overload: SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView*
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights
+  commentId: P:SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights
+  id: Lights
+  parent: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  langs:
+  - csharp
+  - vb
+  name: Lights
+  nameWithType: ViewLayoutNfo.Lights
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights
+  type: Property
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Lights
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 21
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: List of model lights.
+  example: []
+  syntax:
+    content: public List<GLPointLight> Lights { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{SearchAThing.OpenGL.Core.GLPointLight}
+    content.vb: Public Property Lights As List(Of GLPointLight)
+  overload: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights*
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView
+  commentId: P:SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView
+  id: FocusedUIDView
+  parent: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  langs:
+  - csharp
+  - vb
+  name: FocusedUIDView
+  nameWithType: ViewLayoutNfo.FocusedUIDView
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView
+  type: Property
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FocusedUIDView
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 26
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: UID of view focused between all of the layout.
+  example: []
+  syntax:
+    content: public int FocusedUIDView { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FocusedUIDView As Integer
+  overload: SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView*
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient
+  commentId: P:SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient
+  id: OverrideAmbient
+  parent: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  langs:
+  - csharp
+  - vb
+  name: OverrideAmbient
+  nameWithType: ViewLayoutNfo.OverrideAmbient
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient
+  type: Property
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideAmbient
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 28
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public float? OverrideAmbient { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property OverrideAmbient As Single?
+  overload: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient*
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse
+  commentId: P:SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse
+  id: OverrideDiffuse
+  parent: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  langs:
+  - csharp
+  - vb
+  name: OverrideDiffuse
+  nameWithType: ViewLayoutNfo.OverrideDiffuse
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse
+  type: Property
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideDiffuse
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 29
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public float? OverrideDiffuse { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property OverrideDiffuse As Single?
+  overload: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse*
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular
+  commentId: P:SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular
+  id: OverrideSpecular
+  parent: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+  langs:
+  - csharp
+  - vb
+  name: OverrideSpecular
+  nameWithType: ViewLayoutNfo.OverrideSpecular
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular
+  type: Property
+  source:
+    remote:
+      path: src/gui/ViewLayoutNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideSpecular
+    path: src/gui/ViewLayoutNfo.cs
+    startLine: 30
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public float? OverrideSpecular { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property OverrideSpecular As Single?
+  overload: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular*
+references:
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout*
+  commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout
+  href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_Layout
+  name: Layout
+  nameWithType: ViewLayoutNfo.Layout
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Layout
+- uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
+  commentId: T:SearchAThing.Desktop.GridSplitterManagerLayoutItem
+  parent: SearchAThing.Desktop
+  name: GridSplitterManagerLayoutItem
+  nameWithType: GridSplitterManagerLayoutItem
+  fullName: SearchAThing.Desktop.GridSplitterManagerLayoutItem
+- uid: SearchAThing.Desktop
+  commentId: N:SearchAThing.Desktop
+  name: SearchAThing.Desktop
+  nameWithType: SearchAThing.Desktop
+  fullName: SearchAThing.Desktop
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+  - name: .
+  - uid: SearchAThing.Desktop
+    name: Desktop
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+  - name: .
+  - uid: SearchAThing.Desktop
+    name: Desktop
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView*
+  commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView
+  href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_UIDView
+  name: UIDView
+  nameWithType: ViewLayoutNfo.UIDView
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView
+- uid: System.Collections.Generic.Dictionary{System.Int32,SearchAThing.OpenGL.Core.ViewNfo}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,SearchAThing.OpenGL.Core.ViewNfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, ViewNfo>
+  nameWithType: Dictionary<int, ViewNfo>
+  fullName: System.Collections.Generic.Dictionary<int, SearchAThing.OpenGL.Core.ViewNfo>
+  nameWithType.vb: Dictionary(Of Integer, ViewNfo)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, SearchAThing.OpenGL.Core.ViewNfo)
+  name.vb: Dictionary(Of Integer, ViewNfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.ViewNfo
+    name: ViewNfo
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.ViewNfo
+    name: ViewNfo
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights*
+  commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights
+  href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_Lights
+  name: Lights
+  nameWithType: ViewLayoutNfo.Lights
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.Lights
+- uid: System.Collections.Generic.List{SearchAThing.OpenGL.Core.GLPointLight}
+  commentId: T:System.Collections.Generic.List{SearchAThing.OpenGL.Core.GLPointLight}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<GLPointLight>
+  nameWithType: List<GLPointLight>
+  fullName: System.Collections.Generic.List<SearchAThing.OpenGL.Core.GLPointLight>
+  nameWithType.vb: List(Of GLPointLight)
+  fullName.vb: System.Collections.Generic.List(Of SearchAThing.OpenGL.Core.GLPointLight)
+  name.vb: List(Of GLPointLight)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLPointLight
+    name: GLPointLight
+    href: SearchAThing.OpenGL.Core.GLPointLight.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLPointLight
+    name: GLPointLight
+    href: SearchAThing.OpenGL.Core.GLPointLight.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView*
+  commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView
+  href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_FocusedUIDView
+  name: FocusedUIDView
+  nameWithType: ViewLayoutNfo.FocusedUIDView
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.FocusedUIDView
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient*
+  commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient
+  href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_OverrideAmbient
+  name: OverrideAmbient
+  nameWithType: ViewLayoutNfo.OverrideAmbient
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideAmbient
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse*
+  commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse
+  href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_OverrideDiffuse
+  name: OverrideDiffuse
+  nameWithType: ViewLayoutNfo.OverrideDiffuse
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideDiffuse
+- uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular*
+  commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular
+  href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_OverrideSpecular
+  name: OverrideSpecular
+  nameWithType: ViewLayoutNfo.OverrideSpecular
+  fullName: SearchAThing.OpenGL.GUI.ViewLayoutNfo.OverrideSpecular

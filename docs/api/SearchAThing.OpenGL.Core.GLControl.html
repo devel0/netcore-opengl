@@ -1,0 +1,3859 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GLControl | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GLControl | netcore-opengl ">
+      
+      <meta name="description" content="Provides basic opengl abstraction to create entities such as ,  and . It provides high level functions to manage camera view and related pan/zoom functions. The  emit a  event that SearchAThing.OpenGL.GUI.AvaloniaGLControl listen to invalidte its visual. image \image html Render.svg width=100%">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_Core_GLControl.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.Core.GLControl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.Core.GLControl">
+
+
+
+  <h1 id="SearchAThing_OpenGL_Core_GLControl" data-uid="SearchAThing.OpenGL.Core.GLControl" class="text-break">
+Class GLControl  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.ViewCube.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides basic opengl abstraction to create entities such as <a class="xref" href="SearchAThing.OpenGL.Core.GLPoint.html">GLPoint</a>, <a class="xref" href="SearchAThing.OpenGL.Core.GLLine.html">GLLine</a> and <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>.
+It provides high level functions to manage camera view and related pan/zoom functions.<br>
+The <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_">Invalidate(InvalidateEnum)</a> emit a <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_RenderInvalidated">RenderInvalidated</a> event that
+SearchAThing.OpenGL.GUI.AvaloniaGLControl listen to invalidte its visual.<br>
+<a href="Render.svg">image</a>
+\image html Render.svg width=100%</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GLControl : INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GLControl</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeFrustum_SearchAThing_OpenGL_Core_GLControl_">Toolkit.MakeFrustum(GLControl)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl__ctor_" data-uid="SearchAThing.OpenGL.Core.GLControl.#ctor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl__ctor_SearchAThing_OpenGL_Core_GLControl_SearchAThing_OpenGL_Core_IRenderDevice_" data-uid="SearchAThing.OpenGL.Core.GLControl.#ctor(SearchAThing.OpenGL.Core.GLControl,SearchAThing.OpenGL.Core.IRenderDevice)">
+  GLControl(GLControl, IRenderDevice)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new gl control using the same control properties of the given template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLControl(GLControl template, IRenderDevice device)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>template</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html">GLControl</a></dt>
+    <dd><p>Gl control template to config this new one created.</p>
+</dd>
+    <dt><code>device</code> <a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html">IRenderDevice</a></dt>
+    <dd><p>Target render device.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl__ctor_" data-uid="SearchAThing.OpenGL.Core.GLControl.#ctor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl__ctor_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_IRenderDevice_" data-uid="SearchAThing.OpenGL.Core.GLControl.#ctor(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.IRenderDevice)">
+  GLControl(GLModel, IRenderDevice)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new gl control attached to given model and rendering to the given rendere device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLControl(GLModel glModel, IRenderDevice device)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>glModel</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html">GLModel</a></dt>
+    <dd><p>Gl model.</p>
+</dd>
+    <dt><code>device</code> <a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html">IRenderDevice</a></dt>
+    <dd><p>Target render device.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_AutoAdjustNearFar_" data-uid="SearchAThing.OpenGL.Core.GLControl.AutoAdjustNearFar*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_AutoAdjustNearFar" data-uid="SearchAThing.OpenGL.Core.GLControl.AutoAdjustNearFar">
+  AutoAdjustNearFar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Auto adjust near,far to prevent z-fighting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoAdjustNearFar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PreventZFighting_SearchAThing_OpenGL_Core_BBox_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Single__System_Single__">PreventZFighting</a>(<a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraPos_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraPos*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraPos" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraPos">
+  CameraPos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>CameraPos [world].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 CameraPos { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraTarget_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraTarget*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraTarget" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraTarget">
+  CameraTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>CameraTarget [world].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 CameraTarget { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraUp_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraUp*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraUp" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraUp">
+  CameraUp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>CameraUp [world]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 CameraUp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ClearColor_" data-uid="SearchAThing.OpenGL.Core.GLControl.ClearColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ClearColor" data-uid="SearchAThing.OpenGL.Core.GLControl.ClearColor">
+  ClearColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1054"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default scene background color ( Default: black ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ClearColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ControlFigureVisible_" data-uid="SearchAThing.OpenGL.Core.GLControl.ControlFigureVisible*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ControlFigureVisible" data-uid="SearchAThing.OpenGL.Core.GLControl.ControlFigureVisible">
+  ControlFigureVisible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Control specific custom figure visibility.<br><br>
+If null default model figure visibiltiy not changes.<br>
+Args: (GLControl glControl, GLFigureBase figure).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ControlFigureVisibileDelegate? ControlFigureVisible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate.html">ControlFigureVisibileDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_GLControl_ControlFigureVisible_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Keep delegate function as light as possible to avoid performance penalty.</p>
+</div>
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ControlOverlay1_" data-uid="SearchAThing.OpenGL.Core.GLControl.ControlOverlay1*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ControlOverlay1" data-uid="SearchAThing.OpenGL.Core.GLControl.ControlOverlay1">
+  ControlOverlay1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L846"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ControlOverlay1 ( used for IdentifyCoord output )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ControlOverlay1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_DepthShader_" data-uid="SearchAThing.OpenGL.Core.GLControl.DepthShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_DepthShader" data-uid="SearchAThing.OpenGL.Core.GLControl.DepthShader">
+  DepthShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Depth only shader for shadow cube maps ( retrieved from gl context ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLPipeline DepthShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPipeline.html">GLPipeline</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Device_" data-uid="SearchAThing.OpenGL.Core.GLControl.Device*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Device" data-uid="SearchAThing.OpenGL.Core.GLControl.Device">
+  Device
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Render device associateed to this control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRenderDevice Device { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html">IRenderDevice</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Far_" data-uid="SearchAThing.OpenGL.Core.GLControl.Far*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Far" data-uid="SearchAThing.OpenGL.Core.GLControl.Far">
+  Far
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L686"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Far clipping plane distance [world].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Far { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreatePerspectiveProjectionMatrix_System_Single_System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__">CreatePerspectiveProjectionMatrix</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PreventZFighting_SearchAThing_OpenGL_Core_BBox_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Single__System_Single__">PreventZFighting</a>(<a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_FovDeg_" data-uid="SearchAThing.OpenGL.Core.GLControl.FovDeg*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_FovDeg" data-uid="SearchAThing.OpenGL.Core.GLControl.FovDeg">
+  FovDeg
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L634"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Perspective field of view [world] (deg).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FovDeg { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreatePerspectiveProjectionMatrix_System_Single_System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__">CreatePerspectiveProjectionMatrix</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_FrameRate_" data-uid="SearchAThing.OpenGL.Core.GLControl.FrameRate*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_FrameRate" data-uid="SearchAThing.OpenGL.Core.GLControl.FrameRate">
+  FrameRate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L941"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stats the number of render per sec given by latest rendered frames.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FrameRate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_GLContext_" data-uid="SearchAThing.OpenGL.Core.GLControl.GLContext*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_GLContext" data-uid="SearchAThing.OpenGL.Core.GLControl.GLContext">
+  GLContext
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl context reference ( retrieved through gl model ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLContext GLContext { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLContext.html">GLContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_GLModel_" data-uid="SearchAThing.OpenGL.Core.GLControl.GLModel*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_GLModel" data-uid="SearchAThing.OpenGL.Core.GLControl.GLModel">
+  GLModel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl model associated to this control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLModel GLModel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html">GLModel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ID_" data-uid="SearchAThing.OpenGL.Core.GLControl.ID*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ID" data-uid="SearchAThing.OpenGL.Core.GLControl.ID">
+  ID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>unique control ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_IdentifyCoord_" data-uid="SearchAThing.OpenGL.Core.GLControl.IdentifyCoord*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_IdentifyCoord" data-uid="SearchAThing.OpenGL.Core.GLControl.IdentifyCoord">
+  IdentifyCoord
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L891"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true an overlay display vertex under mouse coord.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IdentifyCoord { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_IsControlInvalidated_" data-uid="SearchAThing.OpenGL.Core.GLControl.IsControlInvalidated*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_IsControlInvalidated" data-uid="SearchAThing.OpenGL.Core.GLControl.IsControlInvalidated">
+  IsControlInvalidated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Triggered by control view/preferences and by model lights changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsControlInvalidated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_IsInitial_" data-uid="SearchAThing.OpenGL.Core.GLControl.IsInitial*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_IsInitial" data-uid="SearchAThing.OpenGL.Core.GLControl.IsInitial">
+  IsInitial
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if this gl control is the initial created into a gl split view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInitial { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_IsRenderInvalidated_" data-uid="SearchAThing.OpenGL.Core.GLControl.IsRenderInvalidated*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_IsRenderInvalidated" data-uid="SearchAThing.OpenGL.Core.GLControl.IsRenderInvalidated">
+  IsRenderInvalidated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if last render transferred is actually invalidated respect to the gl model or this gl control view/preferences.<br>
+Evaluated in <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Render_SearchAThing_OpenGL_Core_IRenderDevice_">Render(IRenderDevice?)</a> to avoid re-entrance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRenderInvalidated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_IsRendering_" data-uid="SearchAThing.OpenGL.Core.GLControl.IsRendering*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_IsRendering" data-uid="SearchAThing.OpenGL.Core.GLControl.IsRendering">
+  IsRendering
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if rendering is in progress.<br>
+Its used by <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Render_SearchAThing_OpenGL_Core_IRenderDevice_">Render(IRenderDevice?)</a> and <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_">Invalidate(InvalidateEnum)</a> to avoid re-entrance from <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_RenderInvalidated">RenderInvalidated</a> event callback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRendering { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_LastCameraView_" data-uid="SearchAThing.OpenGL.Core.GLControl.LastCameraView*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_LastCameraView" data-uid="SearchAThing.OpenGL.Core.GLControl.LastCameraView">
+  LastCameraView
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.ViewCube.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CameraViewType? LastCameraView { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html">CameraViewType</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_LastRenderTime_" data-uid="SearchAThing.OpenGL.Core.GLControl.LastRenderTime*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_LastRenderTime" data-uid="SearchAThing.OpenGL.Core.GLControl.LastRenderTime">
+  LastRenderTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L963"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Time (sec) required for latest render.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LastRenderTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_MainShader_" data-uid="SearchAThing.OpenGL.Core.GLControl.MainShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_MainShader" data-uid="SearchAThing.OpenGL.Core.GLControl.MainShader">
+  MainShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Main shader ( retrieved from gl context ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLPipeline MainShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPipeline.html">GLPipeline</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ModelMatrix_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelMatrix*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ModelMatrix" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelMatrix">
+  ModelMatrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ModelMatrix [local] of this control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4 ModelMatrix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreateModelMatrix_System_Numerics_Vector3__System_Numerics_Quaternion__System_Numerics_Vector3__System_Numerics_Matrix4x4__">CreateModelMatrix</a>(in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.quaternion">Quaternion</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ModelMatrixFmt_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelMatrixFmt*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ModelMatrixFmt" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelMatrixFmt">
+  ModelMatrixFmt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formatted version of model matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ModelMatrixFmt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Near_" data-uid="SearchAThing.OpenGL.Core.GLControl.Near*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Near" data-uid="SearchAThing.OpenGL.Core.GLControl.Near">
+  Near
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L659"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Near clipping plane distance [world].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Near { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreatePerspectiveProjectionMatrix_System_Single_System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__">CreatePerspectiveProjectionMatrix</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PreventZFighting_SearchAThing_OpenGL_Core_BBox_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Single__System_Single__">PreventZFighting</a>(<a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_NormalShader_" data-uid="SearchAThing.OpenGL.Core.GLControl.NormalShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_NormalShader" data-uid="SearchAThing.OpenGL.Core.GLControl.NormalShader">
+  NormalShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Geometry shader used if <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShowNormals">ShowNormals</a> enabled ( retrieved from gl context ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLPipeline NormalShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPipeline.html">GLPipeline</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_OrthoZoom_" data-uid="SearchAThing.OpenGL.Core.GLControl.OrthoZoom*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_OrthoZoom" data-uid="SearchAThing.OpenGL.Core.GLControl.OrthoZoom">
+  OrthoZoom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L609"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ortho zoom [eye] factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OrthoZoom { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreateOrthogonalProjectionMatrix_System_Numerics_Vector2__System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__">CreateOrthogonalProjectionMatrix</a>(in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Perspective_" data-uid="SearchAThing.OpenGL.Core.GLControl.Perspective*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Perspective" data-uid="SearchAThing.OpenGL.Core.GLControl.Perspective">
+  Perspective
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L583"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true perspective projection matrix will be used, orthogonal projection matrix elsewhere. (default:true)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Perspective { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreatePerspectiveProjectionMatrix_System_Single_System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__">CreatePerspectiveProjectionMatrix</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreateOrthogonalProjectionMatrix_System_Numerics_Vector2__System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__">CreateOrthogonalProjectionMatrix</a>(in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_PointerCoord_" data-uid="SearchAThing.OpenGL.Core.GLControl.PointerCoord*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_PointerCoord" data-uid="SearchAThing.OpenGL.Core.GLControl.PointerCoord">
+  PointerCoord
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1077"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual pointer coord [screen]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 PointerCoord { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_PointerLRayCast_" data-uid="SearchAThing.OpenGL.Core.GLControl.PointerLRayCast*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_PointerLRayCast" data-uid="SearchAThing.OpenGL.Core.GLControl.PointerLRayCast">
+  PointerLRayCast
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual pointer raycast [local]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Line? PointerLRayCast { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ProjectionMatrix_" data-uid="SearchAThing.OpenGL.Core.GLControl.ProjectionMatrix*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ProjectionMatrix" data-uid="SearchAThing.OpenGL.Core.GLControl.ProjectionMatrix">
+  ProjectionMatrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ProjectionMatrix [eye].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4 ProjectionMatrix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreatePerspectiveProjectionMatrix_System_Single_System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__">CreatePerspectiveProjectionMatrix</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreateOrthogonalProjectionMatrix_System_Numerics_Vector2__System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__">CreateOrthogonalProjectionMatrix</a>(in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ProjectionMatrixFmt_" data-uid="SearchAThing.OpenGL.Core.GLControl.ProjectionMatrixFmt*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ProjectionMatrixFmt" data-uid="SearchAThing.OpenGL.Core.GLControl.ProjectionMatrixFmt">
+  ProjectionMatrixFmt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formatted version of project matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ProjectionMatrixFmt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_RenderCount_" data-uid="SearchAThing.OpenGL.Core.GLControl.RenderCount*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_RenderCount" data-uid="SearchAThing.OpenGL.Core.GLControl.RenderCount">
+  RenderCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stats the count of completed <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Render_SearchAThing_OpenGL_Core_IRenderDevice_">Render(IRenderDevice?)</a> calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RenderCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_RotationCenter_" data-uid="SearchAThing.OpenGL.Core.GLControl.RotationCenter*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_RotationCenter" data-uid="SearchAThing.OpenGL.Core.GLControl.RotationCenter">
+  RotationCenter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotation center [local].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 RotationCenter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ScreenModelMatrix_" data-uid="SearchAThing.OpenGL.Core.GLControl.ScreenModelMatrix*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ScreenModelMatrix" data-uid="SearchAThing.OpenGL.Core.GLControl.ScreenModelMatrix">
+  ScreenModelMatrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L503"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Screen model matrix [world].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4 ScreenModelMatrix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode">ScreenCoordMode</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ScreenProjectionMatrix_" data-uid="SearchAThing.OpenGL.Core.GLControl.ScreenProjectionMatrix*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ScreenProjectionMatrix" data-uid="SearchAThing.OpenGL.Core.GLControl.ScreenProjectionMatrix">
+  ScreenProjectionMatrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ScreenProjectionMatrix [eye].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4 ScreenProjectionMatrix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode">ScreenCoordMode</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ShadeWithEdge_" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadeWithEdge*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ShadeWithEdge" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadeWithEdge">
+  ShadeWithEdge
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L985"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true a geometry shader will generate addictional lines that marks triangle edges if displayed in shaded mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShadeWithEdge { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ShadeWithEdgeShader_" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadeWithEdgeShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ShadeWithEdgeShader" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadeWithEdgeShader">
+  ShadeWithEdgeShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Geometry shader used if <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShadeWithEdge">ShadeWithEdge</a> enabled ( retrieved from gl context ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLPipeline ShadeWithEdgeShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPipeline.html">GLPipeline</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ShadowHeight_" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadowHeight*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ShadowHeight" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadowHeight">
+  ShadowHeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L802"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shadow height (pixels)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ShadowHeight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ShadowWidth_" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadowWidth*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ShadowWidth" data-uid="SearchAThing.OpenGL.Core.GLControl.ShadowWidth">
+  ShadowWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L780"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shadow width (pixels)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ShadowWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ShowCameraObject_" data-uid="SearchAThing.OpenGL.Core.GLControl.ShowCameraObject*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ShowCameraObject" data-uid="SearchAThing.OpenGL.Core.GLControl.ShowCameraObject">
+  ShowCameraObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L913"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true a green camera frustum object represented with lines are displayed using a temporary vertex manager at runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowCameraObject { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ShowModelBBox_" data-uid="SearchAThing.OpenGL.Core.GLControl.ShowModelBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ShowModelBBox" data-uid="SearchAThing.OpenGL.Core.GLControl.ShowModelBBox">
+  ShowModelBBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L868"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true the model bbox as lines are displayed using a temporary vertex manager at runtime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowModelBBox { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ShowNormals_" data-uid="SearchAThing.OpenGL.Core.GLControl.ShowNormals*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ShowNormals" data-uid="SearchAThing.OpenGL.Core.GLControl.ShowNormals">
+  ShowNormals
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1031"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true a geometry shader will create yellow vertex normals using a size specified by a factor of the bbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowNormals { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_NormalFactor">NormalFactor</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Tag_" data-uid="SearchAThing.OpenGL.Core.GLControl.Tag*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Tag" data-uid="SearchAThing.OpenGL.Core.GLControl.Tag">
+  Tag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>User defined object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? Tag { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Title_" data-uid="SearchAThing.OpenGL.Core.GLControl.Title*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Title" data-uid="SearchAThing.OpenGL.Core.GLControl.Title">
+  Title
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L824"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Title</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_UseShadow_" data-uid="SearchAThing.OpenGL.Core.GLControl.UseShadow*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_UseShadow" data-uid="SearchAThing.OpenGL.Core.GLControl.UseShadow">
+  UseShadow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L757"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true and at least one point light exists in the gl model shadows are dropped, no shadow elsewhere (default:true).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseShadow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_UseTexture_" data-uid="SearchAThing.OpenGL.Core.GLControl.UseTexture*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_UseTexture" data-uid="SearchAThing.OpenGL.Core.GLControl.UseTexture">
+  UseTexture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L734"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true triangles with texture will display the texture, empty elsewhere. (default:true)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseTexture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_VertexVisbiility_" data-uid="SearchAThing.OpenGL.Core.GLControl.VertexVisbiility*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_VertexVisbiility" data-uid="SearchAThing.OpenGL.Core.GLControl.VertexVisbiility">
+  VertexVisbiility
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L1008"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true a geometry shader will generate addictional point that marks primitive vertexes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool VertexVisbiility { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_VertexVisibilityLineShader_" data-uid="SearchAThing.OpenGL.Core.GLControl.VertexVisibilityLineShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_VertexVisibilityLineShader" data-uid="SearchAThing.OpenGL.Core.GLControl.VertexVisibilityLineShader">
+  VertexVisibilityLineShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Geometry shader used to show line vertexes if <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_VertexVisbiility">VertexVisbiility</a> enabled ( retrieved from gl context ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLPipeline VertexVisibilityLineShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPipeline.html">GLPipeline</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_VertexVisibilityTriShader_" data-uid="SearchAThing.OpenGL.Core.GLControl.VertexVisibilityTriShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_VertexVisibilityTriShader" data-uid="SearchAThing.OpenGL.Core.GLControl.VertexVisibilityTriShader">
+  VertexVisibilityTriShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Geometry shader used to show triangle vertexes if <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_VertexVisbiility">VertexVisbiility</a> enabled ( retrieved from gl context ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLPipeline VertexVisibilityTriShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPipeline.html">GLPipeline</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ViewMatrix_" data-uid="SearchAThing.OpenGL.Core.GLControl.ViewMatrix*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ViewMatrix" data-uid="SearchAThing.OpenGL.Core.GLControl.ViewMatrix">
+  ViewMatrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>ViewMatrix [world] of this control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4 ViewMatrix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CreateViewMatrix_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Matrix4x4__">CreateViewMatrix</a>(in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ViewMatrixFmt_" data-uid="SearchAThing.OpenGL.Core.GLControl.ViewMatrixFmt*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ViewMatrixFmt" data-uid="SearchAThing.OpenGL.Core.GLControl.ViewMatrixFmt">
+  ViewMatrixFmt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formatted version of view matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ViewMatrixFmt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Wireframe_" data-uid="SearchAThing.OpenGL.Core.GLControl.Wireframe*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Wireframe" data-uid="SearchAThing.OpenGL.Core.GLControl.Wireframe">
+  Wireframe
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L711"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true triangles will be displayed using lines, shaded elsewhere (default:false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Wireframe { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraRotate_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotate*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraRotate_System_Single_System_Single_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotate(System.Single,System.Single,System.Boolean)">
+  CameraRotate(float, float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the camera [view] a given rotation center [local].
+( not yet tested )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraRotate(float sAngleXRad, float sAngleYRad, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sAngleXRad</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>sAngleYRad</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CameraRotate_System_Single_System_Single_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__">CameraRotate</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraRotateDown_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateDown*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraRotateDown" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateDown">
+  CameraRotateDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the camera down of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraRotateDown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraRotateLeft_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateLeft*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraRotateLeft" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateLeft">
+  CameraRotateLeft()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the camera left of little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraRotateLeft()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraRotateRight_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateRight*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraRotateRight" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateRight">
+  CameraRotateRight()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L527"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the camera right of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraRotateRight()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraRotateUp_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateUp*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraRotateUp" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraRotateUp">
+  CameraRotateUp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L532"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the camera up of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraRotateUp()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraView_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraView*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraView_SearchAThing_OpenGL_Core_CameraViewType_System_Boolean_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraView(SearchAThing.OpenGL.Core.CameraViewType,System.Boolean,System.Boolean)">
+  CameraView(CameraViewType, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.ViewCube.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the view using given cube view type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraView(CameraViewType type, bool zoomFit = true, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html">CameraViewType</a></dt>
+    <dd><p>Cube view type <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html">CameraViewType</a>.</p>
+</dd>
+    <dt><code>zoomFit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true execute a zoom fit (Default: true).</p>
+</dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraZoom_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraZoom*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraZoom_System_Single_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraZoom(System.Single,System.Boolean)">
+  CameraZoom(float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Zoom eye space by given scale factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraZoom(float scale, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Zoom scale factor.</p>
+</dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PerspectiveZoom_System_Single_SearchAThing_OpenGL_Core_BBox_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__">PerspectiveZoom</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_OrthoZoom">OrthoZoom</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraZoomIn_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraZoomIn*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraZoomIn_System_Single_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraZoomIn(System.Single,System.Boolean)">
+  CameraZoomIn(float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Zoom in eye space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraZoomIn(float scale = 0.1, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Zoom in scale factor.</p>
+</dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CameraZoomOut_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraZoomOut*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CameraZoomOut_System_Single_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.CameraZoomOut(System.Single,System.Boolean)">
+  CameraZoomOut(float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Zoom out eye space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CameraZoomOut(float scale = 0.1, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Zoom out scale factor.</p>
+</dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CaptureImage_" data-uid="SearchAThing.OpenGL.Core.GLControl.CaptureImage*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CaptureImage_System_String_" data-uid="SearchAThing.OpenGL.Core.GLControl.CaptureImage(System.String)">
+  CaptureImage(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Capture an image of current control using offscreen render device and actual rendere device size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CaptureImage(string offscreenPathfilename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offscreenPathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Pathfilename where to save the capture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_CaptureImage_" data-uid="SearchAThing.OpenGL.Core.GLControl.CaptureImage*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_CaptureImage_System_String_System_Int32_System_Int32_" data-uid="SearchAThing.OpenGL.Core.GLControl.CaptureImage(System.String,System.Int32,System.Int32)">
+  CaptureImage(string, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Capture an image of current control using offscreen render device with given render device size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CaptureImage(string offscreenPathfilename, int w, int h)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offscreenPathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Pathfilename where to save the capture.</p>
+</dd>
+    <dt><code>w</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Width of capture image (pixels).</p>
+</dd>
+    <dt><code>h</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Height of capture image (pixels).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_GetGLMatrixes_" data-uid="SearchAThing.OpenGL.Core.GLControl.GetGLMatrixes*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_GetGLMatrixes" data-uid="SearchAThing.OpenGL.Core.GLControl.GetGLMatrixes">
+  GetGLMatrixes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve model/view/projection matrixes and camera pos/target/up through a single object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLMatrixes GetGLMatrixes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLMatrixes.html">GLMatrixes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_GetViewNfo_" data-uid="SearchAThing.OpenGL.Core.GLControl.GetViewNfo*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_GetViewNfo_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.GetViewNfo(System.Boolean)">
+  GetViewNfo(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve actual view config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ViewNfo GetViewNfo(bool includeLights = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeLights</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (default) lights will saved within view nfo.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.ViewNfo.html">ViewNfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SaveView_System_String_">SaveView(string?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Invalidate_" data-uid="SearchAThing.OpenGL.Core.GLControl.Invalidate*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_" data-uid="SearchAThing.OpenGL.Core.GLControl.Invalidate(SearchAThing.OpenGL.Core.InvalidateEnum)">
+  Invalidate(InvalidateEnum)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Regenerate the model with <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_BuildModel">BuildModel</a> if this is the first invalidation
+or the invalidate argument is of type <a class="xref" href="SearchAThing.OpenGL.Core.InvalidateEnum.html#SearchAThing_OpenGL_Core_InvalidateEnum_RebuildModelAndRedraw">RebuildModelAndRedraw</a>.<br>
+Emits a <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_RenderInvalidated">RenderInvalidated</a> event that avalonia gl control will intercept to update the render surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Invalidate(InvalidateEnum invalidate = InvalidateEnum.RedrawOnly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="SearchAThing.OpenGL.Core.InvalidateEnum.html">InvalidateEnum</a></dt>
+    <dd><p>Type of invalidation (Default:<a class="xref" href="SearchAThing.OpenGL.Core.InvalidateEnum.html#SearchAThing_OpenGL_Core_InvalidateEnum_RedrawOnly">RedrawOnly</a>).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_InvalidateAll_" data-uid="SearchAThing.OpenGL.Core.GLControl.InvalidateAll*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_InvalidateAll" data-uid="SearchAThing.OpenGL.Core.GLControl.InvalidateAll">
+  InvalidateAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>All gl split control invalidation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InvalidateAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_LoadView_" data-uid="SearchAThing.OpenGL.Core.GLControl.LoadView*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_LoadView_System_String_" data-uid="SearchAThing.OpenGL.Core.GLControl.LoadView(System.String)">
+  LoadView(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restore current view config from given pathfilename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadView(string? pathfilename = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SetViewNfo_SearchAThing_OpenGL_Core_ViewNfo_System_Boolean_">SetViewNfo(ViewNfo, bool)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ModelRotate_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotate*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ModelRotate_System_Double_System_Double_System_Nullable_System_Numerics_Vector3__SearchAThing_OpenGL_Core_GLMatrixes_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotate(System.Double,System.Double,System.Nullable{System.Numerics.Vector3},SearchAThing.OpenGL.Core.GLMatrixes,System.Boolean)">
+  ModelRotate(double, double, Vector3?, GLMatrixes?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the model by given [eye] x,y angles around given [local] rotation center.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModelRotate(double angleXRad, double angleYRad, Vector3? rot_center = null, GLMatrixes? mFrom = null, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>angleXRad</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Eye space x angle rotation (rad).</p>
+</dd>
+    <dt><code>angleYRad</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Eye space y angle rotation (rad).</p>
+</dd>
+    <dt><code>rot_center</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>?</dt>
+    <dd><p>(Optional) Local space (x,y,z) rotation center [local].</p>
+</dd>
+    <dt><code>mFrom</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLMatrixes.html">GLMatrixes</a></dt>
+    <dd><p>(Optional) gl matrixes at rotation start.</p>
+</dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ModelRotateDown_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateDown*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ModelRotateDown" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateDown">
+  ModelRotateDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the model down of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModelRotateDown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ModelRotateLeft_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateLeft*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ModelRotateLeft" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateLeft">
+  ModelRotateLeft()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the model left of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModelRotateLeft()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ModelRotateRight_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateRight*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ModelRotateRight" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateRight">
+  ModelRotateRight()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L507"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the model right of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModelRotateRight()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ModelRotateUp_" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateUp*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ModelRotateUp" data-uid="SearchAThing.OpenGL.Core.GLControl.ModelRotateUp">
+  ModelRotateUp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotate the model up of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModelRotateUp()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_OnPropertyChanged_" data-uid="SearchAThing.OpenGL.Core.GLControl.OnPropertyChanged*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_OnPropertyChanged_System_String_" data-uid="SearchAThing.OpenGL.Core.GLControl.OnPropertyChanged(System.String)">
+  OnPropertyChanged(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>invoke this method to forward propertchanged event notification.
+note: not needed to specify propertyName set by compiler service to called property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnPropertyChanged(string? propertyName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Pan_" data-uid="SearchAThing.OpenGL.Core.GLControl.Pan*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Pan_System_Numerics_Vector2__System_Numerics_Vector2__SearchAThing_OpenGL_Core_GLMatrixes_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.Pan(System.Numerics.Vector2@,System.Numerics.Vector2@,SearchAThing.OpenGL.Core.GLMatrixes,System.Boolean)">
+  Pan(in Vector2, in Vector2, GLMatrixes?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pan the view by the given screen translation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Pan(in Vector2 screenFrom, in Vector2 screenTo, GLMatrixes? mFrom = null, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>screenFrom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd><p>Pan screen position from.</p>
+</dd>
+    <dt><code>screenTo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd><p>Pan screen position to.</p>
+</dd>
+    <dt><code>mFrom</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLMatrixes.html">GLMatrixes</a></dt>
+    <dd><p>(Optional) begin pan matrixes.</p>
+</dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PerspectivePan_System_Numerics_Vector3__System_Numerics_Vector2__System_Numerics_Vector2__System_Numerics_Vector2__System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__">PerspectivePan</a>(in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_OrthoPan_System_Numerics_Vector2__System_Numerics_Vector2__System_Numerics_Vector2__System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__">OrthoPan</a>(in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_GetGLMatrixes">GetGLMatrixes()</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_PanDown_" data-uid="SearchAThing.OpenGL.Core.GLControl.PanDown*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_PanDown" data-uid="SearchAThing.OpenGL.Core.GLControl.PanDown">
+  PanDown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L492"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pan the view down of a little factor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PanDown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_PanLeft_" data-uid="SearchAThing.OpenGL.Core.GLControl.PanLeft*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_PanLeft" data-uid="SearchAThing.OpenGL.Core.GLControl.PanLeft">
+  PanLeft()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L462"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pan the view left of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PanLeft()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_PanRight_" data-uid="SearchAThing.OpenGL.Core.GLControl.PanRight*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_PanRight" data-uid="SearchAThing.OpenGL.Core.GLControl.PanRight">
+  PanRight()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pan the view right of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PanRight()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_PanUp_" data-uid="SearchAThing.OpenGL.Core.GLControl.PanUp*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_PanUp" data-uid="SearchAThing.OpenGL.Core.GLControl.PanUp">
+  PanUp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L482"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pan the view up of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PanUp()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_RayCastLocal_" data-uid="SearchAThing.OpenGL.Core.GLControl.RayCastLocal*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_RayCastLocal_System_Numerics_Vector2__" data-uid="SearchAThing.OpenGL.Core.GLControl.RayCastLocal(System.Numerics.Vector2@)">
+  RayCastLocal(in Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L1023"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a raycast Line suitable for hit test of figure primitives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Line RayCastLocal(in Vector2 screen)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>screen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd><p>Screen coord (x,y) [screen].</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_GLControl_RayCastLocal_System_Numerics_Vector2___examples">Examples</h4>
+  <p><a href="https://github.com/devel0/netcore-opengl/blob/master/examples/example-0007/Program.cs"><b>Example</b></a>
+\snippet{'trimleft'} example-0007/Program.cs RayCast</p>
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Render_" data-uid="SearchAThing.OpenGL.Core.GLControl.Render*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Render_SearchAThing_OpenGL_Core_IRenderDevice_" data-uid="SearchAThing.OpenGL.Core.GLControl.Render(SearchAThing.OpenGL.Core.IRenderDevice)">
+  Render(IRenderDevice?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L645"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Main gl render process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Render(IRenderDevice? device = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html">IRenderDevice</a></dt>
+    <dd><p>Target render surface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_SaveView_" data-uid="SearchAThing.OpenGL.Core.GLControl.SaveView*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_SaveView_System_String_" data-uid="SearchAThing.OpenGL.Core.GLControl.SaveView(System.String)">
+  SaveView(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Save actual view info to given pathfilename.<br>
+A Notification GLControl.NotificationRequest event emitted.<br>
+<a class="xref" href="SearchAThing.OpenGL.Core.Constants.html#SearchAThing_OpenGL_Core_Constants_ViewDefaultPathfilename">ViewDefaultPathfilename</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveView(string? pathfilename = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_SetRotationCenter_" data-uid="SearchAThing.OpenGL.Core.GLControl.SetRotationCenter*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_SetRotationCenter_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.SetRotationCenter(System.Boolean)">
+  SetRotationCenter(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the rotation center for model and camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRotationCenter(bool keepSelection = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keepSelection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If false (Default) the active selection will cleared and mode back to view gesture.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_SetViewNfo_" data-uid="SearchAThing.OpenGL.Core.GLControl.SetViewNfo*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_SetViewNfo_SearchAThing_OpenGL_Core_ViewNfo_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.SetViewNfo(SearchAThing.OpenGL.Core.ViewNfo,System.Boolean)">
+  SetViewNfo(ViewNfo, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restore current view config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetViewNfo(ViewNfo nfo, bool includeLights = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nfo</code> <a class="xref" href="SearchAThing.OpenGL.Core.ViewNfo.html">ViewNfo</a></dt>
+    <dd><p>view config object</p>
+</dd>
+    <dt><code>includeLights</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (default) lights set to the model.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_LoadView_System_String_">LoadView(string?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Size_" data-uid="SearchAThing.OpenGL.Core.GLControl.Size*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Size" data-uid="SearchAThing.OpenGL.Core.GLControl.Size">
+  Size()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get render surface size (pixels).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Size()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_SwitchSelectionMode_" data-uid="SearchAThing.OpenGL.Core.GLControl.SwitchSelectionMode*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_SwitchSelectionMode_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.SwitchSelectionMode(System.Boolean)">
+  SwitchSelectionMode(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Switch (model) selection mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SwitchSelectionMode(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_Tilt_" data-uid="SearchAThing.OpenGL.Core.GLControl.Tilt*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_Tilt_System_Single_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.Tilt(System.Single,System.Boolean)">
+  Tilt(float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tilt camera [view] by rotating it's up vector around [view] z axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Tilt(float angleDeg = 2, bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>angleDeg</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Tilt angle (deg) [view].</p>
+</dd>
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_CameraTilt_System_Single_System_Numerics_Vector3__System_Numerics_Vector3__">CameraTilt</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_TiltLeft_" data-uid="SearchAThing.OpenGL.Core.GLControl.TiltLeft*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_TiltLeft" data-uid="SearchAThing.OpenGL.Core.GLControl.TiltLeft">
+  TiltLeft()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L542"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tilt the camera left of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TiltLeft()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_TiltRight_" data-uid="SearchAThing.OpenGL.Core.GLControl.TiltRight*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_TiltRight" data-uid="SearchAThing.OpenGL.Core.GLControl.TiltRight">
+  TiltRight()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L547"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Titl the camera right of a little factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TiltRight()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleCameraObject_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleCameraObject*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleCameraObject_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleCameraObject(System.Boolean)">
+  ToggleCameraObject(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L1008"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle display of camera frustum object ( generated at runtime through a temporary vertex manager ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleCameraObject(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleIdentifyCoord_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleIdentifyCoord*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleIdentifyCoord" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleIdentifyCoord">
+  ToggleIdentifyCoord()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L992"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle identify vertex coord.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleIdentifyCoord()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_TogglePerspective_" data-uid="SearchAThing.OpenGL.Core.GLControl.TogglePerspective*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_TogglePerspective_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.TogglePerspective(System.Boolean)">
+  TogglePerspective(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle perspective mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TogglePerspective(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Perspective">Perspective</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleShadeWithEdge_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleShadeWithEdge*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleShadeWithEdge_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleShadeWithEdge(System.Boolean)">
+  ToggleShadeWithEdge(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle shade with edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleShadeWithEdge(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShadeWithEdge">ShadeWithEdge</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleShowModelBBox_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleShowModelBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleShowModelBBox_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleShowModelBBox(System.Boolean)">
+  ToggleShowModelBBox(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L998"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle display of model bounding box ( generated at runtime through a temporary vertex manager ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleShowModelBBox(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleShowNormals_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleShowNormals*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleShowNormals_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleShowNormals(System.Boolean)">
+  ToggleShowNormals(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle show normals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleShowNormals(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShowNormals">ShowNormals</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleUseShadow_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleUseShadow*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleUseShadow_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleUseShadow(System.Boolean)">
+  ToggleUseShadow(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle shadows generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleUseShadow(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_UseShadow">UseShadow</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleUseTexture_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleUseTexture*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleUseTexture_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleUseTexture(System.Boolean)">
+  ToggleUseTexture(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle use of textures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleUseTexture(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_UseTexture">UseTexture</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleVertexVisibility_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleVertexVisibility*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleVertexVisibility_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleVertexVisibility(System.Boolean)">
+  ToggleVertexVisibility(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle vertex visibility.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleVertexVisibility(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ToggleWireframe_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleWireframe*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ToggleWireframe_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ToggleWireframe(System.Boolean)">
+  ToggleWireframe(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Toggle wireframe mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleWireframe(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Wireframe">Wireframe</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLControl_ZoomFit_" data-uid="SearchAThing.OpenGL.Core.GLControl.ZoomFit*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_ZoomFit_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLControl.ZoomFit(System.Boolean)">
+  ZoomFit(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.View.cs/#L400"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fit gl model into the view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ZoomFit(bool invalidate = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true refresh the scene.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PerspectiveZoomFit_System_Collections_Generic_IEnumerable_System_Numerics_Vector3__System_Numerics_Vector2__System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Single_System_Numerics_Vector3__System_Numerics_Vector3__System_Int32_System_Single_">PerspectiveZoomFit</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>&gt;, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</div>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_OrthoZoomFit_System_Collections_Generic_IEnumerable_System_Numerics_Vector3__System_Numerics_Vector2__System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Single_System_Single_System_Single_System_Numerics_Vector3_System_Numerics_Vector3_System_Numerics_Vector3_System_Single__System_Numerics_Vector3__System_Numerics_Vector3__">OrthoZoomFit</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>&gt;, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>, out <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>)</div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_InvalidateAllRequest" data-uid="SearchAThing.OpenGL.Core.GLControl.InvalidateAllRequest">
+  InvalidateAllRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler? InvalidateAllRequest</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_NotEmptyRenderPreview" data-uid="SearchAThing.OpenGL.Core.GLControl.NotEmptyRenderPreview">
+  NotEmptyRenderPreview
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event generated at first non bbox empty render generated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event RenderPreviewDelegate? NotEmptyRenderPreview</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.RenderPreviewDelegate.html">RenderPreviewDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_PropertyChanged" data-uid="SearchAThing.OpenGL.Core.GLControl.PropertyChanged">
+  PropertyChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.Vars.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler? PropertyChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLControl_RenderInvalidated" data-uid="SearchAThing.OpenGL.Core.GLControl.RenderInvalidated">
+  RenderInvalidated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_">Invalidate(InvalidateEnum)</a> called.<br>
+Handled by avalonia gl control to execute the <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Render_SearchAThing_OpenGL_Core_IRenderDevice_">Render(IRenderDevice?)</a> and transfer gl pixels to the device target surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler? RenderInvalidated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLControl.ViewCube.cs/#L3" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace SearchAThing.OpenGL.GUI | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace SearchAThing.OpenGL.GUI | netcore-opengl ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.GUI">
+
+  <h1 id="SearchAThing_OpenGL_GUI" data-uid="SearchAThing.OpenGL.GUI" class="text-break">Namespace SearchAThing.OpenGL.GUI</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.AColorConverter.html">AColorConverter</a></dt>
+      <dd><p>Converter Color to Avalonia.Media.Color</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html">AvaloniaGLControl</a></dt>
+      <dd><p>Avalonia gl control.<br>
+It's a graphical ui <a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html">IRenderDevice</a> used to transfer <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl">GLControl</a> pixels
+to the window bitmap through the override of the avalonia <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_Render_Avalonia_Media_DrawingContext_">Render(DrawingContext)</a> method
+that will be called by the avalonia framework every time the visual invalidates.<br>
+When control size changed <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_">Invalidate(InvalidateEnum)</a> will be invoked and
+<a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLSizeChanged">GLSizeChanged</a> event emitted.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html">AvaloniaGLControlSplit</a></dt>
+      <dd><p>Gl split control attached to <a class="xref" href="SearchAThing.OpenGL.GUI.GLWindow.html">GLWindow</a> for stand-alone application or <span class="xref">Avalonia.Controls.Window</span>
+on mvvm applications.<br>
+It creates <a class="xref" href="SearchAThing.OpenGL.GUI.GLView.html">GLView</a> at start then allow to create more when split activated
+through associated key gestures.<br></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.ColorHexStringConverter.html">ColorHexStringConverter</a></dt>
+      <dd><p>Converter Color to hex string</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Constants.html">Constants</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Ext.html">Ext</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.GLDevTool.html">GLDevTool</a></dt>
+      <dd><p>Developer tool to inspect vertex manager at runtime.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.GLView.html">GLView</a></dt>
+      <dd><p>Avalonia control that hold a <code>grRoot</code> grid inside of which take place a title and an <a class="xref" href="SearchAThing.OpenGL.GUI.GLView.html#SearchAThing_OpenGL_GUI_GLView_AvaloniaGLControl">AvaloniaGLControl</a>.<br>
+Its purpose is to separate the avalonia gl control from outer gui control, in this case the gl view for
+desktop widget customization ( actually the title is overlayed to ).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.GLWindow.html">GLWindow</a></dt>
+      <dd><p>Used in stand-alone application types ( console programs ) to create an application gl window.<br>
+This control automatically keeps track of created gl control and listen for their property change
+in order to invalidate their visual.<br></p>
+<p>This window contains the <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html">AvaloniaGLControlSplit</a> that is responsible to create
+<a class="xref" href="SearchAThing.OpenGL.GUI.GLView.html">GLView</a> and set to them the <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html">AvaloniaGLControl</a> which is the target
+render device for the <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html">GLControl</a>.
+\snippet{'trimleft'} examples/example-0000/Program.cs example-0000</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.html">LostFocusUpdateBindingBehavior</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Toolkit.html">Toolkit</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Vector2TextConverter.html">Vector2TextConverter</a></dt>
+      <dd><p>Converter to allow text editing of vector2 components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Vector3EditConverter.html">Vector3EditConverter</a></dt>
+      <dd><p>Converter that create a <a class="xref" href="SearchAThing.OpenGL.GUI.Vector3Wrap.html">Vector3Wrap</a> vector3 wrapper that can be used for interactive editing
+of vector3 components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Vector3TextConverter.html">Vector3TextConverter</a></dt>
+      <dd><p>Converter to allow text editing of vector3 components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Vector3Wrap.html">Vector3Wrap</a></dt>
+      <dd><p>Wrap X,Y,Z components of an object containing a INotifyPropertyChanged vector3.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.Vector4TextConverter.html">Vector4TextConverter</a></dt>
+      <dd><p>Converter to allow text editing of vector4 components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.ViewLayoutNfo.html">ViewLayoutNfo</a></dt>
+      <dd><p>Object that holds information about gl split view configuration.</p>
+</dd>
+    </dl>
+    <h3 id="delegates">
+Delegates
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaControlEvent.html">AvaloniaControlEvent</a></dt>
+      <dd><p>Generic delegate used by <a class="xref" href="SearchAThing.OpenGL.GUI.Toolkit.html#SearchAThing_OpenGL_GUI_Toolkit_AttachGLControlSplit_Avalonia_Controls_Window_Avalonia_Controls_Grid_SearchAThing_OpenGL_Core_GLModel_System_Action_SearchAThing_OpenGL_GUI_AvaloniaGLControlSplit__SearchAThing_OpenGL_GUI_AvaloniaControlInitialEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_">AttachGLControlSplit(Window, Grid, GLModel, Action&lt;AvaloniaGLControlSplit&gt;?, AvaloniaControlInitialEvent?, AvaloniaControlEvent?, AvaloniaControlEvent?)</a> for control create/remove events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent.html">AvaloniaControlInitialEvent</a></dt>
+      <dd><p>Used by <a class="xref" href="SearchAThing.OpenGL.GUI.Toolkit.html#SearchAThing_OpenGL_GUI_Toolkit_AttachGLControlSplit_Avalonia_Controls_Window_Avalonia_Controls_Grid_SearchAThing_OpenGL_Core_GLModel_System_Action_SearchAThing_OpenGL_GUI_AvaloniaGLControlSplit__SearchAThing_OpenGL_GUI_AvaloniaControlInitialEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_">AttachGLControlSplit(Window, Grid, GLModel, Action&lt;AvaloniaGLControlSplit&gt;?, AvaloniaControlInitialEvent?, AvaloniaControlEvent?, AvaloniaControlEvent?)</a> to notify focused control change.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.GLControlCreatedDelegate.html">GLControlCreatedDelegate</a></dt>
+      <dd><p>Delegate used by the <a class="xref" href="SearchAThing.OpenGL.GUI.GLWindow.html">GLWindow</a> to customize action following the creation of the gl control into the window.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.GLControlFocusedDelegate.html">GLControlFocusedDelegate</a></dt>
+      <dd><p>Delegate used by the <a class="xref" href="SearchAThing.OpenGL.GUI.GLWindow.html">GLWindow</a> to customize action following change of focused gl control.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SearchAThing.OpenGL.GUI.GLSplitAttachedDelegate.html">GLSplitAttachedDelegate</a></dt>
+      <dd><p>Delegate used by the <a class="xref" href="SearchAThing.OpenGL.GUI.GLWindow.html">GLWindow</a> to customize action following the attachment of the gl split into the window.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

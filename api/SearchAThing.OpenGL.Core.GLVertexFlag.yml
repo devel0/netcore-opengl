@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLVertexFlag
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexFlag
+  id: GLVertexFlag
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLVertexFlag.Selected
+  langs:
+  - csharp
+  - vb
+  name: GLVertexFlag
+  nameWithType: GLVertexFlag
+  fullName: SearchAThing.OpenGL.Core.GLVertexFlag
+  type: Enum
+  source:
+    remote:
+      path: src/core/vertex/IGLVertex.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLVertexFlag
+    path: src/core/vertex/IGLVertex.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: 32bit vertex flags
+  example: []
+  syntax:
+    content: public enum GLVertexFlag
+    content.vb: Public Enum GLVertexFlag
+- uid: SearchAThing.OpenGL.Core.GLVertexFlag.Selected
+  commentId: F:SearchAThing.OpenGL.Core.GLVertexFlag.Selected
+  id: Selected
+  parent: SearchAThing.OpenGL.Core.GLVertexFlag
+  langs:
+  - csharp
+  - vb
+  name: Selected
+  nameWithType: GLVertexFlag.Selected
+  fullName: SearchAThing.OpenGL.Core.GLVertexFlag.Selected
+  type: Field
+  source:
+    remote:
+      path: src/core/vertex/IGLVertex.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Selected
+    path: src/core/vertex/IGLVertex.cs
+    startLine: 10
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: 'VERTEX_FLAG_SELECTED : if set the vertex will coloured to appears as selected.'
+  example: []
+  syntax:
+    content: Selected = 1
+    return:
+      type: SearchAThing.OpenGL.Core.GLVertexFlag
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLVertexFlag
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexFlag
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexFlag.html
+  name: GLVertexFlag
+  nameWithType: GLVertexFlag
+  fullName: SearchAThing.OpenGL.Core.GLVertexFlag

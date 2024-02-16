@@ -1,0 +1,444 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.IRenderDevice
+  commentId: T:SearchAThing.OpenGL.Core.IRenderDevice
+  id: IRenderDevice
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.IRenderDevice.Post(System.Action)
+  - SearchAThing.OpenGL.Core.IRenderDevice.Size
+  - SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  - SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount
+  langs:
+  - csharp
+  - vb
+  name: IRenderDevice
+  nameWithType: IRenderDevice
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice
+  type: Interface
+  source:
+    remote:
+      path: src/core/render/IRenderDevice.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: IRenderDevice
+    path: src/core/render/IRenderDevice.cs
+    startLine: 6
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    A render device will read pixels from given gl context through ReadPixels
+
+    and write to an appropriate device implementation ( avalonia, offscreen, dummy devices available ).
+  example: []
+  syntax:
+    content: 'public interface IRenderDevice : INotifyPropertyChanged'
+    content.vb: Public Interface IRenderDevice Inherits INotifyPropertyChanged
+  inheritedMembers:
+  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.Size
+  commentId: P:SearchAThing.OpenGL.Core.IRenderDevice.Size
+  id: Size
+  parent: SearchAThing.OpenGL.Core.IRenderDevice
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: IRenderDevice.Size
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.Size
+  type: Property
+  source:
+    remote:
+      path: src/core/render/IRenderDevice.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Size
+    path: src/core/render/IRenderDevice.cs
+    startLine: 12
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Retrieve actual size of the device screen (pixels).
+  example: []
+  syntax:
+    content: Size Size { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Size
+    content.vb: ReadOnly Property Size As Size
+  overload: SearchAThing.OpenGL.Core.IRenderDevice.Size*
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  commentId: M:SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  id: TransferGLPixels(Silk.NET.OpenGL.GL)
+  parent: SearchAThing.OpenGL.Core.IRenderDevice
+  langs:
+  - csharp
+  - vb
+  name: TransferGLPixels(GL)
+  nameWithType: IRenderDevice.TransferGLPixels(GL)
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/IRenderDevice.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TransferGLPixels
+    path: src/core/render/IRenderDevice.cs
+    startLine: 24
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Use given GL object to issue a ReadPixel and transfer them to destination device.<br />
+
+    Following some details how this function is involved in the rendering process:<br />
+
+    <a href="ReactiveUI.svg">image</a>
+
+    \image html ReactiveUI.svg width=100%    
+
+    <br />
+
+    Here an example implementation given from the <xref href="SearchAThing.OpenGL.Core.OffscreenRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)" data-throw-if-not-resolved="false"></xref>:<br />
+
+    \snippet{'trimleft'} src/render/OffscreenRenderDevice.cs OffscreenTrasferGLPixels
+  example: []
+  syntax:
+    content: void TransferGLPixels(GL GL)
+    parameters:
+    - id: GL
+      type: Silk.NET.OpenGL.GL
+      description: ''
+    content.vb: Sub TransferGLPixels(GL As GL)
+  overload: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels*
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.Post(System.Action)
+  commentId: M:SearchAThing.OpenGL.Core.IRenderDevice.Post(System.Action)
+  id: Post(System.Action)
+  parent: SearchAThing.OpenGL.Core.IRenderDevice
+  langs:
+  - csharp
+  - vb
+  name: Post(Action)
+  nameWithType: IRenderDevice.Post(Action)
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.Post(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/IRenderDevice.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Post
+    path: src/core/render/IRenderDevice.cs
+    startLine: 32
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Used by <xref href="SearchAThing.OpenGL.Core.GLControl" data-throw-if-not-resolved="false"></xref> to emit PropertyChanged event.<br />
+
+    This is needed in most frameworks that allow ui interactions only from the ui thread itself.<br />
+
+    Its necessary expecially if want to access ui data from a separate Task running in parallel.<br />
+  example: []
+  syntax:
+    content: void Post(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+      description: Action to be executed in ui thread.
+    content.vb: Sub Post(action As Action)
+  overload: SearchAThing.OpenGL.Core.IRenderDevice.Post*
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount
+  commentId: P:SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount
+  id: TransferGLPixelsCount
+  parent: SearchAThing.OpenGL.Core.IRenderDevice
+  langs:
+  - csharp
+  - vb
+  name: TransferGLPixelsCount
+  nameWithType: IRenderDevice.TransferGLPixelsCount
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount
+  type: Property
+  source:
+    remote:
+      path: src/core/render/IRenderDevice.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TransferGLPixelsCount
+    path: src/core/render/IRenderDevice.cs
+    startLine: 37
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Stats counter of <xref href="SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)" data-throw-if-not-resolved="false"></xref> calls.
+  example: []
+  syntax:
+    content: int TransferGLPixelsCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property TransferGLPixelsCount As Integer
+  overload: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount*
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  parent: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged
+  name: PropertyChanged
+  nameWithType: INotifyPropertyChanged.PropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.Size*
+  commentId: Overload:SearchAThing.OpenGL.Core.IRenderDevice.Size
+  href: SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_Size
+  name: Size
+  nameWithType: IRenderDevice.Size
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.Size
+- uid: System.Drawing.Size
+  commentId: T:System.Drawing.Size
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.size
+  name: Size
+  nameWithType: Size
+  fullName: System.Drawing.Size
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: SearchAThing.OpenGL.Core.OffscreenRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  commentId: M:SearchAThing.OpenGL.Core.OffscreenRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.OffscreenRenderDevice.html#SearchAThing_OpenGL_Core_OffscreenRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_
+  name: TransferGLPixels(GL)
+  nameWithType: OffscreenRenderDevice.TransferGLPixels(GL)
+  fullName: SearchAThing.OpenGL.Core.OffscreenRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.OffscreenRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+    name: TransferGLPixels
+    href: SearchAThing.OpenGL.Core.OffscreenRenderDevice.html#SearchAThing_OpenGL_Core_OffscreenRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_
+  - name: (
+  - uid: Silk.NET.OpenGL.GL
+    name: GL
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.OffscreenRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+    name: TransferGLPixels
+    href: SearchAThing.OpenGL.Core.OffscreenRenderDevice.html#SearchAThing_OpenGL_Core_OffscreenRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_
+  - name: (
+  - uid: Silk.NET.OpenGL.GL
+    name: GL
+    isExternal: true
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels*
+  commentId: Overload:SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels
+  href: SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_
+  name: TransferGLPixels
+  nameWithType: IRenderDevice.TransferGLPixels
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels
+- uid: Silk.NET.OpenGL.GL
+  commentId: T:Silk.NET.OpenGL.GL
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: GL
+  nameWithType: GL
+  fullName: Silk.NET.OpenGL.GL
+- uid: Silk.NET.OpenGL
+  commentId: N:Silk.NET.OpenGL
+  isExternal: true
+  name: Silk.NET.OpenGL
+  nameWithType: Silk.NET.OpenGL
+  fullName: Silk.NET.OpenGL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.Post*
+  commentId: Overload:SearchAThing.OpenGL.Core.IRenderDevice.Post
+  href: SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_Post_System_Action_
+  name: Post
+  nameWithType: IRenderDevice.Post
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.Post
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  commentId: M:SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  parent: SearchAThing.OpenGL.Core.IRenderDevice
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_
+  name: TransferGLPixels(GL)
+  nameWithType: IRenderDevice.TransferGLPixels(GL)
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+    name: TransferGLPixels
+    href: SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_
+  - name: (
+  - uid: Silk.NET.OpenGL.GL
+    name: GL
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)
+    name: TransferGLPixels
+    href: SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_
+  - name: (
+  - uid: Silk.NET.OpenGL.GL
+    name: GL
+    isExternal: true
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount*
+  commentId: Overload:SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount
+  href: SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_TransferGLPixelsCount
+  name: TransferGLPixelsCount
+  nameWithType: IRenderDevice.TransferGLPixelsCount
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice.TransferGLPixelsCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Core.IRenderDevice
+  commentId: T:SearchAThing.OpenGL.Core.IRenderDevice
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IRenderDevice.html
+  name: IRenderDevice
+  nameWithType: IRenderDevice
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice

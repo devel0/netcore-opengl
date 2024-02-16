@@ -1,8 +1,0 @@
-<map id="OnPropertyChanged" name="OnPropertyChanged">
-<area shape="rect" id="node1" title="invoke this method to forward propertchanged event notification. note: not needed to specify property..." alt="" coords="860,42,1012,67"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a4cace370a2a4e2ed7955207d2190d772" title=" " alt="" coords="723,42,812,67"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a42f143b4256f6d3cc598b9218dd2483f" title=" " alt="" coords="568,42,675,67"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html#ad529f19fecdcea43428f6d5760e549df" title="Add given primitive to this figure." alt="" coords="317,5,520,45"/>
-<area shape="rect" id="node6" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_vertex_manager.html#a2bbcedb4cd4febc767698ccea6ee4d9a" title="Adds given figure to the vertex manager. &#160;All vertexes belonging to the figure&#39;s primitives will be a..." alt="" coords="375,70,462,95"/>
-<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_type_base.html#a1703c83158a56d8cdcb362ec0208aa8d" title="Create a figure with the set of given primitives all of the same type." alt="" coords="5,5,269,45"/>
-</map>

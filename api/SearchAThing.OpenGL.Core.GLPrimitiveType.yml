@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+  commentId: T:SearchAThing.OpenGL.Core.GLPrimitiveType
+  id: GLPrimitiveType
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLPrimitiveType.Line
+  - SearchAThing.OpenGL.Core.GLPrimitiveType.Point
+  - SearchAThing.OpenGL.Core.GLPrimitiveType.Triangle
+  langs:
+  - csharp
+  - vb
+  name: GLPrimitiveType
+  nameWithType: GLPrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType
+  type: Enum
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLPrimitiveType
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enum that specify which type of primitive belong to a figure.
+  example: []
+  syntax:
+    content: public enum GLPrimitiveType
+    content.vb: Public Enum GLPrimitiveType
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.GLPrimitiveType.SearchAThing.OpenGL.Core.Ext.GL
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType.Point
+  commentId: F:SearchAThing.OpenGL.Core.GLPrimitiveType.Point
+  id: Point
+  parent: SearchAThing.OpenGL.Core.GLPrimitiveType
+  langs:
+  - csharp
+  - vb
+  name: Point
+  nameWithType: GLPrimitiveType.Point
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType.Point
+  type: Field
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Point
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Corresponds to GL_POINTS opengl primitive.<br />
+
+    Its described by 1 GLVertex.<br />
+
+    A point primitive can have a screen pixel size.
+  example: []
+  syntax:
+    content: Point = 0
+    return:
+      type: SearchAThing.OpenGL.Core.GLPrimitiveType
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType.Line
+  commentId: F:SearchAThing.OpenGL.Core.GLPrimitiveType.Line
+  id: Line
+  parent: SearchAThing.OpenGL.Core.GLPrimitiveType
+  langs:
+  - csharp
+  - vb
+  name: Line
+  nameWithType: GLPrimitiveType.Line
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType.Line
+  type: Field
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Line
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 20
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Corresponds to GL_LINES opengl primitive.<br /> 
+
+    Its described by 2 GLVertex.<br />
+
+    A line primitive will rasterized with 1 pixel screen size.
+  example: []
+  syntax:
+    content: Line = 1
+    return:
+      type: SearchAThing.OpenGL.Core.GLPrimitiveType
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType.Triangle
+  commentId: F:SearchAThing.OpenGL.Core.GLPrimitiveType.Triangle
+  id: Triangle
+  parent: SearchAThing.OpenGL.Core.GLPrimitiveType
+  langs:
+  - csharp
+  - vb
+  name: Triangle
+  nameWithType: GLPrimitiveType.Triangle
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType.Triangle
+  type: Field
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Triangle
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 29
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Corresponds to GL_TRIANGLES opengl primitive.<br />
+
+    Its described by 3 GLVertex.<br />
+
+    A triangle primitive can be rendered in wireframe or shade mode.<br />
+
+    The option ShadeWidthEdge allow to overlay triangles edges with lines
+
+    generated at runtime through geometry shader.<br />
+  example: []
+  syntax:
+    content: Triangle = 2
+    return:
+      type: SearchAThing.OpenGL.Core.GLPrimitiveType
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType.SearchAThing.OpenGL.Core.Ext.GL
+  commentId: M:SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_GL_SearchAThing_OpenGL_Core_GLPrimitiveType_
+  name: GL(GLPrimitiveType)
+  nameWithType: Ext.GL(GLPrimitiveType)
+  fullName: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+    name: GL
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_GL_SearchAThing_OpenGL_Core_GLPrimitiveType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+    name: GLPrimitiveType
+    href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+    name: GL
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_GL_SearchAThing_OpenGL_Core_GLPrimitiveType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+    name: GLPrimitiveType
+    href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_GL_SearchAThing_OpenGL_Core_GLPrimitiveType_
+  name: GL(GLPrimitiveType)
+  nameWithType: Ext.GL(GLPrimitiveType)
+  fullName: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+    name: GL
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_GL_SearchAThing_OpenGL_Core_GLPrimitiveType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+    name: GLPrimitiveType
+    href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)
+    name: GL
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_GL_SearchAThing_OpenGL_Core_GLPrimitiveType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+    name: GLPrimitiveType
+    href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+  commentId: T:SearchAThing.OpenGL.Core.GLPrimitiveType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  name: GLPrimitiveType
+  nameWithType: GLPrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType

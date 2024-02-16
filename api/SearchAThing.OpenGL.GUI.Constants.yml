@@ -1,0 +1,2222 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.Constants
+  commentId: T:SearchAThing.OpenGL.GUI.Constants
+  id: Constants
+  parent: SearchAThing.OpenGL.GUI
+  children:
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanDownGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanLeftGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanRightGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanUpGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateDownGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateLeftGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateRightGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateUpGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltLeftGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltRightGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomInGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomOutGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ClearSelectionGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_CopySimpleCmdOfSelectionGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_DeleteSelectedGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_DevTool
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_InvalidateGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateDownGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateLeftGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateRightGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateUpGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_PasteSimpleCmdGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreView
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreViewLayout
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveView
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveViewLayout
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_SetRotationCenterGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewClose
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewHorizontal
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewVertical
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_SwitchSelectionModeGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleCameraObject
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleIdentifyCoordGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleModelBBox
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_TogglePerspectiveGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShadeWithEdgeGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShowNormalsGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseShadowGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseTextureGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleVertexVisibilityGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleWireframeGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_View
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBackGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBottomGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewFrontGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewLeftGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewRightGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewTopGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEFAULT_ZoomFitGesture
+  - SearchAThing.OpenGL.GUI.Constants.DEVTOOL_HEIGHT
+  - SearchAThing.OpenGL.GUI.Constants.DEVTOOL_WIDTH
+  - SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+  - SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+  - SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterBrush
+  - SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterColor
+  - SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName(System.String)
+  - SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename
+  - SearchAThing.OpenGL.GUI.Constants.NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+  - SearchAThing.OpenGL.GUI.Constants.NOTIFICATION_TITLE_INPUT_OUTPUT
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: SearchAThing.OpenGL.GUI.Constants
+  type: Class
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Constants
+    path: src/gui/Constants.cs
+    startLine: 2
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public static class Constants
+    content.vb: Public Module Constants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.GUI.Constants.NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+  id: NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+  nameWithType: Constants.NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+  fullName: SearchAThing.OpenGL.GUI.Constants.NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NETCORE_OPENGL_GUI_ASSEMBLY_NAME
+    path: src/gui/Constants.cs
+    startLine: 10
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: SearchAThing.OpenGL.Gui assembly name (regex).
+  example: []
+  syntax:
+    content: public const string NETCORE_OPENGL_GUI_ASSEMBLY_NAME = "netcore-opengl-gui"
+    return:
+      type: System.String
+    content.vb: Public Const NETCORE_OPENGL_GUI_ASSEMBLY_NAME As String = "netcore-opengl-gui"
+- uid: SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName(System.String)
+  commentId: M:SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName(System.String)
+  id: GuiAssetResourceName(System.String)
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: GuiAssetResourceName(string)
+  nameWithType: Constants.GuiAssetResourceName(string)
+  fullName: SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName(string)
+  type: Method
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GuiAssetResourceName
+    path: src/gui/Constants.cs
+    startLine: 16
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Retrieve resource name of gui asset.
+  example: []
+  syntax:
+    content: public static string GuiAssetResourceName(string filename)
+    parameters:
+    - id: filename
+      type: System.String
+      description: File name of the asset resource.
+    return:
+      type: System.String
+    content.vb: Public Shared Function GuiAssetResourceName(filename As String) As String
+  overload: SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName*
+  nameWithType.vb: Constants.GuiAssetResourceName(String)
+  fullName.vb: SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName(String)
+  name.vb: GuiAssetResourceName(String)
+- uid: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+  id: GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+  nameWithType: Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+  fullName: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GRID_SPLITTER_MANAGER_FocusedControlBorderThickness
+    path: src/gui/Constants.cs
+    startLine: 28
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) gl split focused control border thickness ( screen pixels ).
+  example: []
+  syntax:
+    content: public const double GRID_SPLITTER_MANAGER_FocusedControlBorderThickness = 2
+    return:
+      type: System.Double
+    content.vb: Public Const GRID_SPLITTER_MANAGER_FocusedControlBorderThickness As Double = 2
+- uid: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+  id: GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+  nameWithType: Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+  fullName: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+    path: src/gui/Constants.cs
+    startLine: 33
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) gl split focused control border brush.
+  example: []
+  syntax:
+    content: public static readonly ISolidColorBrush GRID_SPLITTER_MANAGER_FocusedControlBorderBrush
+    return:
+      type: Avalonia.Media.ISolidColorBrush
+    content.vb: Public Shared ReadOnly GRID_SPLITTER_MANAGER_FocusedControlBorderBrush As ISolidColorBrush
+- uid: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterColor
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterColor
+  id: GRID_SPLITTER_MANAGER_SplitterColor
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: GRID_SPLITTER_MANAGER_SplitterColor
+  nameWithType: Constants.GRID_SPLITTER_MANAGER_SplitterColor
+  fullName: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterColor
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GRID_SPLITTER_MANAGER_SplitterColor
+    path: src/gui/Constants.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) gl split grid splitter color.
+  example: []
+  syntax:
+    content: public static readonly Color GRID_SPLITTER_MANAGER_SplitterColor
+    return:
+      type: Avalonia.Media.Color
+    content.vb: Public Shared ReadOnly GRID_SPLITTER_MANAGER_SplitterColor As Color
+- uid: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterBrush
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterBrush
+  id: GRID_SPLITTER_MANAGER_SplitterBrush
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: GRID_SPLITTER_MANAGER_SplitterBrush
+  nameWithType: Constants.GRID_SPLITTER_MANAGER_SplitterBrush
+  fullName: SearchAThing.OpenGL.GUI.Constants.GRID_SPLITTER_MANAGER_SplitterBrush
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GRID_SPLITTER_MANAGER_SplitterBrush
+    path: src/gui/Constants.cs
+    startLine: 45
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) gl split grid splitter brush.
+  example: []
+  syntax:
+    content: public static readonly ISolidColorBrush GRID_SPLITTER_MANAGER_SplitterBrush
+    return:
+      type: Avalonia.Media.ISolidColorBrush
+    content.vb: Public Shared ReadOnly GRID_SPLITTER_MANAGER_SplitterBrush As ISolidColorBrush
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleWireframeGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleWireframeGesture
+  id: DEFAULT_ToggleWireframeGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleWireframeGesture
+  nameWithType: Constants.DEFAULT_ToggleWireframeGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleWireframeGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleWireframeGesture
+    path: src/gui/Constants.cs
+    startLine: 55
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle wireframe key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleWireframeGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleWireframeGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShadeWithEdgeGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShadeWithEdgeGesture
+  id: DEFAULT_ToggleShadeWithEdgeGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleShadeWithEdgeGesture
+  nameWithType: Constants.DEFAULT_ToggleShadeWithEdgeGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShadeWithEdgeGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleShadeWithEdgeGesture
+    path: src/gui/Constants.cs
+    startLine: 60
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle shade width edge key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleShadeWithEdgeGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleShadeWithEdgeGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleVertexVisibilityGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleVertexVisibilityGesture
+  id: DEFAULT_ToggleVertexVisibilityGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleVertexVisibilityGesture
+  nameWithType: Constants.DEFAULT_ToggleVertexVisibilityGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleVertexVisibilityGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleVertexVisibilityGesture
+    path: src/gui/Constants.cs
+    startLine: 65
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle vertex visibility key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleVertexVisibilityGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleVertexVisibilityGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShowNormalsGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShowNormalsGesture
+  id: DEFAULT_ToggleShowNormalsGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleShowNormalsGesture
+  nameWithType: Constants.DEFAULT_ToggleShowNormalsGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleShowNormalsGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleShowNormalsGesture
+    path: src/gui/Constants.cs
+    startLine: 70
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle show normals key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleShowNormalsGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleShowNormalsGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_TogglePerspectiveGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_TogglePerspectiveGesture
+  id: DEFAULT_TogglePerspectiveGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_TogglePerspectiveGesture
+  nameWithType: Constants.DEFAULT_TogglePerspectiveGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_TogglePerspectiveGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_TogglePerspectiveGesture
+    path: src/gui/Constants.cs
+    startLine: 75
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle perspective key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_TogglePerspectiveGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_TogglePerspectiveGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseTextureGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseTextureGesture
+  id: DEFAULT_ToggleUseTextureGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleUseTextureGesture
+  nameWithType: Constants.DEFAULT_ToggleUseTextureGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseTextureGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleUseTextureGesture
+    path: src/gui/Constants.cs
+    startLine: 80
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle use texture key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleUseTextureGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleUseTextureGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseShadowGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseShadowGesture
+  id: DEFAULT_ToggleUseShadowGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleUseShadowGesture
+  nameWithType: Constants.DEFAULT_ToggleUseShadowGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleUseShadowGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleUseShadowGesture
+    path: src/gui/Constants.cs
+    startLine: 85
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle use shadow key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleUseShadowGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleUseShadowGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SwitchSelectionModeGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_SwitchSelectionModeGesture
+  id: DEFAULT_SwitchSelectionModeGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SwitchSelectionModeGesture
+  nameWithType: Constants.DEFAULT_SwitchSelectionModeGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SwitchSelectionModeGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SwitchSelectionModeGesture
+    path: src/gui/Constants.cs
+    startLine: 90
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Switch selection mode key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_SwitchSelectionModeGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_SwitchSelectionModeGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanLeftGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanLeftGesture
+  id: DEFAULT_CameraPanLeftGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraPanLeftGesture
+  nameWithType: Constants.DEFAULT_CameraPanLeftGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanLeftGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraPanLeftGesture
+    path: src/gui/Constants.cs
+    startLine: 95
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera pan left key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraPanLeftGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraPanLeftGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanRightGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanRightGesture
+  id: DEFAULT_CameraPanRightGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraPanRightGesture
+  nameWithType: Constants.DEFAULT_CameraPanRightGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanRightGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraPanRightGesture
+    path: src/gui/Constants.cs
+    startLine: 100
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera pan right key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraPanRightGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraPanRightGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanUpGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanUpGesture
+  id: DEFAULT_CameraPanUpGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraPanUpGesture
+  nameWithType: Constants.DEFAULT_CameraPanUpGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanUpGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraPanUpGesture
+    path: src/gui/Constants.cs
+    startLine: 105
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera pan up key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraPanUpGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraPanUpGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanDownGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanDownGesture
+  id: DEFAULT_CameraPanDownGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraPanDownGesture
+  nameWithType: Constants.DEFAULT_CameraPanDownGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraPanDownGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraPanDownGesture
+    path: src/gui/Constants.cs
+    startLine: 110
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera pan down key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraPanDownGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraPanDownGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateLeftGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateLeftGesture
+  id: DEFAULT_ModelRotateLeftGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ModelRotateLeftGesture
+  nameWithType: Constants.DEFAULT_ModelRotateLeftGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateLeftGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ModelRotateLeftGesture
+    path: src/gui/Constants.cs
+    startLine: 115
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Model rotate left key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ModelRotateLeftGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ModelRotateLeftGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateRightGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateRightGesture
+  id: DEFAULT_ModelRotateRightGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ModelRotateRightGesture
+  nameWithType: Constants.DEFAULT_ModelRotateRightGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateRightGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ModelRotateRightGesture
+    path: src/gui/Constants.cs
+    startLine: 120
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Model rotate right key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ModelRotateRightGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ModelRotateRightGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateUpGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateUpGesture
+  id: DEFAULT_ModelRotateUpGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ModelRotateUpGesture
+  nameWithType: Constants.DEFAULT_ModelRotateUpGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateUpGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ModelRotateUpGesture
+    path: src/gui/Constants.cs
+    startLine: 125
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Model rotate up key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ModelRotateUpGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ModelRotateUpGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateDownGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateDownGesture
+  id: DEFAULT_ModelRotateDownGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ModelRotateDownGesture
+  nameWithType: Constants.DEFAULT_ModelRotateDownGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ModelRotateDownGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ModelRotateDownGesture
+    path: src/gui/Constants.cs
+    startLine: 130
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Model rotate down key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ModelRotateDownGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ModelRotateDownGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateLeftGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateLeftGesture
+  id: DEFAULT_CameraRotateLeftGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraRotateLeftGesture
+  nameWithType: Constants.DEFAULT_CameraRotateLeftGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateLeftGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraRotateLeftGesture
+    path: src/gui/Constants.cs
+    startLine: 135
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera rotate left key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraRotateLeftGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraRotateLeftGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateRightGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateRightGesture
+  id: DEFAULT_CameraRotateRightGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraRotateRightGesture
+  nameWithType: Constants.DEFAULT_CameraRotateRightGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateRightGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraRotateRightGesture
+    path: src/gui/Constants.cs
+    startLine: 140
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera rotate right key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraRotateRightGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraRotateRightGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateUpGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateUpGesture
+  id: DEFAULT_CameraRotateUpGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraRotateUpGesture
+  nameWithType: Constants.DEFAULT_CameraRotateUpGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateUpGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraRotateUpGesture
+    path: src/gui/Constants.cs
+    startLine: 145
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera rotate up key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraRotateUpGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraRotateUpGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateDownGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateDownGesture
+  id: DEFAULT_CameraRotateDownGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraRotateDownGesture
+  nameWithType: Constants.DEFAULT_CameraRotateDownGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraRotateDownGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraRotateDownGesture
+    path: src/gui/Constants.cs
+    startLine: 150
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera rotate down key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraRotateDownGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraRotateDownGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomInGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomInGesture
+  id: DEFAULT_CameraZoomInGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraZoomInGesture
+  nameWithType: Constants.DEFAULT_CameraZoomInGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomInGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraZoomInGesture
+    path: src/gui/Constants.cs
+    startLine: 155
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera zoom in key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraZoomInGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraZoomInGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomOutGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomOutGesture
+  id: DEFAULT_CameraZoomOutGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraZoomOutGesture
+  nameWithType: Constants.DEFAULT_CameraZoomOutGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraZoomOutGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraZoomOutGesture
+    path: src/gui/Constants.cs
+    startLine: 160
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera zoom out key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraZoomOutGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraZoomOutGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltLeftGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltLeftGesture
+  id: DEFAULT_CameraTiltLeftGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraTiltLeftGesture
+  nameWithType: Constants.DEFAULT_CameraTiltLeftGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltLeftGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraTiltLeftGesture
+    path: src/gui/Constants.cs
+    startLine: 165
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera tilt left key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraTiltLeftGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraTiltLeftGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltRightGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltRightGesture
+  id: DEFAULT_CameraTiltRightGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraTiltRightGesture
+  nameWithType: Constants.DEFAULT_CameraTiltRightGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CameraTiltRightGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraTiltRightGesture
+    path: src/gui/Constants.cs
+    startLine: 170
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Camera tilt right key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CameraTiltRightGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CameraTiltRightGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBottomGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBottomGesture
+  id: DEFAULT_ViewBottomGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ViewBottomGesture
+  nameWithType: Constants.DEFAULT_ViewBottomGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBottomGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ViewBottomGesture
+    path: src/gui/Constants.cs
+    startLine: 175
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) View bottom key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ViewBottomGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ViewBottomGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewTopGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewTopGesture
+  id: DEFAULT_ViewTopGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ViewTopGesture
+  nameWithType: Constants.DEFAULT_ViewTopGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewTopGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ViewTopGesture
+    path: src/gui/Constants.cs
+    startLine: 180
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) View top gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ViewTopGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ViewTopGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewLeftGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewLeftGesture
+  id: DEFAULT_ViewLeftGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ViewLeftGesture
+  nameWithType: Constants.DEFAULT_ViewLeftGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewLeftGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ViewLeftGesture
+    path: src/gui/Constants.cs
+    startLine: 185
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) View left key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ViewLeftGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ViewLeftGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewRightGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewRightGesture
+  id: DEFAULT_ViewRightGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ViewRightGesture
+  nameWithType: Constants.DEFAULT_ViewRightGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewRightGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ViewRightGesture
+    path: src/gui/Constants.cs
+    startLine: 190
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) View right key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ViewRightGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ViewRightGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewFrontGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewFrontGesture
+  id: DEFAULT_ViewFrontGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ViewFrontGesture
+  nameWithType: Constants.DEFAULT_ViewFrontGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewFrontGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ViewFrontGesture
+    path: src/gui/Constants.cs
+    startLine: 195
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) View front key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ViewFrontGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ViewFrontGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBackGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBackGesture
+  id: DEFAULT_ViewBackGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ViewBackGesture
+  nameWithType: Constants.DEFAULT_ViewBackGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ViewBackGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ViewBackGesture
+    path: src/gui/Constants.cs
+    startLine: 200
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) View back key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ViewBackGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ViewBackGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ZoomFitGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ZoomFitGesture
+  id: DEFAULT_ZoomFitGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ZoomFitGesture
+  nameWithType: Constants.DEFAULT_ZoomFitGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ZoomFitGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ZoomFitGesture
+    path: src/gui/Constants.cs
+    startLine: 205
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Zoom fit key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ZoomFitGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ZoomFitGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_InvalidateGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_InvalidateGesture
+  id: DEFAULT_InvalidateGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_InvalidateGesture
+  nameWithType: Constants.DEFAULT_InvalidateGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_InvalidateGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_InvalidateGesture
+    path: src/gui/Constants.cs
+    startLine: 210
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Invalidate view key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_InvalidateGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_InvalidateGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleIdentifyCoordGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleIdentifyCoordGesture
+  id: DEFAULT_ToggleIdentifyCoordGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleIdentifyCoordGesture
+  nameWithType: Constants.DEFAULT_ToggleIdentifyCoordGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleIdentifyCoordGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleIdentifyCoordGesture
+    path: src/gui/Constants.cs
+    startLine: 215
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle identify coord key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleIdentifyCoordGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleIdentifyCoordGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_DevTool
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_DevTool
+  id: DEFAULT_DevTool
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_DevTool
+  nameWithType: Constants.DEFAULT_DevTool
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_DevTool
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_DevTool
+    path: src/gui/Constants.cs
+    startLine: 220
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Open dev tool key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_DevTool
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_DevTool As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveView
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveView
+  id: DEFAULT_SaveView
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SaveView
+  nameWithType: Constants.DEFAULT_SaveView
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveView
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SaveView
+    path: src/gui/Constants.cs
+    startLine: 225
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Save control view key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_SaveView
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_SaveView As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreView
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreView
+  id: DEFAULT_RestoreView
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_RestoreView
+  nameWithType: Constants.DEFAULT_RestoreView
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreView
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_RestoreView
+    path: src/gui/Constants.cs
+    startLine: 230
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Restore control view key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_RestoreView
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_RestoreView As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveViewLayout
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveViewLayout
+  id: DEFAULT_SaveViewLayout
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SaveViewLayout
+  nameWithType: Constants.DEFAULT_SaveViewLayout
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SaveViewLayout
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SaveViewLayout
+    path: src/gui/Constants.cs
+    startLine: 235
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Save gl split layout view key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_SaveViewLayout
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_SaveViewLayout As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreViewLayout
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreViewLayout
+  id: DEFAULT_RestoreViewLayout
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_RestoreViewLayout
+  nameWithType: Constants.DEFAULT_RestoreViewLayout
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_RestoreViewLayout
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_RestoreViewLayout
+    path: src/gui/Constants.cs
+    startLine: 240
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Restore gl split layout view key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_RestoreViewLayout
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_RestoreViewLayout As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewHorizontal
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewHorizontal
+  id: DEFAULT_SplitViewHorizontal
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SplitViewHorizontal
+  nameWithType: Constants.DEFAULT_SplitViewHorizontal
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewHorizontal
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SplitViewHorizontal
+    path: src/gui/Constants.cs
+    startLine: 245
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Split current view horizontally key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_SplitViewHorizontal
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_SplitViewHorizontal As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewVertical
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewVertical
+  id: DEFAULT_SplitViewVertical
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SplitViewVertical
+  nameWithType: Constants.DEFAULT_SplitViewVertical
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewVertical
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SplitViewVertical
+    path: src/gui/Constants.cs
+    startLine: 250
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Split current view vertically key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_SplitViewVertical
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_SplitViewVertical As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewClose
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewClose
+  id: DEFAULT_SplitViewClose
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SplitViewClose
+  nameWithType: Constants.DEFAULT_SplitViewClose
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SplitViewClose
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SplitViewClose
+    path: src/gui/Constants.cs
+    startLine: 255
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Split view closed current view key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_SplitViewClose
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_SplitViewClose As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleModelBBox
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleModelBBox
+  id: DEFAULT_ToggleModelBBox
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleModelBBox
+  nameWithType: Constants.DEFAULT_ToggleModelBBox
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleModelBBox
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleModelBBox
+    path: src/gui/Constants.cs
+    startLine: 260
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle model bbox key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleModelBBox
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleModelBBox As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleCameraObject
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleCameraObject
+  id: DEFAULT_ToggleCameraObject
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ToggleCameraObject
+  nameWithType: Constants.DEFAULT_ToggleCameraObject
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ToggleCameraObject
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ToggleCameraObject
+    path: src/gui/Constants.cs
+    startLine: 265
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Toggle camera object key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ToggleCameraObject
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ToggleCameraObject As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SetRotationCenterGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_SetRotationCenterGesture
+  id: DEFAULT_SetRotationCenterGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SetRotationCenterGesture
+  nameWithType: Constants.DEFAULT_SetRotationCenterGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_SetRotationCenterGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SetRotationCenterGesture
+    path: src/gui/Constants.cs
+    startLine: 270
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Set rotation center key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_SetRotationCenterGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_SetRotationCenterGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ClearSelectionGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_ClearSelectionGesture
+  id: DEFAULT_ClearSelectionGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ClearSelectionGesture
+  nameWithType: Constants.DEFAULT_ClearSelectionGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_ClearSelectionGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ClearSelectionGesture
+    path: src/gui/Constants.cs
+    startLine: 275
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Set clear selection key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_ClearSelectionGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_ClearSelectionGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CopySimpleCmdOfSelectionGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_CopySimpleCmdOfSelectionGesture
+  id: DEFAULT_CopySimpleCmdOfSelectionGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CopySimpleCmdOfSelectionGesture
+  nameWithType: Constants.DEFAULT_CopySimpleCmdOfSelectionGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_CopySimpleCmdOfSelectionGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CopySimpleCmdOfSelectionGesture
+    path: src/gui/Constants.cs
+    startLine: 280
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Copy SimpleCmd of selection key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_CopySimpleCmdOfSelectionGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_CopySimpleCmdOfSelectionGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_PasteSimpleCmdGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_PasteSimpleCmdGesture
+  id: DEFAULT_PasteSimpleCmdGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_PasteSimpleCmdGesture
+  nameWithType: Constants.DEFAULT_PasteSimpleCmdGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_PasteSimpleCmdGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_PasteSimpleCmdGesture
+    path: src/gui/Constants.cs
+    startLine: 285
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Paste SimpleCmd key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_PasteSimpleCmdGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_PasteSimpleCmdGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_DeleteSelectedGesture
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_DeleteSelectedGesture
+  id: DEFAULT_DeleteSelectedGesture
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_DeleteSelectedGesture
+  nameWithType: Constants.DEFAULT_DeleteSelectedGesture
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_DeleteSelectedGesture
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_DeleteSelectedGesture
+    path: src/gui/Constants.cs
+    startLine: 290
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Delete selected primitives/figures key gesture.
+  example: []
+  syntax:
+    content: public static readonly KeyGesture DEFAULT_DeleteSelectedGesture
+    return:
+      type: Avalonia.Input.KeyGesture
+    content.vb: Public Shared ReadOnly DEFAULT_DeleteSelectedGesture As KeyGesture
+- uid: SearchAThing.OpenGL.GUI.Constants.DEFAULT_View
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEFAULT_View
+  id: DEFAULT_View
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_View
+  nameWithType: Constants.DEFAULT_View
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEFAULT_View
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_View
+    path: src/gui/Constants.cs
+    startLine: 299
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Gl control camera view.
+  example: []
+  syntax:
+    content: public const CameraViewType DEFAULT_View = Top
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+    content.vb: Public Const DEFAULT_View As CameraViewType = Top
+- uid: SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename
+  commentId: P:SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename
+  id: LayoutDefaultPathfilename
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: LayoutDefaultPathfilename
+  nameWithType: Constants.LayoutDefaultPathfilename
+  fullName: SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename
+  type: Property
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LayoutDefaultPathfilename
+    path: src/gui/Constants.cs
+    startLine: 304
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: '(Default) Gl split layout pathfilename: AppDomainBaseDir/layout.json'
+  example: []
+  syntax:
+    content: public static string LayoutDefaultPathfilename { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property LayoutDefaultPathfilename As String
+  overload: SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename*
+- uid: SearchAThing.OpenGL.GUI.Constants.DEVTOOL_WIDTH
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEVTOOL_WIDTH
+  id: DEVTOOL_WIDTH
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEVTOOL_WIDTH
+  nameWithType: Constants.DEVTOOL_WIDTH
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEVTOOL_WIDTH
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEVTOOL_WIDTH
+    path: src/gui/Constants.cs
+    startLine: 314
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Gl dev tool window width (screen pixel).
+  example: []
+  syntax:
+    content: public const double DEVTOOL_WIDTH = 1200
+    return:
+      type: System.Double
+    content.vb: Public Const DEVTOOL_WIDTH As Double = 1200
+- uid: SearchAThing.OpenGL.GUI.Constants.DEVTOOL_HEIGHT
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.DEVTOOL_HEIGHT
+  id: DEVTOOL_HEIGHT
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEVTOOL_HEIGHT
+  nameWithType: Constants.DEVTOOL_HEIGHT
+  fullName: SearchAThing.OpenGL.GUI.Constants.DEVTOOL_HEIGHT
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEVTOOL_HEIGHT
+    path: src/gui/Constants.cs
+    startLine: 319
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Gl dev tool window height (screen pixel).
+  example: []
+  syntax:
+    content: public const double DEVTOOL_HEIGHT = 500
+    return:
+      type: System.Double
+    content.vb: Public Const DEVTOOL_HEIGHT As Double = 500
+- uid: SearchAThing.OpenGL.GUI.Constants.NOTIFICATION_TITLE_INPUT_OUTPUT
+  commentId: F:SearchAThing.OpenGL.GUI.Constants.NOTIFICATION_TITLE_INPUT_OUTPUT
+  id: NOTIFICATION_TITLE_INPUT_OUTPUT
+  parent: SearchAThing.OpenGL.GUI.Constants
+  langs:
+  - csharp
+  - vb
+  name: NOTIFICATION_TITLE_INPUT_OUTPUT
+  nameWithType: Constants.NOTIFICATION_TITLE_INPUT_OUTPUT
+  fullName: SearchAThing.OpenGL.GUI.Constants.NOTIFICATION_TITLE_INPUT_OUTPUT
+  type: Field
+  source:
+    remote:
+      path: src/gui/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NOTIFICATION_TITLE_INPUT_OUTPUT
+    path: src/gui/Constants.cs
+    startLine: 328
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: (Default) Notification title for I/O events.
+  example: []
+  syntax:
+    content: public const string NOTIFICATION_TITLE_INPUT_OUTPUT = "Input/Output"
+    return:
+      type: System.String
+    content.vb: Public Const NOTIFICATION_TITLE_INPUT_OUTPUT As String = "Input/Output"
+references:
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName
+  href: SearchAThing.OpenGL.GUI.Constants.html#SearchAThing_OpenGL_GUI_Constants_GuiAssetResourceName_System_String_
+  name: GuiAssetResourceName
+  nameWithType: Constants.GuiAssetResourceName
+  fullName: SearchAThing.OpenGL.GUI.Constants.GuiAssetResourceName
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Avalonia.Media.ISolidColorBrush
+  commentId: T:Avalonia.Media.ISolidColorBrush
+  parent: Avalonia.Media
+  isExternal: true
+  name: ISolidColorBrush
+  nameWithType: ISolidColorBrush
+  fullName: Avalonia.Media.ISolidColorBrush
+- uid: Avalonia.Media
+  commentId: N:Avalonia.Media
+  isExternal: true
+  name: Avalonia.Media
+  nameWithType: Avalonia.Media
+  fullName: Avalonia.Media
+  spec.csharp:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Media
+    name: Media
+    isExternal: true
+  spec.vb:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Media
+    name: Media
+    isExternal: true
+- uid: Avalonia.Media.Color
+  commentId: T:Avalonia.Media.Color
+  parent: Avalonia.Media
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Avalonia.Media.Color
+- uid: Avalonia.Input.KeyGesture
+  commentId: T:Avalonia.Input.KeyGesture
+  parent: Avalonia.Input
+  isExternal: true
+  name: KeyGesture
+  nameWithType: KeyGesture
+  fullName: Avalonia.Input.KeyGesture
+- uid: Avalonia.Input
+  commentId: N:Avalonia.Input
+  isExternal: true
+  name: Avalonia.Input
+  nameWithType: Avalonia.Input
+  fullName: Avalonia.Input
+  spec.csharp:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Input
+    name: Input
+    isExternal: true
+  spec.vb:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Input
+    name: Input
+    isExternal: true
+- uid: SearchAThing.OpenGL.Core.CameraViewType
+  commentId: T:SearchAThing.OpenGL.Core.CameraViewType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.CameraViewType.html
+  name: CameraViewType
+  nameWithType: CameraViewType
+  fullName: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename
+  href: SearchAThing.OpenGL.GUI.Constants.html#SearchAThing_OpenGL_GUI_Constants_LayoutDefaultPathfilename
+  name: LayoutDefaultPathfilename
+  nameWithType: Constants.LayoutDefaultPathfilename
+  fullName: SearchAThing.OpenGL.GUI.Constants.LayoutDefaultPathfilename

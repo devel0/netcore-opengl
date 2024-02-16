@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.ModelViewInvalidated
+  commentId: T:SearchAThing.OpenGL.Core.ModelViewInvalidated
+  id: ModelViewInvalidated
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ModelViewInvalidated
+  nameWithType: ModelViewInvalidated
+  fullName: SearchAThing.OpenGL.Core.ModelViewInvalidated
+  type: Delegate
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ModelViewInvalidated
+    path: src/core/render/GLModel.cs
+    startLine: 6
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Use for <xref href="SearchAThing.OpenGL.Core.GLModel.ViewInvalidated" data-throw-if-not-resolved="false"></xref> event emitted when a vertex of the model change.
+  example: []
+  syntax:
+    content: public delegate void ModelViewInvalidated(GLModel model)
+    parameters:
+    - id: model
+      type: SearchAThing.OpenGL.Core.GLModel
+      description: GL model reference.
+    content.vb: Public Delegate Sub ModelViewInvalidated(model As GLModel)
+references:
+- uid: SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  commentId: E:SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ViewInvalidated
+  name: ViewInvalidated
+  nameWithType: GLModel.ViewInvalidated
+  fullName: SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLModel
+  commentId: T:SearchAThing.OpenGL.Core.GLModel
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLModel.html
+  name: GLModel
+  nameWithType: GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel

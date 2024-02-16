@@ -1,0 +1,750 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter
+  commentId: T:SearchAThing.OpenGL.GUI.Vector4TextConverter
+  id: Vector4TextConverter
+  parent: SearchAThing.OpenGL.GUI
+  children:
+  - SearchAThing.OpenGL.GUI.Vector4TextConverter.#ctor(System.String)
+  - SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  - SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  - SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance
+  langs:
+  - csharp
+  - vb
+  name: Vector4TextConverter
+  nameWithType: Vector4TextConverter
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter
+  type: Class
+  source:
+    remote:
+      path: src/gui/Converters/Vector4TextConverter.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Vector4TextConverter
+    path: src/gui/Converters/Vector4TextConverter.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Converter to allow text editing of vector4 components.
+  example: []
+  syntax:
+    content: 'public class Vector4TextConverter : IValueConverter'
+    content.vb: Public Class Vector4TextConverter Implements IValueConverter
+  inheritance:
+  - System.Object
+  implements:
+  - Avalonia.Data.Converters.IValueConverter
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance
+  commentId: P:SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance
+  id: Instance
+  parent: SearchAThing.OpenGL.GUI.Vector4TextConverter
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: Vector4TextConverter.Instance
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance
+  type: Property
+  source:
+    remote:
+      path: src/gui/Converters/Vector4TextConverter.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Instance
+    path: src/gui/Converters/Vector4TextConverter.cs
+    startLine: 10
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public static Vector4TextConverter Instance { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.GUI.Vector4TextConverter
+    content.vb: Public Shared ReadOnly Property Instance As Vector4TextConverter
+  overload: SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance*
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.#ctor(System.String)
+  commentId: M:SearchAThing.OpenGL.GUI.Vector4TextConverter.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: SearchAThing.OpenGL.GUI.Vector4TextConverter
+  langs:
+  - csharp
+  - vb
+  name: Vector4TextConverter(string)
+  nameWithType: Vector4TextConverter.Vector4TextConverter(string)
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.Vector4TextConverter(string)
+  type: Constructor
+  source:
+    remote:
+      path: src/gui/Converters/Vector4TextConverter.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/gui/Converters/Vector4TextConverter.cs
+    startLine: 22
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public Vector4TextConverter(string sep = ",")
+    parameters:
+    - id: sep
+      type: System.String
+    content.vb: Public Sub New(sep As String = ",")
+  overload: SearchAThing.OpenGL.GUI.Vector4TextConverter.#ctor*
+  nameWithType.vb: Vector4TextConverter.New(String)
+  fullName.vb: SearchAThing.OpenGL.GUI.Vector4TextConverter.New(String)
+  name.vb: New(String)
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  commentId: M:SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  id: Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  parent: SearchAThing.OpenGL.GUI.Vector4TextConverter
+  langs:
+  - csharp
+  - vb
+  name: Convert(object?, Type, object?, CultureInfo)
+  nameWithType: Vector4TextConverter.Convert(object?, Type, object?, CultureInfo)
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert(object?, System.Type, object?, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    remote:
+      path: src/gui/Converters/Vector4TextConverter.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Convert
+    path: src/gui/Converters/Vector4TextConverter.cs
+    startLine: 27
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Converts a value.
+  remarks: >-
+    This method should not throw exceptions. If the value is not convertible, return
+
+    a <xref href="Avalonia.Data.BindingNotification" data-throw-if-not-resolved="false"></xref> in an error state. Any exceptions thrown will be
+
+    treated as an application exception.
+  example: []
+  syntax:
+    content: public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The value to convert.
+    - id: targetType
+      type: System.Type
+      description: The type of the target.
+    - id: parameter
+      type: System.Object
+      description: A user-defined parameter.
+    - id: culture
+      type: System.Globalization.CultureInfo
+      description: The culture to use.
+    return:
+      type: System.Object
+      description: The converted value.
+    content.vb: Public Function Convert(value As Object, targetType As Type, parameter As Object, culture As CultureInfo) As Object
+  overload: SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert*
+  implements:
+  - Avalonia.Data.Converters.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  nameWithType.vb: Vector4TextConverter.Convert(Object, Type, Object, CultureInfo)
+  fullName.vb: SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert(Object, System.Type, Object, System.Globalization.CultureInfo)
+  name.vb: Convert(Object, Type, Object, CultureInfo)
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  commentId: M:SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  id: ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  parent: SearchAThing.OpenGL.GUI.Vector4TextConverter
+  langs:
+  - csharp
+  - vb
+  name: ConvertBack(object?, Type, object?, CultureInfo)
+  nameWithType: Vector4TextConverter.ConvertBack(object?, Type, object?, CultureInfo)
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack(object?, System.Type, object?, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    remote:
+      path: src/gui/Converters/Vector4TextConverter.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ConvertBack
+    path: src/gui/Converters/Vector4TextConverter.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Converts a value.
+  remarks: >-
+    This method should not throw exceptions. If the value is not convertible, return
+
+    a <xref href="Avalonia.Data.BindingNotification" data-throw-if-not-resolved="false"></xref> in an error state. Any exceptions thrown will be
+
+    treated as an application exception.
+  example: []
+  syntax:
+    content: public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The value to convert.
+    - id: targetType
+      type: System.Type
+      description: The type of the target.
+    - id: parameter
+      type: System.Object
+      description: A user-defined parameter.
+    - id: culture
+      type: System.Globalization.CultureInfo
+      description: The culture to use.
+    return:
+      type: System.Object
+      description: The converted value.
+    content.vb: Public Function ConvertBack(value As Object, targetType As Type, parameter As Object, culture As CultureInfo) As Object
+  overload: SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack*
+  implements:
+  - Avalonia.Data.Converters.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  nameWithType.vb: Vector4TextConverter.ConvertBack(Object, Type, Object, CultureInfo)
+  fullName.vb: SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack(Object, System.Type, Object, System.Globalization.CultureInfo)
+  name.vb: ConvertBack(Object, Type, Object, CultureInfo)
+references:
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Avalonia.Data.Converters.IValueConverter
+  commentId: T:Avalonia.Data.Converters.IValueConverter
+  parent: Avalonia.Data.Converters
+  isExternal: true
+  name: IValueConverter
+  nameWithType: IValueConverter
+  fullName: Avalonia.Data.Converters.IValueConverter
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Avalonia.Data.Converters
+  commentId: N:Avalonia.Data.Converters
+  isExternal: true
+  name: Avalonia.Data.Converters
+  nameWithType: Avalonia.Data.Converters
+  fullName: Avalonia.Data.Converters
+  spec.csharp:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Data
+    name: Data
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Data.Converters
+    name: Converters
+    isExternal: true
+  spec.vb:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Data
+    name: Data
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Data.Converters
+    name: Converters
+    isExternal: true
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance
+  href: SearchAThing.OpenGL.GUI.Vector4TextConverter.html#SearchAThing_OpenGL_GUI_Vector4TextConverter_Instance
+  name: Instance
+  nameWithType: Vector4TextConverter.Instance
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.Instance
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter
+  commentId: T:SearchAThing.OpenGL.GUI.Vector4TextConverter
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.Vector4TextConverter.html
+  name: Vector4TextConverter
+  nameWithType: Vector4TextConverter
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Vector4TextConverter.#ctor
+  href: SearchAThing.OpenGL.GUI.Vector4TextConverter.html#SearchAThing_OpenGL_GUI_Vector4TextConverter__ctor_System_String_
+  name: Vector4TextConverter
+  nameWithType: Vector4TextConverter.Vector4TextConverter
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.Vector4TextConverter
+  nameWithType.vb: Vector4TextConverter.New
+  fullName.vb: SearchAThing.OpenGL.GUI.Vector4TextConverter.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Avalonia.Data.BindingNotification
+  commentId: T:Avalonia.Data.BindingNotification
+  isExternal: true
+  name: BindingNotification
+  nameWithType: BindingNotification
+  fullName: Avalonia.Data.BindingNotification
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert
+  href: SearchAThing.OpenGL.GUI.Vector4TextConverter.html#SearchAThing_OpenGL_GUI_Vector4TextConverter_Convert_System_Object_System_Type_System_Object_System_Globalization_CultureInfo_
+  name: Convert
+  nameWithType: Vector4TextConverter.Convert
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.Convert
+- uid: Avalonia.Data.Converters.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  commentId: M:Avalonia.Data.Converters.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  parent: Avalonia.Data.Converters.IValueConverter
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: Convert(object, Type, object, CultureInfo)
+  nameWithType: IValueConverter.Convert(object, Type, object, CultureInfo)
+  fullName: Avalonia.Data.Converters.IValueConverter.Convert(object, System.Type, object, System.Globalization.CultureInfo)
+  nameWithType.vb: IValueConverter.Convert(Object, Type, Object, CultureInfo)
+  fullName.vb: Avalonia.Data.Converters.IValueConverter.Convert(Object, System.Type, Object, System.Globalization.CultureInfo)
+  name.vb: Convert(Object, Type, Object, CultureInfo)
+  spec.csharp:
+  - uid: Avalonia.Data.Converters.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+    name: Convert
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Data.Converters.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+    name: Convert
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  - name: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  name: CultureInfo
+  nameWithType: CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+- uid: SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack
+  href: SearchAThing.OpenGL.GUI.Vector4TextConverter.html#SearchAThing_OpenGL_GUI_Vector4TextConverter_ConvertBack_System_Object_System_Type_System_Object_System_Globalization_CultureInfo_
+  name: ConvertBack
+  nameWithType: Vector4TextConverter.ConvertBack
+  fullName: SearchAThing.OpenGL.GUI.Vector4TextConverter.ConvertBack
+- uid: Avalonia.Data.Converters.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  commentId: M:Avalonia.Data.Converters.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  parent: Avalonia.Data.Converters.IValueConverter
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: ConvertBack(object, Type, object, CultureInfo)
+  nameWithType: IValueConverter.ConvertBack(object, Type, object, CultureInfo)
+  fullName: Avalonia.Data.Converters.IValueConverter.ConvertBack(object, System.Type, object, System.Globalization.CultureInfo)
+  nameWithType.vb: IValueConverter.ConvertBack(Object, Type, Object, CultureInfo)
+  fullName.vb: Avalonia.Data.Converters.IValueConverter.ConvertBack(Object, System.Type, Object, System.Globalization.CultureInfo)
+  name.vb: ConvertBack(Object, Type, Object, CultureInfo)
+  spec.csharp:
+  - uid: Avalonia.Data.Converters.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+    name: ConvertBack
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Data.Converters.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+    name: ConvertBack
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  - name: )

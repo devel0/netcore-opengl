@@ -1,0 +1,1033 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GLPipeline | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GLPipeline | netcore-opengl ">
+      
+      <meta name="description" content="Gl pipeline object. Contains vertex, geometry and fragment shaders where defined and helper method to set uniforms, attributes ans storage blocks.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_Core_GLPipeline.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.Core.GLPipeline%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.Core.GLPipeline">
+
+
+
+  <h1 id="SearchAThing_OpenGL_Core_GLPipeline" data-uid="SearchAThing.OpenGL.Core.GLPipeline" class="text-break">
+Class GLPipeline  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Gl pipeline object.<br>
+Contains vertex, geometry and fragment shaders where defined and helper method to set uniforms, attributes ans storage blocks.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GLPipeline : IGLContextObject</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GLPipeline</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLContextObject.html">IGLContextObject</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline__ctor_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.#ctor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline__ctor_SearchAThing_OpenGL_Core_GLContext_System_String_System_String_System_String_System_Boolean_System_String_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.String,System.String,System.Boolean,System.String)">
+  GLPipeline(GLContext, string?, string?, string?, bool, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a gl shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLPipeline(GLContext glContext, string? vertexShaderSource = null, string? geometryShaderSource = null, string? fragmentShaderSource = null, bool exceptionOnMissingLocation = false, string friendlyName = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>glContext</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLContext.html">GLContext</a></dt>
+    <dd><p>Gl context.</p>
+</dd>
+    <dt><code>vertexShaderSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>(Optional) GLSL source code of the vertex shader.</p>
+</dd>
+    <dt><code>geometryShaderSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>(Optional) GLSL source code of the geometry shader.</p>
+</dd>
+    <dt><code>fragmentShaderSource</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>(Optional) GLSL source code of the fragment shader.</p>
+</dd>
+    <dt><code>exceptionOnMissingLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>(Optional) If true an exception will generated if setting a non existant uniform. (Default: false).</p>
+</dd>
+    <dt><code>friendlyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>(Optional) Friendly shader name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_Program" data-uid="SearchAThing.OpenGL.Core.GLPipeline.Program">
+  Program
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl Program id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Program</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_TraceWarnings" data-uid="SearchAThing.OpenGL.Core.GLPipeline.TraceWarnings">
+  TraceWarnings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true shader warning are logged to Debug.WriteLine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TraceWarnings</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_ExceptionOnMissingLocation_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_ExceptionOnMissingLocation" data-uid="SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation">
+  ExceptionOnMissingLocation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If set true an exception will generated if setting a non existant uniform. (Default: false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExceptionOnMissingLocation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_FragmentShader_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.FragmentShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_FragmentShader" data-uid="SearchAThing.OpenGL.Core.GLPipeline.FragmentShader">
+  FragmentShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl fragment shader id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint FragmentShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_FragmentShaderSource_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_FragmentShaderSource" data-uid="SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource">
+  FragmentShaderSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GLSL source code of the fragment shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? FragmentShaderSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_FriendlyName_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.FriendlyName*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_FriendlyName" data-uid="SearchAThing.OpenGL.Core.GLPipeline.FriendlyName">
+  FriendlyName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Custom friendly name of the shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FriendlyName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_GL_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GL*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_GL" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GL">
+  GL
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl api.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GL GL { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GL</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_GLContext_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GLContext*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_GLContext" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GLContext">
+  GLContext
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLContext GLContext { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLContext.html">GLContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_GeometryShader_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GeometryShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_GeometryShader" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GeometryShader">
+  GeometryShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl geometry shader id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GeometryShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_GeometryShaderSource_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_GeometryShaderSource" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource">
+  GeometryShaderSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GLSL source code of the geometry shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? GeometryShaderSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_VertexShader_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.VertexShader*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_VertexShader" data-uid="SearchAThing.OpenGL.Core.GLPipeline.VertexShader">
+  VertexShader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl vertex shader id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint VertexShader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_VertexShaderSource_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_VertexShaderSource" data-uid="SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource">
+  VertexShaderSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>GLSL source code of the vertex shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? VertexShaderSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_GetAttributeLocation_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_GetAttributeLocation_System_String_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation(System.String)">
+  GetAttributeLocation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the attribute location by the given attribute name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetAttributeLocation(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Attribute name for which retrieve the id.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Id of the attribute.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_GetStorageBlockBinding_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_GetStorageBlockBinding_System_String_System_UInt32__System_UInt32__" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding(System.String,System.UInt32@,System.UInt32@)">
+  GetStorageBlockBinding(string, out uint, out uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Eetrieve program resource index of given ssbo and retrieve associated binding.
+a shader unique shared storage binding is auto incremented if no default associated binding found in shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetStorageBlockBinding(string name, out uint storageBlockIndex, out uint storageBlockBinding)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>SSBO name.</p>
+</dd>
+    <dt><code>storageBlockIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Resulting SSBO block index.</p>
+</dd>
+    <dt><code>storageBlockBinding</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Resulting SSBO block binding.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if SSBO found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_GetUniformLocation_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_GetUniformLocation_System_String_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation(System.String)">
+  GetUniformLocation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the uniform id by the given uniform name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint? GetUniformLocation(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Name of the location for which retrieve the id.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd><p>Id of the uniform.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_SetBool_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetBool*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_SetBool_System_String_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetBool(System.String,System.Boolean)">
+  SetBool(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set bool uniform variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBool(string name, bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Uniform variable name.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_SetFloat_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetFloat*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_SetFloat_System_String_System_Single_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetFloat(System.String,System.Single)">
+  SetFloat(string, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set float uniform variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFloat(string name, float value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Uniform variable name.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_SetInt_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetInt*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_SetInt_System_String_System_Int32_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetInt(System.String,System.Int32)">
+  SetInt(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set int uniform variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInt(string name, int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Uniform variable name.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_SetMat4_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetMat4*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_SetMat4_System_String_System_Numerics_Matrix4x4_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetMat4(System.String,System.Numerics.Matrix4x4)">
+  SetMat4(string, Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set Matrix4x4 uniform variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMat4(string name, Matrix4x4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Uniform variable name.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_SetVec2_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetVec2*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_SetVec2_System_String_System_Numerics_Vector2__" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetVec2(System.String,System.Numerics.Vector2@)">
+  SetVec2(string, in Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set Vector2 uniform variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVec2(string name, in Vector2 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Uniform variable name.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_SetVec3_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetVec3*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_SetVec3_System_String_System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetVec3(System.String,System.Numerics.Vector3@)">
+  SetVec3(string, in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set Vector3 uniform variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVec3(string name, in Vector3 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Uniform variable name.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_SetVec4_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetVec4*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_SetVec4_System_String_System_Numerics_Vector4__" data-uid="SearchAThing.OpenGL.Core.GLPipeline.SetVec4(System.String,System.Numerics.Vector4@)">
+  SetVec4(string, in Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set Vector4 uniform variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVec4(string name, in Vector4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Uniform variable name.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>Value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLPipeline_Use_" data-uid="SearchAThing.OpenGL.Core.GLPipeline.Use*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLPipeline_Use" data-uid="SearchAThing.OpenGL.Core.GLPipeline.Use">
+  Use()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use the program containing pipeline of shaders configured here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Use()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLShader.cs/#L7" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

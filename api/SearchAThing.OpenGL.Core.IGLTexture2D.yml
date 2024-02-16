@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.IGLTexture2D
+  commentId: T:SearchAThing.OpenGL.Core.IGLTexture2D
+  id: IGLTexture2D
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.IGLTexture2D.TextureId
+  langs:
+  - csharp
+  - vb
+  name: IGLTexture2D
+  nameWithType: IGLTexture2D
+  fullName: SearchAThing.OpenGL.Core.IGLTexture2D
+  type: Interface
+  source:
+    remote:
+      path: src/core/media/IGLTexture2D.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: IGLTexture2D
+    path: src/core/media/IGLTexture2D.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Interface that describe the object hold a reference to a gl texture 2d.
+  example: []
+  syntax:
+    content: public interface IGLTexture2D
+    content.vb: Public Interface IGLTexture2D
+- uid: SearchAThing.OpenGL.Core.IGLTexture2D.TextureId
+  commentId: P:SearchAThing.OpenGL.Core.IGLTexture2D.TextureId
+  id: TextureId
+  parent: SearchAThing.OpenGL.Core.IGLTexture2D
+  langs:
+  - csharp
+  - vb
+  name: TextureId
+  nameWithType: IGLTexture2D.TextureId
+  fullName: SearchAThing.OpenGL.Core.IGLTexture2D.TextureId
+  type: Property
+  source:
+    remote:
+      path: src/core/media/IGLTexture2D.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TextureId
+    path: src/core/media/IGLTexture2D.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Id of gl texture created through <xref href="SearchAThing.OpenGL.Core.GLTexture2D" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: uint TextureId { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: ReadOnly Property TextureId As UInteger
+  overload: SearchAThing.OpenGL.Core.IGLTexture2D.TextureId*
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLTexture2D
+  commentId: T:SearchAThing.OpenGL.Core.GLTexture2D
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTexture2D.html
+  name: GLTexture2D
+  nameWithType: GLTexture2D
+  fullName: SearchAThing.OpenGL.Core.GLTexture2D
+- uid: SearchAThing.OpenGL.Core.IGLTexture2D.TextureId*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLTexture2D.TextureId
+  href: SearchAThing.OpenGL.Core.IGLTexture2D.html#SearchAThing_OpenGL_Core_IGLTexture2D_TextureId
+  name: TextureId
+  nameWithType: IGLTexture2D.TextureId
+  fullName: SearchAThing.OpenGL.Core.IGLTexture2D.TextureId
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

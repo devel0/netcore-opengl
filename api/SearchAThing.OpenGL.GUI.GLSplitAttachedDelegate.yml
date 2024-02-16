@@ -1,0 +1,79 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.GLSplitAttachedDelegate
+  commentId: T:SearchAThing.OpenGL.GUI.GLSplitAttachedDelegate
+  id: GLSplitAttachedDelegate
+  parent: SearchAThing.OpenGL.GUI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GLSplitAttachedDelegate
+  nameWithType: GLSplitAttachedDelegate
+  fullName: SearchAThing.OpenGL.GUI.GLSplitAttachedDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/gui/Views/GLWindow.axaml.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLSplitAttachedDelegate
+    path: src/gui/Views/GLWindow.axaml.cs
+    startLine: 16
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Delegate used by the <xref href="SearchAThing.OpenGL.GUI.GLWindow" data-throw-if-not-resolved="false"></xref> to customize action following the attachment of the gl split into the window.
+  example: []
+  syntax:
+    content: public delegate void GLSplitAttachedDelegate(AvaloniaGLControlSplit glSplit)
+    parameters:
+    - id: glSplit
+      type: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+      description: Gl split reference.
+    content.vb: Public Delegate Sub GLSplitAttachedDelegate(glSplit As AvaloniaGLControlSplit)
+references:
+- uid: SearchAThing.OpenGL.GUI.GLWindow
+  commentId: T:SearchAThing.OpenGL.GUI.GLWindow
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.GLWindow.html
+  name: GLWindow
+  nameWithType: GLWindow
+  fullName: SearchAThing.OpenGL.GUI.GLWindow
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+  commentId: T:SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html
+  name: AvaloniaGLControlSplit
+  nameWithType: AvaloniaGLControlSplit
+  fullName: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit

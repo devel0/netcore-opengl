@@ -1,0 +1,168 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.InvalidateEnum
+  commentId: T:SearchAThing.OpenGL.Core.InvalidateEnum
+  id: InvalidateEnum
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.InvalidateEnum.None
+  - SearchAThing.OpenGL.Core.InvalidateEnum.RebuildModelAndRedraw
+  - SearchAThing.OpenGL.Core.InvalidateEnum.RedrawOnly
+  langs:
+  - csharp
+  - vb
+  name: InvalidateEnum
+  nameWithType: InvalidateEnum
+  fullName: SearchAThing.OpenGL.Core.InvalidateEnum
+  type: Enum
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: InvalidateEnum
+    path: src/core/render/Types.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Type of <xref href="SearchAThing.OpenGL.Core.GLControl" data-throw-if-not-resolved="false"></xref> invalidation.
+  example: []
+  syntax:
+    content: public enum InvalidateEnum
+    content.vb: Public Enum InvalidateEnum
+- uid: SearchAThing.OpenGL.Core.InvalidateEnum.None
+  commentId: F:SearchAThing.OpenGL.Core.InvalidateEnum.None
+  id: None
+  parent: SearchAThing.OpenGL.Core.InvalidateEnum
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: InvalidateEnum.None
+  fullName: SearchAThing.OpenGL.Core.InvalidateEnum.None
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: None
+    path: src/core/render/Types.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Do not render.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: SearchAThing.OpenGL.Core.InvalidateEnum
+- uid: SearchAThing.OpenGL.Core.InvalidateEnum.RedrawOnly
+  commentId: F:SearchAThing.OpenGL.Core.InvalidateEnum.RedrawOnly
+  id: RedrawOnly
+  parent: SearchAThing.OpenGL.Core.InvalidateEnum
+  langs:
+  - csharp
+  - vb
+  name: RedrawOnly
+  nameWithType: InvalidateEnum.RedrawOnly
+  fullName: SearchAThing.OpenGL.Core.InvalidateEnum.RedrawOnly
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RedrawOnly
+    path: src/core/render/Types.cs
+    startLine: 16
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Render without forcing <xref href="SearchAThing.OpenGL.Core.GLModel.BuildModel" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: RedrawOnly = 1
+    return:
+      type: SearchAThing.OpenGL.Core.InvalidateEnum
+- uid: SearchAThing.OpenGL.Core.InvalidateEnum.RebuildModelAndRedraw
+  commentId: F:SearchAThing.OpenGL.Core.InvalidateEnum.RebuildModelAndRedraw
+  id: RebuildModelAndRedraw
+  parent: SearchAThing.OpenGL.Core.InvalidateEnum
+  langs:
+  - csharp
+  - vb
+  name: RebuildModelAndRedraw
+  nameWithType: InvalidateEnum.RebuildModelAndRedraw
+  fullName: SearchAThing.OpenGL.Core.InvalidateEnum.RebuildModelAndRedraw
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RebuildModelAndRedraw
+    path: src/core/render/Types.cs
+    startLine: 21
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Render forcing regeneration of model through <xref href="SearchAThing.OpenGL.Core.GLModel.BuildModel" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: RebuildModelAndRedraw = 2
+    return:
+      type: SearchAThing.OpenGL.Core.InvalidateEnum
+references:
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.InvalidateEnum
+  commentId: T:SearchAThing.OpenGL.Core.InvalidateEnum
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.InvalidateEnum.html
+  name: InvalidateEnum
+  nameWithType: InvalidateEnum
+  fullName: SearchAThing.OpenGL.Core.InvalidateEnum
+- uid: SearchAThing.OpenGL.Core.GLModel.BuildModel
+  commentId: F:SearchAThing.OpenGL.Core.GLModel.BuildModel
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_BuildModel
+  name: BuildModel
+  nameWithType: GLModel.BuildModel
+  fullName: SearchAThing.OpenGL.Core.GLModel.BuildModel

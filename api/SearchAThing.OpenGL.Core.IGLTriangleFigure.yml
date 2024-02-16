@@ -1,0 +1,1695 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLTriangleFigure
+  id: IGLTriangleFigure
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.Add(SearchAThing.OpenGL.Core.GLTriangle)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove(SearchAThing.OpenGL.Core.GLTriangle)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal(System.Boolean,SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D
+  langs:
+  - csharp
+  - vb
+  name: IGLTriangleFigure
+  nameWithType: IGLTriangleFigure
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure
+  type: Interface
+  source:
+    remote:
+      path: src/core/figure/IGLTriangleFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: IGLTriangleFigure
+    path: src/core/figure/IGLTriangleFigure.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Specialization of <xref href="SearchAThing.OpenGL.Core.IGLFigure" data-throw-if-not-resolved="false"></xref> for the type <xref href="SearchAThing.OpenGL.Core.GLTriangle" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public interface IGLTriangleFigure : IGLFigure, IGLVertexManagerObject, INotifyPropertyChanged'
+    content.vb: Public Interface IGLTriangleFigure Inherits IGLFigure, IGLVertexManagerObject, INotifyPropertyChanged
+  inheritedMembers:
+  - SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+  - SearchAThing.OpenGL.Core.IGLFigure.Invalidate
+  - SearchAThing.OpenGL.Core.IGLFigure.Primitives
+  - SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  - SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+  - SearchAThing.OpenGL.Core.IGLFigure.ExcludeFromShadeWithEdge
+  - SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+  - SearchAThing.OpenGL.Core.IGLFigure.Visible
+  - SearchAThing.OpenGL.Core.IGLFigure.Order
+  - SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode
+  - SearchAThing.OpenGL.Core.IGLFigure.Highlight
+  - SearchAThing.OpenGL.Core.IGLFigure.Selected
+  - SearchAThing.OpenGL.Core.IGLFigure.Alpha
+  - SearchAThing.OpenGL.Core.IGLFigure.Indexes
+  - SearchAThing.OpenGL.Core.IGLFigure.LBBox
+  - SearchAThing.OpenGL.Core.IGLFigure.OBBox
+  - SearchAThing.OpenGL.Core.IGLFigure.ExpandBBox
+  - SearchAThing.OpenGL.Core.IGLFigure.EvalInShadowMap
+  - SearchAThing.OpenGL.Core.IGLFigure.Tag
+  - SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(System.Single)
+  - SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Center
+  - SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Vertexes
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Numerics.Vector3@,System.Boolean)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Single,System.Single,System.Single,System.Boolean)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetAlpha``1(System.Nullable{System.Single})
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Drawing.Color@)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Numerics.Vector4@)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetOrder``1(System.Int32)
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(System.Boolean)
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D
+  commentId: P:SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D
+  id: Texture2D
+  parent: SearchAThing.OpenGL.Core.IGLTriangleFigure
+  langs:
+  - csharp
+  - vb
+  name: Texture2D
+  nameWithType: IGLTriangleFigure.Texture2D
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D
+  type: Property
+  source:
+    remote:
+      path: src/core/figure/IGLTriangleFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Texture2D
+    path: src/core/figure/IGLTriangleFigure.cs
+    startLine: 21
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Optional texture 2d object associated to this triangle.<br />
+
+    TextureST vertex coords of triangles vertexes will be used to map the texture.<br />
+
+    Changing this property emits <xref href="SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: GLTexture2D? Texture2D { get; set; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLTexture2D
+    content.vb: Property Texture2D As GLTexture2D
+  overload: SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D*
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal(System.Boolean,SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate)
+  commentId: M:SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal(System.Boolean,SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate)
+  id: SetupComputeNormal(System.Boolean,SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate)
+  parent: SearchAThing.OpenGL.Core.IGLTriangleFigure
+  langs:
+  - csharp
+  - vb
+  name: SetupComputeNormal(bool, ComputeTriangleNormalDelegate?)
+  nameWithType: IGLTriangleFigure.SetupComputeNormal(bool, ComputeTriangleNormalDelegate?)
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal(bool, SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate?)
+  type: Method
+  source:
+    remote:
+      path: src/core/figure/IGLTriangleFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetupComputeNormal
+    path: src/core/figure/IGLTriangleFigure.cs
+    startLine: 30
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Set the triangle compute normal function.<br />
+
+    If no argument given a default per triangle normal compute will be done.<br />    
+
+    Changing this property imply <xref href="SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(System.Boolean)" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: void SetupComputeNormal(bool mean, ComputeTriangleNormalDelegate? computeNormal)
+    parameters:
+    - id: mean
+      type: System.Boolean
+      description: If true a mean of normals triangle vertexes grouped by position will be computed.
+    - id: computeNormal
+      type: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+      description: Allow to override default triangle normal function <xref href="SearchAThing.OpenGL.Core.GLTriangleFigure.DefaultComputeNormal" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Sub SetupComputeNormal(mean As Boolean, computeNormal As ComputeTriangleNormalDelegate)
+  overload: SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal*
+  nameWithType.vb: IGLTriangleFigure.SetupComputeNormal(Boolean, ComputeTriangleNormalDelegate)
+  fullName.vb: SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal(Boolean, SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate)
+  name.vb: SetupComputeNormal(Boolean, ComputeTriangleNormalDelegate)
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.Add(SearchAThing.OpenGL.Core.GLTriangle)
+  commentId: M:SearchAThing.OpenGL.Core.IGLTriangleFigure.Add(SearchAThing.OpenGL.Core.GLTriangle)
+  id: Add(SearchAThing.OpenGL.Core.GLTriangle)
+  parent: SearchAThing.OpenGL.Core.IGLTriangleFigure
+  langs:
+  - csharp
+  - vb
+  name: Add(GLTriangle)
+  nameWithType: IGLTriangleFigure.Add(GLTriangle)
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.Add(SearchAThing.OpenGL.Core.GLTriangle)
+  type: Method
+  source:
+    remote:
+      path: src/core/figure/IGLTriangleFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Add
+    path: src/core/figure/IGLTriangleFigure.cs
+    startLine: 35
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Add given point to the figure primitives set.
+  example: []
+  syntax:
+    content: void Add(GLTriangle point)
+    parameters:
+    - id: point
+      type: SearchAThing.OpenGL.Core.GLTriangle
+    content.vb: Sub Add(point As GLTriangle)
+  overload: SearchAThing.OpenGL.Core.IGLTriangleFigure.Add*
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove(SearchAThing.OpenGL.Core.GLTriangle)
+  commentId: M:SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove(SearchAThing.OpenGL.Core.GLTriangle)
+  id: Remove(SearchAThing.OpenGL.Core.GLTriangle)
+  parent: SearchAThing.OpenGL.Core.IGLTriangleFigure
+  langs:
+  - csharp
+  - vb
+  name: Remove(GLTriangle)
+  nameWithType: IGLTriangleFigure.Remove(GLTriangle)
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove(SearchAThing.OpenGL.Core.GLTriangle)
+  type: Method
+  source:
+    remote:
+      path: src/core/figure/IGLTriangleFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Remove
+    path: src/core/figure/IGLTriangleFigure.cs
+    startLine: 40
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Add given point to the figure primitives set.
+  example: []
+  syntax:
+    content: void Remove(GLTriangle point)
+    parameters:
+    - id: point
+      type: SearchAThing.OpenGL.Core.GLTriangle
+    content.vb: Sub Remove(point As GLTriangle)
+  overload: SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove*
+references:
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure
+- uid: SearchAThing.OpenGL.Core.GLTriangle
+  commentId: T:SearchAThing.OpenGL.Core.GLTriangle
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTriangle.html
+  name: GLTriangle
+  nameWithType: GLTriangle
+  fullName: SearchAThing.OpenGL.Core.GLTriangle
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+  commentId: E:SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated
+  name: FigureInvalidated
+  nameWithType: IGLFigure.FigureInvalidated
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Invalidate
+  commentId: M:SearchAThing.OpenGL.Core.IGLFigure.Invalidate
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Invalidate
+  name: Invalidate()
+  nameWithType: IGLFigure.Invalidate()
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Invalidate()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.Invalidate
+    name: Invalidate
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Invalidate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.Invalidate
+    name: Invalidate
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Invalidate
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Primitives
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Primitives
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Primitives
+  name: Primitives
+  nameWithType: IGLFigure.Primitives
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Primitives
+- uid: SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  commentId: M:SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  name: RemovePrimitive(GLPrimitiveBase)
+  nameWithType: IGLFigure.RemovePrimitive(GLPrimitiveBase)
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+    name: RemovePrimitive
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+    name: RemovePrimitive
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_PrimitiveType
+  name: PrimitiveType
+  nameWithType: IGLFigure.PrimitiveType
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+- uid: SearchAThing.OpenGL.Core.IGLFigure.ExcludeFromShadeWithEdge
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.ExcludeFromShadeWithEdge
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ExcludeFromShadeWithEdge
+  name: ExcludeFromShadeWithEdge
+  nameWithType: IGLFigure.ExcludeFromShadeWithEdge
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.ExcludeFromShadeWithEdge
+- uid: SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ObjectMatrix
+  name: ObjectMatrix
+  nameWithType: IGLFigure.ObjectMatrix
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Visible
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Visible
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Visible
+  name: Visible
+  nameWithType: IGLFigure.Visible
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Visible
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Order
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Order
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Order
+  name: Order
+  nameWithType: IGLFigure.Order
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Order
+- uid: SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode
+  name: ScreenCoordMode
+  nameWithType: IGLFigure.ScreenCoordMode
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Highlight
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Highlight
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Highlight
+  name: Highlight
+  nameWithType: IGLFigure.Highlight
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Highlight
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Selected
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Selected
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Selected
+  name: Selected
+  nameWithType: IGLFigure.Selected
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Selected
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Alpha
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Alpha
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Alpha
+  name: Alpha
+  nameWithType: IGLFigure.Alpha
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Alpha
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Indexes
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Indexes
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Indexes
+  name: Indexes
+  nameWithType: IGLFigure.Indexes
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Indexes
+- uid: SearchAThing.OpenGL.Core.IGLFigure.LBBox
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.LBBox
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_LBBox
+  name: LBBox
+  nameWithType: IGLFigure.LBBox
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.LBBox
+- uid: SearchAThing.OpenGL.Core.IGLFigure.OBBox
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.OBBox
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_OBBox
+  name: OBBox
+  nameWithType: IGLFigure.OBBox
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.OBBox
+- uid: SearchAThing.OpenGL.Core.IGLFigure.ExpandBBox
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.ExpandBBox
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ExpandBBox
+  name: ExpandBBox
+  nameWithType: IGLFigure.ExpandBBox
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.ExpandBBox
+- uid: SearchAThing.OpenGL.Core.IGLFigure.EvalInShadowMap
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.EvalInShadowMap
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_EvalInShadowMap
+  name: EvalInShadowMap
+  nameWithType: IGLFigure.EvalInShadowMap
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.EvalInShadowMap
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Tag
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Tag
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Tag
+  name: Tag
+  nameWithType: IGLFigure.Tag
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Tag
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd
+  name: SimpleCmd()
+  nameWithType: IGLFigure.SimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  parent: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_ParentVertexManager
+  name: ParentVertexManager
+  nameWithType: IGLVertexManagerObject.ParentVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  commentId: M:SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  parent: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy
+  name: Copy()
+  nameWithType: IGLVertexManagerObject.Copy()
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+    name: Copy
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+    name: Copy
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy
+  - name: (
+  - name: )
+- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  parent: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged
+  name: PropertyChanged
+  nameWithType: INotifyPropertyChanged.PropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(System.Single)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  name: BuildVertexPosDict(IGLFigure, float)
+  nameWithType: Ext.BuildVertexPosDict(IGLFigure, float)
+  fullName: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, float)
+  nameWithType.vb: Ext.BuildVertexPosDict(IGLFigure, Single)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, Single)
+  name.vb: BuildVertexPosDict(IGLFigure, Single)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Center
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Center(IGLFigure)
+  nameWithType: Ext.Center(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Vertexes
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Vertexes(IGLFigure)
+  nameWithType: Ext.Vertexes(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Numerics.Vector3@,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  name: Move<IGLTriangleFigure>(IGLTriangleFigure, in Vector3, bool)
+  nameWithType: Ext.Move<IGLTriangleFigure>(IGLTriangleFigure, in Vector3, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<SearchAThing.OpenGL.Core.IGLTriangleFigure>(SearchAThing.OpenGL.Core.IGLTriangleFigure, in System.Numerics.Vector3, bool)
+  nameWithType.vb: Ext.Move(Of IGLTriangleFigure)(IGLTriangleFigure, Vector3, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of SearchAThing.OpenGL.Core.IGLTriangleFigure)(SearchAThing.OpenGL.Core.IGLTriangleFigure, System.Numerics.Vector3, Boolean)
+  name.vb: Move(Of IGLTriangleFigure)(IGLTriangleFigure, Vector3, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Single,System.Single,System.Single,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  name: Move<IGLTriangleFigure>(IGLTriangleFigure, float, float, float, bool)
+  nameWithType: Ext.Move<IGLTriangleFigure>(IGLTriangleFigure, float, float, float, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<SearchAThing.OpenGL.Core.IGLTriangleFigure>(SearchAThing.OpenGL.Core.IGLTriangleFigure, float, float, float, bool)
+  nameWithType.vb: Ext.Move(Of IGLTriangleFigure)(IGLTriangleFigure, Single, Single, Single, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of SearchAThing.OpenGL.Core.IGLTriangleFigure)(SearchAThing.OpenGL.Core.IGLTriangleFigure, Single, Single, Single, Boolean)
+  name.vb: Move(Of IGLTriangleFigure)(IGLTriangleFigure, Single, Single, Single, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetAlpha``1(System.Nullable{System.Single})
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  name: SetAlpha<IGLTriangleFigure>(IGLTriangleFigure, float?)
+  nameWithType: Ext.SetAlpha<IGLTriangleFigure>(IGLTriangleFigure, float?)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetAlpha<SearchAThing.OpenGL.Core.IGLTriangleFigure>(SearchAThing.OpenGL.Core.IGLTriangleFigure, float?)
+  nameWithType.vb: Ext.SetAlpha(Of IGLTriangleFigure)(IGLTriangleFigure, Single?)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetAlpha(Of SearchAThing.OpenGL.Core.IGLTriangleFigure)(SearchAThing.OpenGL.Core.IGLTriangleFigure, Single?)
+  name.vb: SetAlpha(Of IGLTriangleFigure)(IGLTriangleFigure, Single?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Drawing.Color@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  name: SetColor<IGLTriangleFigure>(IGLTriangleFigure, in Color)
+  nameWithType: Ext.SetColor<IGLTriangleFigure>(IGLTriangleFigure, in Color)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<SearchAThing.OpenGL.Core.IGLTriangleFigure>(SearchAThing.OpenGL.Core.IGLTriangleFigure, in System.Drawing.Color)
+  nameWithType.vb: Ext.SetColor(Of IGLTriangleFigure)(IGLTriangleFigure, Color)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of SearchAThing.OpenGL.Core.IGLTriangleFigure)(SearchAThing.OpenGL.Core.IGLTriangleFigure, System.Drawing.Color)
+  name.vb: SetColor(Of IGLTriangleFigure)(IGLTriangleFigure, Color)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Numerics.Vector4@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  name: SetColor<IGLTriangleFigure>(IGLTriangleFigure, in Vector4)
+  nameWithType: Ext.SetColor<IGLTriangleFigure>(IGLTriangleFigure, in Vector4)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<SearchAThing.OpenGL.Core.IGLTriangleFigure>(SearchAThing.OpenGL.Core.IGLTriangleFigure, in System.Numerics.Vector4)
+  nameWithType.vb: Ext.SetColor(Of IGLTriangleFigure)(IGLTriangleFigure, Vector4)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of SearchAThing.OpenGL.Core.IGLTriangleFigure)(SearchAThing.OpenGL.Core.IGLTriangleFigure, System.Numerics.Vector4)
+  name.vb: SetColor(Of IGLTriangleFigure)(IGLTriangleFigure, Vector4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetOrder``1(System.Int32)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  name: SetOrder<IGLTriangleFigure>(IGLTriangleFigure, int)
+  nameWithType: Ext.SetOrder<IGLTriangleFigure>(IGLTriangleFigure, int)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetOrder<SearchAThing.OpenGL.Core.IGLTriangleFigure>(SearchAThing.OpenGL.Core.IGLTriangleFigure, int)
+  nameWithType.vb: Ext.SetOrder(Of IGLTriangleFigure)(IGLTriangleFigure, Integer)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetOrder(Of SearchAThing.OpenGL.Core.IGLTriangleFigure)(SearchAThing.OpenGL.Core.IGLTriangleFigure, Integer)
+  name.vb: SetOrder(Of IGLTriangleFigure)(IGLTriangleFigure, Integer)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  name: SetScreenMode<IGLTriangleFigure>(IGLTriangleFigure, bool)
+  nameWithType: Ext.SetScreenMode<IGLTriangleFigure>(IGLTriangleFigure, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetScreenMode<SearchAThing.OpenGL.Core.IGLTriangleFigure>(SearchAThing.OpenGL.Core.IGLTriangleFigure, bool)
+  nameWithType.vb: Ext.SetScreenMode(Of IGLTriangleFigure)(IGLTriangleFigure, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetScreenMode(Of SearchAThing.OpenGL.Core.IGLTriangleFigure)(SearchAThing.OpenGL.Core.IGLTriangleFigure, Boolean)
+  name.vb: SetScreenMode(Of IGLTriangleFigure)(IGLTriangleFigure, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(SearchAThing.OpenGL.Core.IGLTriangleFigure,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+    href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  name: IGLVertexManagerObject
+  nameWithType: IGLVertexManagerObject
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  name: BuildVertexPosDict(IGLFigure, float)
+  nameWithType: Ext.BuildVertexPosDict(IGLFigure, float)
+  fullName: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, float)
+  nameWithType.vb: Ext.BuildVertexPosDict(IGLFigure, Single)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, Single)
+  name.vb: BuildVertexPosDict(IGLFigure, Single)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Center(IGLFigure)
+  nameWithType: Ext.Center(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Vertexes(IGLFigure)
+  nameWithType: Ext.Vertexes(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  name: Move<T>(T, in Vector3, bool)
+  nameWithType: Ext.Move<T>(T, in Vector3, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<T>(T, in System.Numerics.Vector3, bool)
+  nameWithType.vb: Ext.Move(Of T)(T, Vector3, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of T)(T, System.Numerics.Vector3, Boolean)
+  name.vb: Move(Of T)(T, Vector3, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  name: Move<T>(T, float, float, float, bool)
+  nameWithType: Ext.Move<T>(T, float, float, float, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<T>(T, float, float, float, bool)
+  nameWithType.vb: Ext.Move(Of T)(T, Single, Single, Single, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of T)(T, Single, Single, Single, Boolean)
+  name.vb: Move(Of T)(T, Single, Single, Single, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  name: SetAlpha<T>(T, float?)
+  nameWithType: Ext.SetAlpha<T>(T, float?)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetAlpha<T>(T, float?)
+  nameWithType.vb: Ext.SetAlpha(Of T)(T, Single?)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetAlpha(Of T)(T, Single?)
+  name.vb: SetAlpha(Of T)(T, Single?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  name: SetColor<T>(T, in Color)
+  nameWithType: Ext.SetColor<T>(T, in Color)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<T>(T, in System.Drawing.Color)
+  nameWithType.vb: Ext.SetColor(Of T)(T, Color)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of T)(T, System.Drawing.Color)
+  name.vb: SetColor(Of T)(T, Color)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  name: SetColor<T>(T, in Vector4)
+  nameWithType: Ext.SetColor<T>(T, in Vector4)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<T>(T, in System.Numerics.Vector4)
+  nameWithType.vb: Ext.SetColor(Of T)(T, Vector4)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of T)(T, System.Numerics.Vector4)
+  name.vb: SetColor(Of T)(T, Vector4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  name: SetOrder<T>(T, int)
+  nameWithType: Ext.SetOrder<T>(T, int)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetOrder<T>(T, int)
+  nameWithType.vb: Ext.SetOrder(Of T)(T, Integer)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetOrder(Of T)(T, Integer)
+  name.vb: SetOrder(Of T)(T, Integer)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  name: SetScreenMode<T>(T, bool)
+  nameWithType: Ext.SetScreenMode<T>(T, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetScreenMode<T>(T, bool)
+  nameWithType.vb: Ext.SetScreenMode(Of T)(T, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetScreenMode(Of T)(T, Boolean)
+  name.vb: SetScreenMode(Of T)(T, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D
+  href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html#SearchAThing_OpenGL_Core_IGLTriangleFigure_Texture2D
+  name: Texture2D
+  nameWithType: IGLTriangleFigure.Texture2D
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.Texture2D
+- uid: SearchAThing.OpenGL.Core.GLTexture2D
+  commentId: T:SearchAThing.OpenGL.Core.GLTexture2D
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTexture2D.html
+  name: GLTexture2D
+  nameWithType: GLTexture2D
+  fullName: SearchAThing.OpenGL.Core.GLTexture2D
+- uid: SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(System.Boolean)
+  parent: SearchAThing.OpenGL.Core.GLTriangleFigure
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_RebuildNormal_System_Boolean_
+  name: RebuildNormal(bool)
+  nameWithType: GLTriangleFigure.RebuildNormal(bool)
+  fullName: SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(bool)
+  nameWithType.vb: GLTriangleFigure.RebuildNormal(Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(Boolean)
+  name.vb: RebuildNormal(Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(System.Boolean)
+    name: RebuildNormal
+    href: SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_RebuildNormal_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(System.Boolean)
+    name: RebuildNormal
+    href: SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_RebuildNormal_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLTriangleFigure.DefaultComputeNormal
+  commentId: F:SearchAThing.OpenGL.Core.GLTriangleFigure.DefaultComputeNormal
+  parent: SearchAThing.OpenGL.Core.GLTriangleFigure
+  href: SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_DefaultComputeNormal
+  name: DefaultComputeNormal
+  nameWithType: GLTriangleFigure.DefaultComputeNormal
+  fullName: SearchAThing.OpenGL.Core.GLTriangleFigure.DefaultComputeNormal
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal
+  href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html#SearchAThing_OpenGL_Core_IGLTriangleFigure_SetupComputeNormal_System_Boolean_SearchAThing_OpenGL_Core_ComputeTriangleNormalDelegate_
+  name: SetupComputeNormal
+  nameWithType: IGLTriangleFigure.SetupComputeNormal
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.SetupComputeNormal
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+  commentId: T:SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate.html
+  name: ComputeTriangleNormalDelegate
+  nameWithType: ComputeTriangleNormalDelegate
+  fullName: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+- uid: SearchAThing.OpenGL.Core.GLTriangleFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLTriangleFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTriangleFigure.html
+  name: GLTriangleFigure
+  nameWithType: GLTriangleFigure
+  fullName: SearchAThing.OpenGL.Core.GLTriangleFigure
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.Add*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLTriangleFigure.Add
+  href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html#SearchAThing_OpenGL_Core_IGLTriangleFigure_Add_SearchAThing_OpenGL_Core_GLTriangle_
+  name: Add
+  nameWithType: IGLTriangleFigure.Add
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.Add
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove
+  href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html#SearchAThing_OpenGL_Core_IGLTriangleFigure_Remove_SearchAThing_OpenGL_Core_GLTriangle_
+  name: Remove
+  nameWithType: IGLTriangleFigure.Remove
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure.Remove

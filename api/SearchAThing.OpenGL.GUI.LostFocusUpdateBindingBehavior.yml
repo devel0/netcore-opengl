@@ -1,0 +1,3318 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+  commentId: T:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+  id: LostFocusUpdateBindingBehavior
+  parent: SearchAThing.OpenGL.GUI
+  children:
+  - SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached
+  - SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching
+  - SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text
+  - SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.TextProperty
+  langs:
+  - csharp
+  - vb
+  name: LostFocusUpdateBindingBehavior
+  nameWithType: LostFocusUpdateBindingBehavior
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+  type: Class
+  source:
+    remote:
+      path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LostFocusUpdateBindingBehavior
+    path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+    startLine: 9
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: 'public class LostFocusUpdateBindingBehavior : Behavior<TextBox>, INotifyPropertyChanged, IBehavior'
+    content.vb: Public Class LostFocusUpdateBindingBehavior Inherits Behavior(Of TextBox) Implements INotifyPropertyChanged, IBehavior
+  inheritance:
+  - System.Object
+  - Avalonia.AvaloniaObject
+  - Avalonia.Xaml.Interactivity.Behavior
+  - Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  - Avalonia.Xaml.Interactivity.IBehavior
+  inheritedMembers:
+  - Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.AssociatedObject
+  - Avalonia.Xaml.Interactivity.Behavior.Attach(Avalonia.AvaloniaObject)
+  - Avalonia.Xaml.Interactivity.Behavior.Detach
+  - Avalonia.Xaml.Interactivity.Behavior.OnAttachedToVisualTree
+  - Avalonia.Xaml.Interactivity.Behavior.OnDetachedFromVisualTree
+  - Avalonia.AvaloniaObject.CheckAccess
+  - Avalonia.AvaloniaObject.VerifyAccess
+  - Avalonia.AvaloniaObject.ClearValue(Avalonia.AvaloniaProperty)
+  - Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{{T}})
+  - Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{{T}})
+  - Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{{T}})
+  - Avalonia.AvaloniaObject.Equals(System.Object)
+  - Avalonia.AvaloniaObject.GetHashCode
+  - Avalonia.AvaloniaObject.GetValue(Avalonia.AvaloniaProperty)
+  - Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{{T}})
+  - Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{{T}})
+  - Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{{T}})
+  - Avalonia.AvaloniaObject.IsAnimating(Avalonia.AvaloniaProperty)
+  - Avalonia.AvaloniaObject.IsSet(Avalonia.AvaloniaProperty)
+  - Avalonia.AvaloniaObject.SetValue(Avalonia.AvaloniaProperty,System.Object,Avalonia.Data.BindingPriority)
+  - Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{{T}},{T},Avalonia.Data.BindingPriority)
+  - Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{{T}},{T})
+  - Avalonia.AvaloniaObject.SetCurrentValue(Avalonia.AvaloniaProperty,System.Object)
+  - Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{{T}},{T})
+  - Avalonia.AvaloniaObject.Bind(Avalonia.AvaloniaProperty,System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  - Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{{T}},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  - Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{{T}},System.IObservable{{T}},Avalonia.Data.BindingPriority)
+  - Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{{T}},System.IObservable{Avalonia.Data.BindingValue{{T}}},Avalonia.Data.BindingPriority)
+  - Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{{T}},System.IObservable{System.Object})
+  - Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{{T}},System.IObservable{{T}})
+  - Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{{T}},System.IObservable{Avalonia.Data.BindingValue{{T}}})
+  - Avalonia.AvaloniaObject.CoerceValue(Avalonia.AvaloniaProperty)
+  - Avalonia.AvaloniaObject.UpdateDataValidation(Avalonia.AvaloniaProperty,Avalonia.Data.BindingValueType,System.Exception)
+  - Avalonia.AvaloniaObject.OnPropertyChangedCore(Avalonia.AvaloniaPropertyChangedEventArgs)
+  - Avalonia.AvaloniaObject.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)
+  - Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{{T}},{T},{T})
+  - Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{{T}},{T}@,{T})
+  - Avalonia.AvaloniaObject.InheritanceParent
+  - Avalonia.AvaloniaObject.Item(Avalonia.AvaloniaProperty)
+  - Avalonia.AvaloniaObject.Item(Avalonia.Data.IndexerDescriptor)
+  - Avalonia.AvaloniaObject.PropertyChanged
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.TextProperty
+  commentId: F:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.TextProperty
+  id: TextProperty
+  parent: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+  langs:
+  - csharp
+  - vb
+  name: TextProperty
+  nameWithType: LostFocusUpdateBindingBehavior.TextProperty
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.TextProperty
+  type: Field
+  source:
+    remote:
+      path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TextProperty
+    path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+    startLine: 20
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public static readonly StyledProperty<string?> TextProperty
+    return:
+      type: Avalonia.StyledProperty{System.String}
+    content.vb: Public Shared ReadOnly TextProperty As StyledProperty(Of String)
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text
+  commentId: P:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text
+  id: Text
+  parent: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: LostFocusUpdateBindingBehavior.Text
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text
+  type: Property
+  source:
+    remote:
+      path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Text
+    path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+    startLine: 23
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public string? Text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Text As String
+  overload: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text*
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached
+  commentId: M:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached
+  id: OnAttached
+  parent: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+  langs:
+  - csharp
+  - vb
+  name: OnAttached()
+  nameWithType: LostFocusUpdateBindingBehavior.OnAttached()
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached()
+  type: Method
+  source:
+    remote:
+      path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OnAttached
+    path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+    startLine: 29
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Called after the behavior is attached to the <xref href="Avalonia.Xaml.Interactivity.Behavior.AssociatedObject" data-throw-if-not-resolved="false"></xref>.
+  remarks: Override this to hook up functionality to the <xref href="Avalonia.Xaml.Interactivity.Behavior.AssociatedObject" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: protected override void OnAttached()
+    content.vb: Protected Overrides Sub OnAttached()
+  overridden: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.OnAttached
+  overload: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached*
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching
+  commentId: M:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching
+  id: OnDetaching
+  parent: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+  langs:
+  - csharp
+  - vb
+  name: OnDetaching()
+  nameWithType: LostFocusUpdateBindingBehavior.OnDetaching()
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching()
+  type: Method
+  source:
+    remote:
+      path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OnDetaching
+    path: src/gui/Converters/TextBoxLostFocusTriggerBehavior.cs
+    startLine: 36
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Called when the behavior is being detached from its <xref href="Avalonia.Xaml.Interactivity.Behavior.AssociatedObject" data-throw-if-not-resolved="false"></xref>.
+  remarks: Override this to unhook functionality from the <xref href="Avalonia.Xaml.Interactivity.Behavior.AssociatedObject" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: protected override void OnDetaching()
+    content.vb: Protected Overrides Sub OnDetaching()
+  overridden: Avalonia.Xaml.Interactivity.Behavior.OnDetaching
+  overload: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching*
+references:
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Avalonia.AvaloniaObject
+  commentId: T:Avalonia.AvaloniaObject
+  parent: Avalonia
+  isExternal: true
+  name: AvaloniaObject
+  nameWithType: AvaloniaObject
+  fullName: Avalonia.AvaloniaObject
+- uid: Avalonia.Xaml.Interactivity.Behavior
+  commentId: T:Avalonia.Xaml.Interactivity.Behavior
+  parent: Avalonia.Xaml.Interactivity
+  isExternal: true
+  name: Behavior
+  nameWithType: Behavior
+  fullName: Avalonia.Xaml.Interactivity.Behavior
+- uid: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}
+  commentId: T:Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}
+  parent: Avalonia.Xaml.Interactivity
+  definition: Avalonia.Xaml.Interactivity.Behavior`1
+  name: Behavior<TextBox>
+  nameWithType: Behavior<TextBox>
+  fullName: Avalonia.Xaml.Interactivity.Behavior<Avalonia.Controls.TextBox>
+  nameWithType.vb: Behavior(Of TextBox)
+  fullName.vb: Avalonia.Xaml.Interactivity.Behavior(Of Avalonia.Controls.TextBox)
+  name.vb: Behavior(Of TextBox)
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior`1
+    name: Behavior
+    isExternal: true
+  - name: <
+  - uid: Avalonia.Controls.TextBox
+    name: TextBox
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior`1
+    name: Behavior
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Avalonia.Controls.TextBox
+    name: TextBox
+    isExternal: true
+  - name: )
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: Avalonia.Xaml.Interactivity.IBehavior
+  commentId: T:Avalonia.Xaml.Interactivity.IBehavior
+  parent: Avalonia.Xaml.Interactivity
+  isExternal: true
+  name: IBehavior
+  nameWithType: IBehavior
+  fullName: Avalonia.Xaml.Interactivity.IBehavior
+- uid: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.AssociatedObject
+  commentId: P:Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.AssociatedObject
+  parent: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}
+  definition: Avalonia.Xaml.Interactivity.Behavior`1.AssociatedObject
+  name: AssociatedObject
+  nameWithType: Behavior<TextBox>.AssociatedObject
+  fullName: Avalonia.Xaml.Interactivity.Behavior<Avalonia.Controls.TextBox>.AssociatedObject
+  nameWithType.vb: Behavior(Of TextBox).AssociatedObject
+  fullName.vb: Avalonia.Xaml.Interactivity.Behavior(Of Avalonia.Controls.TextBox).AssociatedObject
+- uid: Avalonia.Xaml.Interactivity.Behavior.Attach(Avalonia.AvaloniaObject)
+  commentId: M:Avalonia.Xaml.Interactivity.Behavior.Attach(Avalonia.AvaloniaObject)
+  parent: Avalonia.Xaml.Interactivity.Behavior
+  isExternal: true
+  name: Attach(AvaloniaObject)
+  nameWithType: Behavior.Attach(AvaloniaObject)
+  fullName: Avalonia.Xaml.Interactivity.Behavior.Attach(Avalonia.AvaloniaObject)
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.Attach(Avalonia.AvaloniaObject)
+    name: Attach
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaObject
+    name: AvaloniaObject
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.Attach(Avalonia.AvaloniaObject)
+    name: Attach
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaObject
+    name: AvaloniaObject
+    isExternal: true
+  - name: )
+- uid: Avalonia.Xaml.Interactivity.Behavior.Detach
+  commentId: M:Avalonia.Xaml.Interactivity.Behavior.Detach
+  parent: Avalonia.Xaml.Interactivity.Behavior
+  isExternal: true
+  name: Detach()
+  nameWithType: Behavior.Detach()
+  fullName: Avalonia.Xaml.Interactivity.Behavior.Detach()
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.Detach
+    name: Detach
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.Detach
+    name: Detach
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Avalonia.Xaml.Interactivity.Behavior.OnAttachedToVisualTree
+  commentId: M:Avalonia.Xaml.Interactivity.Behavior.OnAttachedToVisualTree
+  parent: Avalonia.Xaml.Interactivity.Behavior
+  isExternal: true
+  name: OnAttachedToVisualTree()
+  nameWithType: Behavior.OnAttachedToVisualTree()
+  fullName: Avalonia.Xaml.Interactivity.Behavior.OnAttachedToVisualTree()
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.OnAttachedToVisualTree
+    name: OnAttachedToVisualTree
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.OnAttachedToVisualTree
+    name: OnAttachedToVisualTree
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Avalonia.Xaml.Interactivity.Behavior.OnDetachedFromVisualTree
+  commentId: M:Avalonia.Xaml.Interactivity.Behavior.OnDetachedFromVisualTree
+  parent: Avalonia.Xaml.Interactivity.Behavior
+  isExternal: true
+  name: OnDetachedFromVisualTree()
+  nameWithType: Behavior.OnDetachedFromVisualTree()
+  fullName: Avalonia.Xaml.Interactivity.Behavior.OnDetachedFromVisualTree()
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.OnDetachedFromVisualTree
+    name: OnDetachedFromVisualTree
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.OnDetachedFromVisualTree
+    name: OnDetachedFromVisualTree
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Avalonia.AvaloniaObject.CheckAccess
+  commentId: M:Avalonia.AvaloniaObject.CheckAccess
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: CheckAccess()
+  nameWithType: AvaloniaObject.CheckAccess()
+  fullName: Avalonia.AvaloniaObject.CheckAccess()
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.CheckAccess
+    name: CheckAccess
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.CheckAccess
+    name: CheckAccess
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Avalonia.AvaloniaObject.VerifyAccess
+  commentId: M:Avalonia.AvaloniaObject.VerifyAccess
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: VerifyAccess()
+  nameWithType: AvaloniaObject.VerifyAccess()
+  fullName: Avalonia.AvaloniaObject.VerifyAccess()
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.VerifyAccess
+    name: VerifyAccess
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.VerifyAccess
+    name: VerifyAccess
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Avalonia.AvaloniaObject.ClearValue(Avalonia.AvaloniaProperty)
+  commentId: M:Avalonia.AvaloniaObject.ClearValue(Avalonia.AvaloniaProperty)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: ClearValue(AvaloniaProperty)
+  nameWithType: AvaloniaObject.ClearValue(AvaloniaProperty)
+  fullName: Avalonia.AvaloniaObject.ClearValue(Avalonia.AvaloniaProperty)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.ClearValue(Avalonia.AvaloniaProperty)
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.ClearValue(Avalonia.AvaloniaProperty)
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{{T}})
+  commentId: M:Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+  name: ClearValue<T>(AvaloniaProperty<T>)
+  nameWithType: AvaloniaObject.ClearValue<T>(AvaloniaProperty<T>)
+  fullName: Avalonia.AvaloniaObject.ClearValue<T>(Avalonia.AvaloniaProperty<T>)
+  nameWithType.vb: AvaloniaObject.ClearValue(Of T)(AvaloniaProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.ClearValue(Of T)(Avalonia.AvaloniaProperty(Of T))
+  name.vb: ClearValue(Of T)(AvaloniaProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.AvaloniaProperty`1
+    name: AvaloniaProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.AvaloniaProperty`1
+    name: AvaloniaProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{{T}})
+  commentId: M:Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+  name: ClearValue<T>(StyledProperty<T>)
+  nameWithType: AvaloniaObject.ClearValue<T>(StyledProperty<T>)
+  fullName: Avalonia.AvaloniaObject.ClearValue<T>(Avalonia.StyledProperty<T>)
+  nameWithType.vb: AvaloniaObject.ClearValue(Of T)(StyledProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.ClearValue(Of T)(Avalonia.StyledProperty(Of T))
+  name.vb: ClearValue(Of T)(StyledProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{{T}})
+  commentId: M:Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+  name: ClearValue<T>(DirectPropertyBase<T>)
+  nameWithType: AvaloniaObject.ClearValue<T>(DirectPropertyBase<T>)
+  fullName: Avalonia.AvaloniaObject.ClearValue<T>(Avalonia.DirectPropertyBase<T>)
+  nameWithType.vb: AvaloniaObject.ClearValue(Of T)(DirectPropertyBase(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.ClearValue(Of T)(Avalonia.DirectPropertyBase(Of T))
+  name.vb: ClearValue(Of T)(DirectPropertyBase(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+    name: ClearValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.Equals(System.Object)
+  commentId: M:Avalonia.AvaloniaObject.Equals(System.Object)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: Equals(object)
+  nameWithType: AvaloniaObject.Equals(object)
+  fullName: Avalonia.AvaloniaObject.Equals(object)
+  nameWithType.vb: AvaloniaObject.Equals(Object)
+  fullName.vb: Avalonia.AvaloniaObject.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Equals(System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Equals(System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetHashCode
+  commentId: M:Avalonia.AvaloniaObject.GetHashCode
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: AvaloniaObject.GetHashCode()
+  fullName: Avalonia.AvaloniaObject.GetHashCode()
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetHashCode
+    name: GetHashCode
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetHashCode
+    name: GetHashCode
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetValue(Avalonia.AvaloniaProperty)
+  commentId: M:Avalonia.AvaloniaObject.GetValue(Avalonia.AvaloniaProperty)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: GetValue(AvaloniaProperty)
+  nameWithType: AvaloniaObject.GetValue(AvaloniaProperty)
+  fullName: Avalonia.AvaloniaObject.GetValue(Avalonia.AvaloniaProperty)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetValue(Avalonia.AvaloniaProperty)
+    name: GetValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetValue(Avalonia.AvaloniaProperty)
+    name: GetValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{{T}})
+  commentId: M:Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+  name: GetValue<T>(StyledProperty<T>)
+  nameWithType: AvaloniaObject.GetValue<T>(StyledProperty<T>)
+  fullName: Avalonia.AvaloniaObject.GetValue<T>(Avalonia.StyledProperty<T>)
+  nameWithType.vb: AvaloniaObject.GetValue(Of T)(StyledProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.GetValue(Of T)(Avalonia.StyledProperty(Of T))
+  name.vb: GetValue(Of T)(StyledProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+    name: GetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+    name: GetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{{T}})
+  commentId: M:Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+  name: GetValue<T>(DirectPropertyBase<T>)
+  nameWithType: AvaloniaObject.GetValue<T>(DirectPropertyBase<T>)
+  fullName: Avalonia.AvaloniaObject.GetValue<T>(Avalonia.DirectPropertyBase<T>)
+  nameWithType.vb: AvaloniaObject.GetValue(Of T)(DirectPropertyBase(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.GetValue(Of T)(Avalonia.DirectPropertyBase(Of T))
+  name.vb: GetValue(Of T)(DirectPropertyBase(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+    name: GetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+    name: GetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{{T}})
+  commentId: M:Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+  name: GetBaseValue<T>(StyledProperty<T>)
+  nameWithType: AvaloniaObject.GetBaseValue<T>(StyledProperty<T>)
+  fullName: Avalonia.AvaloniaObject.GetBaseValue<T>(Avalonia.StyledProperty<T>)
+  nameWithType.vb: AvaloniaObject.GetBaseValue(Of T)(StyledProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.GetBaseValue(Of T)(Avalonia.StyledProperty(Of T))
+  name.vb: GetBaseValue(Of T)(StyledProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+    name: GetBaseValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+    name: GetBaseValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.IsAnimating(Avalonia.AvaloniaProperty)
+  commentId: M:Avalonia.AvaloniaObject.IsAnimating(Avalonia.AvaloniaProperty)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: IsAnimating(AvaloniaProperty)
+  nameWithType: AvaloniaObject.IsAnimating(AvaloniaProperty)
+  fullName: Avalonia.AvaloniaObject.IsAnimating(Avalonia.AvaloniaProperty)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.IsAnimating(Avalonia.AvaloniaProperty)
+    name: IsAnimating
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.IsAnimating(Avalonia.AvaloniaProperty)
+    name: IsAnimating
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.IsSet(Avalonia.AvaloniaProperty)
+  commentId: M:Avalonia.AvaloniaObject.IsSet(Avalonia.AvaloniaProperty)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: IsSet(AvaloniaProperty)
+  nameWithType: AvaloniaObject.IsSet(AvaloniaProperty)
+  fullName: Avalonia.AvaloniaObject.IsSet(Avalonia.AvaloniaProperty)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.IsSet(Avalonia.AvaloniaProperty)
+    name: IsSet
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.IsSet(Avalonia.AvaloniaProperty)
+    name: IsSet
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetValue(Avalonia.AvaloniaProperty,System.Object,Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.SetValue(Avalonia.AvaloniaProperty,System.Object,Avalonia.Data.BindingPriority)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SetValue(AvaloniaProperty, object, BindingPriority)
+  nameWithType: AvaloniaObject.SetValue(AvaloniaProperty, object, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.SetValue(Avalonia.AvaloniaProperty, object, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.SetValue(AvaloniaProperty, Object, BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.SetValue(Avalonia.AvaloniaProperty, Object, Avalonia.Data.BindingPriority)
+  name.vb: SetValue(AvaloniaProperty, Object, BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetValue(Avalonia.AvaloniaProperty,System.Object,Avalonia.Data.BindingPriority)
+    name: SetValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetValue(Avalonia.AvaloniaProperty,System.Object,Avalonia.Data.BindingPriority)
+    name: SetValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{{T}},{T},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+  name: SetValue<T>(StyledProperty<T>, T, BindingPriority)
+  nameWithType: AvaloniaObject.SetValue<T>(StyledProperty<T>, T, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.SetValue<T>(Avalonia.StyledProperty<T>, T, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.SetValue(Of T)(StyledProperty(Of T), T, BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.SetValue(Of T)(Avalonia.StyledProperty(Of T), T, Avalonia.Data.BindingPriority)
+  name.vb: SetValue(Of T)(StyledProperty(Of T), T, BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+    name: SetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+    name: SetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{{T}},{T})
+  commentId: M:Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+  name: SetValue<T>(DirectPropertyBase<T>, T)
+  nameWithType: AvaloniaObject.SetValue<T>(DirectPropertyBase<T>, T)
+  fullName: Avalonia.AvaloniaObject.SetValue<T>(Avalonia.DirectPropertyBase<T>, T)
+  nameWithType.vb: AvaloniaObject.SetValue(Of T)(DirectPropertyBase(Of T), T)
+  fullName.vb: Avalonia.AvaloniaObject.SetValue(Of T)(Avalonia.DirectPropertyBase(Of T), T)
+  name.vb: SetValue(Of T)(DirectPropertyBase(Of T), T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+    name: SetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+    name: SetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetCurrentValue(Avalonia.AvaloniaProperty,System.Object)
+  commentId: M:Avalonia.AvaloniaObject.SetCurrentValue(Avalonia.AvaloniaProperty,System.Object)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: SetCurrentValue(AvaloniaProperty, object)
+  nameWithType: AvaloniaObject.SetCurrentValue(AvaloniaProperty, object)
+  fullName: Avalonia.AvaloniaObject.SetCurrentValue(Avalonia.AvaloniaProperty, object)
+  nameWithType.vb: AvaloniaObject.SetCurrentValue(AvaloniaProperty, Object)
+  fullName.vb: Avalonia.AvaloniaObject.SetCurrentValue(Avalonia.AvaloniaProperty, Object)
+  name.vb: SetCurrentValue(AvaloniaProperty, Object)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetCurrentValue(Avalonia.AvaloniaProperty,System.Object)
+    name: SetCurrentValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetCurrentValue(Avalonia.AvaloniaProperty,System.Object)
+    name: SetCurrentValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{{T}},{T})
+  commentId: M:Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+  name: SetCurrentValue<T>(StyledProperty<T>, T)
+  nameWithType: AvaloniaObject.SetCurrentValue<T>(StyledProperty<T>, T)
+  fullName: Avalonia.AvaloniaObject.SetCurrentValue<T>(Avalonia.StyledProperty<T>, T)
+  nameWithType.vb: AvaloniaObject.SetCurrentValue(Of T)(StyledProperty(Of T), T)
+  fullName.vb: Avalonia.AvaloniaObject.SetCurrentValue(Of T)(Avalonia.StyledProperty(Of T), T)
+  name.vb: SetCurrentValue(Of T)(StyledProperty(Of T), T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+    name: SetCurrentValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+    name: SetCurrentValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind(Avalonia.AvaloniaProperty,System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.Bind(Avalonia.AvaloniaProperty,System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind(AvaloniaProperty, IObservable<object>, BindingPriority)
+  nameWithType: AvaloniaObject.Bind(AvaloniaProperty, IObservable<object>, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.Bind(Avalonia.AvaloniaProperty, System.IObservable<object>, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.Bind(AvaloniaProperty, IObservable(Of Object), BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Avalonia.AvaloniaProperty, System.IObservable(Of Object), Avalonia.Data.BindingPriority)
+  name.vb: Bind(AvaloniaProperty, IObservable(Of Object), BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind(Avalonia.AvaloniaProperty,System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind(Avalonia.AvaloniaProperty,System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{{T}},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(StyledProperty<T>, IObservable<object>, BindingPriority)
+  nameWithType: AvaloniaObject.Bind<T>(StyledProperty<T>, IObservable<object>, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.StyledProperty<T>, System.IObservable<object>, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(StyledProperty(Of T), IObservable(Of Object), BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.StyledProperty(Of T), System.IObservable(Of Object), Avalonia.Data.BindingPriority)
+  name.vb: Bind(Of T)(StyledProperty(Of T), IObservable(Of Object), BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{{T}},System.IObservable{{T}},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(StyledProperty<T>, IObservable<T>, BindingPriority)
+  nameWithType: AvaloniaObject.Bind<T>(StyledProperty<T>, IObservable<T>, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.StyledProperty<T>, System.IObservable<T>, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(StyledProperty(Of T), IObservable(Of T), BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.StyledProperty(Of T), System.IObservable(Of T), Avalonia.Data.BindingPriority)
+  name.vb: Bind(Of T)(StyledProperty(Of T), IObservable(Of T), BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{{T}},System.IObservable{Avalonia.Data.BindingValue{{T}}},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(StyledProperty<T>, IObservable<BindingValue<T>>, BindingPriority)
+  nameWithType: AvaloniaObject.Bind<T>(StyledProperty<T>, IObservable<BindingValue<T>>, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.StyledProperty<T>, System.IObservable<Avalonia.Data.BindingValue<T>>, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(StyledProperty(Of T), IObservable(Of BindingValue(Of T)), BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.StyledProperty(Of T), System.IObservable(Of Avalonia.Data.BindingValue(Of T)), Avalonia.Data.BindingPriority)
+  name.vb: Bind(Of T)(StyledProperty(Of T), IObservable(Of BindingValue(Of T)), BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{{T}},System.IObservable{System.Object})
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(DirectPropertyBase<T>, IObservable<object>)
+  nameWithType: AvaloniaObject.Bind<T>(DirectPropertyBase<T>, IObservable<object>)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.DirectPropertyBase<T>, System.IObservable<object>)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of Object))
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.DirectPropertyBase(Of T), System.IObservable(Of Object))
+  name.vb: Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of Object))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{{T}},System.IObservable{{T}})
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(DirectPropertyBase<T>, IObservable<T>)
+  nameWithType: AvaloniaObject.Bind<T>(DirectPropertyBase<T>, IObservable<T>)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.DirectPropertyBase<T>, System.IObservable<T>)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.DirectPropertyBase(Of T), System.IObservable(Of T))
+  name.vb: Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{{T}},System.IObservable{Avalonia.Data.BindingValue{{T}}})
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(DirectPropertyBase<T>, IObservable<BindingValue<T>>)
+  nameWithType: AvaloniaObject.Bind<T>(DirectPropertyBase<T>, IObservable<BindingValue<T>>)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.DirectPropertyBase<T>, System.IObservable<Avalonia.Data.BindingValue<T>>)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of BindingValue(Of T)))
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.DirectPropertyBase(Of T), System.IObservable(Of Avalonia.Data.BindingValue(Of T)))
+  name.vb: Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of BindingValue(Of T)))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.CoerceValue(Avalonia.AvaloniaProperty)
+  commentId: M:Avalonia.AvaloniaObject.CoerceValue(Avalonia.AvaloniaProperty)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: CoerceValue(AvaloniaProperty)
+  nameWithType: AvaloniaObject.CoerceValue(AvaloniaProperty)
+  fullName: Avalonia.AvaloniaObject.CoerceValue(Avalonia.AvaloniaProperty)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.CoerceValue(Avalonia.AvaloniaProperty)
+    name: CoerceValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.CoerceValue(Avalonia.AvaloniaProperty)
+    name: CoerceValue
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.UpdateDataValidation(Avalonia.AvaloniaProperty,Avalonia.Data.BindingValueType,System.Exception)
+  commentId: M:Avalonia.AvaloniaObject.UpdateDataValidation(Avalonia.AvaloniaProperty,Avalonia.Data.BindingValueType,System.Exception)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: UpdateDataValidation(AvaloniaProperty, BindingValueType, Exception)
+  nameWithType: AvaloniaObject.UpdateDataValidation(AvaloniaProperty, BindingValueType, Exception)
+  fullName: Avalonia.AvaloniaObject.UpdateDataValidation(Avalonia.AvaloniaProperty, Avalonia.Data.BindingValueType, System.Exception)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.UpdateDataValidation(Avalonia.AvaloniaProperty,Avalonia.Data.BindingValueType,System.Exception)
+    name: UpdateDataValidation
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingValueType
+    name: BindingValueType
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.UpdateDataValidation(Avalonia.AvaloniaProperty,Avalonia.Data.BindingValueType,System.Exception)
+    name: UpdateDataValidation
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingValueType
+    name: BindingValueType
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: Avalonia.AvaloniaObject.OnPropertyChangedCore(Avalonia.AvaloniaPropertyChangedEventArgs)
+  commentId: M:Avalonia.AvaloniaObject.OnPropertyChangedCore(Avalonia.AvaloniaPropertyChangedEventArgs)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: OnPropertyChangedCore(AvaloniaPropertyChangedEventArgs)
+  nameWithType: AvaloniaObject.OnPropertyChangedCore(AvaloniaPropertyChangedEventArgs)
+  fullName: Avalonia.AvaloniaObject.OnPropertyChangedCore(Avalonia.AvaloniaPropertyChangedEventArgs)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.OnPropertyChangedCore(Avalonia.AvaloniaPropertyChangedEventArgs)
+    name: OnPropertyChangedCore
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaPropertyChangedEventArgs
+    name: AvaloniaPropertyChangedEventArgs
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.OnPropertyChangedCore(Avalonia.AvaloniaPropertyChangedEventArgs)
+    name: OnPropertyChangedCore
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaPropertyChangedEventArgs
+    name: AvaloniaPropertyChangedEventArgs
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)
+  commentId: M:Avalonia.AvaloniaObject.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: OnPropertyChanged(AvaloniaPropertyChangedEventArgs)
+  nameWithType: AvaloniaObject.OnPropertyChanged(AvaloniaPropertyChangedEventArgs)
+  fullName: Avalonia.AvaloniaObject.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)
+    name: OnPropertyChanged
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaPropertyChangedEventArgs
+    name: AvaloniaPropertyChangedEventArgs
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)
+    name: OnPropertyChanged
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaPropertyChangedEventArgs
+    name: AvaloniaPropertyChangedEventArgs
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{{T}},{T},{T})
+  commentId: M:Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+  name: RaisePropertyChanged<T>(DirectPropertyBase<T>, T, T)
+  nameWithType: AvaloniaObject.RaisePropertyChanged<T>(DirectPropertyBase<T>, T, T)
+  fullName: Avalonia.AvaloniaObject.RaisePropertyChanged<T>(Avalonia.DirectPropertyBase<T>, T, T)
+  nameWithType.vb: AvaloniaObject.RaisePropertyChanged(Of T)(DirectPropertyBase(Of T), T, T)
+  fullName.vb: Avalonia.AvaloniaObject.RaisePropertyChanged(Of T)(Avalonia.DirectPropertyBase(Of T), T, T)
+  name.vb: RaisePropertyChanged(Of T)(DirectPropertyBase(Of T), T, T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+    name: RaisePropertyChanged
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+    name: RaisePropertyChanged
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{{T}},{T}@,{T})
+  commentId: M:Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+  parent: Avalonia.AvaloniaObject
+  definition: Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+  name: SetAndRaise<T>(DirectPropertyBase<T>, ref T, T)
+  nameWithType: AvaloniaObject.SetAndRaise<T>(DirectPropertyBase<T>, ref T, T)
+  fullName: Avalonia.AvaloniaObject.SetAndRaise<T>(Avalonia.DirectPropertyBase<T>, ref T, T)
+  nameWithType.vb: AvaloniaObject.SetAndRaise(Of T)(DirectPropertyBase(Of T), T, T)
+  fullName.vb: Avalonia.AvaloniaObject.SetAndRaise(Of T)(Avalonia.DirectPropertyBase(Of T), T, T)
+  name.vb: SetAndRaise(Of T)(DirectPropertyBase(Of T), T, T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+    name: SetAndRaise
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+    name: SetAndRaise
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.AvaloniaObject.InheritanceParent
+  commentId: P:Avalonia.AvaloniaObject.InheritanceParent
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: InheritanceParent
+  nameWithType: AvaloniaObject.InheritanceParent
+  fullName: Avalonia.AvaloniaObject.InheritanceParent
+- uid: Avalonia.AvaloniaObject.Item(Avalonia.AvaloniaProperty)
+  commentId: P:Avalonia.AvaloniaObject.Item(Avalonia.AvaloniaProperty)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: this[AvaloniaProperty]
+  nameWithType: AvaloniaObject.this[AvaloniaProperty]
+  fullName: Avalonia.AvaloniaObject.this[Avalonia.AvaloniaProperty]
+  nameWithType.vb: AvaloniaObject.this[](AvaloniaProperty)
+  fullName.vb: Avalonia.AvaloniaObject.this[](Avalonia.AvaloniaProperty)
+  name.vb: this[](AvaloniaProperty)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: ']'
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Item(Avalonia.AvaloniaProperty)
+    name: this[]
+    isExternal: true
+  - name: (
+  - uid: Avalonia.AvaloniaProperty
+    name: AvaloniaProperty
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Item(Avalonia.Data.IndexerDescriptor)
+  commentId: P:Avalonia.AvaloniaObject.Item(Avalonia.Data.IndexerDescriptor)
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: this[IndexerDescriptor]
+  nameWithType: AvaloniaObject.this[IndexerDescriptor]
+  fullName: Avalonia.AvaloniaObject.this[Avalonia.Data.IndexerDescriptor]
+  nameWithType.vb: AvaloniaObject.this[](IndexerDescriptor)
+  fullName.vb: Avalonia.AvaloniaObject.this[](Avalonia.Data.IndexerDescriptor)
+  name.vb: this[](IndexerDescriptor)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: Avalonia.Data.IndexerDescriptor
+    name: IndexerDescriptor
+    isExternal: true
+  - name: ']'
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Item(Avalonia.Data.IndexerDescriptor)
+    name: this[]
+    isExternal: true
+  - name: (
+  - uid: Avalonia.Data.IndexerDescriptor
+    name: IndexerDescriptor
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.PropertyChanged
+  commentId: E:Avalonia.AvaloniaObject.PropertyChanged
+  parent: Avalonia.AvaloniaObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: AvaloniaObject.PropertyChanged
+  fullName: Avalonia.AvaloniaObject.PropertyChanged
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Avalonia
+  commentId: N:Avalonia
+  isExternal: true
+  name: Avalonia
+  nameWithType: Avalonia
+  fullName: Avalonia
+- uid: Avalonia.Xaml.Interactivity
+  commentId: N:Avalonia.Xaml.Interactivity
+  isExternal: true
+  name: Avalonia.Xaml.Interactivity
+  nameWithType: Avalonia.Xaml.Interactivity
+  fullName: Avalonia.Xaml.Interactivity
+  spec.csharp:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Xaml
+    name: Xaml
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Xaml.Interactivity
+    name: Interactivity
+    isExternal: true
+  spec.vb:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Xaml
+    name: Xaml
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Xaml.Interactivity
+    name: Interactivity
+    isExternal: true
+- uid: Avalonia.Xaml.Interactivity.Behavior`1
+  commentId: T:Avalonia.Xaml.Interactivity.Behavior`1
+  isExternal: true
+  name: Behavior<T>
+  nameWithType: Behavior<T>
+  fullName: Avalonia.Xaml.Interactivity.Behavior<T>
+  nameWithType.vb: Behavior(Of T)
+  fullName.vb: Avalonia.Xaml.Interactivity.Behavior(Of T)
+  name.vb: Behavior(Of T)
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior`1
+    name: Behavior
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior`1
+    name: Behavior
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: Avalonia.Xaml.Interactivity.Behavior`1.AssociatedObject
+  commentId: P:Avalonia.Xaml.Interactivity.Behavior`1.AssociatedObject
+  isExternal: true
+  name: AssociatedObject
+  nameWithType: Behavior<T>.AssociatedObject
+  fullName: Avalonia.Xaml.Interactivity.Behavior<T>.AssociatedObject
+  nameWithType.vb: Behavior(Of T).AssociatedObject
+  fullName.vb: Avalonia.Xaml.Interactivity.Behavior(Of T).AssociatedObject
+- uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+  commentId: M:Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+  isExternal: true
+  name: ClearValue<T>(AvaloniaProperty<T>)
+  nameWithType: AvaloniaObject.ClearValue<T>(AvaloniaProperty<T>)
+  fullName: Avalonia.AvaloniaObject.ClearValue<T>(Avalonia.AvaloniaProperty<T>)
+  nameWithType.vb: AvaloniaObject.ClearValue(Of T)(AvaloniaProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.ClearValue(Of T)(Avalonia.AvaloniaProperty(Of T))
+  name.vb: ClearValue(Of T)(AvaloniaProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.AvaloniaProperty`1
+    name: AvaloniaProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.AvaloniaProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.AvaloniaProperty`1
+    name: AvaloniaProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+  commentId: M:Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+  isExternal: true
+  name: ClearValue<T>(StyledProperty<T>)
+  nameWithType: AvaloniaObject.ClearValue<T>(StyledProperty<T>)
+  fullName: Avalonia.AvaloniaObject.ClearValue<T>(Avalonia.StyledProperty<T>)
+  nameWithType.vb: AvaloniaObject.ClearValue(Of T)(StyledProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.ClearValue(Of T)(Avalonia.StyledProperty(Of T))
+  name.vb: ClearValue(Of T)(StyledProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.StyledProperty{``0})
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+  commentId: M:Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+  isExternal: true
+  name: ClearValue<T>(DirectPropertyBase<T>)
+  nameWithType: AvaloniaObject.ClearValue<T>(DirectPropertyBase<T>)
+  fullName: Avalonia.AvaloniaObject.ClearValue<T>(Avalonia.DirectPropertyBase<T>)
+  nameWithType.vb: AvaloniaObject.ClearValue(Of T)(DirectPropertyBase(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.ClearValue(Of T)(Avalonia.DirectPropertyBase(Of T))
+  name.vb: ClearValue(Of T)(DirectPropertyBase(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+    name: ClearValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.ClearValue``1(Avalonia.DirectPropertyBase{``0})
+    name: ClearValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+  commentId: M:Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+  isExternal: true
+  name: GetValue<T>(StyledProperty<T>)
+  nameWithType: AvaloniaObject.GetValue<T>(StyledProperty<T>)
+  fullName: Avalonia.AvaloniaObject.GetValue<T>(Avalonia.StyledProperty<T>)
+  nameWithType.vb: AvaloniaObject.GetValue(Of T)(StyledProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.GetValue(Of T)(Avalonia.StyledProperty(Of T))
+  name.vb: GetValue(Of T)(StyledProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+    name: GetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.StyledProperty{``0})
+    name: GetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+  commentId: M:Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+  isExternal: true
+  name: GetValue<T>(DirectPropertyBase<T>)
+  nameWithType: AvaloniaObject.GetValue<T>(DirectPropertyBase<T>)
+  fullName: Avalonia.AvaloniaObject.GetValue<T>(Avalonia.DirectPropertyBase<T>)
+  nameWithType.vb: AvaloniaObject.GetValue(Of T)(DirectPropertyBase(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.GetValue(Of T)(Avalonia.DirectPropertyBase(Of T))
+  name.vb: GetValue(Of T)(DirectPropertyBase(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+    name: GetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetValue``1(Avalonia.DirectPropertyBase{``0})
+    name: GetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+  commentId: M:Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+  isExternal: true
+  name: GetBaseValue<T>(StyledProperty<T>)
+  nameWithType: AvaloniaObject.GetBaseValue<T>(StyledProperty<T>)
+  fullName: Avalonia.AvaloniaObject.GetBaseValue<T>(Avalonia.StyledProperty<T>)
+  nameWithType.vb: AvaloniaObject.GetBaseValue(Of T)(StyledProperty(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.GetBaseValue(Of T)(Avalonia.StyledProperty(Of T))
+  name.vb: GetBaseValue(Of T)(StyledProperty(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+    name: GetBaseValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.GetBaseValue``1(Avalonia.StyledProperty{``0})
+    name: GetBaseValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+  isExternal: true
+  name: SetValue<T>(StyledProperty<T>, T, BindingPriority)
+  nameWithType: AvaloniaObject.SetValue<T>(StyledProperty<T>, T, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.SetValue<T>(Avalonia.StyledProperty<T>, T, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.SetValue(Of T)(StyledProperty(Of T), T, BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.SetValue(Of T)(Avalonia.StyledProperty(Of T), T, Avalonia.Data.BindingPriority)
+  name.vb: SetValue(Of T)(StyledProperty(Of T), T, BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+    name: SetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.StyledProperty{``0},``0,Avalonia.Data.BindingPriority)
+    name: SetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+  commentId: M:Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+  isExternal: true
+  name: SetValue<T>(DirectPropertyBase<T>, T)
+  nameWithType: AvaloniaObject.SetValue<T>(DirectPropertyBase<T>, T)
+  fullName: Avalonia.AvaloniaObject.SetValue<T>(Avalonia.DirectPropertyBase<T>, T)
+  nameWithType.vb: AvaloniaObject.SetValue(Of T)(DirectPropertyBase(Of T), T)
+  fullName.vb: Avalonia.AvaloniaObject.SetValue(Of T)(Avalonia.DirectPropertyBase(Of T), T)
+  name.vb: SetValue(Of T)(DirectPropertyBase(Of T), T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+    name: SetValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetValue``1(Avalonia.DirectPropertyBase{``0},``0)
+    name: SetValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+  commentId: M:Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+  isExternal: true
+  name: SetCurrentValue<T>(StyledProperty<T>, T)
+  nameWithType: AvaloniaObject.SetCurrentValue<T>(StyledProperty<T>, T)
+  fullName: Avalonia.AvaloniaObject.SetCurrentValue<T>(Avalonia.StyledProperty<T>, T)
+  nameWithType.vb: AvaloniaObject.SetCurrentValue(Of T)(StyledProperty(Of T), T)
+  fullName.vb: Avalonia.AvaloniaObject.SetCurrentValue(Of T)(Avalonia.StyledProperty(Of T), T)
+  name.vb: SetCurrentValue(Of T)(StyledProperty(Of T), T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+    name: SetCurrentValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetCurrentValue``1(Avalonia.StyledProperty{``0},``0)
+    name: SetCurrentValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(StyledProperty<T>, IObservable<object>, BindingPriority)
+  nameWithType: AvaloniaObject.Bind<T>(StyledProperty<T>, IObservable<object>, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.StyledProperty<T>, System.IObservable<object>, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(StyledProperty(Of T), IObservable(Of Object), BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.StyledProperty(Of T), System.IObservable(Of Object), Avalonia.Data.BindingPriority)
+  name.vb: Bind(Of T)(StyledProperty(Of T), IObservable(Of Object), BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{System.Object},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(StyledProperty<T>, IObservable<T>, BindingPriority)
+  nameWithType: AvaloniaObject.Bind<T>(StyledProperty<T>, IObservable<T>, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.StyledProperty<T>, System.IObservable<T>, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(StyledProperty(Of T), IObservable(Of T), BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.StyledProperty(Of T), System.IObservable(Of T), Avalonia.Data.BindingPriority)
+  name.vb: Bind(Of T)(StyledProperty(Of T), IObservable(Of T), BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{``0},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(StyledProperty<T>, IObservable<BindingValue<T>>, BindingPriority)
+  nameWithType: AvaloniaObject.Bind<T>(StyledProperty<T>, IObservable<BindingValue<T>>, BindingPriority)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.StyledProperty<T>, System.IObservable<Avalonia.Data.BindingValue<T>>, Avalonia.Data.BindingPriority)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(StyledProperty(Of T), IObservable(Of BindingValue(Of T)), BindingPriority)
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.StyledProperty(Of T), System.IObservable(Of Avalonia.Data.BindingValue(Of T)), Avalonia.Data.BindingPriority)
+  name.vb: Bind(Of T)(StyledProperty(Of T), IObservable(Of BindingValue(Of T)), BindingPriority)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.StyledProperty{``0},System.IObservable{Avalonia.Data.BindingValue{``0}},Avalonia.Data.BindingPriority)
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Data.BindingPriority
+    name: BindingPriority
+    isExternal: true
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(DirectPropertyBase<T>, IObservable<object>)
+  nameWithType: AvaloniaObject.Bind<T>(DirectPropertyBase<T>, IObservable<object>)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.DirectPropertyBase<T>, System.IObservable<object>)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of Object))
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.DirectPropertyBase(Of T), System.IObservable(Of Object))
+  name.vb: Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of Object))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{System.Object})
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(DirectPropertyBase<T>, IObservable<T>)
+  nameWithType: AvaloniaObject.Bind<T>(DirectPropertyBase<T>, IObservable<T>)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.DirectPropertyBase<T>, System.IObservable<T>)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of T))
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.DirectPropertyBase(Of T), System.IObservable(Of T))
+  name.vb: Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of T))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{``0})
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+  commentId: M:Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: Bind<T>(DirectPropertyBase<T>, IObservable<BindingValue<T>>)
+  nameWithType: AvaloniaObject.Bind<T>(DirectPropertyBase<T>, IObservable<BindingValue<T>>)
+  fullName: Avalonia.AvaloniaObject.Bind<T>(Avalonia.DirectPropertyBase<T>, System.IObservable<Avalonia.Data.BindingValue<T>>)
+  nameWithType.vb: AvaloniaObject.Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of BindingValue(Of T)))
+  fullName.vb: Avalonia.AvaloniaObject.Bind(Of T)(Avalonia.DirectPropertyBase(Of T), System.IObservable(Of Avalonia.Data.BindingValue(Of T)))
+  name.vb: Bind(Of T)(DirectPropertyBase(Of T), IObservable(Of BindingValue(Of T)))
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+    name: Bind
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.Bind``1(Avalonia.DirectPropertyBase{``0},System.IObservable{Avalonia.Data.BindingValue{``0}})
+    name: Bind
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Avalonia.Data.BindingValue`1
+    name: BindingValue
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+  commentId: M:Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+  isExternal: true
+  name: RaisePropertyChanged<T>(DirectPropertyBase<T>, T, T)
+  nameWithType: AvaloniaObject.RaisePropertyChanged<T>(DirectPropertyBase<T>, T, T)
+  fullName: Avalonia.AvaloniaObject.RaisePropertyChanged<T>(Avalonia.DirectPropertyBase<T>, T, T)
+  nameWithType.vb: AvaloniaObject.RaisePropertyChanged(Of T)(DirectPropertyBase(Of T), T, T)
+  fullName.vb: Avalonia.AvaloniaObject.RaisePropertyChanged(Of T)(Avalonia.DirectPropertyBase(Of T), T, T)
+  name.vb: RaisePropertyChanged(Of T)(DirectPropertyBase(Of T), T, T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+    name: RaisePropertyChanged
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.RaisePropertyChanged``1(Avalonia.DirectPropertyBase{``0},``0,``0)
+    name: RaisePropertyChanged
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+  commentId: M:Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+  isExternal: true
+  name: SetAndRaise<T>(DirectPropertyBase<T>, ref T, T)
+  nameWithType: AvaloniaObject.SetAndRaise<T>(DirectPropertyBase<T>, ref T, T)
+  fullName: Avalonia.AvaloniaObject.SetAndRaise<T>(Avalonia.DirectPropertyBase<T>, ref T, T)
+  nameWithType.vb: AvaloniaObject.SetAndRaise(Of T)(DirectPropertyBase(Of T), T, T)
+  fullName.vb: Avalonia.AvaloniaObject.SetAndRaise(Of T)(Avalonia.DirectPropertyBase(Of T), T, T)
+  name.vb: SetAndRaise(Of T)(DirectPropertyBase(Of T), T, T)
+  spec.csharp:
+  - uid: Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+    name: SetAndRaise
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: ref
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Avalonia.AvaloniaObject.SetAndRaise``1(Avalonia.DirectPropertyBase{``0},``0@,``0)
+    name: SetAndRaise
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Avalonia.DirectPropertyBase`1
+    name: DirectPropertyBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: Avalonia.StyledProperty{System.String}
+  commentId: T:Avalonia.StyledProperty{System.String}
+  parent: Avalonia
+  definition: Avalonia.StyledProperty`1
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: StyledProperty<string>
+  nameWithType: StyledProperty<string>
+  fullName: Avalonia.StyledProperty<string>
+  nameWithType.vb: StyledProperty(Of String)
+  fullName.vb: Avalonia.StyledProperty(Of String)
+  name.vb: StyledProperty(Of String)
+  spec.csharp:
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Avalonia.StyledProperty`1
+  commentId: T:Avalonia.StyledProperty`1
+  isExternal: true
+  name: StyledProperty<TValue>
+  nameWithType: StyledProperty<TValue>
+  fullName: Avalonia.StyledProperty<TValue>
+  nameWithType.vb: StyledProperty(Of TValue)
+  fullName.vb: Avalonia.StyledProperty(Of TValue)
+  name.vb: StyledProperty(Of TValue)
+  spec.csharp:
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: <
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Avalonia.StyledProperty`1
+    name: StyledProperty
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text*
+  commentId: Overload:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text
+  href: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.html#SearchAThing_OpenGL_GUI_LostFocusUpdateBindingBehavior_Text
+  name: Text
+  nameWithType: LostFocusUpdateBindingBehavior.Text
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.Text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Avalonia.Xaml.Interactivity.Behavior.AssociatedObject
+  commentId: P:Avalonia.Xaml.Interactivity.Behavior.AssociatedObject
+  isExternal: true
+  name: AssociatedObject
+  nameWithType: Behavior.AssociatedObject
+  fullName: Avalonia.Xaml.Interactivity.Behavior.AssociatedObject
+- uid: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.OnAttached
+  commentId: M:Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.OnAttached
+  parent: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}
+  definition: Avalonia.Xaml.Interactivity.Behavior`1.OnAttached
+  name: OnAttached()
+  nameWithType: Behavior<TextBox>.OnAttached()
+  fullName: Avalonia.Xaml.Interactivity.Behavior<Avalonia.Controls.TextBox>.OnAttached()
+  nameWithType.vb: Behavior(Of TextBox).OnAttached()
+  fullName.vb: Avalonia.Xaml.Interactivity.Behavior(Of Avalonia.Controls.TextBox).OnAttached()
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.OnAttached
+    name: OnAttached
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior{Avalonia.Controls.TextBox}.OnAttached
+    name: OnAttached
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached*
+  commentId: Overload:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached
+  href: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.html#SearchAThing_OpenGL_GUI_LostFocusUpdateBindingBehavior_OnAttached
+  name: OnAttached
+  nameWithType: LostFocusUpdateBindingBehavior.OnAttached
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnAttached
+- uid: Avalonia.Xaml.Interactivity.Behavior`1.OnAttached
+  commentId: M:Avalonia.Xaml.Interactivity.Behavior`1.OnAttached
+  isExternal: true
+  name: OnAttached()
+  nameWithType: Behavior<T>.OnAttached()
+  fullName: Avalonia.Xaml.Interactivity.Behavior<T>.OnAttached()
+  nameWithType.vb: Behavior(Of T).OnAttached()
+  fullName.vb: Avalonia.Xaml.Interactivity.Behavior(Of T).OnAttached()
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior`1.OnAttached
+    name: OnAttached
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior`1.OnAttached
+    name: OnAttached
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Avalonia.Xaml.Interactivity.Behavior.OnDetaching
+  commentId: M:Avalonia.Xaml.Interactivity.Behavior.OnDetaching
+  parent: Avalonia.Xaml.Interactivity.Behavior
+  isExternal: true
+  name: OnDetaching()
+  nameWithType: Behavior.OnDetaching()
+  fullName: Avalonia.Xaml.Interactivity.Behavior.OnDetaching()
+  spec.csharp:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.OnDetaching
+    name: OnDetaching
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Avalonia.Xaml.Interactivity.Behavior.OnDetaching
+    name: OnDetaching
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching*
+  commentId: Overload:SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching
+  href: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.html#SearchAThing_OpenGL_GUI_LostFocusUpdateBindingBehavior_OnDetaching
+  name: OnDetaching
+  nameWithType: LostFocusUpdateBindingBehavior.OnDetaching
+  fullName: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.OnDetaching

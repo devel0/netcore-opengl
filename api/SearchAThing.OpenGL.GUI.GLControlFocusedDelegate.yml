@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.GLControlFocusedDelegate
+  commentId: T:SearchAThing.OpenGL.GUI.GLControlFocusedDelegate
+  id: GLControlFocusedDelegate
+  parent: SearchAThing.OpenGL.GUI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GLControlFocusedDelegate
+  nameWithType: GLControlFocusedDelegate
+  fullName: SearchAThing.OpenGL.GUI.GLControlFocusedDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/gui/Views/GLWindow.axaml.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLControlFocusedDelegate
+    path: src/gui/Views/GLWindow.axaml.cs
+    startLine: 24
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Delegate used by the <xref href="SearchAThing.OpenGL.GUI.GLWindow" data-throw-if-not-resolved="false"></xref> to customize action following change of focused gl control.
+  example: []
+  syntax:
+    content: public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, AvaloniaGLControl avaloniaGLControl, bool isInitial)
+    parameters:
+    - id: glSplit
+      type: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+      description: Gl split reference.
+    - id: avaloniaGLControl
+      type: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+      description: Focused avalonia gl control.
+    - id: isInitial
+      type: System.Boolean
+      description: True if this is the first-est focused control of the gl split.
+    content.vb: Public Delegate Sub GLControlFocusedDelegate(glSplit As AvaloniaGLControlSplit, avaloniaGLControl As AvaloniaGLControl, isInitial As Boolean)
+references:
+- uid: SearchAThing.OpenGL.GUI.GLWindow
+  commentId: T:SearchAThing.OpenGL.GUI.GLWindow
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.GLWindow.html
+  name: GLWindow
+  nameWithType: GLWindow
+  fullName: SearchAThing.OpenGL.GUI.GLWindow
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+  commentId: T:SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html
+  name: AvaloniaGLControlSplit
+  nameWithType: AvaloniaGLControlSplit
+  fullName: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+- uid: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+  commentId: T:SearchAThing.OpenGL.GUI.AvaloniaGLControl
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.AvaloniaGLControl.html
+  name: AvaloniaGLControl
+  nameWithType: AvaloniaGLControl
+  fullName: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

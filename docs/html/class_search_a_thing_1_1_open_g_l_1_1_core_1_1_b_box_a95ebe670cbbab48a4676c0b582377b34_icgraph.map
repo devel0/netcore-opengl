@@ -1,4 +1,0 @@
-<map id="Intersects" name="Intersects">
-<area shape="rect" id="node1" title="Test if this bbox and the other given intersects." alt="" coords="256,13,343,38"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a850e8828c2fa2c12dad7ee543004674e" title="Retrieve intersection segment if exists between given two triangles." alt="" coords="5,5,208,45"/>
-</map>

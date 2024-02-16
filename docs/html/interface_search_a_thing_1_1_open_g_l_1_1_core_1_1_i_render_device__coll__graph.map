@@ -1,4 +1,0 @@
-<map id="IRenderDevice" name="IRenderDevice">
-<area shape="rect" id="node1" title="A render device will read pixels from given gl context through ReadPixels and write to an appropriate..." alt="" coords="35,79,153,104"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,183,31"/>
-</map>

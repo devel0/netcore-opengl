@@ -1,0 +1,966 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend
+  commentId: T:SearchAThing.OpenGL.Shapes.ContourLegend
+  id: ContourLegend
+  parent: SearchAThing.OpenGL.Shapes
+  children:
+  - SearchAThing.OpenGL.Shapes.ContourLegend.#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.Int32,System.Double,System.Double,System.Single,System.Single,SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate,System.Boolean)
+  - SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize
+  - SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+  - SearchAThing.OpenGL.Shapes.ContourLegend.Divisions
+  - SearchAThing.OpenGL.Shapes.ContourLegend.Figures
+  - SearchAThing.OpenGL.Shapes.ContourLegend.GLContext
+  - SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue
+  - SearchAThing.OpenGL.Shapes.ContourLegend.MinValue
+  - SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight
+  - SearchAThing.OpenGL.Shapes.ContourLegend.Title
+  - SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground
+  langs:
+  - csharp
+  - vb
+  name: ContourLegend
+  nameWithType: ContourLegend
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend
+  type: Class
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ContourLegend
+    path: src/shapes/ContourLegend.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Contour Legend
+  example: []
+  syntax:
+    content: public class ContourLegend
+    content.vb: Public Class ContourLegend
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.GLContext
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.GLContext
+  id: GLContext
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: GLContext
+  nameWithType: ContourLegend.GLContext
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.GLContext
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLContext
+    path: src/shapes/ContourLegend.cs
+    startLine: 19
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: GL context ( used to make text )
+  example: []
+  syntax:
+    content: public GLContext GLContext { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLContext
+    content.vb: Public Property GLContext As GLContext
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.GLContext*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.Title
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.Title
+  id: Title
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: ContourLegend.Title
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.Title
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Title
+    path: src/shapes/ContourLegend.cs
+    startLine: 24
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Title of contour legend.
+  example: []
+  syntax:
+    content: public string Title { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.Title*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.Divisions
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.Divisions
+  id: Divisions
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: Divisions
+  nameWithType: ContourLegend.Divisions
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.Divisions
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Divisions
+    path: src/shapes/ContourLegend.cs
+    startLine: 31
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: >-
+    Number of legend blocks to represent.<br />
+
+    Lower bound (MinValue) extends through given division toward upper bound (MaxValue)
+
+    displaying intermediate values aside colored block legend rectangle.
+  example: []
+  syntax:
+    content: public int Divisions { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Divisions As Integer
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.Divisions*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.MinValue
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.MinValue
+  id: MinValue
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: ContourLegend.MinValue
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.MinValue
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MinValue
+    path: src/shapes/ContourLegend.cs
+    startLine: 36
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Minimum value of contour.
+  example: []
+  syntax:
+    content: public double MinValue { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MinValue As Double
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.MinValue*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue
+  id: MaxValue
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: ContourLegend.MaxValue
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MaxValue
+    path: src/shapes/ContourLegend.cs
+    startLine: 41
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Maximum value of contour.
+  example: []
+  syntax:
+    content: public double MaxValue { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MaxValue As Double
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight
+  id: TextHeight
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: TextHeight
+  nameWithType: ContourLegend.TextHeight
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TextHeight
+    path: src/shapes/ContourLegend.cs
+    startLine: 46
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Text height.
+  example: []
+  syntax:
+    content: public float TextHeight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property TextHeight As Single
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize
+  id: ContourBlockSize
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: ContourBlockSize
+  nameWithType: ContourLegend.ContourBlockSize
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ContourBlockSize
+    path: src/shapes/ContourLegend.cs
+    startLine: 51
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Size of contour legend squared block.
+  example: []
+  syntax:
+    content: public float ContourBlockSize { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property ContourBlockSize As Single
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+  id: CustomLegendLabel
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: CustomLegendLabel
+  nameWithType: ContourLegend.CustomLegendLabel
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: CustomLegendLabel
+    path: src/shapes/ContourLegend.cs
+    startLine: 57
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: >-
+    If not null a function that will invoked to generate legend labels.<br />
+
+    args:(int index, double val) (Default:null).
+  example: []
+  syntax:
+    content: public CustomLegendLabelDelegate? CustomLegendLabel { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+    content.vb: Public Property CustomLegendLabel As CustomLegendLabelDelegate
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground
+  id: UseFigureBackground
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: UseFigureBackground
+  nameWithType: ContourLegend.UseFigureBackground
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground
+  type: Property
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UseFigureBackground
+    path: src/shapes/ContourLegend.cs
+    startLine: 62
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: If true a black (alpha:100f/255) coloured background is placed under legend bbox.
+  example: []
+  syntax:
+    content: public bool UseFigureBackground { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseFigureBackground As Boolean
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground*
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.Int32,System.Double,System.Double,System.Single,System.Single,SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Shapes.ContourLegend.#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.Int32,System.Double,System.Double,System.Single,System.Single,SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate,System.Boolean)
+  id: '#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.Int32,System.Double,System.Double,System.Single,System.Single,SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate,System.Boolean)'
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: ContourLegend(GLContext, string, int, double, double, float, float, CustomLegendLabelDelegate?, bool)
+  nameWithType: ContourLegend.ContourLegend(GLContext, string, int, double, double, float, float, CustomLegendLabelDelegate?, bool)
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.ContourLegend(SearchAThing.OpenGL.Core.GLContext, string, int, double, double, float, float, SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate?, bool)
+  type: Constructor
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/shapes/ContourLegend.cs
+    startLine: 79
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Create a set of figures that represents a contour legend.<br />
+  example: []
+  syntax:
+    content: public ContourLegend(GLContext glContext, string title, int divisions, double minVal, double maxVal, float textHeight = 20, float contourBlockSize = 10, CustomLegendLabelDelegate? customLegendLabel = null, bool useFigureBackground = true)
+    parameters:
+    - id: glContext
+      type: SearchAThing.OpenGL.Core.GLContext
+      description: GL context ( used to make text )
+    - id: title
+      type: System.String
+      description: Title of contour legend.
+    - id: divisions
+      type: System.Int32
+      description: >-
+        Number of legend blocks to represent.<br />
+            Lower bound (MinValue) extends through given division toward upper bound (MaxValue)
+            displaying intermediate values aside colored block legend rectangle.
+    - id: minVal
+      type: System.Double
+      description: Minimum value of contour.
+    - id: maxVal
+      type: System.Double
+      description: Maximum value of contour.
+    - id: textHeight
+      type: System.Single
+      description: Text height.
+    - id: contourBlockSize
+      type: System.Single
+      description: Size of contour legend squared block.
+    - id: customLegendLabel
+      type: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+      description: >-
+        If not null a function that will invoked to generate legend labels.<br />
+            args:(int offset, double val) (Default:null).
+    - id: useFigureBackground
+      type: System.Boolean
+      description: If true a black (alpha:100f/255) coloured background is placed under legend bbox.
+    content.vb: Public Sub New(glContext As GLContext, title As String, divisions As Integer, minVal As Double, maxVal As Double, textHeight As Single = 20, contourBlockSize As Single = 10, customLegendLabel As CustomLegendLabelDelegate = Nothing, useFigureBackground As Boolean = True)
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.#ctor*
+  nameWithType.vb: ContourLegend.New(GLContext, String, Integer, Double, Double, Single, Single, CustomLegendLabelDelegate, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Shapes.ContourLegend.New(SearchAThing.OpenGL.Core.GLContext, String, Integer, Double, Double, Single, Single, SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate, Boolean)
+  name.vb: New(GLContext, String, Integer, Double, Double, Single, Single, CustomLegendLabelDelegate, Boolean)
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.Figures
+  commentId: M:SearchAThing.OpenGL.Shapes.ContourLegend.Figures
+  id: Figures
+  parent: SearchAThing.OpenGL.Shapes.ContourLegend
+  langs:
+  - csharp
+  - vb
+  name: Figures()
+  nameWithType: ContourLegend.Figures()
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.Figures()
+  type: Method
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Figures
+    path: src/shapes/ContourLegend.cs
+    startLine: 99
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Retrieve list of figures that represent the contour legend [screen].
+  example: []
+  syntax:
+    content: public List<GLFigureBase> Figures()
+    return:
+      type: System.Collections.Generic.List{SearchAThing.OpenGL.Core.GLFigureBase}
+    content.vb: Public Function Figures() As List(Of GLFigureBase)
+  overload: SearchAThing.OpenGL.Shapes.ContourLegend.Figures*
+references:
+- uid: SearchAThing.OpenGL.Shapes
+  commentId: N:SearchAThing.OpenGL.Shapes
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Shapes
+  nameWithType: SearchAThing.OpenGL.Shapes
+  fullName: SearchAThing.OpenGL.Shapes
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.GLContext*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.GLContext
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_GLContext
+  name: GLContext
+  nameWithType: ContourLegend.GLContext
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.GLContext
+- uid: SearchAThing.OpenGL.Core.GLContext
+  commentId: T:SearchAThing.OpenGL.Core.GLContext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLContext.html
+  name: GLContext
+  nameWithType: GLContext
+  fullName: SearchAThing.OpenGL.Core.GLContext
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.Title*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.Title
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_Title
+  name: Title
+  nameWithType: ContourLegend.Title
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.Title
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.Divisions*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.Divisions
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_Divisions
+  name: Divisions
+  nameWithType: ContourLegend.Divisions
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.Divisions
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.MinValue*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.MinValue
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_MinValue
+  name: MinValue
+  nameWithType: ContourLegend.MinValue
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.MinValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_MaxValue
+  name: MaxValue
+  nameWithType: ContourLegend.MaxValue
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.MaxValue
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_TextHeight
+  name: TextHeight
+  nameWithType: ContourLegend.TextHeight
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.TextHeight
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_ContourBlockSize
+  name: ContourBlockSize
+  nameWithType: ContourLegend.ContourBlockSize
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.ContourBlockSize
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_CustomLegendLabel
+  name: CustomLegendLabel
+  nameWithType: ContourLegend.CustomLegendLabel
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+- uid: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  commentId: T:SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  parent: SearchAThing.OpenGL.Shapes
+  href: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate.html
+  name: CustomLegendLabelDelegate
+  nameWithType: CustomLegendLabelDelegate
+  fullName: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_UseFigureBackground
+  name: UseFigureBackground
+  nameWithType: ContourLegend.UseFigureBackground
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.UseFigureBackground
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.#ctor
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend__ctor_SearchAThing_OpenGL_Core_GLContext_System_String_System_Int32_System_Double_System_Double_System_Single_System_Single_SearchAThing_OpenGL_Shapes_CustomLegendLabelDelegate_System_Boolean_
+  name: ContourLegend
+  nameWithType: ContourLegend.ContourLegend
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.ContourLegend
+  nameWithType.vb: ContourLegend.New
+  fullName.vb: SearchAThing.OpenGL.Shapes.ContourLegend.New
+  name.vb: New
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.Figures*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.ContourLegend.Figures
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_Figures
+  name: Figures
+  nameWithType: ContourLegend.Figures
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.Figures
+- uid: System.Collections.Generic.List{SearchAThing.OpenGL.Core.GLFigureBase}
+  commentId: T:System.Collections.Generic.List{SearchAThing.OpenGL.Core.GLFigureBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<GLFigureBase>
+  nameWithType: List<GLFigureBase>
+  fullName: System.Collections.Generic.List<SearchAThing.OpenGL.Core.GLFigureBase>
+  nameWithType.vb: List(Of GLFigureBase)
+  fullName.vb: System.Collections.Generic.List(Of SearchAThing.OpenGL.Core.GLFigureBase)
+  name.vb: List(Of GLFigureBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

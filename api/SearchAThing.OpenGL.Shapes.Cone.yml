@@ -1,0 +1,895 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Shapes.Cone
+  commentId: T:SearchAThing.OpenGL.Shapes.Cone
+  id: Cone
+  parent: SearchAThing.OpenGL.Shapes
+  children:
+  - SearchAThing.OpenGL.Shapes.Cone.#ctor(System.Numerics.Matrix4x4@,System.Single,System.Single,System.Single,System.Boolean,System.Boolean)
+  - SearchAThing.OpenGL.Shapes.Cone.BaseCS
+  - SearchAThing.OpenGL.Shapes.Cone.BaseRadius
+  - SearchAThing.OpenGL.Shapes.Cone.BottomCap
+  - SearchAThing.OpenGL.Shapes.Cone.Figure(System.Int32)
+  - SearchAThing.OpenGL.Shapes.Cone.Height
+  - SearchAThing.OpenGL.Shapes.Cone.TopCap
+  - SearchAThing.OpenGL.Shapes.Cone.TopRadius
+  - SearchAThing.OpenGL.Shapes.Cone.Triangles(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Cone
+  nameWithType: Cone
+  fullName: SearchAThing.OpenGL.Shapes.Cone
+  type: Class
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Cone
+    path: src/shapes/Cone.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Cone, truncated cone or pyramid shape.
+  example: []
+  syntax:
+    content: public class Cone
+    content.vb: Public Class Cone
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Shapes.Cone.BaseCS
+  commentId: P:SearchAThing.OpenGL.Shapes.Cone.BaseCS
+  id: BaseCS
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: BaseCS
+  nameWithType: Cone.BaseCS
+  fullName: SearchAThing.OpenGL.Shapes.Cone.BaseCS
+  type: Property
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BaseCS
+    path: src/shapes/Cone.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Coordinate system of the cone base.
+  example: []
+  syntax:
+    content: public Matrix4x4 BaseCS { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Matrix4x4
+    content.vb: Public Property BaseCS As Matrix4x4
+  overload: SearchAThing.OpenGL.Shapes.Cone.BaseCS*
+- uid: SearchAThing.OpenGL.Shapes.Cone.BaseRadius
+  commentId: P:SearchAThing.OpenGL.Shapes.Cone.BaseRadius
+  id: BaseRadius
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: BaseRadius
+  nameWithType: Cone.BaseRadius
+  fullName: SearchAThing.OpenGL.Shapes.Cone.BaseRadius
+  type: Property
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BaseRadius
+    path: src/shapes/Cone.cs
+    startLine: 18
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Base radius of the cone.
+  example: []
+  syntax:
+    content: public float BaseRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property BaseRadius As Single
+  overload: SearchAThing.OpenGL.Shapes.Cone.BaseRadius*
+- uid: SearchAThing.OpenGL.Shapes.Cone.TopRadius
+  commentId: P:SearchAThing.OpenGL.Shapes.Cone.TopRadius
+  id: TopRadius
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: TopRadius
+  nameWithType: Cone.TopRadius
+  fullName: SearchAThing.OpenGL.Shapes.Cone.TopRadius
+  type: Property
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopRadius
+    path: src/shapes/Cone.cs
+    startLine: 24
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Top radius of the cone.
+  example: []
+  syntax:
+    content: public float TopRadius { get; }
+    parameters: []
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Public Property TopRadius As Single
+  overload: SearchAThing.OpenGL.Shapes.Cone.TopRadius*
+- uid: SearchAThing.OpenGL.Shapes.Cone.Height
+  commentId: P:SearchAThing.OpenGL.Shapes.Cone.Height
+  id: Height
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Cone.Height
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Height
+  type: Property
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Height
+    path: src/shapes/Cone.cs
+    startLine: 29
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Height of the cone.
+  example: []
+  syntax:
+    content: public float Height { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Height As Single
+  overload: SearchAThing.OpenGL.Shapes.Cone.Height*
+- uid: SearchAThing.OpenGL.Shapes.Cone.BottomCap
+  commentId: P:SearchAThing.OpenGL.Shapes.Cone.BottomCap
+  id: BottomCap
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: BottomCap
+  nameWithType: Cone.BottomCap
+  fullName: SearchAThing.OpenGL.Shapes.Cone.BottomCap
+  type: Property
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomCap
+    path: src/shapes/Cone.cs
+    startLine: 34
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: 'If true figure include bottom closure (Default: true).'
+  example: []
+  syntax:
+    content: public bool BottomCap { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property BottomCap As Boolean
+  overload: SearchAThing.OpenGL.Shapes.Cone.BottomCap*
+- uid: SearchAThing.OpenGL.Shapes.Cone.TopCap
+  commentId: P:SearchAThing.OpenGL.Shapes.Cone.TopCap
+  id: TopCap
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: TopCap
+  nameWithType: Cone.TopCap
+  fullName: SearchAThing.OpenGL.Shapes.Cone.TopCap
+  type: Property
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopCap
+    path: src/shapes/Cone.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: 'If true figure include top closure (Default: true).'
+  example: []
+  syntax:
+    content: public bool TopCap { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property TopCap As Boolean
+  overload: SearchAThing.OpenGL.Shapes.Cone.TopCap*
+- uid: SearchAThing.OpenGL.Shapes.Cone.#ctor(System.Numerics.Matrix4x4@,System.Single,System.Single,System.Single,System.Boolean,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Shapes.Cone.#ctor(System.Numerics.Matrix4x4@,System.Single,System.Single,System.Single,System.Boolean,System.Boolean)
+  id: '#ctor(System.Numerics.Matrix4x4@,System.Single,System.Single,System.Single,System.Boolean,System.Boolean)'
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: Cone(in Matrix4x4, float, float, float, bool, bool)
+  nameWithType: Cone.Cone(in Matrix4x4, float, float, float, bool, bool)
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Cone(in System.Numerics.Matrix4x4, float, float, float, bool, bool)
+  type: Constructor
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/shapes/Cone.cs
+    startLine: 53
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: >-
+    Create a:<br />
+
+    - Truncated cone ( if topRadius smaller than baseRadius ).<br />
+
+    - Pyramic ( if topRadius equals zero ).<br />
+
+    - Cone ( if baseRadius == topRadius ).<br />
+  example: []
+  syntax:
+    content: public Cone(in Matrix4x4 baseCS, float baseRadius, float topRadius, float height, bool bottomCap = true, bool topCap = true)
+    parameters:
+    - id: baseCS
+      type: System.Numerics.Matrix4x4
+      description: Coordinate system of the cone base.
+    - id: baseRadius
+      type: System.Single
+      description: Base radius of the cone.
+    - id: topRadius
+      type: System.Single
+      description: Top radius of the cone.
+    - id: height
+      type: System.Single
+      description: Height of the cone.
+    - id: bottomCap
+      type: System.Boolean
+      description: If true figure include bottom cap (Default:true).
+    - id: topCap
+      type: System.Boolean
+      description: If true figure include top cap (Default:true).
+    content.vb: Public Sub New(baseCS As Matrix4x4, baseRadius As Single, topRadius As Single, height As Single, bottomCap As Boolean = True, topCap As Boolean = True)
+  overload: SearchAThing.OpenGL.Shapes.Cone.#ctor*
+  nameWithType.vb: Cone.New(Matrix4x4, Single, Single, Single, Boolean, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Shapes.Cone.New(System.Numerics.Matrix4x4, Single, Single, Single, Boolean, Boolean)
+  name.vb: New(Matrix4x4, Single, Single, Single, Boolean, Boolean)
+- uid: SearchAThing.OpenGL.Shapes.Cone.Figure(System.Int32)
+  commentId: M:SearchAThing.OpenGL.Shapes.Cone.Figure(System.Int32)
+  id: Figure(System.Int32)
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: Figure(int)
+  nameWithType: Cone.Figure(int)
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Figure(int)
+  type: Method
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Figure
+    path: src/shapes/Cone.cs
+    startLine: 68
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Gl triangle figure that represents the cone.
+  example: []
+  syntax:
+    content: public GLTriangleFigure Figure(int divisions = 8)
+    parameters:
+    - id: divisions
+      type: System.Int32
+      description: Number of divisions to refine the figure. (Min:4)
+    return:
+      type: SearchAThing.OpenGL.Core.GLTriangleFigure
+    content.vb: Public Function Figure(divisions As Integer = 8) As GLTriangleFigure
+  overload: SearchAThing.OpenGL.Shapes.Cone.Figure*
+  nameWithType.vb: Cone.Figure(Integer)
+  fullName.vb: SearchAThing.OpenGL.Shapes.Cone.Figure(Integer)
+  name.vb: Figure(Integer)
+- uid: SearchAThing.OpenGL.Shapes.Cone.Triangles(System.Int32)
+  commentId: M:SearchAThing.OpenGL.Shapes.Cone.Triangles(System.Int32)
+  id: Triangles(System.Int32)
+  parent: SearchAThing.OpenGL.Shapes.Cone
+  langs:
+  - csharp
+  - vb
+  name: Triangles(int)
+  nameWithType: Cone.Triangles(int)
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Triangles(int)
+  type: Method
+  source:
+    remote:
+      path: src/shapes/Cone.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Triangles
+    path: src/shapes/Cone.cs
+    startLine: 79
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Gl triangles that represents the cone.
+  example: []
+  syntax:
+    content: public IEnumerable<GLTriangle> Triangles(int divisions)
+    parameters:
+    - id: divisions
+      type: System.Int32
+      description: Number of divisions to refine the figure. (Min:4)
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle}
+    content.vb: Public Function Triangles(divisions As Integer) As IEnumerable(Of GLTriangle)
+  overload: SearchAThing.OpenGL.Shapes.Cone.Triangles*
+  nameWithType.vb: Cone.Triangles(Integer)
+  fullName.vb: SearchAThing.OpenGL.Shapes.Cone.Triangles(Integer)
+  name.vb: Triangles(Integer)
+references:
+- uid: SearchAThing.OpenGL.Shapes
+  commentId: N:SearchAThing.OpenGL.Shapes
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Shapes
+  nameWithType: SearchAThing.OpenGL.Shapes
+  fullName: SearchAThing.OpenGL.Shapes
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Shapes.Cone.BaseCS*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.BaseCS
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_BaseCS
+  name: BaseCS
+  nameWithType: Cone.BaseCS
+  fullName: SearchAThing.OpenGL.Shapes.Cone.BaseCS
+- uid: System.Numerics.Matrix4x4
+  commentId: T:System.Numerics.Matrix4x4
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: System.Numerics.Matrix4x4
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: SearchAThing.OpenGL.Shapes.Cone.BaseRadius*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.BaseRadius
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_BaseRadius
+  name: BaseRadius
+  nameWithType: Cone.BaseRadius
+  fullName: SearchAThing.OpenGL.Shapes.Cone.BaseRadius
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SearchAThing.OpenGL.Shapes.Cone.TopRadius*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.TopRadius
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_TopRadius
+  name: TopRadius
+  nameWithType: Cone.TopRadius
+  fullName: SearchAThing.OpenGL.Shapes.Cone.TopRadius
+- uid: SearchAThing.OpenGL.Shapes.Cone.Height*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.Height
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_Height
+  name: Height
+  nameWithType: Cone.Height
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Height
+- uid: SearchAThing.OpenGL.Shapes.Cone.BottomCap*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.BottomCap
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_BottomCap
+  name: BottomCap
+  nameWithType: Cone.BottomCap
+  fullName: SearchAThing.OpenGL.Shapes.Cone.BottomCap
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Shapes.Cone.TopCap*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.TopCap
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_TopCap
+  name: TopCap
+  nameWithType: Cone.TopCap
+  fullName: SearchAThing.OpenGL.Shapes.Cone.TopCap
+- uid: SearchAThing.OpenGL.Shapes.Cone.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.#ctor
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone__ctor_System_Numerics_Matrix4x4__System_Single_System_Single_System_Single_System_Boolean_System_Boolean_
+  name: Cone
+  nameWithType: Cone.Cone
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Cone
+  nameWithType.vb: Cone.New
+  fullName.vb: SearchAThing.OpenGL.Shapes.Cone.New
+  name.vb: New
+- uid: SearchAThing.OpenGL.Shapes.Cone.Figure*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.Figure
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_Figure_System_Int32_
+  name: Figure
+  nameWithType: Cone.Figure
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Figure
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Core.GLTriangleFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLTriangleFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTriangleFigure.html
+  name: GLTriangleFigure
+  nameWithType: GLTriangleFigure
+  fullName: SearchAThing.OpenGL.Core.GLTriangleFigure
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Shapes.Cone.Triangles*
+  commentId: Overload:SearchAThing.OpenGL.Shapes.Cone.Triangles
+  href: SearchAThing.OpenGL.Shapes.Cone.html#SearchAThing_OpenGL_Shapes_Cone_Triangles_System_Int32_
+  name: Triangles
+  nameWithType: Cone.Triangles
+  fullName: SearchAThing.OpenGL.Shapes.Cone.Triangles
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLTriangle>
+  nameWithType: IEnumerable<GLTriangle>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLTriangle>
+  nameWithType.vb: IEnumerable(Of GLTriangle)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLTriangle)
+  name.vb: IEnumerable(Of GLTriangle)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLTriangle
+    name: GLTriangle
+    href: SearchAThing.OpenGL.Core.GLTriangle.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLTriangle
+    name: GLTriangle
+    href: SearchAThing.OpenGL.Core.GLTriangle.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

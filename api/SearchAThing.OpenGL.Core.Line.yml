@@ -1,0 +1,1593 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.Line
+  commentId: T:SearchAThing.OpenGL.Core.Line
+  id: Line
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.Line.Contains(System.Single,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Boolean)
+  - SearchAThing.OpenGL.Core.Line.From
+  - SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  - SearchAThing.OpenGL.Core.Line.Intersect(System.Numerics.Matrix4x4@)
+  - SearchAThing.OpenGL.Core.Line.Intersect(System.Single,SearchAThing.OpenGL.Core.Line@,System.Single@,System.Boolean,System.Boolean)
+  - SearchAThing.OpenGL.Core.Line.Length
+  - SearchAThing.OpenGL.Core.Line.MidPoint
+  - SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  - SearchAThing.OpenGL.Core.Line.Scale(System.Numerics.Vector3@,System.Single)
+  - SearchAThing.OpenGL.Core.Line.To
+  - SearchAThing.OpenGL.Core.Line.ToString
+  - SearchAThing.OpenGL.Core.Line.V
+  langs:
+  - csharp
+  - vb
+  name: Line
+  nameWithType: Line
+  fullName: SearchAThing.OpenGL.Core.Line
+  type: Class
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Line
+    path: src/core/geom/Line.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Geometric entity 3d line.<br />
+
+    Internally encoded as <xref href="SearchAThing.OpenGL.Core.Line.From" data-throw-if-not-resolved="false"></xref> and <xref href="SearchAThing.OpenGL.Core.Line.V" data-throw-if-not-resolved="false"></xref> vectors, where <xref href="SearchAThing.OpenGL.Core.Line.To" data-throw-if-not-resolved="false"></xref> = From + V.<br />
+
+    Can be created through static methods <xref href="SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40)" data-throw-if-not-resolved="false"></xref> and <xref href="SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public class Line
+    content.vb: Public Class Line
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.Intersect(System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+  - SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.ToGLLine(System.Drawing.Color@,System.Drawing.Color@)
+  - SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.ToGLLine(System.Nullable{System.Drawing.Color}@)
+  - SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.ToLine3D
+  - SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.Transform(System.Numerics.Matrix4x4@)
+- uid: SearchAThing.OpenGL.Core.Line.From
+  commentId: P:SearchAThing.OpenGL.Core.Line.From
+  id: From
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: From
+  nameWithType: Line.From
+  fullName: SearchAThing.OpenGL.Core.Line.From
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: From
+    path: src/core/geom/Line.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Coordinate "from" of the line.
+  example: []
+  syntax:
+    content: public Vector3 From { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property From As Vector3
+  overload: SearchAThing.OpenGL.Core.Line.From*
+- uid: SearchAThing.OpenGL.Core.Line.V
+  commentId: P:SearchAThing.OpenGL.Core.Line.V
+  id: V
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: V
+  nameWithType: Line.V
+  fullName: SearchAThing.OpenGL.Core.Line.V
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: V
+    path: src/core/geom/Line.cs
+    startLine: 18
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Vector extension of the line so that To = From + V.<br />
+  example: []
+  syntax:
+    content: public Vector3 V { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property V As Vector3
+  overload: SearchAThing.OpenGL.Core.Line.V*
+- uid: SearchAThing.OpenGL.Core.Line.To
+  commentId: P:SearchAThing.OpenGL.Core.Line.To
+  id: To
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: To
+  nameWithType: Line.To
+  fullName: SearchAThing.OpenGL.Core.Line.To
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: To
+    path: src/core/geom/Line.cs
+    startLine: 23
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Coordinate "to" of the line.
+  example: []
+  syntax:
+    content: public Vector3 To { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public ReadOnly Property [To] As Vector3
+  overload: SearchAThing.OpenGL.Core.Line.To*
+- uid: SearchAThing.OpenGL.Core.Line.MidPoint
+  commentId: P:SearchAThing.OpenGL.Core.Line.MidPoint
+  id: MidPoint
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: MidPoint
+  nameWithType: Line.MidPoint
+  fullName: SearchAThing.OpenGL.Core.Line.MidPoint
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MidPoint
+    path: src/core/geom/Line.cs
+    startLine: 28
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Line midpoint as (From + To) / 2.
+  example: []
+  syntax:
+    content: public Vector3 MidPoint { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public ReadOnly Property MidPoint As Vector3
+  overload: SearchAThing.OpenGL.Core.Line.MidPoint*
+- uid: SearchAThing.OpenGL.Core.Line.Length
+  commentId: P:SearchAThing.OpenGL.Core.Line.Length
+  id: Length
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: Line.Length
+  fullName: SearchAThing.OpenGL.Core.Line.Length
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Length
+    path: src/core/geom/Line.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Length of the line segment.
+  example: []
+  syntax:
+    content: public float Length { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Length As Single
+  overload: SearchAThing.OpenGL.Core.Line.Length*
+- uid: SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  commentId: M:SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  id: FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: FromTo(in Vector3, in Vector3)
+  nameWithType: Line.FromTo(in Vector3, in Vector3)
+  fullName: SearchAThing.OpenGL.Core.Line.FromTo(in System.Numerics.Vector3, in System.Numerics.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FromTo
+    path: src/core/geom/Line.cs
+    startLine: 46
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a line by two given points.
+  example: []
+  syntax:
+    content: public static Line FromTo(in Vector3 from, in Vector3 to)
+    parameters:
+    - id: from
+      type: System.Numerics.Vector3
+      description: From point.
+    - id: to
+      type: System.Numerics.Vector3
+      description: To point.
+    return:
+      type: SearchAThing.OpenGL.Core.Line
+    content.vb: Public Shared Function FromTo(from As Vector3, [to] As Vector3) As Line
+  overload: SearchAThing.OpenGL.Core.Line.FromTo*
+  nameWithType.vb: Line.FromTo(Vector3, Vector3)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3, System.Numerics.Vector3)
+  name.vb: FromTo(Vector3, Vector3)
+- uid: SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  commentId: M:SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  id: PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: PointV(in Vector3, in Vector3)
+  nameWithType: Line.PointV(in Vector3, in Vector3)
+  fullName: SearchAThing.OpenGL.Core.Line.PointV(in System.Numerics.Vector3, in System.Numerics.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PointV
+    path: src/core/geom/Line.cs
+    startLine: 53
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a line by the from position and given extension.
+  example: []
+  syntax:
+    content: public static Line PointV(in Vector3 point, in Vector3 v)
+    parameters:
+    - id: point
+      type: System.Numerics.Vector3
+      description: From coordinate.
+    - id: v
+      type: System.Numerics.Vector3
+      description: Extension vector.
+    return:
+      type: SearchAThing.OpenGL.Core.Line
+    content.vb: Public Shared Function PointV(point As Vector3, v As Vector3) As Line
+  overload: SearchAThing.OpenGL.Core.Line.PointV*
+  nameWithType.vb: Line.PointV(Vector3, Vector3)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3, System.Numerics.Vector3)
+  name.vb: PointV(Vector3, Vector3)
+- uid: SearchAThing.OpenGL.Core.Line.Scale(System.Numerics.Vector3@,System.Single)
+  commentId: M:SearchAThing.OpenGL.Core.Line.Scale(System.Numerics.Vector3@,System.Single)
+  id: Scale(System.Numerics.Vector3@,System.Single)
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: Scale(in Vector3, float)
+  nameWithType: Line.Scale(in Vector3, float)
+  fullName: SearchAThing.OpenGL.Core.Line.Scale(in System.Numerics.Vector3, float)
+  type: Method
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Scale
+    path: src/core/geom/Line.cs
+    startLine: 61
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a new line by scaling from, to coordinates respect the given reference point and scale factor.
+  example: []
+  syntax:
+    content: public Line Scale(in Vector3 refpt, float factor)
+    parameters:
+    - id: refpt
+      type: System.Numerics.Vector3
+      description: Reference point.
+    - id: factor
+      type: System.Single
+      description: Scale factor.
+    return:
+      type: SearchAThing.OpenGL.Core.Line
+      description: Scaled line.
+    content.vb: Public Function Scale(refpt As Vector3, factor As Single) As Line
+  overload: SearchAThing.OpenGL.Core.Line.Scale*
+  nameWithType.vb: Line.Scale(Vector3, Single)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.Scale(System.Numerics.Vector3, Single)
+  name.vb: Scale(Vector3, Single)
+- uid: SearchAThing.OpenGL.Core.Line.Intersect(System.Numerics.Matrix4x4@)
+  commentId: M:SearchAThing.OpenGL.Core.Line.Intersect(System.Numerics.Matrix4x4@)
+  id: Intersect(System.Numerics.Matrix4x4@)
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: Intersect(in Matrix4x4)
+  nameWithType: Line.Intersect(in Matrix4x4)
+  fullName: SearchAThing.OpenGL.Core.Line.Intersect(in System.Numerics.Matrix4x4)
+  type: Method
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Intersect
+    path: src/core/geom/Line.cs
+    startLine: 72
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Test if this line intersect given plane and retrieve intersection point or null if no intersect.
+  remarks: 'References: https://en.wikipedia.org/wiki/Line%E2%80%93plane_intersection'
+  example: []
+  syntax:
+    content: public Vector3? Intersect(in Matrix4x4 plane)
+    parameters:
+    - id: plane
+      type: System.Numerics.Matrix4x4
+      description: Plane to test line intersection with. ( <xref href="SearchAThing.OpenGL.Core.Toolkit.MakeCS(System.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40)" data-throw-if-not-resolved="false"></xref> to create planes )
+    return:
+      type: System.Nullable{System.Numerics.Vector3}
+      description: Intersection point or null if no intersection found.
+    content.vb: Public Function Intersect(plane As Matrix4x4) As Vector3?
+  overload: SearchAThing.OpenGL.Core.Line.Intersect*
+  nameWithType.vb: Line.Intersect(Matrix4x4)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.Intersect(System.Numerics.Matrix4x4)
+  name.vb: Intersect(Matrix4x4)
+- uid: SearchAThing.OpenGL.Core.Line.Intersect(System.Single,SearchAThing.OpenGL.Core.Line@,System.Single@,System.Boolean,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Line.Intersect(System.Single,SearchAThing.OpenGL.Core.Line@,System.Single@,System.Boolean,System.Boolean)
+  id: Intersect(System.Single,SearchAThing.OpenGL.Core.Line@,System.Single@,System.Boolean,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: Intersect(float, in Line, out float, bool, bool)
+  nameWithType: Line.Intersect(float, in Line, out float, bool, bool)
+  fullName: SearchAThing.OpenGL.Core.Line.Intersect(float, in SearchAThing.OpenGL.Core.Line, out float, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Intersect
+    path: src/core/geom/Line.cs
+    startLine: 96
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Intresect this line to the given other.
+  example: []
+  syntax:
+    content: public Vector3? Intersect(float tol, in Line other, out float dst, bool thisAsSegment = false, bool otherAsSegment = false)
+    parameters:
+    - id: tol
+      type: System.Single
+      description: Length tolerance comparision.
+    - id: other
+      type: SearchAThing.OpenGL.Core.Line
+      description: Other line.
+    - id: dst
+      type: System.Single
+      description: Distance between two intersecting lines.
+    - id: thisAsSegment
+      type: System.Boolean
+      description: Treat this line as a segment from,to.
+    - id: otherAsSegment
+      type: System.Boolean
+      description: Treat other line as a segment from,to.
+    return:
+      type: System.Nullable{System.Numerics.Vector3}
+      description: Intersection point or null if line parallel or no intersects.
+    content.vb: Public Function Intersect(tol As Single, other As Line, dst As Single, thisAsSegment As Boolean = False, otherAsSegment As Boolean = False) As Vector3?
+  overload: SearchAThing.OpenGL.Core.Line.Intersect*
+  nameWithType.vb: Line.Intersect(Single, Line, Single, Boolean, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.Intersect(Single, SearchAThing.OpenGL.Core.Line, Single, Boolean, Boolean)
+  name.vb: Intersect(Single, Line, Single, Boolean, Boolean)
+- uid: SearchAThing.OpenGL.Core.Line.Contains(System.Single,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Line.Contains(System.Single,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Boolean)
+  id: Contains(System.Single,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: Contains(float, in Vector3, out Vector3, bool)
+  nameWithType: Line.Contains(float, in Vector3, out Vector3, bool)
+  fullName: SearchAThing.OpenGL.Core.Line.Contains(float, in System.Numerics.Vector3, out System.Numerics.Vector3, bool)
+  type: Method
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Contains
+    path: src/core/geom/Line.cs
+    startLine: 130
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: States if this line contains given point within given tolerance.
+  example: []
+  syntax:
+    content: public float? Contains(float tol, in Vector3 p, out Vector3 prj, bool segmentMode = false)
+    parameters:
+    - id: tol
+      type: System.Single
+      description: Comparision tolerance.
+    - id: p
+      type: System.Numerics.Vector3
+      description: Point to test if its contained in this line.
+    - id: prj
+      type: System.Numerics.Vector3
+      description: Point projected onto this line.
+    - id: segmentMode
+      type: System.Boolean
+      description: 'If true line will treated as a segment ( Default: false ).'
+    return:
+      type: System.Nullable{System.Single}
+      description: Distance to projected point if contained under given tolerance, null otherwise.
+    content.vb: Public Function Contains(tol As Single, p As Vector3, prj As Vector3, segmentMode As Boolean = False) As Single?
+  overload: SearchAThing.OpenGL.Core.Line.Contains*
+  nameWithType.vb: Line.Contains(Single, Vector3, Vector3, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.Contains(Single, System.Numerics.Vector3, System.Numerics.Vector3, Boolean)
+  name.vb: Contains(Single, Vector3, Vector3, Boolean)
+- uid: SearchAThing.OpenGL.Core.Line.ToString
+  commentId: M:SearchAThing.OpenGL.Core.Line.ToString
+  id: ToString
+  parent: SearchAThing.OpenGL.Core.Line
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Line.ToString()
+  fullName: SearchAThing.OpenGL.Core.Line.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/core/geom/Line.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToString
+    path: src/core/geom/Line.cs
+    startLine: 179
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: SearchAThing.OpenGL.Core.Line.ToString*
+references:
+- uid: SearchAThing.OpenGL.Core.Line.From
+  commentId: P:SearchAThing.OpenGL.Core.Line.From
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_From
+  name: From
+  nameWithType: Line.From
+  fullName: SearchAThing.OpenGL.Core.Line.From
+- uid: SearchAThing.OpenGL.Core.Line.V
+  commentId: P:SearchAThing.OpenGL.Core.Line.V
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_V
+  name: V
+  nameWithType: Line.V
+  fullName: SearchAThing.OpenGL.Core.Line.V
+- uid: SearchAThing.OpenGL.Core.Line.To
+  commentId: P:SearchAThing.OpenGL.Core.Line.To
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_To
+  name: To
+  nameWithType: Line.To
+  fullName: SearchAThing.OpenGL.Core.Line.To
+- uid: SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  commentId: M:SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_FromTo_System_Numerics_Vector3__System_Numerics_Vector3__
+  name: FromTo(in Vector3, in Vector3)
+  nameWithType: Line.FromTo(in Vector3, in Vector3)
+  fullName: SearchAThing.OpenGL.Core.Line.FromTo(in System.Numerics.Vector3, in System.Numerics.Vector3)
+  nameWithType.vb: Line.FromTo(Vector3, Vector3)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3, System.Numerics.Vector3)
+  name.vb: FromTo(Vector3, Vector3)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: FromTo
+    href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_FromTo_System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Line.FromTo(System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: FromTo
+    href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_FromTo_System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  commentId: M:SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_PointV_System_Numerics_Vector3__System_Numerics_Vector3__
+  name: PointV(in Vector3, in Vector3)
+  nameWithType: Line.PointV(in Vector3, in Vector3)
+  fullName: SearchAThing.OpenGL.Core.Line.PointV(in System.Numerics.Vector3, in System.Numerics.Vector3)
+  nameWithType.vb: Line.PointV(Vector3, Vector3)
+  fullName.vb: SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3, System.Numerics.Vector3)
+  name.vb: PointV(Vector3, Vector3)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: PointV
+    href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_PointV_System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Line.PointV(System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: PointV
+    href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_PointV_System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.Intersect(System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_Line_System_Single_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: Intersect(Line, float, GLFigureBase)
+  nameWithType: Ext.Intersect(Line, float, GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line, float, SearchAThing.OpenGL.Core.GLFigureBase)
+  nameWithType.vb: Ext.Intersect(Line, Single, GLFigureBase)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line, Single, SearchAThing.OpenGL.Core.GLFigureBase)
+  name.vb: Intersect(Line, Single, GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+    name: Intersect
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_Line_System_Single_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+    name: Intersect
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_Line_System_Single_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.ToGLLine(System.Drawing.Color@,System.Drawing.Color@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Drawing_Color__System_Drawing_Color__
+  name: ToGLLine(Line, in Color, in Color)
+  nameWithType: Ext.ToGLLine(Line, in Color, in Color)
+  fullName: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, in System.Drawing.Color, in System.Drawing.Color)
+  nameWithType.vb: Ext.ToGLLine(Line, Color, Color)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, System.Drawing.Color, System.Drawing.Color)
+  name.vb: ToGLLine(Line, Color, Color)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Drawing_Color__System_Drawing_Color__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Drawing_Color__System_Drawing_Color__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.ToGLLine(System.Nullable{System.Drawing.Color}@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Nullable_System_Drawing_Color___
+  name: ToGLLine(Line, in Color?)
+  nameWithType: Ext.ToGLLine(Line, in Color?)
+  fullName: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, in System.Drawing.Color?)
+  nameWithType.vb: Ext.ToGLLine(Line, Color?)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, System.Drawing.Color?)
+  name.vb: ToGLLine(Line, Color?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Nullable_System_Drawing_Color___
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Nullable_System_Drawing_Color___
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.ToLine3D
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToLine3D_SearchAThing_OpenGL_Core_Line_
+  name: ToLine3D(Line)
+  nameWithType: Ext.ToLine3D(Line)
+  fullName: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+    name: ToLine3D
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToLine3D_SearchAThing_OpenGL_Core_Line_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+    name: ToLine3D
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToLine3D_SearchAThing_OpenGL_Core_Line_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.SearchAThing.OpenGL.Core.Ext.Transform(System.Numerics.Matrix4x4@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Transform_SearchAThing_OpenGL_Core_Line_System_Numerics_Matrix4x4__
+  name: Transform(Line, in Matrix4x4)
+  nameWithType: Ext.Transform(Line, in Matrix4x4)
+  fullName: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line, in System.Numerics.Matrix4x4)
+  nameWithType.vb: Ext.Transform(Line, Matrix4x4)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line, System.Numerics.Matrix4x4)
+  name.vb: Transform(Line, Matrix4x4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+    name: Transform
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Transform_SearchAThing_OpenGL_Core_Line_System_Numerics_Matrix4x4__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+    name: Transform
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Transform_SearchAThing_OpenGL_Core_Line_System_Numerics_Matrix4x4__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_Line_System_Single_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: Intersect(Line, float, GLFigureBase)
+  nameWithType: Ext.Intersect(Line, float, GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line, float, SearchAThing.OpenGL.Core.GLFigureBase)
+  nameWithType.vb: Ext.Intersect(Line, Single, GLFigureBase)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line, Single, SearchAThing.OpenGL.Core.GLFigureBase)
+  name.vb: Intersect(Line, Single, GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+    name: Intersect
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_Line_System_Single_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)
+    name: Intersect
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_Line_System_Single_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Drawing_Color__System_Drawing_Color__
+  name: ToGLLine(Line, in Color, in Color)
+  nameWithType: Ext.ToGLLine(Line, in Color, in Color)
+  fullName: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, in System.Drawing.Color, in System.Drawing.Color)
+  nameWithType.vb: Ext.ToGLLine(Line, Color, Color)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, System.Drawing.Color, System.Drawing.Color)
+  name.vb: ToGLLine(Line, Color, Color)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Drawing_Color__System_Drawing_Color__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Drawing_Color__System_Drawing_Color__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Nullable_System_Drawing_Color___
+  name: ToGLLine(Line, in Color?)
+  nameWithType: Ext.ToGLLine(Line, in Color?)
+  fullName: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, in System.Drawing.Color?)
+  nameWithType.vb: Ext.ToGLLine(Line, Color?)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line, System.Drawing.Color?)
+  name.vb: ToGLLine(Line, Color?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Nullable_System_Drawing_Color___
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)
+    name: ToGLLine
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Nullable_System_Drawing_Color___
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToLine3D_SearchAThing_OpenGL_Core_Line_
+  name: ToLine3D(Line)
+  nameWithType: Ext.ToLine3D(Line)
+  fullName: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+    name: ToLine3D
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToLine3D_SearchAThing_OpenGL_Core_Line_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)
+    name: ToLine3D
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ToLine3D_SearchAThing_OpenGL_Core_Line_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Transform_SearchAThing_OpenGL_Core_Line_System_Numerics_Matrix4x4__
+  name: Transform(Line, in Matrix4x4)
+  nameWithType: Ext.Transform(Line, in Matrix4x4)
+  fullName: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line, in System.Numerics.Matrix4x4)
+  nameWithType.vb: Ext.Transform(Line, Matrix4x4)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line, System.Numerics.Matrix4x4)
+  name.vb: Transform(Line, Matrix4x4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+    name: Transform
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Transform_SearchAThing_OpenGL_Core_Line_System_Numerics_Matrix4x4__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)
+    name: Transform
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Transform_SearchAThing_OpenGL_Core_Line_System_Numerics_Matrix4x4__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.From*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.From
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_From
+  name: From
+  nameWithType: Line.From
+  fullName: SearchAThing.OpenGL.Core.Line.From
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: SearchAThing.OpenGL.Core.Line.V*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.V
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_V
+  name: V
+  nameWithType: Line.V
+  fullName: SearchAThing.OpenGL.Core.Line.V
+- uid: SearchAThing.OpenGL.Core.Line.To*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.To
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_To
+  name: To
+  nameWithType: Line.To
+  fullName: SearchAThing.OpenGL.Core.Line.To
+- uid: SearchAThing.OpenGL.Core.Line.MidPoint*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.MidPoint
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_MidPoint
+  name: MidPoint
+  nameWithType: Line.MidPoint
+  fullName: SearchAThing.OpenGL.Core.Line.MidPoint
+- uid: SearchAThing.OpenGL.Core.Line.Length*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.Length
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_Length
+  name: Length
+  nameWithType: Line.Length
+  fullName: SearchAThing.OpenGL.Core.Line.Length
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SearchAThing.OpenGL.Core.Line.FromTo*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.FromTo
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_FromTo_System_Numerics_Vector3__System_Numerics_Vector3__
+  name: FromTo
+  nameWithType: Line.FromTo
+  fullName: SearchAThing.OpenGL.Core.Line.FromTo
+- uid: SearchAThing.OpenGL.Core.Line
+  commentId: T:SearchAThing.OpenGL.Core.Line
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Line.html
+  name: Line
+  nameWithType: Line
+  fullName: SearchAThing.OpenGL.Core.Line
+- uid: SearchAThing.OpenGL.Core.Line.PointV*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.PointV
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_PointV_System_Numerics_Vector3__System_Numerics_Vector3__
+  name: PointV
+  nameWithType: Line.PointV
+  fullName: SearchAThing.OpenGL.Core.Line.PointV
+- uid: SearchAThing.OpenGL.Core.Line.Scale*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.Scale
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_Scale_System_Numerics_Vector3__System_Single_
+  name: Scale
+  nameWithType: Line.Scale
+  fullName: SearchAThing.OpenGL.Core.Line.Scale
+- uid: SearchAThing.OpenGL.Core.Toolkit.MakeCS(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  commentId: M:SearchAThing.OpenGL.Core.Toolkit.MakeCS(System.Numerics.Vector3@,System.Numerics.Vector3@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeCS_System_Numerics_Vector3__System_Numerics_Vector3__
+  name: MakeCS(in Vector3, in Vector3)
+  nameWithType: Toolkit.MakeCS(in Vector3, in Vector3)
+  fullName: SearchAThing.OpenGL.Core.Toolkit.MakeCS(in System.Numerics.Vector3, in System.Numerics.Vector3)
+  nameWithType.vb: Toolkit.MakeCS(Vector3, Vector3)
+  fullName.vb: SearchAThing.OpenGL.Core.Toolkit.MakeCS(System.Numerics.Vector3, System.Numerics.Vector3)
+  name.vb: MakeCS(Vector3, Vector3)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeCS(System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: MakeCS
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeCS_System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeCS(System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: MakeCS
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeCS_System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.Intersect*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.Intersect
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_Intersect_System_Numerics_Matrix4x4__
+  name: Intersect
+  nameWithType: Line.Intersect
+  fullName: SearchAThing.OpenGL.Core.Line.Intersect
+- uid: System.Numerics.Matrix4x4
+  commentId: T:System.Numerics.Matrix4x4
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: System.Numerics.Matrix4x4
+- uid: System.Nullable{System.Numerics.Vector3}
+  commentId: T:System.Nullable{System.Numerics.Vector3}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  name: Vector3?
+  nameWithType: Vector3?
+  fullName: System.Numerics.Vector3?
+  spec.csharp:
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: '?'
+  spec.vb:
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.Line.Contains*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.Contains
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_Contains_System_Single_System_Numerics_Vector3__System_Numerics_Vector3__System_Boolean_
+  name: Contains
+  nameWithType: Line.Contains
+  fullName: SearchAThing.OpenGL.Core.Line.Contains
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Line.ToString*
+  commentId: Overload:SearchAThing.OpenGL.Core.Line.ToString
+  href: SearchAThing.OpenGL.Core.Line.html#SearchAThing_OpenGL_Core_Line_ToString
+  name: ToString
+  nameWithType: Line.ToString
+  fullName: SearchAThing.OpenGL.Core.Line.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

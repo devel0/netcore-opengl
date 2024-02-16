@@ -1,0 +1,2627 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLLineFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLLineFigure
+  id: GLLineFigure
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLLineFigure.#ctor(SearchAThing.OpenGL.Core.GLLine[])
+  - SearchAThing.OpenGL.Core.GLLineFigure.#ctor(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine})
+  - SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  - SearchAThing.OpenGL.Core.GLLineFigure.Lines
+  - SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance
+  - SearchAThing.OpenGL.Core.GLLineFigure.Mirror(System.Numerics.Matrix4x4@)
+  - SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType
+  - SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+  langs:
+  - csharp
+  - vb
+  name: GLLineFigure
+  nameWithType: GLLineFigure
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure
+  type: Class
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLLineFigure
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Specialization of typed figure within the <xref href="SearchAThing.OpenGL.Core.GLLine" data-throw-if-not-resolved="false"></xref> primitive.
+  example: []
+  syntax:
+    content: >-
+      [JsonObject(MemberSerialization.OptIn)]
+
+      public class GLLineFigure : GLFigureTypeBase<GLLine>, IGLLineFigure, IGLFigure, IGLVertexManagerObject, INotifyPropertyChanged
+    content.vb: >-
+      <JsonObject(MemberSerialization.OptIn)>
+
+      Public Class GLLineFigure Inherits GLFigureTypeBase(Of GLLine) Implements IGLLineFigure, IGLFigure, IGLVertexManagerObject, INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - SearchAThing.OpenGL.Core.GLFigureBase
+  - SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  implements:
+  - SearchAThing.OpenGL.Core.IGLLineFigure
+  - SearchAThing.OpenGL.Core.IGLFigure
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Primitives
+  - SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.PrimitivesOBC
+  - SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  - SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Add(SearchAThing.OpenGL.Core.GLLine)
+  - SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Remove(SearchAThing.OpenGL.Core.GLLine)
+  - SearchAThing.OpenGL.Core.GLFigureBase.PropertyChanged
+  - SearchAThing.OpenGL.Core.GLFigureBase.OnPropertyChanged(System.String)
+  - SearchAThing.OpenGL.Core.GLFigureBase.ParentVertexManager
+  - SearchAThing.OpenGL.Core.GLFigureBase.CopyBase
+  - SearchAThing.OpenGL.Core.GLFigureBase.Copy
+  - SearchAThing.OpenGL.Core.GLFigureBase.FigureInvalidated
+  - SearchAThing.OpenGL.Core.GLFigureBase.ExcludeFromShadeWithEdge
+  - SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrixIsIdentity
+  - SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrix
+  - SearchAThing.OpenGL.Core.GLFigureBase.Visible
+  - SearchAThing.OpenGL.Core.GLFigureBase.Order
+  - SearchAThing.OpenGL.Core.GLFigureBase.Highlight
+  - SearchAThing.OpenGL.Core.GLFigureBase.Alpha
+  - SearchAThing.OpenGL.Core.GLFigureBase.Selected
+  - SearchAThing.OpenGL.Core.GLFigureBase.ScreenCoordMode
+  - SearchAThing.OpenGL.Core.GLFigureBase.Tag
+  - SearchAThing.OpenGL.Core.GLFigureBase.ExpandBBox
+  - SearchAThing.OpenGL.Core.GLFigureBase.Indexes
+  - SearchAThing.OpenGL.Core.GLFigureBase.LBBox
+  - SearchAThing.OpenGL.Core.GLFigureBase.OBBox
+  - SearchAThing.OpenGL.Core.GLFigureBase.EvalInShadowMap
+  - SearchAThing.OpenGL.Core.GLFigureBase.Invalidate
+  - SearchAThing.OpenGL.Core.GLFigureBase.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Numerics.Vector3@,System.Boolean)
+  - SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Single,System.Single,System.Single,System.Boolean)
+  - SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetAlpha``1(System.Nullable{System.Single})
+  - SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Drawing.Color@)
+  - SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Numerics.Vector4@)
+  - SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetOrder``1(System.Int32)
+  - SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(System.Boolean)
+  - SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(System.Single)
+  - SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Center
+  - SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Vertexes
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+  attributes:
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
+    arguments:
+    - type: Newtonsoft.Json.MemberSerialization
+      value: 1
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType
+  commentId: P:SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType
+  id: PrimitiveType
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: PrimitiveType
+  nameWithType: GLLineFigure.PrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType
+  type: Property
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PrimitiveType
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 8
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enum that describe which type underlying to the instance.
+  example: []
+  syntax:
+    content: public override GLPrimitiveType PrimitiveType { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLPrimitiveType
+    content.vb: Public Overrides ReadOnly Property PrimitiveType As GLPrimitiveType
+  overridden: SearchAThing.OpenGL.Core.GLFigureBase.PrimitiveType
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.Lines
+  commentId: P:SearchAThing.OpenGL.Core.GLLineFigure.Lines
+  id: Lines
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: Lines
+  nameWithType: GLLineFigure.Lines
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.Lines
+  type: Property
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Lines
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enumeration of the line primitives of this figure.
+  example: []
+  syntax:
+    content: public IEnumerable<GLLine> Lines { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine}
+    content.vb: Public ReadOnly Property Lines As IEnumerable(Of GLLine)
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.Lines*
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.#ctor(SearchAThing.OpenGL.Core.GLLine[])
+  commentId: M:SearchAThing.OpenGL.Core.GLLineFigure.#ctor(SearchAThing.OpenGL.Core.GLLine[])
+  id: '#ctor(SearchAThing.OpenGL.Core.GLLine[])'
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: GLLineFigure(params GLLine[])
+  nameWithType: GLLineFigure.GLLineFigure(params GLLine[])
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.GLLineFigure(params SearchAThing.OpenGL.Core.GLLine[])
+  type: Constructor
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 18
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a line typed figure with the given set of <xref href="SearchAThing.OpenGL.Core.GLLine" data-throw-if-not-resolved="false"></xref> primitives.
+  example: []
+  syntax:
+    content: public GLLineFigure(params GLLine[] lines)
+    parameters:
+    - id: lines
+      type: SearchAThing.OpenGL.Core.GLLine[]
+    content.vb: Public Sub New(ParamArray lines As GLLine())
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.#ctor*
+  nameWithType.vb: GLLineFigure.New(ParamArray GLLine())
+  fullName.vb: SearchAThing.OpenGL.Core.GLLineFigure.New(ParamArray SearchAThing.OpenGL.Core.GLLine())
+  name.vb: New(ParamArray GLLine())
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.#ctor(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine})
+  commentId: M:SearchAThing.OpenGL.Core.GLLineFigure.#ctor(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine})
+  id: '#ctor(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine})'
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: GLLineFigure(IEnumerable<GLLine>)
+  nameWithType: GLLineFigure.GLLineFigure(IEnumerable<GLLine>)
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.GLLineFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLLine>)
+  type: Constructor
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 23
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a line typed figure with the given set of <xref href="SearchAThing.OpenGL.Core.GLLine" data-throw-if-not-resolved="false"></xref> primitives.
+  example: []
+  syntax:
+    content: public GLLineFigure(IEnumerable<GLLine> lines)
+    parameters:
+    - id: lines
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine}
+    content.vb: Public Sub New(lines As IEnumerable(Of GLLine))
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.#ctor*
+  nameWithType.vb: GLLineFigure.New(IEnumerable(Of GLLine))
+  fullName.vb: SearchAThing.OpenGL.Core.GLLineFigure.New(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLLine))
+  name.vb: New(IEnumerable(Of GLLine))
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance
+  commentId: M:SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance
+  id: MakeInstance
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: MakeInstance()
+  nameWithType: GLLineFigure.MakeInstance()
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance()
+  type: Method
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MakeInstance
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 25
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create an instance of derived type.
+  example: []
+  syntax:
+    content: protected override GLFigureBase MakeInstance()
+    return:
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+    content.vb: Protected Overrides Function MakeInstance() As GLFigureBase
+  overridden: SearchAThing.OpenGL.Core.GLFigureBase.MakeInstance
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLFigureBase.Copy
+    commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.Copy
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  id: CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: CopySpecialized(GLFigureBase)
+  nameWithType: GLLineFigure.CopySpecialized(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  type: Method
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: CopySpecialized
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 27
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  example: []
+  syntax:
+    content: protected override void CopySpecialized(GLFigureBase other)
+    parameters:
+    - id: other
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+    content.vb: Protected Overrides Sub CopySpecialized(other As GLFigureBase)
+  overridden: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized*
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.Mirror(System.Numerics.Matrix4x4@)
+  commentId: M:SearchAThing.OpenGL.Core.GLLineFigure.Mirror(System.Numerics.Matrix4x4@)
+  id: Mirror(System.Numerics.Matrix4x4@)
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: Mirror(in Matrix4x4)
+  nameWithType: GLLineFigure.Mirror(in Matrix4x4)
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.Mirror(in System.Numerics.Matrix4x4)
+  type: Method
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Mirror
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 35
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a mirrored figure against given xy plane.
+  example: []
+  syntax:
+    content: public override GLFigureBase? Mirror(in Matrix4x4 xyPlane)
+    parameters:
+    - id: xyPlane
+      type: System.Numerics.Matrix4x4
+      description: XY mirror plane.
+    return:
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+      description: Mirrored figure.
+    content.vb: Public Overrides Function Mirror(xyPlane As Matrix4x4) As GLFigureBase
+  overridden: SearchAThing.OpenGL.Core.GLFigureBase.Mirror(System.Numerics.Matrix4x4@)
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.Mirror*
+  nameWithType.vb: GLLineFigure.Mirror(Matrix4x4)
+  fullName.vb: SearchAThing.OpenGL.Core.GLLineFigure.Mirror(System.Numerics.Matrix4x4)
+  name.vb: Mirror(Matrix4x4)
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+  id: SimpleCmd
+  parent: SearchAThing.OpenGL.Core.GLLineFigure
+  langs:
+  - csharp
+  - vb
+  name: SimpleCmd()
+  nameWithType: GLLineFigure.SimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd()
+  type: Method
+  source:
+    remote:
+      path: src/core/figure/GLLineFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SimpleCmd
+    path: src/core/figure/GLLineFigure.cs
+    startLine: 53
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Retrieve e simple cmd representation of this figure.<br />
+
+    Its a textual representation of figure information useful to regen in a separate tool.
+  example: []
+  syntax:
+    content: public override string SimpleCmd()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function SimpleCmd() As String
+  overridden: SearchAThing.OpenGL.Core.GLFigureBase.SimpleCmd
+  overload: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+references:
+- uid: SearchAThing.OpenGL.Core.GLLine
+  commentId: T:SearchAThing.OpenGL.Core.GLLine
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLLine.html
+  name: GLLine
+  nameWithType: GLLine
+  fullName: SearchAThing.OpenGL.Core.GLLine
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SearchAThing.OpenGL.Core.GLFigureBase
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureBase
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase
+  nameWithType: GLFigureBase
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  parent: SearchAThing.OpenGL.Core
+  definition: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  name: GLFigureTypeBase<GLLine>
+  nameWithType: GLFigureTypeBase<GLLine>
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<SearchAThing.OpenGL.Core.GLLine>
+  nameWithType.vb: GLFigureTypeBase(Of GLLine)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of SearchAThing.OpenGL.Core.GLLine)
+  name.vb: GLFigureTypeBase(Of GLLine)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+    name: GLFigureTypeBase
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+    name: GLFigureTypeBase
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLLineFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLLineFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLLineFigure.html
+  name: IGLLineFigure
+  nameWithType: IGLLineFigure
+  fullName: SearchAThing.OpenGL.Core.IGLLineFigure
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  name: IGLVertexManagerObject
+  nameWithType: IGLVertexManagerObject
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Primitives
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Primitives
+  parent: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  definition: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Primitives
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Primitives
+  name: Primitives
+  nameWithType: GLFigureTypeBase<GLLine>.Primitives
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<SearchAThing.OpenGL.Core.GLLine>.Primitives
+  nameWithType.vb: GLFigureTypeBase(Of GLLine).Primitives
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of SearchAThing.OpenGL.Core.GLLine).Primitives
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.PrimitivesOBC
+  commentId: F:SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.PrimitivesOBC
+  parent: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  definition: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.PrimitivesOBC
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_PrimitivesOBC
+  name: PrimitivesOBC
+  nameWithType: GLFigureTypeBase<GLLine>.PrimitivesOBC
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<SearchAThing.OpenGL.Core.GLLine>.PrimitivesOBC
+  nameWithType.vb: GLFigureTypeBase(Of GLLine).PrimitivesOBC
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of SearchAThing.OpenGL.Core.GLLine).PrimitivesOBC
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  parent: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  definition: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  name: RemovePrimitive(GLPrimitiveBase)
+  nameWithType: GLFigureTypeBase<GLLine>.RemovePrimitive(GLPrimitiveBase)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<SearchAThing.OpenGL.Core.GLLine>.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  nameWithType.vb: GLFigureTypeBase(Of GLLine).RemovePrimitive(GLPrimitiveBase)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of SearchAThing.OpenGL.Core.GLLine).RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+    name: RemovePrimitive
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+    name: RemovePrimitive
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Add(SearchAThing.OpenGL.Core.GLLine)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Add(SearchAThing.OpenGL.Core.GLLine)
+  parent: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  definition: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Add(`0)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Add__0_
+  name: Add(GLLine)
+  nameWithType: GLFigureTypeBase<GLLine>.Add(GLLine)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<SearchAThing.OpenGL.Core.GLLine>.Add(SearchAThing.OpenGL.Core.GLLine)
+  nameWithType.vb: GLFigureTypeBase(Of GLLine).Add(GLLine)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of SearchAThing.OpenGL.Core.GLLine).Add(SearchAThing.OpenGL.Core.GLLine)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Add(SearchAThing.OpenGL.Core.GLLine)
+    name: Add
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Add__0_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Add(SearchAThing.OpenGL.Core.GLLine)
+    name: Add
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Add__0_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Remove(SearchAThing.OpenGL.Core.GLLine)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Remove(SearchAThing.OpenGL.Core.GLLine)
+  parent: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  definition: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Remove(`0)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Remove__0_
+  name: Remove(GLLine)
+  nameWithType: GLFigureTypeBase<GLLine>.Remove(GLLine)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<SearchAThing.OpenGL.Core.GLLine>.Remove(SearchAThing.OpenGL.Core.GLLine)
+  nameWithType.vb: GLFigureTypeBase(Of GLLine).Remove(GLLine)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of SearchAThing.OpenGL.Core.GLLine).Remove(SearchAThing.OpenGL.Core.GLLine)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Remove(SearchAThing.OpenGL.Core.GLLine)
+    name: Remove
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Remove__0_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.Remove(SearchAThing.OpenGL.Core.GLLine)
+    name: Remove
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Remove__0_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.PropertyChanged
+  commentId: E:SearchAThing.OpenGL.Core.GLFigureBase.PropertyChanged
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_PropertyChanged
+  name: PropertyChanged
+  nameWithType: GLFigureBase.PropertyChanged
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.PropertyChanged
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.OnPropertyChanged(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.OnPropertyChanged(System.String)
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_OnPropertyChanged_System_String_
+  name: OnPropertyChanged(string)
+  nameWithType: GLFigureBase.OnPropertyChanged(string)
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.OnPropertyChanged(string)
+  nameWithType.vb: GLFigureBase.OnPropertyChanged(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureBase.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.ParentVertexManager
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.ParentVertexManager
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ParentVertexManager
+  name: ParentVertexManager
+  nameWithType: GLFigureBase.ParentVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.ParentVertexManager
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.CopyBase
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.CopyBase
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_CopyBase
+  name: CopyBase()
+  nameWithType: GLFigureBase.CopyBase()
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.CopyBase()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.CopyBase
+    name: CopyBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_CopyBase
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.CopyBase
+    name: CopyBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_CopyBase
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Copy
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.Copy
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Copy
+  name: Copy()
+  nameWithType: GLFigureBase.Copy()
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Copy()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.Copy
+    name: Copy
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Copy
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.Copy
+    name: Copy
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Copy
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.FigureInvalidated
+  commentId: E:SearchAThing.OpenGL.Core.GLFigureBase.FigureInvalidated
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_FigureInvalidated
+  name: FigureInvalidated
+  nameWithType: GLFigureBase.FigureInvalidated
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.FigureInvalidated
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.ExcludeFromShadeWithEdge
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.ExcludeFromShadeWithEdge
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ExcludeFromShadeWithEdge
+  name: ExcludeFromShadeWithEdge
+  nameWithType: GLFigureBase.ExcludeFromShadeWithEdge
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.ExcludeFromShadeWithEdge
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrixIsIdentity
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrixIsIdentity
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ObjectMatrixIsIdentity
+  name: ObjectMatrixIsIdentity
+  nameWithType: GLFigureBase.ObjectMatrixIsIdentity
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrixIsIdentity
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrix
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrix
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ObjectMatrix
+  name: ObjectMatrix
+  nameWithType: GLFigureBase.ObjectMatrix
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.ObjectMatrix
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Visible
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.Visible
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Visible
+  name: Visible
+  nameWithType: GLFigureBase.Visible
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Visible
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Order
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.Order
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Order
+  name: Order
+  nameWithType: GLFigureBase.Order
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Order
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Highlight
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.Highlight
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Highlight
+  name: Highlight
+  nameWithType: GLFigureBase.Highlight
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Highlight
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Alpha
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.Alpha
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Alpha
+  name: Alpha
+  nameWithType: GLFigureBase.Alpha
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Alpha
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Selected
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.Selected
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Selected
+  name: Selected
+  nameWithType: GLFigureBase.Selected
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Selected
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.ScreenCoordMode
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.ScreenCoordMode
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ScreenCoordMode
+  name: ScreenCoordMode
+  nameWithType: GLFigureBase.ScreenCoordMode
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.ScreenCoordMode
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Tag
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.Tag
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Tag
+  name: Tag
+  nameWithType: GLFigureBase.Tag
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Tag
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.ExpandBBox
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.ExpandBBox
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ExpandBBox
+  name: ExpandBBox
+  nameWithType: GLFigureBase.ExpandBBox
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.ExpandBBox
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Indexes
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.Indexes
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Indexes
+  name: Indexes
+  nameWithType: GLFigureBase.Indexes
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Indexes
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.LBBox
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.LBBox
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_LBBox
+  name: LBBox
+  nameWithType: GLFigureBase.LBBox
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.LBBox
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.OBBox
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.OBBox
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_OBBox
+  name: OBBox
+  nameWithType: GLFigureBase.OBBox
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.OBBox
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.EvalInShadowMap
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.EvalInShadowMap
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_EvalInShadowMap
+  name: EvalInShadowMap
+  nameWithType: GLFigureBase.EvalInShadowMap
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.EvalInShadowMap
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Invalidate
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.Invalidate
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Invalidate
+  name: Invalidate()
+  nameWithType: GLFigureBase.Invalidate()
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Invalidate()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.Invalidate
+    name: Invalidate
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Invalidate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.Invalidate
+    name: Invalidate
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Invalidate
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.ToString
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.ToString
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ToString
+  name: ToString()
+  nameWithType: GLFigureBase.ToString()
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.ToString()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.ToString
+    name: ToString
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.ToString
+    name: ToString
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ToString
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Numerics.Vector3@,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  name: Move<GLLineFigure>(GLLineFigure, in Vector3, bool)
+  nameWithType: Ext.Move<GLLineFigure>(GLLineFigure, in Vector3, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<SearchAThing.OpenGL.Core.GLLineFigure>(SearchAThing.OpenGL.Core.GLLineFigure, in System.Numerics.Vector3, bool)
+  nameWithType.vb: Ext.Move(Of GLLineFigure)(GLLineFigure, Vector3, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of SearchAThing.OpenGL.Core.GLLineFigure)(SearchAThing.OpenGL.Core.GLLineFigure, System.Numerics.Vector3, Boolean)
+  name.vb: Move(Of GLLineFigure)(GLLineFigure, Vector3, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.Move``1(System.Single,System.Single,System.Single,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  name: Move<GLLineFigure>(GLLineFigure, float, float, float, bool)
+  nameWithType: Ext.Move<GLLineFigure>(GLLineFigure, float, float, float, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<SearchAThing.OpenGL.Core.GLLineFigure>(SearchAThing.OpenGL.Core.GLLineFigure, float, float, float, bool)
+  nameWithType.vb: Ext.Move(Of GLLineFigure)(GLLineFigure, Single, Single, Single, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of SearchAThing.OpenGL.Core.GLLineFigure)(SearchAThing.OpenGL.Core.GLLineFigure, Single, Single, Single, Boolean)
+  name.vb: Move(Of GLLineFigure)(GLLineFigure, Single, Single, Single, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetAlpha``1(System.Nullable{System.Single})
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  name: SetAlpha<GLLineFigure>(GLLineFigure, float?)
+  nameWithType: Ext.SetAlpha<GLLineFigure>(GLLineFigure, float?)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetAlpha<SearchAThing.OpenGL.Core.GLLineFigure>(SearchAThing.OpenGL.Core.GLLineFigure, float?)
+  nameWithType.vb: Ext.SetAlpha(Of GLLineFigure)(GLLineFigure, Single?)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetAlpha(Of SearchAThing.OpenGL.Core.GLLineFigure)(SearchAThing.OpenGL.Core.GLLineFigure, Single?)
+  name.vb: SetAlpha(Of GLLineFigure)(GLLineFigure, Single?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Drawing.Color@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  name: SetColor<GLLineFigure>(GLLineFigure, in Color)
+  nameWithType: Ext.SetColor<GLLineFigure>(GLLineFigure, in Color)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<SearchAThing.OpenGL.Core.GLLineFigure>(SearchAThing.OpenGL.Core.GLLineFigure, in System.Drawing.Color)
+  nameWithType.vb: Ext.SetColor(Of GLLineFigure)(GLLineFigure, Color)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of SearchAThing.OpenGL.Core.GLLineFigure)(SearchAThing.OpenGL.Core.GLLineFigure, System.Drawing.Color)
+  name.vb: SetColor(Of GLLineFigure)(GLLineFigure, Color)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Numerics.Vector4@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  name: SetColor<GLLineFigure>(GLLineFigure, in Vector4)
+  nameWithType: Ext.SetColor<GLLineFigure>(GLLineFigure, in Vector4)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<SearchAThing.OpenGL.Core.GLLineFigure>(SearchAThing.OpenGL.Core.GLLineFigure, in System.Numerics.Vector4)
+  nameWithType.vb: Ext.SetColor(Of GLLineFigure)(GLLineFigure, Vector4)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of SearchAThing.OpenGL.Core.GLLineFigure)(SearchAThing.OpenGL.Core.GLLineFigure, System.Numerics.Vector4)
+  name.vb: SetColor(Of GLLineFigure)(GLLineFigure, Vector4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetOrder``1(System.Int32)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  name: SetOrder<GLLineFigure>(GLLineFigure, int)
+  nameWithType: Ext.SetOrder<GLLineFigure>(GLLineFigure, int)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetOrder<SearchAThing.OpenGL.Core.GLLineFigure>(SearchAThing.OpenGL.Core.GLLineFigure, int)
+  nameWithType.vb: Ext.SetOrder(Of GLLineFigure)(GLLineFigure, Integer)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetOrder(Of SearchAThing.OpenGL.Core.GLLineFigure)(SearchAThing.OpenGL.Core.GLLineFigure, Integer)
+  name.vb: SetOrder(Of GLLineFigure)(GLLineFigure, Integer)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  name: SetScreenMode<GLLineFigure>(GLLineFigure, bool)
+  nameWithType: Ext.SetScreenMode<GLLineFigure>(GLLineFigure, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetScreenMode<SearchAThing.OpenGL.Core.GLLineFigure>(SearchAThing.OpenGL.Core.GLLineFigure, bool)
+  nameWithType.vb: Ext.SetScreenMode(Of GLLineFigure)(GLLineFigure, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetScreenMode(Of SearchAThing.OpenGL.Core.GLLineFigure)(SearchAThing.OpenGL.Core.GLLineFigure, Boolean)
+  name.vb: SetScreenMode(Of GLLineFigure)(GLLineFigure, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: '>'
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(SearchAThing.OpenGL.Core.GLLineFigure,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: )
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(System.Single)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  name: BuildVertexPosDict(IGLFigure, float)
+  nameWithType: Ext.BuildVertexPosDict(IGLFigure, float)
+  fullName: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, float)
+  nameWithType.vb: Ext.BuildVertexPosDict(IGLFigure, Single)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, Single)
+  name.vb: BuildVertexPosDict(IGLFigure, Single)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Center
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Center(IGLFigure)
+  nameWithType: Ext.Center(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SearchAThing.OpenGL.Core.Ext.Vertexes
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Vertexes(IGLFigure)
+  nameWithType: Ext.Vertexes(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  name: GLFigureTypeBase<P>
+  nameWithType: GLFigureTypeBase<P>
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>
+  nameWithType.vb: GLFigureTypeBase(Of P)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P)
+  name.vb: GLFigureTypeBase(Of P)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+    name: GLFigureTypeBase
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  - name: <
+  - name: P
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+    name: GLFigureTypeBase
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: P
+  - name: )
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Primitives
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Primitives
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Primitives
+  name: Primitives
+  nameWithType: GLFigureTypeBase<P>.Primitives
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>.Primitives
+  nameWithType.vb: GLFigureTypeBase(Of P).Primitives
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P).Primitives
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.PrimitivesOBC
+  commentId: F:SearchAThing.OpenGL.Core.GLFigureTypeBase`1.PrimitivesOBC
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_PrimitivesOBC
+  name: PrimitivesOBC
+  nameWithType: GLFigureTypeBase<P>.PrimitivesOBC
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>.PrimitivesOBC
+  nameWithType.vb: GLFigureTypeBase(Of P).PrimitivesOBC
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P).PrimitivesOBC
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase`1.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  name: RemovePrimitive(GLPrimitiveBase)
+  nameWithType: GLFigureTypeBase<P>.RemovePrimitive(GLPrimitiveBase)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  nameWithType.vb: GLFigureTypeBase(Of P).RemovePrimitive(GLPrimitiveBase)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P).RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+    name: RemovePrimitive
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)
+    name: RemovePrimitive
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Add(`0)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Add(`0)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Add__0_
+  name: Add(P)
+  nameWithType: GLFigureTypeBase<P>.Add(P)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>.Add(P)
+  nameWithType.vb: GLFigureTypeBase(Of P).Add(P)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P).Add(P)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Add(`0)
+    name: Add
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Add__0_
+  - name: (
+  - name: P
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Add(`0)
+    name: Add
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Add__0_
+  - name: (
+  - name: P
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Remove(`0)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Remove(`0)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Remove__0_
+  name: Remove(P)
+  nameWithType: GLFigureTypeBase<P>.Remove(P)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>.Remove(P)
+  nameWithType.vb: GLFigureTypeBase(Of P).Remove(P)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P).Remove(P)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Remove(`0)
+    name: Remove
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Remove__0_
+  - name: (
+  - name: P
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.Remove(`0)
+    name: Remove
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Remove__0_
+  - name: (
+  - name: P
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  name: Move<T>(T, in Vector3, bool)
+  nameWithType: Ext.Move<T>(T, in Vector3, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<T>(T, in System.Numerics.Vector3, bool)
+  nameWithType.vb: Ext.Move(Of T)(T, Vector3, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of T)(T, System.Numerics.Vector3, Boolean)
+  name.vb: Move(Of T)(T, Vector3, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  name: Move<T>(T, float, float, float, bool)
+  nameWithType: Ext.Move<T>(T, float, float, float, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.Move<T>(T, float, float, float, bool)
+  nameWithType.vb: Ext.Move(Of T)(T, Single, Single, Single, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.Move(Of T)(T, Single, Single, Single, Boolean)
+  name.vb: Move(Of T)(T, Single, Single, Single, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)
+    name: Move
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  name: SetAlpha<T>(T, float?)
+  nameWithType: Ext.SetAlpha<T>(T, float?)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetAlpha<T>(T, float?)
+  nameWithType.vb: Ext.SetAlpha(Of T)(T, Single?)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetAlpha(Of T)(T, Single?)
+  name.vb: SetAlpha(Of T)(T, Single?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})
+    name: SetAlpha
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  name: SetColor<T>(T, in Color)
+  nameWithType: Ext.SetColor<T>(T, in Color)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<T>(T, in System.Drawing.Color)
+  nameWithType.vb: Ext.SetColor(Of T)(T, Color)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of T)(T, System.Drawing.Color)
+  name.vb: SetColor(Of T)(T, Color)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  name: SetColor<T>(T, in Vector4)
+  nameWithType: Ext.SetColor<T>(T, in Vector4)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetColor<T>(T, in System.Numerics.Vector4)
+  nameWithType.vb: Ext.SetColor(Of T)(T, Vector4)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetColor(Of T)(T, System.Numerics.Vector4)
+  name.vb: SetColor(Of T)(T, Vector4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)
+    name: SetColor
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector4
+    name: Vector4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  name: SetOrder<T>(T, int)
+  nameWithType: Ext.SetOrder<T>(T, int)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetOrder<T>(T, int)
+  nameWithType.vb: Ext.SetOrder(Of T)(T, Integer)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetOrder(Of T)(T, Integer)
+  name.vb: SetOrder(Of T)(T, Integer)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)
+    name: SetOrder
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  name: SetScreenMode<T>(T, bool)
+  nameWithType: Ext.SetScreenMode<T>(T, bool)
+  fullName: SearchAThing.OpenGL.Core.Ext.SetScreenMode<T>(T, bool)
+  nameWithType.vb: Ext.SetScreenMode(Of T)(T, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.SetScreenMode(Of T)(T, Boolean)
+  name.vb: SetScreenMode(Of T)(T, Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)
+    name: SetScreenMode
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  name: BuildVertexPosDict(IGLFigure, float)
+  nameWithType: Ext.BuildVertexPosDict(IGLFigure, float)
+  fullName: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, float)
+  nameWithType.vb: Ext.BuildVertexPosDict(IGLFigure, Single)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure, Single)
+  name.vb: BuildVertexPosDict(IGLFigure, Single)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)
+    name: BuildVertexPosDict
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Center(IGLFigure)
+  nameWithType: Ext.Center(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Center
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  name: Vertexes(IGLFigure)
+  nameWithType: Ext.Vertexes(IGLFigure)
+  fullName: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)
+    name: Vertexes
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.PrimitiveType
+  commentId: P:SearchAThing.OpenGL.Core.GLFigureBase.PrimitiveType
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_PrimitiveType
+  name: PrimitiveType
+  nameWithType: GLFigureBase.PrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.PrimitiveType
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_PrimitiveType
+  name: PrimitiveType
+  nameWithType: GLLineFigure.PrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.PrimitiveType
+- uid: SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_PrimitiveType
+  name: PrimitiveType
+  nameWithType: IGLFigure.PrimitiveType
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+  commentId: T:SearchAThing.OpenGL.Core.GLPrimitiveType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  name: GLPrimitiveType
+  nameWithType: GLPrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.Lines*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLLineFigure.Lines
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_Lines
+  name: Lines
+  nameWithType: GLLineFigure.Lines
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.Lines
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLLine}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLLine>
+  nameWithType: IEnumerable<GLLine>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLLine>
+  nameWithType.vb: IEnumerable(Of GLLine)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLLine)
+  name.vb: IEnumerable(Of GLLine)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLLineFigure.#ctor
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure__ctor_SearchAThing_OpenGL_Core_GLLine___
+  name: GLLineFigure
+  nameWithType: GLLineFigure.GLLineFigure
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.GLLineFigure
+  nameWithType.vb: GLLineFigure.New
+  fullName.vb: SearchAThing.OpenGL.Core.GLLineFigure.New
+  name.vb: New
+- uid: SearchAThing.OpenGL.Core.GLLine[]
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLLine.html
+  name: GLLine[]
+  nameWithType: GLLine[]
+  fullName: SearchAThing.OpenGL.Core.GLLine[]
+  nameWithType.vb: GLLine()
+  fullName.vb: SearchAThing.OpenGL.Core.GLLine()
+  name.vb: GLLine()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+    href: SearchAThing.OpenGL.Core.GLLine.html
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.MakeInstance
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.MakeInstance
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_MakeInstance
+  name: MakeInstance()
+  nameWithType: GLFigureBase.MakeInstance()
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.MakeInstance()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.MakeInstance
+    name: MakeInstance
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_MakeInstance
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.MakeInstance
+    name: MakeInstance
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_MakeInstance
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_MakeInstance
+  name: MakeInstance
+  nameWithType: GLLineFigure.MakeInstance
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.MakeInstance
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}
+  definition: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: CopySpecialized(GLFigureBase)
+  nameWithType: GLFigureTypeBase<GLLine>.CopySpecialized(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<SearchAThing.OpenGL.Core.GLLine>.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  nameWithType.vb: GLFigureTypeBase(Of GLLine).CopySpecialized(GLFigureBase)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of SearchAThing.OpenGL.Core.GLLine).CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: CopySpecialized
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase{SearchAThing.OpenGL.Core.GLLine}.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: CopySpecialized
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: CopySpecialized
+  nameWithType: GLLineFigure.CopySpecialized
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.CopySpecialized
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureTypeBase`1.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: CopySpecialized(GLFigureBase)
+  nameWithType: GLFigureTypeBase<P>.CopySpecialized(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  nameWithType.vb: GLFigureTypeBase(Of P).CopySpecialized(GLFigureBase)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P).CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: CopySpecialized
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: CopySpecialized
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.Mirror(System.Numerics.Matrix4x4@)
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.Mirror(System.Numerics.Matrix4x4@)
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Mirror_System_Numerics_Matrix4x4__
+  name: Mirror(in Matrix4x4)
+  nameWithType: GLFigureBase.Mirror(in Matrix4x4)
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.Mirror(in System.Numerics.Matrix4x4)
+  nameWithType.vb: GLFigureBase.Mirror(Matrix4x4)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureBase.Mirror(System.Numerics.Matrix4x4)
+  name.vb: Mirror(Matrix4x4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.Mirror(System.Numerics.Matrix4x4@)
+    name: Mirror
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Mirror_System_Numerics_Matrix4x4__
+  - name: (
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.Mirror(System.Numerics.Matrix4x4@)
+    name: Mirror
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Mirror_System_Numerics_Matrix4x4__
+  - name: (
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.Mirror*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLLineFigure.Mirror
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_Mirror_System_Numerics_Matrix4x4__
+  name: Mirror
+  nameWithType: GLLineFigure.Mirror
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.Mirror
+- uid: System.Numerics.Matrix4x4
+  commentId: T:System.Numerics.Matrix4x4
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: System.Numerics.Matrix4x4
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: SearchAThing.OpenGL.Core.GLFigureBase.SimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.GLFigureBase.SimpleCmd
+  parent: SearchAThing.OpenGL.Core.GLFigureBase
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_SimpleCmd
+  name: SimpleCmd()
+  nameWithType: GLFigureBase.SimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase.SimpleCmd()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_SimpleCmd
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_SimpleCmd
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_SimpleCmd
+  name: SimpleCmd
+  nameWithType: GLLineFigure.SimpleCmd
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+- uid: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd
+  name: SimpleCmd()
+  nameWithType: IGLFigure.SimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

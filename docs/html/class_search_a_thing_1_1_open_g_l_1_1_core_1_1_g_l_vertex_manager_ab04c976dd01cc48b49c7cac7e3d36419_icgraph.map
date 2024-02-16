@@ -1,5 +1,0 @@
-<map id="RecomputeLBBox" name="RecomputeLBBox">
-<area shape="rect" id="node1" title="Recompute bbox [local] of all figure/primitive vertexes upading LBBox. &#160;Used internally after figure/..." alt="" coords="507,13,644,38"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#ad61a45e7bbe4b020ec08eb282dec7915" title="Invalidate and recalc bounding box [local]. &#160;Used internally after delete of figures/primitives." alt="" coords="256,5,459,45"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#aa8624fb66af820e280c7457b6e1c814d" title="Delete selected primitives/figures." alt="" coords="5,5,208,45"/>
-</map>

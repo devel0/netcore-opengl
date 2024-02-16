@@ -1,0 +1,321 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  commentId: T:SearchAThing.OpenGL.Core.GLTextVHAlignment
+  id: GLTextVHAlignment
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomCenter
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomLeft
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomRight
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleCenter
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleLeft
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleRight
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.TopCenter
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.TopLeft
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment.TopRight
+  langs:
+  - csharp
+  - vb
+  name: GLTextVHAlignment
+  nameWithType: GLTextVHAlignment
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  type: Enum
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLTextVHAlignment
+    path: src/core/render/Types.cs
+    startLine: 47
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl text alignment respect given insertion point.
+  example: []
+  syntax:
+    content: public enum GLTextVHAlignment
+    content.vb: Public Enum GLTextVHAlignment
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLText
+    commentId: T:SearchAThing.OpenGL.Core.GLText
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.TopLeft
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.TopLeft
+  id: TopLeft
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: TopLeft
+  nameWithType: GLTextVHAlignment.TopLeft
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.TopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopLeft
+    path: src/core/render/Types.cs
+    startLine: 49
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: TopLeft = 0
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.TopCenter
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.TopCenter
+  id: TopCenter
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: TopCenter
+  nameWithType: GLTextVHAlignment.TopCenter
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.TopCenter
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopCenter
+    path: src/core/render/Types.cs
+    startLine: 50
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: TopCenter = 1
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.TopRight
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.TopRight
+  id: TopRight
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: TopRight
+  nameWithType: GLTextVHAlignment.TopRight
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.TopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopRight
+    path: src/core/render/Types.cs
+    startLine: 51
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: TopRight = 2
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleLeft
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleLeft
+  id: MiddleLeft
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: MiddleLeft
+  nameWithType: GLTextVHAlignment.MiddleLeft
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MiddleLeft
+    path: src/core/render/Types.cs
+    startLine: 53
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: MiddleLeft = 3
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleCenter
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleCenter
+  id: MiddleCenter
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: MiddleCenter
+  nameWithType: GLTextVHAlignment.MiddleCenter
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleCenter
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MiddleCenter
+    path: src/core/render/Types.cs
+    startLine: 54
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: MiddleCenter = 4
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleRight
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleRight
+  id: MiddleRight
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: MiddleRight
+  nameWithType: GLTextVHAlignment.MiddleRight
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.MiddleRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MiddleRight
+    path: src/core/render/Types.cs
+    startLine: 55
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: MiddleRight = 5
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomLeft
+  id: BottomLeft
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: BottomLeft
+  nameWithType: GLTextVHAlignment.BottomLeft
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomLeft
+    path: src/core/render/Types.cs
+    startLine: 57
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: BottomLeft = 6
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomCenter
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomCenter
+  id: BottomCenter
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: BottomCenter
+  nameWithType: GLTextVHAlignment.BottomCenter
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomCenter
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomCenter
+    path: src/core/render/Types.cs
+    startLine: 58
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: BottomCenter = 7
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomRight
+  commentId: F:SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomRight
+  id: BottomRight
+  parent: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  langs:
+  - csharp
+  - vb
+  name: BottomRight
+  nameWithType: GLTextVHAlignment.BottomRight
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment.BottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomRight
+    path: src/core/render/Types.cs
+    startLine: 59
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: BottomRight = 8
+    return:
+      type: SearchAThing.OpenGL.Core.GLTextVHAlignment
+references:
+- uid: SearchAThing.OpenGL.Core.GLText
+  commentId: T:SearchAThing.OpenGL.Core.GLText
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLText.html
+  name: GLText
+  nameWithType: GLText
+  fullName: SearchAThing.OpenGL.Core.GLText
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  commentId: T:SearchAThing.OpenGL.Core.GLTextVHAlignment
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTextVHAlignment.html
+  name: GLTextVHAlignment
+  nameWithType: GLTextVHAlignment
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment

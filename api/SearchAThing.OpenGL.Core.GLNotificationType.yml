@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLNotificationType
+  commentId: T:SearchAThing.OpenGL.Core.GLNotificationType
+  id: GLNotificationType
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLNotificationType.Error
+  - SearchAThing.OpenGL.Core.GLNotificationType.Information
+  - SearchAThing.OpenGL.Core.GLNotificationType.Success
+  - SearchAThing.OpenGL.Core.GLNotificationType.Warning
+  langs:
+  - csharp
+  - vb
+  name: GLNotificationType
+  nameWithType: GLNotificationType
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType
+  type: Enum
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLNotificationType
+    path: src/core/render/Types.cs
+    startLine: 85
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Type of notification emitted by gl control.
+  example: []
+  syntax:
+    content: public enum GLNotificationType
+    content.vb: Public Enum GLNotificationType
+- uid: SearchAThing.OpenGL.Core.GLNotificationType.Information
+  commentId: F:SearchAThing.OpenGL.Core.GLNotificationType.Information
+  id: Information
+  parent: SearchAThing.OpenGL.Core.GLNotificationType
+  langs:
+  - csharp
+  - vb
+  name: Information
+  nameWithType: GLNotificationType.Information
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType.Information
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Information
+    path: src/core/render/Types.cs
+    startLine: 87
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: Information = 0
+    return:
+      type: SearchAThing.OpenGL.Core.GLNotificationType
+- uid: SearchAThing.OpenGL.Core.GLNotificationType.Success
+  commentId: F:SearchAThing.OpenGL.Core.GLNotificationType.Success
+  id: Success
+  parent: SearchAThing.OpenGL.Core.GLNotificationType
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: GLNotificationType.Success
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType.Success
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Success
+    path: src/core/render/Types.cs
+    startLine: 88
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: Success = 1
+    return:
+      type: SearchAThing.OpenGL.Core.GLNotificationType
+- uid: SearchAThing.OpenGL.Core.GLNotificationType.Warning
+  commentId: F:SearchAThing.OpenGL.Core.GLNotificationType.Warning
+  id: Warning
+  parent: SearchAThing.OpenGL.Core.GLNotificationType
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: GLNotificationType.Warning
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType.Warning
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Warning
+    path: src/core/render/Types.cs
+    startLine: 89
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: Warning = 2
+    return:
+      type: SearchAThing.OpenGL.Core.GLNotificationType
+- uid: SearchAThing.OpenGL.Core.GLNotificationType.Error
+  commentId: F:SearchAThing.OpenGL.Core.GLNotificationType.Error
+  id: Error
+  parent: SearchAThing.OpenGL.Core.GLNotificationType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: GLNotificationType.Error
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType.Error
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Error
+    path: src/core/render/Types.cs
+    startLine: 90
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: Error = 3
+    return:
+      type: SearchAThing.OpenGL.Core.GLNotificationType
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLNotificationType
+  commentId: T:SearchAThing.OpenGL.Core.GLNotificationType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLNotificationType.html
+  name: GLNotificationType
+  nameWithType: GLNotificationType
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType

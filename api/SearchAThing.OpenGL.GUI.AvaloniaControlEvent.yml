@@ -1,0 +1,172 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+  commentId: T:SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+  id: AvaloniaControlEvent
+  parent: SearchAThing.OpenGL.GUI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AvaloniaControlEvent
+  nameWithType: AvaloniaControlEvent
+  fullName: SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+  type: Delegate
+  source:
+    remote:
+      path: src/gui/AvaloniaGLControlSplit.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AvaloniaControlEvent
+    path: src/gui/AvaloniaGLControlSplit.cs
+    startLine: 16
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Generic delegate used by <xref href="SearchAThing.OpenGL.GUI.Toolkit.AttachGLControlSplit(Avalonia.Controls.Window%2cAvalonia.Controls.Grid%2cSearchAThing.OpenGL.Core.GLModel%2cSystem.Action%7bSearchAThing.OpenGL.GUI.AvaloniaGLControlSplit%7d%2cSearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent%2cSearchAThing.OpenGL.GUI.AvaloniaControlEvent%2cSearchAThing.OpenGL.GUI.AvaloniaControlEvent)" data-throw-if-not-resolved="false"></xref> for control create/remove events.
+  example: []
+  syntax:
+    content: public delegate void AvaloniaControlEvent(AvaloniaGLControl ctl)
+    parameters:
+    - id: ctl
+      type: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+      description: Gl control reference.
+    content.vb: Public Delegate Sub AvaloniaControlEvent(ctl As AvaloniaGLControl)
+references:
+- uid: SearchAThing.OpenGL.GUI.Toolkit.AttachGLControlSplit(Avalonia.Controls.Window,Avalonia.Controls.Grid,SearchAThing.OpenGL.Core.GLModel,System.Action{SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit},SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent)
+  commentId: M:SearchAThing.OpenGL.GUI.Toolkit.AttachGLControlSplit(Avalonia.Controls.Window,Avalonia.Controls.Grid,SearchAThing.OpenGL.Core.GLModel,System.Action{SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit},SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent)
+  isExternal: true
+  href: SearchAThing.OpenGL.GUI.Toolkit.html#SearchAThing_OpenGL_GUI_Toolkit_AttachGLControlSplit_Avalonia_Controls_Window_Avalonia_Controls_Grid_SearchAThing_OpenGL_Core_GLModel_System_Action_SearchAThing_OpenGL_GUI_AvaloniaGLControlSplit__SearchAThing_OpenGL_GUI_AvaloniaControlInitialEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_
+  name: AttachGLControlSplit(Window, Grid, GLModel, Action<AvaloniaGLControlSplit>, AvaloniaControlInitialEvent, AvaloniaControlEvent, AvaloniaControlEvent)
+  nameWithType: Toolkit.AttachGLControlSplit(Window, Grid, GLModel, Action<AvaloniaGLControlSplit>, AvaloniaControlInitialEvent, AvaloniaControlEvent, AvaloniaControlEvent)
+  fullName: SearchAThing.OpenGL.GUI.Toolkit.AttachGLControlSplit(Avalonia.Controls.Window, Avalonia.Controls.Grid, SearchAThing.OpenGL.Core.GLModel, System.Action<SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit>, SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent, SearchAThing.OpenGL.GUI.AvaloniaControlEvent, SearchAThing.OpenGL.GUI.AvaloniaControlEvent)
+  nameWithType.vb: Toolkit.AttachGLControlSplit(Window, Grid, GLModel, Action(Of AvaloniaGLControlSplit), AvaloniaControlInitialEvent, AvaloniaControlEvent, AvaloniaControlEvent)
+  fullName.vb: SearchAThing.OpenGL.GUI.Toolkit.AttachGLControlSplit(Avalonia.Controls.Window, Avalonia.Controls.Grid, SearchAThing.OpenGL.Core.GLModel, System.Action(Of SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit), SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent, SearchAThing.OpenGL.GUI.AvaloniaControlEvent, SearchAThing.OpenGL.GUI.AvaloniaControlEvent)
+  name.vb: AttachGLControlSplit(Window, Grid, GLModel, Action(Of AvaloniaGLControlSplit), AvaloniaControlInitialEvent, AvaloniaControlEvent, AvaloniaControlEvent)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.GUI.Toolkit.AttachGLControlSplit(Avalonia.Controls.Window,Avalonia.Controls.Grid,SearchAThing.OpenGL.Core.GLModel,System.Action{SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit},SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent)
+    name: AttachGLControlSplit
+    href: SearchAThing.OpenGL.GUI.Toolkit.html#SearchAThing_OpenGL_GUI_Toolkit_AttachGLControlSplit_Avalonia_Controls_Window_Avalonia_Controls_Grid_SearchAThing_OpenGL_Core_GLModel_System_Action_SearchAThing_OpenGL_GUI_AvaloniaGLControlSplit__SearchAThing_OpenGL_GUI_AvaloniaControlInitialEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_
+  - name: (
+  - uid: Avalonia.Controls.Window
+    name: Window
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Controls.Grid
+    name: Grid
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+    name: AvaloniaGLControlSplit
+    href: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent
+    name: AvaloniaControlInitialEvent
+    href: SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+    name: AvaloniaControlEvent
+    href: SearchAThing.OpenGL.GUI.AvaloniaControlEvent.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+    name: AvaloniaControlEvent
+    href: SearchAThing.OpenGL.GUI.AvaloniaControlEvent.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.GUI.Toolkit.AttachGLControlSplit(Avalonia.Controls.Window,Avalonia.Controls.Grid,SearchAThing.OpenGL.Core.GLModel,System.Action{SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit},SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent,SearchAThing.OpenGL.GUI.AvaloniaControlEvent)
+    name: AttachGLControlSplit
+    href: SearchAThing.OpenGL.GUI.Toolkit.html#SearchAThing_OpenGL_GUI_Toolkit_AttachGLControlSplit_Avalonia_Controls_Window_Avalonia_Controls_Grid_SearchAThing_OpenGL_Core_GLModel_System_Action_SearchAThing_OpenGL_GUI_AvaloniaGLControlSplit__SearchAThing_OpenGL_GUI_AvaloniaControlInitialEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_SearchAThing_OpenGL_GUI_AvaloniaControlEvent_
+  - name: (
+  - uid: Avalonia.Controls.Window
+    name: Window
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Controls.Grid
+    name: Grid
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+    name: AvaloniaGLControlSplit
+    href: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent
+    name: AvaloniaControlInitialEvent
+    href: SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+    name: AvaloniaControlEvent
+    href: SearchAThing.OpenGL.GUI.AvaloniaControlEvent.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+    name: AvaloniaControlEvent
+    href: SearchAThing.OpenGL.GUI.AvaloniaControlEvent.html
+  - name: )
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+  commentId: T:SearchAThing.OpenGL.GUI.AvaloniaGLControl
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.AvaloniaGLControl.html
+  name: AvaloniaGLControl
+  nameWithType: AvaloniaGLControl
+  fullName: SearchAThing.OpenGL.GUI.AvaloniaGLControl

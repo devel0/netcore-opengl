@@ -1,0 +1,4727 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.Constants
+  commentId: T:SearchAThing.OpenGL.Core.Constants
+  id: Constants
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.Constants.ATTNAME_vFlags
+  - SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatColor
+  - SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatProp
+  - SearchAThing.OpenGL.Core.Constants.ATTNAME_vNormal
+  - SearchAThing.OpenGL.Core.Constants.ATTNAME_vPos
+  - SearchAThing.OpenGL.Core.Constants.ATTNAME_vTexCoord
+  - SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTFILE
+  - SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTNAME
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_POS
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_TARGET
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_UP
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_CameraObjectColor
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_ClearColor
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_CursorMode
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_Far
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureOrder
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureVisible
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_FovDeg
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_INVALIDATE
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_COLOR
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_CONSTANT
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_LINEAR
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_QUADRATIC
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT_SIZE
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialAmbientStrength
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialColor
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialDiffuseStrength
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialProperties
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialSpecularStrength
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_NORMAL_FACTOR
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_Near
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_Normal
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_ObjectMatrix
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_OrthoZoom
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_PIXEL_FORMAT
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_Perspective
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_PointSize
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_SHADE_WITH_EDGE
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_SHOW_NORMALS
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_ScreenCoord
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_StdViewAngleDeg
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_TEXTURE_INTERNAL_FORMAT
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_TRACE_LOCATION_WARNINGS
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_TexCoord
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_TextColor
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_UseShadows
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_UseTexture
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_VertexPosition
+  - SearchAThing.OpenGL.Core.Constants.DEFAULT_Wireframe
+  - SearchAThing.OpenGL.Core.Constants.DefaultHitTestTolerance
+  - SearchAThing.OpenGL.Core.Constants.DefaultTolerance
+  - SearchAThing.OpenGL.Core.Constants.FONT_BITMAP_PIXEL
+  - SearchAThing.OpenGL.Core.Constants.MAIN_TEXTURE_UNIT
+  - SearchAThing.OpenGL.Core.Constants.MESA_WIN_LIBRARY_ENV
+  - SearchAThing.OpenGL.Core.Constants.NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+  - SearchAThing.OpenGL.Core.Constants.NormalizedTolerance
+  - SearchAThing.OpenGL.Core.Constants.PAN_LITTLE_FACTOR
+  - SearchAThing.OpenGL.Core.Constants.RESOURCE_NAMESPACE_BASE
+  - SearchAThing.OpenGL.Core.Constants.ROTATE_LITTLE_DEG
+  - SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_H
+  - SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TX
+  - SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TY
+  - SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_W
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_FRAG
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_GEOM
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_VERT
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_FRAG
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_NORMAL
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+  - SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_VERT
+  - SearchAThing.OpenGL.Core.Constants.SHADOW_HEIGHT
+  - SearchAThing.OpenGL.Core.Constants.SHADOW_TEXTURE_UNIT
+  - SearchAThing.OpenGL.Core.Constants.SHADOW_WIDTH
+  - SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_COORD_SEP
+  - SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_LINE
+  - SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT
+  - SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT_SEP
+  - SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_TRIANGLE
+  - SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsBlock
+  - SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsMatrixesBlock
+  - SearchAThing.OpenGL.Core.Constants.TILT_LITTLE_DEG
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMax
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMin
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uCameraPos
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uDepthMap
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uEvalLight
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uFarPlaneLight
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureAlpha
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureHighlight
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureScreenCoord
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureSelected
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uIsText
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uLightIdx
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uMainTexture
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uModel
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uObject
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbient
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbientEnabled
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuse
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuseEnabled
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecular
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecularEnabled
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uProjection
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenModel
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenProjection
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uShadows
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uUseTexture
+  - SearchAThing.OpenGL.Core.Constants.UNINAME_uView
+  - SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename
+  - SearchAThing.OpenGL.Core.Constants.WCS
+  - SearchAThing.OpenGL.Core.Constants.XZCS
+  - SearchAThing.OpenGL.Core.Constants.YAxisOrientation
+  - SearchAThing.OpenGL.Core.Constants.YZCS
+  - SearchAThing.OpenGL.Core.Constants.ZOOM_LITTLE_FACTOR
+  - SearchAThing.OpenGL.Core.Constants.aaaSmall
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: SearchAThing.OpenGL.Core.Constants
+  type: Class
+  source:
+    remote:
+      path: src/core/vertex/GLVertex.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Constants
+    path: src/core/vertex/GLVertex.cs
+    startLine: 409
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public static class Constants
+    content.vb: Public Module Constants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Core.Constants.WCS
+  commentId: F:SearchAThing.OpenGL.Core.Constants.WCS
+  id: WCS
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: WCS
+  nameWithType: Constants.WCS
+  fullName: SearchAThing.OpenGL.Core.Constants.WCS
+  type: Field
+  source:
+    remote:
+      path: src/core/calc/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: WCS
+    path: src/core/calc/Constants.cs
+    startLine: 8
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: CS world with origin=(0,0,0) basex=(1,0,0) basey=(0,1,0) basez=(0,0,1)
+  example: []
+  syntax:
+    content: public static readonly Matrix4x4 WCS
+    return:
+      type: System.Numerics.Matrix4x4
+    content.vb: Public Shared ReadOnly WCS As Matrix4x4
+- uid: SearchAThing.OpenGL.Core.Constants.YZCS
+  commentId: F:SearchAThing.OpenGL.Core.Constants.YZCS
+  id: YZCS
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: YZCS
+  nameWithType: Constants.YZCS
+  fullName: SearchAThing.OpenGL.Core.Constants.YZCS
+  type: Field
+  source:
+    remote:
+      path: src/core/calc/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: YZCS
+    path: src/core/calc/Constants.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: CS representing YZ plane origin=(0,0,0) basex=(0,1,0) basey=(0,0,1) basez=(1,0,0)
+  example: []
+  syntax:
+    content: public static readonly Matrix4x4 YZCS
+    return:
+      type: System.Numerics.Matrix4x4
+    content.vb: Public Shared ReadOnly YZCS As Matrix4x4
+- uid: SearchAThing.OpenGL.Core.Constants.XZCS
+  commentId: F:SearchAThing.OpenGL.Core.Constants.XZCS
+  id: XZCS
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: XZCS
+  nameWithType: Constants.XZCS
+  fullName: SearchAThing.OpenGL.Core.Constants.XZCS
+  type: Field
+  source:
+    remote:
+      path: src/core/calc/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: XZCS
+    path: src/core/calc/Constants.cs
+    startLine: 18
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: CS representing XZ plane origin=(0,0,0) basex=(1,0,0) basey=(0,0,1) basez=(0,-1,0)
+  example: []
+  syntax:
+    content: public static readonly Matrix4x4 XZCS
+    return:
+      type: System.Numerics.Matrix4x4
+    content.vb: Public Shared ReadOnly XZCS As Matrix4x4
+- uid: SearchAThing.OpenGL.Core.Constants.YAxisOrientation
+  commentId: F:SearchAThing.OpenGL.Core.Constants.YAxisOrientation
+  id: YAxisOrientation
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: YAxisOrientation
+  nameWithType: Constants.YAxisOrientation
+  fullName: SearchAThing.OpenGL.Core.Constants.YAxisOrientation
+  type: Field
+  source:
+    remote:
+      path: src/core/calc/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: YAxisOrientation
+    path: src/core/calc/Constants.cs
+    startLine: 26
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Y axis orientation [screen].<br />
+  remarks: "NOTE: Actually tested only for YPositiveUp. It's a constant hard coded."
+  example: []
+  syntax:
+    content: public const YAxisOrientationEnum YAxisOrientation = YPositiveUp
+    return:
+      type: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+    content.vb: Public Const YAxisOrientation As YAxisOrientationEnum = YPositiveUp
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_Near
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_Near
+  id: DEFAULT_Near
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_Near
+  nameWithType: Constants.DEFAULT_Near
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_Near
+  type: Field
+  source:
+    remote:
+      path: src/core/calc/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_Near
+    path: src/core/calc/Constants.cs
+    startLine: 32
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) Absolute position along [eye] z axis of the near clipping plane.
+  example: []
+  syntax:
+    content: public const float DEFAULT_Near = 0.1
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_Near As Single = 0.1
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_Far
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_Far
+  id: DEFAULT_Far
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_Far
+  nameWithType: Constants.DEFAULT_Far
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_Far
+  type: Field
+  source:
+    remote:
+      path: src/core/calc/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_Far
+    path: src/core/calc/Constants.cs
+    startLine: 38
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) Absolute position along [eye] z axis of the far clipping plane.
+  example: []
+  syntax:
+    content: public const float DEFAULT_Far = 50000
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_Far As Single = 50000
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_ObjectMatrix
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_ObjectMatrix
+  id: DEFAULT_ObjectMatrix
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ObjectMatrix
+  nameWithType: Constants.DEFAULT_ObjectMatrix
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_ObjectMatrix
+  type: Field
+  source:
+    remote:
+      path: src/core/figure/IGLFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ObjectMatrix
+    path: src/core/figure/IGLFigure.cs
+    startLine: 165
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix" data-throw-if-not-resolved="false"></xref> of a figure.
+  example: []
+  syntax:
+    content: public static readonly Matrix4x4 DEFAULT_ObjectMatrix
+    return:
+      type: System.Numerics.Matrix4x4
+    content.vb: Public Shared ReadOnly DEFAULT_ObjectMatrix As Matrix4x4
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_ScreenCoord
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_ScreenCoord
+  id: DEFAULT_ScreenCoord
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ScreenCoord
+  nameWithType: Constants.DEFAULT_ScreenCoord
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_ScreenCoord
+  type: Field
+  source:
+    remote:
+      path: src/core/figure/IGLFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ScreenCoord
+    path: src/core/figure/IGLFigure.cs
+    startLine: 170
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode" data-throw-if-not-resolved="false"></xref> of a figure.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_ScreenCoord = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_ScreenCoord As Boolean = False
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureVisible
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureVisible
+  id: DEFAULT_FigureVisible
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_FigureVisible
+  nameWithType: Constants.DEFAULT_FigureVisible
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureVisible
+  type: Field
+  source:
+    remote:
+      path: src/core/figure/IGLFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_FigureVisible
+    path: src/core/figure/IGLFigure.cs
+    startLine: 175
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.IGLFigure.Visible" data-throw-if-not-resolved="false"></xref> of a figure.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_FigureVisible = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_FigureVisible As Boolean = True
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureOrder
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureOrder
+  id: DEFAULT_FigureOrder
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_FigureOrder
+  nameWithType: Constants.DEFAULT_FigureOrder
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_FigureOrder
+  type: Field
+  source:
+    remote:
+      path: src/core/figure/IGLFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_FigureOrder
+    path: src/core/figure/IGLFigure.cs
+    startLine: 180
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.IGLFigure.Order" data-throw-if-not-resolved="false"></xref> of a figure.
+  example: []
+  syntax:
+    content: public const int DEFAULT_FigureOrder = 0
+    return:
+      type: System.Int32
+    content.vb: Public Const DEFAULT_FigureOrder As Integer = 0
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_PointSize
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_PointSize
+  id: DEFAULT_PointSize
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_PointSize
+  nameWithType: Constants.DEFAULT_PointSize
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_PointSize
+  type: Field
+  source:
+    remote:
+      path: src/core/figure/IGLPointFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_PointSize
+    path: src/core/figure/IGLPointFigure.cs
+    startLine: 34
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.IGLPointFigure.PointSize" data-throw-if-not-resolved="false"></xref> of a point figure.
+  example: []
+  syntax:
+    content: public const float DEFAULT_PointSize = 10
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_PointSize As Single = 10
+- uid: SearchAThing.OpenGL.Core.Constants.DefaultTolerance
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DefaultTolerance
+  id: DefaultTolerance
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DefaultTolerance
+  nameWithType: Constants.DefaultTolerance
+  fullName: SearchAThing.OpenGL.Core.Constants.DefaultTolerance
+  type: Field
+  source:
+    remote:
+      path: src/core/geom/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DefaultTolerance
+    path: src/core/geom/Constants.cs
+    startLine: 9
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Default tolerance for empty model.<br />
+
+    <xref href="SearchAThing.OpenGL.Core.BBox.TolHint" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public const float DefaultTolerance = 1E-05
+    return:
+      type: System.Single
+    content.vb: Public Const DefaultTolerance As Single = 1E-05
+- uid: SearchAThing.OpenGL.Core.Constants.DefaultHitTestTolerance
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DefaultHitTestTolerance
+  id: DefaultHitTestTolerance
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DefaultHitTestTolerance
+  nameWithType: Constants.DefaultHitTestTolerance
+  fullName: SearchAThing.OpenGL.Core.Constants.DefaultHitTestTolerance
+  type: Field
+  source:
+    remote:
+      path: src/core/geom/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DefaultHitTestTolerance
+    path: src/core/geom/Constants.cs
+    startLine: 14
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Default hit test tolerance.<br />
+  example: []
+  syntax:
+    content: public const float DefaultHitTestTolerance = 0.01
+    return:
+      type: System.Single
+    content.vb: Public Const DefaultHitTestTolerance As Single = 0.01
+- uid: SearchAThing.OpenGL.Core.Constants.NormalizedTolerance
+  commentId: F:SearchAThing.OpenGL.Core.Constants.NormalizedTolerance
+  id: NormalizedTolerance
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: NormalizedTolerance
+  nameWithType: Constants.NormalizedTolerance
+  fullName: SearchAThing.OpenGL.Core.Constants.NormalizedTolerance
+  type: Field
+  source:
+    remote:
+      path: src/core/geom/Number.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NormalizedTolerance
+    path: src/core/geom/Number.cs
+    startLine: 101
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Tolerance to be used in comparision of normalized vectors.
+  example: []
+  syntax:
+    content: public const float NormalizedTolerance = 1E-06
+    return:
+      type: System.Single
+    content.vb: Public Const NormalizedTolerance As Single = 1E-06
+- uid: SearchAThing.OpenGL.Core.Constants.aaaSmall
+  commentId: F:SearchAThing.OpenGL.Core.Constants.aaaSmall
+  id: aaaSmall
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: aaaSmall
+  nameWithType: Constants.aaaSmall
+  fullName: SearchAThing.OpenGL.Core.Constants.aaaSmall
+  type: Field
+  source:
+    remote:
+      path: src/core/geom/Number.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: aaaSmall
+    path: src/core/geom/Number.cs
+    startLine: 106
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Constant used in <xref href="SearchAThing.OpenGL.Core.Toolkit.ArbitraryAxisAlghorithm(System.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const float aaaSmall = 0.015625
+    return:
+      type: System.Single
+    content.vb: Public Const aaaSmall As Single = 0.015625
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialColor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialColor
+  id: DEFAULT_MaterialColor
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_MaterialColor
+  nameWithType: Constants.DEFAULT_MaterialColor
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialColor
+  type: Field
+  source:
+    remote:
+      path: src/core/media/MaterialProperties.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_MaterialColor
+    path: src/core/media/MaterialProperties.cs
+    startLine: 49
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: ( Default ) color.
+  example: []
+  syntax:
+    content: public static readonly Color DEFAULT_MaterialColor
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Shared ReadOnly DEFAULT_MaterialColor As Color
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialProperties
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialProperties
+  id: DEFAULT_MaterialProperties
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_MaterialProperties
+  nameWithType: Constants.DEFAULT_MaterialProperties
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialProperties
+  type: Field
+  source:
+    remote:
+      path: src/core/media/MaterialProperties.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_MaterialProperties
+    path: src/core/media/MaterialProperties.cs
+    startLine: 54
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: ( Default ) material properties ( ambient:0.8, diffuse:0.6, strength:0.6 ).
+  example: []
+  syntax:
+    content: public static readonly MaterialProperties DEFAULT_MaterialProperties
+    return:
+      type: SearchAThing.OpenGL.Core.MaterialProperties
+    content.vb: Public Shared ReadOnly DEFAULT_MaterialProperties As MaterialProperties
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialAmbientStrength
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialAmbientStrength
+  id: DEFAULT_MaterialAmbientStrength
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_MaterialAmbientStrength
+  nameWithType: Constants.DEFAULT_MaterialAmbientStrength
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialAmbientStrength
+  type: Field
+  source:
+    remote:
+      path: src/core/media/MaterialProperties.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_MaterialAmbientStrength
+    path: src/core/media/MaterialProperties.cs
+    startLine: 59
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: ( Default ) material ambient strength ( 0.8 ).
+  example: []
+  syntax:
+    content: public const float DEFAULT_MaterialAmbientStrength = 0.8
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_MaterialAmbientStrength As Single = 0.8
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialDiffuseStrength
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialDiffuseStrength
+  id: DEFAULT_MaterialDiffuseStrength
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_MaterialDiffuseStrength
+  nameWithType: Constants.DEFAULT_MaterialDiffuseStrength
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialDiffuseStrength
+  type: Field
+  source:
+    remote:
+      path: src/core/media/MaterialProperties.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_MaterialDiffuseStrength
+    path: src/core/media/MaterialProperties.cs
+    startLine: 64
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: ( Default ) material diffuse strength ( 0.6 ).
+  example: []
+  syntax:
+    content: public const float DEFAULT_MaterialDiffuseStrength = 0.6
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_MaterialDiffuseStrength As Single = 0.6
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialSpecularStrength
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialSpecularStrength
+  id: DEFAULT_MaterialSpecularStrength
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_MaterialSpecularStrength
+  nameWithType: Constants.DEFAULT_MaterialSpecularStrength
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_MaterialSpecularStrength
+  type: Field
+  source:
+    remote:
+      path: src/core/media/MaterialProperties.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_MaterialSpecularStrength
+    path: src/core/media/MaterialProperties.cs
+    startLine: 69
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: ( Default ) material specular strength ( 0.6 ).
+  example: []
+  syntax:
+    content: public const float DEFAULT_MaterialSpecularStrength = 0.6
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_MaterialSpecularStrength As Single = 0.6
+- uid: SearchAThing.OpenGL.Core.Constants.MESA_WIN_LIBRARY_ENV
+  commentId: F:SearchAThing.OpenGL.Core.Constants.MESA_WIN_LIBRARY_ENV
+  id: MESA_WIN_LIBRARY_ENV
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: MESA_WIN_LIBRARY_ENV
+  nameWithType: Constants.MESA_WIN_LIBRARY_ENV
+  fullName: SearchAThing.OpenGL.Core.Constants.MESA_WIN_LIBRARY_ENV
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MESA_WIN_LIBRARY_ENV
+    path: src/core/render/Constants.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Environment variable to set in order to use mesa library in Windows.<br />
+
+    <xref href="SearchAThing.OpenGL.Core.GLContext" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public const string MESA_WIN_LIBRARY_ENV = "OPENGL_LIBRARY_PATH"
+    return:
+      type: System.String
+    content.vb: Public Const MESA_WIN_LIBRARY_ENV As String = "OPENGL_LIBRARY_PATH"
+- uid: SearchAThing.OpenGL.Core.Constants.NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+  commentId: F:SearchAThing.OpenGL.Core.Constants.NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+  id: NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+  nameWithType: Constants.NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+  fullName: SearchAThing.OpenGL.Core.Constants.NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NETCORE_OPENGL_CORE_ASSEMBLY_NAME
+    path: src/core/render/Constants.cs
+    startLine: 20
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: SearchAThing.OpenGL.Core assembly name (regex).
+  example: []
+  syntax:
+    content: public const string NETCORE_OPENGL_CORE_ASSEMBLY_NAME = "netcore-opengl-core"
+    return:
+      type: System.String
+    content.vb: Public Const NETCORE_OPENGL_CORE_ASSEMBLY_NAME As String = "netcore-opengl-core"
+- uid: SearchAThing.OpenGL.Core.Constants.RESOURCE_NAMESPACE_BASE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.RESOURCE_NAMESPACE_BASE
+  id: RESOURCE_NAMESPACE_BASE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: RESOURCE_NAMESPACE_BASE
+  nameWithType: Constants.RESOURCE_NAMESPACE_BASE
+  fullName: SearchAThing.OpenGL.Core.Constants.RESOURCE_NAMESPACE_BASE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RESOURCE_NAMESPACE_BASE
+    path: src/core/render/Constants.cs
+    startLine: 25
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: SearchAThing.OpenGL.Core (regex).
+  example: []
+  syntax:
+    content: public static readonly string RESOURCE_NAMESPACE_BASE
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly RESOURCE_NAMESPACE_BASE As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_VERT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_VERT
+  id: SHADER_RESOURCE_DEPTH_VERT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_DEPTH_VERT
+  nameWithType: Constants.SHADER_RESOURCE_DEPTH_VERT
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_VERT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_DEPTH_VERT
+    path: src/core/render/Constants.cs
+    startLine: 32
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "1.depth.vs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_DEPTH_VERT
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_DEPTH_VERT As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_GEOM
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_GEOM
+  id: SHADER_RESOURCE_DEPTH_GEOM
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_DEPTH_GEOM
+  nameWithType: Constants.SHADER_RESOURCE_DEPTH_GEOM
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_GEOM
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_DEPTH_GEOM
+    path: src/core/render/Constants.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "2.depth.gs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_DEPTH_GEOM
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_DEPTH_GEOM As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_FRAG
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_FRAG
+  id: SHADER_RESOURCE_DEPTH_FRAG
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_DEPTH_FRAG
+  nameWithType: Constants.SHADER_RESOURCE_DEPTH_FRAG
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_DEPTH_FRAG
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_DEPTH_FRAG
+    path: src/core/render/Constants.cs
+    startLine: 46
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "3.depth.fs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_DEPTH_FRAG
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_DEPTH_FRAG As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_VERT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_VERT
+  id: SHADER_RESOURCE_MAIN_VERT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_MAIN_VERT
+  nameWithType: Constants.SHADER_RESOURCE_MAIN_VERT
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_VERT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_MAIN_VERT
+    path: src/core/render/Constants.cs
+    startLine: 53
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "4.main.vs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_MAIN_VERT
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_MAIN_VERT As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+  id: SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+  nameWithType: Constants.SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+    path: src/core/render/Constants.cs
+    startLine: 60
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "5.shadewithedge.gs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_MAIN_GEOM_SHADE_WITH_EDGE As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+  id: SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+  nameWithType: Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+    path: src/core/render/Constants.cs
+    startLine: 67
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "5.vertexvisibilityline.gs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_LINE As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+  id: SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+  nameWithType: Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+    path: src/core/render/Constants.cs
+    startLine: 74
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "5.vertexvisibilitytri.gs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_MAIN_GEOM_VERTEX_VISIBILITY_TRI As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_NORMAL
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_NORMAL
+  id: SHADER_RESOURCE_MAIN_GEOM_NORMAL
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_MAIN_GEOM_NORMAL
+  nameWithType: Constants.SHADER_RESOURCE_MAIN_GEOM_NORMAL
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_GEOM_NORMAL
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_MAIN_GEOM_NORMAL
+    path: src/core/render/Constants.cs
+    startLine: 81
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "5.normal.gs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_MAIN_GEOM_NORMAL
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_MAIN_GEOM_NORMAL As String
+- uid: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_FRAG
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_FRAG
+  id: SHADER_RESOURCE_MAIN_FRAG
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADER_RESOURCE_MAIN_FRAG
+  nameWithType: Constants.SHADER_RESOURCE_MAIN_FRAG
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADER_RESOURCE_MAIN_FRAG
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADER_RESOURCE_MAIN_FRAG
+    path: src/core/render/Constants.cs
+    startLine: 88
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Shader "6.main.fs" resource name (regex).
+  example: []
+  syntax:
+    content: public static readonly string SHADER_RESOURCE_MAIN_FRAG
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared ReadOnly SHADER_RESOURCE_MAIN_FRAG As String
+- uid: SearchAThing.OpenGL.Core.Constants.ATTNAME_vPos
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ATTNAME_vPos
+  id: ATTNAME_vPos
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ATTNAME_vPos
+  nameWithType: Constants.ATTNAME_vPos
+  fullName: SearchAThing.OpenGL.Core.Constants.ATTNAME_vPos
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ATTNAME_vPos
+    path: src/core/render/Constants.cs
+    startLine: 98
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of vertex shader attribute ( vertex position [local] ).
+  example: []
+  syntax:
+    content: public const string ATTNAME_vPos = "vPos"
+    return:
+      type: System.String
+    content.vb: Public Const ATTNAME_vPos As String = "vPos"
+- uid: SearchAThing.OpenGL.Core.Constants.ATTNAME_vNormal
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ATTNAME_vNormal
+  id: ATTNAME_vNormal
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ATTNAME_vNormal
+  nameWithType: Constants.ATTNAME_vNormal
+  fullName: SearchAThing.OpenGL.Core.Constants.ATTNAME_vNormal
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ATTNAME_vNormal
+    path: src/core/render/Constants.cs
+    startLine: 103
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of vertex shader attribute ( vertex normal [local] ).
+  example: []
+  syntax:
+    content: public const string ATTNAME_vNormal = "vNormal"
+    return:
+      type: System.String
+    content.vb: Public Const ATTNAME_vNormal As String = "vNormal"
+- uid: SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatColor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatColor
+  id: ATTNAME_vMatColor
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ATTNAME_vMatColor
+  nameWithType: Constants.ATTNAME_vMatColor
+  fullName: SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatColor
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ATTNAME_vMatColor
+    path: src/core/render/Constants.cs
+    startLine: 108
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of vertex shader attribute ( rgba vertex color ).
+  example: []
+  syntax:
+    content: public const string ATTNAME_vMatColor = "vMatColor"
+    return:
+      type: System.String
+    content.vb: Public Const ATTNAME_vMatColor As String = "vMatColor"
+- uid: SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatProp
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatProp
+  id: ATTNAME_vMatProp
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ATTNAME_vMatProp
+  nameWithType: Constants.ATTNAME_vMatProp
+  fullName: SearchAThing.OpenGL.Core.Constants.ATTNAME_vMatProp
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ATTNAME_vMatProp
+    path: src/core/render/Constants.cs
+    startLine: 113
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of vertex shader attribute ( Describe the strength (0..1) of the ambient, diffuse, specular light effects. ).
+  example: []
+  syntax:
+    content: public const string ATTNAME_vMatProp = "vMatProp"
+    return:
+      type: System.String
+    content.vb: Public Const ATTNAME_vMatProp As String = "vMatProp"
+- uid: SearchAThing.OpenGL.Core.Constants.ATTNAME_vTexCoord
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ATTNAME_vTexCoord
+  id: ATTNAME_vTexCoord
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ATTNAME_vTexCoord
+  nameWithType: Constants.ATTNAME_vTexCoord
+  fullName: SearchAThing.OpenGL.Core.Constants.ATTNAME_vTexCoord
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ATTNAME_vTexCoord
+    path: src/core/render/Constants.cs
+    startLine: 118
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of vertex shader attribute ( texture coordinate mapping in the range [0,0]...[1,1] ).
+  example: []
+  syntax:
+    content: public const string ATTNAME_vTexCoord = "vTexCoord"
+    return:
+      type: System.String
+    content.vb: Public Const ATTNAME_vTexCoord As String = "vTexCoord"
+- uid: SearchAThing.OpenGL.Core.Constants.ATTNAME_vFlags
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ATTNAME_vFlags
+  id: ATTNAME_vFlags
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ATTNAME_vFlags
+  nameWithType: Constants.ATTNAME_vFlags
+  fullName: SearchAThing.OpenGL.Core.Constants.ATTNAME_vFlags
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ATTNAME_vFlags
+    path: src/core/render/Constants.cs
+    startLine: 123
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of vertex shader attribute ( flags ).
+  example: []
+  syntax:
+    content: public const string ATTNAME_vFlags = "vFlags"
+    return:
+      type: System.String
+    content.vb: Public Const ATTNAME_vFlags As String = "vFlags"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uLightIdx
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uLightIdx
+  id: UNINAME_uLightIdx
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uLightIdx
+  nameWithType: Constants.UNINAME_uLightIdx
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uLightIdx
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uLightIdx
+    path: src/core/render/Constants.cs
+    startLine: 128
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable that describe the index of the light to evaluate. ( used in depth shader ).
+  example: []
+  syntax:
+    content: public const string UNINAME_uLightIdx = "uLightIdx"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uLightIdx As String = "uLightIdx"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uObject
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uObject
+  id: UNINAME_uObject
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uObject
+  nameWithType: Constants.UNINAME_uObject
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uObject
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uObject
+    path: src/core/render/Constants.cs
+    startLine: 133
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the object matrix [object].
+  example: []
+  syntax:
+    content: public const string UNINAME_uObject = "uObject"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uObject As String = "uObject"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uModel
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uModel
+  id: UNINAME_uModel
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uModel
+  nameWithType: Constants.UNINAME_uModel
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uModel
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uModel
+    path: src/core/render/Constants.cs
+    startLine: 138
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the model matrix [local].
+  example: []
+  syntax:
+    content: public const string UNINAME_uModel = "uModel"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uModel As String = "uModel"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uView
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uView
+  id: UNINAME_uView
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uView
+  nameWithType: Constants.UNINAME_uView
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uView
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uView
+    path: src/core/render/Constants.cs
+    startLine: 143
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the view matrix [world].
+  example: []
+  syntax:
+    content: public const string UNINAME_uView = "uView"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uView As String = "uView"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uProjection
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uProjection
+  id: UNINAME_uProjection
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uProjection
+  nameWithType: Constants.UNINAME_uProjection
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uProjection
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uProjection
+    path: src/core/render/Constants.cs
+    startLine: 148
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the projection matrix [eye].
+  example: []
+  syntax:
+    content: public const string UNINAME_uProjection = "uProjection"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uProjection As String = "uProjection"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureScreenCoord
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureScreenCoord
+  id: UNINAME_uFigureScreenCoord
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uFigureScreenCoord
+  nameWithType: Constants.UNINAME_uFigureScreenCoord
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureScreenCoord
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uFigureScreenCoord
+    path: src/core/render/Constants.cs
+    startLine: 153
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable that enable screen coord mode vertex evaluation [object].
+  example: []
+  syntax:
+    content: public const string UNINAME_uFigureScreenCoord = "uFigureScreenCoord"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uFigureScreenCoord As String = "uFigureScreenCoord"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenProjection
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenProjection
+  id: UNINAME_uScreenProjection
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uScreenProjection
+  nameWithType: Constants.UNINAME_uScreenProjection
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenProjection
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uScreenProjection
+    path: src/core/render/Constants.cs
+    startLine: 158
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the screen mode projection matrix [eye].
+  example: []
+  syntax:
+    content: public const string UNINAME_uScreenProjection = "uScreenProjection"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uScreenProjection As String = "uScreenProjection"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenModel
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenModel
+  id: UNINAME_uScreenModel
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uScreenModel
+  nameWithType: Constants.UNINAME_uScreenModel
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uScreenModel
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uScreenModel
+    path: src/core/render/Constants.cs
+    startLine: 163
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the screen mode model matrix [local].
+  example: []
+  syntax:
+    content: public const string UNINAME_uScreenModel = "uScreenModel"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uScreenModel As String = "uScreenModel"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uCameraPos
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uCameraPos
+  id: UNINAME_uCameraPos
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uCameraPos
+  nameWithType: Constants.UNINAME_uCameraPos
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uCameraPos
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uCameraPos
+    path: src/core/render/Constants.cs
+    startLine: 168
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the camera position [world].
+  example: []
+  syntax:
+    content: public const string UNINAME_uCameraPos = "uCameraPos"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uCameraPos As String = "uCameraPos"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMin
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMin
+  id: UNINAME_uBBoxMin
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uBBoxMin
+  nameWithType: Constants.UNINAME_uBBoxMin
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMin
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uBBoxMin
+    path: src/core/render/Constants.cs
+    startLine: 174
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Name of the uniform shader variable for the model bbox min vertex [local].<br />
+
+    Used by normal geometry shader to compute normal scaled length.
+  example: []
+  syntax:
+    content: public const string UNINAME_uBBoxMin = "uBBoxMin"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uBBoxMin As String = "uBBoxMin"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMax
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMax
+  id: UNINAME_uBBoxMax
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uBBoxMax
+  nameWithType: Constants.UNINAME_uBBoxMax
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uBBoxMax
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uBBoxMax
+    path: src/core/render/Constants.cs
+    startLine: 180
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Name of the uniform shader variable for the model bbox max vertex [local].
+
+    Used by normal geometry shader to compute normal scale length.
+  example: []
+  syntax:
+    content: public const string UNINAME_uBBoxMax = "uBBoxMax"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uBBoxMax As String = "uBBoxMax"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor
+  id: UNINAME_uNormalFactor
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uNormalFactor
+  nameWithType: Constants.UNINAME_uNormalFactor
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uNormalFactor
+    path: src/core/render/Constants.cs
+    startLine: 186
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Name of the uniform shader variable for the normal length scaling factor respect model bbox size [local].
+
+    Used by normal geometry shader to compute normal scale length.
+  example: []
+  syntax:
+    content: public const string UNINAME_uNormalFactor = "uNormalFactor"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uNormalFactor As String = "uNormalFactor"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureHighlight
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureHighlight
+  id: UNINAME_uFigureHighlight
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uFigureHighlight
+  nameWithType: Constants.UNINAME_uFigureHighlight
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureHighlight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uFigureHighlight
+    path: src/core/render/Constants.cs
+    startLine: 191
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the figure highlight flag.
+  example: []
+  syntax:
+    content: public const string UNINAME_uFigureHighlight = "uFigureHighlight"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uFigureHighlight As String = "uFigureHighlight"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureSelected
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureSelected
+  id: UNINAME_uFigureSelected
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uFigureSelected
+  nameWithType: Constants.UNINAME_uFigureSelected
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureSelected
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uFigureSelected
+    path: src/core/render/Constants.cs
+    startLine: 196
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the figure selected flag.
+  example: []
+  syntax:
+    content: public const string UNINAME_uFigureSelected = "uFigureSelected"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uFigureSelected As String = "uFigureSelected"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureAlpha
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureAlpha
+  id: UNINAME_uFigureAlpha
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uFigureAlpha
+  nameWithType: Constants.UNINAME_uFigureAlpha
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uFigureAlpha
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uFigureAlpha
+    path: src/core/render/Constants.cs
+    startLine: 202
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Name of the uniform shader variable for the figure alpha.
+
+    <xref href="SearchAThing.OpenGL.Core.IGLFigure.Alpha" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const string UNINAME_uFigureAlpha = "uFigureAlpha"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uFigureAlpha As String = "uFigureAlpha"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbient
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbient
+  id: UNINAME_uOverrideAmbient
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uOverrideAmbient
+  nameWithType: Constants.UNINAME_uOverrideAmbient
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbient
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uOverrideAmbient
+    path: src/core/render/Constants.cs
+    startLine: 207
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to override vertex material ambient strength (0..1).
+  example: []
+  syntax:
+    content: public const string UNINAME_uOverrideAmbient = "uOverrideAmbient"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uOverrideAmbient As String = "uOverrideAmbient"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbientEnabled
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbientEnabled
+  id: UNINAME_uOverrideAmbientEnabled
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uOverrideAmbientEnabled
+  nameWithType: Constants.UNINAME_uOverrideAmbientEnabled
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideAmbientEnabled
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uOverrideAmbientEnabled
+    path: src/core/render/Constants.cs
+    startLine: 212
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to enable/disable vertex material ambient override strength.
+  example: []
+  syntax:
+    content: public const string UNINAME_uOverrideAmbientEnabled = "uOverrideAmbientEnabled"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uOverrideAmbientEnabled As String = "uOverrideAmbientEnabled"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuse
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuse
+  id: UNINAME_uOverrideDiffuse
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uOverrideDiffuse
+  nameWithType: Constants.UNINAME_uOverrideDiffuse
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuse
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uOverrideDiffuse
+    path: src/core/render/Constants.cs
+    startLine: 217
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to override vertex material diffuse strength (0..1).
+  example: []
+  syntax:
+    content: public const string UNINAME_uOverrideDiffuse = "uOverrideDiffuse"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uOverrideDiffuse As String = "uOverrideDiffuse"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuseEnabled
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuseEnabled
+  id: UNINAME_uOverrideDiffuseEnabled
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uOverrideDiffuseEnabled
+  nameWithType: Constants.UNINAME_uOverrideDiffuseEnabled
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideDiffuseEnabled
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uOverrideDiffuseEnabled
+    path: src/core/render/Constants.cs
+    startLine: 222
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to enable/disable vertex material diffuse override strength.
+  example: []
+  syntax:
+    content: public const string UNINAME_uOverrideDiffuseEnabled = "uOverrideDiffuseEnabled"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uOverrideDiffuseEnabled As String = "uOverrideDiffuseEnabled"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecular
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecular
+  id: UNINAME_uOverrideSpecular
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uOverrideSpecular
+  nameWithType: Constants.UNINAME_uOverrideSpecular
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecular
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uOverrideSpecular
+    path: src/core/render/Constants.cs
+    startLine: 227
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to override vertex material specular strength (0..1).
+  example: []
+  syntax:
+    content: public const string UNINAME_uOverrideSpecular = "uOverrideSpecular"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uOverrideSpecular As String = "uOverrideSpecular"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecularEnabled
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecularEnabled
+  id: UNINAME_uOverrideSpecularEnabled
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uOverrideSpecularEnabled
+  nameWithType: Constants.UNINAME_uOverrideSpecularEnabled
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uOverrideSpecularEnabled
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uOverrideSpecularEnabled
+    path: src/core/render/Constants.cs
+    startLine: 232
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to enable/disable vertex material specular override strength.
+  example: []
+  syntax:
+    content: public const string UNINAME_uOverrideSpecularEnabled = "uOverrideSpecularEnabled"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uOverrideSpecularEnabled As String = "uOverrideSpecularEnabled"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uUseTexture
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uUseTexture
+  id: UNINAME_uUseTexture
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uUseTexture
+  nameWithType: Constants.UNINAME_uUseTexture
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uUseTexture
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uUseTexture
+    path: src/core/render/Constants.cs
+    startLine: 237
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to consider vertex color from texture.
+  example: []
+  syntax:
+    content: public const string UNINAME_uUseTexture = "uUseTexture"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uUseTexture As String = "uUseTexture"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uShadows
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uShadows
+  id: UNINAME_uShadows
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uShadows
+  nameWithType: Constants.UNINAME_uShadows
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uShadows
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uShadows
+    path: src/core/render/Constants.cs
+    startLine: 242
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to enable/disable shadow.
+  example: []
+  syntax:
+    content: public const string UNINAME_uShadows = "uShadows"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uShadows As String = "uShadows"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uFarPlaneLight
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uFarPlaneLight
+  id: UNINAME_uFarPlaneLight
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uFarPlaneLight
+  nameWithType: Constants.UNINAME_uFarPlaneLight
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uFarPlaneLight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uFarPlaneLight
+    path: src/core/render/Constants.cs
+    startLine: 247
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to set far plane in light depth map calc.
+  example: []
+  syntax:
+    content: public const string UNINAME_uFarPlaneLight = "uFarPlaneLight"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uFarPlaneLight As String = "uFarPlaneLight"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uEvalLight
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uEvalLight
+  id: UNINAME_uEvalLight
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uEvalLight
+  nameWithType: Constants.UNINAME_uEvalLight
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uEvalLight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uEvalLight
+    path: src/core/render/Constants.cs
+    startLine: 252
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable that enables evaluation of the light.
+  example: []
+  syntax:
+    content: public const string UNINAME_uEvalLight = "uEvalLight"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uEvalLight As String = "uEvalLight"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uIsText
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uIsText
+  id: UNINAME_uIsText
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uIsText
+  nameWithType: Constants.UNINAME_uIsText
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uIsText
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uIsText
+    path: src/core/render/Constants.cs
+    startLine: 257
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to enable evluation of color from <xref href="SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor" data-throw-if-not-resolved="false"></xref> variable.
+  example: []
+  syntax:
+    content: public const string UNINAME_uIsText = "uIsText"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uIsText As String = "uIsText"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor
+  id: UNINAME_uTextColor
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uTextColor
+  nameWithType: Constants.UNINAME_uTextColor
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uTextColor
+    path: src/core/render/Constants.cs
+    startLine: 262
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable that specify color for text figure types.
+  example: []
+  syntax:
+    content: public const string UNINAME_uTextColor = "uTextColor"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uTextColor As String = "uTextColor"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uMainTexture
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uMainTexture
+  id: UNINAME_uMainTexture
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uMainTexture
+  nameWithType: Constants.UNINAME_uMainTexture
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uMainTexture
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uMainTexture
+    path: src/core/render/Constants.cs
+    startLine: 267
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to specify main texture sampler reference.
+  example: []
+  syntax:
+    content: public const string UNINAME_uMainTexture = "uMainTexture"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uMainTexture As String = "uMainTexture"
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uDepthMap
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uDepthMap
+  id: UNINAME_uDepthMap
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: UNINAME_uDepthMap
+  nameWithType: Constants.UNINAME_uDepthMap
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uDepthMap
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: UNINAME_uDepthMap
+    path: src/core/render/Constants.cs
+    startLine: 272
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable to specify depth texture cube array reference.
+  example: []
+  syntax:
+    content: public const string UNINAME_uDepthMap = "uDepthMap"
+    return:
+      type: System.String
+    content.vb: Public Const UNINAME_uDepthMap As String = "uDepthMap"
+- uid: SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsBlock
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsBlock
+  id: SSBO_Blockname_PointLightsBlock
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SSBO_Blockname_PointLightsBlock
+  nameWithType: Constants.SSBO_Blockname_PointLightsBlock
+  fullName: SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsBlock
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SSBO_Blockname_PointLightsBlock
+    path: src/core/render/Constants.cs
+    startLine: 277
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the name of points light block buffer.
+  example: []
+  syntax:
+    content: public const string SSBO_Blockname_PointLightsBlock = "PointLightsBlock"
+    return:
+      type: System.String
+    content.vb: Public Const SSBO_Blockname_PointLightsBlock As String = "PointLightsBlock"
+- uid: SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsMatrixesBlock
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsMatrixesBlock
+  id: SSBO_Blockname_PointLightsMatrixesBlock
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SSBO_Blockname_PointLightsMatrixesBlock
+  nameWithType: Constants.SSBO_Blockname_PointLightsMatrixesBlock
+  fullName: SearchAThing.OpenGL.Core.Constants.SSBO_Blockname_PointLightsMatrixesBlock
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SSBO_Blockname_PointLightsMatrixesBlock
+    path: src/core/render/Constants.cs
+    startLine: 282
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Name of the uniform shader variable for the name of points light matrixes block buffer.
+  example: []
+  syntax:
+    content: public const string SSBO_Blockname_PointLightsMatrixesBlock = "PointLightsMatrixesBlock"
+    return:
+      type: System.String
+    content.vb: Public Const SSBO_Blockname_PointLightsMatrixesBlock As String = "PointLightsMatrixesBlock"
+- uid: SearchAThing.OpenGL.Core.Constants.SHADOW_WIDTH
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADOW_WIDTH
+  id: SHADOW_WIDTH
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADOW_WIDTH
+  nameWithType: Constants.SHADOW_WIDTH
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADOW_WIDTH
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADOW_WIDTH
+    path: src/core/render/Constants.cs
+    startLine: 291
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Width (pixels) of the cube depth shadow.
+  example: []
+  syntax:
+    content: public static uint SHADOW_WIDTH
+    return:
+      type: System.UInt32
+    content.vb: Public Shared SHADOW_WIDTH As UInteger
+- uid: SearchAThing.OpenGL.Core.Constants.SHADOW_HEIGHT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADOW_HEIGHT
+  id: SHADOW_HEIGHT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADOW_HEIGHT
+  nameWithType: Constants.SHADOW_HEIGHT
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADOW_HEIGHT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADOW_HEIGHT
+    path: src/core/render/Constants.cs
+    startLine: 296
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Height (pixels) of the cube depth shadow.
+  example: []
+  syntax:
+    content: public static uint SHADOW_HEIGHT
+    return:
+      type: System.UInt32
+    content.vb: Public Shared SHADOW_HEIGHT As UInteger
+- uid: SearchAThing.OpenGL.Core.Constants.SHADOW_TEXTURE_UNIT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SHADOW_TEXTURE_UNIT
+  id: SHADOW_TEXTURE_UNIT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SHADOW_TEXTURE_UNIT
+  nameWithType: Constants.SHADOW_TEXTURE_UNIT
+  fullName: SearchAThing.OpenGL.Core.Constants.SHADOW_TEXTURE_UNIT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SHADOW_TEXTURE_UNIT
+    path: src/core/render/Constants.cs
+    startLine: 305
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl texture unit used for shadow map generation.
+  example: []
+  syntax:
+    content: public const TextureUnit SHADOW_TEXTURE_UNIT = Texture1
+    return:
+      type: Silk.NET.OpenGL.TextureUnit
+    content.vb: Public Const SHADOW_TEXTURE_UNIT As TextureUnit = Texture1
+- uid: SearchAThing.OpenGL.Core.Constants.MAIN_TEXTURE_UNIT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.MAIN_TEXTURE_UNIT
+  id: MAIN_TEXTURE_UNIT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAIN_TEXTURE_UNIT
+  nameWithType: Constants.MAIN_TEXTURE_UNIT
+  fullName: SearchAThing.OpenGL.Core.Constants.MAIN_TEXTURE_UNIT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: MAIN_TEXTURE_UNIT
+    path: src/core/render/Constants.cs
+    startLine: 310
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl texture unit used for main figure texture usages.
+  example: []
+  syntax:
+    content: public const TextureUnit MAIN_TEXTURE_UNIT = Texture2
+    return:
+      type: Silk.NET.OpenGL.TextureUnit
+    content.vb: Public Const MAIN_TEXTURE_UNIT As TextureUnit = Texture2
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_TEXTURE_INTERNAL_FORMAT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_TEXTURE_INTERNAL_FORMAT
+  id: DEFAULT_TEXTURE_INTERNAL_FORMAT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_TEXTURE_INTERNAL_FORMAT
+  nameWithType: Constants.DEFAULT_TEXTURE_INTERNAL_FORMAT
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_TEXTURE_INTERNAL_FORMAT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_TEXTURE_INTERNAL_FORMAT
+    path: src/core/render/Constants.cs
+    startLine: 315
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Specify gpy internal format of texture used by <xref href="SearchAThing.OpenGL.Core.GLTexture2D" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const InternalFormat DEFAULT_TEXTURE_INTERNAL_FORMAT = Rgba8
+    return:
+      type: Silk.NET.OpenGL.InternalFormat
+    content.vb: Public Const DEFAULT_TEXTURE_INTERNAL_FORMAT As InternalFormat = Rgba8
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_PIXEL_FORMAT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_PIXEL_FORMAT
+  id: DEFAULT_PIXEL_FORMAT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_PIXEL_FORMAT
+  nameWithType: Constants.DEFAULT_PIXEL_FORMAT
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_PIXEL_FORMAT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_PIXEL_FORMAT
+    path: src/core/render/Constants.cs
+    startLine: 320
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Specify default image buffer format by <xref href="SearchAThing.OpenGL.Core.GLTexture2D" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const PixelFormat DEFAULT_PIXEL_FORMAT = Rgba
+    return:
+      type: Silk.NET.OpenGL.PixelFormat
+    content.vb: Public Const DEFAULT_PIXEL_FORMAT As PixelFormat = Rgba
+- uid: SearchAThing.OpenGL.Core.Constants.FONT_BITMAP_PIXEL
+  commentId: F:SearchAThing.OpenGL.Core.Constants.FONT_BITMAP_PIXEL
+  id: FONT_BITMAP_PIXEL
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: FONT_BITMAP_PIXEL
+  nameWithType: Constants.FONT_BITMAP_PIXEL
+  fullName: SearchAThing.OpenGL.Core.Constants.FONT_BITMAP_PIXEL
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FONT_BITMAP_PIXEL
+    path: src/core/render/Constants.cs
+    startLine: 326
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Height (pixel) of font samples rendering.<br />
+
+    Used by the <xref href="SearchAThing.OpenGL.Core.GLFontCharManager.GetFontChars(System.String%2cSkiaSharp.SKFont)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public const int FONT_BITMAP_PIXEL = 300
+    return:
+      type: System.Int32
+    content.vb: Public Const FONT_BITMAP_PIXEL As Integer = 300
+- uid: SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTNAME
+  commentId: F:SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTNAME
+  id: BUILTIN_FONTNAME
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: BUILTIN_FONTNAME
+  nameWithType: Constants.BUILTIN_FONTNAME
+  fullName: SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTNAME
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BUILTIN_FONTNAME
+    path: src/core/render/Constants.cs
+    startLine: 328
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public const string BUILTIN_FONTNAME = "DejaVu Sans Mono"
+    return:
+      type: System.String
+    content.vb: Public Const BUILTIN_FONTNAME As String = "DejaVu Sans Mono"
+- uid: SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTFILE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTFILE
+  id: BUILTIN_FONTFILE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: BUILTIN_FONTFILE
+  nameWithType: Constants.BUILTIN_FONTFILE
+  fullName: SearchAThing.OpenGL.Core.Constants.BUILTIN_FONTFILE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BUILTIN_FONTFILE
+    path: src/core/render/Constants.cs
+    startLine: 333
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: https://fontlibrary.org/en/font/dejavu-sans-mono
+  example: []
+  syntax:
+    content: public const string BUILTIN_FONTFILE = "DejaVuSansMono.ttf"
+    return:
+      type: System.String
+    content.vb: Public Const BUILTIN_FONTFILE As String = "DejaVuSansMono.ttf"
+- uid: SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename
+  commentId: P:SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename
+  id: ViewDefaultPathfilename
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ViewDefaultPathfilename
+  nameWithType: Constants.ViewDefaultPathfilename
+  fullName: SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename
+  type: Property
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ViewDefaultPathfilename
+    path: src/core/render/Constants.cs
+    startLine: 342
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) pathfilename of the view.json used by <xref href="SearchAThing.OpenGL.Core.GLControl.SaveView(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static string ViewDefaultPathfilename { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ViewDefaultPathfilename As String
+  overload: SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename*
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_FovDeg
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_FovDeg
+  id: DEFAULT_FovDeg
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_FovDeg
+  nameWithType: Constants.DEFAULT_FovDeg
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_FovDeg
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_FovDeg
+    path: src/core/render/Constants.cs
+    startLine: 348
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) perspective mode field of view (deg).
+  example: []
+  syntax:
+    content: public const float DEFAULT_FovDeg = 28
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_FovDeg As Single = 28
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_OrthoZoom
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_OrthoZoom
+  id: DEFAULT_OrthoZoom
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_OrthoZoom
+  nameWithType: Constants.DEFAULT_OrthoZoom
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_OrthoZoom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_OrthoZoom
+    path: src/core/render/Constants.cs
+    startLine: 353
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) orthogonal mode scale factor.
+  example: []
+  syntax:
+    content: public const float DEFAULT_OrthoZoom = 1
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_OrthoZoom As Single = 1
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_Wireframe
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_Wireframe
+  id: DEFAULT_Wireframe
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_Wireframe
+  nameWithType: Constants.DEFAULT_Wireframe
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_Wireframe
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_Wireframe
+    path: src/core/render/Constants.cs
+    startLine: 358
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control wireframe enable/
+  example: []
+  syntax:
+    content: public const bool DEFAULT_Wireframe = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_Wireframe As Boolean = False
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_UseTexture
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_UseTexture
+  id: DEFAULT_UseTexture
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_UseTexture
+  nameWithType: Constants.DEFAULT_UseTexture
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_UseTexture
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_UseTexture
+    path: src/core/render/Constants.cs
+    startLine: 363
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control use texture flag.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_UseTexture = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_UseTexture As Boolean = True
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_UseShadows
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_UseShadows
+  id: DEFAULT_UseShadows
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_UseShadows
+  nameWithType: Constants.DEFAULT_UseShadows
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_UseShadows
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_UseShadows
+    path: src/core/render/Constants.cs
+    startLine: 368
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control use shadow flag.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_UseShadows = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_UseShadows As Boolean = True
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_CursorMode
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_CursorMode
+  id: DEFAULT_CursorMode
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CursorMode
+  nameWithType: Constants.DEFAULT_CursorMode
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_CursorMode
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CursorMode
+    path: src/core/render/Constants.cs
+    startLine: 373
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control cursor mode.
+  example: []
+  syntax:
+    content: public const CursorMode DEFAULT_CursorMode = View
+    return:
+      type: SearchAThing.OpenGL.Core.CursorMode
+    content.vb: Public Const DEFAULT_CursorMode As CursorMode = View
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_StdViewAngleDeg
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_StdViewAngleDeg
+  id: DEFAULT_StdViewAngleDeg
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_StdViewAngleDeg
+  nameWithType: Constants.DEFAULT_StdViewAngleDeg
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_StdViewAngleDeg
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_StdViewAngleDeg
+    path: src/core/render/Constants.cs
+    startLine: 378
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control angle view addition in standard cube views (deg).
+  example: []
+  syntax:
+    content: public const float DEFAULT_StdViewAngleDeg = 45
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_StdViewAngleDeg As Single = 45
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_Perspective
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_Perspective
+  id: DEFAULT_Perspective
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_Perspective
+  nameWithType: Constants.DEFAULT_Perspective
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_Perspective
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_Perspective
+    path: src/core/render/Constants.cs
+    startLine: 383
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control perspective mode.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_Perspective = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_Perspective As Boolean = True
+- uid: SearchAThing.OpenGL.Core.Constants.PAN_LITTLE_FACTOR
+  commentId: F:SearchAThing.OpenGL.Core.Constants.PAN_LITTLE_FACTOR
+  id: PAN_LITTLE_FACTOR
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: PAN_LITTLE_FACTOR
+  nameWithType: Constants.PAN_LITTLE_FACTOR
+  fullName: SearchAThing.OpenGL.Core.Constants.PAN_LITTLE_FACTOR
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PAN_LITTLE_FACTOR
+    path: src/core/render/Constants.cs
+    startLine: 388
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control pan factor respect the screen size.
+  example: []
+  syntax:
+    content: public const float PAN_LITTLE_FACTOR = 0.1
+    return:
+      type: System.Single
+    content.vb: Public Const PAN_LITTLE_FACTOR As Single = 0.1
+- uid: SearchAThing.OpenGL.Core.Constants.ROTATE_LITTLE_DEG
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ROTATE_LITTLE_DEG
+  id: ROTATE_LITTLE_DEG
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ROTATE_LITTLE_DEG
+  nameWithType: Constants.ROTATE_LITTLE_DEG
+  fullName: SearchAThing.OpenGL.Core.Constants.ROTATE_LITTLE_DEG
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ROTATE_LITTLE_DEG
+    path: src/core/render/Constants.cs
+    startLine: 393
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control rotate model step (deg).
+  example: []
+  syntax:
+    content: public const float ROTATE_LITTLE_DEG = 5
+    return:
+      type: System.Single
+    content.vb: Public Const ROTATE_LITTLE_DEG As Single = 5
+- uid: SearchAThing.OpenGL.Core.Constants.ZOOM_LITTLE_FACTOR
+  commentId: F:SearchAThing.OpenGL.Core.Constants.ZOOM_LITTLE_FACTOR
+  id: ZOOM_LITTLE_FACTOR
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: ZOOM_LITTLE_FACTOR
+  nameWithType: Constants.ZOOM_LITTLE_FACTOR
+  fullName: SearchAThing.OpenGL.Core.Constants.ZOOM_LITTLE_FACTOR
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ZOOM_LITTLE_FACTOR
+    path: src/core/render/Constants.cs
+    startLine: 398
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control step zoom scale factor.
+  example: []
+  syntax:
+    content: public const float ZOOM_LITTLE_FACTOR = 0.1
+    return:
+      type: System.Single
+    content.vb: Public Const ZOOM_LITTLE_FACTOR As Single = 0.1
+- uid: SearchAThing.OpenGL.Core.Constants.TILT_LITTLE_DEG
+  commentId: F:SearchAThing.OpenGL.Core.Constants.TILT_LITTLE_DEG
+  id: TILT_LITTLE_DEG
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: TILT_LITTLE_DEG
+  nameWithType: Constants.TILT_LITTLE_DEG
+  fullName: SearchAThing.OpenGL.Core.Constants.TILT_LITTLE_DEG
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TILT_LITTLE_DEG
+    path: src/core/render/Constants.cs
+    startLine: 403
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control camera tilt step (deg).
+  example: []
+  syntax:
+    content: public const float TILT_LITTLE_DEG = 2
+    return:
+      type: System.Single
+    content.vb: Public Const TILT_LITTLE_DEG As Single = 2
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_INVALIDATE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_INVALIDATE
+  id: DEFAULT_INVALIDATE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_INVALIDATE
+  nameWithType: Constants.DEFAULT_INVALIDATE
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_INVALIDATE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_INVALIDATE
+    path: src/core/render/Constants.cs
+    startLine: 408
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control invalidate behavior for api.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_INVALIDATE = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_INVALIDATE As Boolean = True
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_TRACE_LOCATION_WARNINGS
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_TRACE_LOCATION_WARNINGS
+  id: DEFAULT_TRACE_LOCATION_WARNINGS
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_TRACE_LOCATION_WARNINGS
+  nameWithType: Constants.DEFAULT_TRACE_LOCATION_WARNINGS
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_TRACE_LOCATION_WARNINGS
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_TRACE_LOCATION_WARNINGS
+    path: src/core/render/Constants.cs
+    startLine: 413
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) trace shader location warning.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_TRACE_LOCATION_WARNINGS = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_TRACE_LOCATION_WARNINGS As Boolean = False
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_NORMAL_FACTOR
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_NORMAL_FACTOR
+  id: DEFAULT_NORMAL_FACTOR
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_NORMAL_FACTOR
+  nameWithType: Constants.DEFAULT_NORMAL_FACTOR
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_NORMAL_FACTOR
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_NORMAL_FACTOR
+    path: src/core/render/Constants.cs
+    startLine: 418
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl shader <xref href="SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const float DEFAULT_NORMAL_FACTOR = 0.025
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_NORMAL_FACTOR As Single = 0.025
+- uid: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_W
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_W
+  id: SCREEN_ADJUST_W
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SCREEN_ADJUST_W
+  nameWithType: Constants.SCREEN_ADJUST_W
+  fullName: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_W
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SCREEN_ADJUST_W
+    path: src/core/render/Constants.cs
+    startLine: 423
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) Used in <xref href="SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const float SCREEN_ADJUST_W = 0
+    return:
+      type: System.Single
+    content.vb: Public Const SCREEN_ADJUST_W As Single = 0
+- uid: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_H
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_H
+  id: SCREEN_ADJUST_H
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SCREEN_ADJUST_H
+  nameWithType: Constants.SCREEN_ADJUST_H
+  fullName: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_H
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SCREEN_ADJUST_H
+    path: src/core/render/Constants.cs
+    startLine: 428
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) Used in <xref href="SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const float SCREEN_ADJUST_H = 0
+    return:
+      type: System.Single
+    content.vb: Public Const SCREEN_ADJUST_H As Single = 0
+- uid: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TX
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TX
+  id: SCREEN_ADJUST_TX
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SCREEN_ADJUST_TX
+  nameWithType: Constants.SCREEN_ADJUST_TX
+  fullName: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TX
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SCREEN_ADJUST_TX
+    path: src/core/render/Constants.cs
+    startLine: 433
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) Used in <xref href="SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const float SCREEN_ADJUST_TX = 0
+    return:
+      type: System.Single
+    content.vb: Public Const SCREEN_ADJUST_TX As Single = 0
+- uid: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TY
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TY
+  id: SCREEN_ADJUST_TY
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SCREEN_ADJUST_TY
+  nameWithType: Constants.SCREEN_ADJUST_TY
+  fullName: SearchAThing.OpenGL.Core.Constants.SCREEN_ADJUST_TY
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SCREEN_ADJUST_TY
+    path: src/core/render/Constants.cs
+    startLine: 438
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) Used in <xref href="SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public const float SCREEN_ADJUST_TY = 0
+    return:
+      type: System.Single
+    content.vb: Public Const SCREEN_ADJUST_TY As Single = 0
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_POS
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_POS
+  id: DEFAULT_CAMERA_POS
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CAMERA_POS
+  nameWithType: Constants.DEFAULT_CAMERA_POS
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_POS
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CAMERA_POS
+    path: src/core/render/Constants.cs
+    startLine: 443
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control camera pos [world].
+  example: []
+  syntax:
+    content: public static readonly Vector3 DEFAULT_CAMERA_POS
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Shared ReadOnly DEFAULT_CAMERA_POS As Vector3
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_TARGET
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_TARGET
+  id: DEFAULT_CAMERA_TARGET
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CAMERA_TARGET
+  nameWithType: Constants.DEFAULT_CAMERA_TARGET
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_TARGET
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CAMERA_TARGET
+    path: src/core/render/Constants.cs
+    startLine: 448
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control camera target [world].
+  example: []
+  syntax:
+    content: public static readonly Vector3 DEFAULT_CAMERA_TARGET
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Shared ReadOnly DEFAULT_CAMERA_TARGET As Vector3
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_UP
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_UP
+  id: DEFAULT_CAMERA_UP
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CAMERA_UP
+  nameWithType: Constants.DEFAULT_CAMERA_UP
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_CAMERA_UP
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CAMERA_UP
+    path: src/core/render/Constants.cs
+    startLine: 453
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control camera up [world].
+  example: []
+  syntax:
+    content: public static readonly Vector3 DEFAULT_CAMERA_UP
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Shared ReadOnly DEFAULT_CAMERA_UP As Vector3
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_SHADE_WITH_EDGE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_SHADE_WITH_EDGE
+  id: DEFAULT_SHADE_WITH_EDGE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SHADE_WITH_EDGE
+  nameWithType: Constants.DEFAULT_SHADE_WITH_EDGE
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_SHADE_WITH_EDGE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SHADE_WITH_EDGE
+    path: src/core/render/Constants.cs
+    startLine: 458
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control shade with edge flag.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_SHADE_WITH_EDGE = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_SHADE_WITH_EDGE As Boolean = False
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY
+  id: DEFAULT_VERTEX_VISIBILITY
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_VERTEX_VISIBILITY
+  nameWithType: Constants.DEFAULT_VERTEX_VISIBILITY
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_VERTEX_VISIBILITY
+    path: src/core/render/Constants.cs
+    startLine: 463
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control vertex visibility flag.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_VERTEX_VISIBILITY = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_VERTEX_VISIBILITY As Boolean = False
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_SHOW_NORMALS
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_SHOW_NORMALS
+  id: DEFAULT_SHOW_NORMALS
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_SHOW_NORMALS
+  nameWithType: Constants.DEFAULT_SHOW_NORMALS
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_SHOW_NORMALS
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_SHOW_NORMALS
+    path: src/core/render/Constants.cs
+    startLine: 468
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl control show normals flags.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_SHOW_NORMALS = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_SHOW_NORMALS As Boolean = False
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+  id: DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+  nameWithType: Constants.DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_VERTEX_VISIBILITY_POINT_SIZE
+    path: src/core/render/Constants.cs
+    startLine: 473
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl geometry shader vertex visibility point size.
+  example: []
+  syntax:
+    content: public const float DEFAULT_VERTEX_VISIBILITY_POINT_SIZE = 5
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_VERTEX_VISIBILITY_POINT_SIZE As Single = 5
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_COLOR
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_COLOR
+  id: DEFAULT_LIGHT_COLOR
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_LIGHT_COLOR
+  nameWithType: Constants.DEFAULT_LIGHT_COLOR
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_COLOR
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_LIGHT_COLOR
+    path: src/core/render/Constants.cs
+    startLine: 482
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl point light color.
+  example: []
+  syntax:
+    content: public static readonly Color DEFAULT_LIGHT_COLOR
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Shared ReadOnly DEFAULT_LIGHT_COLOR As Color
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_CONSTANT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_CONSTANT
+  id: DEFAULT_LIGHT_CONSTANT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_LIGHT_CONSTANT
+  nameWithType: Constants.DEFAULT_LIGHT_CONSTANT
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_CONSTANT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_LIGHT_CONSTANT
+    path: src/core/render/Constants.cs
+    startLine: 487
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl point light constant attenuation factor.
+  example: []
+  syntax:
+    content: public const float DEFAULT_LIGHT_CONSTANT = 1
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_LIGHT_CONSTANT As Single = 1
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_LINEAR
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_LINEAR
+  id: DEFAULT_LIGHT_LINEAR
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_LIGHT_LINEAR
+  nameWithType: Constants.DEFAULT_LIGHT_LINEAR
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_LINEAR
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_LIGHT_LINEAR
+    path: src/core/render/Constants.cs
+    startLine: 492
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl point light linear attenuation factor.
+  example: []
+  syntax:
+    content: public const float DEFAULT_LIGHT_LINEAR = 0
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_LIGHT_LINEAR As Single = 0
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_QUADRATIC
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_QUADRATIC
+  id: DEFAULT_LIGHT_QUADRATIC
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_LIGHT_QUADRATIC
+  nameWithType: Constants.DEFAULT_LIGHT_QUADRATIC
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_QUADRATIC
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_LIGHT_QUADRATIC
+    path: src/core/render/Constants.cs
+    startLine: 497
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl point light quadratic attenuation factor.
+  example: []
+  syntax:
+    content: public const float DEFAULT_LIGHT_QUADRATIC = 0
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_LIGHT_QUADRATIC As Single = 0
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT_SIZE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT_SIZE
+  id: DEFAULT_LIGHT_SHOW_POINT_SIZE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_LIGHT_SHOW_POINT_SIZE
+  nameWithType: Constants.DEFAULT_LIGHT_SHOW_POINT_SIZE
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT_SIZE
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_LIGHT_SHOW_POINT_SIZE
+    path: src/core/render/Constants.cs
+    startLine: 502
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl point light show point size (pixel).
+  example: []
+  syntax:
+    content: public const float DEFAULT_LIGHT_SHOW_POINT_SIZE = 10
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_LIGHT_SHOW_POINT_SIZE As Single = 10
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT
+  id: DEFAULT_LIGHT_SHOW_POINT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_LIGHT_SHOW_POINT
+  nameWithType: Constants.DEFAULT_LIGHT_SHOW_POINT
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_LIGHT_SHOW_POINT
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_LIGHT_SHOW_POINT
+    path: src/core/render/Constants.cs
+    startLine: 507
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) gl point light show point flag.
+  example: []
+  syntax:
+    content: public const bool DEFAULT_LIGHT_SHOW_POINT = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const DEFAULT_LIGHT_SHOW_POINT As Boolean = False
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_ClearColor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_ClearColor
+  id: DEFAULT_ClearColor
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ClearColor
+  nameWithType: Constants.DEFAULT_ClearColor
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_ClearColor
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ClearColor
+    path: src/core/render/Constants.cs
+    startLine: 516
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.GLControl.Clear(System.Boolean%2cSystem.Nullable%7bSystem.Drawing.Color%7d)" data-throw-if-not-resolved="false"></xref> background color.
+  example: []
+  syntax:
+    content: public static readonly Color DEFAULT_ClearColor
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Shared ReadOnly DEFAULT_ClearColor As Color
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_TextColor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_TextColor
+  id: DEFAULT_TextColor
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_TextColor
+  nameWithType: Constants.DEFAULT_TextColor
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_TextColor
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_TextColor
+    path: src/core/render/Constants.cs
+    startLine: 521
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.GLText.Color" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static readonly Color DEFAULT_TextColor
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Shared ReadOnly DEFAULT_TextColor As Color
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_CameraObjectColor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_CameraObjectColor
+  id: DEFAULT_CameraObjectColor
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CameraObjectColor
+  nameWithType: Constants.DEFAULT_CameraObjectColor
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_CameraObjectColor
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CameraObjectColor
+    path: src/core/render/Constants.cs
+    startLine: 526
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) <xref href="SearchAThing.OpenGL.Core.Toolkit.MakeFrustum(System.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40%2cSystem.Numerics.Vector3%40%2cSystem.Single%2cSystem.Single%2cSystem.Single%2cSystem.Numerics.Matrix4x4%40)" data-throw-if-not-resolved="false"></xref> camera object lines color.
+  example: []
+  syntax:
+    content: public static readonly Color DEFAULT_CameraObjectColor
+    return:
+      type: System.Drawing.Color
+    content.vb: Public Shared ReadOnly DEFAULT_CameraObjectColor As Color
+- uid: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT
+  id: SIMPLE_CMD_POINT
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SIMPLE_CMD_POINT
+  nameWithType: Constants.SIMPLE_CMD_POINT
+  fullName: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT
+  type: Field
+  source:
+    remote:
+      path: src/core/types/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SIMPLE_CMD_POINT
+    path: src/core/types/Constants.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public const string SIMPLE_CMD_POINT = "p"
+    return:
+      type: System.String
+    content.vb: Public Const SIMPLE_CMD_POINT As String = "p"
+- uid: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_LINE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_LINE
+  id: SIMPLE_CMD_LINE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SIMPLE_CMD_LINE
+  nameWithType: Constants.SIMPLE_CMD_LINE
+  fullName: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_LINE
+  type: Field
+  source:
+    remote:
+      path: src/core/types/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SIMPLE_CMD_LINE
+    path: src/core/types/Constants.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public const string SIMPLE_CMD_LINE = "l"
+    return:
+      type: System.String
+    content.vb: Public Const SIMPLE_CMD_LINE As String = "l"
+- uid: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_TRIANGLE
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_TRIANGLE
+  id: SIMPLE_CMD_TRIANGLE
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SIMPLE_CMD_TRIANGLE
+  nameWithType: Constants.SIMPLE_CMD_TRIANGLE
+  fullName: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_TRIANGLE
+  type: Field
+  source:
+    remote:
+      path: src/core/types/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SIMPLE_CMD_TRIANGLE
+    path: src/core/types/Constants.cs
+    startLine: 9
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public const string SIMPLE_CMD_TRIANGLE = "t"
+    return:
+      type: System.String
+    content.vb: Public Const SIMPLE_CMD_TRIANGLE As String = "t"
+- uid: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_COORD_SEP
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_COORD_SEP
+  id: SIMPLE_CMD_COORD_SEP
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SIMPLE_CMD_COORD_SEP
+  nameWithType: Constants.SIMPLE_CMD_COORD_SEP
+  fullName: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_COORD_SEP
+  type: Field
+  source:
+    remote:
+      path: src/core/types/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SIMPLE_CMD_COORD_SEP
+    path: src/core/types/Constants.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public const char SIMPLE_CMD_COORD_SEP = ','
+    return:
+      type: System.Char
+    content.vb: Public Const SIMPLE_CMD_COORD_SEP As Char = ","c
+- uid: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT_SEP
+  commentId: F:SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT_SEP
+  id: SIMPLE_CMD_POINT_SEP
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: SIMPLE_CMD_POINT_SEP
+  nameWithType: Constants.SIMPLE_CMD_POINT_SEP
+  fullName: SearchAThing.OpenGL.Core.Constants.SIMPLE_CMD_POINT_SEP
+  type: Field
+  source:
+    remote:
+      path: src/core/types/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SIMPLE_CMD_POINT_SEP
+    path: src/core/types/Constants.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public const char SIMPLE_CMD_POINT_SEP = ';'
+    return:
+      type: System.Char
+    content.vb: Public Const SIMPLE_CMD_POINT_SEP As Char = ";"c
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_VertexPosition
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_VertexPosition
+  id: DEFAULT_VertexPosition
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_VertexPosition
+  nameWithType: Constants.DEFAULT_VertexPosition
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_VertexPosition
+  type: Field
+  source:
+    remote:
+      path: src/core/vertex/GLVertex.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_VertexPosition
+    path: src/core/vertex/GLVertex.cs
+    startLine: 415
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) vertex position (0,0,0).
+  example: []
+  syntax:
+    content: public static readonly Vector3 DEFAULT_VertexPosition
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Shared ReadOnly DEFAULT_VertexPosition As Vector3
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_Normal
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_Normal
+  id: DEFAULT_Normal
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_Normal
+  nameWithType: Constants.DEFAULT_Normal
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_Normal
+  type: Field
+  source:
+    remote:
+      path: src/core/vertex/GLVertex.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_Normal
+    path: src/core/vertex/GLVertex.cs
+    startLine: 420
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) vertex normal (0,0,0).
+  example: []
+  syntax:
+    content: public static readonly Vector3 DEFAULT_Normal
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Shared ReadOnly DEFAULT_Normal As Vector3
+- uid: SearchAThing.OpenGL.Core.Constants.DEFAULT_TexCoord
+  commentId: F:SearchAThing.OpenGL.Core.Constants.DEFAULT_TexCoord
+  id: DEFAULT_TexCoord
+  parent: SearchAThing.OpenGL.Core.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_TexCoord
+  nameWithType: Constants.DEFAULT_TexCoord
+  fullName: SearchAThing.OpenGL.Core.Constants.DEFAULT_TexCoord
+  type: Field
+  source:
+    remote:
+      path: src/core/vertex/GLVertex.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_TexCoord
+    path: src/core/vertex/GLVertex.cs
+    startLine: 425
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (Default) vertex texture mapping coordinate (0,0).
+  example: []
+  syntax:
+    content: public static readonly Vector2 DEFAULT_TexCoord
+    return:
+      type: System.Numerics.Vector2
+    content.vb: Public Shared ReadOnly DEFAULT_TexCoord As Vector2
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Numerics.Matrix4x4
+  commentId: T:System.Numerics.Matrix4x4
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: System.Numerics.Matrix4x4
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  commentId: T:SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.YAxisOrientationEnum.html
+  name: YAxisOrientationEnum
+  nameWithType: YAxisOrientationEnum
+  fullName: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+- uid: SearchAThing.OpenGL.Core.Toolkit.PreventZFighting(SearchAThing.OpenGL.Core.BBox,System.Numerics.Matrix4x4@,System.Numerics.Matrix4x4@,System.Numerics.Vector3@,System.Single@,System.Single@)
+  commentId: M:SearchAThing.OpenGL.Core.Toolkit.PreventZFighting(SearchAThing.OpenGL.Core.BBox,System.Numerics.Matrix4x4@,System.Numerics.Matrix4x4@,System.Numerics.Vector3@,System.Single@,System.Single@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PreventZFighting_SearchAThing_OpenGL_Core_BBox_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Single__System_Single__
+  name: PreventZFighting(BBox, in Matrix4x4, in Matrix4x4, in Vector3, out float, out float)
+  nameWithType: Toolkit.PreventZFighting(BBox, in Matrix4x4, in Matrix4x4, in Vector3, out float, out float)
+  fullName: SearchAThing.OpenGL.Core.Toolkit.PreventZFighting(SearchAThing.OpenGL.Core.BBox, in System.Numerics.Matrix4x4, in System.Numerics.Matrix4x4, in System.Numerics.Vector3, out float, out float)
+  nameWithType.vb: Toolkit.PreventZFighting(BBox, Matrix4x4, Matrix4x4, Vector3, Single, Single)
+  fullName.vb: SearchAThing.OpenGL.Core.Toolkit.PreventZFighting(SearchAThing.OpenGL.Core.BBox, System.Numerics.Matrix4x4, System.Numerics.Matrix4x4, System.Numerics.Vector3, Single, Single)
+  name.vb: PreventZFighting(BBox, Matrix4x4, Matrix4x4, Vector3, Single, Single)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.PreventZFighting(SearchAThing.OpenGL.Core.BBox,System.Numerics.Matrix4x4@,System.Numerics.Matrix4x4@,System.Numerics.Vector3@,System.Single@,System.Single@)
+    name: PreventZFighting
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PreventZFighting_SearchAThing_OpenGL_Core_BBox_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Single__System_Single__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.BBox
+    name: BBox
+    href: SearchAThing.OpenGL.Core.BBox.html
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.PreventZFighting(SearchAThing.OpenGL.Core.BBox,System.Numerics.Matrix4x4@,System.Numerics.Matrix4x4@,System.Numerics.Vector3@,System.Single@,System.Single@)
+    name: PreventZFighting
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_PreventZFighting_SearchAThing_OpenGL_Core_BBox_System_Numerics_Matrix4x4__System_Numerics_Matrix4x4__System_Numerics_Vector3__System_Single__System_Single__
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.BBox
+    name: BBox
+    href: SearchAThing.OpenGL.Core.BBox.html
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ObjectMatrix
+  name: ObjectMatrix
+  nameWithType: IGLFigure.ObjectMatrix
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure
+- uid: SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode
+  name: ScreenCoordMode
+  nameWithType: IGLFigure.ScreenCoordMode
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Visible
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Visible
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Visible
+  name: Visible
+  nameWithType: IGLFigure.Visible
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Visible
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Order
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Order
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Order
+  name: Order
+  nameWithType: IGLFigure.Order
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Order
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Core.IGLPointFigure.PointSize
+  commentId: P:SearchAThing.OpenGL.Core.IGLPointFigure.PointSize
+  parent: SearchAThing.OpenGL.Core.IGLPointFigure
+  href: SearchAThing.OpenGL.Core.IGLPointFigure.html#SearchAThing_OpenGL_Core_IGLPointFigure_PointSize
+  name: PointSize
+  nameWithType: IGLPointFigure.PointSize
+  fullName: SearchAThing.OpenGL.Core.IGLPointFigure.PointSize
+- uid: SearchAThing.OpenGL.Core.IGLPointFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLPointFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLPointFigure.html
+  name: IGLPointFigure
+  nameWithType: IGLPointFigure
+  fullName: SearchAThing.OpenGL.Core.IGLPointFigure
+- uid: SearchAThing.OpenGL.Core.BBox.TolHint
+  commentId: P:SearchAThing.OpenGL.Core.BBox.TolHint
+  href: SearchAThing.OpenGL.Core.BBox.html#SearchAThing_OpenGL_Core_BBox_TolHint
+  name: TolHint
+  nameWithType: BBox.TolHint
+  fullName: SearchAThing.OpenGL.Core.BBox.TolHint
+- uid: SearchAThing.OpenGL.Core.Toolkit.ArbitraryAxisAlghorithm(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@)
+  commentId: M:SearchAThing.OpenGL.Core.Toolkit.ArbitraryAxisAlghorithm(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_ArbitraryAxisAlghorithm_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__
+  name: ArbitraryAxisAlghorithm(in Vector3, out Vector3, out Vector3, out Vector3)
+  nameWithType: Toolkit.ArbitraryAxisAlghorithm(in Vector3, out Vector3, out Vector3, out Vector3)
+  fullName: SearchAThing.OpenGL.Core.Toolkit.ArbitraryAxisAlghorithm(in System.Numerics.Vector3, out System.Numerics.Vector3, out System.Numerics.Vector3, out System.Numerics.Vector3)
+  nameWithType.vb: Toolkit.ArbitraryAxisAlghorithm(Vector3, Vector3, Vector3, Vector3)
+  fullName.vb: SearchAThing.OpenGL.Core.Toolkit.ArbitraryAxisAlghorithm(System.Numerics.Vector3, System.Numerics.Vector3, System.Numerics.Vector3, System.Numerics.Vector3)
+  name.vb: ArbitraryAxisAlghorithm(Vector3, Vector3, Vector3, Vector3)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.ArbitraryAxisAlghorithm(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: ArbitraryAxisAlghorithm
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_ArbitraryAxisAlghorithm_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.ArbitraryAxisAlghorithm(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@)
+    name: ArbitraryAxisAlghorithm
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_ArbitraryAxisAlghorithm_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__
+  - name: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: )
+- uid: System.Drawing.Color
+  commentId: T:System.Drawing.Color
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  name: Color
+  nameWithType: Color
+  fullName: System.Drawing.Color
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: SearchAThing.OpenGL.Core.MaterialProperties
+  commentId: T:SearchAThing.OpenGL.Core.MaterialProperties
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.MaterialProperties.html
+  name: MaterialProperties
+  nameWithType: MaterialProperties
+  fullName: SearchAThing.OpenGL.Core.MaterialProperties
+- uid: SearchAThing.OpenGL.Core.GLContext
+  commentId: T:SearchAThing.OpenGL.Core.GLContext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLContext.html
+  name: GLContext
+  nameWithType: GLContext
+  fullName: SearchAThing.OpenGL.Core.GLContext
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Core.IGLFigure.Alpha
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.Alpha
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Alpha
+  name: Alpha
+  nameWithType: IGLFigure.Alpha
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.Alpha
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor
+  href: SearchAThing.OpenGL.Core.Constants.html#SearchAThing_OpenGL_Core_Constants_UNINAME_uTextColor
+  name: UNINAME_uTextColor
+  nameWithType: Constants.UNINAME_uTextColor
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uTextColor
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Silk.NET.OpenGL.TextureUnit
+  commentId: T:Silk.NET.OpenGL.TextureUnit
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: TextureUnit
+  nameWithType: TextureUnit
+  fullName: Silk.NET.OpenGL.TextureUnit
+- uid: Silk.NET.OpenGL
+  commentId: N:Silk.NET.OpenGL
+  isExternal: true
+  name: Silk.NET.OpenGL
+  nameWithType: Silk.NET.OpenGL
+  fullName: Silk.NET.OpenGL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+- uid: SearchAThing.OpenGL.Core.GLTexture2D
+  commentId: T:SearchAThing.OpenGL.Core.GLTexture2D
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTexture2D.html
+  name: GLTexture2D
+  nameWithType: GLTexture2D
+  fullName: SearchAThing.OpenGL.Core.GLTexture2D
+- uid: Silk.NET.OpenGL.InternalFormat
+  commentId: T:Silk.NET.OpenGL.InternalFormat
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: InternalFormat
+  nameWithType: InternalFormat
+  fullName: Silk.NET.OpenGL.InternalFormat
+- uid: Silk.NET.OpenGL.PixelFormat
+  commentId: T:Silk.NET.OpenGL.PixelFormat
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: PixelFormat
+  nameWithType: PixelFormat
+  fullName: Silk.NET.OpenGL.PixelFormat
+- uid: SearchAThing.OpenGL.Core.GLFontCharManager.GetFontChars(System.String,SkiaSharp.SKFont)
+  commentId: M:SearchAThing.OpenGL.Core.GLFontCharManager.GetFontChars(System.String,SkiaSharp.SKFont)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLFontCharManager.html#SearchAThing_OpenGL_Core_GLFontCharManager_GetFontChars_System_String_SkiaSharp_SKFont_
+  name: GetFontChars(string, SKFont)
+  nameWithType: GLFontCharManager.GetFontChars(string, SKFont)
+  fullName: SearchAThing.OpenGL.Core.GLFontCharManager.GetFontChars(string, SkiaSharp.SKFont)
+  nameWithType.vb: GLFontCharManager.GetFontChars(String, SKFont)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFontCharManager.GetFontChars(String, SkiaSharp.SKFont)
+  name.vb: GetFontChars(String, SKFont)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFontCharManager.GetFontChars(System.String,SkiaSharp.SKFont)
+    name: GetFontChars
+    href: SearchAThing.OpenGL.Core.GLFontCharManager.html#SearchAThing_OpenGL_Core_GLFontCharManager_GetFontChars_System_String_SkiaSharp_SKFont_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: SkiaSharp.SKFont
+    name: SKFont
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/skiasharp.skfont
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFontCharManager.GetFontChars(System.String,SkiaSharp.SKFont)
+    name: GetFontChars
+    href: SearchAThing.OpenGL.Core.GLFontCharManager.html#SearchAThing_OpenGL_Core_GLFontCharManager_GetFontChars_System_String_SkiaSharp_SKFont_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: SkiaSharp.SKFont
+    name: SKFont
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/skiasharp.skfont
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLControl.SaveView(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLControl.SaveView(System.String)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SaveView_System_String_
+  name: SaveView(string)
+  nameWithType: GLControl.SaveView(string)
+  fullName: SearchAThing.OpenGL.Core.GLControl.SaveView(string)
+  nameWithType.vb: GLControl.SaveView(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLControl.SaveView(String)
+  name.vb: SaveView(String)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLControl.SaveView(System.String)
+    name: SaveView
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SaveView_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLControl.SaveView(System.String)
+    name: SaveView
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SaveView_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename*
+  commentId: Overload:SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename
+  href: SearchAThing.OpenGL.Core.Constants.html#SearchAThing_OpenGL_Core_Constants_ViewDefaultPathfilename
+  name: ViewDefaultPathfilename
+  nameWithType: Constants.ViewDefaultPathfilename
+  fullName: SearchAThing.OpenGL.Core.Constants.ViewDefaultPathfilename
+- uid: SearchAThing.OpenGL.Core.CursorMode
+  commentId: T:SearchAThing.OpenGL.Core.CursorMode
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.CursorMode.html
+  name: CursorMode
+  nameWithType: CursorMode
+  fullName: SearchAThing.OpenGL.Core.CursorMode
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor
+  href: SearchAThing.OpenGL.Core.Constants.html#SearchAThing_OpenGL_Core_Constants_UNINAME_uNormalFactor
+  name: UNINAME_uNormalFactor
+  nameWithType: Constants.UNINAME_uNormalFactor
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uNormalFactor
+- uid: SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix
+  commentId: M:SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix
+  href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_BuildScreenProjectMatrix
+  name: BuildScreenProjectMatrix()
+  nameWithType: GLControl.BuildScreenProjectMatrix()
+  fullName: SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix
+    name: BuildScreenProjectMatrix
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_BuildScreenProjectMatrix
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLControl.BuildScreenProjectMatrix
+    name: BuildScreenProjectMatrix
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_BuildScreenProjectMatrix
+  - name: (
+  - name: )
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: SearchAThing.OpenGL.Core.GLControl.Clear(System.Boolean,System.Nullable{System.Drawing.Color})
+  commentId: M:SearchAThing.OpenGL.Core.GLControl.Clear(System.Boolean,System.Nullable{System.Drawing.Color})
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Clear_System_Boolean_System_Nullable_System_Drawing_Color__
+  name: Clear(bool, Color?)
+  nameWithType: GLControl.Clear(bool, Color?)
+  fullName: SearchAThing.OpenGL.Core.GLControl.Clear(bool, System.Drawing.Color?)
+  nameWithType.vb: GLControl.Clear(Boolean, Color?)
+  fullName.vb: SearchAThing.OpenGL.Core.GLControl.Clear(Boolean, System.Drawing.Color?)
+  name.vb: Clear(Boolean, Color?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLControl.Clear(System.Boolean,System.Nullable{System.Drawing.Color})
+    name: Clear
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Clear_System_Boolean_System_Nullable_System_Drawing_Color__
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLControl.Clear(System.Boolean,System.Nullable{System.Drawing.Color})
+    name: Clear
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Clear_System_Boolean_System_Nullable_System_Drawing_Color__
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLText.Color
+  commentId: P:SearchAThing.OpenGL.Core.GLText.Color
+  href: SearchAThing.OpenGL.Core.GLText.html#SearchAThing_OpenGL_Core_GLText_Color
+  name: Color
+  nameWithType: GLText.Color
+  fullName: SearchAThing.OpenGL.Core.GLText.Color
+- uid: SearchAThing.OpenGL.Core.Toolkit.MakeFrustum(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Single,System.Single,System.Single,System.Numerics.Matrix4x4@)
+  commentId: M:SearchAThing.OpenGL.Core.Toolkit.MakeFrustum(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Single,System.Single,System.Single,System.Numerics.Matrix4x4@)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeFrustum_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__
+  name: MakeFrustum(in Vector3, in Vector3, in Vector3, float, float, float, in Matrix4x4)
+  nameWithType: Toolkit.MakeFrustum(in Vector3, in Vector3, in Vector3, float, float, float, in Matrix4x4)
+  fullName: SearchAThing.OpenGL.Core.Toolkit.MakeFrustum(in System.Numerics.Vector3, in System.Numerics.Vector3, in System.Numerics.Vector3, float, float, float, in System.Numerics.Matrix4x4)
+  nameWithType.vb: Toolkit.MakeFrustum(Vector3, Vector3, Vector3, Single, Single, Single, Matrix4x4)
+  fullName.vb: SearchAThing.OpenGL.Core.Toolkit.MakeFrustum(System.Numerics.Vector3, System.Numerics.Vector3, System.Numerics.Vector3, Single, Single, Single, System.Numerics.Matrix4x4)
+  name.vb: MakeFrustum(Vector3, Vector3, Vector3, Single, Single, Single, Matrix4x4)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeFrustum(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Single,System.Single,System.Single,System.Numerics.Matrix4x4@)
+    name: MakeFrustum
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeFrustum_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__
+  - name: (
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - name: in
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeFrustum(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Numerics.Vector3@,System.Single,System.Single,System.Single,System.Numerics.Matrix4x4@)
+    name: MakeFrustum
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeFrustum_System_Numerics_Vector3__System_Numerics_Vector3__System_Numerics_Vector3__System_Single_System_Single_System_Single_System_Numerics_Matrix4x4__
+  - name: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Numerics.Matrix4x4
+    name: Matrix4x4
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  - name: )
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: System.Numerics.Vector2
+  commentId: T:System.Numerics.Vector2
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  name: Vector2
+  nameWithType: Vector2
+  fullName: System.Numerics.Vector2

@@ -1,6 +1,0 @@
-<map id="Mirror" name="Mirror">
-<area shape="rect" id="node1" title="Mirror this vertex to the other side of given xy plane." alt="" coords="256,77,317,102"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line.html#ac32ce99edf2f5e2f77d9cf0922bb7c4e" title="Create a mirrored primitive against given xy plane." alt="" coords="5,5,208,45"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point.html#ac32ce99edf2f5e2f77d9cf0922bb7c4e" title="Create a mirrored primitive against given xy plane." alt="" coords="5,69,208,109"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html#ac32ce99edf2f5e2f77d9cf0922bb7c4e" title="Create a mirrored primitive against given xy plane." alt="" coords="5,133,208,173"/>
-</map>

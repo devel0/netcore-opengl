@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.RenderPreviewDelegate
+  commentId: T:SearchAThing.OpenGL.Core.RenderPreviewDelegate
+  id: RenderPreviewDelegate
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: RenderPreviewDelegate
+  nameWithType: RenderPreviewDelegate
+  fullName: SearchAThing.OpenGL.Core.RenderPreviewDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/core/render/GLControl.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RenderPreviewDelegate
+    path: src/core/render/GLControl.cs
+    startLine: 6
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Used by <xref href="SearchAThing.OpenGL.Core.GLControl.NotEmptyRenderPreview" data-throw-if-not-resolved="false"></xref> when notify the first non empty bbox render.
+  example: []
+  syntax:
+    content: public delegate void RenderPreviewDelegate(GLControl glControl)
+    parameters:
+    - id: glControl
+      type: SearchAThing.OpenGL.Core.GLControl
+      description: GL control reference.
+    content.vb: Public Delegate Sub RenderPreviewDelegate(glControl As GLControl)
+references:
+- uid: SearchAThing.OpenGL.Core.GLControl.NotEmptyRenderPreview
+  commentId: E:SearchAThing.OpenGL.Core.GLControl.NotEmptyRenderPreview
+  href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_NotEmptyRenderPreview
+  name: NotEmptyRenderPreview
+  nameWithType: GLControl.NotEmptyRenderPreview
+  fullName: SearchAThing.OpenGL.Core.GLControl.NotEmptyRenderPreview
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl

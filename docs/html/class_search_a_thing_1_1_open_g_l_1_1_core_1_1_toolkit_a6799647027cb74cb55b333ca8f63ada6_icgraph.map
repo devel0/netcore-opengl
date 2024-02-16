@@ -1,4 +1,0 @@
-<map id="ScreenToLocal_virtual" name="ScreenToLocal_virtual">
-<area shape="rect" id="node1" title="Converts given screen space coord to corresponding virtual in local space coord (z=0,..." alt="" coords="164,5,327,31"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a8b88bca5ca7377d6aca5657c0c7a59a6" title="Create a raycast line [local] suitable to hit test of figure primitives." alt="" coords="5,5,116,31"/>
-</map>

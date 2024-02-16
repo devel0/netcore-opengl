@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Nurbs
+  commentId: N:SearchAThing.OpenGL.Nurbs
+  id: SearchAThing.OpenGL.Nurbs
+  children:
+  - SearchAThing.OpenGL.Nurbs.Ext
+  - SearchAThing.OpenGL.Nurbs.Toolkit
+  langs:
+  - csharp
+  - vb
+  name: SearchAThing.OpenGL.Nurbs
+  nameWithType: SearchAThing.OpenGL.Nurbs
+  fullName: SearchAThing.OpenGL.Nurbs
+  type: Namespace
+  assemblies:
+  - netcore-opengl-nurbs
+references:
+- uid: SearchAThing.OpenGL.Nurbs.Ext
+  commentId: T:SearchAThing.OpenGL.Nurbs.Ext
+  href: SearchAThing.OpenGL.Nurbs.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Nurbs.Ext
+- uid: SearchAThing.OpenGL.Nurbs.Toolkit
+  commentId: T:SearchAThing.OpenGL.Nurbs.Toolkit
+  href: SearchAThing.OpenGL.Nurbs.Toolkit.html
+  name: Toolkit
+  nameWithType: Toolkit
+  fullName: SearchAThing.OpenGL.Nurbs.Toolkit

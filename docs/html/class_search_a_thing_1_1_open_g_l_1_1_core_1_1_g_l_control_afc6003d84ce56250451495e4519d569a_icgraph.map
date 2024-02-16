@@ -1,7 +1,0 @@
-<map id="Pan" name="Pan">
-<area shape="rect" id="node1" title="Pan the view by the given screen translation." alt="" coords="136,80,181,105"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html#acd591f4d52216f736d05a37967dfbb76" title="Pan the view down of a little factor." alt="" coords="5,5,88,31"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html#ac0149d9ec4eefdc825a466e47f0cdb07" title="Pan the view left of a little factor." alt="" coords="12,55,81,80"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html#a21c11768939dccbc75ef58be240cc90b" title="Pan the view right of a little factor." alt="" coords="7,104,86,129"/>
-<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html#adbc9327929edf6458b41fb0849c41650" title="Pan the view up of a little factor." alt="" coords="15,153,78,179"/>
-</map>

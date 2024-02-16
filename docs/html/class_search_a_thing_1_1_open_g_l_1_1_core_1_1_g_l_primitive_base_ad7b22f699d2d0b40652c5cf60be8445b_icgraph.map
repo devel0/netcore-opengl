@@ -1,7 +1,0 @@
-<map id="CopyBase" name="CopyBase">
-<area shape="rect" id="node1" title="Creates a copy with all elements down the hierarchy until GLPrimitiveBase included." alt="" coords="256,95,343,120"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_primitive_base.html#ab455657ff8fe6ab2ad42f00cac28404c" title="Create a copy of this gl vertex manager object copying all relevant data except the ParentVertexManag..." alt="" coords="79,5,134,31"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_line.html#ac32ce99edf2f5e2f77d9cf0922bb7c4e" title="Create a mirrored primitive against given xy plane." alt="" coords="5,55,208,95"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_point.html#ac32ce99edf2f5e2f77d9cf0922bb7c4e" title="Create a mirrored primitive against given xy plane." alt="" coords="5,119,208,159"/>
-<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html#ac32ce99edf2f5e2f77d9cf0922bb7c4e" title="Create a mirrored primitive against given xy plane." alt="" coords="5,183,208,223"/>
-</map>

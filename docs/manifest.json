@@ -1,0 +1,1195 @@
+{
+  "source_base_path": "/home/devel0/Documents/opensource/netcore-opengl",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.BBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.BBox.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.CameraViewType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.CameraViewType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.ColorConverterPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.ColorConverterPatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.CursorMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.CursorMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.DebugVtxMgr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.DebugVtxMgr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.DummyRenderDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.DummyRenderDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.Ext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.Ext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.FigureEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.FigureEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.FigureInvalidatedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.FigureInvalidatedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.FiguresEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.FiguresEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLBuildModelDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLBuildModelDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLFigureBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLFigureBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLFigureTypeBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLFontChar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLFontChar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLFontCharManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLFontCharManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLLine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLLineFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLLineFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLMatrix4x4Struct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLMatrix4x4Struct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLMatrixes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLMatrixes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLNotificationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLNotificationType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLPipeline.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLPoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLPointFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLPointFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLPointLight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLPointLight.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLPointLightStruct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLPointLightStruct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLPrimitiveBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLPrimitiveBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLPrimitiveType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLPrimitiveType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLShaderStorageBlock-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLShaderStorageBlock-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLText.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLTextCharFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLTextCharFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLTextVHAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLTextVHAlignment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLTexture2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLTexture2D.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLTriangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLTriangle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLTriangleFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLTriangleFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLVertex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLVertexArrayObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLVertexBufferObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLVertexBufferObject-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLVertexFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLVertexFlag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLVertexManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLVertexManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.GLVertexStruct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.GLVertexStruct.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLContextObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLContextObject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLLine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLLineFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLLineFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLPoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLPointFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLPointFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLPrimitive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLPrimitive.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLTexture2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLTexture2D.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLTriangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLTriangle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLTriangleFigure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLTriangleFigure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLVertex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLVertexManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLVertexManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IGLVertexManagerObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IGLVertexManagerObject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.IRenderDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.IRenderDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.InvalidateEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.InvalidateEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.Line.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.Line.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.MaterialProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.MaterialProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.ModelViewInvalidated.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.ModelViewInvalidated.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.MouseStart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.MouseStart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.NotificationDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.NotificationDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.OffscreenRenderDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.OffscreenRenderDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.Plate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.Plate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.PointTransformNfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.PointTransformNfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.RayCastHitTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.RayCastHitTest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.RenderPreviewDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.RenderPreviewDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.Toolkit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.Toolkit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.ViewNfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.ViewNfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.YAxisOrientationEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.YAxisOrientationEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.AColorConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.AColorConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaControlEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaControlEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaGLControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaGLControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.ColorHexStringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.ColorHexStringConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Ext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Ext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.GLControlCreatedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.GLControlCreatedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.GLControlFocusedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.GLControlFocusedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.GLDevTool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.GLDevTool.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.GLSplitAttachedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.GLSplitAttachedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.GLView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.GLView.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.GLWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.GLWindow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Toolkit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Toolkit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Vector2TextConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Vector2TextConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Vector3EditConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Vector3EditConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Vector3TextConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Vector3TextConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Vector3Wrap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Vector3Wrap.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.Vector4TextConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.Vector4TextConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.ViewLayoutNfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.ViewLayoutNfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.GUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.GUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Nurbs.Ext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Nurbs.Ext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Nurbs.Toolkit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Nurbs.Toolkit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Nurbs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Nurbs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.Arrow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.Arrow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.Box.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.Box.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.Cone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.Cone.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.ContourLegend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.ContourLegend.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.Ellipse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.Ellipse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.Toolkit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.Toolkit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.UVSphere.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.UVSphere.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SearchAThing.OpenGL.Shapes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SearchAThing.OpenGL.Shapes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "data/pages/mainpage-doc.md",
+      "output": {
+        ".html": {
+          "relative_path": "data/pages/mainpage-doc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

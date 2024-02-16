@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  commentId: T:SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  id: YAxisOrientationEnum
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveDown
+  - SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveUp
+  langs:
+  - csharp
+  - vb
+  name: YAxisOrientationEnum
+  nameWithType: YAxisOrientationEnum
+  fullName: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  type: Enum
+  source:
+    remote:
+      path: src/core/types/YAxisOrientation.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: YAxisOrientationEnum
+    path: src/core/types/YAxisOrientation.cs
+    startLine: 5
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Orientation of y axis [eye].
+  example: []
+  syntax:
+    content: public enum YAxisOrientationEnum
+    content.vb: Public Enum YAxisOrientationEnum
+- uid: SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveDown
+  commentId: F:SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveDown
+  id: YPositiveDown
+  parent: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  langs:
+  - csharp
+  - vb
+  name: YPositiveDown
+  nameWithType: YAxisOrientationEnum.YPositiveDown
+  fullName: SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveDown
+  type: Field
+  source:
+    remote:
+      path: src/core/types/YAxisOrientation.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: YPositiveDown
+    path: src/core/types/YAxisOrientation.cs
+    startLine: 10
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Screen GL standard.
+  example: []
+  syntax:
+    content: YPositiveDown = 0
+    return:
+      type: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+- uid: SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveUp
+  commentId: F:SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveUp
+  id: YPositiveUp
+  parent: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  langs:
+  - csharp
+  - vb
+  name: YPositiveUp
+  nameWithType: YAxisOrientationEnum.YPositiveUp
+  fullName: SearchAThing.OpenGL.Core.YAxisOrientationEnum.YPositiveUp
+  type: Field
+  source:
+    remote:
+      path: src/core/types/YAxisOrientation.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: YPositiveUp
+    path: src/core/types/YAxisOrientation.cs
+    startLine: 15
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Cad standard.
+  example: []
+  syntax:
+    content: YPositiveUp = 1
+    return:
+      type: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  commentId: T:SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.YAxisOrientationEnum.html
+  name: YAxisOrientationEnum
+  nameWithType: YAxisOrientationEnum
+  fullName: SearchAThing.OpenGL.Core.YAxisOrientationEnum

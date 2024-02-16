@@ -1,0 +1,1025 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo
+  commentId: T:SearchAThing.OpenGL.Core.PointTransformNfo
+  id: PointTransformNfo
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.PointTransformNfo.#ctor(SearchAThing.OpenGL.Core.GLControl,SearchAThing.OpenGL.Core.GLVertex,System.Boolean)
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Clip
+  - SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Eye
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Fmt(System.String)
+  - SearchAThing.OpenGL.Core.PointTransformNfo.GLControl
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Local
+  - SearchAThing.OpenGL.Core.PointTransformNfo.NDC
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Normal
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Object
+  - SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged(System.String)
+  - SearchAThing.OpenGL.Core.PointTransformNfo.PropertyChanged
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Screen
+  - SearchAThing.OpenGL.Core.PointTransformNfo.Vertex
+  - SearchAThing.OpenGL.Core.PointTransformNfo.World
+  langs:
+  - csharp
+  - vb
+  name: PointTransformNfo
+  nameWithType: PointTransformNfo
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo
+  type: Class
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PointTransformNfo
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 6
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Helper class used by SearchAThing.OpenGL.GUI.GLDevTool.<br />
+
+    Given the vertex, size, gl matrixes it will update object, normal, local, world, eye, clip, screen transformed coordinates.
+  example: []
+  syntax:
+    content: 'public class PointTransformNfo : INotifyPropertyChanged'
+    content.vb: Public Class PointTransformNfo Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.PropertyChanged
+  commentId: E:SearchAThing.OpenGL.Core.PointTransformNfo.PropertyChanged
+  id: PropertyChanged
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: PointTransformNfo.PropertyChanged
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.PropertyChanged
+  type: Event
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PropertyChanged
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  example: []
+  syntax:
+    content: public event PropertyChangedEventHandler? PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged(System.String)
+  id: OnPropertyChanged(System.String)
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: OnPropertyChanged(string?)
+  nameWithType: PointTransformNfo.OnPropertyChanged(string?)
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged(string?)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OnPropertyChanged
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 17
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    invoke this method to forward propertchanged event notification.
+
+    note: not needed to specify propertyName set by compiler service to called property.
+  example: []
+  syntax:
+    content: protected void OnPropertyChanged(string? propertyName = null)
+    parameters:
+    - id: propertyName
+      type: System.String
+    content.vb: Protected Sub OnPropertyChanged(propertyName As String = Nothing)
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged*
+  nameWithType.vb: PointTransformNfo.OnPropertyChanged(String)
+  fullName.vb: SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Normal
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.Normal
+  id: Normal
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: PointTransformNfo.Normal
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Normal
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Normal
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 30
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Normal
+  example: []
+  syntax:
+    content: public Vector3 Normal { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property Normal As Vector3
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Normal*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Object
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.Object
+  id: Object
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Object
+  nameWithType: PointTransformNfo.Object
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Object
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Object
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 52
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Object
+  example: []
+  syntax:
+    content: public Vector3 Object { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property [Object] As Vector3
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Object*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Local
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.Local
+  id: Local
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Local
+  nameWithType: PointTransformNfo.Local
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Local
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Local
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 74
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Local
+  example: []
+  syntax:
+    content: public Vector3 Local { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property Local As Vector3
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Local*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.World
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.World
+  id: World
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: PointTransformNfo.World
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.World
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: World
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 96
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: World
+  example: []
+  syntax:
+    content: public Vector3 World { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property World As Vector3
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.World*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Eye
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.Eye
+  id: Eye
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Eye
+  nameWithType: PointTransformNfo.Eye
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Eye
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Eye
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 118
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Eye
+  example: []
+  syntax:
+    content: public Vector3 Eye { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property Eye As Vector3
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Eye*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Clip
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.Clip
+  id: Clip
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Clip
+  nameWithType: PointTransformNfo.Clip
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Clip
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Clip
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 140
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Clip
+  example: []
+  syntax:
+    content: public Vector4 Clip { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector4
+    content.vb: Public Property Clip As Vector4
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Clip*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.NDC
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.NDC
+  id: NDC
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: NDC
+  nameWithType: PointTransformNfo.NDC
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.NDC
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NDC
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 162
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: ClipW
+  example: []
+  syntax:
+    content: public Vector3 NDC { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector3
+    content.vb: Public Property NDC As Vector3
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.NDC*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Screen
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.Screen
+  id: Screen
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Screen
+  nameWithType: PointTransformNfo.Screen
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Screen
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Screen
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 184
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Screen
+  example: []
+  syntax:
+    content: public Vector2 Screen { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Vector2
+    content.vb: Public Property Screen As Vector2
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Screen*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Vertex
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.Vertex
+  id: Vertex
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Vertex
+  nameWithType: PointTransformNfo.Vertex
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Vertex
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Vertex
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 200
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public GLVertex Vertex { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLVertex
+    content.vb: Public Property Vertex As GLVertex
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Vertex*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.GLControl
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.GLControl
+  id: GLControl
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: GLControl
+  nameWithType: PointTransformNfo.GLControl
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.GLControl
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLControl
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 202
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public GLControl? GLControl { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLControl
+    content.vb: Public Property GLControl As GLControl
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.GLControl*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute
+  commentId: P:SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute
+  id: DeferredRecompute
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: DeferredRecompute
+  nameWithType: PointTransformNfo.DeferredRecompute
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute
+  type: Property
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DeferredRecompute
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 208
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public bool DeferredRecompute { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DeferredRecompute As Boolean
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute*
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.#ctor(SearchAThing.OpenGL.Core.GLControl,SearchAThing.OpenGL.Core.GLVertex,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.PointTransformNfo.#ctor(SearchAThing.OpenGL.Core.GLControl,SearchAThing.OpenGL.Core.GLVertex,System.Boolean)
+  id: '#ctor(SearchAThing.OpenGL.Core.GLControl,SearchAThing.OpenGL.Core.GLVertex,System.Boolean)'
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: PointTransformNfo(GLControl, GLVertex, bool)
+  nameWithType: PointTransformNfo.PointTransformNfo(GLControl, GLVertex, bool)
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.PointTransformNfo(SearchAThing.OpenGL.Core.GLControl, SearchAThing.OpenGL.Core.GLVertex, bool)
+  type: Constructor
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 210
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public PointTransformNfo(GLControl glControl, GLVertex vertex, bool deferredRecompute = false)
+    parameters:
+    - id: glControl
+      type: SearchAThing.OpenGL.Core.GLControl
+    - id: vertex
+      type: SearchAThing.OpenGL.Core.GLVertex
+    - id: deferredRecompute
+      type: System.Boolean
+    content.vb: Public Sub New(glControl As GLControl, vertex As GLVertex, deferredRecompute As Boolean = False)
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.#ctor*
+  nameWithType.vb: PointTransformNfo.New(GLControl, GLVertex, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.PointTransformNfo.New(SearchAThing.OpenGL.Core.GLControl, SearchAThing.OpenGL.Core.GLVertex, Boolean)
+  name.vb: New(GLControl, GLVertex, Boolean)
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Fmt(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.PointTransformNfo.Fmt(System.String)
+  id: Fmt(System.String)
+  parent: SearchAThing.OpenGL.Core.PointTransformNfo
+  langs:
+  - csharp
+  - vb
+  name: Fmt(string)
+  nameWithType: PointTransformNfo.Fmt(string)
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Fmt(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/PointTransformNfo.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Fmt
+    path: src/core/render/PointTransformNfo.cs
+    startLine: 284
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public string Fmt(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function Fmt(prefix As String) As String
+  overload: SearchAThing.OpenGL.Core.PointTransformNfo.Fmt*
+  nameWithType.vb: PointTransformNfo.Fmt(String)
+  fullName.vb: SearchAThing.OpenGL.Core.PointTransformNfo.Fmt(String)
+  name.vb: Fmt(String)
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  parent: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged
+  name: PropertyChanged
+  nameWithType: INotifyPropertyChanged.PropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  commentId: T:System.ComponentModel.PropertyChangedEventHandler
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_OnPropertyChanged_System_String_
+  name: OnPropertyChanged
+  nameWithType: PointTransformNfo.OnPropertyChanged
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.OnPropertyChanged
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Normal*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Normal
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Normal
+  name: Normal
+  nameWithType: PointTransformNfo.Normal
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Normal
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Object*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Object
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Object
+  name: Object
+  nameWithType: PointTransformNfo.Object
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Object
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Local*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Local
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Local
+  name: Local
+  nameWithType: PointTransformNfo.Local
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Local
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.World*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.World
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_World
+  name: World
+  nameWithType: PointTransformNfo.World
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.World
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Eye*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Eye
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Eye
+  name: Eye
+  nameWithType: PointTransformNfo.Eye
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Eye
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Clip*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Clip
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Clip
+  name: Clip
+  nameWithType: PointTransformNfo.Clip
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Clip
+- uid: System.Numerics.Vector4
+  commentId: T:System.Numerics.Vector4
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  name: Vector4
+  nameWithType: Vector4
+  fullName: System.Numerics.Vector4
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.NDC*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.NDC
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_NDC
+  name: NDC
+  nameWithType: PointTransformNfo.NDC
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.NDC
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Screen*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Screen
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Screen
+  name: Screen
+  nameWithType: PointTransformNfo.Screen
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Screen
+- uid: System.Numerics.Vector2
+  commentId: T:System.Numerics.Vector2
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  name: Vector2
+  nameWithType: Vector2
+  fullName: System.Numerics.Vector2
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Vertex*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Vertex
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Vertex
+  name: Vertex
+  nameWithType: PointTransformNfo.Vertex
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Vertex
+- uid: SearchAThing.OpenGL.Core.GLVertex
+  commentId: T:SearchAThing.OpenGL.Core.GLVertex
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertex.html
+  name: GLVertex
+  nameWithType: GLVertex
+  fullName: SearchAThing.OpenGL.Core.GLVertex
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.GLControl*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.GLControl
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_GLControl
+  name: GLControl
+  nameWithType: PointTransformNfo.GLControl
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.GLControl
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_DeferredRecompute
+  name: DeferredRecompute
+  nameWithType: PointTransformNfo.DeferredRecompute
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.DeferredRecompute
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.#ctor
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo__ctor_SearchAThing_OpenGL_Core_GLControl_SearchAThing_OpenGL_Core_GLVertex_System_Boolean_
+  name: PointTransformNfo
+  nameWithType: PointTransformNfo.PointTransformNfo
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.PointTransformNfo
+  nameWithType.vb: PointTransformNfo.New
+  fullName.vb: SearchAThing.OpenGL.Core.PointTransformNfo.New
+  name.vb: New
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo.Fmt*
+  commentId: Overload:SearchAThing.OpenGL.Core.PointTransformNfo.Fmt
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html#SearchAThing_OpenGL_Core_PointTransformNfo_Fmt_System_String_
+  name: Fmt
+  nameWithType: PointTransformNfo.Fmt
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo.Fmt

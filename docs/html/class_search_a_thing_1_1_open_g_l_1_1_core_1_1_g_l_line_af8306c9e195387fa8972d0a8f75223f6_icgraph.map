@@ -1,8 +1,0 @@
-<map id="FromTo" name="FromTo">
-<area shape="rect" id="node1" title="Create a new opengl line by two points through given two gl vertexes." alt="" coords="848,77,917,102"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle.html#ac5f7e59248957fafca82f095fa267a42" title="Enumerate triangle as opengl lines (V1,V2), (V2,V3) and (V3,V1)." alt="" coords="570,5,773,45"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa21b12f58d8b6c6406a51954d67433be" title="Generate a gl figure that represent the camera frustum object." alt="" coords="570,69,773,109"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#ac89b2707e17ac1dfecc94a0d92261cee" title="Load figure primitives from simple cmd ( newlines supported ). &#160;GLPointFigure.SimpleCmd,..." alt="" coords="543,133,800,173"/>
-<area shape="rect" id="node5" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#ad753878315dd94704362e08f4d1f1da4" title="Load primitives from given simgple cmd and group them by primitive type creating figures ( newlines s..." alt="" coords="256,133,495,173"/>
-<area shape="rect" id="node6" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#a9ff391662dfefb1dc39ee3f08574a69c" title="Add to the model figures coming from given IGLPrimitive.SimpleCmd(bool). &#160;Generated figures are primi..." alt="" coords="5,133,208,173"/>
-</map>

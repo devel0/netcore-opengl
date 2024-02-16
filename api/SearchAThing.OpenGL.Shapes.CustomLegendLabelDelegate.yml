@@ -1,0 +1,117 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  commentId: T:SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  id: CustomLegendLabelDelegate
+  parent: SearchAThing.OpenGL.Shapes
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: CustomLegendLabelDelegate
+  nameWithType: CustomLegendLabelDelegate
+  fullName: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/shapes/ContourLegend.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: CustomLegendLabelDelegate
+    path: src/shapes/ContourLegend.cs
+    startLine: 8
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Delegate for <xref href="SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public delegate string CustomLegendLabelDelegate(int index, double val)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: Index of the i-th contour legend entry.
+    - id: val
+      type: System.Double
+      description: Value of the i-th contour legend ventry.
+    return:
+      type: System.String
+      description: String representation of the i-th contour legend.
+    content.vb: Public Delegate Function CustomLegendLabelDelegate(index As Integer, val As Double) As String
+references:
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+  commentId: P:SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html#SearchAThing_OpenGL_Shapes_ContourLegend_CustomLegendLabel
+  name: CustomLegendLabel
+  nameWithType: ContourLegend.CustomLegendLabel
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend.CustomLegendLabel
+- uid: SearchAThing.OpenGL.Shapes
+  commentId: N:SearchAThing.OpenGL.Shapes
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Shapes
+  nameWithType: SearchAThing.OpenGL.Shapes
+  fullName: SearchAThing.OpenGL.Shapes
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

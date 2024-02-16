@@ -1,4 +1,0 @@
-<map id="CopyBase" name="CopyBase">
-<area shape="rect" id="node1" title="Create a copy with all elements down the hierarchy until GLFigureBase included." alt="" coords="108,5,195,31"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_figure_base.html#ab455657ff8fe6ab2ad42f00cac28404c" title="Create a copy of this gl vertex manager object copying all relevant data except the ParentVertexManag..." alt="" coords="5,5,60,31"/>
-</map>

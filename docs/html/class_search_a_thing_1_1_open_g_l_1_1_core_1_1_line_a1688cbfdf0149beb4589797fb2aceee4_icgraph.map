@@ -1,4 +1,0 @@
-<map id="PointV" name="PointV">
-<area shape="rect" id="node1" title="Create a line by the from position and given extension." alt="" coords="256,13,320,38"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a8b88bca5ca7377d6aca5657c0c7a59a6" title="Create a raycast line [local] suitable to hit test of figure primitives." alt="" coords="5,5,208,45"/>
-</map>

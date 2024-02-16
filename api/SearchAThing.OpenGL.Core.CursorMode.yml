@@ -1,0 +1,153 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.CursorMode
+  commentId: T:SearchAThing.OpenGL.Core.CursorMode
+  id: CursorMode
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.CursorMode.Figure
+  - SearchAThing.OpenGL.Core.CursorMode.Primitive
+  - SearchAThing.OpenGL.Core.CursorMode.View
+  langs:
+  - csharp
+  - vb
+  name: CursorMode
+  nameWithType: CursorMode
+  fullName: SearchAThing.OpenGL.Core.CursorMode
+  type: Enum
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: CursorMode
+    path: src/core/render/Types.cs
+    startLine: 25
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public enum CursorMode
+    content.vb: Public Enum CursorMode
+- uid: SearchAThing.OpenGL.Core.CursorMode.View
+  commentId: F:SearchAThing.OpenGL.Core.CursorMode.View
+  id: View
+  parent: SearchAThing.OpenGL.Core.CursorMode
+  langs:
+  - csharp
+  - vb
+  name: View
+  nameWithType: CursorMode.View
+  fullName: SearchAThing.OpenGL.Core.CursorMode.View
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: View
+    path: src/core/render/Types.cs
+    startLine: 30
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Normal scale/rotate/pan view gestures.
+  example: []
+  syntax:
+    content: View = 0
+    return:
+      type: SearchAThing.OpenGL.Core.CursorMode
+- uid: SearchAThing.OpenGL.Core.CursorMode.Primitive
+  commentId: F:SearchAThing.OpenGL.Core.CursorMode.Primitive
+  id: Primitive
+  parent: SearchAThing.OpenGL.Core.CursorMode
+  langs:
+  - csharp
+  - vb
+  name: Primitive
+  nameWithType: CursorMode.Primitive
+  fullName: SearchAThing.OpenGL.Core.CursorMode.Primitive
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Primitive
+    path: src/core/render/Types.cs
+    startLine: 35
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Select primitive under cursor.
+  example: []
+  syntax:
+    content: Primitive = 1
+    return:
+      type: SearchAThing.OpenGL.Core.CursorMode
+- uid: SearchAThing.OpenGL.Core.CursorMode.Figure
+  commentId: F:SearchAThing.OpenGL.Core.CursorMode.Figure
+  id: Figure
+  parent: SearchAThing.OpenGL.Core.CursorMode
+  langs:
+  - csharp
+  - vb
+  name: Figure
+  nameWithType: CursorMode.Figure
+  fullName: SearchAThing.OpenGL.Core.CursorMode.Figure
+  type: Field
+  source:
+    remote:
+      path: src/core/render/Types.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Figure
+    path: src/core/render/Types.cs
+    startLine: 40
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Select figure under cursor.
+  example: []
+  syntax:
+    content: Figure = 2
+    return:
+      type: SearchAThing.OpenGL.Core.CursorMode
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.CursorMode
+  commentId: T:SearchAThing.OpenGL.Core.CursorMode
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.CursorMode.html
+  name: CursorMode
+  nameWithType: CursorMode
+  fullName: SearchAThing.OpenGL.Core.CursorMode

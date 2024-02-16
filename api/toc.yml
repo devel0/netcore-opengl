@@ -1,0 +1,231 @@
+### YamlMime:TableOfContent
+items:
+- uid: SearchAThing.OpenGL.Core
+  name: SearchAThing.OpenGL.Core
+  items:
+  - uid: SearchAThing.OpenGL.Core.BBox
+    name: BBox
+  - uid: SearchAThing.OpenGL.Core.CameraViewType
+    name: CameraViewType
+  - uid: SearchAThing.OpenGL.Core.ColorConverterPatch
+    name: ColorConverterPatch
+  - uid: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+    name: ComputeTriangleNormalDelegate
+  - uid: SearchAThing.OpenGL.Core.Constants
+    name: Constants
+  - uid: SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+    name: ControlFigureVisibileDelegate
+  - uid: SearchAThing.OpenGL.Core.CursorMode
+    name: CursorMode
+  - uid: SearchAThing.OpenGL.Core.DebugVtxMgr
+    name: DebugVtxMgr
+  - uid: SearchAThing.OpenGL.Core.DummyRenderDevice
+    name: DummyRenderDevice
+  - uid: SearchAThing.OpenGL.Core.Ext
+    name: Ext
+  - uid: SearchAThing.OpenGL.Core.FigureEvent
+    name: FigureEvent
+  - uid: SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+    name: FigureInvalidatedDelegate
+  - uid: SearchAThing.OpenGL.Core.FiguresEvent
+    name: FiguresEvent
+  - uid: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+    name: GLBuildModelDelegate
+  - uid: SearchAThing.OpenGL.Core.GLContext
+    name: GLContext
+  - uid: SearchAThing.OpenGL.Core.GLControl
+    name: GLControl
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+    name: GLFigureTypeBase<P>
+  - uid: SearchAThing.OpenGL.Core.GLFontChar
+    name: GLFontChar
+  - uid: SearchAThing.OpenGL.Core.GLFontCharManager
+    name: GLFontCharManager
+  - uid: SearchAThing.OpenGL.Core.GLLine
+    name: GLLine
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure
+    name: GLLineFigure
+  - uid: SearchAThing.OpenGL.Core.GLMatrix4x4Struct
+    name: GLMatrix4x4Struct
+  - uid: SearchAThing.OpenGL.Core.GLMatrixes
+    name: GLMatrixes
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+  - uid: SearchAThing.OpenGL.Core.GLNotificationType
+    name: GLNotificationType
+  - uid: SearchAThing.OpenGL.Core.GLPipeline
+    name: GLPipeline
+  - uid: SearchAThing.OpenGL.Core.GLPoint
+    name: GLPoint
+  - uid: SearchAThing.OpenGL.Core.GLPointFigure
+    name: GLPointFigure
+  - uid: SearchAThing.OpenGL.Core.GLPointLight
+    name: GLPointLight
+  - uid: SearchAThing.OpenGL.Core.GLPointLightStruct
+    name: GLPointLightStruct
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+    name: GLPrimitiveType
+  - uid: SearchAThing.OpenGL.Core.GLShaderStorageBlock`1
+    name: GLShaderStorageBlock<T>
+  - uid: SearchAThing.OpenGL.Core.GLText
+    name: GLText
+  - uid: SearchAThing.OpenGL.Core.GLTextCharFigure
+    name: GLTextCharFigure
+  - uid: SearchAThing.OpenGL.Core.GLTextVHAlignment
+    name: GLTextVHAlignment
+  - uid: SearchAThing.OpenGL.Core.GLTexture2D
+    name: GLTexture2D
+  - uid: SearchAThing.OpenGL.Core.GLTriangle
+    name: GLTriangle
+  - uid: SearchAThing.OpenGL.Core.GLTriangleFigure
+    name: GLTriangleFigure
+  - uid: SearchAThing.OpenGL.Core.GLVertex
+    name: GLVertex
+  - uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+    name: GLVertexArrayObject<PacketStructure>
+  - uid: SearchAThing.OpenGL.Core.GLVertexBufferObject`1
+    name: GLVertexBufferObject<T>
+  - uid: SearchAThing.OpenGL.Core.GLVertexFlag
+    name: GLVertexFlag
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager
+    name: GLVertexManager
+  - uid: SearchAThing.OpenGL.Core.GLVertexStruct
+    name: GLVertexStruct
+  - uid: SearchAThing.OpenGL.Core.IGLContextObject
+    name: IGLContextObject
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+  - uid: SearchAThing.OpenGL.Core.IGLLine
+    name: IGLLine
+  - uid: SearchAThing.OpenGL.Core.IGLLineFigure
+    name: IGLLineFigure
+  - uid: SearchAThing.OpenGL.Core.IGLPoint
+    name: IGLPoint
+  - uid: SearchAThing.OpenGL.Core.IGLPointFigure
+    name: IGLPointFigure
+  - uid: SearchAThing.OpenGL.Core.IGLPrimitive
+    name: IGLPrimitive
+  - uid: SearchAThing.OpenGL.Core.IGLTexture2D
+    name: IGLTexture2D
+  - uid: SearchAThing.OpenGL.Core.IGLTriangle
+    name: IGLTriangle
+  - uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+    name: IGLTriangleFigure
+  - uid: SearchAThing.OpenGL.Core.IGLVertex
+    name: IGLVertex
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager
+    name: IGLVertexManager
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+  - uid: SearchAThing.OpenGL.Core.IRenderDevice
+    name: IRenderDevice
+  - uid: SearchAThing.OpenGL.Core.InvalidateEnum
+    name: InvalidateEnum
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+  - uid: SearchAThing.OpenGL.Core.MaterialProperties
+    name: MaterialProperties
+  - uid: SearchAThing.OpenGL.Core.ModelViewInvalidated
+    name: ModelViewInvalidated
+  - uid: SearchAThing.OpenGL.Core.MouseStart
+    name: MouseStart
+  - uid: SearchAThing.OpenGL.Core.NotificationDelegate
+    name: NotificationDelegate
+  - uid: SearchAThing.OpenGL.Core.OffscreenRenderDevice
+    name: OffscreenRenderDevice
+  - uid: SearchAThing.OpenGL.Core.Plate
+    name: Plate
+  - uid: SearchAThing.OpenGL.Core.PointTransformNfo
+    name: PointTransformNfo
+  - uid: SearchAThing.OpenGL.Core.RayCastHitTest
+    name: RayCastHitTest
+  - uid: SearchAThing.OpenGL.Core.RenderPreviewDelegate
+    name: RenderPreviewDelegate
+  - uid: SearchAThing.OpenGL.Core.Toolkit
+    name: Toolkit
+  - uid: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+    name: VertexManagerInvalidatedDelegate
+  - uid: SearchAThing.OpenGL.Core.ViewNfo
+    name: ViewNfo
+  - uid: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+    name: YAxisOrientationEnum
+- uid: SearchAThing.OpenGL.GUI
+  name: SearchAThing.OpenGL.GUI
+  items:
+  - uid: SearchAThing.OpenGL.GUI.AColorConverter
+    name: AColorConverter
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlEvent
+    name: AvaloniaControlEvent
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaControlInitialEvent
+    name: AvaloniaControlInitialEvent
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+    name: AvaloniaGLControl
+  - uid: SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit
+    name: AvaloniaGLControlSplit
+  - uid: SearchAThing.OpenGL.GUI.ColorHexStringConverter
+    name: ColorHexStringConverter
+  - uid: SearchAThing.OpenGL.GUI.Constants
+    name: Constants
+  - uid: SearchAThing.OpenGL.GUI.Ext
+    name: Ext
+  - uid: SearchAThing.OpenGL.GUI.GLControlCreatedDelegate
+    name: GLControlCreatedDelegate
+  - uid: SearchAThing.OpenGL.GUI.GLControlFocusedDelegate
+    name: GLControlFocusedDelegate
+  - uid: SearchAThing.OpenGL.GUI.GLDevTool
+    name: GLDevTool
+  - uid: SearchAThing.OpenGL.GUI.GLSplitAttachedDelegate
+    name: GLSplitAttachedDelegate
+  - uid: SearchAThing.OpenGL.GUI.GLView
+    name: GLView
+  - uid: SearchAThing.OpenGL.GUI.GLWindow
+    name: GLWindow
+  - uid: SearchAThing.OpenGL.GUI.LostFocusUpdateBindingBehavior
+    name: LostFocusUpdateBindingBehavior
+  - uid: SearchAThing.OpenGL.GUI.Toolkit
+    name: Toolkit
+  - uid: SearchAThing.OpenGL.GUI.Vector2TextConverter
+    name: Vector2TextConverter
+  - uid: SearchAThing.OpenGL.GUI.Vector3EditConverter
+    name: Vector3EditConverter
+  - uid: SearchAThing.OpenGL.GUI.Vector3TextConverter
+    name: Vector3TextConverter
+  - uid: SearchAThing.OpenGL.GUI.Vector3Wrap
+    name: Vector3Wrap
+  - uid: SearchAThing.OpenGL.GUI.Vector4TextConverter
+    name: Vector4TextConverter
+  - uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo
+    name: ViewLayoutNfo
+- uid: SearchAThing.OpenGL.Nurbs
+  name: SearchAThing.OpenGL.Nurbs
+  items:
+  - uid: SearchAThing.OpenGL.Nurbs.Ext
+    name: Ext
+  - uid: SearchAThing.OpenGL.Nurbs.Toolkit
+    name: Toolkit
+- uid: SearchAThing.OpenGL.Shapes
+  name: SearchAThing.OpenGL.Shapes
+  items:
+  - uid: SearchAThing.OpenGL.Shapes.Arrow
+    name: Arrow
+  - uid: SearchAThing.OpenGL.Shapes.Box
+    name: Box
+  - uid: SearchAThing.OpenGL.Shapes.Cone
+    name: Cone
+  - uid: SearchAThing.OpenGL.Shapes.Constants
+    name: Constants
+  - uid: SearchAThing.OpenGL.Shapes.ContourLegend
+    name: ContourLegend
+  - uid: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+    name: CustomLegendLabelDelegate
+  - uid: SearchAThing.OpenGL.Shapes.Ellipse
+    name: Ellipse
+  - uid: SearchAThing.OpenGL.Shapes.Toolkit
+    name: Toolkit
+  - uid: SearchAThing.OpenGL.Shapes.UVSphere
+    name: UVSphere
+memberLayout: SamePage

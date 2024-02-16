@@ -1,0 +1,680 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.Ext
+  commentId: T:SearchAThing.OpenGL.GUI.Ext
+  id: Ext
+  parent: SearchAThing.OpenGL.GUI
+  children:
+  - SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor(System.Drawing.Color@)
+  - SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType(SearchAThing.OpenGL.Core.GLNotificationType)
+  - SearchAThing.OpenGL.GUI.Ext.ToRenderSize(Avalonia.Size@)
+  - SearchAThing.OpenGL.GUI.Ext.ToVector2(Avalonia.Point@)
+  langs:
+  - csharp
+  - vb
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.GUI.Ext
+  type: Class
+  source:
+    remote:
+      path: src/gui/Views/GLWindow.axaml.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Ext
+    path: src/gui/Views/GLWindow.axaml.cs
+    startLine: 243
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  syntax:
+    content: public static class Ext
+    content.vb: Public Module Ext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.GUI.Ext.ToRenderSize(Avalonia.Size@)
+  commentId: M:SearchAThing.OpenGL.GUI.Ext.ToRenderSize(Avalonia.Size@)
+  id: ToRenderSize(Avalonia.Size@)
+  isExtensionMethod: true
+  parent: SearchAThing.OpenGL.GUI.Ext
+  langs:
+  - csharp
+  - vb
+  name: ToRenderSize(in Size)
+  nameWithType: Ext.ToRenderSize(in Size)
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToRenderSize(in Avalonia.Size)
+  type: Method
+  source:
+    remote:
+      path: src/gui/Ext.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToRenderSize
+    path: src/gui/Ext.cs
+    startLine: 10
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Convert avalonia Size object to drawing Size.
+  example: []
+  syntax:
+    content: public static Size ToRenderSize(this in Size size)
+    parameters:
+    - id: size
+      type: Avalonia.Size
+    return:
+      type: System.Drawing.Size
+    content.vb: Public Shared Function ToRenderSize(size As Size) As Size
+  overload: SearchAThing.OpenGL.GUI.Ext.ToRenderSize*
+  nameWithType.vb: Ext.ToRenderSize(Size)
+  fullName.vb: SearchAThing.OpenGL.GUI.Ext.ToRenderSize(Avalonia.Size)
+  name.vb: ToRenderSize(Size)
+- uid: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor(System.Drawing.Color@)
+  commentId: M:SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor(System.Drawing.Color@)
+  id: ToAvaloniaColor(System.Drawing.Color@)
+  isExtensionMethod: true
+  parent: SearchAThing.OpenGL.GUI.Ext
+  langs:
+  - csharp
+  - vb
+  name: ToAvaloniaColor(in Color)
+  nameWithType: Ext.ToAvaloniaColor(in Color)
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor(in System.Drawing.Color)
+  type: Method
+  source:
+    remote:
+      path: src/gui/Ext.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToAvaloniaColor
+    path: src/gui/Ext.cs
+    startLine: 16
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Convert given drawing color to avalonia color.
+  example: []
+  syntax:
+    content: public static Color ToAvaloniaColor(this in Color color)
+    parameters:
+    - id: color
+      type: System.Drawing.Color
+    return:
+      type: Avalonia.Media.Color
+    content.vb: Public Shared Function ToAvaloniaColor(color As Color) As Color
+  overload: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor*
+  nameWithType.vb: Ext.ToAvaloniaColor(Color)
+  fullName.vb: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor(System.Drawing.Color)
+  name.vb: ToAvaloniaColor(Color)
+- uid: SearchAThing.OpenGL.GUI.Ext.ToVector2(Avalonia.Point@)
+  commentId: M:SearchAThing.OpenGL.GUI.Ext.ToVector2(Avalonia.Point@)
+  id: ToVector2(Avalonia.Point@)
+  isExtensionMethod: true
+  parent: SearchAThing.OpenGL.GUI.Ext
+  langs:
+  - csharp
+  - vb
+  name: ToVector2(in Point)
+  nameWithType: Ext.ToVector2(in Point)
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToVector2(in Avalonia.Point)
+  type: Method
+  source:
+    remote:
+      path: src/gui/Ext.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToVector2
+    path: src/gui/Ext.cs
+    startLine: 22
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Convert given avalonia point to vector2.
+  example: []
+  syntax:
+    content: public static Vector2 ToVector2(this in Point pt)
+    parameters:
+    - id: pt
+      type: Avalonia.Point
+    return:
+      type: System.Numerics.Vector2
+    content.vb: Public Shared Function ToVector2(pt As Point) As Vector2
+  overload: SearchAThing.OpenGL.GUI.Ext.ToVector2*
+  nameWithType.vb: Ext.ToVector2(Point)
+  fullName.vb: SearchAThing.OpenGL.GUI.Ext.ToVector2(Avalonia.Point)
+  name.vb: ToVector2(Point)
+- uid: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType(SearchAThing.OpenGL.Core.GLNotificationType)
+  commentId: M:SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType(SearchAThing.OpenGL.Core.GLNotificationType)
+  id: ToAvaloniaNotificationType(SearchAThing.OpenGL.Core.GLNotificationType)
+  isExtensionMethod: true
+  parent: SearchAThing.OpenGL.GUI.Ext
+  langs:
+  - csharp
+  - vb
+  name: ToAvaloniaNotificationType(GLNotificationType)
+  nameWithType: Ext.ToAvaloniaNotificationType(GLNotificationType)
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType(SearchAThing.OpenGL.Core.GLNotificationType)
+  type: Method
+  source:
+    remote:
+      path: src/gui/Ext.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToAvaloniaNotificationType
+    path: src/gui/Ext.cs
+    startLine: 28
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Convert given gl notification type to corresponding avalonia notification type.
+  example: []
+  syntax:
+    content: public static NotificationType ToAvaloniaNotificationType(this GLNotificationType type)
+    parameters:
+    - id: type
+      type: SearchAThing.OpenGL.Core.GLNotificationType
+    return:
+      type: Avalonia.Controls.Notifications.NotificationType
+    content.vb: Public Shared Function ToAvaloniaNotificationType(type As GLNotificationType) As NotificationType
+  overload: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType*
+references:
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.GUI.Ext.ToRenderSize*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Ext.ToRenderSize
+  href: SearchAThing.OpenGL.GUI.Ext.html#SearchAThing_OpenGL_GUI_Ext_ToRenderSize_Avalonia_Size__
+  name: ToRenderSize
+  nameWithType: Ext.ToRenderSize
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToRenderSize
+- uid: Avalonia.Size
+  commentId: T:Avalonia.Size
+  parent: Avalonia
+  isExternal: true
+  name: Size
+  nameWithType: Size
+  fullName: Avalonia.Size
+- uid: System.Drawing.Size
+  commentId: T:System.Drawing.Size
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.size
+  name: Size
+  nameWithType: Size
+  fullName: System.Drawing.Size
+- uid: Avalonia
+  commentId: N:Avalonia
+  isExternal: true
+  name: Avalonia
+  nameWithType: Avalonia
+  fullName: Avalonia
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor
+  href: SearchAThing.OpenGL.GUI.Ext.html#SearchAThing_OpenGL_GUI_Ext_ToAvaloniaColor_System_Drawing_Color__
+  name: ToAvaloniaColor
+  nameWithType: Ext.ToAvaloniaColor
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaColor
+- uid: System.Drawing.Color
+  commentId: T:System.Drawing.Color
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  name: Color
+  nameWithType: Color
+  fullName: System.Drawing.Color
+- uid: Avalonia.Media.Color
+  commentId: T:Avalonia.Media.Color
+  parent: Avalonia.Media
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Avalonia.Media.Color
+- uid: Avalonia.Media
+  commentId: N:Avalonia.Media
+  isExternal: true
+  name: Avalonia.Media
+  nameWithType: Avalonia.Media
+  fullName: Avalonia.Media
+  spec.csharp:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Media
+    name: Media
+    isExternal: true
+  spec.vb:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Media
+    name: Media
+    isExternal: true
+- uid: SearchAThing.OpenGL.GUI.Ext.ToVector2*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Ext.ToVector2
+  href: SearchAThing.OpenGL.GUI.Ext.html#SearchAThing_OpenGL_GUI_Ext_ToVector2_Avalonia_Point__
+  name: ToVector2
+  nameWithType: Ext.ToVector2
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToVector2
+- uid: Avalonia.Point
+  commentId: T:Avalonia.Point
+  parent: Avalonia
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: Avalonia.Point
+- uid: System.Numerics.Vector2
+  commentId: T:System.Numerics.Vector2
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  name: Vector2
+  nameWithType: Vector2
+  fullName: System.Numerics.Vector2
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType*
+  commentId: Overload:SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType
+  href: SearchAThing.OpenGL.GUI.Ext.html#SearchAThing_OpenGL_GUI_Ext_ToAvaloniaNotificationType_SearchAThing_OpenGL_Core_GLNotificationType_
+  name: ToAvaloniaNotificationType
+  nameWithType: Ext.ToAvaloniaNotificationType
+  fullName: SearchAThing.OpenGL.GUI.Ext.ToAvaloniaNotificationType
+- uid: SearchAThing.OpenGL.Core.GLNotificationType
+  commentId: T:SearchAThing.OpenGL.Core.GLNotificationType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLNotificationType.html
+  name: GLNotificationType
+  nameWithType: GLNotificationType
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType
+- uid: Avalonia.Controls.Notifications.NotificationType
+  commentId: T:Avalonia.Controls.Notifications.NotificationType
+  parent: Avalonia.Controls.Notifications
+  isExternal: true
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: Avalonia.Controls.Notifications.NotificationType
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: Avalonia.Controls.Notifications
+  commentId: N:Avalonia.Controls.Notifications
+  isExternal: true
+  name: Avalonia.Controls.Notifications
+  nameWithType: Avalonia.Controls.Notifications
+  fullName: Avalonia.Controls.Notifications
+  spec.csharp:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Controls
+    name: Controls
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Controls.Notifications
+    name: Notifications
+    isExternal: true
+  spec.vb:
+  - uid: Avalonia
+    name: Avalonia
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Controls
+    name: Controls
+    isExternal: true
+  - name: .
+  - uid: Avalonia.Controls.Notifications
+    name: Notifications
+    isExternal: true

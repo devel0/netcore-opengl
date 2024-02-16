@@ -1,0 +1,2030 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GLModel | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GLModel | netcore-opengl ">
+      
+      <meta name="description" content="Gl model.  contains the associated  the list of model figures  point lights . custom vertex managers  contains the default build model action.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_Core_GLModel.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.Core.GLModel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.Core.GLModel">
+
+
+
+  <h1 id="SearchAThing_OpenGL_Core_GLModel" data-uid="SearchAThing.OpenGL.Core.GLModel" class="text-break">
+Class GLModel  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.Serialization.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Gl model.<br></p>
+<ul>
+<li>contains the associated <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_GLVertexManager">GLVertexManager</a><br></li>
+<li>the list of model figures <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a><br></li>
+<li>point lights <a class="xref" href="SearchAThing.OpenGL.Core.GLPointLight.html">GLPointLight</a>.<br></li>
+<li>custom vertex managers <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_">AddCustomVertexManager(GLVertexManager)</a><br></li>
+<li>contains the default build model action.<br></li>
+</ul>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonObject(MemberSerialization.OptIn)]
+public class GLModel : IGLContextObject</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GLModel</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLContextObject.html">IGLContextObject</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_">Ext.LoadTexture(GLModel, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeTextFigure_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_GLText_">Toolkit.MakeTextFigure(GLModel, GLText)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel__ctor_" data-uid="SearchAThing.OpenGL.Core.GLModel.#ctor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel__ctor_SearchAThing_OpenGL_Core_GLContext_" data-uid="SearchAThing.OpenGL.Core.GLModel.#ctor(SearchAThing.OpenGL.Core.GLContext)">
+  GLModel(GLContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLModel(GLContext glContext)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>glContext</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLContext.html">GLContext</a></dt>
+    <dd><p>Gl context.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_BuildModel" data-uid="SearchAThing.OpenGL.Core.GLModel.BuildModel">
+  BuildModel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L694"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Build model action that will executed each time the model requires a full rebuild because invalidated.<br>
+Arguments (<a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html">GLControl</a>, bool isInitial).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLBuildModelDelegate? BuildModel</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLBuildModelDelegate.html">GLBuildModelDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_NotificationRequest" data-uid="SearchAThing.OpenGL.Core.GLModel.NotificationRequest">
+  NotificationRequest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when gl control would to notify something. This will handled by SearchAThing.OpenGL.GUI.AvaloniaGLControl.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NotificationDelegate NotificationRequest</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.NotificationDelegate.html">NotificationDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_CursorMode_" data-uid="SearchAThing.OpenGL.Core.GLModel.CursorMode*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_CursorMode" data-uid="SearchAThing.OpenGL.Core.GLModel.CursorMode">
+  CursorMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current cursor mode.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CursorMode CursorMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.CursorMode.html">CursorMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_CursorMode">CursorMode</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_CustomVertexManagers_" data-uid="SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_CustomVertexManagers" data-uid="SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers">
+  CustomVertexManagers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerates custom vertex managers registered into this model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GLVertexManager&gt; CustomVertexManagers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html">GLVertexManager</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_Figures_" data-uid="SearchAThing.OpenGL.Core.GLModel.Figures*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_Figures" data-uid="SearchAThing.OpenGL.Core.GLModel.Figures">
+  Figures
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Figures (included those from custom vertex managers)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyObservableCollection&lt;GLFigureBase&gt; Figures { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1">ReadOnlyObservableCollection</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_GLContext_" data-uid="SearchAThing.OpenGL.Core.GLModel.GLContext*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_GLContext" data-uid="SearchAThing.OpenGL.Core.GLModel.GLContext">
+  GLContext
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLContext GLContext { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLContext.html">GLContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_GLVertexManager_" data-uid="SearchAThing.OpenGL.Core.GLModel.GLVertexManager*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_GLVertexManager" data-uid="SearchAThing.OpenGL.Core.GLModel.GLVertexManager">
+  GLVertexManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl vertex manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLVertexManager GLVertexManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html">GLVertexManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_IsInvalidated_" data-uid="SearchAThing.OpenGL.Core.GLModel.IsInvalidated*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_IsInvalidated" data-uid="SearchAThing.OpenGL.Core.GLModel.IsInvalidated">
+  IsInvalidated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if model is invalidated thus <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_BuildModel">BuildModel</a> will be automatically invoked at first render.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidated { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_LBBox_" data-uid="SearchAThing.OpenGL.Core.GLModel.LBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_LBBox" data-uid="SearchAThing.OpenGL.Core.GLModel.LBBox">
+  LBBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>bbox of model vertexes [local].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BBox LBBox { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_NormalFactor_" data-uid="SearchAThing.OpenGL.Core.GLModel.NormalFactor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_NormalFactor" data-uid="SearchAThing.OpenGL.Core.GLModel.NormalFactor">
+  NormalFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Factor respect to bbox size used when normal geometry shader generates normals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float NormalFactor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShowNormals">ShowNormals</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OverrideAmbient_" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideAmbient*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OverrideAmbient" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideAmbient">
+  OverrideAmbient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override ambient strength (default:0.8).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OverrideAmbient { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_GLModel_OverrideAmbient_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Requires <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideAmbient">OverrideAmbient</a> to be effective.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__">OverrideLightStrengths(float?, float?, float?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OverrideAmbientEnabled_" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OverrideAmbientEnabled" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled">
+  OverrideAmbientEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override ambient strength enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverrideAmbientEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OverrideDiffuse_" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OverrideDiffuse" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse">
+  OverrideDiffuse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override diffuse strength (default:0.6).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OverrideDiffuse { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_GLModel_OverrideDiffuse_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Requires <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideDiffuse">OverrideDiffuse</a> to be effective.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__">OverrideLightStrengths(float?, float?, float?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OverrideDiffuseEnabled_" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OverrideDiffuseEnabled" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled">
+  OverrideDiffuseEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override diffuse strength enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverrideDiffuseEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OverrideSpecular_" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideSpecular*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OverrideSpecular" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideSpecular">
+  OverrideSpecular
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override specular strength (default:0.6).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OverrideSpecular { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_GLModel_OverrideSpecular_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Requires <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideSpecular">OverrideSpecular</a> to be effective.</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__">OverrideLightStrengths(float?, float?, float?)</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OverrideSpecularEnabled_" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OverrideSpecularEnabled" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled">
+  OverrideSpecularEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override specular strength enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OverrideSpecularEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_PointLights_" data-uid="SearchAThing.OpenGL.Core.GLModel.PointLights*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_PointLights" data-uid="SearchAThing.OpenGL.Core.GLModel.PointLights">
+  PointLights
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L431"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Observable collection of model point lights.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public ObservableCollection2&lt;GLPointLight&gt; PointLights { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ObservableCollection2</span>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLPointLight.html">GLPointLight</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLPointLight.html">GLPointLight</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_SelectedFigures_" data-uid="SearchAThing.OpenGL.Core.GLModel.SelectedFigures*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_SelectedFigures" data-uid="SearchAThing.OpenGL.Core.GLModel.SelectedFigures">
+  SelectedFigures
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selected figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyObservableCollection&lt;GLFigureBase&gt; SelectedFigures { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1">ReadOnlyObservableCollection</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_SelectedPrimitives_" data-uid="SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_SelectedPrimitives" data-uid="SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives">
+  SelectedPrimitives
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selected primitives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyObservableCollection&lt;GLPrimitiveBase&gt; SelectedPrimitives { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1">ReadOnlyObservableCollection</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveBase.html">GLPrimitiveBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_SerializerSettings_" data-uid="SearchAThing.OpenGL.Core.GLModel.SerializerSettings*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_SerializerSettings" data-uid="SearchAThing.OpenGL.Core.GLModel.SerializerSettings">
+  SerializerSettings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.Serialization.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default settings for json serialization of model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JsonSerializerSettings SerializerSettings { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">JsonSerializerSettings</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_Vertexes_" data-uid="SearchAThing.OpenGL.Core.GLModel.Vertexes*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_Vertexes" data-uid="SearchAThing.OpenGL.Core.GLModel.Vertexes">
+  Vertexes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L633"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerates gl vertexes [object].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GLVertex&gt; Vertexes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html">GLVertex</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_" data-uid="SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_" data-uid="SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)">
+  AddCustomVertexManager(GLVertexManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attach given custom vertex manager to the model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddCustomVertexManager(GLVertexManager vertexManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexManager</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html">GLVertexManager</a></dt>
+    <dd><p>Gl vertex manager to attach.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_AddFigure_" data-uid="SearchAThing.OpenGL.Core.GLModel.AddFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_" data-uid="SearchAThing.OpenGL.Core.GLModel.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)">
+  AddFigure(GLFigureBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L604"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds given figure to the vertex manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFigure(GLFigureBase figure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd><p>Gl figure to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_">AddFigure</a>(<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_AddFigure_" data-uid="SearchAThing.OpenGL.Core.GLModel.AddFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__" data-uid="SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})">
+  AddFigure(IEnumerable&lt;GLFigureBase&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L597"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds given figures to the vertex manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFigure(IEnumerable&lt;GLFigureBase&gt; figures)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd><p>Gl figures to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__">AddFigure</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_Clear_" data-uid="SearchAThing.OpenGL.Core.GLModel.Clear*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_Clear_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLModel.Clear(System.Boolean)">
+  Clear(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L583"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear the model removing all entities from vertex manager, deregistering custom vertex manager and clearing point lights if specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear(bool clearPointLights = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clearPointLights</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true clear point lights (Default:false).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_ClearSelection_" data-uid="SearchAThing.OpenGL.Core.GLModel.ClearSelection*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_ClearSelection_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLModel.ClearSelection(System.Boolean)">
+  ClearSelection(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L823"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear current selection ( of figures, primitives ) and cancel select command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearSelection(bool resetToViewMode = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resetToViewMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (Default) cursor back to <a class="xref" href="SearchAThing.OpenGL.Core.CursorMode.html#SearchAThing_OpenGL_Core_CursorMode_View">View</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_DeleteSelected_" data-uid="SearchAThing.OpenGL.Core.GLModel.DeleteSelected*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_DeleteSelected" data-uid="SearchAThing.OpenGL.Core.GLModel.DeleteSelected">
+  DeleteSelected()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L880"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delete selected primitives/figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteSelected()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_DeserializeFigures_" data-uid="SearchAThing.OpenGL.Core.GLModel.DeserializeFigures*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_DeserializeFigures_System_String_" data-uid="SearchAThing.OpenGL.Core.GLModel.DeserializeFigures(System.String)">
+  DeserializeFigures(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.Serialization.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deserialize given gl model retrieving gl figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GLFigureBase&gt; DeserializeFigures(string json)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_DeserializeFiguresFromFile_" data-uid="SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_DeserializeFiguresFromFile_System_String_" data-uid="SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile(System.String)">
+  DeserializeFiguresFromFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.Serialization.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deserialize gl figures from given serialized gl model pathfilename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GLFigureBase&gt; DeserializeFiguresFromFile(string pathfilename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_FiguresFromSimpleCmd_" data-uid="SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_FiguresFromSimpleCmd_System_String_" data-uid="SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd(System.String)">
+  FiguresFromSimpleCmd(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L752"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load primitives from given simgple cmd and group them by primitive type creating figures ( newlines supported ).<br>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLPointFigure.html#SearchAThing_OpenGL_Core_GLPointFigure_SimpleCmd">SimpleCmd()</a>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_SimpleCmd">SimpleCmd()</a>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_SimpleCmd">SimpleCmd()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GLFigureBase&gt; FiguresFromSimpleCmd(string simpleCmd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>simpleCmd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_GetSelectionSimpleCmd_" data-uid="SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_GetSelectionSimpleCmd" data-uid="SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd">
+  GetSelectionSimpleCmd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L849"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve <a class="xref" href="SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_SimpleCmd_System_Boolean_">SimpleCmd(bool)</a> representation of selected primitives and figure primitives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetSelectionSimpleCmd()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_InvalidateModel_" data-uid="SearchAThing.OpenGL.Core.GLModel.InvalidateModel*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_InvalidateModel" data-uid="SearchAThing.OpenGL.Core.GLModel.InvalidateModel">
+  InvalidateModel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L655"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invalidate the gl model.<br><br>
+This cause <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_BuildModel">BuildModel</a> to be invoked at next render.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InvalidateModel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_IsInvalidated">IsInvalidated</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OnPropertyChanged_" data-uid="SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OnPropertyChanged_System_String_" data-uid="SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged(System.String)">
+  OnPropertyChanged(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>invoke this method to forward propertchanged event notification.
+note: not needed to specify propertyName set by compiler service to called property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnPropertyChanged(string? propertyName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__" data-uid="SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})">
+  OverrideLightStrengths(float?, float?, float?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L516"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override vertex material properties.<br>
+Has no effect if no light points present.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverrideLightStrengths(float? ambient = null, float? diffuse = null, float? specular = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ambient</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>Ambient light strength (Default:0.8).</p>
+</dd>
+    <dt><code>diffuse</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>Diffuse light strength (Default:0.6).</p>
+</dd>
+    <dt><code>specular</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>Specular light strength (Default:0.6).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_PasteSimpleCmd_" data-uid="SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_PasteSimpleCmd_System_String_" data-uid="SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd(System.String)">
+  PasteSimpleCmd(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L868"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add to the model figures coming from given <a class="xref" href="SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_SimpleCmd_System_Boolean_">SimpleCmd(bool)</a>.<br>
+Generated figures are primitives coming from the cmd grouped by primitive type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IGLFigure&gt; PasteSimpleCmd(string simpleCmd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>simpleCmd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Simple cmd representation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html">IGLFigure</a>&gt;</dt>
+    <dd><p>Figures added to the model.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_PrimitivesFromSimpleCmd_" data-uid="SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_PrimitivesFromSimpleCmd_System_String_" data-uid="SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd(System.String)">
+  PrimitivesFromSimpleCmd(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L711"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load figure primitives from simple cmd ( newlines supported ).<br>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLPointFigure.html#SearchAThing_OpenGL_Core_GLPointFigure_SimpleCmd">SimpleCmd()</a>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_SimpleCmd">SimpleCmd()</a>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_SimpleCmd">SimpleCmd()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GLPrimitiveBase&gt; PrimitivesFromSimpleCmd(string simpleCmd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>simpleCmd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveBase.html">GLPrimitiveBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_RecomputeLBBox_" data-uid="SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_RecomputeLBBox" data-uid="SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox">
+  RecomputeLBBox()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L469"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invalidate and recalc bounding box [local].<br>
+Used internally after delete of figures/primitives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecomputeLBBox()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_RemoveCustomVertexManager_" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_RemoveCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)">
+  RemoveCustomVertexManager(GLVertexManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detach given custom manager from the model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveCustomVertexManager(GLVertexManager vertexManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertexManager</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html">GLVertexManager</a></dt>
+    <dd><p>Gl vertex manager to detach.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_RemoveFigure_" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)">
+  RemoveFigure(GLFigureBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L628"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove given figure from the vertex manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFigure(GLFigureBase figure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd><p>Gl figure to remove.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if figure effectively removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_">RemoveFigure</a>(<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_RemoveFigure_" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase___" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])">
+  RemoveFigure(params GLFigureBase[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove given figures from the vertex manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveFigure(params GLFigureBase[] figures)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>[]</dt>
+    <dd><p>Gl figures to remove.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Count of figures effectively removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase___">RemoveFigure</a>(params <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>[])</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_RemoveFigure_" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_RemoveFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__" data-uid="SearchAThing.OpenGL.Core.GLModel.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})">
+  RemoveFigure(IEnumerable&lt;GLFigureBase&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L620"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove given figures from the vertex manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveFigure(IEnumerable&lt;GLFigureBase&gt; figures)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd><p>Gl figures to remove.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Count of figures effectively removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__">RemoveFigure</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;)</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_ResetLight_" data-uid="SearchAThing.OpenGL.Core.GLModel.ResetLight*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_ResetLight" data-uid="SearchAThing.OpenGL.Core.GLModel.ResetLight">
+  ResetLight()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L540"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets and create predefined lights</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetLight()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_SendNotification_" data-uid="SearchAThing.OpenGL.Core.GLModel.SendNotification*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_SendNotification_System_String_System_String_SearchAThing_OpenGL_Core_GLNotificationType_" data-uid="SearchAThing.OpenGL.Core.GLModel.SendNotification(System.String,System.String,SearchAThing.OpenGL.Core.GLNotificationType)">
+  SendNotification(string, string, GLNotificationType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Send notification to frontend that manage this gl control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendNotification(string title, string msg, GLNotificationType notifyType = GLNotificationType.Information)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Title of notification.</p>
+</dd>
+    <dt><code>msg</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Message to display, it can contains at most 1 newlines.</p>
+</dd>
+    <dt><code>notifyType</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLNotificationType.html">GLNotificationType</a></dt>
+    <dd><p>Level type of notification (Default:Information).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_Serialize_" data-uid="SearchAThing.OpenGL.Core.GLModel.Serialize*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_Serialize" data-uid="SearchAThing.OpenGL.Core.GLModel.Serialize">
+  Serialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.Serialization.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Json serialized representation of this model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Serialize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_SerializeToFile_" data-uid="SearchAThing.OpenGL.Core.GLModel.SerializeToFile*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_SerializeToFile_System_String_" data-uid="SearchAThing.OpenGL.Core.GLModel.SerializeToFile(System.String)">
+  SerializeToFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.Serialization.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Save json serialized representation of this model to given pathfilename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SerializeToFile(string pathfilename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_SetupLightAttenuation_" data-uid="SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_SetupLightAttenuation_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__" data-uid="SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})">
+  SetupLightAttenuation(float?, float?, float?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L564"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configure light constant, linear, quadratic attenuation based on the model size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupLightAttenuation(float? adjustConstant = 1, float? adjustLinear = 0, float? adjustQuadratic = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>adjustConstant</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>Gl point light constant attenuation (Default:1f).</p>
+</dd>
+    <dt><code>adjustLinear</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>Gl point light linear attenuation (Default:5e-1f).</p>
+</dd>
+    <dt><code>adjustQuadratic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>Gl point light quadratic attenuation (Default:1e-4).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_ToString_" data-uid="SearchAThing.OpenGL.Core.GLModel.ToString*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_ToString" data-uid="SearchAThing.OpenGL.Core.GLModel.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L696"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string? ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_ToggleSelectFigures_" data-uid="SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_ToggleSelectFigures_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__" data-uid="SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})">
+  ToggleSelectFigures(IEnumerable&lt;GLFigureBase&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L805"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Select/Deselect given figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleSelectFigures(IEnumerable&lt;GLFigureBase&gt; figures)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd><p>Figures for which toggle selection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLModel_ToggleSelectPrimitives_" data-uid="SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_ToggleSelectPrimitives_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLPrimitiveBase__" data-uid="SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase})">
+  ToggleSelectPrimitives(IEnumerable&lt;GLPrimitiveBase&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L782"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Select/Deselect given primitives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleSelectPrimitives(IEnumerable&lt;GLPrimitiveBase&gt; primitives)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>primitives</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveBase.html">GLPrimitiveBase</a>&gt;</dt>
+    <dd><p>Primitives for which toggle selection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_PropertyChanged" data-uid="SearchAThing.OpenGL.Core.GLModel.PropertyChanged">
+  PropertyChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler? PropertyChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLModel_ViewInvalidated" data-uid="SearchAThing.OpenGL.Core.GLModel.ViewInvalidated">
+  ViewInvalidated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when a vertex of the model changes.<br>
+Useful to keep in sync the view calling the <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_">Invalidate(InvalidateEnum)</a>.
+See <a href="https://github.com/devel0/netcore-opengl/blob/master/examples/example-0016/Views/MainWindow.axaml.cs"><b>example-0016</b></a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event ModelViewInvalidated? ViewInvalidated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.ModelViewInvalidated.html">ModelViewInvalidated</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLModel.Serialization.cs/#L3" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

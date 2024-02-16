@@ -1,0 +1,627 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Nurbs.Toolkit
+  commentId: T:SearchAThing.OpenGL.Nurbs.Toolkit
+  id: Toolkit
+  parent: SearchAThing.OpenGL.Nurbs
+  children:
+  - SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsCurve,System.Int32)
+  - SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsSurface,System.Nullable{System.Drawing.Color},System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Toolkit
+  nameWithType: Toolkit
+  fullName: SearchAThing.OpenGL.Nurbs.Toolkit
+  type: Class
+  source:
+    remote:
+      path: src/nurbs/Toolkit.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Toolkit
+    path: src/nurbs/Toolkit.cs
+    startLine: 4
+  assemblies:
+  - netcore-opengl-nurbs
+  namespace: SearchAThing.OpenGL.Nurbs
+  syntax:
+    content: public static class Toolkit
+    content.vb: Public Module Toolkit
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsSurface,System.Nullable{System.Drawing.Color},System.Int32)
+  commentId: M:SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsSurface,System.Nullable{System.Drawing.Color},System.Int32)
+  id: NurbToGL(GShark.Geometry.NurbsSurface,System.Nullable{System.Drawing.Color},System.Int32)
+  isExtensionMethod: true
+  parent: SearchAThing.OpenGL.Nurbs.Toolkit
+  langs:
+  - csharp
+  - vb
+  name: NurbToGL(NurbsSurface, Color?, int)
+  nameWithType: Toolkit.NurbToGL(NurbsSurface, Color?, int)
+  fullName: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsSurface, System.Drawing.Color?, int)
+  type: Method
+  source:
+    remote:
+      path: src/nurbs/Toolkit.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NurbToGL
+    path: src/nurbs/Toolkit.cs
+    startLine: 14
+  assemblies:
+  - netcore-opengl-nurbs
+  namespace: SearchAThing.OpenGL.Nurbs
+  summary: G-Shark nurb to GLTriangle helper
+  example: []
+  syntax:
+    content: public static IEnumerable<GLTriangle> NurbToGL(this NurbsSurface nurb, Color? color = null, int N = 6)
+    parameters:
+    - id: nurb
+      type: GShark.Geometry.NurbsSurface
+      description: nurb
+    - id: color
+      type: System.Nullable{System.Drawing.Color}
+      description: color of triangles generated
+    - id: N
+      type: System.Int32
+      description: number of nurb divisions
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle}
+      description: triangles mesh of the nurb
+    content.vb: Public Shared Function NurbToGL(nurb As NurbsSurface, color As Color? = Nothing, N As Integer = 6) As IEnumerable(Of GLTriangle)
+  overload: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL*
+  nameWithType.vb: Toolkit.NurbToGL(NurbsSurface, Color?, Integer)
+  fullName.vb: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsSurface, System.Drawing.Color?, Integer)
+  name.vb: NurbToGL(NurbsSurface, Color?, Integer)
+- uid: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsCurve,System.Int32)
+  commentId: M:SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsCurve,System.Int32)
+  id: NurbToGL(GShark.Geometry.NurbsCurve,System.Int32)
+  isExtensionMethod: true
+  parent: SearchAThing.OpenGL.Nurbs.Toolkit
+  langs:
+  - csharp
+  - vb
+  name: NurbToGL(NurbsCurve, int)
+  nameWithType: Toolkit.NurbToGL(NurbsCurve, int)
+  fullName: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsCurve, int)
+  type: Method
+  source:
+    remote:
+      path: src/nurbs/Toolkit.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NurbToGL
+    path: src/nurbs/Toolkit.cs
+    startLine: 62
+  assemblies:
+  - netcore-opengl-nurbs
+  namespace: SearchAThing.OpenGL.Nurbs
+  summary: G-Shark nurb to GLLine helper
+  example: []
+  syntax:
+    content: public static IEnumerable<Line> NurbToGL(this NurbsCurve curve, int N = 6)
+    parameters:
+    - id: curve
+      type: GShark.Geometry.NurbsCurve
+      description: nurb curve
+    - id: N
+      type: System.Int32
+      description: number of nurb divisions
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.Line}
+      description: lines representing given nurb curve
+    content.vb: Public Shared Function NurbToGL(curve As NurbsCurve, N As Integer = 6) As IEnumerable(Of Line)
+  overload: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL*
+  nameWithType.vb: Toolkit.NurbToGL(NurbsCurve, Integer)
+  fullName.vb: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL(GShark.Geometry.NurbsCurve, Integer)
+  name.vb: NurbToGL(NurbsCurve, Integer)
+references:
+- uid: SearchAThing.OpenGL.Nurbs
+  commentId: N:SearchAThing.OpenGL.Nurbs
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Nurbs
+  nameWithType: SearchAThing.OpenGL.Nurbs
+  fullName: SearchAThing.OpenGL.Nurbs
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Nurbs
+    name: Nurbs
+    href: SearchAThing.OpenGL.Nurbs.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Nurbs
+    name: Nurbs
+    href: SearchAThing.OpenGL.Nurbs.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL*
+  commentId: Overload:SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL
+  href: SearchAThing.OpenGL.Nurbs.Toolkit.html#SearchAThing_OpenGL_Nurbs_Toolkit_NurbToGL_GShark_Geometry_NurbsSurface_System_Nullable_System_Drawing_Color__System_Int32_
+  name: NurbToGL
+  nameWithType: Toolkit.NurbToGL
+  fullName: SearchAThing.OpenGL.Nurbs.Toolkit.NurbToGL
+- uid: GShark.Geometry.NurbsSurface
+  commentId: T:GShark.Geometry.NurbsSurface
+  parent: GShark.Geometry
+  isExternal: true
+  name: NurbsSurface
+  nameWithType: NurbsSurface
+  fullName: GShark.Geometry.NurbsSurface
+- uid: System.Nullable{System.Drawing.Color}
+  commentId: T:System.Nullable{System.Drawing.Color}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  name: Color?
+  nameWithType: Color?
+  fullName: System.Drawing.Color?
+  spec.csharp:
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+  spec.vb:
+  - uid: System.Drawing.Color
+    name: Color
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing.color
+  - name: '?'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLTriangle>
+  nameWithType: IEnumerable<GLTriangle>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLTriangle>
+  nameWithType.vb: IEnumerable(Of GLTriangle)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLTriangle)
+  name.vb: IEnumerable(Of GLTriangle)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLTriangle
+    name: GLTriangle
+    href: SearchAThing.OpenGL.Core.GLTriangle.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLTriangle
+    name: GLTriangle
+    href: SearchAThing.OpenGL.Core.GLTriangle.html
+  - name: )
+- uid: GShark.Geometry
+  commentId: N:GShark.Geometry
+  isExternal: true
+  name: GShark.Geometry
+  nameWithType: GShark.Geometry
+  fullName: GShark.Geometry
+  spec.csharp:
+  - uid: GShark
+    name: GShark
+    isExternal: true
+  - name: .
+  - uid: GShark.Geometry
+    name: Geometry
+    isExternal: true
+  spec.vb:
+  - uid: GShark
+    name: GShark
+    isExternal: true
+  - name: .
+  - uid: GShark.Geometry
+    name: Geometry
+    isExternal: true
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: GShark.Geometry.NurbsCurve
+  commentId: T:GShark.Geometry.NurbsCurve
+  parent: GShark.Geometry
+  isExternal: true
+  name: NurbsCurve
+  nameWithType: NurbsCurve
+  fullName: GShark.Geometry.NurbsCurve
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.Line}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.Line}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Line>
+  nameWithType: IEnumerable<Line>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.Line>
+  nameWithType.vb: IEnumerable(Of Line)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.Line)
+  name.vb: IEnumerable(Of Line)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.Line
+    name: Line
+    href: SearchAThing.OpenGL.Core.Line.html
+  - name: )

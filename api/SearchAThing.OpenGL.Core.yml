@@ -1,0 +1,706 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  id: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.BBox
+  - SearchAThing.OpenGL.Core.CameraViewType
+  - SearchAThing.OpenGL.Core.ColorConverterPatch
+  - SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+  - SearchAThing.OpenGL.Core.Constants
+  - SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+  - SearchAThing.OpenGL.Core.CursorMode
+  - SearchAThing.OpenGL.Core.DebugVtxMgr
+  - SearchAThing.OpenGL.Core.DummyRenderDevice
+  - SearchAThing.OpenGL.Core.Ext
+  - SearchAThing.OpenGL.Core.FigureEvent
+  - SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+  - SearchAThing.OpenGL.Core.FiguresEvent
+  - SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  - SearchAThing.OpenGL.Core.GLContext
+  - SearchAThing.OpenGL.Core.GLControl
+  - SearchAThing.OpenGL.Core.GLFigureBase
+  - SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+  - SearchAThing.OpenGL.Core.GLFontChar
+  - SearchAThing.OpenGL.Core.GLFontCharManager
+  - SearchAThing.OpenGL.Core.GLLine
+  - SearchAThing.OpenGL.Core.GLLineFigure
+  - SearchAThing.OpenGL.Core.GLMatrix4x4Struct
+  - SearchAThing.OpenGL.Core.GLMatrixes
+  - SearchAThing.OpenGL.Core.GLModel
+  - SearchAThing.OpenGL.Core.GLNotificationType
+  - SearchAThing.OpenGL.Core.GLPipeline
+  - SearchAThing.OpenGL.Core.GLPoint
+  - SearchAThing.OpenGL.Core.GLPointFigure
+  - SearchAThing.OpenGL.Core.GLPointLight
+  - SearchAThing.OpenGL.Core.GLPointLightStruct
+  - SearchAThing.OpenGL.Core.GLPrimitiveBase
+  - SearchAThing.OpenGL.Core.GLPrimitiveType
+  - SearchAThing.OpenGL.Core.GLShaderStorageBlock`1
+  - SearchAThing.OpenGL.Core.GLText
+  - SearchAThing.OpenGL.Core.GLTextCharFigure
+  - SearchAThing.OpenGL.Core.GLTextVHAlignment
+  - SearchAThing.OpenGL.Core.GLTexture2D
+  - SearchAThing.OpenGL.Core.GLTriangle
+  - SearchAThing.OpenGL.Core.GLTriangleFigure
+  - SearchAThing.OpenGL.Core.GLVertex
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  - SearchAThing.OpenGL.Core.GLVertexBufferObject`1
+  - SearchAThing.OpenGL.Core.GLVertexFlag
+  - SearchAThing.OpenGL.Core.GLVertexManager
+  - SearchAThing.OpenGL.Core.GLVertexStruct
+  - SearchAThing.OpenGL.Core.IGLContextObject
+  - SearchAThing.OpenGL.Core.IGLFigure
+  - SearchAThing.OpenGL.Core.IGLLine
+  - SearchAThing.OpenGL.Core.IGLLineFigure
+  - SearchAThing.OpenGL.Core.IGLPoint
+  - SearchAThing.OpenGL.Core.IGLPointFigure
+  - SearchAThing.OpenGL.Core.IGLPrimitive
+  - SearchAThing.OpenGL.Core.IGLTexture2D
+  - SearchAThing.OpenGL.Core.IGLTriangle
+  - SearchAThing.OpenGL.Core.IGLTriangleFigure
+  - SearchAThing.OpenGL.Core.IGLVertex
+  - SearchAThing.OpenGL.Core.IGLVertexManager
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  - SearchAThing.OpenGL.Core.IRenderDevice
+  - SearchAThing.OpenGL.Core.InvalidateEnum
+  - SearchAThing.OpenGL.Core.Line
+  - SearchAThing.OpenGL.Core.MaterialProperties
+  - SearchAThing.OpenGL.Core.ModelViewInvalidated
+  - SearchAThing.OpenGL.Core.MouseStart
+  - SearchAThing.OpenGL.Core.NotificationDelegate
+  - SearchAThing.OpenGL.Core.OffscreenRenderDevice
+  - SearchAThing.OpenGL.Core.Plate
+  - SearchAThing.OpenGL.Core.PointTransformNfo
+  - SearchAThing.OpenGL.Core.RayCastHitTest
+  - SearchAThing.OpenGL.Core.RenderPreviewDelegate
+  - SearchAThing.OpenGL.Core.Toolkit
+  - SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  - SearchAThing.OpenGL.Core.ViewNfo
+  - SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  langs:
+  - csharp
+  - vb
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  type: Namespace
+  assemblies:
+  - netcore-opengl-core
+references:
+- uid: SearchAThing.OpenGL.Core.Toolkit
+  commentId: T:SearchAThing.OpenGL.Core.Toolkit
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Toolkit.html
+  name: Toolkit
+  nameWithType: Toolkit
+  fullName: SearchAThing.OpenGL.Core.Toolkit
+- uid: SearchAThing.OpenGL.Core.Constants
+  commentId: T:SearchAThing.OpenGL.Core.Constants
+  href: SearchAThing.OpenGL.Core.Constants.html
+  name: Constants
+  nameWithType: Constants
+  fullName: SearchAThing.OpenGL.Core.Constants
+- uid: SearchAThing.OpenGL.Core.GLFigureBase
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureBase
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase
+  nameWithType: GLFigureBase
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+  href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  name: GLFigureTypeBase<P>
+  nameWithType: GLFigureTypeBase<P>
+  fullName: SearchAThing.OpenGL.Core.GLFigureTypeBase<P>
+  nameWithType.vb: GLFigureTypeBase(Of P)
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureTypeBase(Of P)
+  name.vb: GLFigureTypeBase(Of P)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+    name: GLFigureTypeBase
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  - name: <
+  - name: P
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureTypeBase`1
+    name: GLFigureTypeBase
+    href: SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: P
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLLineFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html
+  name: GLLineFigure
+  nameWithType: GLLineFigure
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure
+- uid: SearchAThing.OpenGL.Core.GLPointFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLPointFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPointFigure.html
+  name: GLPointFigure
+  nameWithType: GLPointFigure
+  fullName: SearchAThing.OpenGL.Core.GLPointFigure
+- uid: SearchAThing.OpenGL.Core.GLTriangleFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLTriangleFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTriangleFigure.html
+  name: GLTriangleFigure
+  nameWithType: GLTriangleFigure
+  fullName: SearchAThing.OpenGL.Core.GLTriangleFigure
+- uid: SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+  commentId: T:SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.FigureInvalidatedDelegate.html
+  name: FigureInvalidatedDelegate
+  nameWithType: FigureInvalidatedDelegate
+  fullName: SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure
+- uid: SearchAThing.OpenGL.Core.IGLLineFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLLineFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLLineFigure.html
+  name: IGLLineFigure
+  nameWithType: IGLLineFigure
+  fullName: SearchAThing.OpenGL.Core.IGLLineFigure
+- uid: SearchAThing.OpenGL.Core.IGLPointFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLPointFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLPointFigure.html
+  name: IGLPointFigure
+  nameWithType: IGLPointFigure
+  fullName: SearchAThing.OpenGL.Core.IGLPointFigure
+- uid: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+  commentId: T:SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate.html
+  name: ComputeTriangleNormalDelegate
+  nameWithType: ComputeTriangleNormalDelegate
+  fullName: SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate
+- uid: SearchAThing.OpenGL.Core.IGLTriangleFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLTriangleFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLTriangleFigure.html
+  name: IGLTriangleFigure
+  nameWithType: IGLTriangleFigure
+  fullName: SearchAThing.OpenGL.Core.IGLTriangleFigure
+- uid: SearchAThing.OpenGL.Core.BBox
+  commentId: T:SearchAThing.OpenGL.Core.BBox
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.BBox.html
+  name: BBox
+  nameWithType: BBox
+  fullName: SearchAThing.OpenGL.Core.BBox
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr
+  commentId: T:SearchAThing.OpenGL.Core.DebugVtxMgr
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.DebugVtxMgr.html
+  name: DebugVtxMgr
+  nameWithType: DebugVtxMgr
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr
+- uid: SearchAThing.OpenGL.Core.Line
+  commentId: T:SearchAThing.OpenGL.Core.Line
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Line.html
+  name: Line
+  nameWithType: Line
+  fullName: SearchAThing.OpenGL.Core.Line
+- uid: SearchAThing.OpenGL.Core.Plate
+  commentId: T:SearchAThing.OpenGL.Core.Plate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Plate.html
+  name: Plate
+  nameWithType: Plate
+  fullName: SearchAThing.OpenGL.Core.Plate
+- uid: SearchAThing.OpenGL.Core.IGLTexture2D
+  commentId: T:SearchAThing.OpenGL.Core.IGLTexture2D
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLTexture2D.html
+  name: IGLTexture2D
+  nameWithType: IGLTexture2D
+  fullName: SearchAThing.OpenGL.Core.IGLTexture2D
+- uid: SearchAThing.OpenGL.Core.MaterialProperties
+  commentId: T:SearchAThing.OpenGL.Core.MaterialProperties
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.MaterialProperties.html
+  name: MaterialProperties
+  nameWithType: MaterialProperties
+  fullName: SearchAThing.OpenGL.Core.MaterialProperties
+- uid: SearchAThing.OpenGL.Core.GLLine
+  commentId: T:SearchAThing.OpenGL.Core.GLLine
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLLine.html
+  name: GLLine
+  nameWithType: GLLine
+  fullName: SearchAThing.OpenGL.Core.GLLine
+- uid: SearchAThing.OpenGL.Core.GLPoint
+  commentId: T:SearchAThing.OpenGL.Core.GLPoint
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPoint.html
+  name: GLPoint
+  nameWithType: GLPoint
+  fullName: SearchAThing.OpenGL.Core.GLPoint
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+  commentId: T:SearchAThing.OpenGL.Core.GLPrimitiveBase
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  name: GLPrimitiveBase
+  nameWithType: GLPrimitiveBase
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveBase
+- uid: SearchAThing.OpenGL.Core.GLTriangle
+  commentId: T:SearchAThing.OpenGL.Core.GLTriangle
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTriangle.html
+  name: GLTriangle
+  nameWithType: GLTriangle
+  fullName: SearchAThing.OpenGL.Core.GLTriangle
+- uid: SearchAThing.OpenGL.Core.IGLLine
+  commentId: T:SearchAThing.OpenGL.Core.IGLLine
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLLine.html
+  name: IGLLine
+  nameWithType: IGLLine
+  fullName: SearchAThing.OpenGL.Core.IGLLine
+- uid: SearchAThing.OpenGL.Core.IGLPoint
+  commentId: T:SearchAThing.OpenGL.Core.IGLPoint
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLPoint.html
+  name: IGLPoint
+  nameWithType: IGLPoint
+  fullName: SearchAThing.OpenGL.Core.IGLPoint
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+  commentId: T:SearchAThing.OpenGL.Core.GLPrimitiveType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  name: GLPrimitiveType
+  nameWithType: GLPrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive
+  commentId: T:SearchAThing.OpenGL.Core.IGLPrimitive
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html
+  name: IGLPrimitive
+  nameWithType: IGLPrimitive
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive
+- uid: SearchAThing.OpenGL.Core.IGLTriangle
+  commentId: T:SearchAThing.OpenGL.Core.IGLTriangle
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLTriangle.html
+  name: IGLTriangle
+  nameWithType: IGLTriangle
+  fullName: SearchAThing.OpenGL.Core.IGLTriangle
+- uid: SearchAThing.OpenGL.Core.CameraViewType
+  commentId: T:SearchAThing.OpenGL.Core.CameraViewType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.CameraViewType.html
+  name: CameraViewType
+  nameWithType: CameraViewType
+  fullName: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.DummyRenderDevice
+  commentId: T:SearchAThing.OpenGL.Core.DummyRenderDevice
+  href: SearchAThing.OpenGL.Core.DummyRenderDevice.html
+  name: DummyRenderDevice
+  nameWithType: DummyRenderDevice
+  fullName: SearchAThing.OpenGL.Core.DummyRenderDevice
+- uid: SearchAThing.OpenGL.Core.GLContext
+  commentId: T:SearchAThing.OpenGL.Core.GLContext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLContext.html
+  name: GLContext
+  nameWithType: GLContext
+  fullName: SearchAThing.OpenGL.Core.GLContext
+- uid: SearchAThing.OpenGL.Core.RenderPreviewDelegate
+  commentId: T:SearchAThing.OpenGL.Core.RenderPreviewDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.RenderPreviewDelegate.html
+  name: RenderPreviewDelegate
+  nameWithType: RenderPreviewDelegate
+  fullName: SearchAThing.OpenGL.Core.RenderPreviewDelegate
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+  commentId: T:SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate.html
+  name: ControlFigureVisibileDelegate
+  nameWithType: ControlFigureVisibileDelegate
+  fullName: SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+- uid: SearchAThing.OpenGL.Core.GLFontChar
+  commentId: T:SearchAThing.OpenGL.Core.GLFontChar
+  href: SearchAThing.OpenGL.Core.GLFontChar.html
+  name: GLFontChar
+  nameWithType: GLFontChar
+  fullName: SearchAThing.OpenGL.Core.GLFontChar
+- uid: SearchAThing.OpenGL.Core.GLFontCharManager
+  commentId: T:SearchAThing.OpenGL.Core.GLFontCharManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLFontCharManager.html
+  name: GLFontCharManager
+  nameWithType: GLFontCharManager
+  fullName: SearchAThing.OpenGL.Core.GLFontCharManager
+- uid: SearchAThing.OpenGL.Core.GLMatrixes
+  commentId: T:SearchAThing.OpenGL.Core.GLMatrixes
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLMatrixes.html
+  name: GLMatrixes
+  nameWithType: GLMatrixes
+  fullName: SearchAThing.OpenGL.Core.GLMatrixes
+- uid: SearchAThing.OpenGL.Core.ModelViewInvalidated
+  commentId: T:SearchAThing.OpenGL.Core.ModelViewInvalidated
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.ModelViewInvalidated.html
+  name: ModelViewInvalidated
+  nameWithType: ModelViewInvalidated
+  fullName: SearchAThing.OpenGL.Core.ModelViewInvalidated
+- uid: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  commentId: T:SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLBuildModelDelegate.html
+  name: GLBuildModelDelegate
+  nameWithType: GLBuildModelDelegate
+  fullName: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+- uid: SearchAThing.OpenGL.Core.NotificationDelegate
+  commentId: T:SearchAThing.OpenGL.Core.NotificationDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.NotificationDelegate.html
+  name: NotificationDelegate
+  nameWithType: NotificationDelegate
+  fullName: SearchAThing.OpenGL.Core.NotificationDelegate
+- uid: SearchAThing.OpenGL.Core.GLModel
+  commentId: T:SearchAThing.OpenGL.Core.GLModel
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLModel.html
+  name: GLModel
+  nameWithType: GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel
+- uid: SearchAThing.OpenGL.Core.GLPointLight
+  commentId: T:SearchAThing.OpenGL.Core.GLPointLight
+  href: SearchAThing.OpenGL.Core.GLPointLight.html
+  name: GLPointLight
+  nameWithType: GLPointLight
+  fullName: SearchAThing.OpenGL.Core.GLPointLight
+- uid: SearchAThing.OpenGL.Core.GLPipeline
+  commentId: T:SearchAThing.OpenGL.Core.GLPipeline
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPipeline.html
+  name: GLPipeline
+  nameWithType: GLPipeline
+  fullName: SearchAThing.OpenGL.Core.GLPipeline
+- uid: SearchAThing.OpenGL.Core.GLShaderStorageBlock`1
+  commentId: T:SearchAThing.OpenGL.Core.GLShaderStorageBlock`1
+  href: SearchAThing.OpenGL.Core.GLShaderStorageBlock-1.html
+  name: GLShaderStorageBlock<T>
+  nameWithType: GLShaderStorageBlock<T>
+  fullName: SearchAThing.OpenGL.Core.GLShaderStorageBlock<T>
+  nameWithType.vb: GLShaderStorageBlock(Of T)
+  fullName.vb: SearchAThing.OpenGL.Core.GLShaderStorageBlock(Of T)
+  name.vb: GLShaderStorageBlock(Of T)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLShaderStorageBlock`1
+    name: GLShaderStorageBlock
+    href: SearchAThing.OpenGL.Core.GLShaderStorageBlock-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLShaderStorageBlock`1
+    name: GLShaderStorageBlock
+    href: SearchAThing.OpenGL.Core.GLShaderStorageBlock-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLText
+  commentId: T:SearchAThing.OpenGL.Core.GLText
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLText.html
+  name: GLText
+  nameWithType: GLText
+  fullName: SearchAThing.OpenGL.Core.GLText
+- uid: SearchAThing.OpenGL.Core.GLTextCharFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLTextCharFigure
+  href: SearchAThing.OpenGL.Core.GLTextCharFigure.html
+  name: GLTextCharFigure
+  nameWithType: GLTextCharFigure
+  fullName: SearchAThing.OpenGL.Core.GLTextCharFigure
+- uid: SearchAThing.OpenGL.Core.GLTexture2D
+  commentId: T:SearchAThing.OpenGL.Core.GLTexture2D
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTexture2D.html
+  name: GLTexture2D
+  nameWithType: GLTexture2D
+  fullName: SearchAThing.OpenGL.Core.GLTexture2D
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html
+  name: GLVertexArrayObject<PacketStructure>
+  nameWithType: GLVertexArrayObject<PacketStructure>
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure)
+  name.vb: GLVertexArrayObject(Of PacketStructure)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+    name: GLVertexArrayObject
+    href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html
+  - name: <
+  - name: PacketStructure
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+    name: GLVertexArrayObject
+    href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: PacketStructure
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexBufferObject`1
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexBufferObject`1
+  href: SearchAThing.OpenGL.Core.GLVertexBufferObject-1.html
+  name: GLVertexBufferObject<T>
+  nameWithType: GLVertexBufferObject<T>
+  fullName: SearchAThing.OpenGL.Core.GLVertexBufferObject<T>
+  nameWithType.vb: GLVertexBufferObject(Of T)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexBufferObject(Of T)
+  name.vb: GLVertexBufferObject(Of T)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexBufferObject`1
+    name: GLVertexBufferObject
+    href: SearchAThing.OpenGL.Core.GLVertexBufferObject-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexBufferObject`1
+    name: GLVertexBufferObject
+    href: SearchAThing.OpenGL.Core.GLVertexBufferObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLContextObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLContextObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLContextObject.html
+  name: IGLContextObject
+  nameWithType: IGLContextObject
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject
+- uid: SearchAThing.OpenGL.Core.IRenderDevice
+  commentId: T:SearchAThing.OpenGL.Core.IRenderDevice
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IRenderDevice.html
+  name: IRenderDevice
+  nameWithType: IRenderDevice
+  fullName: SearchAThing.OpenGL.Core.IRenderDevice
+- uid: SearchAThing.OpenGL.Core.MouseStart
+  commentId: T:SearchAThing.OpenGL.Core.MouseStart
+  href: SearchAThing.OpenGL.Core.MouseStart.html
+  name: MouseStart
+  nameWithType: MouseStart
+  fullName: SearchAThing.OpenGL.Core.MouseStart
+- uid: SearchAThing.OpenGL.Core.OffscreenRenderDevice
+  commentId: T:SearchAThing.OpenGL.Core.OffscreenRenderDevice
+  href: SearchAThing.OpenGL.Core.OffscreenRenderDevice.html
+  name: OffscreenRenderDevice
+  nameWithType: OffscreenRenderDevice
+  fullName: SearchAThing.OpenGL.Core.OffscreenRenderDevice
+- uid: SearchAThing.OpenGL.Core.PointTransformNfo
+  commentId: T:SearchAThing.OpenGL.Core.PointTransformNfo
+  href: SearchAThing.OpenGL.Core.PointTransformNfo.html
+  name: PointTransformNfo
+  nameWithType: PointTransformNfo
+  fullName: SearchAThing.OpenGL.Core.PointTransformNfo
+- uid: SearchAThing.OpenGL.Core.GLMatrix4x4Struct
+  commentId: T:SearchAThing.OpenGL.Core.GLMatrix4x4Struct
+  href: SearchAThing.OpenGL.Core.GLMatrix4x4Struct.html
+  name: GLMatrix4x4Struct
+  nameWithType: GLMatrix4x4Struct
+  fullName: SearchAThing.OpenGL.Core.GLMatrix4x4Struct
+- uid: SearchAThing.OpenGL.Core.GLPointLightStruct
+  commentId: T:SearchAThing.OpenGL.Core.GLPointLightStruct
+  href: SearchAThing.OpenGL.Core.GLPointLightStruct.html
+  name: GLPointLightStruct
+  nameWithType: GLPointLightStruct
+  fullName: SearchAThing.OpenGL.Core.GLPointLightStruct
+- uid: SearchAThing.OpenGL.Core.InvalidateEnum
+  commentId: T:SearchAThing.OpenGL.Core.InvalidateEnum
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.InvalidateEnum.html
+  name: InvalidateEnum
+  nameWithType: InvalidateEnum
+  fullName: SearchAThing.OpenGL.Core.InvalidateEnum
+- uid: SearchAThing.OpenGL.Core.CursorMode
+  commentId: T:SearchAThing.OpenGL.Core.CursorMode
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.CursorMode.html
+  name: CursorMode
+  nameWithType: CursorMode
+  fullName: SearchAThing.OpenGL.Core.CursorMode
+- uid: SearchAThing.OpenGL.Core.GLTextVHAlignment
+  commentId: T:SearchAThing.OpenGL.Core.GLTextVHAlignment
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTextVHAlignment.html
+  name: GLTextVHAlignment
+  nameWithType: GLTextVHAlignment
+  fullName: SearchAThing.OpenGL.Core.GLTextVHAlignment
+- uid: SearchAThing.OpenGL.Core.ViewNfo
+  commentId: T:SearchAThing.OpenGL.Core.ViewNfo
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.ViewNfo.html
+  name: ViewNfo
+  nameWithType: ViewNfo
+  fullName: SearchAThing.OpenGL.Core.ViewNfo
+- uid: SearchAThing.OpenGL.Core.GLNotificationType
+  commentId: T:SearchAThing.OpenGL.Core.GLNotificationType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLNotificationType.html
+  name: GLNotificationType
+  nameWithType: GLNotificationType
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType
+- uid: SearchAThing.OpenGL.Core.ColorConverterPatch
+  commentId: T:SearchAThing.OpenGL.Core.ColorConverterPatch
+  href: SearchAThing.OpenGL.Core.ColorConverterPatch.html
+  name: ColorConverterPatch
+  nameWithType: ColorConverterPatch
+  fullName: SearchAThing.OpenGL.Core.ColorConverterPatch
+- uid: SearchAThing.OpenGL.Core.RayCastHitTest
+  commentId: T:SearchAThing.OpenGL.Core.RayCastHitTest
+  href: SearchAThing.OpenGL.Core.RayCastHitTest.html
+  name: RayCastHitTest
+  nameWithType: RayCastHitTest
+  fullName: SearchAThing.OpenGL.Core.RayCastHitTest
+- uid: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  commentId: T:SearchAThing.OpenGL.Core.YAxisOrientationEnum
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.YAxisOrientationEnum.html
+  name: YAxisOrientationEnum
+  nameWithType: YAxisOrientationEnum
+  fullName: SearchAThing.OpenGL.Core.YAxisOrientationEnum
+- uid: SearchAThing.OpenGL.Core.GLVertex
+  commentId: T:SearchAThing.OpenGL.Core.GLVertex
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertex.html
+  name: GLVertex
+  nameWithType: GLVertex
+  fullName: SearchAThing.OpenGL.Core.GLVertex
+- uid: SearchAThing.OpenGL.Core.GLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  name: GLVertexManager
+  nameWithType: GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.GLVertexStruct
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexStruct
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexStruct.html
+  name: GLVertexStruct
+  nameWithType: GLVertexStruct
+  fullName: SearchAThing.OpenGL.Core.GLVertexStruct
+- uid: SearchAThing.OpenGL.Core.GLVertexFlag
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexFlag
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexFlag.html
+  name: GLVertexFlag
+  nameWithType: GLVertexFlag
+  fullName: SearchAThing.OpenGL.Core.GLVertexFlag
+- uid: SearchAThing.OpenGL.Core.IGLVertex
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertex
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertex.html
+  name: IGLVertex
+  nameWithType: IGLVertex
+  fullName: SearchAThing.OpenGL.Core.IGLVertex
+- uid: SearchAThing.OpenGL.Core.FigureEvent
+  commentId: T:SearchAThing.OpenGL.Core.FigureEvent
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.FigureEvent.html
+  name: FigureEvent
+  nameWithType: FigureEvent
+  fullName: SearchAThing.OpenGL.Core.FigureEvent
+- uid: SearchAThing.OpenGL.Core.FiguresEvent
+  commentId: T:SearchAThing.OpenGL.Core.FiguresEvent
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.FiguresEvent.html
+  name: FiguresEvent
+  nameWithType: FiguresEvent
+  fullName: SearchAThing.OpenGL.Core.FiguresEvent
+- uid: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  commentId: T:SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate.html
+  name: VertexManagerInvalidatedDelegate
+  nameWithType: VertexManagerInvalidatedDelegate
+  fullName: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html
+  name: IGLVertexManager
+  nameWithType: IGLVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  name: IGLVertexManagerObject
+  nameWithType: IGLVertexManagerObject
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html

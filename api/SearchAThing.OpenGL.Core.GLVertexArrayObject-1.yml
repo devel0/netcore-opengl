@@ -1,0 +1,818 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  id: GLVertexArrayObject`1
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1.#ctor(Silk.NET.OpenGL.GL)
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribIPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribIType,System.Nullable{System.UInt32})
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribPointerType,System.Boolean,System.Nullable{System.UInt32})
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose(System.Boolean)
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Finalize
+  - SearchAThing.OpenGL.Core.GLVertexArrayObject`1.ToString
+  langs:
+  - csharp
+  - vb
+  name: GLVertexArrayObject<PacketStructure>
+  nameWithType: GLVertexArrayObject<PacketStructure>
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>
+  type: Class
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLVertexArrayObject
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Helper to define and enable Vertex Array Object
+
+    in order to declare how to access vertex buffer object at i-th packet structure components.
+  example: []
+  syntax:
+    content: 'public class GLVertexArrayObject<PacketStructure> : IDisposable where PacketStructure : unmanaged'
+    typeParameters:
+    - id: PacketStructure
+      description: Type of packet structure used to store data <xref href="SearchAThing.OpenGL.Core.GLVertexStruct" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Class GLVertexArrayObject(Of PacketStructure As Structure) Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure)
+  name.vb: GLVertexArrayObject(Of PacketStructure)
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose
+  id: Dispose
+  parent: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: GLVertexArrayObject<PacketStructure>.Dispose()
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Dispose
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 14
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).Dispose()
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).Dispose()
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: GLVertexArrayObject<PacketStructure>.Dispose(bool)
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Dispose
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 20
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose*
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).Dispose(Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Finalize
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Finalize
+  id: Finalize
+  parent: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  langs:
+  - csharp
+  - vb
+  name: ~GLVertexArrayObject()
+  nameWithType: GLVertexArrayObject<PacketStructure>.~GLVertexArrayObject()
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.~GLVertexArrayObject()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Finalize
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: protected ~GLVertexArrayObject()
+    content.vb: 'Protected '
+  overload: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.#ctor(Silk.NET.OpenGL.GL)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.#ctor(Silk.NET.OpenGL.GL)
+  id: '#ctor(Silk.NET.OpenGL.GL)'
+  parent: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  langs:
+  - csharp
+  - vb
+  name: GLVertexArrayObject(GL)
+  nameWithType: GLVertexArrayObject<PacketStructure>.GLVertexArrayObject(GL)
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.GLVertexArrayObject(Silk.NET.OpenGL.GL)
+  type: Constructor
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 51
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Execute glGenVertexArray() to create vertex array handle and glBindVertexArray on given target.<br />
+
+    It will automatically disposed with glDeleteVertexArray().
+  example: []
+  syntax:
+    content: public GLVertexArrayObject(GL GL)
+    parameters:
+    - id: GL
+      type: Silk.NET.OpenGL.GL
+    content.vb: Public Sub New(GL As GL)
+  overload: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.#ctor*
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).New(GL)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).New(Silk.NET.OpenGL.GL)
+  name.vb: New(GL)
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribPointerType,System.Boolean,System.Nullable{System.UInt32})
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribPointerType,System.Boolean,System.Nullable{System.UInt32})
+  id: AttribPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribPointerType,System.Boolean,System.Nullable{System.UInt32})
+  parent: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  langs:
+  - csharp
+  - vb
+  name: AttribPointer(uint, int, int, VertexAttribPointerType, bool, uint?)
+  nameWithType: GLVertexArrayObject<PacketStructure>.AttribPointer(uint, int, int, VertexAttribPointerType, bool, uint?)
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.AttribPointer(uint, int, int, Silk.NET.OpenGL.VertexAttribPointerType, bool, uint?)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AttribPointer
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 68
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Define and enable location to access vertex buffer object at i-th packet structure components        .
+  example: []
+  syntax:
+    content: public void AttribPointer(uint location, int offset, int components, VertexAttribPointerType componentType, bool normalized, uint? stride = null)
+    parameters:
+    - id: location
+      type: System.UInt32
+      description: Index of attribute location.
+    - id: offset
+      type: System.Int32
+      description: Offset in bytes from the packet structure begin.
+    - id: components
+      type: System.Int32
+      description: Nr. of components (vec3=3; vec4=4).
+    - id: componentType
+      type: Silk.NET.OpenGL.VertexAttribPointerType
+      description: Component data type.
+    - id: normalized
+      type: System.Boolean
+      description: If true normalization will applied.
+    - id: stride
+      type: System.Nullable{System.UInt32}
+      description: Sizeof in bytes of packet structure or null to get sizeof packet structure.
+    content.vb: Public Sub AttribPointer(location As UInteger, offset As Integer, components As Integer, componentType As VertexAttribPointerType, normalized As Boolean, stride As UInteger? = Nothing)
+  overload: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribPointer*
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).AttribPointer(UInteger, Integer, Integer, VertexAttribPointerType, Boolean, UInteger?)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).AttribPointer(UInteger, Integer, Integer, Silk.NET.OpenGL.VertexAttribPointerType, Boolean, UInteger?)
+  name.vb: AttribPointer(UInteger, Integer, Integer, VertexAttribPointerType, Boolean, UInteger?)
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribIPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribIType,System.Nullable{System.UInt32})
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribIPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribIType,System.Nullable{System.UInt32})
+  id: AttribIPointer(System.UInt32,System.Int32,System.Int32,Silk.NET.OpenGL.VertexAttribIType,System.Nullable{System.UInt32})
+  parent: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  langs:
+  - csharp
+  - vb
+  name: AttribIPointer(uint, int, int, VertexAttribIType, uint?)
+  nameWithType: GLVertexArrayObject<PacketStructure>.AttribIPointer(uint, int, int, VertexAttribIType, uint?)
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.AttribIPointer(uint, int, int, Silk.NET.OpenGL.VertexAttribIType, uint?)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AttribIPointer
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 88
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Define and enable location to access vertex buffer object at i-th packet structure components (uint types).
+  example: []
+  syntax:
+    content: public void AttribIPointer(uint location, int offset, int components, VertexAttribIType componentType, uint? stride = null)
+    parameters:
+    - id: location
+      type: System.UInt32
+      description: Index of attribute location.
+    - id: offset
+      type: System.Int32
+      description: Offset in bytes from the packet structure begin.
+    - id: components
+      type: System.Int32
+      description: Nr. of components (vec3=3; vec4=4).
+    - id: componentType
+      type: Silk.NET.OpenGL.VertexAttribIType
+      description: Component data type.
+    - id: stride
+      type: System.Nullable{System.UInt32}
+      description: Sizeof in bytes of packet structure or null to get sizeof packet structure.
+    content.vb: Public Sub AttribIPointer(location As UInteger, offset As Integer, components As Integer, componentType As VertexAttribIType, stride As UInteger? = Nothing)
+  overload: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribIPointer*
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).AttribIPointer(UInteger, Integer, Integer, VertexAttribIType, UInteger?)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).AttribIPointer(UInteger, Integer, Integer, Silk.NET.OpenGL.VertexAttribIType, UInteger?)
+  name.vb: AttribIPointer(UInteger, Integer, Integer, VertexAttribIType, UInteger?)
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.ToString
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.ToString
+  id: ToString
+  parent: SearchAThing.OpenGL.Core.GLVertexArrayObject`1
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GLVertexArrayObject<PacketStructure>.ToString()
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLVertexArrayObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToString
+    path: src/core/render/GLVertexArrayObject.cs
+    startLine: 99
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.ToString*
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).ToString()
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).ToString()
+references:
+- uid: SearchAThing.OpenGL.Core.GLVertexStruct
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexStruct
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexStruct.html
+  name: GLVertexStruct
+  nameWithType: GLVertexStruct
+  fullName: SearchAThing.OpenGL.Core.GLVertexStruct
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Dispose
+  href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html#SearchAThing_OpenGL_Core_GLVertexArrayObject_1_Dispose
+  name: Dispose
+  nameWithType: GLVertexArrayObject<PacketStructure>.Dispose
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.Dispose
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).Dispose
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Finalize*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Finalize
+  href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html#SearchAThing_OpenGL_Core_GLVertexArrayObject_1_Finalize
+  name: ~GLVertexArrayObject
+  nameWithType: GLVertexArrayObject<PacketStructure>.~GLVertexArrayObject
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.~GLVertexArrayObject
+  spec.csharp:
+  - name: "~"
+  - uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.Finalize*
+    name: GLVertexArrayObject
+    href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html#SearchAThing_OpenGL_Core_GLVertexArrayObject_1_Finalize
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.#ctor
+  href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html#SearchAThing_OpenGL_Core_GLVertexArrayObject_1__ctor_Silk_NET_OpenGL_GL_
+  name: GLVertexArrayObject
+  nameWithType: GLVertexArrayObject<PacketStructure>.GLVertexArrayObject
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.GLVertexArrayObject
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).New
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).New
+  name.vb: New
+- uid: Silk.NET.OpenGL.GL
+  commentId: T:Silk.NET.OpenGL.GL
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: GL
+  nameWithType: GL
+  fullName: Silk.NET.OpenGL.GL
+- uid: Silk.NET.OpenGL
+  commentId: N:Silk.NET.OpenGL
+  isExternal: true
+  name: Silk.NET.OpenGL
+  nameWithType: Silk.NET.OpenGL
+  fullName: Silk.NET.OpenGL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribPointer*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribPointer
+  href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html#SearchAThing_OpenGL_Core_GLVertexArrayObject_1_AttribPointer_System_UInt32_System_Int32_System_Int32_Silk_NET_OpenGL_VertexAttribPointerType_System_Boolean_System_Nullable_System_UInt32__
+  name: AttribPointer
+  nameWithType: GLVertexArrayObject<PacketStructure>.AttribPointer
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.AttribPointer
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).AttribPointer
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).AttribPointer
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Silk.NET.OpenGL.VertexAttribPointerType
+  commentId: T:Silk.NET.OpenGL.VertexAttribPointerType
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: VertexAttribPointerType
+  nameWithType: VertexAttribPointerType
+  fullName: Silk.NET.OpenGL.VertexAttribPointerType
+- uid: System.Nullable{System.UInt32}
+  commentId: T:System.Nullable{System.UInt32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint?
+  nameWithType: uint?
+  fullName: uint?
+  nameWithType.vb: UInteger?
+  fullName.vb: UInteger?
+  name.vb: UInteger?
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribIPointer*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.AttribIPointer
+  href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html#SearchAThing_OpenGL_Core_GLVertexArrayObject_1_AttribIPointer_System_UInt32_System_Int32_System_Int32_Silk_NET_OpenGL_VertexAttribIType_System_Nullable_System_UInt32__
+  name: AttribIPointer
+  nameWithType: GLVertexArrayObject<PacketStructure>.AttribIPointer
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.AttribIPointer
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).AttribIPointer
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).AttribIPointer
+- uid: Silk.NET.OpenGL.VertexAttribIType
+  commentId: T:Silk.NET.OpenGL.VertexAttribIType
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: VertexAttribIType
+  nameWithType: VertexAttribIType
+  fullName: Silk.NET.OpenGL.VertexAttribIType
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexArrayObject`1.ToString*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexArrayObject`1.ToString
+  href: SearchAThing.OpenGL.Core.GLVertexArrayObject-1.html#SearchAThing_OpenGL_Core_GLVertexArrayObject_1_ToString
+  name: ToString
+  nameWithType: GLVertexArrayObject<PacketStructure>.ToString
+  fullName: SearchAThing.OpenGL.Core.GLVertexArrayObject<PacketStructure>.ToString
+  nameWithType.vb: GLVertexArrayObject(Of PacketStructure).ToString
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexArrayObject(Of PacketStructure).ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

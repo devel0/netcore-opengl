@@ -1,0 +1,816 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive
+  commentId: T:SearchAThing.OpenGL.Core.IGLPrimitive
+  id: IGLPrimitive
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.IGLPrimitive.LBBox
+  - SearchAThing.OpenGL.Core.IGLPrimitive.Order
+  - SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure
+  - SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType
+  - SearchAThing.OpenGL.Core.IGLPrimitive.Selected
+  - SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)
+  - SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes
+  langs:
+  - csharp
+  - vb
+  name: IGLPrimitive
+  nameWithType: IGLPrimitive
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive
+  type: Interface
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: IGLPrimitive
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    A primitive such a <xref href="SearchAThing.OpenGL.Core.GLPoint" data-throw-if-not-resolved="false"></xref>, <xref href="SearchAThing.OpenGL.Core.GLLine" data-throw-if-not-resolved="false"></xref> or <xref href="SearchAThing.OpenGL.Core.GLTriangle" data-throw-if-not-resolved="false"></xref> can be
+
+    added to a figure through its add method.<br />
+
+    A primitive can consists of 1, 2 or 3 <xref href="SearchAThing.OpenGL.Core.GLVertex" data-throw-if-not-resolved="false"></xref> that will be registered into
+
+    <xref href="SearchAThing.OpenGL.Core.GLVertexManager" data-throw-if-not-resolved="false"></xref> when the primitive added to the figure and figure to the model
+
+    through <xref href="SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable%7bSearchAThing.OpenGL.Core.GLFigureBase%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [JsonObject(MemberSerialization.OptIn)]
+
+      public interface IGLPrimitive : IGLVertexManagerObject, INotifyPropertyChanged
+    content.vb: >-
+      <JsonObject(MemberSerialization.OptIn)>
+
+      Public Interface IGLPrimitive Inherits IGLVertexManagerObject, INotifyPropertyChanged
+  inheritedMembers:
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+  attributes:
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
+    arguments:
+    - type: Newtonsoft.Json.MemberSerialization
+      value: 1
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure
+  commentId: P:SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure
+  id: ParentFigure
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  langs:
+  - csharp
+  - vb
+  name: ParentFigure
+  nameWithType: IGLPrimitive.ParentFigure
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure
+  type: Property
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ParentFigure
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 46
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Reference to the parent figure.
+  example: []
+  syntax:
+    content: IGLFigure? ParentFigure { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.IGLFigure
+    content.vb: ReadOnly Property ParentFigure As IGLFigure
+  overload: SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure*
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes
+  commentId: P:SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes
+  id: Vertexes
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  langs:
+  - csharp
+  - vb
+  name: Vertexes
+  nameWithType: IGLPrimitive.Vertexes
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes
+  type: Property
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Vertexes
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 51
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enumerate primitive gl vertexes.
+  example: []
+  syntax:
+    content: IEnumerable<GLVertex> Vertexes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertex}
+    content.vb: ReadOnly Property Vertexes As IEnumerable(Of GLVertex)
+  overload: SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes*
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType
+  commentId: P:SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType
+  id: PrimitiveType
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  langs:
+  - csharp
+  - vb
+  name: PrimitiveType
+  nameWithType: IGLPrimitive.PrimitiveType
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType
+  type: Property
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PrimitiveType
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 56
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enum that describe which type underlying to the instance.
+  example: []
+  syntax:
+    content: GLPrimitiveType PrimitiveType { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLPrimitiveType
+    content.vb: ReadOnly Property PrimitiveType As GLPrimitiveType
+  overload: SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType*
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.Order
+  commentId: P:SearchAThing.OpenGL.Core.IGLPrimitive.Order
+  id: Order
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: IGLPrimitive.Order
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.Order
+  type: Property
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Order
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 64
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Primitive order appareance ( Default: 0 ).<br />
+
+    Higher order primitives appears front to lower order primitives of the same figure.<br />
+
+    From the opengl point of view figures with higher order ( front ) are drawn firstly then lower order ( back ).<br />
+
+    Changing this property emits <xref href="SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty]
+
+      int Order { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonProperty>
+
+      Property Order As Integer
+  overload: SearchAThing.OpenGL.Core.IGLPrimitive.Order*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.LBBox
+  commentId: P:SearchAThing.OpenGL.Core.IGLPrimitive.LBBox
+  id: LBBox
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  langs:
+  - csharp
+  - vb
+  name: LBBox
+  nameWithType: IGLPrimitive.LBBox
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.LBBox
+  type: Property
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LBBox
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 70
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: (cached) Bounding box of the primitive [local].
+  example: []
+  syntax:
+    content: BBox LBBox { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.BBox
+    content.vb: ReadOnly Property LBBox As BBox
+  overload: SearchAThing.OpenGL.Core.IGLPrimitive.LBBox*
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)
+  id: SimpleCmd(System.Boolean)
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  langs:
+  - csharp
+  - vb
+  name: SimpleCmd(bool)
+  nameWithType: IGLPrimitive.SimpleCmd(bool)
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(bool)
+  type: Method
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SimpleCmd
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 77
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Retrieve e simple cmd representation of this primtiive.<br />
+
+    Its a textual representation of primitive information useful to regen in a separate tool.
+  example: []
+  syntax:
+    content: string SimpleCmd(bool includeHeader = true)
+    parameters:
+    - id: includeHeader
+      type: System.Boolean
+      description: If true header will prepended to form a complete command.
+    return:
+      type: System.String
+    content.vb: Function SimpleCmd(includeHeader As Boolean = True) As String
+  overload: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd*
+  nameWithType.vb: IGLPrimitive.SimpleCmd(Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(Boolean)
+  name.vb: SimpleCmd(Boolean)
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.Selected
+  commentId: P:SearchAThing.OpenGL.Core.IGLPrimitive.Selected
+  id: Selected
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  langs:
+  - csharp
+  - vb
+  name: Selected
+  nameWithType: IGLPrimitive.Selected
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.Selected
+  type: Property
+  source:
+    remote:
+      path: src/core/primitive/IGLPrimitive.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Selected
+    path: src/core/primitive/IGLPrimitive.cs
+    startLine: 83
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    States if primitive is actually selected.<br />
+
+    It true the primitive is listed in model selected primitives <xref href="SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: bool Selected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property Selected As Boolean
+  overload: SearchAThing.OpenGL.Core.IGLPrimitive.Selected*
+references:
+- uid: SearchAThing.OpenGL.Core.GLPoint
+  commentId: T:SearchAThing.OpenGL.Core.GLPoint
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPoint.html
+  name: GLPoint
+  nameWithType: GLPoint
+  fullName: SearchAThing.OpenGL.Core.GLPoint
+- uid: SearchAThing.OpenGL.Core.GLLine
+  commentId: T:SearchAThing.OpenGL.Core.GLLine
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLLine.html
+  name: GLLine
+  nameWithType: GLLine
+  fullName: SearchAThing.OpenGL.Core.GLLine
+- uid: SearchAThing.OpenGL.Core.GLTriangle
+  commentId: T:SearchAThing.OpenGL.Core.GLTriangle
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTriangle.html
+  name: GLTriangle
+  nameWithType: GLTriangle
+  fullName: SearchAThing.OpenGL.Core.GLTriangle
+- uid: SearchAThing.OpenGL.Core.GLVertex
+  commentId: T:SearchAThing.OpenGL.Core.GLVertex
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertex.html
+  name: GLVertex
+  nameWithType: GLVertex
+  fullName: SearchAThing.OpenGL.Core.GLVertex
+- uid: SearchAThing.OpenGL.Core.GLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  name: GLVertexManager
+  nameWithType: GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  name: AddFigure(IEnumerable<GLFigureBase>)
+  nameWithType: GLModel.AddFigure(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  nameWithType.vb: GLModel.AddFigure(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: AddFigure(IEnumerable(Of GLFigureBase))
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  - name: )
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  parent: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_ParentVertexManager
+  name: ParentVertexManager
+  nameWithType: IGLVertexManagerObject.ParentVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  commentId: M:SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  parent: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy
+  name: Copy()
+  nameWithType: IGLVertexManagerObject.Copy()
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+    name: Copy
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+    name: Copy
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy
+  - name: (
+  - name: )
+- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  parent: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged
+  name: PropertyChanged
+  nameWithType: INotifyPropertyChanged.PropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  name: IGLVertexManagerObject
+  nameWithType: IGLVertexManagerObject
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_ParentFigure
+  name: ParentFigure
+  nameWithType: IGLPrimitive.ParentFigure
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.ParentFigure
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_Vertexes
+  name: Vertexes
+  nameWithType: IGLPrimitive.Vertexes
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.Vertexes
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertex}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertex}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLVertex>
+  nameWithType: IEnumerable<GLVertex>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLVertex>
+  nameWithType.vb: IEnumerable(Of GLVertex)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLVertex)
+  name.vb: IEnumerable(Of GLVertex)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLVertex
+    name: GLVertex
+    href: SearchAThing.OpenGL.Core.GLVertex.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLVertex
+    name: GLVertex
+    href: SearchAThing.OpenGL.Core.GLVertex.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_PrimitiveType
+  name: PrimitiveType
+  nameWithType: IGLPrimitive.PrimitiveType
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.PrimitiveType
+- uid: SearchAThing.OpenGL.Core.GLPrimitiveType
+  commentId: T:SearchAThing.OpenGL.Core.GLPrimitiveType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPrimitiveType.html
+  name: GLPrimitiveType
+  nameWithType: GLPrimitiveType
+  fullName: SearchAThing.OpenGL.Core.GLPrimitiveType
+- uid: SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+  commentId: E:SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated
+  name: FigureInvalidated
+  nameWithType: IGLFigure.FigureInvalidated
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.Order*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLPrimitive.Order
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_Order
+  name: Order
+  nameWithType: IGLPrimitive.Order
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.Order
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.LBBox*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLPrimitive.LBBox
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_LBBox
+  name: LBBox
+  nameWithType: IGLPrimitive.LBBox
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.LBBox
+- uid: SearchAThing.OpenGL.Core.BBox
+  commentId: T:SearchAThing.OpenGL.Core.BBox
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.BBox.html
+  name: BBox
+  nameWithType: BBox
+  fullName: SearchAThing.OpenGL.Core.BBox
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_SimpleCmd_System_Boolean_
+  name: SimpleCmd
+  nameWithType: IGLPrimitive.SimpleCmd
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SelectedPrimitives
+  name: SelectedPrimitives
+  nameWithType: GLModel.SelectedPrimitives
+  fullName: SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.Selected*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLPrimitive.Selected
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_Selected
+  name: Selected
+  nameWithType: IGLPrimitive.Selected
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.Selected

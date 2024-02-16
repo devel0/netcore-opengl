@@ -1,0 +1,955 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>netcore-opengl | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="netcore-opengl | netcore-opengl ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/blob/docs/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="netcore-opengl">netcore-opengl</h1>
+
+<p>.NET core opengl</p>
+<ul>
+<li><a href="https://devel0.github.io/netcore-opengl/html/annotated.html">API Documentation</a></li>
+<li><a href="https://github.com/devel0/netcore-opengl/commits/master">Changelog</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#build-solution">Build solution</a></li>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#running-examples-from-console">Running examples from console</a></li>
+<li><a href="#running-examples-from-vscode">Running examples from vscode</a></li>
+<li><a href="#list-of-examples">List of examples</a></li>
+</ul>
+</li>
+<li><a href="#development-key-notes">Development key notes</a>
+<ul>
+<li><a href="#coordinate-spaces">Coordinate spaces</a></li>
+<li><a href="#gl-dev-inspect-tool">GL Dev inspect tool</a></li>
+<li><a href="#primitives-figures-interaction">Primitives, figures interaction</a>
+<ul>
+<li><a href="#selection-and-coord-identify">Selection and coord identify</a></li>
+<li><a href="#removal">Removal</a></li>
+<li><a href="#simplecmd">SimpleCmd</a></li>
+<li><a href="#change-rotation-center">Change rotation center</a></li>
+</ul>
+</li>
+<li><a href="#send-notification">Send notification</a></li>
+<li><a href="#view-invalidation-model">View invalidation model</a></li>
+<li><a href="#opengl-debugging-tools">Opengl debugging tools</a></li>
+<li><a href="#multiplatform">Multiplatform</a></li>
+<li><a href="#docker-mesa">Docker (mesa)</a></li>
+<li><a href="#software-rendered-mesa">Software rendered (mesa)</a></li>
+<li><a href="#c-global-usings-full">C# global usings (full)</a></li>
+<li><a href="#gestures">Gestures</a>
+<ul>
+<li><a href="#mouse-gestures">Mouse gestures</a></li>
+<li><a href="#keybindings">Keybindings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#unit-tests">Unit tests</a></li>
+<li><a href="#how-this-project-was-built">How this project was built</a>
+<ul>
+<li><a href="#documentation-github-pages">Documentation (github pages)</a>
+<ul>
+<li><a href="#build-and-view-locally">Build and view locally</a></li>
+<li><a href="#build-and-commit-into-docs-branch">Build and commit into docs branch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+<hr>
+<p><img src="data/images/example-0006.gif" alt=""></p>
+<h2 id="introduction">Introduction</h2>
+<p><strong>netcore-opengl</strong> library provides a multiplatform framework for 3D rendering, visualization and interactions.</p>
+<p>The library is composed by following modules:</p>
+<table>
+<thead>
+<tr>
+<th>module</th>
+<th>framework</th>
+<th>dependencies</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>core</strong> <a href="https://www.nuget.org/packages/netcore-opengl-core"><img src="https://buildstats.info/nuget/netcore-opengl-core" alt="core-badge"></a></td>
+<td>NET Standard 2.0</td>
+<td><a href="https://www.nuget.org/packages/netcore-ext">netcore-ext</a>, <a href="https://www.nuget.org/packages/netcore-sci">netcore-sci</a>, <a href="https://www.nuget.org/packages/System.Drawing.Common">System.Drawing.Common</a>, <a href="https://www.nuget.org/packages/Silk.NET">Silk.NET</a>, <a href="https://www.nuget.org/packages/Magick.NET-Q8-AnyCPU">Magick.NET</a>, <a href="https://www.nuget.org/packages/SkiaSharp.HarfBuzz">SkiaSharp.HarfBuzz</a>, <a href="https://www.nuget.org/packages/netDxf-devel0">netdxf-devel0</a></td>
+<td>gl calculations, render abstraction over Silk.NET opengl library.</td>
+</tr>
+<tr>
+<td><strong>gui</strong> <a href="https://www.nuget.org/packages/netcore-opengl-gui"><img src="https://buildstats.info/nuget/netcore-opengl-gui" alt="gui-badge"></a></td>
+<td>NET Standard 2.0</td>
+<td><a href="https://www.nuget.org/packages/netcore-opengl-core">core</a>, <a href="https://www.nuget.org/packages/Avalonia">Avalonia</a>, <a href="https://www.nuget.org/packages/netcore-desktop">netcore-desktop</a></td>
+<td>desktop gl widget</td>
+</tr>
+<tr>
+<td><strong>shapes</strong> <a href="https://www.nuget.org/packages/netcore-opengl-shapes"><img src="https://buildstats.info/nuget/netcore-opengl-shapes" alt="shapes-badge"></a></td>
+<td>NET Standard 2.0</td>
+<td><a href="https://www.nuget.org/packages/netcore-opengl-core">core</a></td>
+<td>box, cone, sphere, arrow shapes</td>
+</tr>
+<tr>
+<td><strong>nurbs</strong> <a href="https://www.nuget.org/packages/netcore-opengl-nurbs"><img src="https://buildstats.info/nuget/netcore-opengl-nurbs" alt="nurbs-badge"></a></td>
+<td>NET Standard 2.0</td>
+<td><a href="https://www.nuget.org/packages/netcore-opengl-core">core</a>, <a href="https://www.nuget.org/packages/GShark">G-Shark</a></td>
+<td>nurbs figures</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quickstart">Quickstart</h2>
+<pre><code class="lang-sh">dotnet new console --use-program-main -n sample
+cd sample
+dotnet add package netcore-opengl-gui
+dotnet add package netcore-opengl-shapes
+code .
+# accept to install vscode required assets
+</code></pre>
+<p>edit <a href="examples/example-9000/Program.cs"><code>Program.cs</code></a> as follows ( consider to create a separate global <a href="#c-global-usings-full">usings.cs</a> file ):</p>
+<pre><code class="lang-csharp">namespace sample;
+
+// quickstart
+
+using Vector3 = System.Numerics.Vector3;
+using Color = System.Drawing.Color;
+using SearchAThing.OpenGL.Core;
+using static SearchAThing.OpenGL.Core.Constants;
+using SearchAThing.OpenGL.GUI;
+using static SearchAThing.OpenGL.GUI.Toolkit;
+using SearchAThing.OpenGL.Shapes;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // this must called for console application to enable Avalonia framework
+        // and must called before any other Avalonia control usage
+        InitAvalonia();
+
+        // create standalone Avalonia window for Silk.NET opengl rendering
+        var w = GLWindow.Create();
+
+        // define the GLModel build function
+        w.GLModel.BuildModel = (glCtl, isInitial) =&gt;
+        {
+            if (!isInitial) return;
+
+            var glModel = glCtl.GLModel;
+
+            // clear the model
+            glModel.Clear();
+
+            // place a point light at xyz=(2,2,2)
+            glModel.PointLights.Add(new GLPointLight(2, 2, 2));
+
+            // create and add a sphere centered at (0,0,0) with radius=1 and meshed as uvsphere with N=20 divisions
+            var sphere = new UVSphere(center: Vector3.Zero, radius: 1);
+            glModel.AddFigure(sphere.Figure(divisions: 20).SetColor(Color.Cyan));
+
+            // place a base box which receive sphere shadow centered like the sphere but 2*z lower ( out of sphere )
+            // with size xyz=(5, 5, .1f) larger than sphere but with small thickness
+            var basebox = new Box(cs: WCS.Move(sphere.Center - Vector3.UnitZ * 2), csSize: new Vector3(5, 5, .1f));
+            glModel.AddFigure(basebox.Sides);
+
+            glCtl.CameraView(CameraViewType.Right);
+        };
+
+        // show the gl window
+        w.ShowSync();
+    }
+}
+</code></pre>
+<pre><code class="lang-sh">dotnet run # or hit F5 from vscode
+</code></pre>
+<p>results ( control can manipulated with <a href="#gestures">gestures</a> ):</p>
+<p><a href="data/images/sample.png"><img src="data/images/sample.png" alt="img"></a></p>
+<h2 id="build-solution">Build solution</h2>
+<pre><code class="lang-sh">cd netcore-opengl
+# git submodule update --init
+dotnet build
+</code></pre>
+<h2 id="examples">Examples</h2>
+<h3 id="running-examples-from-console">Running examples from console</h3>
+<pre><code class="lang-sh">cd netcore-opengl
+dotnet run --project examples/example-0000
+</code></pre>
+<h3 id="running-examples-from-vscode">Running examples from vscode</h3>
+<pre><code class="lang-sh">cd netcore-opengl
+code .
+</code></pre>
+<p>C-S-p -&gt; <code>NET: Generate Assets for Build and Debug</code></p>
+<p>choose an example.</p>
+<p>Tip: to change startup example from bash <code>./set-startup-example xxxx</code> where xxxx is the nr of one of the examples provided.</p>
+<p>This will update <code>.vscode/launch.json</code> then hit F5 to start.</p>
+<h3 id="list-of-examples">List of examples</h3>
+<p>Click on the <code>example code</code> link to open source code of the example, read top tour instructions contained in each example to test functions, for example following in the top comment of example 0000:</p>
+<pre><code class="lang-cs">// example-0000
+// draw a triangle with 3 colors (one for each vertex)
+//
+// use gesture such as:
+// - 'w' to toggle wireframe
+// - ctrl right/left to change tilt
+// - mouse wheel to zoom
+// - 'z' to zoomfit
+// - ctrl + x to show bbox
+</code></pre>
+<hr>
+<p>Code: <a href="examples/example-0000/Program.cs">0000</a></p>
+<p>Draw a triangle with 3 colors (one for each vertex).</p>
+<p><a href="data/images/examples/0000.png"><img src="data/images/examples/0000.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0001/Program.cs">0001</a></p>
+<p>Random lines ( console program ).</p>
+<p><a href="data/images/examples/0001.png"><img src="data/images/examples/0001.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0002/Views/MainWindow.axaml.cs">0002</a> (mvvm)</p>
+<p>Random lines ( avalonia AXAML program ).</p>
+<p><a href="data/images/examples/0002.png"><img src="data/images/examples/0002.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0003/Program.cs">0003</a></p>
+<p>Render stl terrain map varying vertex colors by height ; presence of a point light makes shadows.</p>
+<p><a href="data/images/examples/0003.png"><img src="data/images/examples/0003.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0004/Program.cs">0004</a></p>
+<p>Draw text.</p>
+<p><a href="data/images/examples/0004.png"><img src="data/images/examples/0004.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0005/Program.cs">0005</a></p>
+<p>Draw box with keyboard face toggler.</p>
+<p><a href="data/images/examples/0005.png"><img src="data/images/examples/0005.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0006/Program.cs">0006</a></p>
+<p>Draw nurb surface with triangles normal and animation, layout loaded from saved file.</p>
+<p><a href="data/images/examples/0006.png"><img src="data/images/examples/0006.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0007/Program.cs">0007</a></p>
+<p>Draw nurb tube with triangle selection on click through raycast in perspective mode; generate gl split layout programmtically generated.</p>
+<p><a href="data/images/examples/0007.png"><img src="data/images/examples/0007.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0008/Views/MainWindow.axaml.cs">0008</a> (mvvm)</p>
+<p>Draw nurb tube with lighting tunable from mvvm interface.</p>
+<p><a href="data/images/examples/0008.png"><img src="data/images/examples/0008.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0009/Program.cs">0009</a></p>
+<p>Generate two captures of different sizes from the same scene.</p>
+<hr>
+<p>Code: <a href="examples/example-0010/Program.cs">0010</a></p>
+<p>Draw 3d shapes on a textured cube face.</p>
+<p><a href="data/images/examples/0010.png"><img src="data/images/examples/0010.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0011/Program.cs">0011</a></p>
+<p>Texture, light and text transparency.</p>
+<p><a href="data/images/examples/0011.png"><img src="data/images/examples/0011.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0012/Program.cs">0012</a></p>
+<p>Show text alignment types with their bounding box.</p>
+<p><a href="data/images/examples/0012.png"><img src="data/images/examples/0012.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0013/Program.cs">0013</a></p>
+<p>Multiline text.</p>
+<p><a href="data/images/examples/0013.png"><img src="data/images/examples/0013.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0014/Program.cs">0014</a></p>
+<p>Scalability benchmark for text.</p>
+<p><a href="data/images/examples/0014.png"><img src="data/images/examples/0014.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0015/Program.cs">0015</a></p>
+<p>Raycast in orthogonal mode for snapping test.</p>
+<p><a href="data/images/examples/0015.png"><img src="data/images/examples/0015.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0016/Views/MainWindow.axaml.cs">0016</a> (mvvm)</p>
+<p>Invalidate control on vertex change.</p>
+<p><a href="data/images/examples/0016.png"><img src="data/images/examples/0016.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0017/Program.cs">0017</a></p>
+<p>Figure using screen coord.</p>
+<p><a href="data/images/examples/0017.png"><img src="data/images/examples/0017.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0018/Program.cs">0018</a></p>
+<p>Illusion of rotating base box model while its the camera that's rotating around. A small box rotates using object matrix in all scenes ; show camera frustum.</p>
+<p><a href="data/images/examples/0018.png"><img src="data/images/examples/0018.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0019/Views/MainWindow.axaml.cs">0019</a> (mvvm)</p>
+<p>Sphere vertex render and hittest scalability test.</p>
+<p><a href="data/images/examples/0019.png"><img src="data/images/examples/0019.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0020/Program.cs">0020</a></p>
+<p>Customize key gesture.</p>
+<hr>
+<p>Code: <a href="examples/example-0021/Views/MainWindow.axaml.cs">0021</a></p>
+<p>Use of raycast to pick vertexes and define a new ucs.</p>
+<p><a href="data/images/examples/0021.gif"><img src="data/images/examples/0021.gif" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0022/Program.cs">0022</a></p>
+<p>Nurb surface join on two tubes.</p>
+<p><a href="data/images/examples/0022.png"><img src="data/images/examples/0022.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0023/Program.cs">0023</a></p>
+<p>Show 1-D fem element displacement using. Dependency: <a href="https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net">BriefFiniteElement</a>.</p>
+<p><a href="data/images/examples/0023.png"><img src="data/images/examples/0023.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0024/Program.cs">0024</a></p>
+<p>Show 3-D fem element displacement with countour and legend visible only in one of the split views using control and figure custom tag data. Dependency: <a href="https://github.com/BriefFiniteElementNet/BriefFiniteElement.Net">BriefFiniteElement</a></p>
+<p><a href="data/images/examples/0024.png"><img src="data/images/examples/0024.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0025/Program.cs">0025</a></p>
+<p>Nurb surface intersection generating nurb curves using <a href="https://github.com/devel0/netcore-opengl/blob/0ce534f6fcbb62279d814b0eca08f5be97ec8f98/src/core/primitive/IGLTriangle.cs#L113">FeasibleTriIntersectionTests</a> extension method.</p>
+<p><a href="data/images/examples/0025.png"><img src="data/images/examples/0025.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0026/Views/MainWindow.axaml.cs">0026</a></p>
+<p>Shows 2 triangle intersection and SimpleCmd management.</p>
+<p><a href="data/images/examples/0026.png"><img src="data/images/examples/0026.png" alt="img"></a></p>
+<hr>
+<p>Code: <a href="examples/example-0027/Program.cs">0027</a></p>
+<p>Shows earth representation through a textured uv sphere.</p>
+<p><a href="data/images/examples/0027.png"><img src="data/images/examples/0027.png" alt="img"></a></p>
+<h2 id="development-key-notes">Development key notes</h2>
+<p>Most of technical documentation is directly integrated with <a href="https://devel0.github.io/netcore-opengl/html/annotated.html">API documentation</a>.</p>
+<h3 id="coordinate-spaces">Coordinate spaces</h3>
+<p><img src="data/notes/SpaceCoord.svg" alt=""></p>
+<ul>
+<li><strong>Object</strong>, <strong>Model</strong>, <strong>View</strong> and <strong>Projection</strong> matrixes are used by the gl pipeline at the <a href="https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/render/shaders/4.main.vs#L74">vertex shader set gl position</a>.</li>
+<li><strong>Clip</strong>, <strong>NDC</strong> and finally <strong>Screen</strong> spaces are handled by the gl pipeline as further stages where size of render device was set by the <a href="https://github.com/devel0/netcore-opengl/blob/3dbf0e483007c9eea979d091547e5fa08a85e082/src/render/GLControl.cs#L855">gl control render</a>.</li>
+<li>Forward and backward coordinate transform can be done through provided core helper functions; these methods exists to preview gl transformations done by the gpu on client side and are used forwardly by the zoomfit in <a href="https://github.com/devel0/netcore-opengl/blob/ca1237b9b3b16c1a7fc2c673c9bf2de87160f12b/src/core/calc/Util.cs#L17">compute screen bbox</a> or in the backward case to detect local point from screen through <a href="https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/core/calc/BackwardTransform.cs#L176">local ray cast</a>.
+<ul>
+<li><a href="src/core/calc/ForwardTransform.cs">forward transform</a></li>
+<li><a href="src/core/calc/BackwardTransform.cs">backward transform</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="gl-dev-inspect-tool">GL Dev inspect tool</h3>
+<p>Hit <code>F1</code> gesture to open gl dev tool useful to understand how conversion translates between spaces; it provides some basic support such as:</p>
+<ul>
+<li>show render count</li>
+<li>show/edit GlView title</li>
+<li>toggle control perspective, shadow, texture, wireframe, shade with edge, show normals</li>
+<li>override light ambient, diffuse, specular strength</li>
+<li>change fovdeg, show camera coordinates and frustum</li>
+<li>toggle autoadjust near/far with near,far edit</li>
+<li>show bbox size and model/view/projection matrixes</li>
+<li>add, remove, set position, color of lights</li>
+</ul>
+<p><img src="data/images/gldevtool.gif" alt=""></p>
+<h3 id="primitives-figures-interaction">Primitives, figures interaction</h3>
+<h4 id="selection-and-coord-identify">Selection and coord identify</h4>
+<table>
+<thead>
+<tr>
+<th>cursor</th>
+<th>type</th>
+<th>hotkey</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="data/images/cursors/normal.png" alt="img"></td>
+<td>normal</td>
+<td><code>s</code></td>
+<td>Normal pan/zoom/rotate <a href="#gestures">gestures</a>.</td>
+</tr>
+<tr>
+<td><img src="data/images/cursors/primitive.png" alt="img"></td>
+<td>primitive</td>
+<td><code>s</code></td>
+<td>Primitive selection toggler.</td>
+</tr>
+<tr>
+<td><img src="data/images/cursors/figure.png" alt="img"></td>
+<td>figure</td>
+<td><code>s</code></td>
+<td>Figure selection toggler.</td>
+</tr>
+<tr>
+<td><img src="data/images/cursors/identify.png" alt="img"></td>
+<td>identify</td>
+<td><code>i</code></td>
+<td>Identify coord.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="removal">Removal</h4>
+<p>Select a primitive/figures then hit <code>d</code> key to delete from the model.</p>
+<h4 id="simplecmd">SimpleCmd</h4>
+<p>Each primitive/figure selected can be copied to clipboard by the <code>ctrl+c</code> key and can be pasted within <code>ctrl+v</code>.</p>
+<p>Actual implementation doesn't support color information but only geometric data:</p>
+<table>
+<thead>
+<tr>
+<th>Primitive</th>
+<th>SimpleCmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>point</td>
+<td><code>p</code> x1,y1,z1;...</td>
+</tr>
+<tr>
+<td>line</td>
+<td><code>l</code> x1,y1,z1,x2,y2,z2;...</td>
+</tr>
+<tr>
+<td>triangle</td>
+<td><code>t</code> x1,y1,z1,x2,y2,z2,x3,y3,z3;...</td>
+</tr>
+</tbody>
+</table>
+<p>For example a WCS object figure composed of 3 lines is expressed as follow SimpleCmd:</p>
+<pre><code>l 0,0,0,1,0,0;0,0,0,0,1,0;0,0,0,0,0,1
+</code></pre>
+<h4 id="change-rotation-center">Change rotation center</h4>
+<ul>
+<li>select a primitive ( <code>s</code> to enable selection )</li>
+<li>hit <code>ctrl+r</code></li>
+</ul>
+<p><img src="data/images/change-rotation.gif" alt=""></p>
+<p>To return at default rotation center hit <code>ctrl+r</code> again that is with no selection.</p>
+<h3 id="send-notification">Send notification</h3>
+<p>Use gl model send notification to display a message with following properties:</p>
+<ul>
+<li><em>title</em></li>
+<li><em>message</em></li>
+<li><em>level</em> : Information, Success, Warning, Error</li>
+</ul>
+<h3 id="view-invalidation-model">View invalidation model</h3>
+<p>The view invalidation follow these rules:</p>
+<ul>
+<li>View is refreshed automatically as a result of scale/rotate/pan predefined interactions.</li>
+<li>Gl model changes doesn't imply an invalidation of the view and user have to request view update through gl model Invalidate method.</li>
+</ul>
+<h3 id="opengl-debugging-tools">Opengl debugging tools</h3>
+<p>To implement some technical part of this library the <a href="https://renderdoc.org/">RenderDoc</a> tool was a useful to investigate the content of the gl pipeline and to see the cube depth map generated to handle point light shadow rendering.</p>
+<h3 id="multiplatform">Multiplatform</h3>
+<ul>
+<li>The same binary compiled in a platform can run in others.</li>
+<li>For example compile the solution then try to copy an example <code>bin</code> folder to other machine, then issue <code>dotnet bin/Debug/net7.0/example-xxxx.dll</code>.</li>
+</ul>
+<h3 id="docker-mesa">Docker (mesa)</h3>
+<p>Unit tests of this projects can run in docker ( see <a href="src/test/docker">this folder</a> ).</p>
+<p>For a simple program execution there is an example in the offscreen rendering <a href="examples/example-0009/docker-example/">example-0009</a>, to execute it:</p>
+<pre><code class="lang-sh">cd examples/example-0009/docker-example
+./build.sh
+./run.sh
+</code></pre>
+<p>that executes with follow output:</p>
+<pre><code>GL VERSION = 4.5 (Core Profile) Mesa 22.2.5
+finished
+Generated file:
+total 52K
+drwxr-xr-x 2 devel0 devel0 4.0K Mar 29 13:46 .
+drwxrwxr-x 3 devel0 devel0 4.0K Mar 29 13:06 ..
+-rw-r--r-- 1 devel0 devel0  21K Apr  3 10:33 example-0009-1024x768.png
+-rw-r--r-- 1 devel0 devel0  18K Apr  3 10:33 example-0009-640x480.png
+</code></pre>
+<p>generated files can be found in the <code>examples/example-0009/docker-example/output</code> generated folder.</p>
+<h3 id="software-rendered-mesa">Software rendered (mesa)</h3>
+<p>For example if you try to run the binary or sources from Windows guest in VirtualBox linux host you can receive follow error:</p>
+<pre><code>C:\Users\devel0\Downloads\bin\Debug\net7.0&gt;dotnet example-0010.dll
+Unhandled exception. System.AggregateException: One or more errors occurred. (ApiUnavailable: WGL: The driver does not appear to support OpenGL)
+ ---&gt; Silk.NET.GLFW.GlfwException: ApiUnavailable: WGL: The driver does not appear to support OpenGL
+   at Silk.NET.GLFW.Glfw.&lt;&gt;c.&lt;.cctor&gt;b__141_0(ErrorCode errorCode, String description)
+   at Silk.NET.GLFW.Glfw.CreateWindow(Int32 width, Int32 height, String title, Monitor* monitor, WindowHandle* share)
+   at Silk.NET.Windowing.Glfw.GlfwWindow.CoreInitialize(WindowOptions opts)
+   at Silk.NET.Windowing.Internals.WindowImplementationBase.CoreInitialize(ViewOptions opts)
+   at Silk.NET.Windowing.Internals.ViewImplementationBase.Initialize()
+   at SearchAThing.OpenGL.Core.GLContext..ctor() in /home/devel0/Documents/opensource/netcore-opengl/src/render/GLContext.cs:line 183
+</code></pre>
+<p>To overcome the issue you can execute with software rendered mesa graphics driver.</p>
+<p>To install:</p>
+<ul>
+<li>Download <a href="https://fdossena.com/?p=mesa/index.frag">mesa library</a>.</li>
+<li>Unpack <code>MesaForWindows-x64-20.1.8.7z</code> in a folder.</li>
+<li>Set the environment variable <code>OPENGL_LIBRARY_PATH</code> to the path of the folder containing <code>opengl32.dll</code>.</li>
+</ul>
+<p><img src="data/images/mesa-software-rendered.png" alt=""></p>
+<p><em>Technical note:</em></p>
+<p>Mesa 20.1.8.7 doesn't expose glsl support for 4.6 regardless of that it contains effective implementation for that. To fix the problem <code>netcore-opengl</code> automatically set <a href="https://github.com/devel0/netcore-opengl/blob/37ad075f4bd983e9bfbeaa86d606fc25f3430eb5/src/render/GLContext.cs#L158-L159">two other environment variables</a> when mesa is used.</p>
+<h3 id="c-global-usings-full">C# global usings (full)</h3>
+<p>Following is the list of global usings for app using gui and shapes modules.
+Just create a global.cs file and put into your solution to avoid <code>using</code> on each single .cs file.</p>
+<pre><code class="lang-cs">// core
+global using System;
+global using System.Linq;
+global using System.Globalization;
+global using System.Collections;
+global using System.Collections.Generic;
+global using System.Collections.ObjectModel;
+global using System.Text;
+global using System.Text.RegularExpressions;
+global using System.IO;
+global using System.Diagnostics;
+global using System.Threading.Tasks;
+global using System.Numerics;
+global using System.ComponentModel;
+global using System.Runtime.CompilerServices;
+global using static System.Math;
+global using static System.FormattableString;
+global using Vector3 = System.Numerics.Vector3;
+global using Color = System.Drawing.Color;
+global using Size = System.Drawing.Size;
+global using ColorTranslator = System.Drawing.ColorTranslator;
+global using System.Reflection;
+
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Serialization;
+global using SkiaSharp;
+
+global using Silk.NET.OpenGL;
+
+global using SearchAThing.Ext;
+global using static SearchAThing.Ext.Toolkit;
+
+global using SearchAThing.Sci;
+global using static SearchAThing.Sci.Toolkit;
+
+global using SearchAThing.OpenGL.Core;
+global using static SearchAThing.OpenGL.Core.Toolkit;
+global using static SearchAThing.OpenGL.Core.Constants;
+
+// gui
+global using System.Threading;
+global using Avalonia;
+global using Avalonia.Input;
+global using Point = Avalonia.Point;
+global using Avalonia.Media;
+global using AColor = Avalonia.Media.Color;
+global using ABrush = Avalonia.Media.Brush;
+global using Avalonia.Data.Converters;
+
+global using SearchAThing.Desktop;
+
+global using SearchAThing.OpenGL.GUI;
+global using static SearchAThing.OpenGL.GUI.Toolkit;
+global using static SearchAThing.OpenGL.GUI.Constants;
+
+// shapes
+global using SearchAThing.OpenGL.Shapes;
+global using static SearchAThing.OpenGL.Shapes.Toolkit;
+global using static SearchAThing.OpenGL.Shapes.Constants;
+
+// nurbs
+global using SearchAThing.OpenGL.Nurbs;
+global using static SearchAThing.OpenGL.Nurbs.Toolkit;
+</code></pre>
+<h3 id="gestures">Gestures</h3>
+<h4 id="mouse-gestures">Mouse gestures</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left + Move</td>
+<td>Rotate the model over bbox middle</td>
+</tr>
+<tr>
+<td>Middle + Move</td>
+<td>Pan</td>
+</tr>
+<tr>
+<td>Middle double click</td>
+<td>Zoom fit</td>
+</tr>
+</tbody>
+</table>
+<h4 id="keybindings">Keybindings</h4>
+<p>Key gesture can be overriden ( see <a href="https://github.com/devel0/netcore-opengl/blob/3943766b7cb98ae46149fbf14e54497f84ecf41f/examples/example-0020/Program.cs#L19-L23">example-0020</a> ).</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>o</td>
+<td>View bOttom</td>
+</tr>
+<tr>
+<td>t</td>
+<td>View Top</td>
+</tr>
+<tr>
+<td>l</td>
+<td>View Left</td>
+</tr>
+<tr>
+<td>r</td>
+<td>View Right</td>
+</tr>
+<tr>
+<td>f</td>
+<td>View Front</td>
+</tr>
+<tr>
+<td>b</td>
+<td>View Back</td>
+</tr>
+<tr>
+<td>i</td>
+<td>Toggle Identify coord</td>
+</tr>
+<tr>
+<td>s</td>
+<td>Toggle selection mode</td>
+</tr>
+<tr>
+<td>Ctrl + r</td>
+<td>Change rotation center</td>
+</tr>
+<tr>
+<td>Ctrl + ⬆</td>
+<td>Camera zoom in</td>
+</tr>
+<tr>
+<td>Ctrl + ⬇</td>
+<td>Camera zoom out</td>
+</tr>
+<tr>
+<td>Shift + ⬅</td>
+<td>Camera pan left</td>
+</tr>
+<tr>
+<td>Shift + ➡</td>
+<td>Camera pan right</td>
+</tr>
+<tr>
+<td>Shift + ⬆</td>
+<td>Camera pan up</td>
+</tr>
+<tr>
+<td>Shift + ⬇</td>
+<td>Camera pan up</td>
+</tr>
+<tr>
+<td>⬅</td>
+<td>Model rotate left</td>
+</tr>
+<tr>
+<td>➡</td>
+<td>Model rotate right</td>
+</tr>
+<tr>
+<td>⬆</td>
+<td>Model rotate up</td>
+</tr>
+<tr>
+<td>⬇</td>
+<td>Model rotate down</td>
+</tr>
+<tr>
+<td>Ctrl + ⬅</td>
+<td>Camera tilt left</td>
+</tr>
+<tr>
+<td>Ctrl + ➡</td>
+<td>Camera tilt right</td>
+</tr>
+<tr>
+<td>Alt + ⬅</td>
+<td>Camera rotate left</td>
+</tr>
+<tr>
+<td>Alt + ➡</td>
+<td>Camera rotate right</td>
+</tr>
+<tr>
+<td>Alt + ⬆</td>
+<td>Camera rotate up</td>
+</tr>
+<tr>
+<td>Alt + ⬇</td>
+<td>Camera rotate down</td>
+</tr>
+<tr>
+<td>h</td>
+<td>Split view horizontal</td>
+</tr>
+<tr>
+<td>v</td>
+<td>Split view vertical</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Close current view</td>
+</tr>
+<tr>
+<td>w</td>
+<td>Toggle wireframe</td>
+</tr>
+<tr>
+<td>Ctrl + w</td>
+<td>Toggle (geom shader) shade with edges</td>
+</tr>
+<tr>
+<td>Alt + v</td>
+<td>Toggle (geom shader) vertex visibility</td>
+</tr>
+<tr>
+<td>n</td>
+<td>Toggle show normals</td>
+</tr>
+<tr>
+<td>p</td>
+<td>Toggle perspective</td>
+</tr>
+<tr>
+<td>x</td>
+<td>Toggle texture</td>
+</tr>
+<tr>
+<td>Ctrl + s</td>
+<td>Toggle shadow</td>
+</tr>
+<tr>
+<td>Ctrl + x</td>
+<td>Toggle model bbox</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + c</td>
+<td>Toggle camera object</td>
+</tr>
+<tr>
+<td>z</td>
+<td>Zoom fit</td>
+</tr>
+<tr>
+<td>Ctrl + c</td>
+<td>Copy selected primitives/figures to clipboard as SimpleCmd</td>
+</tr>
+<tr>
+<td>Ctrl + v</td>
+<td>Paste primitives/figures from clipboard SimpleCmd</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete selected primitives/figures</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Cancel selection and back to view cursor mode</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>Open dev tool</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>Save current view</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>Restore last saved view</td>
+</tr>
+<tr>
+<td>Shift + F2</td>
+<td>Save current view layout</td>
+</tr>
+<tr>
+<td>Shift + F3</td>
+<td>Restore last saved view layout</td>
+</tr>
+<tr>
+<td>Ctrl + i</td>
+<td>Invalidate view</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unit-tests">Unit tests</h2>
+<ul>
+<li>debugging unit tests
+<ul>
+<li>from vscode click <code>debug test</code> on codelens button</li>
+</ul>
+</li>
+<li>executing all tests
+<ul>
+<li>from solution root folder <code>dotnet test</code></li>
+</ul>
+</li>
+<li>testing coverage
+<ul>
+<li>from vscode run task ( ctrl+shift+p ) <code>Tasks: Run Task</code> then <code>test with coverage</code> or use provided script <code>./generate-coverage.sh</code></li>
+<li>extensions required to watch coverage ( <code>Coverage Gutters</code> )</li>
+</ul>
+</li>
+</ul>
+<p><img src="data/images/unit-tests-coverage-gutters.png" alt=""></p>
+<h2 id="how-this-project-was-built">How this project was built</h2>
+<pre><code class="lang-sh">mkdir netcore-opengl
+cd netcore-opengl
+
+mkdir src examples
+
+cd src
+dotnet new classlib -n netcore-opengl-core
+mv netcore-opengl-core core
+cd ..
+
+cd examples
+dotnet new console --use-program-main -n example
+mv example/example.csproj example/example-0001.csproj
+mv example example-0001
+
+dotnet new --install Avalonia.Templates
+dotnet new avalonia.mvvm -n example
+mv example/example.csproj example/example-0002.csproj
+mv example example-0002
+
+dotnet new classlib -n example-figures
+
+dotnet new xunit -n test
+cd test
+dotnet add reference ../ext/netcore-ext.csproj
+# enable test coverage collector
+# to view in vscode ( &quot;Coverage Gutters&quot; ext ) run `./test-coverage` then `C-S-p` Coverage Gutters: Watch
+dotnet add package coverlet.collector
+dotnet add package coverlet.msbuild
+cd ..
+
+cd ..
+
+dotnet new sln
+dotnet sln add src/core src/test
+dotnet sln add examples/example-0001 examples/example-0002 examples/example-figures
+dotnet build
+</code></pre>
+<h3 id="documentation-github-pages">Documentation (github pages)</h3>
+<p>Configured through Settings/Pages on Branch docs ( path /docs ).</p>
+<ul>
+<li>while master branch exclude &quot;docs&quot; with .gitignore the docs branch doesn't</li>
+</ul>
+<h4 id="build-and-view-locally">Build and view locally</h4>
+<pre><code class="lang-sh">./doc build
+./doc serve
+./doc view
+</code></pre>
+<h4 id="build-and-commit-into-docs-branch">Build and commit into docs branch</h4>
+<pre><code class="lang-sh">./doc commit
+</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://www.songho.ca/opengl/gl_transform.html">OpenGL Transformation</a></li>
+<li><a href="https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/projection-matrix-GPU-rendering-pipeline-clipping.html">The Perspective and Orthographic Projection Matrix</a></li>
+</ul>
+<!-- LINKS -->
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

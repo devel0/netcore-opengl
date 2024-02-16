@@ -1,0 +1,489 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr
+  commentId: T:SearchAThing.OpenGL.Core.DebugVtxMgr
+  id: DebugVtxMgr
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.DebugVtxMgr.#ctor(SearchAThing.OpenGL.Core.GLVertexManager,SearchAThing.OpenGL.Core.GLControl,System.Action)
+  - SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl
+  - SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate
+  - SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr
+  langs:
+  - csharp
+  - vb
+  name: DebugVtxMgr
+  nameWithType: DebugVtxMgr
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr
+  type: Class
+  source:
+    remote:
+      path: src/core/geom/Debug.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DebugVtxMgr
+    path: src/core/geom/Debug.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Debug object containing a vertex manager to allow create figures and
+
+    a gl control to allow invalidate the view.<br />
+
+    Used for debug purpose.
+  example: []
+  syntax:
+    content: public class DebugVtxMgr
+    content.vb: Public Class DebugVtxMgr
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr
+  commentId: P:SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr
+  id: VtxMgr
+  parent: SearchAThing.OpenGL.Core.DebugVtxMgr
+  langs:
+  - csharp
+  - vb
+  name: VtxMgr
+  nameWithType: DebugVtxMgr.VtxMgr
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Debug.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: VtxMgr
+    path: src/core/geom/Debug.cs
+    startLine: 9
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public GLVertexManager VtxMgr { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLVertexManager
+    content.vb: Public Property VtxMgr As GLVertexManager
+  overload: SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr*
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl
+  commentId: P:SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl
+  id: GLControl
+  parent: SearchAThing.OpenGL.Core.DebugVtxMgr
+  langs:
+  - csharp
+  - vb
+  name: GLControl
+  nameWithType: DebugVtxMgr.GLControl
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Debug.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLControl
+    path: src/core/geom/Debug.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public GLControl GLControl { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLControl
+    content.vb: Public Property GLControl As GLControl
+  overload: SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl*
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate
+  commentId: P:SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate
+  id: Invalidate
+  parent: SearchAThing.OpenGL.Core.DebugVtxMgr
+  langs:
+  - csharp
+  - vb
+  name: Invalidate
+  nameWithType: DebugVtxMgr.Invalidate
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate
+  type: Property
+  source:
+    remote:
+      path: src/core/geom/Debug.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Invalidate
+    path: src/core/geom/Debug.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public Action Invalidate { get; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property Invalidate As Action
+  overload: SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate*
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.#ctor(SearchAThing.OpenGL.Core.GLVertexManager,SearchAThing.OpenGL.Core.GLControl,System.Action)
+  commentId: M:SearchAThing.OpenGL.Core.DebugVtxMgr.#ctor(SearchAThing.OpenGL.Core.GLVertexManager,SearchAThing.OpenGL.Core.GLControl,System.Action)
+  id: '#ctor(SearchAThing.OpenGL.Core.GLVertexManager,SearchAThing.OpenGL.Core.GLControl,System.Action)'
+  parent: SearchAThing.OpenGL.Core.DebugVtxMgr
+  langs:
+  - csharp
+  - vb
+  name: DebugVtxMgr(GLVertexManager, GLControl, Action)
+  nameWithType: DebugVtxMgr.DebugVtxMgr(GLVertexManager, GLControl, Action)
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.DebugVtxMgr(SearchAThing.OpenGL.Core.GLVertexManager, SearchAThing.OpenGL.Core.GLControl, System.Action)
+  type: Constructor
+  source:
+    remote:
+      path: src/core/geom/Debug.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/geom/Debug.cs
+    startLine: 15
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public DebugVtxMgr(GLVertexManager vtxMgr, GLControl glControl, Action invalidate)
+    parameters:
+    - id: vtxMgr
+      type: SearchAThing.OpenGL.Core.GLVertexManager
+    - id: glControl
+      type: SearchAThing.OpenGL.Core.GLControl
+    - id: invalidate
+      type: System.Action
+    content.vb: Public Sub New(vtxMgr As GLVertexManager, glControl As GLControl, invalidate As Action)
+  overload: SearchAThing.OpenGL.Core.DebugVtxMgr.#ctor*
+  nameWithType.vb: DebugVtxMgr.New(GLVertexManager, GLControl, Action)
+  fullName.vb: SearchAThing.OpenGL.Core.DebugVtxMgr.New(SearchAThing.OpenGL.Core.GLVertexManager, SearchAThing.OpenGL.Core.GLControl, System.Action)
+  name.vb: New(GLVertexManager, GLControl, Action)
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr*
+  commentId: Overload:SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr
+  href: SearchAThing.OpenGL.Core.DebugVtxMgr.html#SearchAThing_OpenGL_Core_DebugVtxMgr_VtxMgr
+  name: VtxMgr
+  nameWithType: DebugVtxMgr.VtxMgr
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.VtxMgr
+- uid: SearchAThing.OpenGL.Core.GLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  name: GLVertexManager
+  nameWithType: GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl*
+  commentId: Overload:SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl
+  href: SearchAThing.OpenGL.Core.DebugVtxMgr.html#SearchAThing_OpenGL_Core_DebugVtxMgr_GLControl
+  name: GLControl
+  nameWithType: DebugVtxMgr.GLControl
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.GLControl
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate*
+  commentId: Overload:SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate
+  href: SearchAThing.OpenGL.Core.DebugVtxMgr.html#SearchAThing_OpenGL_Core_DebugVtxMgr_Invalidate
+  name: Invalidate
+  nameWithType: DebugVtxMgr.Invalidate
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.Invalidate
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: SearchAThing.OpenGL.Core.DebugVtxMgr.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Core.DebugVtxMgr.#ctor
+  href: SearchAThing.OpenGL.Core.DebugVtxMgr.html#SearchAThing_OpenGL_Core_DebugVtxMgr__ctor_SearchAThing_OpenGL_Core_GLVertexManager_SearchAThing_OpenGL_Core_GLControl_System_Action_
+  name: DebugVtxMgr
+  nameWithType: DebugVtxMgr.DebugVtxMgr
+  fullName: SearchAThing.OpenGL.Core.DebugVtxMgr.DebugVtxMgr
+  nameWithType.vb: DebugVtxMgr.New
+  fullName.vb: SearchAThing.OpenGL.Core.DebugVtxMgr.New
+  name.vb: New

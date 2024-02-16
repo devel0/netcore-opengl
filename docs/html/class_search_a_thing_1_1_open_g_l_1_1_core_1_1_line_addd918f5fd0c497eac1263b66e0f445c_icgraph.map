@@ -1,4 +1,0 @@
-<map id="Contains" name="Contains">
-<area shape="rect" id="node1" title="States if this line contains given point within given tolerance." alt="" coords="256,13,335,38"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_ext.html#a23ed477e1ef16a6628458f28b9e5765c" title="Intersect given raycast to given figure primitives. &#160;Given [local] raycast will automatically backwar..." alt="" coords="5,5,208,45"/>
-</map>

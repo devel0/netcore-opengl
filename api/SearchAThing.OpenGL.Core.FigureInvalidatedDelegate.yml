@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+  commentId: T:SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+  id: FigureInvalidatedDelegate
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FigureInvalidatedDelegate
+  nameWithType: FigureInvalidatedDelegate
+  fullName: SearchAThing.OpenGL.Core.FigureInvalidatedDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/core/figure/IGLFigure.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FigureInvalidatedDelegate
+    path: src/core/figure/IGLFigure.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Delegate for <xref href="SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated" data-throw-if-not-resolved="false"></xref>.<br />
+
+    This event is managed internally by the <xref href="SearchAThing.OpenGL.Core.GLModel" data-throw-if-not-resolved="false"></xref> and signal that a model figure changed some of its vertex propertties.<br />
+  example: []
+  syntax:
+    content: public delegate void FigureInvalidatedDelegate(IGLFigure figure)
+    parameters:
+    - id: figure
+      type: SearchAThing.OpenGL.Core.IGLFigure
+      description: GL figure invalidated.
+    content.vb: Public Delegate Sub FigureInvalidatedDelegate(figure As IGLFigure)
+references:
+- uid: SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+  commentId: E:SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated
+  name: FigureInvalidated
+  nameWithType: IGLFigure.FigureInvalidated
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated
+- uid: SearchAThing.OpenGL.Core.GLModel
+  commentId: T:SearchAThing.OpenGL.Core.GLModel
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLModel.html
+  name: GLModel
+  nameWithType: GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure

@@ -1,0 +1,79 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.GUI.GLControlCreatedDelegate
+  commentId: T:SearchAThing.OpenGL.GUI.GLControlCreatedDelegate
+  id: GLControlCreatedDelegate
+  parent: SearchAThing.OpenGL.GUI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GLControlCreatedDelegate
+  nameWithType: GLControlCreatedDelegate
+  fullName: SearchAThing.OpenGL.GUI.GLControlCreatedDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/gui/Views/GLWindow.axaml.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLControlCreatedDelegate
+    path: src/gui/Views/GLWindow.axaml.cs
+    startLine: 10
+  assemblies:
+  - netcore-opengl-gui
+  namespace: SearchAThing.OpenGL.GUI
+  summary: Delegate used by the <xref href="SearchAThing.OpenGL.GUI.GLWindow" data-throw-if-not-resolved="false"></xref> to customize action following the creation of the gl control into the window.
+  example: []
+  syntax:
+    content: public delegate void GLControlCreatedDelegate(AvaloniaGLControl avaloniaGLControl)
+    parameters:
+    - id: avaloniaGLControl
+      type: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+      description: Avalonia gl control reference.
+    content.vb: Public Delegate Sub GLControlCreatedDelegate(avaloniaGLControl As AvaloniaGLControl)
+references:
+- uid: SearchAThing.OpenGL.GUI.GLWindow
+  commentId: T:SearchAThing.OpenGL.GUI.GLWindow
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.GLWindow.html
+  name: GLWindow
+  nameWithType: GLWindow
+  fullName: SearchAThing.OpenGL.GUI.GLWindow
+- uid: SearchAThing.OpenGL.GUI
+  commentId: N:SearchAThing.OpenGL.GUI
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.GUI
+  nameWithType: SearchAThing.OpenGL.GUI
+  fullName: SearchAThing.OpenGL.GUI
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.GUI
+    name: GUI
+    href: SearchAThing.OpenGL.GUI.html
+- uid: SearchAThing.OpenGL.GUI.AvaloniaGLControl
+  commentId: T:SearchAThing.OpenGL.GUI.AvaloniaGLControl
+  parent: SearchAThing.OpenGL.GUI
+  href: SearchAThing.OpenGL.GUI.AvaloniaGLControl.html
+  name: AvaloniaGLControl
+  nameWithType: AvaloniaGLControl
+  fullName: SearchAThing.OpenGL.GUI.AvaloniaGLControl

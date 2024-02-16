@@ -1,6 +1,0 @@
-<map id="OnPropertyChanged" name="OnPropertyChanged">
-<area shape="rect" id="node1" title="invoke this method to forward propertchanged event notification. note: not needed to specify property..." alt="" coords="471,38,623,63"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#a3b7cc83d35fd3e50f9d5addf978ce010" title=" " alt="" coords="286,13,393,38"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#a353b5f13409fe49c0ce33e7ab9dc4698" title="Configure light constant, linear, quadratic attenuation based on the model size." alt="" coords="256,62,423,87"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_control.html#a3e2efcd721af8aba50e8e1736db54b77" title="Main gl render process." alt="" coords="5,5,208,45"/>
-</map>

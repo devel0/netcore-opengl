@@ -1,0 +1,3746 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLModel
+  commentId: T:SearchAThing.OpenGL.Core.GLModel
+  id: GLModel
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLModel.#ctor(SearchAThing.OpenGL.Core.GLContext)
+  - SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  - SearchAThing.OpenGL.Core.GLModel.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  - SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  - SearchAThing.OpenGL.Core.GLModel.BuildModel
+  - SearchAThing.OpenGL.Core.GLModel.Clear(System.Boolean)
+  - SearchAThing.OpenGL.Core.GLModel.ClearSelection(System.Boolean)
+  - SearchAThing.OpenGL.Core.GLModel.CursorMode
+  - SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers
+  - SearchAThing.OpenGL.Core.GLModel.DeleteSelected
+  - SearchAThing.OpenGL.Core.GLModel.DeserializeFigures(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.Figures
+  - SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.GLContext
+  - SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+  - SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd
+  - SearchAThing.OpenGL.Core.GLModel.InvalidateModel
+  - SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+  - SearchAThing.OpenGL.Core.GLModel.LBBox
+  - SearchAThing.OpenGL.Core.GLModel.NormalFactor
+  - SearchAThing.OpenGL.Core.GLModel.NotificationRequest
+  - SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+  - SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled
+  - SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+  - SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled
+  - SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  - SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+  - SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled
+  - SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.PointLights
+  - SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.PropertyChanged
+  - SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox
+  - SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  - SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  - SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  - SearchAThing.OpenGL.Core.GLModel.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  - SearchAThing.OpenGL.Core.GLModel.ResetLight
+  - SearchAThing.OpenGL.Core.GLModel.SelectedFigures
+  - SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+  - SearchAThing.OpenGL.Core.GLModel.SendNotification(System.String,System.String,SearchAThing.OpenGL.Core.GLNotificationType)
+  - SearchAThing.OpenGL.Core.GLModel.Serialize
+  - SearchAThing.OpenGL.Core.GLModel.SerializeToFile(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.SerializerSettings
+  - SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  - SearchAThing.OpenGL.Core.GLModel.ToString
+  - SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  - SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase})
+  - SearchAThing.OpenGL.Core.GLModel.Vertexes
+  - SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  langs:
+  - csharp
+  - vb
+  name: GLModel
+  nameWithType: GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel
+  type: Class
+  source:
+    remote:
+      path: src/core/render/GLModel.Serialization.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLModel
+    path: src/core/render/GLModel.Serialization.cs
+    startLine: 2
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Gl model.<br />
+
+    - contains the associated <xref href="SearchAThing.OpenGL.Core.GLModel.GLVertexManager" data-throw-if-not-resolved="false"></xref><br />
+
+    - the list of model figures <xref href="SearchAThing.OpenGL.Core.GLFigureBase" data-throw-if-not-resolved="false"></xref><br />
+
+    - point lights <xref href="SearchAThing.OpenGL.Core.GLPointLight" data-throw-if-not-resolved="false"></xref>.<br />
+
+    - custom vertex managers <xref href="SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)" data-throw-if-not-resolved="false"></xref><br />
+
+    - contains the default build model action.<br />
+  example: []
+  syntax:
+    content: >-
+      [JsonObject(MemberSerialization.OptIn)]
+
+      public class GLModel : IGLContextObject
+    content.vb: >-
+      <JsonObject(MemberSerialization.OptIn)>
+
+      Public Class GLModel Implements IGLContextObject
+  inheritance:
+  - System.Object
+  implements:
+  - SearchAThing.OpenGL.Core.IGLContextObject
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.GLModel.SearchAThing.OpenGL.Core.Ext.LoadTexture(System.String)
+  - SearchAThing.OpenGL.Core.GLModel.SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLText)
+  attributes:
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
+    arguments:
+    - type: Newtonsoft.Json.MemberSerialization
+      value: 1
+- uid: SearchAThing.OpenGL.Core.GLModel.PropertyChanged
+  commentId: E:SearchAThing.OpenGL.Core.GLModel.PropertyChanged
+  id: PropertyChanged
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: GLModel.PropertyChanged
+  fullName: SearchAThing.OpenGL.Core.GLModel.PropertyChanged
+  type: Event
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PropertyChanged
+    path: src/core/render/GLModel.cs
+    startLine: 39
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public event PropertyChangedEventHandler? PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+- uid: SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged(System.String)
+  id: OnPropertyChanged(System.String)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OnPropertyChanged(string?)
+  nameWithType: GLModel.OnPropertyChanged(string?)
+  fullName: SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged(string?)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OnPropertyChanged
+    path: src/core/render/GLModel.cs
+    startLine: 45
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    invoke this method to forward propertchanged event notification.
+
+    note: not needed to specify propertyName set by compiler service to called property.
+  example: []
+  syntax:
+    content: protected void OnPropertyChanged(string? propertyName = null)
+    parameters:
+    - id: propertyName
+      type: System.String
+    content.vb: Protected Sub OnPropertyChanged(propertyName As String = Nothing)
+  overload: SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged*
+  nameWithType.vb: GLModel.OnPropertyChanged(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+- uid: SearchAThing.OpenGL.Core.GLModel.GLContext
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.GLContext
+  id: GLContext
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: GLContext
+  nameWithType: GLModel.GLContext
+  fullName: SearchAThing.OpenGL.Core.GLModel.GLContext
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLContext
+    path: src/core/render/GLModel.cs
+    startLine: 57
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl context.
+  example: []
+  syntax:
+    content: public GLContext GLContext { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLContext
+    content.vb: Public Property GLContext As GLContext
+  overload: SearchAThing.OpenGL.Core.GLModel.GLContext*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+- uid: SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  commentId: E:SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  id: ViewInvalidated
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: ViewInvalidated
+  nameWithType: GLModel.ViewInvalidated
+  fullName: SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  type: Event
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ViewInvalidated
+    path: src/core/render/GLModel.cs
+    startLine: 66
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Event emitted when a vertex of the model changes.<br />
+
+    Useful to keep in sync the view calling the <xref href="SearchAThing.OpenGL.Core.GLControl.Invalidate(SearchAThing.OpenGL.Core.InvalidateEnum)" data-throw-if-not-resolved="false"></xref>.
+
+    See [<b>example-0016</b>](https://github.com/devel0/netcore-opengl/blob/master/examples/example-0016/Views/MainWindow.axaml.cs)
+  example: []
+  syntax:
+    content: public event ModelViewInvalidated? ViewInvalidated
+    return:
+      type: SearchAThing.OpenGL.Core.ModelViewInvalidated
+    content.vb: Public Event ViewInvalidated As ModelViewInvalidated
+- uid: SearchAThing.OpenGL.Core.GLModel.Figures
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.Figures
+  id: Figures
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: Figures
+  nameWithType: GLModel.Figures
+  fullName: SearchAThing.OpenGL.Core.GLModel.Figures
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Figures
+    path: src/core/render/GLModel.cs
+    startLine: 77
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Figures (included those from custom vertex managers)
+  example: []
+  syntax:
+    content: public ReadOnlyObservableCollection<GLFigureBase> Figures { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyObservableCollection{SearchAThing.OpenGL.Core.GLFigureBase}
+    content.vb: Public Property Figures As ReadOnlyObservableCollection(Of GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.Figures*
+- uid: SearchAThing.OpenGL.Core.GLModel.SelectedFigures
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.SelectedFigures
+  id: SelectedFigures
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: SelectedFigures
+  nameWithType: GLModel.SelectedFigures
+  fullName: SearchAThing.OpenGL.Core.GLModel.SelectedFigures
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SelectedFigures
+    path: src/core/render/GLModel.cs
+    startLine: 109
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Selected figures.
+  example: []
+  syntax:
+    content: public ReadOnlyObservableCollection<GLFigureBase> SelectedFigures { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyObservableCollection{SearchAThing.OpenGL.Core.GLFigureBase}
+    content.vb: Public ReadOnly Property SelectedFigures As ReadOnlyObservableCollection(Of GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.SelectedFigures*
+- uid: SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+  id: SelectedPrimitives
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: SelectedPrimitives
+  nameWithType: GLModel.SelectedPrimitives
+  fullName: SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SelectedPrimitives
+    path: src/core/render/GLModel.cs
+    startLine: 132
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Selected primitives.
+  example: []
+  syntax:
+    content: public ReadOnlyObservableCollection<GLPrimitiveBase> SelectedPrimitives { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyObservableCollection{SearchAThing.OpenGL.Core.GLPrimitiveBase}
+    content.vb: Public ReadOnly Property SelectedPrimitives As ReadOnlyObservableCollection(Of GLPrimitiveBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives*
+- uid: SearchAThing.OpenGL.Core.GLModel.NotificationRequest
+  commentId: F:SearchAThing.OpenGL.Core.GLModel.NotificationRequest
+  id: NotificationRequest
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: NotificationRequest
+  nameWithType: GLModel.NotificationRequest
+  fullName: SearchAThing.OpenGL.Core.GLModel.NotificationRequest
+  type: Field
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NotificationRequest
+    path: src/core/render/GLModel.cs
+    startLine: 148
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Event emitted when gl control would to notify something. This will handled by SearchAThing.OpenGL.GUI.AvaloniaGLControl.
+  example: []
+  syntax:
+    content: public NotificationDelegate NotificationRequest
+    return:
+      type: SearchAThing.OpenGL.Core.NotificationDelegate
+    content.vb: Public NotificationRequest As NotificationDelegate
+- uid: SearchAThing.OpenGL.Core.GLModel.SendNotification(System.String,System.String,SearchAThing.OpenGL.Core.GLNotificationType)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.SendNotification(System.String,System.String,SearchAThing.OpenGL.Core.GLNotificationType)
+  id: SendNotification(System.String,System.String,SearchAThing.OpenGL.Core.GLNotificationType)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: SendNotification(string, string, GLNotificationType)
+  nameWithType: GLModel.SendNotification(string, string, GLNotificationType)
+  fullName: SearchAThing.OpenGL.Core.GLModel.SendNotification(string, string, SearchAThing.OpenGL.Core.GLNotificationType)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SendNotification
+    path: src/core/render/GLModel.cs
+    startLine: 156
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Send notification to frontend that manage this gl control.
+  example: []
+  syntax:
+    content: public void SendNotification(string title, string msg, GLNotificationType notifyType = GLNotificationType.Information)
+    parameters:
+    - id: title
+      type: System.String
+      description: Title of notification.
+    - id: msg
+      type: System.String
+      description: Message to display, it can contains at most 1 newlines.
+    - id: notifyType
+      type: SearchAThing.OpenGL.Core.GLNotificationType
+      description: Level type of notification (Default:Information).
+    content.vb: Public Sub SendNotification(title As String, msg As String, notifyType As GLNotificationType = GLNotificationType.Information)
+  overload: SearchAThing.OpenGL.Core.GLModel.SendNotification*
+  nameWithType.vb: GLModel.SendNotification(String, String, GLNotificationType)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.SendNotification(String, String, SearchAThing.OpenGL.Core.GLNotificationType)
+  name.vb: SendNotification(String, String, GLNotificationType)
+- uid: SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+  id: GLVertexManager
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: GLVertexManager
+  nameWithType: GLModel.GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLVertexManager
+    path: src/core/render/GLModel.cs
+    startLine: 166
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl vertex manager.
+  example: []
+  syntax:
+    content: public GLVertexManager GLVertexManager { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLVertexManager
+    content.vb: Public ReadOnly Property GLVertexManager As GLVertexManager
+  overload: SearchAThing.OpenGL.Core.GLModel.GLVertexManager*
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+  id: OverrideAmbient
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OverrideAmbient
+  nameWithType: GLModel.OverrideAmbient
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideAmbient
+    path: src/core/render/GLModel.cs
+    startLine: 193
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Override ambient strength (default:0.8).
+  remarks: Requires <xref href="SearchAThing.OpenGL.Core.GLModel.OverrideAmbient" data-throw-if-not-resolved="false"></xref> to be effective.
+  example: []
+  syntax:
+    content: public float OverrideAmbient { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property OverrideAmbient As Single
+  overload: SearchAThing.OpenGL.Core.GLModel.OverrideAmbient*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+    commentId: M:SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled
+  id: OverrideAmbientEnabled
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OverrideAmbientEnabled
+  nameWithType: GLModel.OverrideAmbientEnabled
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideAmbientEnabled
+    path: src/core/render/GLModel.cs
+    startLine: 215
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Override ambient strength enabled.
+  example: []
+  syntax:
+    content: public bool OverrideAmbientEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property OverrideAmbientEnabled As Boolean
+  overload: SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled*
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+  id: OverrideDiffuse
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OverrideDiffuse
+  nameWithType: GLModel.OverrideDiffuse
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideDiffuse
+    path: src/core/render/GLModel.cs
+    startLine: 241
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Override diffuse strength (default:0.6).
+  remarks: Requires <xref href="SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse" data-throw-if-not-resolved="false"></xref> to be effective.
+  example: []
+  syntax:
+    content: public float OverrideDiffuse { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property OverrideDiffuse As Single
+  overload: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+    commentId: M:SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled
+  id: OverrideDiffuseEnabled
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OverrideDiffuseEnabled
+  nameWithType: GLModel.OverrideDiffuseEnabled
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideDiffuseEnabled
+    path: src/core/render/GLModel.cs
+    startLine: 263
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Override diffuse strength enabled.
+  example: []
+  syntax:
+    content: public bool OverrideDiffuseEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property OverrideDiffuseEnabled As Boolean
+  overload: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled*
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+  id: OverrideSpecular
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OverrideSpecular
+  nameWithType: GLModel.OverrideSpecular
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideSpecular
+    path: src/core/render/GLModel.cs
+    startLine: 289
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Override specular strength (default:0.6).
+  remarks: Requires <xref href="SearchAThing.OpenGL.Core.GLModel.OverrideSpecular" data-throw-if-not-resolved="false"></xref> to be effective.
+  example: []
+  syntax:
+    content: public float OverrideSpecular { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property OverrideSpecular As Single
+  overload: SearchAThing.OpenGL.Core.GLModel.OverrideSpecular*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+    commentId: M:SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled
+  id: OverrideSpecularEnabled
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OverrideSpecularEnabled
+  nameWithType: GLModel.OverrideSpecularEnabled
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideSpecularEnabled
+    path: src/core/render/GLModel.cs
+    startLine: 311
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Override specular strength enabled.
+  example: []
+  syntax:
+    content: public bool OverrideSpecularEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property OverrideSpecularEnabled As Boolean
+  overload: SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled*
+- uid: SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+  id: IsInvalidated
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidated
+  nameWithType: GLModel.IsInvalidated
+  fullName: SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: IsInvalidated
+    path: src/core/render/GLModel.cs
+    startLine: 333
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: States if model is invalidated thus <xref href="SearchAThing.OpenGL.Core.GLModel.BuildModel" data-throw-if-not-resolved="false"></xref> will be automatically invoked at first render.
+  example: []
+  syntax:
+    content: public bool IsInvalidated { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsInvalidated As Boolean
+  overload: SearchAThing.OpenGL.Core.GLModel.IsInvalidated*
+- uid: SearchAThing.OpenGL.Core.GLModel.NormalFactor
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.NormalFactor
+  id: NormalFactor
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: NormalFactor
+  nameWithType: GLModel.NormalFactor
+  fullName: SearchAThing.OpenGL.Core.GLModel.NormalFactor
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NormalFactor
+    path: src/core/render/GLModel.cs
+    startLine: 356
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Factor respect to bbox size used when normal geometry shader generates normals.
+  example: []
+  syntax:
+    content: public float NormalFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property NormalFactor As Single
+  overload: SearchAThing.OpenGL.Core.GLModel.NormalFactor*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLControl.ShowNormals
+    commentId: P:SearchAThing.OpenGL.Core.GLControl.ShowNormals
+- uid: SearchAThing.OpenGL.Core.GLModel.CursorMode
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.CursorMode
+  id: CursorMode
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: CursorMode
+  nameWithType: GLModel.CursorMode
+  fullName: SearchAThing.OpenGL.Core.GLModel.CursorMode
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: CursorMode
+    path: src/core/render/GLModel.cs
+    startLine: 379
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Current cursor mode.<br />
+  example: []
+  syntax:
+    content: public CursorMode CursorMode { get; set; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.CursorMode
+    content.vb: Public Property CursorMode As CursorMode
+  overload: SearchAThing.OpenGL.Core.GLModel.CursorMode*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLModel.CursorMode
+    commentId: P:SearchAThing.OpenGL.Core.GLModel.CursorMode
+- uid: SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers
+  id: CustomVertexManagers
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: CustomVertexManagers
+  nameWithType: GLModel.CustomVertexManagers
+  fullName: SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: CustomVertexManagers
+    path: src/core/render/GLModel.cs
+    startLine: 400
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enumerates custom vertex managers registered into this model.
+  example: []
+  syntax:
+    content: public IEnumerable<GLVertexManager> CustomVertexManagers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertexManager}
+    content.vb: Public ReadOnly Property CustomVertexManagers As IEnumerable(Of GLVertexManager)
+  overload: SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers*
+- uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  id: AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: AddCustomVertexManager(GLVertexManager)
+  nameWithType: GLModel.AddCustomVertexManager(GLVertexManager)
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AddCustomVertexManager
+    path: src/core/render/GLModel.cs
+    startLine: 406
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Attach given custom vertex manager to the model.
+  example: []
+  syntax:
+    content: public void AddCustomVertexManager(GLVertexManager vertexManager)
+    parameters:
+    - id: vertexManager
+      type: SearchAThing.OpenGL.Core.GLVertexManager
+      description: Gl vertex manager to attach.
+    content.vb: Public Sub AddCustomVertexManager(vertexManager As GLVertexManager)
+  overload: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager*
+- uid: SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  id: RemoveCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: RemoveCustomVertexManager(GLVertexManager)
+  nameWithType: GLModel.RemoveCustomVertexManager(GLVertexManager)
+  fullName: SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RemoveCustomVertexManager
+    path: src/core/render/GLModel.cs
+    startLine: 418
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Detach given custom manager from the model.
+  example: []
+  syntax:
+    content: public void RemoveCustomVertexManager(GLVertexManager vertexManager)
+    parameters:
+    - id: vertexManager
+      type: SearchAThing.OpenGL.Core.GLVertexManager
+      description: Gl vertex manager to detach.
+    content.vb: Public Sub RemoveCustomVertexManager(vertexManager As GLVertexManager)
+  overload: SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager*
+- uid: SearchAThing.OpenGL.Core.GLModel.PointLights
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.PointLights
+  id: PointLights
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: PointLights
+  nameWithType: GLModel.PointLights
+  fullName: SearchAThing.OpenGL.Core.GLModel.PointLights
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PointLights
+    path: src/core/render/GLModel.cs
+    startLine: 430
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Observable collection of model point lights.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty]
+
+      public ObservableCollection2<GLPointLight> PointLights { get; }
+    parameters: []
+    return:
+      type: SearchAThing.Ext.ObservableCollection2{SearchAThing.OpenGL.Core.GLPointLight}
+    content.vb: >-
+      <JsonProperty>
+
+      Public Property PointLights As ObservableCollection2(Of GLPointLight)
+  overload: SearchAThing.OpenGL.Core.GLModel.PointLights*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLPointLight
+    commentId: T:SearchAThing.OpenGL.Core.GLPointLight
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+- uid: SearchAThing.OpenGL.Core.GLModel.LBBox
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.LBBox
+  id: LBBox
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: LBBox
+  nameWithType: GLModel.LBBox
+  fullName: SearchAThing.OpenGL.Core.GLModel.LBBox
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LBBox
+    path: src/core/render/GLModel.cs
+    startLine: 437
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: bbox of model vertexes [local].
+  example: []
+  syntax:
+    content: public BBox LBBox { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.BBox
+    content.vb: Public Property LBBox As BBox
+  overload: SearchAThing.OpenGL.Core.GLModel.LBBox*
+- uid: SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox
+  id: RecomputeLBBox
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: RecomputeLBBox()
+  nameWithType: GLModel.RecomputeLBBox()
+  fullName: SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RecomputeLBBox
+    path: src/core/render/GLModel.cs
+    startLine: 468
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Invalidate and recalc bounding box [local].<br />
+
+    Used internally after delete of figures/primitives.
+  example: []
+  syntax:
+    content: public void RecomputeLBBox()
+    content.vb: Public Sub RecomputeLBBox()
+  overload: SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox*
+- uid: SearchAThing.OpenGL.Core.GLModel.#ctor(SearchAThing.OpenGL.Core.GLContext)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.#ctor(SearchAThing.OpenGL.Core.GLContext)
+  id: '#ctor(SearchAThing.OpenGL.Core.GLContext)'
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: GLModel(GLContext)
+  nameWithType: GLModel.GLModel(GLContext)
+  fullName: SearchAThing.OpenGL.Core.GLModel.GLModel(SearchAThing.OpenGL.Core.GLContext)
+  type: Constructor
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/render/GLModel.cs
+    startLine: 477
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Constructor.
+  example: []
+  syntax:
+    content: public GLModel(GLContext glContext)
+    parameters:
+    - id: glContext
+      type: SearchAThing.OpenGL.Core.GLContext
+      description: Gl context.
+    content.vb: Public Sub New(glContext As GLContext)
+  overload: SearchAThing.OpenGL.Core.GLModel.#ctor*
+  nameWithType.vb: GLModel.New(GLContext)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.New(SearchAThing.OpenGL.Core.GLContext)
+  name.vb: New(GLContext)
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  id: OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: OverrideLightStrengths(float?, float?, float?)
+  nameWithType: GLModel.OverrideLightStrengths(float?, float?, float?)
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(float?, float?, float?)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OverrideLightStrengths
+    path: src/core/render/GLModel.cs
+    startLine: 515
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Override vertex material properties.<br />
+
+    Has no effect if no light points present.<br />
+  example: []
+  syntax:
+    content: public void OverrideLightStrengths(float? ambient = null, float? diffuse = null, float? specular = null)
+    parameters:
+    - id: ambient
+      type: System.Nullable{System.Single}
+      description: Ambient light strength (Default:0.8).
+    - id: diffuse
+      type: System.Nullable{System.Single}
+      description: Diffuse light strength (Default:0.6).
+    - id: specular
+      type: System.Nullable{System.Single}
+      description: Specular light strength (Default:0.6).
+    content.vb: Public Sub OverrideLightStrengths(ambient As Single? = Nothing, diffuse As Single? = Nothing, specular As Single? = Nothing)
+  overload: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths*
+  nameWithType.vb: GLModel.OverrideLightStrengths(Single?, Single?, Single?)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(Single?, Single?, Single?)
+  name.vb: OverrideLightStrengths(Single?, Single?, Single?)
+- uid: SearchAThing.OpenGL.Core.GLModel.ResetLight
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.ResetLight
+  id: ResetLight
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: ResetLight()
+  nameWithType: GLModel.ResetLight()
+  fullName: SearchAThing.OpenGL.Core.GLModel.ResetLight()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ResetLight
+    path: src/core/render/GLModel.cs
+    startLine: 539
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Resets and create predefined lights
+  example: []
+  syntax:
+    content: public void ResetLight()
+    content.vb: Public Sub ResetLight()
+  overload: SearchAThing.OpenGL.Core.GLModel.ResetLight*
+- uid: SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  id: SetupLightAttenuation(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: SetupLightAttenuation(float?, float?, float?)
+  nameWithType: GLModel.SetupLightAttenuation(float?, float?, float?)
+  fullName: SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation(float?, float?, float?)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetupLightAttenuation
+    path: src/core/render/GLModel.cs
+    startLine: 563
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Configure light constant, linear, quadratic attenuation based on the model size.
+  example: []
+  syntax:
+    content: public void SetupLightAttenuation(float? adjustConstant = 1, float? adjustLinear = 0, float? adjustQuadratic = 0)
+    parameters:
+    - id: adjustConstant
+      type: System.Nullable{System.Single}
+      description: Gl point light constant attenuation (Default:1f).
+    - id: adjustLinear
+      type: System.Nullable{System.Single}
+      description: Gl point light linear attenuation (Default:5e-1f).
+    - id: adjustQuadratic
+      type: System.Nullable{System.Single}
+      description: Gl point light quadratic attenuation (Default:1e-4).
+    content.vb: Public Sub SetupLightAttenuation(adjustConstant As Single? = 1, adjustLinear As Single? = 0, adjustQuadratic As Single? = 0)
+  overload: SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation*
+  nameWithType.vb: GLModel.SetupLightAttenuation(Single?, Single?, Single?)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation(Single?, Single?, Single?)
+  name.vb: SetupLightAttenuation(Single?, Single?, Single?)
+- uid: SearchAThing.OpenGL.Core.GLModel.Clear(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.Clear(System.Boolean)
+  id: Clear(System.Boolean)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: Clear(bool)
+  nameWithType: GLModel.Clear(bool)
+  fullName: SearchAThing.OpenGL.Core.GLModel.Clear(bool)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Clear
+    path: src/core/render/GLModel.cs
+    startLine: 582
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Clear the model removing all entities from vertex manager, deregistering custom vertex manager and clearing point lights if specified.
+  example: []
+  syntax:
+    content: public void Clear(bool clearPointLights = false)
+    parameters:
+    - id: clearPointLights
+      type: System.Boolean
+      description: If true clear point lights (Default:false).
+    content.vb: Public Sub Clear(clearPointLights As Boolean = False)
+  overload: SearchAThing.OpenGL.Core.GLModel.Clear*
+  nameWithType.vb: GLModel.Clear(Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.Clear(Boolean)
+  name.vb: Clear(Boolean)
+- uid: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  id: AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: AddFigure(IEnumerable<GLFigureBase>)
+  nameWithType: GLModel.AddFigure(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AddFigure
+    path: src/core/render/GLModel.cs
+    startLine: 596
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Adds given figures to the vertex manager.
+  example: []
+  syntax:
+    content: public void AddFigure(IEnumerable<GLFigureBase> figures)
+    parameters:
+    - id: figures
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+      description: Gl figures to add.
+    content.vb: Public Sub AddFigure(figures As IEnumerable(Of GLFigureBase))
+  overload: SearchAThing.OpenGL.Core.GLModel.AddFigure*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  nameWithType.vb: GLModel.AddFigure(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.AddFigure(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: AddFigure(IEnumerable(Of GLFigureBase))
+- uid: SearchAThing.OpenGL.Core.GLModel.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  id: AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: AddFigure(GLFigureBase)
+  nameWithType: GLModel.AddFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AddFigure
+    path: src/core/render/GLModel.cs
+    startLine: 603
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Adds given figure to the vertex manager.
+  example: []
+  syntax:
+    content: public void AddFigure(GLFigureBase figure)
+    parameters:
+    - id: figure
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+      description: Gl figure to add.
+    content.vb: Public Sub AddFigure(figure As GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.AddFigure*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+- uid: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  id: RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: RemoveFigure(params GLFigureBase[])
+  nameWithType: GLModel.RemoveFigure(params GLFigureBase[])
+  fullName: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(params SearchAThing.OpenGL.Core.GLFigureBase[])
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RemoveFigure
+    path: src/core/render/GLModel.cs
+    startLine: 611
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Remove given figures from the vertex manager.
+  example: []
+  syntax:
+    content: public int RemoveFigure(params GLFigureBase[] figures)
+    parameters:
+    - id: figures
+      type: SearchAThing.OpenGL.Core.GLFigureBase[]
+      description: Gl figures to remove.
+    return:
+      type: System.Int32
+      description: Count of figures effectively removed.
+    content.vb: Public Function RemoveFigure(ParamArray figures As GLFigureBase()) As Integer
+  overload: SearchAThing.OpenGL.Core.GLModel.RemoveFigure*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+    commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  nameWithType.vb: GLModel.RemoveFigure(ParamArray GLFigureBase())
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(ParamArray SearchAThing.OpenGL.Core.GLFigureBase())
+  name.vb: RemoveFigure(ParamArray GLFigureBase())
+- uid: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  id: RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: RemoveFigure(IEnumerable<GLFigureBase>)
+  nameWithType: GLModel.RemoveFigure(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RemoveFigure
+    path: src/core/render/GLModel.cs
+    startLine: 619
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Remove given figures from the vertex manager.
+  example: []
+  syntax:
+    content: public int RemoveFigure(IEnumerable<GLFigureBase> figures)
+    parameters:
+    - id: figures
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+      description: Gl figures to remove.
+    return:
+      type: System.Int32
+      description: Count of figures effectively removed.
+    content.vb: Public Function RemoveFigure(figures As IEnumerable(Of GLFigureBase)) As Integer
+  overload: SearchAThing.OpenGL.Core.GLModel.RemoveFigure*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  nameWithType.vb: GLModel.RemoveFigure(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: RemoveFigure(IEnumerable(Of GLFigureBase))
+- uid: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  id: RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: RemoveFigure(GLFigureBase)
+  nameWithType: GLModel.RemoveFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLModel.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RemoveFigure
+    path: src/core/render/GLModel.cs
+    startLine: 627
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Remove given figure from the vertex manager.
+  example: []
+  syntax:
+    content: public bool RemoveFigure(GLFigureBase figure)
+    parameters:
+    - id: figure
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+      description: Gl figure to remove.
+    return:
+      type: System.Boolean
+      description: True if figure effectively removed.
+    content.vb: Public Function RemoveFigure(figure As GLFigureBase) As Boolean
+  overload: SearchAThing.OpenGL.Core.GLModel.RemoveFigure*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+- uid: SearchAThing.OpenGL.Core.GLModel.Vertexes
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.Vertexes
+  id: Vertexes
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: Vertexes
+  nameWithType: GLModel.Vertexes
+  fullName: SearchAThing.OpenGL.Core.GLModel.Vertexes
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Vertexes
+    path: src/core/render/GLModel.cs
+    startLine: 632
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enumerates gl vertexes [object].
+  example: []
+  syntax:
+    content: public IEnumerable<GLVertex> Vertexes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertex}
+    content.vb: Public ReadOnly Property Vertexes As IEnumerable(Of GLVertex)
+  overload: SearchAThing.OpenGL.Core.GLModel.Vertexes*
+- uid: SearchAThing.OpenGL.Core.GLModel.InvalidateModel
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.InvalidateModel
+  id: InvalidateModel
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: InvalidateModel()
+  nameWithType: GLModel.InvalidateModel()
+  fullName: SearchAThing.OpenGL.Core.GLModel.InvalidateModel()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: InvalidateModel
+    path: src/core/render/GLModel.cs
+    startLine: 654
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Invalidate the gl model.<br />        
+
+    This cause <xref href="SearchAThing.OpenGL.Core.GLModel.BuildModel" data-throw-if-not-resolved="false"></xref> to be invoked at next render.
+  example: []
+  syntax:
+    content: public void InvalidateModel()
+    content.vb: Public Sub InvalidateModel()
+  overload: SearchAThing.OpenGL.Core.GLModel.InvalidateModel*
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+    commentId: P:SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+- uid: SearchAThing.OpenGL.Core.GLModel.BuildModel
+  commentId: F:SearchAThing.OpenGL.Core.GLModel.BuildModel
+  id: BuildModel
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: BuildModel
+  nameWithType: GLModel.BuildModel
+  fullName: SearchAThing.OpenGL.Core.GLModel.BuildModel
+  type: Field
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BuildModel
+    path: src/core/render/GLModel.cs
+    startLine: 693
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Build model action that will executed each time the model requires a full rebuild because invalidated.<br />
+
+    Arguments (<xref href="SearchAThing.OpenGL.Core.GLControl" data-throw-if-not-resolved="false"></xref>, bool isInitial).
+  example: []
+  syntax:
+    content: public GLBuildModelDelegate? BuildModel
+    return:
+      type: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+    content.vb: Public BuildModel As GLBuildModelDelegate
+- uid: SearchAThing.OpenGL.Core.GLModel.ToString
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.ToString
+  id: ToString
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GLModel.ToString()
+  fullName: SearchAThing.OpenGL.Core.GLModel.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToString
+    path: src/core/render/GLModel.cs
+    startLine: 695
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  example: []
+  syntax:
+    content: public override string? ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: SearchAThing.OpenGL.Core.GLModel.ToString*
+- uid: SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd(System.String)
+  id: PrimitivesFromSimpleCmd(System.String)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: PrimitivesFromSimpleCmd(string)
+  nameWithType: GLModel.PrimitivesFromSimpleCmd(string)
+  fullName: SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PrimitivesFromSimpleCmd
+    path: src/core/render/GLModel.cs
+    startLine: 710
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Load figure primitives from simple cmd ( newlines supported ).<br />
+
+    <xref href="SearchAThing.OpenGL.Core.GLPointFigure.SimpleCmd" data-throw-if-not-resolved="false"></xref>
+
+    <xref href="SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd" data-throw-if-not-resolved="false"></xref>
+
+    <xref href="SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public IEnumerable<GLPrimitiveBase> PrimitivesFromSimpleCmd(string simpleCmd)
+    parameters:
+    - id: simpleCmd
+      type: System.String
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase}
+    content.vb: Public Function PrimitivesFromSimpleCmd(simpleCmd As String) As IEnumerable(Of GLPrimitiveBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd*
+  nameWithType.vb: GLModel.PrimitivesFromSimpleCmd(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd(String)
+  name.vb: PrimitivesFromSimpleCmd(String)
+- uid: SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd(System.String)
+  id: FiguresFromSimpleCmd(System.String)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: FiguresFromSimpleCmd(string)
+  nameWithType: GLModel.FiguresFromSimpleCmd(string)
+  fullName: SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FiguresFromSimpleCmd
+    path: src/core/render/GLModel.cs
+    startLine: 751
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Load primitives from given simgple cmd and group them by primitive type creating figures ( newlines supported ).<br />
+
+    <xref href="SearchAThing.OpenGL.Core.GLPointFigure.SimpleCmd" data-throw-if-not-resolved="false"></xref>
+
+    <xref href="SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd" data-throw-if-not-resolved="false"></xref>
+
+    <xref href="SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public IEnumerable<GLFigureBase> FiguresFromSimpleCmd(string simpleCmd)
+    parameters:
+    - id: simpleCmd
+      type: System.String
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+    content.vb: Public Function FiguresFromSimpleCmd(simpleCmd As String) As IEnumerable(Of GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd*
+  nameWithType.vb: GLModel.FiguresFromSimpleCmd(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd(String)
+  name.vb: FiguresFromSimpleCmd(String)
+- uid: SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase})
+  id: ToggleSelectPrimitives(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase})
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: ToggleSelectPrimitives(IEnumerable<GLPrimitiveBase>)
+  nameWithType: GLModel.ToggleSelectPrimitives(IEnumerable<GLPrimitiveBase>)
+  fullName: SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLPrimitiveBase>)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToggleSelectPrimitives
+    path: src/core/render/GLModel.cs
+    startLine: 781
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Select/Deselect given primitives.
+  example: []
+  syntax:
+    content: public void ToggleSelectPrimitives(IEnumerable<GLPrimitiveBase> primitives)
+    parameters:
+    - id: primitives
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase}
+      description: Primitives for which toggle selection.
+    content.vb: Public Sub ToggleSelectPrimitives(primitives As IEnumerable(Of GLPrimitiveBase))
+  overload: SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives*
+  nameWithType.vb: GLModel.ToggleSelectPrimitives(IEnumerable(Of GLPrimitiveBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLPrimitiveBase))
+  name.vb: ToggleSelectPrimitives(IEnumerable(Of GLPrimitiveBase))
+- uid: SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  id: ToggleSelectFigures(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: ToggleSelectFigures(IEnumerable<GLFigureBase>)
+  nameWithType: GLModel.ToggleSelectFigures(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ToggleSelectFigures
+    path: src/core/render/GLModel.cs
+    startLine: 804
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Select/Deselect given figures.
+  example: []
+  syntax:
+    content: public void ToggleSelectFigures(IEnumerable<GLFigureBase> figures)
+    parameters:
+    - id: figures
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+      description: Figures for which toggle selection.
+    content.vb: Public Sub ToggleSelectFigures(figures As IEnumerable(Of GLFigureBase))
+  overload: SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures*
+  nameWithType.vb: GLModel.ToggleSelectFigures(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: ToggleSelectFigures(IEnumerable(Of GLFigureBase))
+- uid: SearchAThing.OpenGL.Core.GLModel.ClearSelection(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.ClearSelection(System.Boolean)
+  id: ClearSelection(System.Boolean)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: ClearSelection(bool)
+  nameWithType: GLModel.ClearSelection(bool)
+  fullName: SearchAThing.OpenGL.Core.GLModel.ClearSelection(bool)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ClearSelection
+    path: src/core/render/GLModel.cs
+    startLine: 822
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Clear current selection ( of figures, primitives ) and cancel select command.
+  example: []
+  syntax:
+    content: public void ClearSelection(bool resetToViewMode = true)
+    parameters:
+    - id: resetToViewMode
+      type: System.Boolean
+      description: If true (Default) cursor back to <xref href="SearchAThing.OpenGL.Core.CursorMode.View" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub ClearSelection(resetToViewMode As Boolean = True)
+  overload: SearchAThing.OpenGL.Core.GLModel.ClearSelection*
+  nameWithType.vb: GLModel.ClearSelection(Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.ClearSelection(Boolean)
+  name.vb: ClearSelection(Boolean)
+- uid: SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd
+  id: GetSelectionSimpleCmd
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: GetSelectionSimpleCmd()
+  nameWithType: GLModel.GetSelectionSimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GetSelectionSimpleCmd
+    path: src/core/render/GLModel.cs
+    startLine: 848
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Retrieve <xref href="SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)" data-throw-if-not-resolved="false"></xref> representation of selected primitives and figure primitives.
+  example: []
+  syntax:
+    content: public string GetSelectionSimpleCmd()
+    return:
+      type: System.String
+    content.vb: Public Function GetSelectionSimpleCmd() As String
+  overload: SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd*
+- uid: SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd(System.String)
+  id: PasteSimpleCmd(System.String)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: PasteSimpleCmd(string)
+  nameWithType: GLModel.PasteSimpleCmd(string)
+  fullName: SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PasteSimpleCmd
+    path: src/core/render/GLModel.cs
+    startLine: 867
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Add to the model figures coming from given <xref href="SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)" data-throw-if-not-resolved="false"></xref>.<br />
+
+    Generated figures are primitives coming from the cmd grouped by primitive type.
+  example: []
+  syntax:
+    content: public IEnumerable<IGLFigure> PasteSimpleCmd(string simpleCmd)
+    parameters:
+    - id: simpleCmd
+      type: System.String
+      description: Simple cmd representation.
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.IGLFigure}
+      description: Figures added to the model.
+    content.vb: Public Function PasteSimpleCmd(simpleCmd As String) As IEnumerable(Of IGLFigure)
+  overload: SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd*
+  nameWithType.vb: GLModel.PasteSimpleCmd(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd(String)
+  name.vb: PasteSimpleCmd(String)
+- uid: SearchAThing.OpenGL.Core.GLModel.DeleteSelected
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.DeleteSelected
+  id: DeleteSelected
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: DeleteSelected()
+  nameWithType: GLModel.DeleteSelected()
+  fullName: SearchAThing.OpenGL.Core.GLModel.DeleteSelected()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DeleteSelected
+    path: src/core/render/GLModel.cs
+    startLine: 879
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Delete selected primitives/figures.
+  example: []
+  syntax:
+    content: public void DeleteSelected()
+    content.vb: Public Sub DeleteSelected()
+  overload: SearchAThing.OpenGL.Core.GLModel.DeleteSelected*
+- uid: SearchAThing.OpenGL.Core.GLModel.Serialize
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.Serialize
+  id: Serialize
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: Serialize()
+  nameWithType: GLModel.Serialize()
+  fullName: SearchAThing.OpenGL.Core.GLModel.Serialize()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.Serialization.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Serialize
+    path: src/core/render/GLModel.Serialization.cs
+    startLine: 8
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Json serialized representation of this model.
+  example: []
+  syntax:
+    content: public string Serialize()
+    return:
+      type: System.String
+    content.vb: Public Function Serialize() As String
+  overload: SearchAThing.OpenGL.Core.GLModel.Serialize*
+- uid: SearchAThing.OpenGL.Core.GLModel.SerializeToFile(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.SerializeToFile(System.String)
+  id: SerializeToFile(System.String)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: SerializeToFile(string)
+  nameWithType: GLModel.SerializeToFile(string)
+  fullName: SearchAThing.OpenGL.Core.GLModel.SerializeToFile(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.Serialization.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SerializeToFile
+    path: src/core/render/GLModel.Serialization.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Save json serialized representation of this model to given pathfilename.
+  example: []
+  syntax:
+    content: public void SerializeToFile(string pathfilename)
+    parameters:
+    - id: pathfilename
+      type: System.String
+    content.vb: Public Sub SerializeToFile(pathfilename As String)
+  overload: SearchAThing.OpenGL.Core.GLModel.SerializeToFile*
+  nameWithType.vb: GLModel.SerializeToFile(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.SerializeToFile(String)
+  name.vb: SerializeToFile(String)
+- uid: SearchAThing.OpenGL.Core.GLModel.DeserializeFigures(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.DeserializeFigures(System.String)
+  id: DeserializeFigures(System.String)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: DeserializeFigures(string)
+  nameWithType: GLModel.DeserializeFigures(string)
+  fullName: SearchAThing.OpenGL.Core.GLModel.DeserializeFigures(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.Serialization.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DeserializeFigures
+    path: src/core/render/GLModel.Serialization.cs
+    startLine: 18
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Deserialize given gl model retrieving gl figures.
+  example: []
+  syntax:
+    content: public IEnumerable<GLFigureBase> DeserializeFigures(string json)
+    parameters:
+    - id: json
+      type: System.String
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+    content.vb: Public Function DeserializeFigures(json As String) As IEnumerable(Of GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.DeserializeFigures*
+  nameWithType.vb: GLModel.DeserializeFigures(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.DeserializeFigures(String)
+  name.vb: DeserializeFigures(String)
+- uid: SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile(System.String)
+  id: DeserializeFiguresFromFile(System.String)
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: DeserializeFiguresFromFile(string)
+  nameWithType: GLModel.DeserializeFiguresFromFile(string)
+  fullName: SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLModel.Serialization.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DeserializeFiguresFromFile
+    path: src/core/render/GLModel.Serialization.cs
+    startLine: 37
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Deserialize gl figures from given serialized gl model pathfilename.
+  example: []
+  syntax:
+    content: public IEnumerable<GLFigureBase> DeserializeFiguresFromFile(string pathfilename)
+    parameters:
+    - id: pathfilename
+      type: System.String
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+    content.vb: Public Function DeserializeFiguresFromFile(pathfilename As String) As IEnumerable(Of GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile*
+  nameWithType.vb: GLModel.DeserializeFiguresFromFile(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile(String)
+  name.vb: DeserializeFiguresFromFile(String)
+- uid: SearchAThing.OpenGL.Core.GLModel.SerializerSettings
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.SerializerSettings
+  id: SerializerSettings
+  parent: SearchAThing.OpenGL.Core.GLModel
+  langs:
+  - csharp
+  - vb
+  name: SerializerSettings
+  nameWithType: GLModel.SerializerSettings
+  fullName: SearchAThing.OpenGL.Core.GLModel.SerializerSettings
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLModel.Serialization.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SerializerSettings
+    path: src/core/render/GLModel.Serialization.cs
+    startLine: 43
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Default settings for json serialization of model.
+  example: []
+  syntax:
+    content: public static JsonSerializerSettings SerializerSettings { get; }
+    parameters: []
+    return:
+      type: Newtonsoft.Json.JsonSerializerSettings
+    content.vb: Public Shared ReadOnly Property SerializerSettings As JsonSerializerSettings
+  overload: SearchAThing.OpenGL.Core.GLModel.SerializerSettings*
+references:
+- uid: SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_GLVertexManager
+  name: GLVertexManager
+  nameWithType: GLModel.GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.GLFigureBase
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureBase
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase
+  nameWithType: GLFigureBase
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase
+- uid: SearchAThing.OpenGL.Core.GLPointLight
+  commentId: T:SearchAThing.OpenGL.Core.GLPointLight
+  href: SearchAThing.OpenGL.Core.GLPointLight.html
+  name: GLPointLight
+  nameWithType: GLPointLight
+  fullName: SearchAThing.OpenGL.Core.GLPointLight
+- uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  name: AddCustomVertexManager(GLVertexManager)
+  nameWithType: GLModel.AddCustomVertexManager(GLVertexManager)
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+    name: AddCustomVertexManager
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager
+    name: GLVertexManager
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+    name: AddCustomVertexManager
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager
+    name: GLVertexManager
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SearchAThing.OpenGL.Core.IGLContextObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLContextObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLContextObject.html
+  name: IGLContextObject
+  nameWithType: IGLContextObject
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.SearchAThing.OpenGL.Core.Ext.LoadTexture(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_
+  name: LoadTexture(GLModel, string)
+  nameWithType: Ext.LoadTexture(GLModel, string)
+  fullName: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel, string)
+  nameWithType.vb: Ext.LoadTexture(GLModel, String)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel, String)
+  name.vb: LoadTexture(GLModel, String)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+    name: LoadTexture
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+    name: LoadTexture
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLText)
+  commentId: M:SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+  parent: SearchAThing.OpenGL.Core.Toolkit
+  definition: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+  href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeTextFigure_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_GLText_
+  name: MakeTextFigure(GLModel, GLText)
+  nameWithType: Toolkit.MakeTextFigure(GLModel, GLText)
+  fullName: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel, SearchAThing.OpenGL.Core.GLText)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+    name: MakeTextFigure
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeTextFigure_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_GLText_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLText
+    name: GLText
+    href: SearchAThing.OpenGL.Core.GLText.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+    name: MakeTextFigure
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeTextFigure_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_GLText_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLText
+    name: GLText
+    href: SearchAThing.OpenGL.Core.GLText.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_
+  name: LoadTexture(GLModel, string)
+  nameWithType: Ext.LoadTexture(GLModel, string)
+  fullName: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel, string)
+  nameWithType.vb: Ext.LoadTexture(GLModel, String)
+  fullName.vb: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel, String)
+  name.vb: LoadTexture(GLModel, String)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+    name: LoadTexture
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)
+    name: LoadTexture
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+  commentId: M:SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+  href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeTextFigure_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_GLText_
+  name: MakeTextFigure(GLModel, GLText)
+  nameWithType: Toolkit.MakeTextFigure(GLModel, GLText)
+  fullName: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel, SearchAThing.OpenGL.Core.GLText)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+    name: MakeTextFigure
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeTextFigure_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_GLText_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLText
+    name: GLText
+    href: SearchAThing.OpenGL.Core.GLText.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Toolkit.MakeTextFigure(SearchAThing.OpenGL.Core.GLModel,SearchAThing.OpenGL.Core.GLText)
+    name: MakeTextFigure
+    href: SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_MakeTextFigure_SearchAThing_OpenGL_Core_GLModel_SearchAThing_OpenGL_Core_GLText_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLModel
+    name: GLModel
+    href: SearchAThing.OpenGL.Core.GLModel.html
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLText
+    name: GLText
+    href: SearchAThing.OpenGL.Core.GLText.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Toolkit
+  commentId: T:SearchAThing.OpenGL.Core.Toolkit
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Toolkit.html
+  name: Toolkit
+  nameWithType: Toolkit
+  fullName: SearchAThing.OpenGL.Core.Toolkit
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  commentId: T:System.ComponentModel.PropertyChangedEventHandler
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OnPropertyChanged_System_String_
+  name: OnPropertyChanged
+  nameWithType: GLModel.OnPropertyChanged
+  fullName: SearchAThing.OpenGL.Core.GLModel.OnPropertyChanged
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Core.GLModel.GLContext*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.GLContext
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_GLContext
+  name: GLContext
+  nameWithType: GLModel.GLContext
+  fullName: SearchAThing.OpenGL.Core.GLModel.GLContext
+- uid: SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  commentId: P:SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  parent: SearchAThing.OpenGL.Core.IGLContextObject
+  href: SearchAThing.OpenGL.Core.IGLContextObject.html#SearchAThing_OpenGL_Core_IGLContextObject_GLContext
+  name: GLContext
+  nameWithType: IGLContextObject.GLContext
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+- uid: SearchAThing.OpenGL.Core.GLContext
+  commentId: T:SearchAThing.OpenGL.Core.GLContext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLContext.html
+  name: GLContext
+  nameWithType: GLContext
+  fullName: SearchAThing.OpenGL.Core.GLContext
+- uid: SearchAThing.OpenGL.Core.GLControl.Invalidate(SearchAThing.OpenGL.Core.InvalidateEnum)
+  commentId: M:SearchAThing.OpenGL.Core.GLControl.Invalidate(SearchAThing.OpenGL.Core.InvalidateEnum)
+  href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_
+  name: Invalidate(InvalidateEnum)
+  nameWithType: GLControl.Invalidate(InvalidateEnum)
+  fullName: SearchAThing.OpenGL.Core.GLControl.Invalidate(SearchAThing.OpenGL.Core.InvalidateEnum)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLControl.Invalidate(SearchAThing.OpenGL.Core.InvalidateEnum)
+    name: Invalidate
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.InvalidateEnum
+    name: InvalidateEnum
+    href: SearchAThing.OpenGL.Core.InvalidateEnum.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLControl.Invalidate(SearchAThing.OpenGL.Core.InvalidateEnum)
+    name: Invalidate
+    href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.InvalidateEnum
+    name: InvalidateEnum
+    href: SearchAThing.OpenGL.Core.InvalidateEnum.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.ModelViewInvalidated
+  commentId: T:SearchAThing.OpenGL.Core.ModelViewInvalidated
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.ModelViewInvalidated.html
+  name: ModelViewInvalidated
+  nameWithType: ModelViewInvalidated
+  fullName: SearchAThing.OpenGL.Core.ModelViewInvalidated
+- uid: SearchAThing.OpenGL.Core.GLModel.Figures*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.Figures
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_Figures
+  name: Figures
+  nameWithType: GLModel.Figures
+  fullName: SearchAThing.OpenGL.Core.GLModel.Figures
+- uid: System.Collections.ObjectModel.ReadOnlyObservableCollection{SearchAThing.OpenGL.Core.GLFigureBase}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyObservableCollection{SearchAThing.OpenGL.Core.GLFigureBase}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  name: ReadOnlyObservableCollection<GLFigureBase>
+  nameWithType: ReadOnlyObservableCollection<GLFigureBase>
+  fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection<SearchAThing.OpenGL.Core.GLFigureBase>
+  nameWithType.vb: ReadOnlyObservableCollection(Of GLFigureBase)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyObservableCollection(Of SearchAThing.OpenGL.Core.GLFigureBase)
+  name.vb: ReadOnlyObservableCollection(Of GLFigureBase)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  name: ReadOnlyObservableCollection<T>
+  nameWithType: ReadOnlyObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection<T>
+  nameWithType.vb: ReadOnlyObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyObservableCollection(Of T)
+  name.vb: ReadOnlyObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: SearchAThing.OpenGL.Core.GLModel.SelectedFigures*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.SelectedFigures
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SelectedFigures
+  name: SelectedFigures
+  nameWithType: GLModel.SelectedFigures
+  fullName: SearchAThing.OpenGL.Core.GLModel.SelectedFigures
+- uid: SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SelectedPrimitives
+  name: SelectedPrimitives
+  nameWithType: GLModel.SelectedPrimitives
+  fullName: SearchAThing.OpenGL.Core.GLModel.SelectedPrimitives
+- uid: System.Collections.ObjectModel.ReadOnlyObservableCollection{SearchAThing.OpenGL.Core.GLPrimitiveBase}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyObservableCollection{SearchAThing.OpenGL.Core.GLPrimitiveBase}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  name: ReadOnlyObservableCollection<GLPrimitiveBase>
+  nameWithType: ReadOnlyObservableCollection<GLPrimitiveBase>
+  fullName: System.Collections.ObjectModel.ReadOnlyObservableCollection<SearchAThing.OpenGL.Core.GLPrimitiveBase>
+  nameWithType.vb: ReadOnlyObservableCollection(Of GLPrimitiveBase)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyObservableCollection(Of SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  name.vb: ReadOnlyObservableCollection(Of GLPrimitiveBase)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyObservableCollection`1
+    name: ReadOnlyObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.NotificationDelegate
+  commentId: T:SearchAThing.OpenGL.Core.NotificationDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.NotificationDelegate.html
+  name: NotificationDelegate
+  nameWithType: NotificationDelegate
+  fullName: SearchAThing.OpenGL.Core.NotificationDelegate
+- uid: SearchAThing.OpenGL.Core.GLModel.SendNotification*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.SendNotification
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SendNotification_System_String_System_String_SearchAThing_OpenGL_Core_GLNotificationType_
+  name: SendNotification
+  nameWithType: GLModel.SendNotification
+  fullName: SearchAThing.OpenGL.Core.GLModel.SendNotification
+- uid: SearchAThing.OpenGL.Core.GLNotificationType
+  commentId: T:SearchAThing.OpenGL.Core.GLNotificationType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLNotificationType.html
+  name: GLNotificationType
+  nameWithType: GLNotificationType
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType
+- uid: SearchAThing.OpenGL.Core.GLModel.GLVertexManager*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_GLVertexManager
+  name: GLVertexManager
+  nameWithType: GLModel.GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLModel.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.GLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  name: GLVertexManager
+  nameWithType: GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__
+  name: OverrideLightStrengths(float?, float?, float?)
+  nameWithType: GLModel.OverrideLightStrengths(float?, float?, float?)
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(float?, float?, float?)
+  nameWithType.vb: GLModel.OverrideLightStrengths(Single?, Single?, Single?)
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(Single?, Single?, Single?)
+  name.vb: OverrideLightStrengths(Single?, Single?, Single?)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+    name: OverrideLightStrengths
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths(System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})
+    name: OverrideLightStrengths
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideAmbient
+  name: OverrideAmbient
+  nameWithType: GLModel.OverrideAmbient
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideAmbient*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideAmbient
+  name: OverrideAmbient
+  nameWithType: GLModel.OverrideAmbient
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideAmbient
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideAmbientEnabled
+  name: OverrideAmbientEnabled
+  nameWithType: GLModel.OverrideAmbientEnabled
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideAmbientEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideDiffuse
+  name: OverrideDiffuse
+  nameWithType: GLModel.OverrideDiffuse
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideDiffuse
+  name: OverrideDiffuse
+  nameWithType: GLModel.OverrideDiffuse
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuse
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideDiffuseEnabled
+  name: OverrideDiffuseEnabled
+  nameWithType: GLModel.OverrideDiffuseEnabled
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideDiffuseEnabled
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideSpecular
+  name: OverrideSpecular
+  nameWithType: GLModel.OverrideSpecular
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideSpecular*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideSpecular
+  name: OverrideSpecular
+  nameWithType: GLModel.OverrideSpecular
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideSpecular
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideSpecularEnabled
+  name: OverrideSpecularEnabled
+  nameWithType: GLModel.OverrideSpecularEnabled
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideSpecularEnabled
+- uid: SearchAThing.OpenGL.Core.GLModel.BuildModel
+  commentId: F:SearchAThing.OpenGL.Core.GLModel.BuildModel
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_BuildModel
+  name: BuildModel
+  nameWithType: GLModel.BuildModel
+  fullName: SearchAThing.OpenGL.Core.GLModel.BuildModel
+- uid: SearchAThing.OpenGL.Core.GLModel.IsInvalidated*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_IsInvalidated
+  name: IsInvalidated
+  nameWithType: GLModel.IsInvalidated
+  fullName: SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+- uid: SearchAThing.OpenGL.Core.GLControl.ShowNormals
+  commentId: P:SearchAThing.OpenGL.Core.GLControl.ShowNormals
+  href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShowNormals
+  name: ShowNormals
+  nameWithType: GLControl.ShowNormals
+  fullName: SearchAThing.OpenGL.Core.GLControl.ShowNormals
+- uid: SearchAThing.OpenGL.Core.GLModel.NormalFactor*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.NormalFactor
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_NormalFactor
+  name: NormalFactor
+  nameWithType: GLModel.NormalFactor
+  fullName: SearchAThing.OpenGL.Core.GLModel.NormalFactor
+- uid: SearchAThing.OpenGL.Core.GLModel.CursorMode
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.CursorMode
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_CursorMode
+  name: CursorMode
+  nameWithType: GLModel.CursorMode
+  fullName: SearchAThing.OpenGL.Core.GLModel.CursorMode
+- uid: SearchAThing.OpenGL.Core.GLModel.CursorMode*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.CursorMode
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_CursorMode
+  name: CursorMode
+  nameWithType: GLModel.CursorMode
+  fullName: SearchAThing.OpenGL.Core.GLModel.CursorMode
+- uid: SearchAThing.OpenGL.Core.CursorMode
+  commentId: T:SearchAThing.OpenGL.Core.CursorMode
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.CursorMode.html
+  name: CursorMode
+  nameWithType: CursorMode
+  fullName: SearchAThing.OpenGL.Core.CursorMode
+- uid: SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_CustomVertexManagers
+  name: CustomVertexManagers
+  nameWithType: GLModel.CustomVertexManagers
+  fullName: SearchAThing.OpenGL.Core.GLModel.CustomVertexManagers
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertexManager}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertexManager}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLVertexManager>
+  nameWithType: IEnumerable<GLVertexManager>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLVertexManager>
+  nameWithType.vb: IEnumerable(Of GLVertexManager)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLVertexManager)
+  name.vb: IEnumerable(Of GLVertexManager)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager
+    name: GLVertexManager
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager
+    name: GLVertexManager
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  name: AddCustomVertexManager
+  nameWithType: GLModel.AddCustomVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager
+- uid: SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_RemoveCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  name: RemoveCustomVertexManager
+  nameWithType: GLModel.RemoveCustomVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLModel.RemoveCustomVertexManager
+- uid: SearchAThing.OpenGL.Core.GLModel.PointLights*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.PointLights
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_PointLights
+  name: PointLights
+  nameWithType: GLModel.PointLights
+  fullName: SearchAThing.OpenGL.Core.GLModel.PointLights
+- uid: SearchAThing.Ext.ObservableCollection2{SearchAThing.OpenGL.Core.GLPointLight}
+  commentId: T:SearchAThing.Ext.ObservableCollection2{SearchAThing.OpenGL.Core.GLPointLight}
+  parent: SearchAThing.Ext
+  definition: SearchAThing.Ext.ObservableCollection2`1
+  href: SearchAThing.OpenGL.Core.GLPointLight.html
+  name: ObservableCollection2<GLPointLight>
+  nameWithType: ObservableCollection2<GLPointLight>
+  fullName: SearchAThing.Ext.ObservableCollection2<SearchAThing.OpenGL.Core.GLPointLight>
+  nameWithType.vb: ObservableCollection2(Of GLPointLight)
+  fullName.vb: SearchAThing.Ext.ObservableCollection2(Of SearchAThing.OpenGL.Core.GLPointLight)
+  name.vb: ObservableCollection2(Of GLPointLight)
+  spec.csharp:
+  - uid: SearchAThing.Ext.ObservableCollection2`1
+    name: ObservableCollection2
+    isExternal: true
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLPointLight
+    name: GLPointLight
+    href: SearchAThing.OpenGL.Core.GLPointLight.html
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.Ext.ObservableCollection2`1
+    name: ObservableCollection2
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLPointLight
+    name: GLPointLight
+    href: SearchAThing.OpenGL.Core.GLPointLight.html
+  - name: )
+- uid: SearchAThing.Ext.ObservableCollection2`1
+  commentId: T:SearchAThing.Ext.ObservableCollection2`1
+  isExternal: true
+  name: ObservableCollection2<T>
+  nameWithType: ObservableCollection2<T>
+  fullName: SearchAThing.Ext.ObservableCollection2<T>
+  nameWithType.vb: ObservableCollection2(Of T)
+  fullName.vb: SearchAThing.Ext.ObservableCollection2(Of T)
+  name.vb: ObservableCollection2(Of T)
+  spec.csharp:
+  - uid: SearchAThing.Ext.ObservableCollection2`1
+    name: ObservableCollection2
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: SearchAThing.Ext.ObservableCollection2`1
+    name: ObservableCollection2
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.Ext
+  commentId: N:SearchAThing.Ext
+  isExternal: true
+  name: SearchAThing.Ext
+  nameWithType: SearchAThing.Ext
+  fullName: SearchAThing.Ext
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    isExternal: true
+  - name: .
+  - uid: SearchAThing.Ext
+    name: Ext
+    isExternal: true
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    isExternal: true
+  - name: .
+  - uid: SearchAThing.Ext
+    name: Ext
+    isExternal: true
+- uid: SearchAThing.OpenGL.Core.GLModel.LBBox*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.LBBox
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_LBBox
+  name: LBBox
+  nameWithType: GLModel.LBBox
+  fullName: SearchAThing.OpenGL.Core.GLModel.LBBox
+- uid: SearchAThing.OpenGL.Core.BBox
+  commentId: T:SearchAThing.OpenGL.Core.BBox
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.BBox.html
+  name: BBox
+  nameWithType: BBox
+  fullName: SearchAThing.OpenGL.Core.BBox
+- uid: SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_RecomputeLBBox
+  name: RecomputeLBBox
+  nameWithType: GLModel.RecomputeLBBox
+  fullName: SearchAThing.OpenGL.Core.GLModel.RecomputeLBBox
+- uid: SearchAThing.OpenGL.Core.GLModel.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.#ctor
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel__ctor_SearchAThing_OpenGL_Core_GLContext_
+  name: GLModel
+  nameWithType: GLModel.GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel.GLModel
+  nameWithType.vb: GLModel.New
+  fullName.vb: SearchAThing.OpenGL.Core.GLModel.New
+  name.vb: New
+- uid: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_OverrideLightStrengths_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__
+  name: OverrideLightStrengths
+  nameWithType: GLModel.OverrideLightStrengths
+  fullName: SearchAThing.OpenGL.Core.GLModel.OverrideLightStrengths
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.ResetLight*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.ResetLight
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ResetLight
+  name: ResetLight
+  nameWithType: GLModel.ResetLight
+  fullName: SearchAThing.OpenGL.Core.GLModel.ResetLight
+- uid: SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SetupLightAttenuation_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__
+  name: SetupLightAttenuation
+  nameWithType: GLModel.SetupLightAttenuation
+  fullName: SearchAThing.OpenGL.Core.GLModel.SetupLightAttenuation
+- uid: SearchAThing.OpenGL.Core.GLModel.Clear*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.Clear
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_Clear_System_Boolean_
+  name: Clear
+  nameWithType: GLModel.Clear
+  fullName: SearchAThing.OpenGL.Core.GLModel.Clear
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  name: AddFigure(IEnumerable<GLFigureBase>)
+  nameWithType: GLVertexManager.AddFigure(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  nameWithType.vb: GLVertexManager.AddFigure(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: AddFigure(IEnumerable(Of GLFigureBase))
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.AddFigure*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.AddFigure
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  name: AddFigure
+  nameWithType: GLModel.AddFigure
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddFigure
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLFigureBase>
+  nameWithType: IEnumerable<GLFigureBase>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>
+  nameWithType.vb: IEnumerable(Of GLFigureBase)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase)
+  name.vb: IEnumerable(Of GLFigureBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: AddFigure(GLFigureBase)
+  nameWithType: GLVertexManager.AddFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase___
+  name: RemoveFigure(params GLFigureBase[])
+  nameWithType: GLVertexManager.RemoveFigure(params GLFigureBase[])
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(params SearchAThing.OpenGL.Core.GLFigureBase[])
+  nameWithType.vb: GLVertexManager.RemoveFigure(ParamArray GLFigureBase())
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(ParamArray SearchAThing.OpenGL.Core.GLFigureBase())
+  name.vb: RemoveFigure(ParamArray GLFigureBase())
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: (
+  - name: )
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.RemoveFigure*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.RemoveFigure
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase___
+  name: RemoveFigure
+  nameWithType: GLModel.RemoveFigure
+  fullName: SearchAThing.OpenGL.Core.GLModel.RemoveFigure
+- uid: SearchAThing.OpenGL.Core.GLFigureBase[]
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase[]
+  nameWithType: GLFigureBase[]
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase[]
+  nameWithType.vb: GLFigureBase()
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureBase()
+  name.vb: GLFigureBase()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  name: RemoveFigure(IEnumerable<GLFigureBase>)
+  nameWithType: GLVertexManager.RemoveFigure(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  nameWithType.vb: GLVertexManager.RemoveFigure(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: RemoveFigure(IEnumerable(Of GLFigureBase))
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: RemoveFigure(GLFigureBase)
+  nameWithType: GLVertexManager.RemoveFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.Vertexes*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.Vertexes
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_Vertexes
+  name: Vertexes
+  nameWithType: GLModel.Vertexes
+  fullName: SearchAThing.OpenGL.Core.GLModel.Vertexes
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertex}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLVertex}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLVertex>
+  nameWithType: IEnumerable<GLVertex>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLVertex>
+  nameWithType.vb: IEnumerable(Of GLVertex)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLVertex)
+  name.vb: IEnumerable(Of GLVertex)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLVertex
+    name: GLVertex
+    href: SearchAThing.OpenGL.Core.GLVertex.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLVertex
+    name: GLVertex
+    href: SearchAThing.OpenGL.Core.GLVertex.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+  commentId: P:SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_IsInvalidated
+  name: IsInvalidated
+  nameWithType: GLModel.IsInvalidated
+  fullName: SearchAThing.OpenGL.Core.GLModel.IsInvalidated
+- uid: SearchAThing.OpenGL.Core.GLModel.InvalidateModel*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.InvalidateModel
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_InvalidateModel
+  name: InvalidateModel
+  nameWithType: GLModel.InvalidateModel
+  fullName: SearchAThing.OpenGL.Core.GLModel.InvalidateModel
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  commentId: T:SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLBuildModelDelegate.html
+  name: GLBuildModelDelegate
+  nameWithType: GLBuildModelDelegate
+  fullName: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.ToString*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.ToString
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ToString
+  name: ToString
+  nameWithType: GLModel.ToString
+  fullName: SearchAThing.OpenGL.Core.GLModel.ToString
+- uid: SearchAThing.OpenGL.Core.GLPointFigure.SimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.GLPointFigure.SimpleCmd
+  href: SearchAThing.OpenGL.Core.GLPointFigure.html#SearchAThing_OpenGL_Core_GLPointFigure_SimpleCmd
+  name: SimpleCmd()
+  nameWithType: GLPointFigure.SimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.GLPointFigure.SimpleCmd()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLPointFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLPointFigure.html#SearchAThing_OpenGL_Core_GLPointFigure_SimpleCmd
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLPointFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLPointFigure.html#SearchAThing_OpenGL_Core_GLPointFigure_SimpleCmd
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+  href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_SimpleCmd
+  name: SimpleCmd()
+  nameWithType: GLLineFigure.SimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_SimpleCmd
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLLineFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLLineFigure.html#SearchAThing_OpenGL_Core_GLLineFigure_SimpleCmd
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd
+  commentId: M:SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd
+  parent: SearchAThing.OpenGL.Core.GLTriangleFigure
+  href: SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_SimpleCmd
+  name: SimpleCmd()
+  nameWithType: GLTriangleFigure.SimpleCmd()
+  fullName: SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_SimpleCmd
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_SimpleCmd
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_PrimitivesFromSimpleCmd_System_String_
+  name: PrimitivesFromSimpleCmd
+  nameWithType: GLModel.PrimitivesFromSimpleCmd
+  fullName: SearchAThing.OpenGL.Core.GLModel.PrimitivesFromSimpleCmd
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPrimitiveBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLPrimitiveBase>
+  nameWithType: IEnumerable<GLPrimitiveBase>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLPrimitiveBase>
+  nameWithType.vb: IEnumerable(Of GLPrimitiveBase)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLPrimitiveBase)
+  name.vb: IEnumerable(Of GLPrimitiveBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLPrimitiveBase
+    name: GLPrimitiveBase
+    href: SearchAThing.OpenGL.Core.GLPrimitiveBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLTriangleFigure
+  commentId: T:SearchAThing.OpenGL.Core.GLTriangleFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTriangleFigure.html
+  name: GLTriangleFigure
+  nameWithType: GLTriangleFigure
+  fullName: SearchAThing.OpenGL.Core.GLTriangleFigure
+- uid: SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_FiguresFromSimpleCmd_System_String_
+  name: FiguresFromSimpleCmd
+  nameWithType: GLModel.FiguresFromSimpleCmd
+  fullName: SearchAThing.OpenGL.Core.GLModel.FiguresFromSimpleCmd
+- uid: SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ToggleSelectPrimitives_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLPrimitiveBase__
+  name: ToggleSelectPrimitives
+  nameWithType: GLModel.ToggleSelectPrimitives
+  fullName: SearchAThing.OpenGL.Core.GLModel.ToggleSelectPrimitives
+- uid: SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ToggleSelectFigures_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__
+  name: ToggleSelectFigures
+  nameWithType: GLModel.ToggleSelectFigures
+  fullName: SearchAThing.OpenGL.Core.GLModel.ToggleSelectFigures
+- uid: SearchAThing.OpenGL.Core.CursorMode.View
+  commentId: F:SearchAThing.OpenGL.Core.CursorMode.View
+  href: SearchAThing.OpenGL.Core.CursorMode.html#SearchAThing_OpenGL_Core_CursorMode_View
+  name: View
+  nameWithType: CursorMode.View
+  fullName: SearchAThing.OpenGL.Core.CursorMode.View
+- uid: SearchAThing.OpenGL.Core.GLModel.ClearSelection*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.ClearSelection
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ClearSelection_System_Boolean_
+  name: ClearSelection
+  nameWithType: GLModel.ClearSelection
+  fullName: SearchAThing.OpenGL.Core.GLModel.ClearSelection
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)
+  parent: SearchAThing.OpenGL.Core.IGLPrimitive
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_SimpleCmd_System_Boolean_
+  name: SimpleCmd(bool)
+  nameWithType: IGLPrimitive.SimpleCmd(bool)
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(bool)
+  nameWithType.vb: IGLPrimitive.SimpleCmd(Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(Boolean)
+  name.vb: SimpleCmd(Boolean)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_SimpleCmd_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLPrimitive.SimpleCmd(System.Boolean)
+    name: SimpleCmd
+    href: SearchAThing.OpenGL.Core.IGLPrimitive.html#SearchAThing_OpenGL_Core_IGLPrimitive_SimpleCmd_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_GetSelectionSimpleCmd
+  name: GetSelectionSimpleCmd
+  nameWithType: GLModel.GetSelectionSimpleCmd
+  fullName: SearchAThing.OpenGL.Core.GLModel.GetSelectionSimpleCmd
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive
+  commentId: T:SearchAThing.OpenGL.Core.IGLPrimitive
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html
+  name: IGLPrimitive
+  nameWithType: IGLPrimitive
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive
+- uid: SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_PasteSimpleCmd_System_String_
+  name: PasteSimpleCmd
+  nameWithType: GLModel.PasteSimpleCmd
+  fullName: SearchAThing.OpenGL.Core.GLModel.PasteSimpleCmd
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.IGLFigure}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.IGLFigure}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IGLFigure>
+  nameWithType: IEnumerable<IGLFigure>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.IGLFigure>
+  nameWithType.vb: IEnumerable(Of IGLFigure)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.IGLFigure)
+  name.vb: IEnumerable(Of IGLFigure)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.IGLFigure
+    name: IGLFigure
+    href: SearchAThing.OpenGL.Core.IGLFigure.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel.DeleteSelected*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.DeleteSelected
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_DeleteSelected
+  name: DeleteSelected
+  nameWithType: GLModel.DeleteSelected
+  fullName: SearchAThing.OpenGL.Core.GLModel.DeleteSelected
+- uid: SearchAThing.OpenGL.Core.GLModel.Serialize*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.Serialize
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_Serialize
+  name: Serialize
+  nameWithType: GLModel.Serialize
+  fullName: SearchAThing.OpenGL.Core.GLModel.Serialize
+- uid: SearchAThing.OpenGL.Core.GLModel.SerializeToFile*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.SerializeToFile
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SerializeToFile_System_String_
+  name: SerializeToFile
+  nameWithType: GLModel.SerializeToFile
+  fullName: SearchAThing.OpenGL.Core.GLModel.SerializeToFile
+- uid: SearchAThing.OpenGL.Core.GLModel.DeserializeFigures*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.DeserializeFigures
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_DeserializeFigures_System_String_
+  name: DeserializeFigures
+  nameWithType: GLModel.DeserializeFigures
+  fullName: SearchAThing.OpenGL.Core.GLModel.DeserializeFigures
+- uid: SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_DeserializeFiguresFromFile_System_String_
+  name: DeserializeFiguresFromFile
+  nameWithType: GLModel.DeserializeFiguresFromFile
+  fullName: SearchAThing.OpenGL.Core.GLModel.DeserializeFiguresFromFile
+- uid: SearchAThing.OpenGL.Core.GLModel.SerializerSettings*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLModel.SerializerSettings
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SerializerSettings
+  name: SerializerSettings
+  nameWithType: GLModel.SerializerSettings
+  fullName: SearchAThing.OpenGL.Core.GLModel.SerializerSettings
+- uid: Newtonsoft.Json.JsonSerializerSettings
+  commentId: T:Newtonsoft.Json.JsonSerializerSettings
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonSerializerSettings
+  nameWithType: JsonSerializerSettings
+  fullName: Newtonsoft.Json.JsonSerializerSettings
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: true
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+  spec.csharp:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+  spec.vb:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true

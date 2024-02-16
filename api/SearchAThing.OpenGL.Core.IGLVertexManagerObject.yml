@@ -1,0 +1,314 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  id: IGLVertexManagerObject
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  langs:
+  - csharp
+  - vb
+  name: IGLVertexManagerObject
+  nameWithType: IGLVertexManagerObject
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  type: Interface
+  source:
+    remote:
+      path: src/core/vertex/IGLVertexManagerObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: IGLVertexManagerObject
+    path: src/core/vertex/IGLVertexManagerObject.cs
+    startLine: 8
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Interface for GL objects such as <xref href="SearchAThing.OpenGL.Core.IGLFigure" data-throw-if-not-resolved="false"></xref>, <xref href="SearchAThing.OpenGL.Core.IGLPrimitive" data-throw-if-not-resolved="false"></xref> and <xref href="SearchAThing.OpenGL.Core.IGLVertex" data-throw-if-not-resolved="false"></xref>.<br />
+
+    The purpose is to ensure that each object implementing this interface
+
+    allow parent traversal till root vertex manager object which purpouse
+
+    is to manage the collection of vertexes.
+  example: []
+  syntax:
+    content: public interface IGLVertexManagerObject
+    content.vb: Public Interface IGLVertexManagerObject
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  - SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  id: ParentVertexManager
+  parent: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  langs:
+  - csharp
+  - vb
+  name: ParentVertexManager
+  nameWithType: IGLVertexManagerObject.ParentVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  type: Property
+  source:
+    remote:
+      path: src/core/vertex/IGLVertexManagerObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ParentVertexManager
+    path: src/core/vertex/IGLVertexManagerObject.cs
+    startLine: 17
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Vertex manager which this object is registered to.<br />
+
+    Before the object is added to the <xref href="SearchAThing.OpenGL.Core.GLModel" data-throw-if-not-resolved="false"></xref>,
+
+    therefore to the <xref href="SearchAThing.OpenGL.Core.GLVertexManager" data-throw-if-not-resolved="false"></xref>,
+
+    or after the object is removed from, this pointer is null.
+  example: []
+  syntax:
+    content: GLVertexManager? ParentVertexManager { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLVertexManager
+    content.vb: ReadOnly Property ParentVertexManager As GLVertexManager
+  overload: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager*
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  commentId: M:SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  id: Copy
+  parent: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  langs:
+  - csharp
+  - vb
+  name: Copy()
+  nameWithType: IGLVertexManagerObject.Copy()
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy()
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/IGLVertexManagerObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Copy
+    path: src/core/vertex/IGLVertexManagerObject.cs
+    startLine: 24
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Create a copy of this gl vertex manager object copying all relevant
+
+    data except the <xref href="SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager" data-throw-if-not-resolved="false"></xref> that will default to null for copies
+
+    object until added to a vertex manager.
+  example: []
+  syntax:
+    content: IGLVertexManagerObject Copy()
+    return:
+      type: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    content.vb: Function Copy() As IGLVertexManagerObject
+  overload: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy*
+references:
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure
+- uid: SearchAThing.OpenGL.Core.IGLPrimitive
+  commentId: T:SearchAThing.OpenGL.Core.IGLPrimitive
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLPrimitive.html
+  name: IGLPrimitive
+  nameWithType: IGLPrimitive
+  fullName: SearchAThing.OpenGL.Core.IGLPrimitive
+- uid: SearchAThing.OpenGL.Core.IGLVertex
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertex
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertex.html
+  name: IGLVertex
+  nameWithType: IGLVertex
+  fullName: SearchAThing.OpenGL.Core.IGLVertex
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.EnsureDetached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.SearchAThing.OpenGL.Core.Ext.IsAttached
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: EnsureDetached(IGLVertexManagerObject)
+  nameWithType: Ext.EnsureDetached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: EnsureDetached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  name: IsAttached(IGLVertexManagerObject)
+  nameWithType: Ext.IsAttached(IGLVertexManagerObject)
+  fullName: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)
+    name: IsAttached
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+    name: IGLVertexManagerObject
+    href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel
+  commentId: T:SearchAThing.OpenGL.Core.GLModel
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLModel.html
+  name: GLModel
+  nameWithType: GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel
+- uid: SearchAThing.OpenGL.Core.GLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  name: GLVertexManager
+  nameWithType: GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_ParentVertexManager
+  name: ParentVertexManager
+  nameWithType: IGLVertexManagerObject.ParentVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+  parent: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_ParentVertexManager
+  name: ParentVertexManager
+  nameWithType: IGLVertexManagerObject.ParentVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.ParentVertexManager
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy
+  name: Copy
+  nameWithType: IGLVertexManagerObject.Copy
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject.Copy
+- uid: SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManagerObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManagerObject.html
+  name: IGLVertexManagerObject
+  nameWithType: IGLVertexManagerObject
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManagerObject

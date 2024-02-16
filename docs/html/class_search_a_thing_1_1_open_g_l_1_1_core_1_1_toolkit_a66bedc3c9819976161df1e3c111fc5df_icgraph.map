@@ -1,6 +1,0 @@
-<map id="RightHandXFromYZ" name="RightHandXFromYZ">
-<area shape="rect" id="node1" title="Detect basex from given normalized basey and basez vectors using right&#45;hand rule." alt="" coords="300,31,449,56"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a919ce31c5a533586e7e9bf7ae1a6c28e" title="Make a world matrix that represent the one used by the camera [world]. &#160;Basey = Normalized(cameraUp) ..." alt="" coords="169,31,252,56"/>
-<area shape="rect" id="node3" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#add9448a2792ecb184dbf6bea89b1dbcc" title="Rotate the camera [view] a given rotation center [local]." alt="" coords="5,5,121,31"/>
-<area shape="rect" id="node4" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#aa21b12f58d8b6c6406a51954d67433be" title="Generate a gl figure that represent the camera frustum object." alt="" coords="8,55,119,80"/>
-</map>

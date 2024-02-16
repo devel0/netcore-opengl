@@ -1,0 +1,886 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IGLFigure | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IGLFigure | netcore-opengl ">
+      
+      <meta name="description" content="This is the direct child of a vertex manager. A figure contains primitives and primitive contains vertexes. The figure is useful to group together primitives and handle properties such as Visibile, Order, ObjectMatrix, ScreenCoord mode.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_Core_IGLFigure.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.Core.IGLFigure%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.Core.IGLFigure">
+
+
+
+  <h1 id="SearchAThing_OpenGL_Core_IGLFigure" data-uid="SearchAThing.OpenGL.Core.IGLFigure" class="text-break">
+Interface IGLFigure  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This is the direct child of a vertex manager.<br>
+A figure contains primitives and primitive contains vertexes.
+The figure is useful to group together primitives and handle
+properties such as Visibile, Order, ObjectMatrix, ScreenCoord mode.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonObject(MemberSerialization.OptIn)]
+public interface IGLFigure : IGLVertexManagerObject, INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_ParentVertexManager">IGLVertexManagerObject.ParentVertexManager</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManagerObject.html#SearchAThing_OpenGL_Core_IGLVertexManagerObject_Copy">IGLVertexManagerObject.Copy()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_">Ext.BuildVertexPosDict(IGLFigure, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_">Ext.Center(IGLFigure)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_">Ext.Move&lt;T&gt;(T, in Vector3, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_">Ext.Move&lt;T&gt;(T, float, float, float, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__">Ext.SetAlpha&lt;T&gt;(T, float?)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__">Ext.SetColor&lt;T&gt;(T, in Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__">Ext.SetColor&lt;T&gt;(T, in Vector4)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_">Ext.SetOrder&lt;T&gt;(T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_">Ext.SetScreenMode&lt;T&gt;(T, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_">Ext.Vertexes(IGLFigure)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_">Ext.EnsureDetached(IGLVertexManagerObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_">Ext.IsAttached(IGLVertexManagerObject)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="SearchAThing_OpenGL_Core_IGLFigure_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>All properties are INotifyPropertyChanged managed and allow to be ui reactive.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Alpha_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Alpha*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Alpha" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Alpha">
+  Alpha
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allow to change alpha (0:full transparent, 1:full opaque) of the figure without the need to change primitives color. If null figure primitives alpha will not overriden. (Default: null)<br>
+Changing this property emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+float? Alpha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_EvalInShadowMap_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.EvalInShadowMap*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_EvalInShadowMap" data-uid="SearchAThing.OpenGL.Core.IGLFigure.EvalInShadowMap">
+  EvalInShadowMap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if this figure has to be considered for building of the shadow map.<br>
+While is true by default in <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>, is overriden to false by <a class="xref" href="SearchAThing.OpenGL.Core.GLTextCharFigure.html">GLTextCharFigure</a> specialization of <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html">GLTriangleFigure</a>
+in order to avoid dropping shadows of the triangles used by the font textures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool EvalInShadowMap { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_ExcludeFromShadeWithEdge_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ExcludeFromShadeWithEdge*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_ExcludeFromShadeWithEdge" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ExcludeFromShadeWithEdge">
+  ExcludeFromShadeWithEdge
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true figure will rendered w/out &quot;shade with edge&quot; shader regardless
+the option is active in the gl control. (Default: false)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ExcludeFromShadeWithEdge { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_ExpandBBox_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ExpandBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_ExpandBBox" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ExpandBBox">
+  ExpandBBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if this figure is considered in bbox expansion (Default: true).<br>
+Useful to avoid cs figure or non related to content of interest to decrease view and zoom experience.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ExpandBBox { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Highlight_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Highlight*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Highlight" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Highlight">
+  Highlight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable highlight of a figure with a color ( Default: Yellow ).<br><br>
+Changing this property emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Highlight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Indexes_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Indexes*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Indexes" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Indexes">
+  Indexes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of vertex manager vertex indexes used by this figure.<br>
+Used in the final render phase where GL.DrawElements take place to
+mapped as opengl ElementArrayBuffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;uint&gt; Indexes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_LBBox_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.LBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_LBBox" data-uid="SearchAThing.OpenGL.Core.IGLFigure.LBBox">
+  LBBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>(cached) Bounding box of this figure vertexes [local].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BBox LBBox { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_OBBox_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.OBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_OBBox" data-uid="SearchAThing.OpenGL.Core.IGLFigure.OBBox">
+  OBBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bounding bbox of this figure vertexes [object].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BBox OBBox { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_ObjectMatrix_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_ObjectMatrix" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix">
+  ObjectMatrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Object coord [object] to local space coord [local] transformation matrix.<br>
+Changing this property emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+Matrix4x4 ObjectMatrix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_IGLFigure_ObjectMatrix_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>While each control has separate model/view/projection matrixes, the figure object matrix
+is common to all controls that uses the same model containing this figure instance.</p>
+</div>
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Order_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Order*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Order" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Order">
+  Order
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Figure order appareance ( Default: 0 ).<br>
+Higher order figure appears front to lower order figures.<br>
+From the opengl point of view figures with higher order ( front ) are drawn firstly then lower order ( back ).<br>
+Changing this property emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+int Order { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_PrimitiveType_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_PrimitiveType" data-uid="SearchAThing.OpenGL.Core.IGLFigure.PrimitiveType">
+  PrimitiveType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enum that describe which type underlying to the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GLPrimitiveType PrimitiveType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveType.html">GLPrimitiveType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Primitives_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Primitives*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Primitives" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Primitives">
+  Primitives
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A figure can contains primitives that in turn can contains vertexes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReadOnlyObservableCollection&lt;GLPrimitiveBase&gt; Primitives { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlyobservablecollection-1">ReadOnlyObservableCollection</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveBase.html">GLPrimitiveBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode" data-uid="SearchAThing.OpenGL.Core.IGLFigure.ScreenCoordMode">
+  ScreenCoordMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable handling of figure primitive vertexes as screen coord.<br>
+At vertex manager level these vertexes coord not distinguish from non screen coord vertexes types, these
+can share the same memory region, but when render cycles through figures at each a uniform variable inform
+the shader to transform within screen scoped projection/model matrixes designed to make a unscaled orthografic projection
+with a model translated by (-sw/2, -sh/2) where sw,sh = screen width,height.<br>
+Changing this property emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+bool ScreenCoordMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Selected_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Selected*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Selected" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Selected">
+  Selected
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if figure is actually selected.<br>
+It true the figure is listed in model selected figures <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_SelectedFigures">SelectedFigures</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Selected { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Tag_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Tag*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Tag" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Tag">
+  Tag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>User object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? Tag { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Visible_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Visible*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Visible" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Visible">
+  Visible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Figure visibility.<br>
+Changing this property emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+bool Visible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_IGLFigure_Visible_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Changing visbility of a figure affects all controls that uses the same model containing this figure instance.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_Invalidate_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Invalidate*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_Invalidate" data-uid="SearchAThing.OpenGL.Core.IGLFigure.Invalidate">
+  Invalidate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoke <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a>.<br>
+Used for internal purpose by the <a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveBase.html">GLPrimitiveBase</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Invalidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_RemovePrimitive_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.RemovePrimitive(SearchAThing.OpenGL.Core.GLPrimitiveBase)">
+  RemovePrimitive(GLPrimitiveBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove primitive from this figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemovePrimitive(GLPrimitiveBase primitive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>primitive</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveBase.html">GLPrimitiveBase</a></dt>
+    <dd><p>Gl primitive to remove.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd_" data-uid="SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_SimpleCmd" data-uid="SearchAThing.OpenGL.Core.IGLFigure.SimpleCmd">
+  SimpleCmd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve e simple cmd representation of this figure.<br>
+Its a textual representation of figure information useful to regen in a separate tool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SimpleCmd()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated" data-uid="SearchAThing.OpenGL.Core.IGLFigure.FigureInvalidated">
+  FigureInvalidated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This event is managed internally by the <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html">GLModel</a> and signal that a model figure changed some of its vertex propertties.<br>
+When a model figure emit this event the model emit ViewInvalidated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event FigureInvalidatedDelegate? FigureInvalidated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.FigureInvalidatedDelegate.html">FigureInvalidatedDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L19" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

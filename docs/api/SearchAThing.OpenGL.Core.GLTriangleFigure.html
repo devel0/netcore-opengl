@@ -1,0 +1,803 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GLTriangleFigure | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GLTriangleFigure | netcore-opengl ">
+      
+      <meta name="description" content="Specialization of typed figure within the  primitive.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_Core_GLTriangleFigure.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.Core.GLTriangleFigure%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure">
+
+
+
+  <h1 id="SearchAThing_OpenGL_Core_GLTriangleFigure" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure" class="text-break">
+Class GLTriangleFigure  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Specialization of typed figure within the <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a> primitive.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GLTriangleFigure : GLFigureTypeBase&lt;GLTriangle&gt;, IGLTriangleFigure, IGLFigure, IGLVertexManagerObject, INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></div>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html">GLFigureTypeBase</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>&gt;</div>
+      <div><span class="xref">GLTriangleFigure</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLTriangleFigure.html">IGLTriangleFigure</a></div>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html">IGLFigure</a></div>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManagerObject.html">IGLVertexManagerObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.GLTextCharFigure.html">GLTextCharFigure</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Primitives">GLFigureTypeBase&lt;GLTriangle&gt;.Primitives</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_PrimitivesOBC">GLFigureTypeBase&lt;GLTriangle&gt;.PrimitivesOBC</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_RemovePrimitive_SearchAThing_OpenGL_Core_GLPrimitiveBase_">GLFigureTypeBase&lt;GLTriangle&gt;.RemovePrimitive(GLPrimitiveBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Add__0_">GLFigureTypeBase&lt;GLTriangle&gt;.Add(GLTriangle)</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureTypeBase-1.html#SearchAThing_OpenGL_Core_GLFigureTypeBase_1_Remove__0_">GLFigureTypeBase&lt;GLTriangle&gt;.Remove(GLTriangle)</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_PropertyChanged">GLFigureBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_OnPropertyChanged_System_String_">GLFigureBase.OnPropertyChanged(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ParentVertexManager">GLFigureBase.ParentVertexManager</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_CopyBase">GLFigureBase.CopyBase()</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Copy">GLFigureBase.Copy()</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_FigureInvalidated">GLFigureBase.FigureInvalidated</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ExcludeFromShadeWithEdge">GLFigureBase.ExcludeFromShadeWithEdge</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ObjectMatrixIsIdentity">GLFigureBase.ObjectMatrixIsIdentity</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ObjectMatrix">GLFigureBase.ObjectMatrix</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Visible">GLFigureBase.Visible</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Order">GLFigureBase.Order</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Highlight">GLFigureBase.Highlight</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Alpha">GLFigureBase.Alpha</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Selected">GLFigureBase.Selected</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ScreenCoordMode">GLFigureBase.ScreenCoordMode</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Tag">GLFigureBase.Tag</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ExpandBBox">GLFigureBase.ExpandBBox</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Indexes">GLFigureBase.Indexes</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_LBBox">GLFigureBase.LBBox</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_OBBox">GLFigureBase.OBBox</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_EvalInShadowMap">GLFigureBase.EvalInShadowMap</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Invalidate">GLFigureBase.Invalidate()</a>
+    </div>
+    <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_ToString">GLFigureBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_">Ext.Move&lt;T&gt;(T, in Vector3, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_">Ext.Move&lt;T&gt;(T, float, float, float, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__">Ext.SetAlpha&lt;T&gt;(T, float?)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__">Ext.SetColor&lt;T&gt;(T, in Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__">Ext.SetColor&lt;T&gt;(T, in Vector4)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_">Ext.SetOrder&lt;T&gt;(T, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_">Ext.SetScreenMode&lt;T&gt;(T, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_">Ext.BuildVertexPosDict(IGLFigure, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_">Ext.Center(IGLFigure)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_">Ext.Vertexes(IGLFigure)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_">Ext.EnsureDetached(IGLVertexManagerObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_">Ext.IsAttached(IGLVertexManagerObject)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure__ctor_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.#ctor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure__ctor_SearchAThing_OpenGL_Core_GLTriangle___" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.#ctor(SearchAThing.OpenGL.Core.GLTriangle[])">
+  GLTriangleFigure(params GLTriangle[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a triangle typed figure with the given set of <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLTriangleFigure(params GLTriangle[] triangles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triangles</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure__ctor_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.#ctor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure__ctor_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLTriangle__" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.#ctor(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle})">
+  GLTriangleFigure(IEnumerable&lt;GLTriangle&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a triangle typed figure with the given set of <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLTriangleFigure(IEnumerable&lt;GLTriangle&gt; triangles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triangles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_DefaultComputeNormal" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.DefaultComputeNormal">
+  DefaultComputeNormal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default triangle compute normal function.<br>
+<a class="xref" href="SearchAThing.OpenGL.Core.Toolkit.html#SearchAThing_OpenGL_Core_Toolkit_DefaultTriangleNormal_SearchAThing_OpenGL_Core_IGLTriangle_">DefaultTriangleNormal(IGLTriangle)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly ComputeTriangleNormalDelegate DefaultComputeNormal</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate.html">ComputeTriangleNormalDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_ComputeNormal_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.ComputeNormal*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_ComputeNormal" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.ComputeNormal">
+  ComputeNormal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComputeTriangleNormalDelegate ComputeNormal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate.html">ComputeTriangleNormalDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_ComputeNormalMean_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.ComputeNormalMean*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_ComputeNormalMean" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.ComputeNormalMean">
+  ComputeNormalMean
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ComputeNormalMean { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_PrimitiveType_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.PrimitiveType*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_PrimitiveType" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.PrimitiveType">
+  PrimitiveType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enum that describe which type underlying to the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override GLPrimitiveType PrimitiveType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveType.html">GLPrimitiveType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_Texture2D_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.Texture2D*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_Texture2D" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.Texture2D">
+  Texture2D
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional texture 2d object associated to this triangle.<br>
+TextureST vertex coords of triangles vertexes will be used to map the texture.<br>
+Changing this property emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_FigureInvalidated">FigureInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public GLTexture2D? Texture2D { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLTexture2D.html">GLTexture2D</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_Triangles_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.Triangles*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_Triangles" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.Triangles">
+  Triangles
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumeration of triangle primitives of this figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GLTriangle&gt; Triangles { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_CopySpecialized_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.CopySpecialized*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_CopySpecialized_SearchAThing_OpenGL_Core_GLFigureBase_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.CopySpecialized(SearchAThing.OpenGL.Core.GLFigureBase)">
+  CopySpecialized(GLFigureBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void CopySpecialized(GLFigureBase other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_MakeInstance_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.MakeInstance*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_MakeInstance" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.MakeInstance">
+  MakeInstance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an instance of derived type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override GLFigureBase MakeInstance()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html#SearchAThing_OpenGL_Core_GLFigureBase_Copy">Copy</a>()</div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_Mirror_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.Mirror*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_Mirror_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.Mirror(System.Numerics.Matrix4x4@)">
+  Mirror(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a mirrored figure against given xy plane.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override GLFigureBase? Mirror(in Matrix4x4 xyPlane)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>XY mirror plane.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd><p>Mirrored figure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_RebuildNormal_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_RebuildNormal_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.RebuildNormal(System.Boolean)">
+  RebuildNormal(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Execute <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_ComputeNormal">ComputeNormal</a> function foreach triangle of this figure updating <a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html#SearchAThing_OpenGL_Core_GLVertex_Normal">Normal</a>.<br>
+Optionally mean these values if <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_ComputeNormalMean">ComputeNormalMean</a> was set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RebuildNormal(bool onlyMean = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>onlyMean</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, vertex normal will not recomputed, only mean on their values will be set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_SetupComputeNormal_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.SetupComputeNormal*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_SetupComputeNormal_System_Boolean_SearchAThing_OpenGL_Core_ComputeTriangleNormalDelegate_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.SetupComputeNormal(System.Boolean,SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate)">
+  SetupComputeNormal(bool, ComputeTriangleNormalDelegate?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the triangle compute normal function.<br>
+If no argument given a default per triangle normal compute will be done.<br><br>
+Changing this property imply <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_RebuildNormal_System_Boolean_">RebuildNormal(bool)</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupComputeNormal(bool mean = false, ComputeTriangleNormalDelegate? computeNormal = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mean</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true a mean of normals triangle vertexes grouped by position will be computed.</p>
+</dd>
+    <dt><code>computeNormal</code> <a class="xref" href="SearchAThing.OpenGL.Core.ComputeTriangleNormalDelegate.html">ComputeTriangleNormalDelegate</a></dt>
+    <dd><p>Allow to override default triangle normal function <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html#SearchAThing_OpenGL_Core_GLTriangleFigure_DefaultComputeNormal">DefaultComputeNormal</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_GLTriangleFigure_SimpleCmd_" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_GLTriangleFigure_SimpleCmd" data-uid="SearchAThing.OpenGL.Core.GLTriangleFigure.SimpleCmd">
+  SimpleCmd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve simple cmd for a list of triangles.<br>
+Coordinates of v1,v2,v3 are separated with comma so there are 9 float separated by comma.<br>
+Further triangles are appended by semi-colon separator.
+[t ]ax1,ay1,az1,ax2,ay2,az2,ax3,ay3,az3;bx1,by1,bz1,bx2,by2,bz2,bx3,by3,bz3;...</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string SimpleCmd()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLTriangleFigure.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

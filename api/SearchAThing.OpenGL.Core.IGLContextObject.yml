@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.IGLContextObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLContextObject
+  id: IGLContextObject
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  langs:
+  - csharp
+  - vb
+  name: IGLContextObject
+  nameWithType: IGLContextObject
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject
+  type: Interface
+  source:
+    remote:
+      path: src/core/render/IGLContextObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: IGLContextObject
+    path: src/core/render/IGLContextObject.cs
+    startLine: 8
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: General inteface for objects that carrier a reference to Gl context.
+  example: []
+  syntax:
+    content: public interface IGLContextObject
+    content.vb: Public Interface IGLContextObject
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.GLModel
+    commentId: T:SearchAThing.OpenGL.Core.GLModel
+  - linkId: SearchAThing.OpenGL.Core.GLPipeline
+    commentId: T:SearchAThing.OpenGL.Core.GLPipeline
+  - linkId: SearchAThing.OpenGL.Core.GLTexture2D
+    commentId: T:SearchAThing.OpenGL.Core.GLTexture2D
+- uid: SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  commentId: P:SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  id: GLContext
+  parent: SearchAThing.OpenGL.Core.IGLContextObject
+  langs:
+  - csharp
+  - vb
+  name: GLContext
+  nameWithType: IGLContextObject.GLContext
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  type: Property
+  source:
+    remote:
+      path: src/core/render/IGLContextObject.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLContext
+    path: src/core/render/IGLContextObject.cs
+    startLine: 11
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: GLContext GLContext { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLContext
+    content.vb: ReadOnly Property GLContext As GLContext
+  overload: SearchAThing.OpenGL.Core.IGLContextObject.GLContext*
+references:
+- uid: SearchAThing.OpenGL.Core.GLModel
+  commentId: T:SearchAThing.OpenGL.Core.GLModel
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLModel.html
+  name: GLModel
+  nameWithType: GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel
+- uid: SearchAThing.OpenGL.Core.GLPipeline
+  commentId: T:SearchAThing.OpenGL.Core.GLPipeline
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLPipeline.html
+  name: GLPipeline
+  nameWithType: GLPipeline
+  fullName: SearchAThing.OpenGL.Core.GLPipeline
+- uid: SearchAThing.OpenGL.Core.GLTexture2D
+  commentId: T:SearchAThing.OpenGL.Core.GLTexture2D
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLTexture2D.html
+  name: GLTexture2D
+  nameWithType: GLTexture2D
+  fullName: SearchAThing.OpenGL.Core.GLTexture2D
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.IGLContextObject.GLContext*
+  commentId: Overload:SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  href: SearchAThing.OpenGL.Core.IGLContextObject.html#SearchAThing_OpenGL_Core_IGLContextObject_GLContext
+  name: GLContext
+  nameWithType: IGLContextObject.GLContext
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+- uid: SearchAThing.OpenGL.Core.GLContext
+  commentId: T:SearchAThing.OpenGL.Core.GLContext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLContext.html
+  name: GLContext
+  nameWithType: GLContext
+  fullName: SearchAThing.OpenGL.Core.GLContext

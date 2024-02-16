@@ -1,0 +1,1735 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexManager
+  id: GLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLVertexManager.#ctor(System.Boolean)
+  - SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  - SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  - SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  - SearchAThing.OpenGL.Core.GLVertexManager.Clear
+  - SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox
+  - SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded
+  - SearchAThing.OpenGL.Core.GLVertexManager.FigureCount
+  - SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved
+  - SearchAThing.OpenGL.Core.GLVertexManager.Figures
+  - SearchAThing.OpenGL.Core.GLVertexManager.FiguresCleared
+  - SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray
+  - SearchAThing.OpenGL.Core.GLVertexManager.Invalidated
+  - SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+  - SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged(System.String)
+  - SearchAThing.OpenGL.Core.GLVertexManager.PropertyChanged
+  - SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox
+  - SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  - SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  - SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  - SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount
+  - SearchAThing.OpenGL.Core.GLVertexManager.VertexCount
+  langs:
+  - csharp
+  - vb
+  name: GLVertexManager
+  nameWithType: GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager
+  type: Class
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLVertexManager
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 2
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: 'public class GLVertexManager : IGLVertexManager, INotifyPropertyChanged'
+    content.vb: Public Class GLVertexManager Implements IGLVertexManager, INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.PropertyChanged
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.PropertyChanged
+  id: PropertyChanged
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: GLVertexManager.PropertyChanged
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.PropertyChanged
+  type: Event
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: PropertyChanged
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  example: []
+  syntax:
+    content: public event PropertyChangedEventHandler? PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged(System.String)
+  id: OnPropertyChanged(System.String)
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: OnPropertyChanged(string?)
+  nameWithType: GLVertexManager.OnPropertyChanged(string?)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged(string?)
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: OnPropertyChanged
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    invoke this method to forward propertchanged event notification.
+
+    note: not needed to specify propertyName set by compiler service to called property.
+  example: []
+  syntax:
+    content: protected void OnPropertyChanged(string? propertyName = null)
+    parameters:
+    - id: propertyName
+      type: System.String
+    content.vb: Protected Sub OnPropertyChanged(propertyName As String = Nothing)
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged*
+  nameWithType.vb: GLVertexManager.OnPropertyChanged(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.VertexCount
+  commentId: P:SearchAThing.OpenGL.Core.GLVertexManager.VertexCount
+  id: VertexCount
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: VertexCount
+  nameWithType: GLVertexManager.VertexCount
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.VertexCount
+  type: Property
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: VertexCount
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 28
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Actual size of <xref href="SearchAThing.OpenGL.Core.GLVertexStruct" data-throw-if-not-resolved="false"></xref> vertex list.
+  example: []
+  syntax:
+    content: public int VertexCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property VertexCount As Integer
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.VertexCount*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.VertexCount
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount
+  commentId: P:SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount
+  id: TriangleCount
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: TriangleCount
+  nameWithType: GLVertexManager.TriangleCount
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount
+  type: Property
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TriangleCount
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 48
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Actual count of gl triangles belonging to added figures.
+  example: []
+  syntax:
+    content: public int TriangleCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TriangleCount As Integer
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.TriangleCount
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.Invalidated
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.Invalidated
+  id: Invalidated
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: Invalidated
+  nameWithType: GLVertexManager.Invalidated
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.Invalidated
+  type: Event
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Invalidated
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 76
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Event emitted when a vertex was added or removed or all vertexes cleared.<br />    
+
+    Its used by the <xref href="SearchAThing.OpenGL.Core.GLModel" data-throw-if-not-resolved="false"></xref> to track the model changes
+
+    and emit a <xref href="SearchAThing.OpenGL.Core.GLModel.ViewInvalidated" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public event VertexManagerInvalidatedDelegate? Invalidated
+    return:
+      type: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+    content.vb: Public Event Invalidated As VertexManagerInvalidatedDelegate
+  seealso:
+  - linkId: SearchAThing.OpenGL.Core.IGLVertexManager.Clear
+    commentId: M:SearchAThing.OpenGL.Core.IGLVertexManager.Clear
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.Invalidated
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.#ctor(System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: GLVertexManager(bool)
+  nameWithType: GLVertexManager.GLVertexManager(bool)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.GLVertexManager(bool)
+  type: Constructor
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 82
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a new gl vertex manager that can be added to the gl model through <xref href="SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public GLVertexManager(bool expandModelBBox = true)
+    parameters:
+    - id: expandModelBBox
+      type: System.Boolean
+      description: "If false adding vertexes to this vertex manager doesn't affects the gl model bbox. (Default: true)."
+    content.vb: Public Sub New(expandModelBBox As Boolean = True)
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.#ctor*
+  nameWithType.vb: GLVertexManager.New(Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.New(Boolean)
+  name.vb: New(Boolean)
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray
+  id: GetVboArray
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: GetVboArray()
+  nameWithType: GLVertexManager.GetVboArray()
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray()
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GetVboArray
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 89
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Used internally by the GLModel.RenderVertexManager
+
+    to render the scene.<br />    
+
+    Contains the list of vertex structs directly mapped to the gpu.<br />
+
+    This array will be built each time a vertex changes from the ToArray() of the list <xref href="SearchAThing.OpenGL.Core.GLVertexManager.Vertexes" data-throw-if-not-resolved="false"></xref>.
+
+    To avoid performance penalty in a scenario where you need to change the position of a figure
+
+    you can use <xref href="SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix" data-throw-if-not-resolved="false"></xref> that doesn't affects at all vertexes because is a figure
+
+    related information forwarded to the gl pipeline shader through <xref href="SearchAThing.OpenGL.Core.Constants.UNINAME_uObject" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public GLVertexStruct[] GetVboArray()
+    return:
+      type: SearchAThing.OpenGL.Core.GLVertexStruct[]
+    content.vb: Public Function GetVboArray() As GLVertexStruct()
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+  commentId: P:SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+  id: LBBox
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: LBBox
+  nameWithType: GLVertexManager.LBBox
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+  type: Property
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LBBox
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 100
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: BBox of registered figure vertexes [local].
+  example: []
+  syntax:
+    content: public BBox LBBox { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.BBox
+    content.vb: Public Property LBBox As BBox
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.LBBox*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.LBBox
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox
+  id: RecomputeLBBox
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: RecomputeLBBox()
+  nameWithType: GLVertexManager.RecomputeLBBox()
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox()
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RecomputeLBBox
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 121
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Recompute bbox [local] of all figure/primitive vertexes upading <xref href="SearchAThing.OpenGL.Core.GLVertexManager.LBBox" data-throw-if-not-resolved="false"></xref>.<br />
+
+    Used internally after figure/primitive deletion.
+
+    REVIEW: may improved
+  example: []
+  syntax:
+    content: public BBox RecomputeLBBox()
+    return:
+      type: SearchAThing.OpenGL.Core.BBox
+    content.vb: Public Function RecomputeLBBox() As BBox
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox*
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox
+  commentId: P:SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox
+  id: ExpandModelBBox
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: ExpandModelBBox
+  nameWithType: GLVertexManager.ExpandModelBBox
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox
+  type: Property
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ExpandModelBBox
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 151
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Flag to state if vertex added to this vertex manager imply expansion of the gl model (Default: true).<br />
+
+    More (custom) vertex manager can be registered into the gl model, may for temporary purpose and
+
+    setting this variable to false at the construct of these custom vertex manager allow to unaffect
+
+    the gl model bbox.<br />
+
+    Should be used to avoid the zoomfit to evaluate temporary vertex manager figures.<br /><xref href="SearchAThing.OpenGL.Core.GLVertexManager" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public bool ExpandModelBBox { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ExpandModelBBox As Boolean
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.ExpandModelBBox
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.Clear
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.Clear
+  id: Clear
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: GLVertexManager.Clear()
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.Clear()
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Clear
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 153
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Clear all vertexes and figures from the vertex manager, and emit
+
+    <xref href="SearchAThing.OpenGL.Core.IGLVertexManager.FiguresCleared" data-throw-if-not-resolved="false"></xref> and <xref href="SearchAThing.OpenGL.Core.IGLVertexManager.Invalidated" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.Clear*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.Clear
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded
+  id: FigureAdded
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: FigureAdded
+  nameWithType: GLVertexManager.FigureAdded
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded
+  type: Event
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FigureAdded
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 273
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Event emitted when a figure was added.
+  example: []
+  syntax:
+    content: public event FigureEvent? FigureAdded
+    return:
+      type: SearchAThing.OpenGL.Core.FigureEvent
+    content.vb: Public Event FigureAdded As FigureEvent
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.FigureAdded
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved
+  id: FigureRemoved
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: FigureRemoved
+  nameWithType: GLVertexManager.FigureRemoved
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved
+  type: Event
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FigureRemoved
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 275
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Event emitted when a figure was removed.
+  example: []
+  syntax:
+    content: public event FigureEvent? FigureRemoved
+    return:
+      type: SearchAThing.OpenGL.Core.FigureEvent
+    content.vb: Public Event FigureRemoved As FigureEvent
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.FigureRemoved
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.FiguresCleared
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.FiguresCleared
+  id: FiguresCleared
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: FiguresCleared
+  nameWithType: GLVertexManager.FiguresCleared
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.FiguresCleared
+  type: Event
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FiguresCleared
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 277
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Event emitted when all figures cleared.<br />
+
+    The list of figures removed is reported through the event argument of <xref href="SearchAThing.OpenGL.Core.FiguresEvent" data-throw-if-not-resolved="false"></xref> delegate.
+  example: []
+  syntax:
+    content: public event FiguresEvent? FiguresCleared
+    return:
+      type: SearchAThing.OpenGL.Core.FiguresEvent
+    content.vb: Public Event FiguresCleared As FiguresEvent
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.FiguresCleared
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.Figures
+  commentId: P:SearchAThing.OpenGL.Core.GLVertexManager.Figures
+  id: Figures
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: Figures
+  nameWithType: GLVertexManager.Figures
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.Figures
+  type: Property
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Figures
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 279
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Enumerates vertex manager registered figures.
+  example: []
+  syntax:
+    content: public IEnumerable<GLFigureBase> Figures { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+    content.vb: Public ReadOnly Property Figures As IEnumerable(Of GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.Figures*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.Figures
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.FigureCount
+  commentId: P:SearchAThing.OpenGL.Core.GLVertexManager.FigureCount
+  id: FigureCount
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: FigureCount
+  nameWithType: GLVertexManager.FigureCount
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.FigureCount
+  type: Property
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FigureCount
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 285
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Actual size of registered figures list.
+  example: []
+  syntax:
+    content: public int FigureCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FigureCount As Integer
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.FigureCount*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.FigureCount
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  id: AddFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: AddFigure(params GLFigureBase[])
+  nameWithType: GLVertexManager.AddFigure(params GLFigureBase[])
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(params SearchAThing.OpenGL.Core.GLFigureBase[])
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AddFigure
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 307
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Adds given figures to the vertex manager.<br />
+
+    All vertexes belonging to the figures primitives will be added.
+
+    Emits <xref href="SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public void AddFigure(params GLFigureBase[] figures)
+    parameters:
+    - id: figures
+      type: SearchAThing.OpenGL.Core.GLFigureBase[]
+      description: Figures to add.
+    content.vb: Public Sub AddFigure(ParamArray figures As GLFigureBase())
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure*
+  nameWithType.vb: GLVertexManager.AddFigure(ParamArray GLFigureBase())
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(ParamArray SearchAThing.OpenGL.Core.GLFigureBase())
+  name.vb: AddFigure(ParamArray GLFigureBase())
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  id: AddFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: AddFigure(IEnumerable<GLFigureBase>)
+  nameWithType: GLVertexManager.AddFigure(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AddFigure
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 315
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Adds given figures to the vertex manager.<br />
+
+    All vertexes belonging to the figures primitives will be added.
+
+    Emits <xref href="SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public void AddFigure(IEnumerable<GLFigureBase> figures)
+    parameters:
+    - id: figures
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+      description: Figures to add.
+    content.vb: Public Sub AddFigure(figures As IEnumerable(Of GLFigureBase))
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure*
+  nameWithType.vb: GLVertexManager.AddFigure(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: AddFigure(IEnumerable(Of GLFigureBase))
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  id: AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: AddFigure(GLFigureBase)
+  nameWithType: GLVertexManager.AddFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: AddFigure
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 320
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Adds given figure to the vertex manager.<br />
+
+    All vertexes belonging to the figure's primitives will be added.
+
+    Emits <xref href="SearchAThing.OpenGL.Core.IGLVertexManager.FigureAdded" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public void AddFigure(GLFigureBase figure)
+    parameters:
+    - id: figure
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+      description: Figure to add.
+    content.vb: Public Sub AddFigure(figure As GLFigureBase)
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  id: RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase[])
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveFigure(params GLFigureBase[])
+  nameWithType: GLVertexManager.RemoveFigure(params GLFigureBase[])
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(params SearchAThing.OpenGL.Core.GLFigureBase[])
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RemoveFigure
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 344
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Remove given figures from the vertex manager.<br />
+
+    All vertexes belonging to the figures primitives will be removed.
+
+    Emits <xref href="SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public int RemoveFigure(params GLFigureBase[] figures)
+    parameters:
+    - id: figures
+      type: SearchAThing.OpenGL.Core.GLFigureBase[]
+      description: Figures to remove.
+    return:
+      type: System.Int32
+      description: Count of figures effectively removed.
+    content.vb: Public Function RemoveFigure(ParamArray figures As GLFigureBase()) As Integer
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure*
+  nameWithType.vb: GLVertexManager.RemoveFigure(ParamArray GLFigureBase())
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(ParamArray SearchAThing.OpenGL.Core.GLFigureBase())
+  name.vb: RemoveFigure(ParamArray GLFigureBase())
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  id: RemoveFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveFigure(IEnumerable<GLFigureBase>)
+  nameWithType: GLVertexManager.RemoveFigure(IEnumerable<GLFigureBase>)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>)
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RemoveFigure
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 353
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Remove given figures from the vertex manager.<br />
+
+    All vertexes belonging to the figures primitives will be removed.
+
+    Emits <xref href="SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public int RemoveFigure(IEnumerable<GLFigureBase> figures)
+    parameters:
+    - id: figures
+      type: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+      description: Figures to remove.
+    return:
+      type: System.Int32
+      description: Count of figures effectively removed.
+    content.vb: Public Function RemoveFigure(figures As IEnumerable(Of GLFigureBase)) As Integer
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure*
+  nameWithType.vb: GLVertexManager.RemoveFigure(IEnumerable(Of GLFigureBase))
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase))
+  name.vb: RemoveFigure(IEnumerable(Of GLFigureBase))
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  id: RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.GLVertexManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveFigure(GLFigureBase)
+  nameWithType: GLVertexManager.RemoveFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  type: Method
+  source:
+    remote:
+      path: src/core/vertex/GLVertexManager.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RemoveFigure
+    path: src/core/vertex/GLVertexManager.cs
+    startLine: 373
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Remove given figure from the vertex manager.<br />
+
+    All vertexes belonging to the figures primitives will be removed.
+
+    Emits <xref href="SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: public bool RemoveFigure(GLFigureBase figure)
+    parameters:
+    - id: figure
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+      description: Figure to remove.
+    return:
+      type: System.Boolean
+      description: True if figure effectively removed.
+    content.vb: Public Function RemoveFigure(figure As GLFigureBase) As Boolean
+  overload: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.IGLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html
+  name: IGLVertexManager
+  nameWithType: IGLVertexManager
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  parent: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged
+  name: PropertyChanged
+  nameWithType: INotifyPropertyChanged.PropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  commentId: T:System.ComponentModel.PropertyChangedEventHandler
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_OnPropertyChanged_System_String_
+  name: OnPropertyChanged
+  nameWithType: GLVertexManager.OnPropertyChanged
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.OnPropertyChanged
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Core.GLVertexStruct
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexStruct
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexStruct.html
+  name: GLVertexStruct
+  nameWithType: GLVertexStruct
+  fullName: SearchAThing.OpenGL.Core.GLVertexStruct
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.VertexCount*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.VertexCount
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_VertexCount
+  name: VertexCount
+  nameWithType: GLVertexManager.VertexCount
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.VertexCount
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.VertexCount
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManager.VertexCount
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_VertexCount
+  name: VertexCount
+  nameWithType: IGLVertexManager.VertexCount
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.VertexCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_TriangleCount
+  name: TriangleCount
+  nameWithType: GLVertexManager.TriangleCount
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.TriangleCount
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.TriangleCount
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManager.TriangleCount
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_TriangleCount
+  name: TriangleCount
+  nameWithType: IGLVertexManager.TriangleCount
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.TriangleCount
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.Clear
+  commentId: M:SearchAThing.OpenGL.Core.IGLVertexManager.Clear
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_Clear
+  name: Clear()
+  nameWithType: IGLVertexManager.Clear()
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.Clear()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.Clear
+    name: Clear
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_Clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.Clear
+    name: Clear
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_Clear
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLModel
+  commentId: T:SearchAThing.OpenGL.Core.GLModel
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLModel.html
+  name: GLModel
+  nameWithType: GLModel
+  fullName: SearchAThing.OpenGL.Core.GLModel
+- uid: SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  commentId: E:SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ViewInvalidated
+  name: ViewInvalidated
+  nameWithType: GLModel.ViewInvalidated
+  fullName: SearchAThing.OpenGL.Core.GLModel.ViewInvalidated
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.Invalidated
+  commentId: E:SearchAThing.OpenGL.Core.IGLVertexManager.Invalidated
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_Invalidated
+  name: Invalidated
+  nameWithType: IGLVertexManager.Invalidated
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.Invalidated
+- uid: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  commentId: T:SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate.html
+  name: VertexManagerInvalidatedDelegate
+  nameWithType: VertexManagerInvalidatedDelegate
+  fullName: SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate
+- uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  commentId: M:SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  name: AddCustomVertexManager(GLVertexManager)
+  nameWithType: GLModel.AddCustomVertexManager(GLVertexManager)
+  fullName: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+    name: AddCustomVertexManager
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager
+    name: GLVertexManager
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLModel.AddCustomVertexManager(SearchAThing.OpenGL.Core.GLVertexManager)
+    name: AddCustomVertexManager
+    href: SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_AddCustomVertexManager_SearchAThing_OpenGL_Core_GLVertexManager_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLVertexManager
+    name: GLVertexManager
+    href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.#ctor
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager__ctor_System_Boolean_
+  name: GLVertexManager
+  nameWithType: GLVertexManager.GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.GLVertexManager
+  nameWithType.vb: GLVertexManager.New
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexManager.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.Vertexes
+  commentId: F:SearchAThing.OpenGL.Core.GLVertexManager.Vertexes
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_Vertexes
+  name: Vertexes
+  nameWithType: GLVertexManager.Vertexes
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.Vertexes
+- uid: SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+  commentId: P:SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+  parent: SearchAThing.OpenGL.Core.IGLFigure
+  href: SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ObjectMatrix
+  name: ObjectMatrix
+  nameWithType: IGLFigure.ObjectMatrix
+  fullName: SearchAThing.OpenGL.Core.IGLFigure.ObjectMatrix
+- uid: SearchAThing.OpenGL.Core.Constants.UNINAME_uObject
+  commentId: F:SearchAThing.OpenGL.Core.Constants.UNINAME_uObject
+  href: SearchAThing.OpenGL.Core.Constants.html#SearchAThing_OpenGL_Core_Constants_UNINAME_uObject
+  name: UNINAME_uObject
+  nameWithType: Constants.UNINAME_uObject
+  fullName: SearchAThing.OpenGL.Core.Constants.UNINAME_uObject
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_GetVboArray
+  name: GetVboArray
+  nameWithType: GLVertexManager.GetVboArray
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.GetVboArray
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray
+  commentId: M:SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_GetVboArray
+  name: GetVboArray()
+  nameWithType: IGLVertexManager.GetVboArray()
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray
+    name: GetVboArray
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_GetVboArray
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray
+    name: GetVboArray
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_GetVboArray
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLVertexStruct[]
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLVertexStruct.html
+  name: GLVertexStruct[]
+  nameWithType: GLVertexStruct[]
+  fullName: SearchAThing.OpenGL.Core.GLVertexStruct[]
+  nameWithType.vb: GLVertexStruct()
+  fullName.vb: SearchAThing.OpenGL.Core.GLVertexStruct()
+  name.vb: GLVertexStruct()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLVertexStruct
+    name: GLVertexStruct
+    href: SearchAThing.OpenGL.Core.GLVertexStruct.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLVertexStruct
+    name: GLVertexStruct
+    href: SearchAThing.OpenGL.Core.GLVertexStruct.html
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLFigure
+  commentId: T:SearchAThing.OpenGL.Core.IGLFigure
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLFigure.html
+  name: IGLFigure
+  nameWithType: IGLFigure
+  fullName: SearchAThing.OpenGL.Core.IGLFigure
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.LBBox*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_LBBox
+  name: LBBox
+  nameWithType: GLVertexManager.LBBox
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.LBBox
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManager.LBBox
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_LBBox
+  name: LBBox
+  nameWithType: IGLVertexManager.LBBox
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.LBBox
+- uid: SearchAThing.OpenGL.Core.BBox
+  commentId: T:SearchAThing.OpenGL.Core.BBox
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.BBox.html
+  name: BBox
+  nameWithType: BBox
+  fullName: SearchAThing.OpenGL.Core.BBox
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+  commentId: P:SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_LBBox
+  name: LBBox
+  nameWithType: GLVertexManager.LBBox
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.LBBox
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RecomputeLBBox
+  name: RecomputeLBBox
+  nameWithType: GLVertexManager.RecomputeLBBox
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RecomputeLBBox
+- uid: SearchAThing.OpenGL.Core.GLVertexManager
+  commentId: T:SearchAThing.OpenGL.Core.GLVertexManager
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html
+  name: GLVertexManager
+  nameWithType: GLVertexManager
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_ExpandModelBBox
+  name: ExpandModelBBox
+  nameWithType: GLVertexManager.ExpandModelBBox
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.ExpandModelBBox
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.ExpandModelBBox
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManager.ExpandModelBBox
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_ExpandModelBBox
+  name: ExpandModelBBox
+  nameWithType: IGLVertexManager.ExpandModelBBox
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.ExpandModelBBox
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.FiguresCleared
+  commentId: E:SearchAThing.OpenGL.Core.IGLVertexManager.FiguresCleared
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_FiguresCleared
+  name: FiguresCleared
+  nameWithType: IGLVertexManager.FiguresCleared
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.FiguresCleared
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.Clear*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.Clear
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_Clear
+  name: Clear
+  nameWithType: GLVertexManager.Clear
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.Clear
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.FigureAdded
+  commentId: E:SearchAThing.OpenGL.Core.IGLVertexManager.FigureAdded
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_FigureAdded
+  name: FigureAdded
+  nameWithType: IGLVertexManager.FigureAdded
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.FigureAdded
+- uid: SearchAThing.OpenGL.Core.FigureEvent
+  commentId: T:SearchAThing.OpenGL.Core.FigureEvent
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.FigureEvent.html
+  name: FigureEvent
+  nameWithType: FigureEvent
+  fullName: SearchAThing.OpenGL.Core.FigureEvent
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.FigureRemoved
+  commentId: E:SearchAThing.OpenGL.Core.IGLVertexManager.FigureRemoved
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_FigureRemoved
+  name: FigureRemoved
+  nameWithType: IGLVertexManager.FigureRemoved
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.FigureRemoved
+- uid: SearchAThing.OpenGL.Core.FiguresEvent
+  commentId: T:SearchAThing.OpenGL.Core.FiguresEvent
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.FiguresEvent.html
+  name: FiguresEvent
+  nameWithType: FiguresEvent
+  fullName: SearchAThing.OpenGL.Core.FiguresEvent
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.Figures*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.Figures
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_Figures
+  name: Figures
+  nameWithType: GLVertexManager.Figures
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.Figures
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.Figures
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManager.Figures
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_Figures
+  name: Figures
+  nameWithType: IGLVertexManager.Figures
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.Figures
+- uid: System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+  commentId: T:System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<GLFigureBase>
+  nameWithType: IEnumerable<GLFigureBase>
+  fullName: System.Collections.Generic.IEnumerable<SearchAThing.OpenGL.Core.GLFigureBase>
+  nameWithType.vb: IEnumerable(Of GLFigureBase)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SearchAThing.OpenGL.Core.GLFigureBase)
+  name.vb: IEnumerable(Of GLFigureBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.FigureCount*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.FigureCount
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_FigureCount
+  name: FigureCount
+  nameWithType: GLVertexManager.FigureCount
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.FigureCount
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.FigureCount
+  commentId: P:SearchAThing.OpenGL.Core.IGLVertexManager.FigureCount
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_FigureCount
+  name: FigureCount
+  nameWithType: IGLVertexManager.FigureCount
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.FigureCount
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_FigureAdded
+  name: FigureAdded
+  nameWithType: GLVertexManager.FigureAdded
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.FigureAdded
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.AddFigure
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase___
+  name: AddFigure
+  nameWithType: GLVertexManager.AddFigure
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.AddFigure
+- uid: SearchAThing.OpenGL.Core.GLFigureBase[]
+  isExternal: true
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase[]
+  nameWithType: GLFigureBase[]
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase[]
+  nameWithType.vb: GLFigureBase()
+  fullName.vb: SearchAThing.OpenGL.Core.GLFigureBase()
+  name.vb: GLFigureBase()
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: (
+  - name: )
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: AddFigure(GLFigureBase)
+  nameWithType: IGLVertexManager.AddFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: AddFigure
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLFigureBase
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureBase
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase
+  nameWithType: GLFigureBase
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved
+  commentId: E:SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_FigureRemoved
+  name: FigureRemoved
+  nameWithType: GLVertexManager.FigureRemoved
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.FigureRemoved
+- uid: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure
+  href: SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase___
+  name: RemoveFigure
+  nameWithType: GLVertexManager.RemoveFigure
+  fullName: SearchAThing.OpenGL.Core.GLVertexManager.RemoveFigure
+- uid: SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  commentId: M:SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  parent: SearchAThing.OpenGL.Core.IGLVertexManager
+  href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  name: RemoveFigure(GLFigureBase)
+  nameWithType: IGLVertexManager.RemoveFigure(GLFigureBase)
+  fullName: SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)
+    name: RemoveFigure
+    href: SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.GLFigureBase
+    name: GLFigureBase
+    href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  - name: )

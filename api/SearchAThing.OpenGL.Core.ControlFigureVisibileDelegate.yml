@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+  commentId: T:SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+  id: ControlFigureVisibileDelegate
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ControlFigureVisibileDelegate
+  nameWithType: ControlFigureVisibileDelegate
+  fullName: SearchAThing.OpenGL.Core.ControlFigureVisibileDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/core/render/GLControl.Vars.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ControlFigureVisibileDelegate
+    path: src/core/render/GLControl.Vars.cs
+    startLine: 9
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Delegate for <xref href="SearchAThing.OpenGL.Core.GLControl.ControlFigureVisible" data-throw-if-not-resolved="false"></xref>.<br />
+
+    It allow to customize the visilibty of a figure in relation within a Gl control.<br />
+  example: []
+  syntax:
+    content: public delegate bool ControlFigureVisibileDelegate(GLControl glControl, GLFigureBase figure)
+    parameters:
+    - id: glControl
+      type: SearchAThing.OpenGL.Core.GLControl
+      description: GL control reference.
+    - id: figure
+      type: SearchAThing.OpenGL.Core.GLFigureBase
+      description: GL figure for which state visibility in given control.
+    return:
+      type: System.Boolean
+      description: True if figure must shown in the gl control, false otherwise.
+    content.vb: Public Delegate Function ControlFigureVisibileDelegate(glControl As GLControl, figure As GLFigureBase) As Boolean
+references:
+- uid: SearchAThing.OpenGL.Core.GLControl.ControlFigureVisible
+  commentId: P:SearchAThing.OpenGL.Core.GLControl.ControlFigureVisible
+  href: SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ControlFigureVisible
+  name: ControlFigureVisible
+  nameWithType: GLControl.ControlFigureVisible
+  fullName: SearchAThing.OpenGL.Core.GLControl.ControlFigureVisible
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: SearchAThing.OpenGL.Core.GLFigureBase
+  commentId: T:SearchAThing.OpenGL.Core.GLFigureBase
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLFigureBase.html
+  name: GLFigureBase
+  nameWithType: GLFigureBase
+  fullName: SearchAThing.OpenGL.Core.GLFigureBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,4381 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Ext | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Ext | netcore-opengl ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_Core_Ext.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.Core.Ext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.Core.Ext">
+
+
+
+  <h1 id="SearchAThing_OpenGL_Core_Ext" data-uid="SearchAThing.OpenGL.Core.Ext" class="text-break">
+Class Ext  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/Utils.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Ext</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Ext</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_AspectRatio_" data-uid="SearchAThing.OpenGL.Core.Ext.AspectRatio*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_AspectRatio_System_Drawing_Size__" data-uid="SearchAThing.OpenGL.Core.Ext.AspectRatio(System.Drawing.Size@)">
+  AspectRatio(in Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/media/Screen.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compute aspect ratio of given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a> object.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float AspectRatio(this in Size size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_Ext_AspectRatio_System_Drawing_Size___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If size height is zero returns 1, width / height elsewhere.</p>
+</div>
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_AverageColor_" data-uid="SearchAThing.OpenGL.Core.Ext.AverageColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_AverageColor_SearchAThing_OpenGL_Core_IGLLine_" data-uid="SearchAThing.OpenGL.Core.Ext.AverageColor(SearchAThing.OpenGL.Core.IGLLine)">
+  AverageColor(IGLLine)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLLine.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Average color of lines vertexes color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color AverageColor(this IGLLine line)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLLine.html">IGLLine</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_BaseX_" data-uid="SearchAThing.OpenGL.Core.Ext.BaseX*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_BaseX_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.BaseX(System.Numerics.Matrix4x4@)">
+  BaseX(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extract basex (m1[1..3]) from the given world matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 BaseX(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_BaseY_" data-uid="SearchAThing.OpenGL.Core.Ext.BaseY*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_BaseY_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.BaseY(System.Numerics.Matrix4x4@)">
+  BaseY(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extract basey (m2[1..3]) from the given world matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 BaseY(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_BaseZ_" data-uid="SearchAThing.OpenGL.Core.Ext.BaseZ*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_BaseZ_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.BaseZ(System.Numerics.Matrix4x4@)">
+  BaseZ(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extract basez (m3[1..3]) from the given world matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 BaseZ(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_" data-uid="SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_SearchAThing_OpenGL_Core_IGLFigure_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(SearchAThing.OpenGL.Core.IGLFigure,System.Single)">
+  BuildVertexPosDict(IGLFigure, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/Utils.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>From given figure create a vertex position based dictionary suitable to be queries through vertex
+<a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_PositionSignature_System_Numerics_Vector3_System_Single_">PositionSignature(Vector3, float)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, List&lt;GLVertex&gt;&gt; BuildVertexPosDict(this IGLFigure figure, float tol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html">IGLFigure</a></dt>
+    <dd><p>Gl figure which retrieve vertexes.</p>
+</dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Vertex position tolerance to group them.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html">GLVertex</a>&gt;&gt;</dt>
+    <dd><p>Dictionary gl vertex position signature to list of gl vertexes within that position.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_" data-uid="SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_BuildVertexPosDict_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_IGLFigure__System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.BuildVertexPosDict(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.IGLFigure},System.Single)">
+  BuildVertexPosDict(IEnumerable&lt;IGLFigure&gt;, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/Utils.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>From given list of figures create a vertex position based dictionary suitable to be queries through vertex
+<a class="xref" href="SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_PositionSignature_System_Numerics_Vector3_System_Single_">PositionSignature(Vector3, float)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, List&lt;GLVertex&gt;&gt; BuildVertexPosDict(this IEnumerable&lt;IGLFigure&gt; figures, float tol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html">IGLFigure</a>&gt;</dt>
+    <dd><p>Gl figures which retrieve vertexes.</p>
+</dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Vertex position tolerance to group them.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html">GLVertex</a>&gt;&gt;</dt>
+    <dd><p>Dictionary gl vertex position signature to list of gl vertexes within that position.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Center_" data-uid="SearchAThing.OpenGL.Core.Ext.Center*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Center_SearchAThing_OpenGL_Core_IGLFigure_" data-uid="SearchAThing.OpenGL.Core.Ext.Center(SearchAThing.OpenGL.Core.IGLFigure)">
+  Center(IGLFigure)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Mean of figure vertexes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 Center(this IGLFigure figure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html">IGLFigure</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Describe_" data-uid="SearchAThing.OpenGL.Core.Ext.Describe*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Describe_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFontChar__System_String_" data-uid="SearchAThing.OpenGL.Core.Ext.Describe(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFontChar},System.String)">
+  Describe(IEnumerable&lt;GLFontChar&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/Ext.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Debugging of <a class="xref" href="SearchAThing.OpenGL.Core.GLFontChar.html">GLFontChar</a> to xlsx.<br>
+Used in <a class="xref" href="SearchAThing.OpenGL.Core.GLFontCharManager.html#SearchAThing_OpenGL_Core_GLFontCharManager_GetFontChars_System_String_SkiaSharp_SKFont_">GetFontChars(string, SKFont)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Describe(this IEnumerable&lt;GLFontChar&gt; fontChars, string xlsxPathfilename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fontChars</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFontChar.html">GLFontChar</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>xlsxPathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_DistinctPoints_" data-uid="SearchAThing.OpenGL.Core.Ext.DistinctPoints*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_DistinctPoints_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_Line__System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.DistinctPoints(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.Line},System.Single)">
+  DistinctPoints(IEnumerable&lt;Line&gt;, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Line.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Vector3&gt; DistinctPoints(this IEnumerable&lt;Line&gt; lines, float tol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_DistinctPoints_" data-uid="SearchAThing.OpenGL.Core.Ext.DistinctPoints*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_DistinctPoints_System_Collections_Generic_IList_SearchAThing_OpenGL_Core_Line__System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.DistinctPoints(System.Collections.Generic.IList{SearchAThing.OpenGL.Core.Line},System.Single)">
+  DistinctPoints(IList&lt;Line&gt;, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Line.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>From the given set of consecutive lines (from,to not required to be adjacent between)
+retrieve the sorted points of the line sequence without duplicates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Vector3&gt; DistinctPoints(this IList&lt;Line&gt; lines, float tol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a>&gt;</dt>
+    <dd><p>Input lines.</p>
+</dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Comparision length tolerance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>&gt;</dt>
+    <dd><p>Sorted lines points.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_EnsureDetached_" data-uid="SearchAThing.OpenGL.Core.Ext.EnsureDetached*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_EnsureDetached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_" data-uid="SearchAThing.OpenGL.Core.Ext.EnsureDetached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)">
+  EnsureDetached(IGLVertexManagerObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManagerObject.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws an exception if this object isn't detached from any vertex managers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EnsureDetached(this IGLVertexManagerObject obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManagerObject.html">IGLVertexManagerObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_EqualsTol_" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_EqualsTol_System_Numerics_Vector2__System_Single_System_Nullable_System_Numerics_Vector2___" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol(System.Numerics.Vector2@,System.Single,System.Nullable{System.Numerics.Vector2}@)">
+  EqualsTol(in Vector2, float, in Vector2?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given vector2 equals (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EqualsTol(this in Vector2 v, float tol, in Vector2? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_EqualsTol_" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_EqualsTol_System_Numerics_Vector3__System_Single_System_Nullable_System_Numerics_Vector3___" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol(System.Numerics.Vector3@,System.Single,System.Nullable{System.Numerics.Vector3}@)">
+  EqualsTol(in Vector3, float, in Vector3?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given vector3 equals (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EqualsTol(this in Vector3 v, float tol, in Vector3? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_EqualsTol_" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_EqualsTol_System_Numerics_Vector4__System_Single_System_Nullable_System_Numerics_Vector4___" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol(System.Numerics.Vector4@,System.Single,System.Nullable{System.Numerics.Vector4}@)">
+  EqualsTol(in Vector4, float, in Vector4?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given vector4 equals (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EqualsTol(this in Vector4 v, float tol, in Vector4? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_EqualsTol_" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_EqualsTol_System_Single_System_Single_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.EqualsTol(System.Single,System.Single,System.Single)">
+  EqualsTol(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given number equals (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EqualsTol(this float x, float tol, float y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_FeasibleTriIntersectionTests_" data-uid="SearchAThing.OpenGL.Core.Ext.FeasibleTriIntersectionTests*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_FeasibleTriIntersectionTests__1_System_Collections_Generic_IEnumerable___0__System_Double_System_Collections_Generic_IEnumerable___0__System_Double_" data-uid="SearchAThing.OpenGL.Core.Ext.FeasibleTriIntersectionTests``1(System.Collections.Generic.IEnumerable{``0},System.Double,System.Collections.Generic.IEnumerable{``0},System.Double)">
+  FeasibleTriIntersectionTests&lt;T&gt;(IEnumerable&lt;T&gt;, double, IEnumerable&lt;T&gt;, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLTriangle.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find feasible triangle pairs that could intersect by evaluating the
+<span class="xref">SearchAThing.Sci.DiscreteSpace&lt;T&gt;</span> over this set of triangles
+against the given set of triangles.<br>
+Search will be done using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">GetItemsAt(Vector3D, double)</a> method
+within given margin parameter factor respect the triangle bbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;(T tri1, T tri2)&gt; FeasibleTriIntersectionTests&lt;T&gt;(this IEnumerable&lt;T&gt; tris1, double tol, IEnumerable&lt;T&gt; tris2, double margin = 1.2) where T : IGLTriangle</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tris1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>This triangles.</p>
+</dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Intersection test length comparision tolerance.</p>
+</dd>
+    <dt><code>tris2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Other triangles.</p>
+</dd>
+    <dt><code>margin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Bbox factor (Default:1.2).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;(T <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple---0,--0-.tri1">tri1</a>, T <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple---0,--0-.tri2">tri2</a>)&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_FlipX_" data-uid="SearchAThing.OpenGL.Core.Ext.FlipX*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_FlipX_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.FlipX(System.Numerics.Matrix4x4@)">
+  FlipX(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new world matrix copy of the given one but with x flipped ( then also the z ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4 FlipX(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input world matrix.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_FlipY_" data-uid="SearchAThing.OpenGL.Core.Ext.FlipY*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_FlipY_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.FlipY(System.Numerics.Matrix4x4@)">
+  FlipY(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new world matrix copy of the given one but with y flipped ( then also the z ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4 FlipY(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input world matrix.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_FlipZ_" data-uid="SearchAThing.OpenGL.Core.Ext.FlipZ*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_FlipZ_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.FlipZ(System.Numerics.Matrix4x4@)">
+  FlipZ(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new world matrix copy of the given one but with z flipped ( then also the x ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4 FlipZ(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input world matrix.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Fmt_" data-uid="SearchAThing.OpenGL.Core.Ext.Fmt*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Fmt_System_Numerics_Matrix4x4__System_Int32_System_Int32_" data-uid="SearchAThing.OpenGL.Core.Ext.Fmt(System.Numerics.Matrix4x4@,System.Int32,System.Int32)">
+  Fmt(in Matrix4x4, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Format to string given matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Fmt(this in Matrix4x4 m, int dec, int width = 10)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input matrix.</p>
+</dd>
+    <dt><code>dec</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Decimal places to show in formatted string.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Nr. of characters foreach component.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String formatted representation of the matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Fmt_" data-uid="SearchAThing.OpenGL.Core.Ext.Fmt*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Fmt_System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.Fmt(System.Numerics.Vector3@)">
+  Fmt(in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Vector3.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invariant representation X Y Z</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Fmt(this in Vector3 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_GL_" data-uid="SearchAThing.OpenGL.Core.Ext.GL*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_GL_SearchAThing_OpenGL_Core_GLPrimitiveType_" data-uid="SearchAThing.OpenGL.Core.Ext.GL(SearchAThing.OpenGL.Core.GLPrimitiveType)">
+  GL(GLPrimitiveType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/Ext.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve corresponding Silk.NET gl type from netcore-opengl <a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveType.html">GLPrimitiveType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PrimitiveType GL(this GLPrimitiveType type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLPrimitiveType.html">GLPrimitiveType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">PrimitiveType</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_GetTriangles_" data-uid="SearchAThing.OpenGL.Core.Ext.GetTriangles*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_GetTriangles_SearchAThing_OpenGL_Core_Plate_System_Nullable_System_Drawing_Color__System_Nullable_System_Drawing_Color__System_Nullable_System_Drawing_Color__System_Nullable_System_Drawing_Color__System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.GetTriangles(SearchAThing.OpenGL.Core.Plate,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color},System.Boolean)">
+  GetTriangles(Plate, Color?, Color?, Color?, Color?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Plate.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create 2 triangles from given plate.<br><br>
+Default normal of generated triangles will be in accord between them having:<br></p>
+<ul>
+<li>first triangle (P1, P2, P3)</li>
+<li>second triangle (P3, P4, P1)</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;GLTriangle&gt; GetTriangles(this Plate plate, Color? color1, Color? color2, Color? color3, Color? color4, bool setTextureST = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plate</code> <a class="xref" href="SearchAThing.OpenGL.Core.Plate.html">Plate</a></dt>
+    <dd><p>Plate for which create 2 triangles.</p>
+</dd>
+    <dt><code>color1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(optional) color to apply to vertex1.</p>
+</dd>
+    <dt><code>color2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(optional) color to apply to vertex2.</p>
+</dd>
+    <dt><code>color3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(optional) color to apply to vertex3.</p>
+</dd>
+    <dt><code>color4</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(optional) color to apply to vertex4.</p>
+</dd>
+    <dt><code>setTextureST</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true <a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html#SearchAThing_OpenGL_Core_GLVertex_TextureST">TextureST</a> will be set in order to map texture on the plate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>&gt;</dt>
+    <dd><p>Two triangles.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_GetTriangles_" data-uid="SearchAThing.OpenGL.Core.Ext.GetTriangles*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_GetTriangles_SearchAThing_OpenGL_Core_Plate_System_Nullable_System_Drawing_Color___System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.GetTriangles(SearchAThing.OpenGL.Core.Plate,System.Nullable{System.Drawing.Color}@,System.Boolean)">
+  GetTriangles(Plate, in Color?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Plate.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create 2 triangles from given plate.<br><br>
+Default normal of generated triangles will be in accord between them having:<br></p>
+<ul>
+<li>first triangle (P1, P2, P3)</li>
+<li>second triangle (P3, P4, P1)</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;GLTriangle&gt; GetTriangles(this Plate plate, in Color? color = null, bool setTextureST = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plate</code> <a class="xref" href="SearchAThing.OpenGL.Core.Plate.html">Plate</a></dt>
+    <dd><p>Plate for which create 2 triangles.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>Color to apply to created triangles.</p>
+</dd>
+    <dt><code>setTextureST</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true <a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html#SearchAThing_OpenGL_Core_GLVertex_TextureST">TextureST</a> will be set in order to map texture on the plate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>&gt;</dt>
+    <dd><p>Two triangles.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_GreatThanOrEqualsTol_" data-uid="SearchAThing.OpenGL.Core.Ext.GreatThanOrEqualsTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_GreatThanOrEqualsTol_System_Single_System_Single_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.GreatThanOrEqualsTol(System.Single,System.Single,System.Single)">
+  GreatThanOrEqualsTol(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given number great than or equals (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GreatThanOrEqualsTol(this float x, float tol, float y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_GreatThanTol_" data-uid="SearchAThing.OpenGL.Core.Ext.GreatThanTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_GreatThanTol_System_Single_System_Single_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.GreatThanTol(System.Single,System.Single,System.Single)">
+  GreatThanTol(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given number great than (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GreatThanTol(this float x, float tol, float y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Intersect_" data-uid="SearchAThing.OpenGL.Core.Ext.Intersect*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_GLTriangle_System_Single_SearchAThing_OpenGL_Core_GLTriangle_System_Boolean__" data-uid="SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.GLTriangle,System.Single,SearchAThing.OpenGL.Core.GLTriangle,System.Boolean@)">
+  Intersect(GLTriangle, float, GLTriangle, out bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/GLTriangle.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve intersection segment if exists between given two triangles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Line? Intersect(this GLTriangle tri1, float tol, GLTriangle tri2, out bool bboxSkipped)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tri1</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a></dt>
+    <dd><p>First triangle.</p>
+</dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Length comparision tolerance.</p>
+</dd>
+    <dt><code>tri2</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a></dt>
+    <dd><p>Second triangle.</p>
+</dd>
+    <dt><code>bboxSkipped</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if intersect test skipped due to non intersecting bboxes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd><p>Intersection line between two triangles or null if no intersection exists.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Intersect_" data-uid="SearchAThing.OpenGL.Core.Ext.Intersect*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Intersect_SearchAThing_OpenGL_Core_Line_System_Single_SearchAThing_OpenGL_Core_GLFigureBase_" data-uid="SearchAThing.OpenGL.Core.Ext.Intersect(SearchAThing.OpenGL.Core.Line,System.Single,SearchAThing.OpenGL.Core.GLFigureBase)">
+  Intersect(Line, float, GLFigureBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Line.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Intersect given raycast to given figure primitives.<br>
+Given [local] raycast will automatically backwarded to [object] raycast depending on the object matrix of given figure.<br>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_RayCastLocal_System_Numerics_Vector2__">RayCastLocal(in Vector2)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;RayCastHitTest&gt; Intersect(this Line lraycast, float tol, GLFigureBase figure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lraycast</code> <a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd><p>Ray cast [local].</p>
+</dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Length tolerance comparision ( used for point and line primitives match ).</p>
+</dd>
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd><p>Figure to test for hit vs. given raycast.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.RayCastHitTest.html">RayCastHitTest</a>&gt;</dt>
+    <dd><p>List of hits, at most one foreach figure primitive.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Inverse_" data-uid="SearchAThing.OpenGL.Core.Ext.Inverse*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Inverse_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.Inverse(System.Numerics.Matrix4x4@)">
+  Inverse(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compute the inverse of the given 4x4 matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4 Inverse(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input matrix.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Inverse matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_IsAttached_" data-uid="SearchAThing.OpenGL.Core.Ext.IsAttached*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_IsAttached_SearchAThing_OpenGL_Core_IGLVertexManagerObject_" data-uid="SearchAThing.OpenGL.Core.Ext.IsAttached(SearchAThing.OpenGL.Core.IGLVertexManagerObject)">
+  IsAttached(IGLVertexManagerObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManagerObject.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if this object is currently attached to a gl vertex manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAttached(this IGLVertexManagerObject obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManagerObject.html">IGLVertexManagerObject</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_IsParallel_" data-uid="SearchAThing.OpenGL.Core.Ext.IsParallel*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_IsParallel_System_Numerics_Vector3__System_Single_System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.IsParallel(System.Numerics.Vector3@,System.Single,System.Numerics.Vector3@)">
+  IsParallel(in Vector3, float, in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if two vectors are parallel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsParallel(this in Vector3 v, float tol, in Vector3 other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>This vector.</p>
+</dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Length tolerance (use <span class="xref">SearchAThing.Sci.Constants.NormalizedLengthTolerance</span> for normalized vectors).</p>
+</dd>
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Other vector.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if two vectors are parallel.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_LessThanOrEqualsTol_" data-uid="SearchAThing.OpenGL.Core.Ext.LessThanOrEqualsTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_LessThanOrEqualsTol_System_Single_System_Single_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.LessThanOrEqualsTol(System.Single,System.Single,System.Single)">
+  LessThanOrEqualsTol(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given number less than or equals (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LessThanOrEqualsTol(this float x, float tol, float y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_LessThanTol_" data-uid="SearchAThing.OpenGL.Core.Ext.LessThanTol*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_LessThanTol_System_Single_System_Single_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.LessThanTol(System.Single,System.Single,System.Single)">
+  LessThanTol(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>States if given number less than (with tolerance) to the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LessThanTol(this float x, float tol, float y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_LineTo_" data-uid="SearchAThing.OpenGL.Core.Ext.LineTo*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_LineTo_System_Numerics_Vector3__System_Numerics_Vector3__System_Nullable_System_Drawing_Color___" data-uid="SearchAThing.OpenGL.Core.Ext.LineTo(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Nullable{System.Drawing.Color}@)">
+  LineTo(in Vector3, in Vector3, in Color?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLLine.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a gl line primitive from given two points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLLine LineTo(this in Vector3 from, in Vector3 to, in Color? color = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>from</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>From position.</p>
+</dd>
+    <dt><code>to</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>To position.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(Optional) from, to line vertexes color.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLLine.html">GLLine</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_LineV_" data-uid="SearchAThing.OpenGL.Core.Ext.LineV*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_LineV_System_Numerics_Vector3__System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.LineV(System.Numerics.Vector3@,System.Numerics.Vector3@)">
+  LineV(in Vector3, in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Line.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a line from this point with given extension vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Line LineV(this in Vector3 from, in Vector3 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>from</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>This point.</p>
+</dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Extension vector.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_LineV_" data-uid="SearchAThing.OpenGL.Core.Ext.LineV*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_LineV_System_Numerics_Vector3__System_Numerics_Vector3__System_Nullable_System_Drawing_Color___" data-uid="SearchAThing.OpenGL.Core.Ext.LineV(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Nullable{System.Drawing.Color}@)">
+  LineV(in Vector3, in Vector3, in Color?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLLine.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a gl line primitive from given position and vector extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLLine LineV(this in Vector3 p, in Vector3 v, in Color? color = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>p</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>From position.</p>
+</dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Extension vector.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(Optional) from, to line vertexes color.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLLine.html">GLLine</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Lines_" data-uid="SearchAThing.OpenGL.Core.Ext.Lines*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Lines_SearchAThing_OpenGL_Core_BBox_System_Nullable_System_Drawing_Color__" data-uid="SearchAThing.OpenGL.Core.Ext.Lines(SearchAThing.OpenGL.Core.BBox,System.Nullable{System.Drawing.Color})">
+  Lines(BBox, Color?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/BBox.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create wcs gl lines that represents the given bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;GLLine&gt; Lines(this BBox bbox, Color? color = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bbox</code> <a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a></dt>
+    <dd><p>Bounding box for which create gl lines.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(optional) color to apply created gl lines.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLLine.html">GLLine</a>&gt;</dt>
+    <dd><p>GL lines.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_LoadTexture_" data-uid="SearchAThing.OpenGL.Core.Ext.LoadTexture*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_LoadTexture_SearchAThing_OpenGL_Core_GLModel_System_String_" data-uid="SearchAThing.OpenGL.Core.Ext.LoadTexture(SearchAThing.OpenGL.Core.GLModel,System.String)">
+  LoadTexture(GLModel, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/GLTexture2D.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load texture from given bitmap pathfilename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLTexture2D LoadTexture(this GLModel model, string pathfilename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>model</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html">GLModel</a></dt>
+    <dd><p>Gl model into which load the texture.</p>
+</dd>
+    <dt><code>pathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Texture bitmap pathfilename.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLTexture2D.html">GLTexture2D</a></dt>
+    <dd><p>Gl texture 2d object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_MRound_" data-uid="SearchAThing.OpenGL.Core.Ext.MRound*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_MRound_System_Single_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.MRound(System.Single,System.Single)">
+  MRound(float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Round given number using the multiple basis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float MRound(this float value, float multiple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>multiple</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Magnitude_" data-uid="SearchAThing.OpenGL.Core.Ext.Magnitude*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Magnitude_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.Magnitude(System.Single)">
+  Magnitude(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the magnitude of given number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Magnitude(this float value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_MakeFigure_" data-uid="SearchAThing.OpenGL.Core.Ext.MakeFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_MakeFigure_SearchAThing_OpenGL_Core_BBox_System_Nullable_System_Drawing_Color___" data-uid="SearchAThing.OpenGL.Core.Ext.MakeFigure(SearchAThing.OpenGL.Core.BBox,System.Nullable{System.Drawing.Color}@)">
+  MakeFigure(BBox, in Color?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/BBox.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create wcs lines figure that represents the given bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLLineFigure MakeFigure(this BBox bbox, in Color? color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bbox</code> <a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a></dt>
+    <dd><p>Bounding box for which create line figures.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(optional) color to apply created figure.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLLineFigure.html">GLLineFigure</a></dt>
+    <dd><p>Lines figure.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Max_" data-uid="SearchAThing.OpenGL.Core.Ext.Max*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Max_System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.Max(System.Numerics.Vector3@)">
+  Max(in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the maxest component between x, y, z of given vector3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Max(this in Vector3 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Move_" data-uid="SearchAThing.OpenGL.Core.Ext.Move*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Move_System_Numerics_Matrix4x4__System_Nullable_System_Numerics_Vector3___" data-uid="SearchAThing.OpenGL.Core.Ext.Move(System.Numerics.Matrix4x4@,System.Nullable{System.Numerics.Vector3}@)">
+  Move(in Matrix4x4, in Vector3?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new world matrix copy of the given one but with origin moved of given delta.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4 Move(this in Matrix4x4 m, in Vector3? delta = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input world matrix.</p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>?</dt>
+    <dd><p>Delta to apply to the origin.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Origin moved world matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Move_" data-uid="SearchAThing.OpenGL.Core.Ext.Move*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Move_System_Numerics_Matrix4x4__System_Single_System_Single_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.Move(System.Numerics.Matrix4x4@,System.Single,System.Single,System.Single)">
+  Move(in Matrix4x4, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new world matrix copy of the given one but with origin moved of given delta.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4 Move(this in Matrix4x4 m, float dx, float dy, float dz)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input world matrix.</p>
+</dd>
+    <dt><code>dx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Delta (x) to apply to the origin.</p>
+</dd>
+    <dt><code>dy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Delta (y) to apply to the origin.</p>
+</dd>
+    <dt><code>dz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Delta (z) to apply to the origin.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Origin moved world matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Move_" data-uid="SearchAThing.OpenGL.Core.Ext.Move*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Move__1_System_Collections_Generic_IEnumerable___0__System_Numerics_Vector3_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.Move``1(System.Collections.Generic.IEnumerable{``0},System.Numerics.Vector3,System.Boolean)">
+  Move&lt;T&gt;(IEnumerable&lt;T&gt;, Vector3, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Move given figures by the given delta.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; Move&lt;T&gt;(this IEnumerable&lt;T&gt; figures, Vector3 coord, bool relative = true) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Figures to move.</p>
+</dd>
+    <dt><code>coord</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Delta vector3 [object]</p>
+</dd>
+    <dt><code>relative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (default) sum the given delta elsewhere replace the object matrix translation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>This figure reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_Ext_Move__1_System_Collections_Generic_IEnumerable___0__System_Numerics_Vector3_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>No vertex change, but only the object matrix associated to this figure.</li>
+<li>Object matrix will replaced with a single translation.</li>
+</ul>
+</div>
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Move_" data-uid="SearchAThing.OpenGL.Core.Ext.Move*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Numerics.Vector3@,System.Boolean)">
+  Move&lt;T&gt;(T, in Vector3, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Move the figure by the given delta.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Move&lt;T&gt;(this T figure, in Vector3 coord, bool relative = true) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <span class="xref">T</span></dt>
+    <dd><p>Figure to move.</p>
+</dd>
+    <dt><code>coord</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Delta vector3 [object]</p>
+</dd>
+    <dt><code>relative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (default) sum the given delta elsewhere replace the object matrix translation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>This figure reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Numerics_Vector3__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>No vertex change, but only the object matrix associated to this figure.</li>
+<li>Object matrix will replaced with a single translation.</li>
+</ul>
+</div>
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Move_" data-uid="SearchAThing.OpenGL.Core.Ext.Move*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.Move``1(``0,System.Single,System.Single,System.Single,System.Boolean)">
+  Move&lt;T&gt;(T, float, float, float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Move the figure by the given delta.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Move&lt;T&gt;(this T figure, float dx, float dy, float dz, bool relative = true) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <span class="xref">T</span></dt>
+    <dd><p>Figure to move.</p>
+</dd>
+    <dt><code>dx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Delta (x) [object]</p>
+</dd>
+    <dt><code>dy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Delta (y) [object]</p>
+</dd>
+    <dt><code>dz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Delta (z) [object]</p>
+</dd>
+    <dt><code>relative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (default) sum the given delta elsewhere replace the object matrix translation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>This figure reference.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="SearchAThing_OpenGL_Core_Ext_Move__1___0_System_Single_System_Single_System_Single_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul>
+<li>No vertex change, but only the object matrix associated to this figure.</li>
+<li>Object matrix will replaced with a single translation.</li>
+</ul>
+</div>
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Normalized_" data-uid="SearchAThing.OpenGL.Core.Ext.Normalized*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Normalized_System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.Normalized(System.Numerics.Vector3@)">
+  Normalized(in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Normalize given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 Normalized(this in Vector3 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_OBBox_" data-uid="SearchAThing.OpenGL.Core.Ext.OBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_OBBox_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLFigureBase__" data-uid="SearchAThing.OpenGL.Core.Ext.OBBox(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLFigureBase})">
+  OBBox(IEnumerable&lt;GLFigureBase&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLFigureBase.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Object space bbox of given figures vertexes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BBox OBBox(this IEnumerable&lt;GLFigureBase&gt; figures)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd><p>Gl figures to compute bbox.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a></dt>
+    <dd><p>Figures bbox [object].</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Origin_" data-uid="SearchAThing.OpenGL.Core.Ext.Origin*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Origin_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.Origin(System.Numerics.Matrix4x4@)">
+  Origin(in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extract the origin (m4[1..3]) from the given world matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 Origin(this in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_PositionSignature_" data-uid="SearchAThing.OpenGL.Core.Ext.PositionSignature*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_PositionSignature_SearchAThing_OpenGL_Core_IGLVertex_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.PositionSignature(SearchAThing.OpenGL.Core.IGLVertex,System.Single)">
+  PositionSignature(IGLVertex, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/Utils.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve vertex position signature within given tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string PositionSignature(this IGLVertex glVertex, float tol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>glVertex</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertex.html">IGLVertex</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_PositionSignature_" data-uid="SearchAThing.OpenGL.Core.Ext.PositionSignature*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_PositionSignature_System_Numerics_Vector3_System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.PositionSignature(System.Numerics.Vector3,System.Single)">
+  PositionSignature(Vector3, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/Utils.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve vector3 position signature within given tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string PositionSignature(this Vector3 position, float tol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Project_" data-uid="SearchAThing.OpenGL.Core.Ext.Project*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Project_System_Numerics_Vector3__System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.Project(System.Numerics.Vector3@,System.Numerics.Matrix4x4@)">
+  Project(in Vector3, in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Project this vector to given xy plane.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3? Project(this in Vector3 v, in Matrix4x4 xyPlane)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Vector to project.</p>
+</dd>
+    <dt><code>xyPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>XY plane which project the vector into.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>?</dt>
+    <dd><p>Projected vector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Project_" data-uid="SearchAThing.OpenGL.Core.Ext.Project*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Project_System_Numerics_Vector3__System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.Project(System.Numerics.Vector3@,System.Numerics.Vector3@)">
+  Project(in Vector3, in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Project this vector to the other given.<br>
+References: <a href="https://en.wikipedia.org/wiki/Vector_projection">https://en.wikipedia.org/wiki/Vector_projection</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 Project(this in Vector3 v, in Vector3 other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Vector to project.</p>
+</dd>
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Receiving projection vector.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Projection point if any on the other vector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SaveTo_" data-uid="SearchAThing.OpenGL.Core.Ext.SaveTo*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SaveTo_SkiaSharp_SKBitmap_System_String_SkiaSharp_SKEncodedImageFormat_System_Int32_" data-uid="SearchAThing.OpenGL.Core.Ext.SaveTo(SkiaSharp.SKBitmap,System.String,SkiaSharp.SKEncodedImageFormat,System.Int32)">
+  SaveTo(SKBitmap, string, SKEncodedImageFormat, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/Ext.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Helper method to save skia bitmap to output image file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SaveTo(this SKBitmap bitmap, string outputPathfilename, SKEncodedImageFormat format = SKEncodedImageFormat.Png, int quality = 80)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitmap</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.skbitmap">SKBitmap</a></dt>
+    <dd></dd>
+    <dt><code>outputPathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/skiasharp.skencodedimageformat">SKEncodedImageFormat</a></dt>
+    <dd></dd>
+    <dt><code>quality</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ScaleAbout_" data-uid="SearchAThing.OpenGL.Core.Ext.ScaleAbout*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ScaleAbout_System_Numerics_Vector3__System_Numerics_Vector3__System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.ScaleAbout(System.Numerics.Vector3@,System.Numerics.Vector3@,System.Single)">
+  ScaleAbout(in Vector3, in Vector3, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scale given vector respect given origin by the given scale factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ScaleAbout(this in Vector3 v, in Vector3 origin, float factor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Vector to scale.</p>
+</dd>
+    <dt><code>origin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Reference point.</p>
+</dd>
+    <dt><code>factor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale factor.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Scaled vector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Segments_" data-uid="SearchAThing.OpenGL.Core.Ext.Segments*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Segments_SearchAThing_OpenGL_Core_IGLTriangle_" data-uid="SearchAThing.OpenGL.Core.Ext.Segments(SearchAThing.OpenGL.Core.IGLTriangle)">
+  Segments(IGLTriangle)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLTriangle.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve gl triangle segments {v1,v2},{v2,v3},{v3,v1} [object].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Line&gt; Segments(this IGLTriangle tri)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tri</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLTriangle.html">IGLTriangle</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetAlphaF_" data-uid="SearchAThing.OpenGL.Core.Ext.SetAlphaF*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetAlphaF_System_Drawing_Color__System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.SetAlphaF(System.Drawing.Color@,System.Single)">
+  SetAlphaF(in Color, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/Ext.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set alpha channel<br>
+Alpha=1 (full opaque).<br>
+Alpha=0 (full transparent).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SetAlphaF(this in Color color, float alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetAlpha_" data-uid="SearchAThing.OpenGL.Core.Ext.SetAlpha*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetAlpha__1___0_System_Nullable_System_Single__" data-uid="SearchAThing.OpenGL.Core.Ext.SetAlpha``1(``0,System.Nullable{System.Single})">
+  SetAlpha&lt;T&gt;(T, float?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set figure alpha ( 0:full transparent, 1:full opaque ).<br><br>
+<a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Alpha">Alpha</a></p>
+<param name="fig">Figure on which operate.
+<param name="alpha">Alpha (0:transparent, 1:opaque).
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T SetAlpha&lt;T&gt;(this T fig, float? alpha) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fig</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetColor_" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetColor_SearchAThing_OpenGL_Core_IGLVertex_System_Drawing_Color__" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor(SearchAThing.OpenGL.Core.IGLVertex,System.Drawing.Color@)">
+  SetColor(IGLVertex, in Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertex.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change the color of the vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGLVertex SetColor(this IGLVertex vertex, in Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertex</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertex.html">IGLVertex</a></dt>
+    <dd><p>Vertex which change the color.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>Color to apply.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.IGLVertex.html">IGLVertex</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetColor_" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetColor_SearchAThing_OpenGL_Core_IGLVertex_System_Numerics_Vector4__" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor(SearchAThing.OpenGL.Core.IGLVertex,System.Numerics.Vector4@)">
+  SetColor(IGLVertex, in Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertex.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change the color of the vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IGLVertex SetColor(this IGLVertex vertex, in Vector4 rgbaColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertex</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertex.html">IGLVertex</a></dt>
+    <dd><p>Vertex which change the color.</p>
+</dd>
+    <dt><code>rgbaColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>Color to apply encoded in vector4 (range 0..1) as (red, green, blue, alpha).<br>Alpha=1 (full opaque).<br>Alpha=0 (full transparent).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.IGLVertex.html">IGLVertex</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetColor_" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetColor__1_System_Collections_Generic_IEnumerable___0__System_Drawing_Color__" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Collections.Generic.IEnumerable{``0},System.Drawing.Color@)">
+  SetColor&lt;T&gt;(IEnumerable&lt;T&gt;, in Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/GLPrimitiveBase.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the color primitives vertexes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SetColor&lt;T&gt;(this IEnumerable&lt;T&gt; primitives, in Color color) where T : GLPrimitiveBase</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>primitives</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Gl primitives.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>Color to set on primitives vertexes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Calling enumerable.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetColor_" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetColor__1_System_Collections_Generic_IEnumerable___0__System_Numerics_Vector4__" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor``1(System.Collections.Generic.IEnumerable{``0},System.Numerics.Vector4@)">
+  SetColor&lt;T&gt;(IEnumerable&lt;T&gt;, in Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/GLPrimitiveBase.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the color primitives vertexes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SetColor&lt;T&gt;(this IEnumerable&lt;T&gt; primitives, in Vector4 rgbaColor) where T : GLPrimitiveBase</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>primitives</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Gl primitives.</p>
+</dd>
+    <dt><code>rgbaColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>Color to set on primitives vertexes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>Calling enumerable.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetColor_" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Drawing_Color__" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Drawing.Color@)">
+  SetColor&lt;T&gt;(T, in Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set color on primitives vertexes of this figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T SetColor&lt;T&gt;(this T fig, in Color color) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fig</code> <span class="xref">T</span></dt>
+    <dd><p>Figure on which operate.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>Color to set on vertexes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>This figure.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetColor_" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetColor__1___0_System_Numerics_Vector4__" data-uid="SearchAThing.OpenGL.Core.Ext.SetColor``1(``0,System.Numerics.Vector4@)">
+  SetColor&lt;T&gt;(T, in Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set color on primitives vertexes of this figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T SetColor&lt;T&gt;(this T fig, in Vector4 rgbaColor) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fig</code> <span class="xref">T</span></dt>
+    <dd><p>Figure on which operate.</p>
+</dd>
+    <dt><code>rgbaColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>Color to set on vertexes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>This figure.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetOrder_" data-uid="SearchAThing.OpenGL.Core.Ext.SetOrder*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetOrder__1___0_System_Int32_" data-uid="SearchAThing.OpenGL.Core.Ext.SetOrder``1(``0,System.Int32)">
+  SetOrder&lt;T&gt;(T, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change the figure order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T SetOrder&lt;T&gt;(this T fig, int order) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fig</code> <span class="xref">T</span></dt>
+    <dd><p>Figure on which operate.</p>
+</dd>
+    <dt><code>order</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Order to set.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>This figure.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_Order">Order</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetOrigin_" data-uid="SearchAThing.OpenGL.Core.Ext.SetOrigin*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetOrigin_System_Numerics_Matrix4x4__System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.SetOrigin(System.Numerics.Matrix4x4@,System.Numerics.Vector3@)">
+  SetOrigin(in Matrix4x4, in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Matrix4x4.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new world matrix copy of the given one but with origin set to given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4 SetOrigin(this in Matrix4x4 m, in Vector3 origin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Input world matrix.</p>
+</dd>
+    <dt><code>origin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>New origin.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Origin repositioned world matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetScreenMode_" data-uid="SearchAThing.OpenGL.Core.Ext.SetScreenMode*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetScreenMode__1_System_Collections_Generic_IEnumerable___0__System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)">
+  SetScreenMode&lt;T&gt;(IEnumerable&lt;T&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode">ScreenCoordMode</a> on given figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SetScreenMode&lt;T&gt;(this IEnumerable&lt;T&gt; figures, bool screenCoordMode) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figures</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>screenCoordMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_SetScreenMode_" data-uid="SearchAThing.OpenGL.Core.Ext.SetScreenMode*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_SetScreenMode__1___0_System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.SetScreenMode``1(``0,System.Boolean)">
+  SetScreenMode&lt;T&gt;(T, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/IGLFigure.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ScreenCoordMode">ScreenCoordMode</a> on given figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T SetScreenMode&lt;T&gt;(this T figure, bool screenCoordMode) where T : IGLFigure</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>screenCoordMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ShortString_" data-uid="SearchAThing.OpenGL.Core.Ext.ShortString*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ShortString_SearchAThing_OpenGL_Core_CameraViewType_" data-uid="SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)">
+  ShortString(CameraViewType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/CameraViewType.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ShortString(this CameraViewType cvt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cvt</code> <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html">CameraViewType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToColor_" data-uid="SearchAThing.OpenGL.Core.Ext.ToColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToColor_ColorHelper_HSV_" data-uid="SearchAThing.OpenGL.Core.Ext.ToColor(ColorHelper.HSV)">
+  ToColor(HSV)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Utils.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve system drawing color from given ColorHelper HSV color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color ToColor(this HSV hsv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hsv</code> <span class="xref">HSV</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToColor_" data-uid="SearchAThing.OpenGL.Core.Ext.ToColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToColor_ColorHelper_RGB_" data-uid="SearchAThing.OpenGL.Core.Ext.ToColor(ColorHelper.RGB)">
+  ToColor(RGB)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Utils.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve system drawing color from given ColorHelper RGB color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color ToColor(this RGB rgb)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rgb</code> <span class="xref">RGB</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToColor_" data-uid="SearchAThing.OpenGL.Core.Ext.ToColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToColor_System_Numerics_Vector4__" data-uid="SearchAThing.OpenGL.Core.Ext.ToColor(System.Numerics.Vector4@)">
+  ToColor(in Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/media/Color.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given vector4 (red, green, blue, alpha) color to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color ToColor(this in Vector4 rgbaColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rgbaColor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>Color encoded in vector4 (range 0..1) as (red, green, blue, alpha).<br>Alpha=1 (full opaque).<br>Alpha=0 (full transparent).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToDxfColor_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfColor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToDxfColor_System_Drawing_Color_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfColor(System.Drawing.Color)">
+  ToDxfColor(Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Utils.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert system drawing color to dxf color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AciColor ToDxfColor(this Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AciColor</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToDxfLine_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfLine*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToDxfLine_SearchAThing_OpenGL_Core_IGLLine_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfLine(SearchAThing.OpenGL.Core.IGLLine)">
+  ToDxfLine(IGLLine)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLLine.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create dxf line from given gl line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Line ToDxfLine(this IGLLine line)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLLine.html">IGLLine</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Line</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToDxfPoint_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfPoint*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToDxfPoint_SearchAThing_OpenGL_Core_IGLPoint_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfPoint(SearchAThing.OpenGL.Core.IGLPoint)">
+  ToDxfPoint(IGLPoint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLPoint.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create dxf point from given gl point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point ToDxfPoint(this IGLPoint point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLPoint.html">IGLPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Point</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToDxfVector3_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfVector3*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToDxfVector3_SearchAThing_OpenGL_Core_IGLVertex_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfVector3(SearchAThing.OpenGL.Core.IGLVertex)">
+  ToDxfVector3(IGLVertex)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertex.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given gl vertex to dxf vector3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ToDxfVector3(this IGLVertex vertex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vertex</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertex.html">IGLVertex</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToDxfVector3_" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfVector3*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToDxfVector3_System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.ToDxfVector3(System.Numerics.Vector3@)">
+  ToDxfVector3(in Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/Utils.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given system numerics vector3 to dxf vector3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ToDxfVector3(this in Vector3 v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToFigure_" data-uid="SearchAThing.OpenGL.Core.Ext.ToFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLPoint__" data-uid="SearchAThing.OpenGL.Core.Ext.ToFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLPoint})">
+  ToFigure(IEnumerable&lt;GLPoint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/GLPoint.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create point figure from given point set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLPointFigure ToFigure(this IEnumerable&lt;GLPoint&gt; points)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLPoint.html">GLPoint</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPointFigure.html">GLPointFigure</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToFigure_" data-uid="SearchAThing.OpenGL.Core.Ext.ToFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToFigure_System_Collections_Generic_IEnumerable_SearchAThing_OpenGL_Core_GLTriangle__" data-uid="SearchAThing.OpenGL.Core.Ext.ToFigure(System.Collections.Generic.IEnumerable{SearchAThing.OpenGL.Core.GLTriangle})">
+  ToFigure(IEnumerable&lt;GLTriangle&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/GLTriangle.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a gl figure from given gl triangles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLTriangleFigure ToFigure(this IEnumerable&lt;GLTriangle&gt; triangles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>triangles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLTriangleFigure.html">GLTriangleFigure</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToFigure_" data-uid="SearchAThing.OpenGL.Core.Ext.ToFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToFigure_System_Collections_Generic_IEnumerable_System_Numerics_Vector3__" data-uid="SearchAThing.OpenGL.Core.Ext.ToFigure(System.Collections.Generic.IEnumerable{System.Numerics.Vector3})">
+  ToFigure(IEnumerable&lt;Vector3&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/GLPoint.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create point figure from given point set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLPointFigure ToFigure(this IEnumerable&lt;Vector3&gt; points)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>points</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLPointFigure.html">GLPointFigure</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToFloat_" data-uid="SearchAThing.OpenGL.Core.Ext.ToFloat*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToFloat_System_Double_" data-uid="SearchAThing.OpenGL.Core.Ext.ToFloat(System.Double)">
+  ToFloat(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Utils.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given double to float ensuring not exceed the float range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float ToFloat(this double d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>d</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Double which convert to float.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Float of the given double.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToGLLine_" data-uid="SearchAThing.OpenGL.Core.Ext.ToGLLine*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Drawing_Color__System_Drawing_Color__" data-uid="SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Drawing.Color@,System.Drawing.Color@)">
+  ToGLLine(Line, in Color, in Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLLine.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a gl line primitive from given line geometry applying given from, to colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLLine ToGLLine(this Line line, in Color colorFrom, in Color colorTo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd><p>Line geometry.</p>
+</dd>
+    <dt><code>colorFrom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>Color to apply the from vertex.</p>
+</dd>
+    <dt><code>colorTo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>Color to apply the to vertex.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLLine.html">GLLine</a></dt>
+    <dd><p>GL line primitive.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToGLLine_" data-uid="SearchAThing.OpenGL.Core.Ext.ToGLLine*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToGLLine_SearchAThing_OpenGL_Core_Line_System_Nullable_System_Drawing_Color___" data-uid="SearchAThing.OpenGL.Core.Ext.ToGLLine(SearchAThing.OpenGL.Core.Line,System.Nullable{System.Drawing.Color}@)">
+  ToGLLine(Line, in Color?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/IGLLine.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a gl line primitive from given line geometry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GLLine ToGLLine(this Line line, in Color? color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd><p>Line geometry.</p>
+</dd>
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>?</dt>
+    <dd><p>(Optional) from, to line vertexes color.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLLine.html">GLLine</a></dt>
+    <dd><p>GL line primitive.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToHSV_" data-uid="SearchAThing.OpenGL.Core.Ext.ToHSV*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToHSV_System_Drawing_Color_" data-uid="SearchAThing.OpenGL.Core.Ext.ToHSV(System.Drawing.Color)">
+  ToHSV(Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Utils.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve ColorHelper HSV color from given system drawing color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HSV ToHSV(this Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">HSV</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToLine_" data-uid="SearchAThing.OpenGL.Core.Ext.ToLine*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToLine_SearchAThing_Sci_Line3D_" data-uid="SearchAThing.OpenGL.Core.Ext.ToLine(SearchAThing.Sci.Line3D)">
+  ToLine(Line3D)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Line.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given sci line to line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Line ToLine(this Line3D line)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <span class="xref">Line3D</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToLine3D_" data-uid="SearchAThing.OpenGL.Core.Ext.ToLine3D*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToLine3D_SearchAThing_OpenGL_Core_Line_" data-uid="SearchAThing.OpenGL.Core.Ext.ToLine3D(SearchAThing.OpenGL.Core.Line)">
+  ToLine3D(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Line.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given line to sci line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Line3D ToLine3D(this Line line)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Line3D</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToRGB_" data-uid="SearchAThing.OpenGL.Core.Ext.ToRGB*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToRGB_ColorHelper_HSV_" data-uid="SearchAThing.OpenGL.Core.Ext.ToRGB(ColorHelper.HSV)">
+  ToRGB(HSV)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Utils.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve ColorHelper RGB color from given ColorHelper HSV color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RGB ToRGB(this HSV hsv)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hsv</code> <span class="xref">HSV</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RGB</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToRGB_" data-uid="SearchAThing.OpenGL.Core.Ext.ToRGB*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToRGB_System_Drawing_Color_" data-uid="SearchAThing.OpenGL.Core.Ext.ToRGB(System.Drawing.Color)">
+  ToRGB(Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/types/Utils.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve ColorHelper RGB color from given system drawing color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RGB ToRGB(this Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RGB</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToString_" data-uid="SearchAThing.OpenGL.Core.Ext.ToString*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToString_System_Numerics_Vector3__System_Int32_" data-uid="SearchAThing.OpenGL.Core.Ext.ToString(System.Numerics.Vector3@,System.Int32)">
+  ToString(in Vector3, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToString(this in Vector3 v, int digits = 3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+    <dt><code>digits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToString_" data-uid="SearchAThing.OpenGL.Core.Ext.ToString*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToString_System_Numerics_Vector3__System_Single_" data-uid="SearchAThing.OpenGL.Core.Ext.ToString(System.Numerics.Vector3@,System.Single)">
+  ToString(in Vector3, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToString(this in Vector3 v, float tol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+    <dt><code>tol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToString_" data-uid="SearchAThing.OpenGL.Core.Ext.ToString*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToString_System_Single_System_Int32_" data-uid="SearchAThing.OpenGL.Core.Ext.ToString(System.Single,System.Int32)">
+  ToString(float, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Number.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToString(this float d, int significantDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>d</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>significantDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToTriangle3D_" data-uid="SearchAThing.OpenGL.Core.Ext.ToTriangle3D*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToTriangle3D_SearchAThing_OpenGL_Core_GLTriangle_" data-uid="SearchAThing.OpenGL.Core.Ext.ToTriangle3D(SearchAThing.OpenGL.Core.GLTriangle)">
+  ToTriangle3D(GLTriangle)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/primitive/GLTriangle.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create sci Triangle3D from given gl triangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Triangle3D ToTriangle3D(this GLTriangle tri)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tri</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLTriangle.html">GLTriangle</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Triangle3D</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToUCS_" data-uid="SearchAThing.OpenGL.Core.Ext.ToUCS*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToUCS_System_Numerics_Vector3__System_Numerics_Matrix4x4__System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.ToUCS(System.Numerics.Vector3@,System.Numerics.Matrix4x4@,System.Boolean)">
+  ToUCS(in Vector3, in Matrix4x4, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transformation given one from wcs toward the given destination coordinate system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ToUCS(this in Vector3 v, in Matrix4x4 cs, bool evalCSOrigin = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Vector to transform.</p>
+</dd>
+    <dt><code>cs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Destination coordinate system.</p>
+</dd>
+    <dt><code>evalCSOrigin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true the origin of the coordinate system will be evaluated during transformation ( default: true ).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToVector2_" data-uid="SearchAThing.OpenGL.Core.Ext.ToVector2*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToVector2_System_Drawing_Size__" data-uid="SearchAThing.OpenGL.Core.Ext.ToVector2(System.Drawing.Size@)">
+  ToVector2(in Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/render/Ext.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given screen size (width, height) to a vector2 (x, y).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 ToVector2(this in Size size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToVector3_" data-uid="SearchAThing.OpenGL.Core.Ext.ToVector3*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToVector3_System_Drawing_Color__" data-uid="SearchAThing.OpenGL.Core.Ext.ToVector3(System.Drawing.Color@)">
+  ToVector3(in Color)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/media/Color.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> to vector3 (red, green, blue) discarding alpha information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ToVector3(this in Color color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>Color to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToVector4_" data-uid="SearchAThing.OpenGL.Core.Ext.ToVector4*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToVector4_System_Drawing_Color__System_Nullable_System_Single__" data-uid="SearchAThing.OpenGL.Core.Ext.ToVector4(System.Drawing.Color@,System.Nullable{System.Single})">
+  ToVector4(in Color, float?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/media/Color.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> to vector4 (red, green, blue, alpha).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector4 ToVector4(this in Color color, float? alpha = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></dt>
+    <dd><p>Color to convert.</p>
+</dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>(optional) Alpha override.<br>Alpha=1 (full opaque).<br>Alpha=0 (full transparent).<br>If not specified given color alpha will taken.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_ToWCS_" data-uid="SearchAThing.OpenGL.Core.Ext.ToWCS*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_ToWCS_System_Numerics_Vector3__System_Numerics_Matrix4x4__System_Boolean_" data-uid="SearchAThing.OpenGL.Core.Ext.ToWCS(System.Numerics.Vector3@,System.Numerics.Matrix4x4@,System.Boolean)">
+  ToWCS(in Vector3, in Matrix4x4, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transformation given one from the coordinate system given toward the wcs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ToWCS(this in Vector3 v, in Matrix4x4 cs, bool evalCSOrigin = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Vector to transform.</p>
+</dd>
+    <dt><code>cs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Source coordinate system.</p>
+</dd>
+    <dt><code>evalCSOrigin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true the origin of the coordinate system will be evaluated during transofmration ( default: true ).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Transform_" data-uid="SearchAThing.OpenGL.Core.Ext.Transform*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Transform_SearchAThing_OpenGL_Core_Line_System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.Transform(SearchAThing.OpenGL.Core.Line,System.Numerics.Matrix4x4@)">
+  Transform(Line, in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Line.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a new line with from, to transformed by the given transformation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Line Transform(this Line line, in Matrix4x4 m)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd><p>Line to transform.</p>
+</dd>
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Transformation matrix.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.Line.html">Line</a></dt>
+    <dd><p>Transformed line.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Transform_" data-uid="SearchAThing.OpenGL.Core.Ext.Transform*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Transform_System_Numerics_Vector3__System_Numerics_Matrix4x4__" data-uid="SearchAThing.OpenGL.Core.Ext.Transform(System.Numerics.Vector3@,System.Numerics.Matrix4x4@)">
+  Transform(in Vector3, in Matrix4x4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/geom/Vector3.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transform given one within given transformation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 Transform(this in Vector3 v, in Matrix4x4 transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Vector to transform.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>Transformation matrix.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector3">Vector3</a></dt>
+    <dd><p>Transformed vector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_Ext_Vertexes_" data-uid="SearchAThing.OpenGL.Core.Ext.Vertexes*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_Ext_Vertexes_SearchAThing_OpenGL_Core_IGLFigure_" data-uid="SearchAThing.OpenGL.Core.Ext.Vertexes(SearchAThing.OpenGL.Core.IGLFigure)">
+  Vertexes(IGLFigure)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/figure/GLFigureBase.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertexes belonging this figure [object].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;GLVertex&gt; Vertexes(this IGLFigure figure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html">IGLFigure</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html">GLVertex</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/Utils.cs/#L3" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

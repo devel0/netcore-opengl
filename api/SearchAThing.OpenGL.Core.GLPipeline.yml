@@ -1,0 +1,1532 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLPipeline
+  commentId: T:SearchAThing.OpenGL.Core.GLPipeline
+  id: GLPipeline
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.GLPipeline.#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.String,System.String,System.Boolean,System.String)
+  - SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation
+  - SearchAThing.OpenGL.Core.GLPipeline.FragmentShader
+  - SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource
+  - SearchAThing.OpenGL.Core.GLPipeline.FriendlyName
+  - SearchAThing.OpenGL.Core.GLPipeline.GL
+  - SearchAThing.OpenGL.Core.GLPipeline.GLContext
+  - SearchAThing.OpenGL.Core.GLPipeline.GeometryShader
+  - SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource
+  - SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation(System.String)
+  - SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding(System.String,System.UInt32@,System.UInt32@)
+  - SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation(System.String)
+  - SearchAThing.OpenGL.Core.GLPipeline.Program
+  - SearchAThing.OpenGL.Core.GLPipeline.SetBool(System.String,System.Boolean)
+  - SearchAThing.OpenGL.Core.GLPipeline.SetFloat(System.String,System.Single)
+  - SearchAThing.OpenGL.Core.GLPipeline.SetInt(System.String,System.Int32)
+  - SearchAThing.OpenGL.Core.GLPipeline.SetMat4(System.String,System.Numerics.Matrix4x4)
+  - SearchAThing.OpenGL.Core.GLPipeline.SetVec2(System.String,System.Numerics.Vector2@)
+  - SearchAThing.OpenGL.Core.GLPipeline.SetVec3(System.String,System.Numerics.Vector3@)
+  - SearchAThing.OpenGL.Core.GLPipeline.SetVec4(System.String,System.Numerics.Vector4@)
+  - SearchAThing.OpenGL.Core.GLPipeline.TraceWarnings
+  - SearchAThing.OpenGL.Core.GLPipeline.Use
+  - SearchAThing.OpenGL.Core.GLPipeline.VertexShader
+  - SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource
+  langs:
+  - csharp
+  - vb
+  name: GLPipeline
+  nameWithType: GLPipeline
+  fullName: SearchAThing.OpenGL.Core.GLPipeline
+  type: Class
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLPipeline
+    path: src/core/render/GLShader.cs
+    startLine: 6
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Gl pipeline object.<br />
+
+    Contains vertex, geometry and fragment shaders where defined and helper method to set uniforms, attributes ans storage blocks.
+  example: []
+  syntax:
+    content: 'public class GLPipeline : IGLContextObject'
+    content.vb: Public Class GLPipeline Implements IGLContextObject
+  inheritance:
+  - System.Object
+  implements:
+  - SearchAThing.OpenGL.Core.IGLContextObject
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GLContext
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.GLContext
+  id: GLContext
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GLContext
+  nameWithType: GLPipeline.GLContext
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GLContext
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLContext
+    path: src/core/render/GLShader.cs
+    startLine: 12
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl context.
+  example: []
+  syntax:
+    content: public GLContext GLContext { get; }
+    parameters: []
+    return:
+      type: SearchAThing.OpenGL.Core.GLContext
+    content.vb: Public Property GLContext As GLContext
+  overload: SearchAThing.OpenGL.Core.GLPipeline.GLContext*
+  implements:
+  - SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GL
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.GL
+  id: GL
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GL
+  nameWithType: GLPipeline.GL
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GL
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GL
+    path: src/core/render/GLShader.cs
+    startLine: 17
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl api.
+  example: []
+  syntax:
+    content: public GL GL { get; }
+    parameters: []
+    return:
+      type: Silk.NET.OpenGL.GL
+    content.vb: Public ReadOnly Property GL As GL
+  overload: SearchAThing.OpenGL.Core.GLPipeline.GL*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource
+  id: VertexShaderSource
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: VertexShaderSource
+  nameWithType: GLPipeline.VertexShaderSource
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: VertexShaderSource
+    path: src/core/render/GLShader.cs
+    startLine: 22
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: GLSL source code of the vertex shader.
+  example: []
+  syntax:
+    content: public string? VertexShaderSource { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property VertexShaderSource As String
+  overload: SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource
+  id: GeometryShaderSource
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GeometryShaderSource
+  nameWithType: GLPipeline.GeometryShaderSource
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GeometryShaderSource
+    path: src/core/render/GLShader.cs
+    startLine: 27
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: GLSL source code of the geometry shader.
+  example: []
+  syntax:
+    content: public string? GeometryShaderSource { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GeometryShaderSource As String
+  overload: SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource
+  id: FragmentShaderSource
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: FragmentShaderSource
+  nameWithType: GLPipeline.FragmentShaderSource
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FragmentShaderSource
+    path: src/core/render/GLShader.cs
+    startLine: 32
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: GLSL source code of the fragment shader.
+  example: []
+  syntax:
+    content: public string? FragmentShaderSource { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FragmentShaderSource As String
+  overload: SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.TraceWarnings
+  commentId: F:SearchAThing.OpenGL.Core.GLPipeline.TraceWarnings
+  id: TraceWarnings
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: TraceWarnings
+  nameWithType: GLPipeline.TraceWarnings
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.TraceWarnings
+  type: Field
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TraceWarnings
+    path: src/core/render/GLShader.cs
+    startLine: 41
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: If true shader warning are logged to Debug.WriteLine.
+  example: []
+  syntax:
+    content: public bool TraceWarnings
+    return:
+      type: System.Boolean
+    content.vb: Public TraceWarnings As Boolean
+- uid: SearchAThing.OpenGL.Core.GLPipeline.VertexShader
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.VertexShader
+  id: VertexShader
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: VertexShader
+  nameWithType: GLPipeline.VertexShader
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.VertexShader
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: VertexShader
+    path: src/core/render/GLShader.cs
+    startLine: 48
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl vertex shader id.
+  example: []
+  syntax:
+    content: public uint VertexShader { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property VertexShader As UInteger
+  overload: SearchAThing.OpenGL.Core.GLPipeline.VertexShader*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GeometryShader
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.GeometryShader
+  id: GeometryShader
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GeometryShader
+  nameWithType: GLPipeline.GeometryShader
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GeometryShader
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GeometryShader
+    path: src/core/render/GLShader.cs
+    startLine: 62
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl geometry shader id.
+  example: []
+  syntax:
+    content: public uint GeometryShader { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property GeometryShader As UInteger
+  overload: SearchAThing.OpenGL.Core.GLPipeline.GeometryShader*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.FragmentShader
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.FragmentShader
+  id: FragmentShader
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: FragmentShader
+  nameWithType: GLPipeline.FragmentShader
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.FragmentShader
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FragmentShader
+    path: src/core/render/GLShader.cs
+    startLine: 76
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl fragment shader id.
+  example: []
+  syntax:
+    content: public uint FragmentShader { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property FragmentShader As UInteger
+  overload: SearchAThing.OpenGL.Core.GLPipeline.FragmentShader*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.Program
+  commentId: F:SearchAThing.OpenGL.Core.GLPipeline.Program
+  id: Program
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: Program
+  nameWithType: GLPipeline.Program
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.Program
+  type: Field
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Program
+    path: src/core/render/GLShader.cs
+    startLine: 88
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Gl Program id.
+  example: []
+  syntax:
+    content: public uint Program
+    return:
+      type: System.UInt32
+    content.vb: Public Program As UInteger
+- uid: SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation
+  id: ExceptionOnMissingLocation
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: ExceptionOnMissingLocation
+  nameWithType: GLPipeline.ExceptionOnMissingLocation
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: ExceptionOnMissingLocation
+    path: src/core/render/GLShader.cs
+    startLine: 93
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: 'If set true an exception will generated if setting a non existant uniform. (Default: false).'
+  example: []
+  syntax:
+    content: public bool ExceptionOnMissingLocation { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ExceptionOnMissingLocation As Boolean
+  overload: SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.FriendlyName
+  commentId: P:SearchAThing.OpenGL.Core.GLPipeline.FriendlyName
+  id: FriendlyName
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: FriendlyName
+  nameWithType: GLPipeline.FriendlyName
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.FriendlyName
+  type: Property
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FriendlyName
+    path: src/core/render/GLShader.cs
+    startLine: 98
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Custom friendly name of the shader.
+  example: []
+  syntax:
+    content: public string FriendlyName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FriendlyName As String
+  overload: SearchAThing.OpenGL.Core.GLPipeline.FriendlyName*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.String,System.String,System.Boolean,System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.String,System.String,System.Boolean,System.String)
+  id: '#ctor(SearchAThing.OpenGL.Core.GLContext,System.String,System.String,System.String,System.Boolean,System.String)'
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GLPipeline(GLContext, string?, string?, string?, bool, string)
+  nameWithType: GLPipeline.GLPipeline(GLContext, string?, string?, string?, bool, string)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GLPipeline(SearchAThing.OpenGL.Core.GLContext, string?, string?, string?, bool, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: .ctor
+    path: src/core/render/GLShader.cs
+    startLine: 111
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Create a gl shader.
+  example: []
+  syntax:
+    content: public GLPipeline(GLContext glContext, string? vertexShaderSource = null, string? geometryShaderSource = null, string? fragmentShaderSource = null, bool exceptionOnMissingLocation = false, string friendlyName = "")
+    parameters:
+    - id: glContext
+      type: SearchAThing.OpenGL.Core.GLContext
+      description: Gl context.
+    - id: vertexShaderSource
+      type: System.String
+      description: (Optional) GLSL source code of the vertex shader.
+    - id: geometryShaderSource
+      type: System.String
+      description: (Optional) GLSL source code of the geometry shader.
+    - id: fragmentShaderSource
+      type: System.String
+      description: (Optional) GLSL source code of the fragment shader.
+    - id: exceptionOnMissingLocation
+      type: System.Boolean
+      description: '(Optional) If true an exception will generated if setting a non existant uniform. (Default: false).'
+    - id: friendlyName
+      type: System.String
+      description: (Optional) Friendly shader name.
+    content.vb: Public Sub New(glContext As GLContext, vertexShaderSource As String = Nothing, geometryShaderSource As String = Nothing, fragmentShaderSource As String = Nothing, exceptionOnMissingLocation As Boolean = False, friendlyName As String = "")
+  overload: SearchAThing.OpenGL.Core.GLPipeline.#ctor*
+  nameWithType.vb: GLPipeline.New(GLContext, String, String, String, Boolean, String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.New(SearchAThing.OpenGL.Core.GLContext, String, String, String, Boolean, String)
+  name.vb: New(GLContext, String, String, String, Boolean, String)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.Use
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.Use
+  id: Use
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: Use()
+  nameWithType: GLPipeline.Use()
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.Use()
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Use
+    path: src/core/render/GLShader.cs
+    startLine: 192
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Use the program containing pipeline of shaders configured here.
+  example: []
+  syntax:
+    content: public void Use()
+    content.vb: Public Sub Use()
+  overload: SearchAThing.OpenGL.Core.GLPipeline.Use*
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation(System.String)
+  id: GetUniformLocation(System.String)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GetUniformLocation(string)
+  nameWithType: GLPipeline.GetUniformLocation(string)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GetUniformLocation
+    path: src/core/render/GLShader.cs
+    startLine: 199
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Retrieve the uniform id by the given uniform name.
+  example: []
+  syntax:
+    content: public uint? GetUniformLocation(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the location for which retrieve the id.
+    return:
+      type: System.Nullable{System.UInt32}
+      description: Id of the uniform.
+    content.vb: Public Function GetUniformLocation(name As String) As UInteger?
+  overload: SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation*
+  nameWithType.vb: GLPipeline.GetUniformLocation(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation(String)
+  name.vb: GetUniformLocation(String)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation(System.String)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation(System.String)
+  id: GetAttributeLocation(System.String)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GetAttributeLocation(string)
+  nameWithType: GLPipeline.GetAttributeLocation(string)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation(string)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GetAttributeLocation
+    path: src/core/render/GLShader.cs
+    startLine: 227
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Retrieve the attribute location by the given attribute name.
+  example: []
+  syntax:
+    content: public uint? GetAttributeLocation(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Attribute name for which retrieve the id.
+    return:
+      type: System.Nullable{System.UInt32}
+      description: Id of the attribute.
+    content.vb: Public Function GetAttributeLocation(name As String) As UInteger?
+  overload: SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation*
+  nameWithType.vb: GLPipeline.GetAttributeLocation(String)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation(String)
+  name.vb: GetAttributeLocation(String)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding(System.String,System.UInt32@,System.UInt32@)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding(System.String,System.UInt32@,System.UInt32@)
+  id: GetStorageBlockBinding(System.String,System.UInt32@,System.UInt32@)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: GetStorageBlockBinding(string, out uint, out uint)
+  nameWithType: GLPipeline.GetStorageBlockBinding(string, out uint, out uint)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding(string, out uint, out uint)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GetStorageBlockBinding
+    path: src/core/render/GLShader.cs
+    startLine: 262
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Eetrieve program resource index of given ssbo and retrieve associated binding.
+
+    a shader unique shared storage binding is auto incremented if no default associated binding found in shader.
+  example: []
+  syntax:
+    content: public bool GetStorageBlockBinding(string name, out uint storageBlockIndex, out uint storageBlockBinding)
+    parameters:
+    - id: name
+      type: System.String
+      description: SSBO name.
+    - id: storageBlockIndex
+      type: System.UInt32
+      description: Resulting SSBO block index.
+    - id: storageBlockBinding
+      type: System.UInt32
+      description: Resulting SSBO block binding.
+    return:
+      type: System.Boolean
+      description: True if SSBO found.
+    content.vb: Public Function GetStorageBlockBinding(name As String, storageBlockIndex As UInteger, storageBlockBinding As UInteger) As Boolean
+  overload: SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding*
+  nameWithType.vb: GLPipeline.GetStorageBlockBinding(String, UInteger, UInteger)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding(String, UInteger, UInteger)
+  name.vb: GetStorageBlockBinding(String, UInteger, UInteger)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetBool(System.String,System.Boolean)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.SetBool(System.String,System.Boolean)
+  id: SetBool(System.String,System.Boolean)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetBool(string, bool)
+  nameWithType: GLPipeline.SetBool(string, bool)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetBool(string, bool)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetBool
+    path: src/core/render/GLShader.cs
+    startLine: 287
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Set bool uniform variable.
+  example: []
+  syntax:
+    content: public void SetBool(string name, bool value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Uniform variable name.
+    - id: value
+      type: System.Boolean
+      description: Value to set.
+    content.vb: Public Sub SetBool(name As String, value As Boolean)
+  overload: SearchAThing.OpenGL.Core.GLPipeline.SetBool*
+  nameWithType.vb: GLPipeline.SetBool(String, Boolean)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.SetBool(String, Boolean)
+  name.vb: SetBool(String, Boolean)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetInt(System.String,System.Int32)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.SetInt(System.String,System.Int32)
+  id: SetInt(System.String,System.Int32)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetInt(string, int)
+  nameWithType: GLPipeline.SetInt(string, int)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetInt(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetInt
+    path: src/core/render/GLShader.cs
+    startLine: 298
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Set int uniform variable.
+  example: []
+  syntax:
+    content: public void SetInt(string name, int value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Uniform variable name.
+    - id: value
+      type: System.Int32
+      description: Value to set.
+    content.vb: Public Sub SetInt(name As String, value As Integer)
+  overload: SearchAThing.OpenGL.Core.GLPipeline.SetInt*
+  nameWithType.vb: GLPipeline.SetInt(String, Integer)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.SetInt(String, Integer)
+  name.vb: SetInt(String, Integer)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetFloat(System.String,System.Single)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.SetFloat(System.String,System.Single)
+  id: SetFloat(System.String,System.Single)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetFloat(string, float)
+  nameWithType: GLPipeline.SetFloat(string, float)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetFloat(string, float)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetFloat
+    path: src/core/render/GLShader.cs
+    startLine: 309
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Set float uniform variable.
+  example: []
+  syntax:
+    content: public void SetFloat(string name, float value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Uniform variable name.
+    - id: value
+      type: System.Single
+      description: Value to set.
+    content.vb: Public Sub SetFloat(name As String, value As Single)
+  overload: SearchAThing.OpenGL.Core.GLPipeline.SetFloat*
+  nameWithType.vb: GLPipeline.SetFloat(String, Single)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.SetFloat(String, Single)
+  name.vb: SetFloat(String, Single)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetVec2(System.String,System.Numerics.Vector2@)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.SetVec2(System.String,System.Numerics.Vector2@)
+  id: SetVec2(System.String,System.Numerics.Vector2@)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetVec2(string, in Vector2)
+  nameWithType: GLPipeline.SetVec2(string, in Vector2)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetVec2(string, in System.Numerics.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetVec2
+    path: src/core/render/GLShader.cs
+    startLine: 320
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Set Vector2 uniform variable.
+  example: []
+  syntax:
+    content: public void SetVec2(string name, in Vector2 value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Uniform variable name.
+    - id: value
+      type: System.Numerics.Vector2
+      description: Value to set.
+    content.vb: Public Sub SetVec2(name As String, value As Vector2)
+  overload: SearchAThing.OpenGL.Core.GLPipeline.SetVec2*
+  nameWithType.vb: GLPipeline.SetVec2(String, Vector2)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.SetVec2(String, System.Numerics.Vector2)
+  name.vb: SetVec2(String, Vector2)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetVec3(System.String,System.Numerics.Vector3@)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.SetVec3(System.String,System.Numerics.Vector3@)
+  id: SetVec3(System.String,System.Numerics.Vector3@)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetVec3(string, in Vector3)
+  nameWithType: GLPipeline.SetVec3(string, in Vector3)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetVec3(string, in System.Numerics.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetVec3
+    path: src/core/render/GLShader.cs
+    startLine: 331
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Set Vector3 uniform variable.
+  example: []
+  syntax:
+    content: public void SetVec3(string name, in Vector3 value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Uniform variable name.
+    - id: value
+      type: System.Numerics.Vector3
+      description: Value to set.
+    content.vb: Public Sub SetVec3(name As String, value As Vector3)
+  overload: SearchAThing.OpenGL.Core.GLPipeline.SetVec3*
+  nameWithType.vb: GLPipeline.SetVec3(String, Vector3)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.SetVec3(String, System.Numerics.Vector3)
+  name.vb: SetVec3(String, Vector3)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetVec4(System.String,System.Numerics.Vector4@)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.SetVec4(System.String,System.Numerics.Vector4@)
+  id: SetVec4(System.String,System.Numerics.Vector4@)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetVec4(string, in Vector4)
+  nameWithType: GLPipeline.SetVec4(string, in Vector4)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetVec4(string, in System.Numerics.Vector4)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetVec4
+    path: src/core/render/GLShader.cs
+    startLine: 342
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Set Vector4 uniform variable.
+  example: []
+  syntax:
+    content: public void SetVec4(string name, in Vector4 value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Uniform variable name.
+    - id: value
+      type: System.Numerics.Vector4
+      description: Value to set.
+    content.vb: Public Sub SetVec4(name As String, value As Vector4)
+  overload: SearchAThing.OpenGL.Core.GLPipeline.SetVec4*
+  nameWithType.vb: GLPipeline.SetVec4(String, Vector4)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.SetVec4(String, System.Numerics.Vector4)
+  name.vb: SetVec4(String, Vector4)
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetMat4(System.String,System.Numerics.Matrix4x4)
+  commentId: M:SearchAThing.OpenGL.Core.GLPipeline.SetMat4(System.String,System.Numerics.Matrix4x4)
+  id: SetMat4(System.String,System.Numerics.Matrix4x4)
+  parent: SearchAThing.OpenGL.Core.GLPipeline
+  langs:
+  - csharp
+  - vb
+  name: SetMat4(string, Matrix4x4)
+  nameWithType: GLPipeline.SetMat4(string, Matrix4x4)
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetMat4(string, System.Numerics.Matrix4x4)
+  type: Method
+  source:
+    remote:
+      path: src/core/render/GLShader.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: SetMat4
+    path: src/core/render/GLShader.cs
+    startLine: 353
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Set Matrix4x4 uniform variable.
+  example: []
+  syntax:
+    content: public void SetMat4(string name, Matrix4x4 value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Uniform variable name.
+    - id: value
+      type: System.Numerics.Matrix4x4
+      description: Value to set.
+    content.vb: Public Sub SetMat4(name As String, value As Matrix4x4)
+  overload: SearchAThing.OpenGL.Core.GLPipeline.SetMat4*
+  nameWithType.vb: GLPipeline.SetMat4(String, Matrix4x4)
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.SetMat4(String, System.Numerics.Matrix4x4)
+  name.vb: SetMat4(String, Matrix4x4)
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SearchAThing.OpenGL.Core.IGLContextObject
+  commentId: T:SearchAThing.OpenGL.Core.IGLContextObject
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.IGLContextObject.html
+  name: IGLContextObject
+  nameWithType: IGLContextObject
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GLContext*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.GLContext
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_GLContext
+  name: GLContext
+  nameWithType: GLPipeline.GLContext
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GLContext
+- uid: SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  commentId: P:SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+  parent: SearchAThing.OpenGL.Core.IGLContextObject
+  href: SearchAThing.OpenGL.Core.IGLContextObject.html#SearchAThing_OpenGL_Core_IGLContextObject_GLContext
+  name: GLContext
+  nameWithType: IGLContextObject.GLContext
+  fullName: SearchAThing.OpenGL.Core.IGLContextObject.GLContext
+- uid: SearchAThing.OpenGL.Core.GLContext
+  commentId: T:SearchAThing.OpenGL.Core.GLContext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLContext.html
+  name: GLContext
+  nameWithType: GLContext
+  fullName: SearchAThing.OpenGL.Core.GLContext
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GL*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.GL
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_GL
+  name: GL
+  nameWithType: GLPipeline.GL
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GL
+- uid: Silk.NET.OpenGL.GL
+  commentId: T:Silk.NET.OpenGL.GL
+  parent: Silk.NET.OpenGL
+  isExternal: true
+  name: GL
+  nameWithType: GL
+  fullName: Silk.NET.OpenGL.GL
+- uid: Silk.NET.OpenGL
+  commentId: N:Silk.NET.OpenGL
+  isExternal: true
+  name: Silk.NET.OpenGL
+  nameWithType: Silk.NET.OpenGL
+  fullName: Silk.NET.OpenGL
+  spec.csharp:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+  spec.vb:
+  - uid: Silk
+    name: Silk
+    isExternal: true
+  - name: .
+  - uid: Silk.NET
+    name: NET
+    isExternal: true
+  - name: .
+  - uid: Silk.NET.OpenGL
+    name: OpenGL
+    isExternal: true
+- uid: SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_VertexShaderSource
+  name: VertexShaderSource
+  nameWithType: GLPipeline.VertexShaderSource
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.VertexShaderSource
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_GeometryShaderSource
+  name: GeometryShaderSource
+  nameWithType: GLPipeline.GeometryShaderSource
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GeometryShaderSource
+- uid: SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_FragmentShaderSource
+  name: FragmentShaderSource
+  nameWithType: GLPipeline.FragmentShaderSource
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.FragmentShaderSource
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SearchAThing.OpenGL.Core.GLPipeline.VertexShader*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.VertexShader
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_VertexShader
+  name: VertexShader
+  nameWithType: GLPipeline.VertexShader
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.VertexShader
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GeometryShader*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.GeometryShader
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_GeometryShader
+  name: GeometryShader
+  nameWithType: GLPipeline.GeometryShader
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GeometryShader
+- uid: SearchAThing.OpenGL.Core.GLPipeline.FragmentShader*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.FragmentShader
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_FragmentShader
+  name: FragmentShader
+  nameWithType: GLPipeline.FragmentShader
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.FragmentShader
+- uid: SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_ExceptionOnMissingLocation
+  name: ExceptionOnMissingLocation
+  nameWithType: GLPipeline.ExceptionOnMissingLocation
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.ExceptionOnMissingLocation
+- uid: SearchAThing.OpenGL.Core.GLPipeline.FriendlyName*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.FriendlyName
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_FriendlyName
+  name: FriendlyName
+  nameWithType: GLPipeline.FriendlyName
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.FriendlyName
+- uid: SearchAThing.OpenGL.Core.GLPipeline.#ctor*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.#ctor
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline__ctor_SearchAThing_OpenGL_Core_GLContext_System_String_System_String_System_String_System_Boolean_System_String_
+  name: GLPipeline
+  nameWithType: GLPipeline.GLPipeline
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GLPipeline
+  nameWithType.vb: GLPipeline.New
+  fullName.vb: SearchAThing.OpenGL.Core.GLPipeline.New
+  name.vb: New
+- uid: SearchAThing.OpenGL.Core.GLPipeline.Use*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.Use
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_Use
+  name: Use
+  nameWithType: GLPipeline.Use
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.Use
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_GetUniformLocation_System_String_
+  name: GetUniformLocation
+  nameWithType: GLPipeline.GetUniformLocation
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GetUniformLocation
+- uid: System.Nullable{System.UInt32}
+  commentId: T:System.Nullable{System.UInt32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint?
+  nameWithType: uint?
+  fullName: uint?
+  nameWithType.vb: UInteger?
+  fullName.vb: UInteger?
+  name.vb: UInteger?
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_GetAttributeLocation_System_String_
+  name: GetAttributeLocation
+  nameWithType: GLPipeline.GetAttributeLocation
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GetAttributeLocation
+- uid: SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_GetStorageBlockBinding_System_String_System_UInt32__System_UInt32__
+  name: GetStorageBlockBinding
+  nameWithType: GLPipeline.GetStorageBlockBinding
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.GetStorageBlockBinding
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetBool*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.SetBool
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_SetBool_System_String_System_Boolean_
+  name: SetBool
+  nameWithType: GLPipeline.SetBool
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetBool
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetInt*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.SetInt
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_SetInt_System_String_System_Int32_
+  name: SetInt
+  nameWithType: GLPipeline.SetInt
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetInt
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetFloat*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.SetFloat
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_SetFloat_System_String_System_Single_
+  name: SetFloat
+  nameWithType: GLPipeline.SetFloat
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetFloat
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetVec2*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.SetVec2
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_SetVec2_System_String_System_Numerics_Vector2__
+  name: SetVec2
+  nameWithType: GLPipeline.SetVec2
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetVec2
+- uid: System.Numerics.Vector2
+  commentId: T:System.Numerics.Vector2
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector2
+  name: Vector2
+  nameWithType: Vector2
+  fullName: System.Numerics.Vector2
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetVec3*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.SetVec3
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_SetVec3_System_String_System_Numerics_Vector3__
+  name: SetVec3
+  nameWithType: GLPipeline.SetVec3
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetVec3
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector3
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetVec4*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.SetVec4
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_SetVec4_System_String_System_Numerics_Vector4__
+  name: SetVec4
+  nameWithType: GLPipeline.SetVec4
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetVec4
+- uid: System.Numerics.Vector4
+  commentId: T:System.Numerics.Vector4
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.vector4
+  name: Vector4
+  nameWithType: Vector4
+  fullName: System.Numerics.Vector4
+- uid: SearchAThing.OpenGL.Core.GLPipeline.SetMat4*
+  commentId: Overload:SearchAThing.OpenGL.Core.GLPipeline.SetMat4
+  href: SearchAThing.OpenGL.Core.GLPipeline.html#SearchAThing_OpenGL_Core_GLPipeline_SetMat4_System_String_System_Numerics_Matrix4x4_
+  name: SetMat4
+  nameWithType: GLPipeline.SetMat4
+  fullName: SearchAThing.OpenGL.Core.GLPipeline.SetMat4
+- uid: System.Numerics.Matrix4x4
+  commentId: T:System.Numerics.Matrix4x4
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: System.Numerics.Matrix4x4

@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.NotificationDelegate
+  commentId: T:SearchAThing.OpenGL.Core.NotificationDelegate
+  id: NotificationDelegate
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: NotificationDelegate
+  nameWithType: NotificationDelegate
+  fullName: SearchAThing.OpenGL.Core.NotificationDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: NotificationDelegate
+    path: src/core/render/GLModel.cs
+    startLine: 22
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: >-
+    Used by the avalonia GL control to listen for notification coming from the model.<br />
+
+    These notification will displayed using gui notification manager.
+  example: []
+  syntax:
+    content: public delegate void NotificationDelegate(string title, string msg, GLNotificationType type = GLNotificationType.Information)
+    parameters:
+    - id: title
+      type: System.String
+      description: Title of notification.
+    - id: msg
+      type: System.String
+      description: Message of notification.
+    - id: type
+      type: SearchAThing.OpenGL.Core.GLNotificationType
+      description: Icon/color type of notification.
+    content.vb: Public Delegate Sub NotificationDelegate(title As String, msg As String, type As GLNotificationType = GLNotificationType.Information)
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SearchAThing.OpenGL.Core.GLNotificationType
+  commentId: T:SearchAThing.OpenGL.Core.GLNotificationType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLNotificationType.html
+  name: GLNotificationType
+  nameWithType: GLNotificationType
+  fullName: SearchAThing.OpenGL.Core.GLNotificationType
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

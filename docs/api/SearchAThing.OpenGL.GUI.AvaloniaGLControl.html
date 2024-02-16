@@ -1,0 +1,3376 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AvaloniaGLControl | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AvaloniaGLControl | netcore-opengl ">
+      
+      <meta name="description" content="Avalonia gl control. It&#39;s a graphical ui  used to transfer  pixels to the window bitmap through the override of the avalonia  method that will be called by the avalonia framework every time the visual invalidates. When control size changed  will be invoked and  event emitted.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_GUI_AvaloniaGLControl.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.GUI.AvaloniaGLControl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl">
+
+
+
+  <h1 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl" class="text-break">
+Class AvaloniaGLControl  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Mouse.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.GUI.html">GUI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-gui.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Avalonia gl control.<br>
+It's a graphical ui <a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html">IRenderDevice</a> used to transfer <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl">GLControl</a> pixels
+to the window bitmap through the override of the avalonia <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_Render_Avalonia_Media_DrawingContext_">Render(DrawingContext)</a> method
+that will be called by the avalonia framework every time the visual invalidates.<br>
+When control size changed <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_">Invalidate(InvalidateEnum)</a> will be invoked and
+<a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLSizeChanged">GLSizeChanged</a> event emitted.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AvaloniaGLControl : Control, IDataContextProvider, ILogical, IThemeVariantHost, IResourceHost, IResourceNode, IStyleHost, ISetLogicalParent, ISetInheritanceParent, ISupportInitialize, IStyleable, IInputElement, IDataTemplateHost, INamed, ISetterValue, IRenderDevice, INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AvaloniaObject</span></div>
+      <div><span class="xref">Animatable</span></div>
+      <div><span class="xref">StyledElement</span></div>
+      <div><span class="xref">Visual</span></div>
+      <div><span class="xref">Layoutable</span></div>
+      <div><span class="xref">Interactive</span></div>
+      <div><span class="xref">InputElement</span></div>
+      <div><span class="xref">Control</span></div>
+      <div><span class="xref">AvaloniaGLControl</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IDataContextProvider</span></div>
+      <div><span class="xref">ILogical</span></div>
+      <div><span class="xref">IThemeVariantHost</span></div>
+      <div><span class="xref">IResourceHost</span></div>
+      <div><span class="xref">IResourceNode</span></div>
+      <div><span class="xref">IStyleHost</span></div>
+      <div><span class="xref">ISetLogicalParent</span></div>
+      <div><span class="xref">ISetInheritanceParent</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isupportinitialize">ISupportInitialize</a></div>
+      <div><span class="xref">IStyleable</span></div>
+      <div><span class="xref">IInputElement</span></div>
+      <div><span class="xref">IDataTemplateHost</span></div>
+      <div><span class="xref">INamed</span></div>
+      <div><span class="xref">ISetterValue</span></div>
+      <div><a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html">IRenderDevice</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">Control.FocusAdornerProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.TagProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextMenuProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextFlyoutProperty</span>
+    </div>
+    <div>
+      <span class="xref">Control.RequestBringIntoViewEvent</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextRequestedEvent</span>
+    </div>
+    <div>
+      <span class="xref">Control.LoadedEvent</span>
+    </div>
+    <div>
+      <span class="xref">Control.UnloadedEvent</span>
+    </div>
+    <div>
+      <span class="xref">Control.SizeChangedEvent</span>
+    </div>
+    <div>
+      <span class="xref">Control.GetTemplateFocusTarget()</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnLoaded(RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnUnloaded(RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnSizeChanged(SizeChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnAttachedToVisualTreeCore(VisualTreeAttachmentEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnDetachedFromVisualTreeCore(VisualTreeAttachmentEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnGotFocus(GotFocusEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnLostFocus(RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnCreateAutomationPeer()</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnKeyUp(KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.OnPropertyChanged(AvaloniaPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Control.FocusAdorner</span>
+    </div>
+    <div>
+      <span class="xref">Control.DataTemplates</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextMenu</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextFlyout</span>
+    </div>
+    <div>
+      <span class="xref">Control.IsLoaded</span>
+    </div>
+    <div>
+      <span class="xref">Control.Tag</span>
+    </div>
+    <div>
+      <span class="xref">Control.ContextRequested</span>
+    </div>
+    <div>
+      <span class="xref">Control.Loaded</span>
+    </div>
+    <div>
+      <span class="xref">Control.Unloaded</span>
+    </div>
+    <div>
+      <span class="xref">Control.SizeChanged</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.FocusableProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsEnabledProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsEffectivelyEnabledProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.CursorProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsKeyboardFocusWithinProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsFocusedProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsHitTestVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsPointerOverProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsTabStopProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.GotFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.LostFocusEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.KeyDownEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.KeyUpEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.TabIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.TextInputEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.TextInputMethodClientRequestedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerEnteredEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerExitedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerMovedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerPressedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerReleasedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerCaptureLostEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerWheelChangedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.TappedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.HoldingEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.DoubleTappedEvent</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.Focus(NavigationMethod, KeyModifiers)</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.OnKeyDown(KeyEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.OnTextInput(TextInputEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.OnPointerEntered(PointerEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.OnPointerExited(PointerEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.OnPointerCaptureLost(PointerCaptureLostEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.UpdateIsEffectivelyEnabled()</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.Focusable</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsEnabled</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.Cursor</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsKeyboardFocusWithin</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsFocused</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsHitTestVisible</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsPointerOver</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsTabStop</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsEffectivelyEnabled</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.TabIndex</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.KeyBindings</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.IsEnabledCore</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.GestureRecognizers</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.GotFocus</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.LostFocus</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.KeyDown</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.KeyUp</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.TextInput</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.TextInputMethodClientRequested</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerEntered</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerExited</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerMoved</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerPressed</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerReleased</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerCaptureLost</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.PointerWheelChanged</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.Tapped</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.Holding</span>
+    </div>
+    <div>
+      <span class="xref">InputElement.DoubleTapped</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.delegate">Interactive.AddHandler(RoutedEvent, Delegate, RoutingStrategies, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">Interactive.AddHandler&lt;TEventArgs&gt;(RoutedEvent&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;, RoutingStrategies, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.delegate">Interactive.RemoveHandler(RoutedEvent, Delegate)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">Interactive.RemoveHandler&lt;TEventArgs&gt;(RoutedEvent&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Interactive.RaiseEvent(RoutedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Interactive.BuildEventRoute(RoutedEvent)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.DesiredSizeProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.WidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.HeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MinWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MaxWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MinHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MaxHeightProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MarginProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.HorizontalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.VerticalAlignmentProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.UseLayoutRoundingProperty</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.UpdateLayout()</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.ApplyTemplate()</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.Measure(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.Arrange(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.InvalidateMeasure()</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.InvalidateArrange()</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.AffectsMeasure&lt;T&gt;(params AvaloniaProperty[])</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.AffectsArrange&lt;T&gt;(params AvaloniaProperty[])</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MeasureCore(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MeasureOverride(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.ArrangeCore(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.ArrangeOverride(Size)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.OnMeasureInvalidated()</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.OnVisualParentChanged(Visual, Visual)</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.Width</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.Height</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MinWidth</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MaxWidth</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MinHeight</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.MaxHeight</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.Margin</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.HorizontalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.VerticalAlignment</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.DesiredSize</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.IsMeasureValid</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.IsArrangeValid</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.UseLayoutRounding</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.EffectiveViewportChanged</span>
+    </div>
+    <div>
+      <span class="xref">Layoutable.LayoutUpdated</span>
+    </div>
+    <div>
+      <span class="xref">Visual.BoundsProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.ClipToBoundsProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.ClipProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.IsVisibleProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.OpacityProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.OpacityMaskProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.EffectProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.HasMirrorTransformProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.RenderTransformProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.RenderTransformOriginProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.FlowDirectionProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.VisualParentProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.ZIndexProperty</span>
+    </div>
+    <div>
+      <span class="xref">Visual.GetFlowDirection(Visual)</span>
+    </div>
+    <div>
+      <span class="xref">Visual.SetFlowDirection(Visual, FlowDirection)</span>
+    </div>
+    <div>
+      <span class="xref">Visual.InvalidateVisual()</span>
+    </div>
+    <div>
+      <span class="xref">Visual.AffectsRender&lt;T&gt;(params AvaloniaProperty[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Visual.LogicalChildrenCollectionChanged(object, NotifyCollectionChangedEventArgs)</a>
+    </div>
+    <div>
+      <span class="xref">Visual.OnAttachedToVisualTree(VisualTreeAttachmentEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Visual.OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Visual.InvalidateMirrorTransform()</span>
+    </div>
+    <div>
+      <span class="xref">Visual.Bounds</span>
+    </div>
+    <div>
+      <span class="xref">Visual.ClipToBounds</span>
+    </div>
+    <div>
+      <span class="xref">Visual.Clip</span>
+    </div>
+    <div>
+      <span class="xref">Visual.IsEffectivelyVisible</span>
+    </div>
+    <div>
+      <span class="xref">Visual.IsVisible</span>
+    </div>
+    <div>
+      <span class="xref">Visual.Opacity</span>
+    </div>
+    <div>
+      <span class="xref">Visual.OpacityMask</span>
+    </div>
+    <div>
+      <span class="xref">Visual.Effect</span>
+    </div>
+    <div>
+      <span class="xref">Visual.HasMirrorTransform</span>
+    </div>
+    <div>
+      <span class="xref">Visual.RenderTransform</span>
+    </div>
+    <div>
+      <span class="xref">Visual.RenderTransformOrigin</span>
+    </div>
+    <div>
+      <span class="xref">Visual.FlowDirection</span>
+    </div>
+    <div>
+      <span class="xref">Visual.ZIndex</span>
+    </div>
+    <div>
+      <span class="xref">Visual.VisualChildren</span>
+    </div>
+    <div>
+      <span class="xref">Visual.VisualRoot</span>
+    </div>
+    <div>
+      <span class="xref">Visual.BypassFlowDirectionPolicies</span>
+    </div>
+    <div>
+      <span class="xref">Visual.AttachedToVisualTree</span>
+    </div>
+    <div>
+      <span class="xref">Visual.DetachedFromVisualTree</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.DataContextProperty</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.NameProperty</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.ParentProperty</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.TemplatedParentProperty</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.ThemeProperty</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.BeginInit()</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.EndInit()</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.ApplyStyling()</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.InitializeIfNeeded()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">StyledElement.TryGetResource(object, ThemeVariant, out object)</a>
+    </div>
+    <div>
+      <span class="xref">StyledElement.OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.OnDetachedFromLogicalTree(LogicalTreeAttachmentEventArgs)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">StyledElement.OnDataContextChanged(EventArgs)</a>
+    </div>
+    <div>
+      <span class="xref">StyledElement.OnDataContextBeginUpdate()</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.OnDataContextEndUpdate()</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.OnInitialized()</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.Name</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.Classes</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.DataContext</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.IsInitialized</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.Styles</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.StyleKey</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.Resources</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.TemplatedParent</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.Theme</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.LogicalChildren</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.PseudoClasses</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.StyleKeyOverride</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.Parent</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.ActualThemeVariant</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.AttachedToLogicalTree</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.DetachedFromLogicalTree</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.DataContextChanged</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.Initialized</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.ResourcesChanged</span>
+    </div>
+    <div>
+      <span class="xref">StyledElement.ActualThemeVariantChanged</span>
+    </div>
+    <div>
+      <span class="xref">Animatable.TransitionsProperty</span>
+    </div>
+    <div>
+      <span class="xref">Animatable.OnPropertyChangedCore(AvaloniaPropertyChangedEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Animatable.Transitions</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.CheckAccess()</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.VerifyAccess()</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.ClearValue(AvaloniaProperty)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.ClearValue&lt;T&gt;(AvaloniaProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.ClearValue&lt;T&gt;(StyledProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.ClearValue&lt;T&gt;(DirectPropertyBase&lt;T&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">AvaloniaObject.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.GetValue(AvaloniaProperty)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.GetValue&lt;T&gt;(StyledProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.GetValue&lt;T&gt;(DirectPropertyBase&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.GetBaseValue&lt;T&gt;(StyledProperty&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.IsAnimating(AvaloniaProperty)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.IsSet(AvaloniaProperty)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">AvaloniaObject.SetValue(AvaloniaProperty, object, BindingPriority)</a>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.SetValue&lt;T&gt;(StyledProperty&lt;T&gt;, T, BindingPriority)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.SetValue&lt;T&gt;(DirectPropertyBase&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">AvaloniaObject.SetCurrentValue(AvaloniaProperty, object)</a>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.SetCurrentValue&lt;T&gt;(StyledProperty&lt;T&gt;, T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">AvaloniaObject.Bind(AvaloniaProperty, IObservable&lt;object&gt;, BindingPriority)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">AvaloniaObject.Bind&lt;T&gt;(StyledProperty&lt;T&gt;, IObservable&lt;object&gt;, BindingPriority)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">AvaloniaObject.Bind&lt;T&gt;(StyledProperty&lt;T&gt;, IObservable&lt;T&gt;, BindingPriority)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">AvaloniaObject.Bind&lt;T&gt;(StyledProperty&lt;T&gt;, IObservable&lt;BindingValue&lt;T&gt;&gt;, BindingPriority)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">AvaloniaObject.Bind&lt;T&gt;(DirectPropertyBase&lt;T&gt;, IObservable&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">AvaloniaObject.Bind&lt;T&gt;(DirectPropertyBase&lt;T&gt;, IObservable&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iobservable-1">AvaloniaObject.Bind&lt;T&gt;(DirectPropertyBase&lt;T&gt;, IObservable&lt;BindingValue&lt;T&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.CoerceValue(AvaloniaProperty)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">AvaloniaObject.UpdateDataValidation(AvaloniaProperty, BindingValueType, Exception)</a>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.RaisePropertyChanged&lt;T&gt;(DirectPropertyBase&lt;T&gt;, T, T)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.SetAndRaise&lt;T&gt;(DirectPropertyBase&lt;T&gt;, ref T, T)</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.InheritanceParent</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.this[AvaloniaProperty]</span>
+    </div>
+    <div>
+      <span class="xref">AvaloniaObject.this[IndexerDescriptor]</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl__ctor_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.#ctor*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl__ctor" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.#ctor">
+  AvaloniaGLControl()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an avalonia render device gl control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AvaloniaGLControl()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraRotateDownGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraRotateDownGesture">
+  CameraRotateDownGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraRotateDown">CameraRotateDown()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraRotateDownGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraRotateLeftGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraRotateLeftGesture">
+  CameraRotateLeftGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraRotateLeft">CameraRotateLeft()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraRotateLeftGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraRotateRightGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraRotateRightGesture">
+  CameraRotateRightGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraRotateRight">CameraRotateRight()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraRotateRightGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraRotateUpGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraRotateUpGesture">
+  CameraRotateUpGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraRotateUp">CameraRotateUp()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraRotateUpGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraTiltLeftGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraTiltLeftGesture">
+  CameraTiltLeftGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_TiltLeft">TiltLeft()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraTiltLeftGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraTiltRightGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraTiltRightGesture">
+  CameraTiltRightGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_TiltRight">TiltRight()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraTiltRightGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraZoomInGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraZoomInGesture">
+  CameraZoomInGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraZoomIn_System_Single_System_Boolean_">CameraZoomIn(float, bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraZoomInGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CameraZoomOutGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CameraZoomOutGesture">
+  CameraZoomOutGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraZoomOut_System_Single_System_Boolean_">CameraZoomOut(float, bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CameraZoomOutGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ClearSelectionGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ClearSelectionGesture">
+  ClearSelectionGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ClearSelection_System_Boolean_">ClearSelection(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ClearSelectionGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_CopySimpleCmdOfSelectionGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.CopySimpleCmdOfSelectionGesture">
+  CopySimpleCmdOfSelectionGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_GetSelectionSimpleCmd">GetSelectionSimpleCmd()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? CopySimpleCmdOfSelectionGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_DeleteSelectedGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.DeleteSelectedGesture">
+  DeleteSelectedGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_DeleteSelected">DeleteSelected()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? DeleteSelectedGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_InvalidateGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.InvalidateGesture">
+  InvalidateGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_Invalidate_SearchAThing_OpenGL_Core_InvalidateEnum_">Invalidate(InvalidateEnum)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? InvalidateGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ModelRotateDownGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ModelRotateDownGesture">
+  ModelRotateDownGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ModelRotateDown">ModelRotateDown()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ModelRotateDownGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ModelRotateLeftGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ModelRotateLeftGesture">
+  ModelRotateLeftGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ModelRotateLeft">ModelRotateLeft()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ModelRotateLeftGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ModelRotateRightGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ModelRotateRightGesture">
+  ModelRotateRightGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ModelRotateRight">ModelRotateRight()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ModelRotateRightGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ModelRotateUpGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ModelRotateUpGesture">
+  ModelRotateUpGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ModelRotateUp">ModelRotateUp()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ModelRotateUpGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_PanDownGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.PanDownGesture">
+  PanDownGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_PanDown">PanDown()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? PanDownGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_PanLeftGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.PanLeftGesture">
+  PanLeftGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_PanLeft">PanLeft()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? PanLeftGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_PanRightGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.PanRightGesture">
+  PanRightGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_PanRight">PanRight()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? PanRightGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_PanUpGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.PanUpGesture">
+  PanUpGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_PanUp">PanUp()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? PanUpGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_PasteSimpleCmdGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.PasteSimpleCmdGesture">
+  PasteSimpleCmdGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_PasteSimpleCmd_System_String_">PasteSimpleCmd(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? PasteSimpleCmdGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_RestoreViewGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.RestoreViewGesture">
+  RestoreViewGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_LoadView_System_String_">LoadView(string?)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? RestoreViewGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_RestoreViewLayoutGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.RestoreViewLayoutGesture">
+  RestoreViewLayoutGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_LoadViewLayout_System_String_">LoadViewLayout(string?)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? RestoreViewLayoutGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SaveViewGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SaveViewGesture">
+  SaveViewGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SaveView_System_String_">SaveView(string?)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? SaveViewGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SaveViewLayoutGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SaveViewLayoutGesture">
+  SaveViewLayoutGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_SaveViewLayout_System_String_">SaveViewLayout(string?)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? SaveViewLayoutGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SetRotationCenterGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SetRotationCenterGesture">
+  SetRotationCenterGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SetRotationCenter_System_Boolean_">SetRotationCenter(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? SetRotationCenterGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ShowDevToolGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ShowDevToolGesture">
+  ShowDevToolGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_ShowDevTool">ShowDevTool()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ShowDevToolGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitViewCloseGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitViewCloseGesture">
+  SplitViewCloseGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitClose">SplitClose()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? SplitViewCloseGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitViewHorizontalGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitViewHorizontalGesture">
+  SplitViewHorizontalGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitHorizontal">SplitHorizontal()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? SplitViewHorizontalGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitViewVerticalGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitViewVerticalGesture">
+  SplitViewVerticalGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitVertical">SplitVertical()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? SplitViewVerticalGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SwitchSelectionModeGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SwitchSelectionModeGesture">
+  SwitchSelectionModeGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_SwitchSelectionMode_System_Boolean_">SwitchSelectionMode(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? SwitchSelectionModeGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleCameraObjectGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleCameraObjectGesture">
+  ToggleCameraObjectGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShowCameraObject">ShowCameraObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleCameraObjectGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleIdentifyCoordGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleIdentifyCoordGesture">
+  ToggleIdentifyCoordGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ToggleIdentifyCoord">ToggleIdentifyCoord()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleIdentifyCoordGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleModelBBoxGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleModelBBoxGesture">
+  ToggleModelBBoxGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ShowModelBBox">ShowModelBBox</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleModelBBoxGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_TogglePerspectiveGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.TogglePerspectiveGesture">
+  TogglePerspectiveGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_TogglePerspective_System_Boolean_">TogglePerspective(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? TogglePerspectiveGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleShadeWithEdgeGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleShadeWithEdgeGesture">
+  ToggleShadeWithEdgeGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ToggleShadeWithEdge_System_Boolean_">ToggleShadeWithEdge(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleShadeWithEdgeGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleShowNormals" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleShowNormals">
+  ToggleShowNormals
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ToggleShowNormals_System_Boolean_">ToggleShowNormals(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleShowNormals</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleUseShadowGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleUseShadowGesture">
+  ToggleUseShadowGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ToggleUseShadow_System_Boolean_">ToggleUseShadow(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleUseShadowGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleUseTextureGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleUseTextureGesture">
+  ToggleUseTextureGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ToggleUseTexture_System_Boolean_">ToggleUseTexture(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleUseTextureGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleVertexVisibilityGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleVertexVisibilityGesture">
+  ToggleVertexVisibilityGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ToggleVertexVisibility_System_Boolean_">ToggleVertexVisibility(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleVertexVisibilityGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ToggleWireframeGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ToggleWireframeGesture">
+  ToggleWireframeGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ToggleWireframe_System_Boolean_">ToggleWireframe(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ToggleWireframeGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ViewBackGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ViewBackGesture">
+  ViewBackGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraView_SearchAThing_OpenGL_Core_CameraViewType_System_Boolean_System_Boolean_">CameraView(CameraViewType, bool, bool)</a> with <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html#SearchAThing_OpenGL_Core_CameraViewType_Back">Back</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ViewBackGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ViewBottomGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ViewBottomGesture">
+  ViewBottomGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraView_SearchAThing_OpenGL_Core_CameraViewType_System_Boolean_System_Boolean_">CameraView(CameraViewType, bool, bool)</a> with <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html#SearchAThing_OpenGL_Core_CameraViewType_Bottom">Bottom</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ViewBottomGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ViewFrontGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ViewFrontGesture">
+  ViewFrontGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraView_SearchAThing_OpenGL_Core_CameraViewType_System_Boolean_System_Boolean_">CameraView(CameraViewType, bool, bool)</a> with <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html#SearchAThing_OpenGL_Core_CameraViewType_Front">Front</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ViewFrontGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ViewLeftGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ViewLeftGesture">
+  ViewLeftGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraView_SearchAThing_OpenGL_Core_CameraViewType_System_Boolean_System_Boolean_">CameraView(CameraViewType, bool, bool)</a> with <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html#SearchAThing_OpenGL_Core_CameraViewType_Left">Left</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ViewLeftGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ViewRightGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ViewRightGesture">
+  ViewRightGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraView_SearchAThing_OpenGL_Core_CameraViewType_System_Boolean_System_Boolean_">CameraView(CameraViewType, bool, bool)</a> with <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html#SearchAThing_OpenGL_Core_CameraViewType_Right">Right</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ViewRightGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ViewTopGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ViewTopGesture">
+  ViewTopGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_CameraView_SearchAThing_OpenGL_Core_CameraViewType_System_Boolean_System_Boolean_">CameraView(CameraViewType, bool, bool)</a> with <a class="xref" href="SearchAThing.OpenGL.Core.CameraViewType.html#SearchAThing_OpenGL_Core_CameraViewType_Top">Top</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ViewTopGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ZoomFitGesture" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ZoomFitGesture">
+  ZoomFitGesture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Key gesture associated to <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html#SearchAThing_OpenGL_Core_GLControl_ZoomFit_System_Boolean_">ZoomFit(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyGesture? ZoomFitGesture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">KeyGesture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLContext_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GLContext*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLContext" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GLContext">
+  GLContext
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLContext GLContext { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLContext.html">GLContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GLControl*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GLControl">
+  GLControl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gl control allow operations on the gl model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLControl GLControl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html">GLControl</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLWindow_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GLWindow*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLWindow" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GLWindow">
+  GLWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L485"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve gl window associated to this avalonia gl control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GLWindow? GLWindow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.GUI.GLWindow.html">GLWindow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GridSplitterManager_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GridSplitterManager*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GridSplitterManager" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GridSplitterManager">
+  GridSplitterManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve attached gl split manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AvaloniaGLControlSplit GridSplitterManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControlSplit.html">AvaloniaGLControlSplit</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Size_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Size*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Size" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve actual size of the device screen (pixels).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Size Size { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_TransferGLPixelsCount_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.TransferGLPixelsCount*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_TransferGLPixelsCount" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.TransferGLPixelsCount">
+  TransferGLPixelsCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stats counter of <a class="xref" href="SearchAThing.OpenGL.Core.IRenderDevice.html#SearchAThing_OpenGL_Core_IRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_">TransferGLPixels(GL)</a> calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TransferGLPixelsCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ClearKeyGestures_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ClearKeyGestures*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ClearKeyGestures" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ClearKeyGestures">
+  ClearKeyGestures()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deassociate all key gestures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearKeyGestures()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GetViewNfo_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GetViewNfo*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GetViewNfo_System_Boolean_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GetViewNfo(System.Boolean)">
+  GetViewNfo(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve an object that can be serialized to save current <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl">GLControl</a> view config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ViewNfo GetViewNfo(bool includeLights = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includeLights</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (default) lights will saved within view nfo.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.ViewNfo.html">ViewNfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_HandleKeyDown_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.HandleKeyDown*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_HandleKeyDown_Avalonia_Input_KeyEventArgs_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.HandleKeyDown(Avalonia.Input.KeyEventArgs)">
+  HandleKeyDown(KeyEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleKeyDown(KeyEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <span class="xref">KeyEventArgs</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_LoadViewLayout_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.LoadViewLayout*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_LoadViewLayout_System_String_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.LoadViewLayout(System.String)">
+  LoadViewLayout(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load all <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl">GLControl</a> view config from the given pathfilename.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadViewLayout(string? pathfilename = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>(Optional) pathfilename which store view config.<br>
+If null <a class="xref" href="SearchAThing.OpenGL.GUI.Constants.html#SearchAThing_OpenGL_GUI_Constants_LayoutDefaultPathfilename">LayoutDefaultPathfilename</a> will be used.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerMoved_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerMoved*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerMoved_Avalonia_Input_PointerEventArgs_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerMoved(Avalonia.Input.PointerEventArgs)">
+  OnPointerMoved(PointerEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Mouse.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called before the <span class="xref">Avalonia.Input.InputElement.PointerMoved</span> event occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPointerMoved(PointerEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <span class="xref">PointerEventArgs</span></dt>
+    <dd><p>The event args.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerPressed_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerPressed*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerPressed_Avalonia_Input_PointerPressedEventArgs_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerPressed(Avalonia.Input.PointerPressedEventArgs)">
+  OnPointerPressed(PointerPressedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Mouse.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called before the <span class="xref">Avalonia.Input.InputElement.PointerPressed</span> event occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPointerPressed(PointerPressedEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <span class="xref">PointerPressedEventArgs</span></dt>
+    <dd><p>The event args.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerReleased_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerReleased*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerReleased_Avalonia_Input_PointerReleasedEventArgs_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerReleased(Avalonia.Input.PointerReleasedEventArgs)">
+  OnPointerReleased(PointerReleasedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Mouse.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called before the <span class="xref">Avalonia.Input.InputElement.PointerReleased</span> event occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPointerReleased(PointerReleasedEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <span class="xref">PointerReleasedEventArgs</span></dt>
+    <dd><p>The event args.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerWheelChanged_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerWheelChanged*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPointerWheelChanged_Avalonia_Input_PointerWheelEventArgs_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPointerWheelChanged(Avalonia.Input.PointerWheelEventArgs)">
+  OnPointerWheelChanged(PointerWheelEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Mouse.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called before the <span class="xref">Avalonia.Input.InputElement.PointerWheelChanged</span> event occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPointerWheelChanged(PointerWheelEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <span class="xref">PointerWheelEventArgs</span></dt>
+    <dd><p>The event args.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPropertyChanged_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPropertyChanged*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_OnPropertyChanged_System_String_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.OnPropertyChanged(System.String)">
+  OnPropertyChanged(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>invoke this method to forward propertchanged event notification.
+note: not needed to specify propertyName set by compiler service to called property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnPropertyChanged(string? propertyName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Post_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Post*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Post_System_Action_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Post(System.Action)">
+  Post(Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used by <a class="xref" href="SearchAThing.OpenGL.Core.GLControl.html">GLControl</a> to emit PropertyChanged event.<br>
+This is needed in most frameworks that allow ui interactions only from the ui thread itself.<br>
+Its necessary expecially if want to access ui data from a separate Task running in parallel.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Post(Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>Action to be executed in ui thread.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Render_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Render*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Render_Avalonia_Media_DrawingContext_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Render(Avalonia.Media.DrawingContext)">
+  Render(DrawingContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the visual to a <span class="xref">Avalonia.Media.DrawingContext</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Render(DrawingContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">DrawingContext</span></dt>
+    <dd><p>The drawing context.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SaveViewLayout_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SaveViewLayout*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SaveViewLayout_System_String_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SaveViewLayout(System.String)">
+  SaveViewLayout(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Save all <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl">GLControl</a> view config to the given pathfilename.<br></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveViewLayout(string? pathfilename = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathfilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>(Optional) pathfilename which store view config.<br>
+If null <a class="xref" href="SearchAThing.OpenGL.GUI.Constants.html#SearchAThing_OpenGL_GUI_Constants_LayoutDefaultPathfilename">LayoutDefaultPathfilename</a> will be used.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SetDefaultKeyGestures_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SetDefaultKeyGestures*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SetDefaultKeyGestures" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SetDefaultKeyGestures">
+  SetDefaultKeyGestures()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Key.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set all default key gestures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDefaultKeyGestures()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SetViewNfo_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SetViewNfo*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SetViewNfo_SearchAThing_OpenGL_Core_ViewNfo_System_Boolean_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SetViewNfo(SearchAThing.OpenGL.Core.ViewNfo,System.Boolean)">
+  SetViewNfo(ViewNfo, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restore <a class="xref" href="SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLControl">GLControl</a> view settings from given nfo object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetViewNfo(ViewNfo nfo, bool includeLights = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nfo</code> <a class="xref" href="SearchAThing.OpenGL.Core.ViewNfo.html">ViewNfo</a></dt>
+    <dd></dd>
+    <dt><code>includeLights</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true (default) lights set to the model.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ShowDevTool_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ShowDevTool*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_ShowDevTool" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.ShowDevTool">
+  ShowDevTool()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activates the <a class="xref" href="SearchAThing.OpenGL.GUI.GLDevTool.html">GLDevTool</a> developer tool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowDevTool()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Split_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Split*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_Split_SearchAThing_Desktop_GridSplitDirection_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.Split(SearchAThing.Desktop.GridSplitDirection)">
+  Split(GridSplitDirection)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Split current view in given direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Split(GridSplitDirection direction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>direction</code> <span class="xref">GridSplitDirection</span></dt>
+    <dd><p>Split direction.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitClose_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitClose*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitClose" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitClose">
+  SplitClose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Close current view ( if not is the last one ).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SplitClose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitHorizontal_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitHorizontal*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitHorizontal" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitHorizontal">
+  SplitHorizontal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Split current view horizontally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SplitHorizontal()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitVertical_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitVertical*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitVertical" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitVertical">
+  SplitVertical()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Split current view vertically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SplitVertical()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_TransferGLPixels_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.TransferGLPixels*"></a>
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_TransferGLPixels_Silk_NET_OpenGL_GL_" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.TransferGLPixels(Silk.NET.OpenGL.GL)">
+  TransferGLPixels(GL)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Use given GL object to issue a ReadPixel and transfer them to destination device.<br>
+Following some details how this function is involved in the rendering process:<br><a href="ReactiveUI.svg">image</a>
+\image html ReactiveUI.svg width=100%<br>
+<br>
+Here an example implementation given from the <a class="xref" href="SearchAThing.OpenGL.Core.OffscreenRenderDevice.html#SearchAThing_OpenGL_Core_OffscreenRenderDevice_TransferGLPixels_Silk_NET_OpenGL_GL_">TransferGLPixels(GL)</a>:<br>
+\snippet{'trimleft'} src/render/OffscreenRenderDevice.cs OffscreenTrasferGLPixels</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransferGLPixels(GL GL)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>GL</code> <span class="xref">GL</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_GLSizeChanged" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.GLSizeChanged">
+  GLSizeChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when size change detected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler? GLSizeChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_GUI_AvaloniaGLControl_PropertyChanged" data-uid="SearchAThing.OpenGL.GUI.AvaloniaGLControl.PropertyChanged">
+  PropertyChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler? PropertyChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/gui/AvaloniaGLControl.Mouse.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

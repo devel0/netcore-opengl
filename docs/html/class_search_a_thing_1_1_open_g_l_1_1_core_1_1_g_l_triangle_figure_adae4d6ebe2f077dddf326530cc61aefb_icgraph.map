@@ -1,4 +1,0 @@
-<map id="RebuildNormal" name="RebuildNormal">
-<area shape="rect" id="node1" title="Execute ComputeNormal function foreach triangle of this figure updating GLVertex.Normal...." alt="" coords="220,5,339,31"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_triangle_figure.html#a7e1376b783609151171384a003b3f24d" title="Set the triangle compute normal function. &#160;If no argument given a default per triangle normal compute..." alt="" coords="5,5,172,31"/>
-</map>

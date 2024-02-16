@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Shapes
+  commentId: N:SearchAThing.OpenGL.Shapes
+  id: SearchAThing.OpenGL.Shapes
+  children:
+  - SearchAThing.OpenGL.Shapes.Arrow
+  - SearchAThing.OpenGL.Shapes.Box
+  - SearchAThing.OpenGL.Shapes.Cone
+  - SearchAThing.OpenGL.Shapes.Constants
+  - SearchAThing.OpenGL.Shapes.ContourLegend
+  - SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  - SearchAThing.OpenGL.Shapes.Ellipse
+  - SearchAThing.OpenGL.Shapes.Toolkit
+  - SearchAThing.OpenGL.Shapes.UVSphere
+  langs:
+  - csharp
+  - vb
+  name: SearchAThing.OpenGL.Shapes
+  nameWithType: SearchAThing.OpenGL.Shapes
+  fullName: SearchAThing.OpenGL.Shapes
+  type: Namespace
+  assemblies:
+  - netcore-opengl-shapes
+references:
+- uid: SearchAThing.OpenGL.Shapes.Arrow
+  commentId: T:SearchAThing.OpenGL.Shapes.Arrow
+  href: SearchAThing.OpenGL.Shapes.Arrow.html
+  name: Arrow
+  nameWithType: Arrow
+  fullName: SearchAThing.OpenGL.Shapes.Arrow
+- uid: SearchAThing.OpenGL.Shapes.Box
+  commentId: T:SearchAThing.OpenGL.Shapes.Box
+  href: SearchAThing.OpenGL.Shapes.Box.html
+  name: Box
+  nameWithType: Box
+  fullName: SearchAThing.OpenGL.Shapes.Box
+- uid: SearchAThing.OpenGL.Shapes.Cone
+  commentId: T:SearchAThing.OpenGL.Shapes.Cone
+  href: SearchAThing.OpenGL.Shapes.Cone.html
+  name: Cone
+  nameWithType: Cone
+  fullName: SearchAThing.OpenGL.Shapes.Cone
+- uid: SearchAThing.OpenGL.Shapes.Constants
+  commentId: T:SearchAThing.OpenGL.Shapes.Constants
+  href: SearchAThing.OpenGL.Shapes.Constants.html
+  name: Constants
+  nameWithType: Constants
+  fullName: SearchAThing.OpenGL.Shapes.Constants
+- uid: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  commentId: T:SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+  parent: SearchAThing.OpenGL.Shapes
+  href: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate.html
+  name: CustomLegendLabelDelegate
+  nameWithType: CustomLegendLabelDelegate
+  fullName: SearchAThing.OpenGL.Shapes.CustomLegendLabelDelegate
+- uid: SearchAThing.OpenGL.Shapes.ContourLegend
+  commentId: T:SearchAThing.OpenGL.Shapes.ContourLegend
+  href: SearchAThing.OpenGL.Shapes.ContourLegend.html
+  name: ContourLegend
+  nameWithType: ContourLegend
+  fullName: SearchAThing.OpenGL.Shapes.ContourLegend
+- uid: SearchAThing.OpenGL.Shapes.Ellipse
+  commentId: T:SearchAThing.OpenGL.Shapes.Ellipse
+  href: SearchAThing.OpenGL.Shapes.Ellipse.html
+  name: Ellipse
+  nameWithType: Ellipse
+  fullName: SearchAThing.OpenGL.Shapes.Ellipse
+- uid: SearchAThing.OpenGL.Shapes.Toolkit
+  commentId: T:SearchAThing.OpenGL.Shapes.Toolkit
+  href: SearchAThing.OpenGL.Shapes.Toolkit.html
+  name: Toolkit
+  nameWithType: Toolkit
+  fullName: SearchAThing.OpenGL.Shapes.Toolkit
+- uid: SearchAThing.OpenGL.Shapes.UVSphere
+  commentId: T:SearchAThing.OpenGL.Shapes.UVSphere
+  href: SearchAThing.OpenGL.Shapes.UVSphere.html
+  name: UVSphere
+  nameWithType: UVSphere
+  fullName: SearchAThing.OpenGL.Shapes.UVSphere
+- uid: SearchAThing.OpenGL.Shapes
+  commentId: N:SearchAThing.OpenGL.Shapes
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Shapes
+  nameWithType: SearchAThing.OpenGL.Shapes
+  fullName: SearchAThing.OpenGL.Shapes
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html

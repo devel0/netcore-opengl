@@ -1,4 +1,0 @@
-<map id="WordlToEye" name="WordlToEye">
-<area shape="rect" id="node1" title="Converts given world space coord to the corresponding eye space coord." alt="" coords="187,5,284,31"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_toolkit.html#a5695a180fa95a54f1310b72ad1d6343e" title="Compute best fitting near and far values based on local space bbox given." alt="" coords="5,5,139,31"/>
-</map>

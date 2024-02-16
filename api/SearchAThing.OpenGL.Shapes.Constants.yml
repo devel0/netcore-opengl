@@ -1,0 +1,466 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Shapes.Constants
+  commentId: T:SearchAThing.OpenGL.Shapes.Constants
+  id: Constants
+  parent: SearchAThing.OpenGL.Shapes
+  children:
+  - SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_DIVISIONS
+  - SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+  - SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_LEN_FACTOR
+  - SearchAThing.OpenGL.Shapes.Constants.DEFAULT_CONE_DIVISIONS
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: SearchAThing.OpenGL.Shapes.Constants
+  type: Class
+  source:
+    remote:
+      path: src/shapes/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Constants
+    path: src/shapes/Constants.cs
+    startLine: 2
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  syntax:
+    content: public static class Constants
+    content.vb: Public Module Constants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_CONE_DIVISIONS
+  commentId: F:SearchAThing.OpenGL.Shapes.Constants.DEFAULT_CONE_DIVISIONS
+  id: DEFAULT_CONE_DIVISIONS
+  parent: SearchAThing.OpenGL.Shapes.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_CONE_DIVISIONS
+  nameWithType: Constants.DEFAULT_CONE_DIVISIONS
+  fullName: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_CONE_DIVISIONS
+  type: Field
+  source:
+    remote:
+      path: src/shapes/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_CONE_DIVISIONS
+    path: src/shapes/Constants.cs
+    startLine: 9
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: >-
+    Nr. of divisions for cone shape.
+
+    <xref href="SearchAThing.OpenGL.Shapes.Cone" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public const int DEFAULT_CONE_DIVISIONS = 8
+    return:
+      type: System.Int32
+    content.vb: Public Const DEFAULT_CONE_DIVISIONS As Integer = 8
+- uid: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_DIVISIONS
+  commentId: F:SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_DIVISIONS
+  id: DEFAULT_ARROW_DIVISIONS
+  parent: SearchAThing.OpenGL.Shapes.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ARROW_DIVISIONS
+  nameWithType: Constants.DEFAULT_ARROW_DIVISIONS
+  fullName: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_DIVISIONS
+  type: Field
+  source:
+    remote:
+      path: src/shapes/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ARROW_DIVISIONS
+    path: src/shapes/Constants.cs
+    startLine: 15
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: >-
+    Nr. of divisions for arrow shape.
+
+    <xref href="SearchAThing.OpenGL.Shapes.Arrow" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public const int DEFAULT_ARROW_DIVISIONS = 16
+    return:
+      type: System.Int32
+    content.vb: Public Const DEFAULT_ARROW_DIVISIONS As Integer = 16
+- uid: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+  commentId: F:SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+  id: DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+  parent: SearchAThing.OpenGL.Shapes.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+  nameWithType: Constants.DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+  fullName: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+  type: Field
+  source:
+    remote:
+      path: src/shapes/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ARROW_TIP_DIAMETER_FACTOR
+    path: src/shapes/Constants.cs
+    startLine: 20
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: Diameter of tip respect to the rod diameter.
+  example: []
+  syntax:
+    content: public const float DEFAULT_ARROW_TIP_DIAMETER_FACTOR = 2
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_ARROW_TIP_DIAMETER_FACTOR As Single = 2
+- uid: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_LEN_FACTOR
+  commentId: F:SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_LEN_FACTOR
+  id: DEFAULT_ARROW_TIP_LEN_FACTOR
+  parent: SearchAThing.OpenGL.Shapes.Constants
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ARROW_TIP_LEN_FACTOR
+  nameWithType: Constants.DEFAULT_ARROW_TIP_LEN_FACTOR
+  fullName: SearchAThing.OpenGL.Shapes.Constants.DEFAULT_ARROW_TIP_LEN_FACTOR
+  type: Field
+  source:
+    remote:
+      path: src/shapes/Constants.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: DEFAULT_ARROW_TIP_LEN_FACTOR
+    path: src/shapes/Constants.cs
+    startLine: 25
+  assemblies:
+  - netcore-opengl-shapes
+  namespace: SearchAThing.OpenGL.Shapes
+  summary: How much tip length is included respect to arrow total length.
+  example: []
+  syntax:
+    content: public const float DEFAULT_ARROW_TIP_LEN_FACTOR = 0.2
+    return:
+      type: System.Single
+    content.vb: Public Const DEFAULT_ARROW_TIP_LEN_FACTOR As Single = 0.2
+references:
+- uid: SearchAThing.OpenGL.Shapes
+  commentId: N:SearchAThing.OpenGL.Shapes
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Shapes
+  nameWithType: SearchAThing.OpenGL.Shapes
+  fullName: SearchAThing.OpenGL.Shapes
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Shapes
+    name: Shapes
+    href: SearchAThing.OpenGL.Shapes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SearchAThing.OpenGL.Shapes.Cone
+  commentId: T:SearchAThing.OpenGL.Shapes.Cone
+  href: SearchAThing.OpenGL.Shapes.Cone.html
+  name: Cone
+  nameWithType: Cone
+  fullName: SearchAThing.OpenGL.Shapes.Cone
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SearchAThing.OpenGL.Shapes.Arrow
+  commentId: T:SearchAThing.OpenGL.Shapes.Arrow
+  href: SearchAThing.OpenGL.Shapes.Arrow.html
+  name: Arrow
+  nameWithType: Arrow
+  fullName: SearchAThing.OpenGL.Shapes.Arrow
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

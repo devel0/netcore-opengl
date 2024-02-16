@@ -1,0 +1,1720 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.CameraViewType
+  commentId: T:SearchAThing.OpenGL.Core.CameraViewType
+  id: CameraViewType
+  parent: SearchAThing.OpenGL.Core
+  children:
+  - SearchAThing.OpenGL.Core.CameraViewType.Back
+  - SearchAThing.OpenGL.Core.CameraViewType.BackBottom
+  - SearchAThing.OpenGL.Core.CameraViewType.BackBottomLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.BackBottomRight
+  - SearchAThing.OpenGL.Core.CameraViewType.BackLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.BackRight
+  - SearchAThing.OpenGL.Core.CameraViewType.BackTop
+  - SearchAThing.OpenGL.Core.CameraViewType.BackTopLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.BackTopRight
+  - SearchAThing.OpenGL.Core.CameraViewType.Bottom
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomBottom
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomBottomLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomBottomRight
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomRight
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomTop
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomTopLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.BottomTopRight
+  - SearchAThing.OpenGL.Core.CameraViewType.Front
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontBottom
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontBottomLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontBottomRight
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontRight
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontTop
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontTopLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.FrontTopRight
+  - SearchAThing.OpenGL.Core.CameraViewType.Left
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftBottom
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftBottomLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftBottomRight
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftRight
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftTop
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftTopLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.LeftTopRight
+  - SearchAThing.OpenGL.Core.CameraViewType.Manual
+  - SearchAThing.OpenGL.Core.CameraViewType.Right
+  - SearchAThing.OpenGL.Core.CameraViewType.RightBottom
+  - SearchAThing.OpenGL.Core.CameraViewType.RightBottomLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.RightBottomRight
+  - SearchAThing.OpenGL.Core.CameraViewType.RightLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.RightRight
+  - SearchAThing.OpenGL.Core.CameraViewType.RightTop
+  - SearchAThing.OpenGL.Core.CameraViewType.RightTopLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.RightTopRight
+  - SearchAThing.OpenGL.Core.CameraViewType.Top
+  - SearchAThing.OpenGL.Core.CameraViewType.TopBottom
+  - SearchAThing.OpenGL.Core.CameraViewType.TopBottomLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.TopBottomRight
+  - SearchAThing.OpenGL.Core.CameraViewType.TopLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.TopRight
+  - SearchAThing.OpenGL.Core.CameraViewType.TopTop
+  - SearchAThing.OpenGL.Core.CameraViewType.TopTopLeft
+  - SearchAThing.OpenGL.Core.CameraViewType.TopTopRight
+  langs:
+  - csharp
+  - vb
+  name: CameraViewType
+  nameWithType: CameraViewType
+  fullName: SearchAThing.OpenGL.Core.CameraViewType
+  type: Enum
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: CameraViewType
+    path: src/core/render/CameraViewType.cs
+    startLine: 2
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  syntax:
+    content: public enum CameraViewType
+    content.vb: Public Enum CameraViewType
+  extensionMethods:
+  - SearchAThing.OpenGL.Core.CameraViewType.SearchAThing.OpenGL.Core.Ext.ShortString
+- uid: SearchAThing.OpenGL.Core.CameraViewType.Manual
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.Manual
+  id: Manual
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: Manual
+  nameWithType: CameraViewType.Manual
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.Manual
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Manual
+    path: src/core/render/CameraViewType.cs
+    startLine: 7
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: allow to specify x, y, z rotation angles
+  example: []
+  syntax:
+    content: Manual = 0
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.Left
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.Left
+  id: Left
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: CameraViewType.Left
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.Left
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Left
+    path: src/core/render/CameraViewType.cs
+    startLine: 12
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view l
+  example: []
+  syntax:
+    content: Left = 1
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.Right
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.Right
+  id: Right
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: CameraViewType.Right
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.Right
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Right
+    path: src/core/render/CameraViewType.cs
+    startLine: 17
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view r
+  example: []
+  syntax:
+    content: Right = 2
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.Front
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.Front
+  id: Front
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: Front
+  nameWithType: CameraViewType.Front
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.Front
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Front
+    path: src/core/render/CameraViewType.cs
+    startLine: 22
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view f
+  example: []
+  syntax:
+    content: Front = 3
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.Back
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.Back
+  id: Back
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: Back
+  nameWithType: CameraViewType.Back
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.Back
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Back
+    path: src/core/render/CameraViewType.cs
+    startLine: 27
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view b
+  example: []
+  syntax:
+    content: Back = 4
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.Top
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.Top
+  id: Top
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: CameraViewType.Top
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.Top
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Top
+    path: src/core/render/CameraViewType.cs
+    startLine: 32
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view t
+  example: []
+  syntax:
+    content: Top = 5
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.Bottom
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.Bottom
+  id: Bottom
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: Bottom
+  nameWithType: CameraViewType.Bottom
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.Bottom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: Bottom
+    path: src/core/render/CameraViewType.cs
+    startLine: 37
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view o
+  example: []
+  syntax:
+    content: Bottom = 6
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftLeft
+  id: LeftLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftLeft
+  nameWithType: CameraViewType.LeftLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 44
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ll
+  example: []
+  syntax:
+    content: LeftLeft = 7
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftRight
+  id: LeftRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftRight
+  nameWithType: CameraViewType.LeftRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 49
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view lr
+  example: []
+  syntax:
+    content: LeftRight = 8
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftBottom
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftBottom
+  id: LeftBottom
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftBottom
+  nameWithType: CameraViewType.LeftBottom
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftBottom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftBottom
+    path: src/core/render/CameraViewType.cs
+    startLine: 54
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view lo
+  example: []
+  syntax:
+    content: LeftBottom = 9
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftBottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftBottomLeft
+  id: LeftBottomLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftBottomLeft
+  nameWithType: CameraViewType.LeftBottomLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftBottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftBottomLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 59
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view lol
+  example: []
+  syntax:
+    content: LeftBottomLeft = 10
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftBottomRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftBottomRight
+  id: LeftBottomRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftBottomRight
+  nameWithType: CameraViewType.LeftBottomRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftBottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftBottomRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 64
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view lor
+  example: []
+  syntax:
+    content: LeftBottomRight = 11
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftTop
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftTop
+  id: LeftTop
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftTop
+  nameWithType: CameraViewType.LeftTop
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftTop
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftTop
+    path: src/core/render/CameraViewType.cs
+    startLine: 69
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view lt
+  example: []
+  syntax:
+    content: LeftTop = 12
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftTopLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftTopLeft
+  id: LeftTopLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftTopLeft
+  nameWithType: CameraViewType.LeftTopLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftTopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftTopLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 74
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ltl
+  example: []
+  syntax:
+    content: LeftTopLeft = 13
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.LeftTopRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.LeftTopRight
+  id: LeftTopRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: LeftTopRight
+  nameWithType: CameraViewType.LeftTopRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.LeftTopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: LeftTopRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 79
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ltr
+  example: []
+  syntax:
+    content: LeftTopRight = 14
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightLeft
+  id: RightLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightLeft
+  nameWithType: CameraViewType.RightLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 86
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view rl
+  example: []
+  syntax:
+    content: RightLeft = 15
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightRight
+  id: RightRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightRight
+  nameWithType: CameraViewType.RightRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 91
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view rr
+  example: []
+  syntax:
+    content: RightRight = 16
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightBottom
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightBottom
+  id: RightBottom
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightBottom
+  nameWithType: CameraViewType.RightBottom
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightBottom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightBottom
+    path: src/core/render/CameraViewType.cs
+    startLine: 96
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ro
+  example: []
+  syntax:
+    content: RightBottom = 17
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightBottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightBottomLeft
+  id: RightBottomLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightBottomLeft
+  nameWithType: CameraViewType.RightBottomLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightBottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightBottomLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 101
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view rol
+  example: []
+  syntax:
+    content: RightBottomLeft = 18
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightBottomRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightBottomRight
+  id: RightBottomRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightBottomRight
+  nameWithType: CameraViewType.RightBottomRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightBottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightBottomRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 106
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ror
+  example: []
+  syntax:
+    content: RightBottomRight = 19
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightTop
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightTop
+  id: RightTop
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightTop
+  nameWithType: CameraViewType.RightTop
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightTop
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightTop
+    path: src/core/render/CameraViewType.cs
+    startLine: 111
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view rt
+  example: []
+  syntax:
+    content: RightTop = 20
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightTopLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightTopLeft
+  id: RightTopLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightTopLeft
+  nameWithType: CameraViewType.RightTopLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightTopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightTopLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 116
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ltl
+  example: []
+  syntax:
+    content: RightTopLeft = 21
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.RightTopRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.RightTopRight
+  id: RightTopRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: RightTopRight
+  nameWithType: CameraViewType.RightTopRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.RightTopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: RightTopRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 121
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ltr
+  example: []
+  syntax:
+    content: RightTopRight = 22
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontLeft
+  id: FrontLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontLeft
+  nameWithType: CameraViewType.FrontLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 128
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view fl
+  example: []
+  syntax:
+    content: FrontLeft = 23
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontRight
+  id: FrontRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontRight
+  nameWithType: CameraViewType.FrontRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 133
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view fr
+  example: []
+  syntax:
+    content: FrontRight = 24
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontBottom
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontBottom
+  id: FrontBottom
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontBottom
+  nameWithType: CameraViewType.FrontBottom
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontBottom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontBottom
+    path: src/core/render/CameraViewType.cs
+    startLine: 138
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view fo
+  example: []
+  syntax:
+    content: FrontBottom = 25
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontBottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontBottomLeft
+  id: FrontBottomLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontBottomLeft
+  nameWithType: CameraViewType.FrontBottomLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontBottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontBottomLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 143
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view fol
+  example: []
+  syntax:
+    content: FrontBottomLeft = 26
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontBottomRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontBottomRight
+  id: FrontBottomRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontBottomRight
+  nameWithType: CameraViewType.FrontBottomRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontBottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontBottomRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 148
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view for
+  example: []
+  syntax:
+    content: FrontBottomRight = 27
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontTop
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontTop
+  id: FrontTop
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontTop
+  nameWithType: CameraViewType.FrontTop
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontTop
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontTop
+    path: src/core/render/CameraViewType.cs
+    startLine: 153
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ft
+  example: []
+  syntax:
+    content: FrontTop = 28
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontTopLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontTopLeft
+  id: FrontTopLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontTopLeft
+  nameWithType: CameraViewType.FrontTopLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontTopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontTopLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 158
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ftl
+  example: []
+  syntax:
+    content: FrontTopLeft = 29
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.FrontTopRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.FrontTopRight
+  id: FrontTopRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: FrontTopRight
+  nameWithType: CameraViewType.FrontTopRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.FrontTopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: FrontTopRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 163
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ftr
+  example: []
+  syntax:
+    content: FrontTopRight = 30
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackLeft
+  id: BackLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackLeft
+  nameWithType: CameraViewType.BackLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 170
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view bl
+  example: []
+  syntax:
+    content: BackLeft = 31
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackRight
+  id: BackRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackRight
+  nameWithType: CameraViewType.BackRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 175
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view br
+  example: []
+  syntax:
+    content: BackRight = 32
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackBottom
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackBottom
+  id: BackBottom
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackBottom
+  nameWithType: CameraViewType.BackBottom
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackBottom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackBottom
+    path: src/core/render/CameraViewType.cs
+    startLine: 180
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view bo
+  example: []
+  syntax:
+    content: BackBottom = 33
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackBottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackBottomLeft
+  id: BackBottomLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackBottomLeft
+  nameWithType: CameraViewType.BackBottomLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackBottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackBottomLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 185
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view bol
+  example: []
+  syntax:
+    content: BackBottomLeft = 34
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackBottomRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackBottomRight
+  id: BackBottomRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackBottomRight
+  nameWithType: CameraViewType.BackBottomRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackBottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackBottomRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 190
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view bor
+  example: []
+  syntax:
+    content: BackBottomRight = 35
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackTop
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackTop
+  id: BackTop
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackTop
+  nameWithType: CameraViewType.BackTop
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackTop
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackTop
+    path: src/core/render/CameraViewType.cs
+    startLine: 195
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view bt
+  example: []
+  syntax:
+    content: BackTop = 36
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackTopLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackTopLeft
+  id: BackTopLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackTopLeft
+  nameWithType: CameraViewType.BackTopLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackTopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackTopLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 200
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view btl
+  example: []
+  syntax:
+    content: BackTopLeft = 37
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BackTopRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BackTopRight
+  id: BackTopRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BackTopRight
+  nameWithType: CameraViewType.BackTopRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BackTopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BackTopRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 205
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view btr
+  example: []
+  syntax:
+    content: BackTopRight = 38
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopLeft
+  id: TopLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopLeft
+  nameWithType: CameraViewType.TopLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 212
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view tl
+  example: []
+  syntax:
+    content: TopLeft = 39
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopRight
+  id: TopRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopRight
+  nameWithType: CameraViewType.TopRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 217
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view tr
+  example: []
+  syntax:
+    content: TopRight = 40
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopBottom
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopBottom
+  id: TopBottom
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopBottom
+  nameWithType: CameraViewType.TopBottom
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopBottom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopBottom
+    path: src/core/render/CameraViewType.cs
+    startLine: 222
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view to
+  example: []
+  syntax:
+    content: TopBottom = 41
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopBottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopBottomLeft
+  id: TopBottomLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopBottomLeft
+  nameWithType: CameraViewType.TopBottomLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopBottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopBottomLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 227
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view tol
+  example: []
+  syntax:
+    content: TopBottomLeft = 42
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopBottomRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopBottomRight
+  id: TopBottomRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopBottomRight
+  nameWithType: CameraViewType.TopBottomRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopBottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopBottomRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 232
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view tor
+  example: []
+  syntax:
+    content: TopBottomRight = 43
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopTop
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopTop
+  id: TopTop
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopTop
+  nameWithType: CameraViewType.TopTop
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopTop
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopTop
+    path: src/core/render/CameraViewType.cs
+    startLine: 237
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view tt
+  example: []
+  syntax:
+    content: TopTop = 44
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopTopLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopTopLeft
+  id: TopTopLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopTopLeft
+  nameWithType: CameraViewType.TopTopLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopTopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopTopLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 242
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ttl
+  example: []
+  syntax:
+    content: TopTopLeft = 45
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.TopTopRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.TopTopRight
+  id: TopTopRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: TopTopRight
+  nameWithType: CameraViewType.TopTopRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.TopTopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: TopTopRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 247
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ttr
+  example: []
+  syntax:
+    content: TopTopRight = 46
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomLeft
+  id: BottomLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomLeft
+  nameWithType: CameraViewType.BottomLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 254
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ol
+  example: []
+  syntax:
+    content: BottomLeft = 47
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomRight
+  id: BottomRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomRight
+  nameWithType: CameraViewType.BottomRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 259
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view or
+  example: []
+  syntax:
+    content: BottomRight = 48
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomBottom
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomBottom
+  id: BottomBottom
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomBottom
+  nameWithType: CameraViewType.BottomBottom
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomBottom
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomBottom
+    path: src/core/render/CameraViewType.cs
+    startLine: 264
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view oo
+  example: []
+  syntax:
+    content: BottomBottom = 49
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomBottomLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomBottomLeft
+  id: BottomBottomLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomBottomLeft
+  nameWithType: CameraViewType.BottomBottomLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomBottomLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomBottomLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 269
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ool
+  example: []
+  syntax:
+    content: BottomBottomLeft = 50
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomBottomRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomBottomRight
+  id: BottomBottomRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomBottomRight
+  nameWithType: CameraViewType.BottomBottomRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomBottomRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomBottomRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 274
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view oor
+  example: []
+  syntax:
+    content: BottomBottomRight = 51
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomTop
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomTop
+  id: BottomTop
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomTop
+  nameWithType: CameraViewType.BottomTop
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomTop
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomTop
+    path: src/core/render/CameraViewType.cs
+    startLine: 279
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view ot
+  example: []
+  syntax:
+    content: BottomTop = 52
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomTopLeft
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomTopLeft
+  id: BottomTopLeft
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomTopLeft
+  nameWithType: CameraViewType.BottomTopLeft
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomTopLeft
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomTopLeft
+    path: src/core/render/CameraViewType.cs
+    startLine: 284
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view otl
+  example: []
+  syntax:
+    content: BottomTopLeft = 53
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+- uid: SearchAThing.OpenGL.Core.CameraViewType.BottomTopRight
+  commentId: F:SearchAThing.OpenGL.Core.CameraViewType.BottomTopRight
+  id: BottomTopRight
+  parent: SearchAThing.OpenGL.Core.CameraViewType
+  langs:
+  - csharp
+  - vb
+  name: BottomTopRight
+  nameWithType: CameraViewType.BottomTopRight
+  fullName: SearchAThing.OpenGL.Core.CameraViewType.BottomTopRight
+  type: Field
+  source:
+    remote:
+      path: src/core/render/CameraViewType.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: BottomTopRight
+    path: src/core/render/CameraViewType.cs
+    startLine: 289
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: view otr
+  example: []
+  syntax:
+    content: BottomTopRight = 54
+    return:
+      type: SearchAThing.OpenGL.Core.CameraViewType
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.CameraViewType.SearchAThing.OpenGL.Core.Ext.ShortString
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+  parent: SearchAThing.OpenGL.Core.Ext
+  definition: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ShortString_SearchAThing_OpenGL_Core_CameraViewType_
+  name: ShortString(CameraViewType)
+  nameWithType: Ext.ShortString(CameraViewType)
+  fullName: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+    name: ShortString
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ShortString_SearchAThing_OpenGL_Core_CameraViewType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.CameraViewType
+    name: CameraViewType
+    href: SearchAThing.OpenGL.Core.CameraViewType.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+    name: ShortString
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ShortString_SearchAThing_OpenGL_Core_CameraViewType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.CameraViewType
+    name: CameraViewType
+    href: SearchAThing.OpenGL.Core.CameraViewType.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+  commentId: M:SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+  href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ShortString_SearchAThing_OpenGL_Core_CameraViewType_
+  name: ShortString(CameraViewType)
+  nameWithType: Ext.ShortString(CameraViewType)
+  fullName: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+  spec.csharp:
+  - uid: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+    name: ShortString
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ShortString_SearchAThing_OpenGL_Core_CameraViewType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.CameraViewType
+    name: CameraViewType
+    href: SearchAThing.OpenGL.Core.CameraViewType.html
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.OpenGL.Core.Ext.ShortString(SearchAThing.OpenGL.Core.CameraViewType)
+    name: ShortString
+    href: SearchAThing.OpenGL.Core.Ext.html#SearchAThing_OpenGL_Core_Ext_ShortString_SearchAThing_OpenGL_Core_CameraViewType_
+  - name: (
+  - uid: SearchAThing.OpenGL.Core.CameraViewType
+    name: CameraViewType
+    href: SearchAThing.OpenGL.Core.CameraViewType.html
+  - name: )
+- uid: SearchAThing.OpenGL.Core.Ext
+  commentId: T:SearchAThing.OpenGL.Core.Ext
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.Ext.html
+  name: Ext
+  nameWithType: Ext
+  fullName: SearchAThing.OpenGL.Core.Ext
+- uid: SearchAThing.OpenGL.Core.CameraViewType
+  commentId: T:SearchAThing.OpenGL.Core.CameraViewType
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.CameraViewType.html
+  name: CameraViewType
+  nameWithType: CameraViewType
+  fullName: SearchAThing.OpenGL.Core.CameraViewType

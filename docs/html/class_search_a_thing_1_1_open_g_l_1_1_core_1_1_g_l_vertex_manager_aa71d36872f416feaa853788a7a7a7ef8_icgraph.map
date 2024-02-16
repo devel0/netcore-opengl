@@ -1,4 +1,0 @@
-<map id="Clear" name="Clear">
-<area shape="rect" id="node1" title="Clear all vertexes and figures from the vertex manager, and emit IGLVertexManager...." alt="" coords="256,13,312,38"/>
-<area shape="rect" id="node2" href="$class_search_a_thing_1_1_open_g_l_1_1_core_1_1_g_l_model.html#a6a14f4dbc8345813a2a2c2f597095b71" title="Clear the model removing all entities from vertex manager, deregistering custom vertex manager and cl..." alt="" coords="5,5,208,45"/>
-</map>

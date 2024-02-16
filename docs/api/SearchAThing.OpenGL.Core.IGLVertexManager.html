@@ -1,0 +1,638 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IGLVertexManager | netcore-opengl </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IGLVertexManager | netcore-opengl ">
+      
+      <meta name="description" content="Vertex manager primary purpose is to keep a linear sequence of distinct  structs that will populated by the gl vertex  objects. The same  reference cannot be registered twice in vertex manager, these stay connected to their figure primitives until removed from.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/devel0/netcore-opengl/new/docs/apiSpec/new?filename=SearchAThing_OpenGL_Core_IGLVertexManager.md&amp;value=---%0Auid%3A%20SearchAThing.OpenGL.Core.IGLVertexManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="netcore-opengl">
+            netcore-opengl
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SearchAThing.OpenGL.Core.IGLVertexManager">
+
+
+
+  <h1 id="SearchAThing_OpenGL_Core_IGLVertexManager" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager" class="text-break">
+Interface IGLVertexManager  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SearchAThing.html">SearchAThing</a>.<a class="xref" href="SearchAThing.OpenGL.html">OpenGL</a>.<a class="xref" href="SearchAThing.OpenGL.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>netcore-opengl-core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Vertex manager primary purpose is to keep a linear sequence of distinct <a class="xref" href="SearchAThing.OpenGL.Core.GLVertexStruct.html">GLVertexStruct</a> structs
+that will populated by the gl vertex <a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html">GLVertex</a> objects.<br>
+The same <a class="xref" href="SearchAThing.OpenGL.Core.GLVertex.html">GLVertex</a> reference cannot be registered twice in vertex manager,
+these stay connected to their figure primitives until removed from.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IGLVertexManager : INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">INotifyPropertyChanged.PropertyChanged</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_ExpandModelBBox_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.ExpandModelBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_ExpandModelBBox" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.ExpandModelBBox">
+  ExpandModelBBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to state if vertex added to this vertex manager imply expansion of the gl model (Default: true).<br>
+More (custom) vertex manager can be registered into the gl model, may for temporary purpose and
+setting this variable to false at the construct of these custom vertex manager allow to unaffect
+the gl model bbox.<br>
+Should be used to avoid the zoomfit to evaluate temporary vertex manager figures.<br>
+<a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html">GLVertexManager</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ExpandModelBBox { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_FigureCount_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.FigureCount*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_FigureCount" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.FigureCount">
+  FigureCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual size of registered figures list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int FigureCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_Figures_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.Figures*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_Figures" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.Figures">
+  Figures
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enumerates vertex manager registered figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;GLFigureBase&gt; Figures { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_LBBox_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.LBBox*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_LBBox" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.LBBox">
+  LBBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>BBox of registered figure vertexes [local].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BBox LBBox { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.BBox.html">BBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_TriangleCount_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.TriangleCount*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_TriangleCount" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.TriangleCount">
+  TriangleCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual count of gl triangles belonging to added figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int TriangleCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_VertexCount_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.VertexCount*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_VertexCount" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.VertexCount">
+  VertexCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual size of <a class="xref" href="SearchAThing.OpenGL.Core.GLVertexStruct.html">GLVertexStruct</a> vertex list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int VertexCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_AddFigure_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_AddFigure_SearchAThing_OpenGL_Core_GLFigureBase_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.AddFigure(SearchAThing.OpenGL.Core.GLFigureBase)">
+  AddFigure(GLFigureBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds given figure to the vertex manager.<br>
+All vertexes belonging to the figure's primitives will be added.
+Emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_FigureAdded">FigureAdded</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddFigure(GLFigureBase figure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd><p>Figure to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_Clear_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.Clear*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_Clear" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear all vertexes and figures from the vertex manager, and emit
+<a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_FiguresCleared">FiguresCleared</a> and <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_Invalidated">Invalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_GetVboArray_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_GetVboArray" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.GetVboArray">
+  GetVboArray()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used internally by the GLModel.RenderVertexManager
+to render the scene.<br><br>
+Contains the list of vertex structs directly mapped to the gpu.<br>
+This array will be built each time a vertex changes from the ToArray() of the list <a class="xref" href="SearchAThing.OpenGL.Core.GLVertexManager.html#SearchAThing_OpenGL_Core_GLVertexManager_Vertexes">Vertexes</a>.
+To avoid performance penalty in a scenario where you need to change the position of a figure
+you can use <a class="xref" href="SearchAThing.OpenGL.Core.IGLFigure.html#SearchAThing_OpenGL_Core_IGLFigure_ObjectMatrix">ObjectMatrix</a> that doesn't affects at all vertexes because is a figure
+related information forwarded to the gl pipeline shader through <a class="xref" href="SearchAThing.OpenGL.Core.Constants.html#SearchAThing_OpenGL_Core_Constants_UNINAME_uObject">UNINAME_uObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GLVertexStruct[] GetVboArray()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.GLVertexStruct.html">GLVertexStruct</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SearchAThing_OpenGL_Core_IGLVertexManager_RemoveFigure_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure*"></a>
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_RemoveFigure_SearchAThing_OpenGL_Core_GLFigureBase_" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.RemoveFigure(SearchAThing.OpenGL.Core.GLFigureBase)">
+  RemoveFigure(GLFigureBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove given figure from the vertex manager.<br>
+All vertexes belonging to the figure's primitives will be removed.
+Emits <a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_FigureRemoved">FigureRemoved</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveFigure(GLFigureBase figure)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>figure</code> <a class="xref" href="SearchAThing.OpenGL.Core.GLFigureBase.html">GLFigureBase</a></dt>
+    <dd><p>Figure to remove.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_FigureAdded" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.FigureAdded">
+  FigureAdded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when a figure was added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event FigureEvent FigureAdded</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.FigureEvent.html">FigureEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_FigureRemoved" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.FigureRemoved">
+  FigureRemoved
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when a figure was removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event FigureEvent FigureRemoved</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.FigureEvent.html">FigureEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_FiguresCleared" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.FiguresCleared">
+  FiguresCleared
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when all figures cleared.<br>
+The list of figures removed is reported through the event argument of <a class="xref" href="SearchAThing.OpenGL.Core.FiguresEvent.html">FiguresEvent</a> delegate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event FiguresEvent FiguresCleared</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.FiguresEvent.html">FiguresEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="SearchAThing_OpenGL_Core_IGLVertexManager_Invalidated" data-uid="SearchAThing.OpenGL.Core.IGLVertexManager.Invalidated">
+  Invalidated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event emitted when a vertex was added or removed or all vertexes cleared.<br><br>
+Its used by the <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html">GLModel</a> to track the model changes
+and emit a <a class="xref" href="SearchAThing.OpenGL.Core.GLModel.html#SearchAThing_OpenGL_Core_GLModel_ViewInvalidated">ViewInvalidated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event VertexManagerInvalidatedDelegate Invalidated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SearchAThing.OpenGL.Core.VertexManagerInvalidatedDelegate.html">VertexManagerInvalidatedDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="SearchAThing.OpenGL.Core.IGLVertexManager.html#SearchAThing_OpenGL_Core_IGLVertexManager_Clear">Clear()</a></div>
+    </dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/devel0/netcore-opengl/blob/docs/src/core/vertex/IGLVertexManager.cs/#L24" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

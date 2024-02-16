@@ -1,5 +1,0 @@
-<map id="DummyRenderDevice" name="DummyRenderDevice">
-<area shape="rect" id="node1" title="A render device that doesn&#39;t write GL pixel anywhere. &#160;This object can be used for testing purpouse." alt="" coords="11,152,177,177"/>
-<area shape="rect" id="node2" href="$interface_search_a_thing_1_1_open_g_l_1_1_core_1_1_i_render_device.html" title="A render device will read pixels from given gl context through ReadPixels and write to an appropriate..." alt="" coords="83,79,201,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,183,31"/>
-</map>

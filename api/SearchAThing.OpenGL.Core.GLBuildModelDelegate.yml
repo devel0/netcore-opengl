@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  commentId: T:SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  id: GLBuildModelDelegate
+  parent: SearchAThing.OpenGL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GLBuildModelDelegate
+  nameWithType: GLBuildModelDelegate
+  fullName: SearchAThing.OpenGL.Core.GLBuildModelDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/core/render/GLModel.cs
+      branch: docs
+      repo: git@github.com:devel0/netcore-opengl.git
+    id: GLBuildModelDelegate
+    path: src/core/render/GLModel.cs
+    startLine: 13
+  assemblies:
+  - netcore-opengl-core
+  namespace: SearchAThing.OpenGL.Core
+  summary: Build model action that will executed each time the model requires a full rebuild because invalidated.
+  example: []
+  syntax:
+    content: public delegate void GLBuildModelDelegate(GLControl glControl, bool initialCall)
+    parameters:
+    - id: glControl
+      type: SearchAThing.OpenGL.Core.GLControl
+      description: GL control belonging to model that requires rebuild.
+    - id: initialCall
+      type: System.Boolean
+      description: True is this is the first-est call to the build model.
+    content.vb: Public Delegate Sub GLBuildModelDelegate(glControl As GLControl, initialCall As Boolean)
+references:
+- uid: SearchAThing.OpenGL.Core
+  commentId: N:SearchAThing.OpenGL.Core
+  href: SearchAThing.html
+  name: SearchAThing.OpenGL.Core
+  nameWithType: SearchAThing.OpenGL.Core
+  fullName: SearchAThing.OpenGL.Core
+  spec.csharp:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+  spec.vb:
+  - uid: SearchAThing
+    name: SearchAThing
+    href: SearchAThing.html
+  - name: .
+  - uid: SearchAThing.OpenGL
+    name: OpenGL
+    href: SearchAThing.OpenGL.html
+  - name: .
+  - uid: SearchAThing.OpenGL.Core
+    name: Core
+    href: SearchAThing.OpenGL.Core.html
+- uid: SearchAThing.OpenGL.Core.GLControl
+  commentId: T:SearchAThing.OpenGL.Core.GLControl
+  parent: SearchAThing.OpenGL.Core
+  href: SearchAThing.OpenGL.Core.GLControl.html
+  name: GLControl
+  nameWithType: GLControl
+  fullName: SearchAThing.OpenGL.Core.GLControl
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
