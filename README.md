@@ -67,7 +67,7 @@ code .
 # accept to install vscode required assets
 ```
 
-edit [`Program.cs`](examples/example-9000/Program.cs) as follows ( consider to create a separate global [usings.cs](#c%23-global-usings-full) file ):
+edit [`Program.cs`](examples/example-9000/Program.cs) as follows ( consider to create a separate global [usings.cs](#c-global-usings-full) file ):
 
 ```csharp
 namespace sample;
@@ -138,7 +138,7 @@ results ( control can manipulated with [gestures](#gestures) ):
 
 ```sh
 cd netcore-opengl
-git submodule update --init
+# git submodule update --init
 dotnet build
 ```
 

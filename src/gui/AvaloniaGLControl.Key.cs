@@ -1,3 +1,4 @@
+using Avalonia.Controls;
 using Avalonia.Threading;
 
 namespace SearchAThing.OpenGL.GUI;
@@ -499,7 +500,7 @@ public partial class AvaloniaGLControl
             var txt = GLControl.GLModel.GetSelectionSimpleCmd();
             Task.Run(async () =>
             {
-                var clip = Application.Current?.Clipboard;
+                var clip = TopLevel.GetTopLevel(this)?.Clipboard;                
                 if (clip is not null) await clip!.SetTextAsync(txt);
             });
             // CopyToClipboardRequest?.Invoke(sb.ToString());
@@ -513,7 +514,7 @@ public partial class AvaloniaGLControl
             {
                 try
                 {
-                    var clip = Application.Current?.Clipboard;
+                    var clip = TopLevel.GetTopLevel(this)?.Clipboard;                
                     if (clip is not null)
                     {
                         var txt = await clip!.GetTextAsync();
