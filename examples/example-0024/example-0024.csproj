@@ -23,7 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="BriefFiniteElement.Net" Version="2.1.0" />
+		<PackageReference Include="BriefFiniteElement.Net" Version="2.1.2" />
 		
 		<!-- <ProjectReference Include="..\..\..\..\..\opensource\BriefFiniteElement.Net\Sources\BriefFiniteElementNet\BriefFiniteElementNet.csproj" />		 -->
 		<!-- <ProjectReference Include="..\..\..\..\..\opensource\BriefFiniteElement.Net\Sources\Common\Common.csproj" />		 -->

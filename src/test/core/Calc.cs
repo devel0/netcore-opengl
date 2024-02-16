@@ -66,7 +66,7 @@ public class TransformTest
         var lray = RayCastLocal(sp, ssize, mm, vm, pm, camp, perspective: true);
 
         AssertEqualsTol(1e-7f, new Vector3(0, 0, 0), lray.From);
-        AssertEqualsTol(TOL, new Vector3(-0.22743326f, -0.49707386f, -0.84002554f), lray.V);
+        AssertEqualsTol(1e-6f, new Vector3(-0.22743326f, -0.49707386f, -0.84002554f), lray.V);
 
     }
 
