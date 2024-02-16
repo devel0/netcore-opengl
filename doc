@@ -2,8 +2,7 @@
 
 exdir="$(dirname `readlink -f "$0"`)"
 
-docsdir="$exdir/docs"
-serve_port=8000
+serve_port=8080
 cmd=""
 
 #--
@@ -18,7 +17,6 @@ help()
         view      Open default app to view documentation
         commit    build + commit doc into docs branch        
         push      push docs branch to origin
-        umlet     export uxf to svg
 
     options
         [ -p | --port ]     specify serve port"
@@ -63,19 +61,15 @@ done
 #--[ build ]
 
 if [ "$1" == "build" ]; then    
-  rm -fr "$docsdir"
-  mkdir "$docsdir"
-  cd "$exdir"
-  doxygen
+  rm -fr "$exdir"/docs   
+  docfx "$exdir"/docfx.json
   exit 0
 fi
 
 #--[ serve ]
 
-if [ "$1" == "serve" ]; then
-  cd "$exdir"/docs/html
-  python3 -m http.server &
-  cd "$exdir"
+if [ "$1" == "serve" ]; then  
+  docfx "$exdir"/docfx.json --serve -p $serve_port    
   exit 0
 fi
 
@@ -103,16 +97,4 @@ fi
 if [ "$1" == "push" ]; then
   cd "$exdir"
   git push origin docs
-fi
-
-#--[ umlet ]
-if [ "$1" == "umlet" ]; then
-  cd "$exdir"
-  # fname are uxf file relative to exdir (without extension)
-  for fname in "$exdir"/data/notes/*.uxf; do
-    srcfile="$fname"
-    dstfile="$(dirname $fname)/$(basename $fname .uxf).svg"
-    echo "Converting [$srcfile] to [$dstfile]"
-    umlet.sh -action=convert -format=svg -filename="$srcfile" -output="$dstfile"
-  done
 fi
