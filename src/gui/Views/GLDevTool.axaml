@@ -220,8 +220,8 @@
 					<Button Content="Delete" Click="DeleteFigureClick" />
 				</StackPanel>
 
-				<DataGrid Grid.Row="1" Name="dgFigures" AutoGenerateColumns="false"
-					Items="{Binding GLModel.Figures}">
+				<DataGrid Grid.Row="1" Name="dgFigures" AutoGenerateColumns="false"				
+					ItemsSource="{Binding GLModel.Figures}">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Primitive" Binding="{Binding PrimitiveType}" />
 
@@ -259,7 +259,7 @@
 
 				<DataGrid Grid.Row="1" Name="dgVertexes"
 					AutoGenerateColumns="false" IsReadOnly="true"
-					Items="{Binding #uc.HighlightedVertexes}">
+					ItemsSource="{Binding #uc.HighlightedVertexes}">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Normal" Width="3*"
 							Binding="{Binding Normal, Converter={x:Static gui:Vector3TextConverter.Instance}, ConverterParameter=3}" />
@@ -306,7 +306,7 @@
 					</StackPanel>
 					<DataGrid Grid.Row="1" Name="dgLights" AutoGenerateColumns="false"
 						Margin="0,0,10,10"
-						Items="{Binding GLModel.PointLights}">
+						ItemsSource="{Binding GLModel.PointLights}">
 						<DataGrid.Columns>
 							<DataGridTemplateColumn Header="Active" IsReadOnly="false">
 								<DataGridTemplateColumn.CellTemplate>

@@ -458,9 +458,9 @@ public partial class GLDevTool : Window, INotifyPropertyChanged
         foreach (var fig in selectedFigures)
         {
             sb.AppendLine(fig.SimpleCmd());
-        }
+        }        
 
-        var clip = Application.Current?.Clipboard;
+        var clip = Clipboard;// Application.Current?.Clipboard;
 
         if (clip is not null)
         {

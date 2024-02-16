@@ -182,12 +182,12 @@ public partial class GLControl : INotifyPropertyChanged
         RenderInvalidated?.Invoke(this, new EventArgs());
     }
 
-    public event EventHandler InvalidateAllRequest;
+    public event EventHandler? InvalidateAllRequest;
 
     /// <summary>
     /// All gl split control invalidation.
     /// </summary>
-    public void InvalidateAll() => InvalidateAllRequest.Invoke(this, EventArgs.Empty);
+    public void InvalidateAll() => InvalidateAllRequest?.Invoke(this, EventArgs.Empty);
 
     /// <summary>
     /// Event generated at first non bbox empty render generated.

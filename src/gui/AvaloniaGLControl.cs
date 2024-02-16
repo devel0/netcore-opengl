@@ -285,8 +285,9 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
             context.DrawImage(bitmap,
                 new Rect(bitmap.Size),
-                new Rect(bitmap.Size),
-                BitmapInterpolationMode.LowQuality);
+                new Rect(bitmap.Size));
+                //,
+                //BitmapInterpolationMode.LowQuality);
         }
     }
 
