@@ -457,4 +457,6 @@ example-0009.png
 lcov.info
 lcov.opencover.xml
 example-0009-*.png
+
+/api
 .avalonia-build-tasks
