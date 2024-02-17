@@ -11,8 +11,7 @@ public delegate void RenderPreviewDelegate(GLControl glControl);
 /// It provides high level functions to manage camera view and related pan/zoom functions.<br/>
 /// The <see cref="Invalidate"/> emit a <see cref="GLControl.RenderInvalidated"/> event that 
 /// <see cref="SearchAThing.OpenGL.GUI.AvaloniaGLControl"/> listen to invalidte its visual.<br/>
-/// <a href="Render.svg">image</a>
-/// \image html Render.svg width=100%    
+/// <img src="../data/notes/Render.svg"/>
 /// </summary>
 public partial class GLControl : INotifyPropertyChanged
 {

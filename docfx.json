@@ -29,7 +29,7 @@
     "resource": [
       {
         "files": [
-          "none/**/*.{png}"
+          "data/notes/**/*.{svg}"
         ]
       }
     ],

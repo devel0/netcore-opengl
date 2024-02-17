@@ -14,9 +14,8 @@ public interface IRenderDevice : INotifyPropertyChanged
 
     /// <summary>
     /// Use given GL object to issue a ReadPixel and transfer them to destination device.<br/>
-    /// Following some details how this function is involved in the rendering process:<br/>
-    /// <a href="ReactiveUI.svg">image</a>
-    /// \image html ReactiveUI.svg width=100%    
+    /// Following some details how this function is involved in the rendering process:<br/>    
+    /// <img src="../data/notes/ReactiveUI.svg"/>
     /// <br/>
     /// Here an example implementation given from the <see cref="OffscreenRenderDevice.TransferGLPixels"/>:<br/>
     /// \snippet{'trimleft'} src/render/OffscreenRenderDevice.cs OffscreenTrasferGLPixels

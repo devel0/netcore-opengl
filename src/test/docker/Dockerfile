@@ -15,12 +15,12 @@ ENV EDITOR nano
 # timezone
 RUN apt-get install -y tzdata
 
-# net7.0
-RUN wget https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
-    dpkg -i packages-microsoft-prod.deb && \
-    rm packages-microsoft-prod.deb
+# net8.0
+# RUN wget https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
+#     dpkg -i packages-microsoft-prod.deb && \
+#     rm packages-microsoft-prod.deb
 
-RUN apt-get update && apt install -y dotnet-sdk-7.0
+RUN apt-get update && apt install -y dotnet-sdk-8.0
 
 # xvfb
 RUN apt-get install -y xvfb
