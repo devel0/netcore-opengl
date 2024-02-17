@@ -533,26 +533,32 @@ references:
 - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
   commentId: T:SearchAThing.Desktop.GridSplitterManagerLayoutItem
   parent: SearchAThing.Desktop
+  isExternal: true
   name: GridSplitterManagerLayoutItem
   nameWithType: GridSplitterManagerLayoutItem
   fullName: SearchAThing.Desktop.GridSplitterManagerLayoutItem
 - uid: SearchAThing.Desktop
   commentId: N:SearchAThing.Desktop
+  isExternal: true
   name: SearchAThing.Desktop
   nameWithType: SearchAThing.Desktop
   fullName: SearchAThing.Desktop
   spec.csharp:
   - uid: SearchAThing
     name: SearchAThing
+    isExternal: true
   - name: .
   - uid: SearchAThing.Desktop
     name: Desktop
+    isExternal: true
   spec.vb:
   - uid: SearchAThing
     name: SearchAThing
+    isExternal: true
   - name: .
   - uid: SearchAThing.Desktop
     name: Desktop
+    isExternal: true
 - uid: SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView*
   commentId: Overload:SearchAThing.OpenGL.GUI.ViewLayoutNfo.UIDView
   href: SearchAThing.OpenGL.GUI.ViewLayoutNfo.html#SearchAThing_OpenGL_GUI_ViewLayoutNfo_UIDView

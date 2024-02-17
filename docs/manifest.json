@@ -1154,6 +1154,36 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "data/notes/ReactiveUI.svg",
+      "output": {
+        "resource": {
+          "relative_path": "data/notes/ReactiveUI.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "data/notes/Render.svg",
+      "output": {
+        "resource": {
+          "relative_path": "data/notes/Render.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "data/notes/SpaceCoord.svg",
+      "output": {
+        "resource": {
+          "relative_path": "data/notes/SpaceCoord.svg"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "data/pages/mainpage-doc.md",
       "output": {

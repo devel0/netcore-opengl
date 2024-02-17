@@ -140,9 +140,7 @@ items:
 
     SearchAThing.OpenGL.GUI.AvaloniaGLControl listen to invalidte its visual.<br />
 
-    <a href="Render.svg">image</a>
-
-    \image html Render.svg width=100%
+    <img src="../data/notes/Render.svg" />
   example: []
   syntax:
     content: 'public class GLControl : INotifyPropertyChanged'
@@ -179,7 +177,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: Device
     path: src/core/render/GLControl.cs
-    startLine: 22
+    startLine: 21
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -210,7 +208,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: Size
     path: src/core/render/GLControl.cs
-    startLine: 27
+    startLine: 26
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -240,7 +238,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: .ctor
     path: src/core/render/GLControl.cs
-    startLine: 36
+    startLine: 35
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -278,7 +276,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: .ctor
     path: src/core/render/GLControl.cs
-    startLine: 53
+    startLine: 52
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -316,7 +314,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: CaptureImage
     path: src/core/render/GLControl.cs
-    startLine: 130
+    startLine: 129
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -351,7 +349,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: CaptureImage
     path: src/core/render/GLControl.cs
-    startLine: 139
+    startLine: 138
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -392,7 +390,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: RenderInvalidated
     path: src/core/render/GLControl.cs
-    startLine: 160
+    startLine: 159
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -424,7 +422,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: Invalidate
     path: src/core/render/GLControl.cs
-    startLine: 168
+    startLine: 167
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -461,7 +459,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: InvalidateAllRequest
     path: src/core/render/GLControl.cs
-    startLine: 184
+    startLine: 183
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -488,7 +486,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: InvalidateAll
     path: src/core/render/GLControl.cs
-    startLine: 189
+    startLine: 188
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -516,7 +514,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: NotEmptyRenderPreview
     path: src/core/render/GLControl.cs
-    startLine: 194
+    startLine: 193
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -545,7 +543,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: IsRendering
     path: src/core/render/GLControl.cs
-    startLine: 202
+    startLine: 201
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -579,7 +577,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: IsRenderInvalidated
     path: src/core/render/GLControl.cs
-    startLine: 211
+    startLine: 210
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -613,7 +611,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: IsControlInvalidated
     path: src/core/render/GLControl.cs
-    startLine: 234
+    startLine: 233
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -644,7 +642,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: Render
     path: src/core/render/GLControl.cs
-    startLine: 644
+    startLine: 643
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -679,7 +677,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: ToggleIdentifyCoord
     path: src/core/render/GLControl.cs
-    startLine: 991
+    startLine: 990
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -707,7 +705,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: ToggleShowModelBBox
     path: src/core/render/GLControl.cs
-    startLine: 997
+    startLine: 996
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -742,7 +740,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: ToggleCameraObject
     path: src/core/render/GLControl.cs
-    startLine: 1007
+    startLine: 1006
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -777,7 +775,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: RayCastLocal
     path: src/core/render/GLControl.cs
-    startLine: 1022
+    startLine: 1021
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core

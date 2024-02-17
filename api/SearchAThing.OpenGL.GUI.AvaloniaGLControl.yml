@@ -715,11 +715,7 @@ items:
   summary: >-
     Use given GL object to issue a ReadPixel and transfer them to destination device.<br />
 
-    Following some details how this function is involved in the rendering process:<br /><a href="ReactiveUI.svg">image</a>
-
-    \image html ReactiveUI.svg width=100%    
-
-    <br />
+    Following some details how this function is involved in the rendering process:<br /><img src="../data/notes/ReactiveUI.svg" /><br />
 
     Here an example implementation given from the <xref href="SearchAThing.OpenGL.Core.OffscreenRenderDevice.TransferGLPixels(Silk.NET.OpenGL.GL)" data-throw-if-not-resolved="false"></xref>:<br />
 
@@ -9399,26 +9395,32 @@ references:
 - uid: SearchAThing.Desktop.GridSplitDirection
   commentId: T:SearchAThing.Desktop.GridSplitDirection
   parent: SearchAThing.Desktop
+  isExternal: true
   name: GridSplitDirection
   nameWithType: GridSplitDirection
   fullName: SearchAThing.Desktop.GridSplitDirection
 - uid: SearchAThing.Desktop
   commentId: N:SearchAThing.Desktop
+  isExternal: true
   name: SearchAThing.Desktop
   nameWithType: SearchAThing.Desktop
   fullName: SearchAThing.Desktop
   spec.csharp:
   - uid: SearchAThing
     name: SearchAThing
+    isExternal: true
   - name: .
   - uid: SearchAThing.Desktop
     name: Desktop
+    isExternal: true
   spec.vb:
   - uid: SearchAThing
     name: SearchAThing
+    isExternal: true
   - name: .
   - uid: SearchAThing.Desktop
     name: Desktop
+    isExternal: true
 - uid: SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitClose*
   commentId: Overload:SearchAThing.OpenGL.GUI.AvaloniaGLControl.SplitClose
   href: SearchAThing.OpenGL.GUI.AvaloniaGLControl.html#SearchAThing_OpenGL_GUI_AvaloniaGLControl_SplitClose

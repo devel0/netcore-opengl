@@ -86,18 +86,16 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: TransferGLPixels
     path: src/core/render/IRenderDevice.cs
-    startLine: 24
+    startLine: 23
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
   summary: >-
     Use given GL object to issue a ReadPixel and transfer them to destination device.<br />
 
-    Following some details how this function is involved in the rendering process:<br />
+    Following some details how this function is involved in the rendering process:<br />    
 
-    <a href="ReactiveUI.svg">image</a>
-
-    \image html ReactiveUI.svg width=100%    
+    <img src="../data/notes/ReactiveUI.svg" />
 
     <br />
 
@@ -131,7 +129,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: Post
     path: src/core/render/IRenderDevice.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core
@@ -168,7 +166,7 @@ items:
       repo: git@github.com:devel0/netcore-opengl.git
     id: TransferGLPixelsCount
     path: src/core/render/IRenderDevice.cs
-    startLine: 37
+    startLine: 36
   assemblies:
   - netcore-opengl-core
   namespace: SearchAThing.OpenGL.Core

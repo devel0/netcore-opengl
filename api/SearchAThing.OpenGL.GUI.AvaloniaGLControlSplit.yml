@@ -70,8 +70,14 @@ items:
   - Avalonia.Styling.ISetterValue
   - Avalonia.LogicalTree.IChildIndexProvider
   inheritedMembers:
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.PropertyChanged
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.OnPropertyChanged(System.String)
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.FocusedControl
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Children
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.FocusedControlBorderThickness
@@ -81,16 +87,10 @@ items:
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SplitterBrush
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.DistributeSplitSize
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.DebugWriter
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.JsonSettings
+  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.PropertyChanged
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ControlCreated
   - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ControlRemoved
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.JsonSettings
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
-  - SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
   - Avalonia.Controls.Grid.ShowGridLinesProperty
   - Avalonia.Controls.Grid.ColumnProperty
   - Avalonia.Controls.Grid.RowProperty
@@ -659,6 +659,7 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1
     name: GridSplitterManager
+    isExternal: true
   - name: <
   - uid: SearchAThing.OpenGL.GUI.GLView
     name: GLView
@@ -667,6 +668,7 @@ references:
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1
     name: GridSplitterManager
+    isExternal: true
   - name: (
   - name: Of
   - name: " "
@@ -788,15 +790,6 @@ references:
   name: IChildIndexProvider
   nameWithType: IChildIndexProvider
   fullName: Avalonia.LogicalTree.IChildIndexProvider
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.PropertyChanged
-  commentId: E:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.PropertyChanged
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.PropertyChanged
-  name: PropertyChanged
-  nameWithType: GridSplitterManager<GLView>.PropertyChanged
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.PropertyChanged
-  nameWithType.vb: GridSplitterManager(Of GLView).PropertyChanged
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).PropertyChanged
 - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.OnPropertyChanged(System.String)
   commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.OnPropertyChanged(System.String)
   parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
@@ -811,6 +804,7 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.OnPropertyChanged(System.String)
     name: OnPropertyChanged
+    isExternal: true
   - name: (
   - uid: System.String
     name: string
@@ -820,11 +814,285 @@ references:
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.OnPropertyChanged(System.String)
     name: OnPropertyChanged
+    isExternal: true
   - name: (
   - uid: System.String
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
+  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.Clear
+  name: Clear()
+  nameWithType: GridSplitterManager<GLView>.Clear()
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Clear()
+  nameWithType.vb: GridSplitterManager(Of GLView).Clear()
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Clear()
+  spec.csharp:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
+  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.ScanGrid(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: ScanGrid(ConfigControlDelegate, Action<(GridSplitterManagerLayoutItem item, Control control)>)
+  nameWithType: GridSplitterManager<GLView>.ScanGrid(GridSplitterManager<GLView>.ConfigControlDelegate, Action<(GridSplitterManagerLayoutItem item, Control control)>)
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ScanGrid(SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ConfigControlDelegate, System.Action<(SearchAThing.Desktop.GridSplitterManagerLayoutItem item, Avalonia.Controls.Control control)>)
+  nameWithType.vb: GridSplitterManager(Of GLView).ScanGrid(GridSplitterManager(Of GLView).ConfigControlDelegate, Action(Of (item As GridSplitterManagerLayoutItem, control As Control)))
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ScanGrid(SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ConfigControlDelegate, System.Action(Of (item As SearchAThing.Desktop.GridSplitterManagerLayoutItem, control As Avalonia.Controls.Control)))
+  name.vb: ScanGrid(ConfigControlDelegate, Action(Of (item As GridSplitterManagerLayoutItem, control As Control)))
+  spec.csharp:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
+    name: ScanGrid
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
+    name: ConfigControlDelegate
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
+    name: GridSplitterManagerLayoutItem
+    isExternal: true
+  - name: " "
+  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.item
+    name: item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.item
+  - name: ','
+  - name: " "
+  - uid: Avalonia.Controls.Control
+    name: Control
+    isExternal: true
+  - name: " "
+  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.control
+    name: control
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.control
+  - name: )
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
+    name: ScanGrid
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
+    name: ConfigControlDelegate
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.item
+    name: item
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.item
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
+    name: GridSplitterManagerLayoutItem
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.control
+    name: control
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.control
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Avalonia.Controls.Control
+    name: Control
+    isExternal: true
+  - name: )
+  - name: )
+  - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.SaveStructure(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
+  name: SaveStructure(ConfigControlDelegate)
+  nameWithType: GridSplitterManager<GLView>.SaveStructure(GridSplitterManager<GLView>.ConfigControlDelegate)
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.SaveStructure(SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ConfigControlDelegate)
+  nameWithType.vb: GridSplitterManager(Of GLView).SaveStructure(GridSplitterManager(Of GLView).ConfigControlDelegate)
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).SaveStructure(SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ConfigControlDelegate)
+  spec.csharp:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+    name: SaveStructure
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
+    name: ConfigControlDelegate
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+    name: SaveStructure
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
+    name: ConfigControlDelegate
+    isExternal: true
+  - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
+  name: LoadStructure(GridSplitterManagerLayoutItem, ConfigControlDelegate)
+  nameWithType: GridSplitterManager<GLView>.LoadStructure(GridSplitterManagerLayoutItem, GridSplitterManager<GLView>.ConfigControlDelegate)
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem, SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ConfigControlDelegate)
+  nameWithType.vb: GridSplitterManager(Of GLView).LoadStructure(GridSplitterManagerLayoutItem, GridSplitterManager(Of GLView).ConfigControlDelegate)
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem, SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ConfigControlDelegate)
+  spec.csharp:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+    name: LoadStructure
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
+    name: GridSplitterManagerLayoutItem
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
+    name: ConfigControlDelegate
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
+    name: LoadStructure
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
+    name: GridSplitterManagerLayoutItem
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
+    name: ConfigControlDelegate
+    isExternal: true
+  - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
+  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Split(GridSplitDirection, params double[])
+  nameWithType: GridSplitterManager<GLView>.Split(GridSplitDirection, params double[])
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Split(SearchAThing.Desktop.GridSplitDirection, params double[])
+  nameWithType.vb: GridSplitterManager(Of GLView).Split(GridSplitDirection, ParamArray Double())
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Split(SearchAThing.Desktop.GridSplitDirection, ParamArray Double())
+  name.vb: Split(GridSplitDirection, ParamArray Double())
+  spec.csharp:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
+    name: Split
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitDirection
+    name: GridSplitDirection
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
+    name: Split
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitDirection
+    name: GridSplitDirection
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )
+  - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
+  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection)
+  name: Split(GridSplitDirection)
+  nameWithType: GridSplitterManager<GLView>.Split(GridSplitDirection)
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Split(SearchAThing.Desktop.GridSplitDirection)
+  nameWithType.vb: GridSplitterManager(Of GLView).Split(GridSplitDirection)
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Split(SearchAThing.Desktop.GridSplitDirection)
+  spec.csharp:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
+    name: Split
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitDirection
+    name: GridSplitDirection
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
+    name: Split
+    isExternal: true
+  - name: (
+  - uid: SearchAThing.Desktop.GridSplitDirection
+    name: GridSplitDirection
+    isExternal: true
+  - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
+  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.Remove
+  name: Remove()
+  nameWithType: GridSplitterManager<GLView>.Remove()
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Remove()
+  nameWithType.vb: GridSplitterManager(Of GLView).Remove()
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Remove()
+  spec.csharp:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
+    name: Remove
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
+    name: Remove
+    isExternal: true
+  - name: (
   - name: )
 - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.FocusedControl
   commentId: P:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.FocusedControl
@@ -907,6 +1175,24 @@ references:
   fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.DebugWriter
   nameWithType.vb: GridSplitterManager(Of GLView).DebugWriter
   fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).DebugWriter
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.JsonSettings
+  commentId: P:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.JsonSettings
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.JsonSettings
+  name: JsonSettings
+  nameWithType: GridSplitterManager<GLView>.JsonSettings
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.JsonSettings
+  nameWithType.vb: GridSplitterManager(Of GLView).JsonSettings
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).JsonSettings
+- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.PropertyChanged
+  commentId: E:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.PropertyChanged
+  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
+  definition: SearchAThing.Desktop.GridSplitterManager`1.PropertyChanged
+  name: PropertyChanged
+  nameWithType: GridSplitterManager<GLView>.PropertyChanged
+  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.PropertyChanged
+  nameWithType.vb: GridSplitterManager(Of GLView).PropertyChanged
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).PropertyChanged
 - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ControlCreated
   commentId: E:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ControlCreated
   parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
@@ -925,256 +1211,6 @@ references:
   fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ControlRemoved
   nameWithType.vb: GridSplitterManager(Of GLView).ControlRemoved
   fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ControlRemoved
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
-  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.Clear
-  name: Clear()
-  nameWithType: GridSplitterManager<GLView>.Clear()
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Clear()
-  nameWithType.vb: GridSplitterManager(Of GLView).Clear()
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Clear()
-  spec.csharp:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
-    name: Clear
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Clear
-    name: Clear
-  - name: (
-  - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.JsonSettings
-  commentId: P:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.JsonSettings
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.JsonSettings
-  name: JsonSettings
-  nameWithType: GridSplitterManager<GLView>.JsonSettings
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.JsonSettings
-  nameWithType.vb: GridSplitterManager(Of GLView).JsonSettings
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).JsonSettings
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
-  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.ScanGrid(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
-  href: https://learn.microsoft.com/dotnet/api/system.action-1
-  name: ScanGrid(ConfigControlDelegate, Action<(GridSplitterManagerLayoutItem item, Control control)>)
-  nameWithType: GridSplitterManager<GLView>.ScanGrid(GridSplitterManager<GLView>.ConfigControlDelegate, Action<(GridSplitterManagerLayoutItem item, Control control)>)
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ScanGrid(SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ConfigControlDelegate, System.Action<(SearchAThing.Desktop.GridSplitterManagerLayoutItem item, Avalonia.Controls.Control control)>)
-  nameWithType.vb: GridSplitterManager(Of GLView).ScanGrid(GridSplitterManager(Of GLView).ConfigControlDelegate, Action(Of (item As GridSplitterManagerLayoutItem, control As Control)))
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ScanGrid(SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ConfigControlDelegate, System.Action(Of (item As SearchAThing.Desktop.GridSplitterManagerLayoutItem, control As Avalonia.Controls.Control)))
-  name.vb: ScanGrid(ConfigControlDelegate, Action(Of (item As GridSplitterManagerLayoutItem, control As Control)))
-  spec.csharp:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
-    name: ScanGrid
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
-    name: ConfigControlDelegate
-  - name: ','
-  - name: " "
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: <
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
-    name: GridSplitterManagerLayoutItem
-  - name: " "
-  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.item
-    name: item
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.item
-  - name: ','
-  - name: " "
-  - uid: Avalonia.Controls.Control
-    name: Control
-    isExternal: true
-  - name: " "
-  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.control
-    name: control
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.control
-  - name: )
-  - name: '>'
-  - name: )
-  spec.vb:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ScanGrid(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
-    name: ScanGrid
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
-    name: ConfigControlDelegate
-  - name: ','
-  - name: " "
-  - uid: System.Action`1
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: (
-  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.item
-    name: item
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.item
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
-    name: GridSplitterManagerLayoutItem
-  - name: ','
-  - name: " "
-  - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.control
-    name: control
-    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.control
-  - name: " "
-  - name: As
-  - name: " "
-  - uid: Avalonia.Controls.Control
-    name: Control
-    isExternal: true
-  - name: )
-  - name: )
-  - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.SaveStructure(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
-  name: SaveStructure(ConfigControlDelegate)
-  nameWithType: GridSplitterManager<GLView>.SaveStructure(GridSplitterManager<GLView>.ConfigControlDelegate)
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.SaveStructure(SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ConfigControlDelegate)
-  nameWithType.vb: GridSplitterManager(Of GLView).SaveStructure(GridSplitterManager(Of GLView).ConfigControlDelegate)
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).SaveStructure(SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ConfigControlDelegate)
-  spec.csharp:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-    name: SaveStructure
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
-    name: ConfigControlDelegate
-  - name: )
-  spec.vb:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.SaveStructure(SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-    name: SaveStructure
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
-    name: ConfigControlDelegate
-  - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
-  name: LoadStructure(GridSplitterManagerLayoutItem, ConfigControlDelegate)
-  nameWithType: GridSplitterManager<GLView>.LoadStructure(GridSplitterManagerLayoutItem, GridSplitterManager<GLView>.ConfigControlDelegate)
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem, SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.ConfigControlDelegate)
-  nameWithType.vb: GridSplitterManager(Of GLView).LoadStructure(GridSplitterManagerLayoutItem, GridSplitterManager(Of GLView).ConfigControlDelegate)
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem, SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).ConfigControlDelegate)
-  spec.csharp:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-    name: LoadStructure
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
-    name: GridSplitterManagerLayoutItem
-  - name: ','
-  - name: " "
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
-    name: ConfigControlDelegate
-  - name: )
-  spec.vb:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate)
-    name: LoadStructure
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
-    name: GridSplitterManagerLayoutItem
-  - name: ','
-  - name: " "
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.ConfigControlDelegate
-    name: ConfigControlDelegate
-  - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
-  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
-  href: https://learn.microsoft.com/dotnet/api/system.double
-  name: Split(GridSplitDirection, params double[])
-  nameWithType: GridSplitterManager<GLView>.Split(GridSplitDirection, params double[])
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Split(SearchAThing.Desktop.GridSplitDirection, params double[])
-  nameWithType.vb: GridSplitterManager(Of GLView).Split(GridSplitDirection, ParamArray Double())
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Split(SearchAThing.Desktop.GridSplitDirection, ParamArray Double())
-  name.vb: Split(GridSplitDirection, ParamArray Double())
-  spec.csharp:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
-    name: Split
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitDirection
-    name: GridSplitDirection
-  - name: ','
-  - name: " "
-  - name: params
-  - name: " "
-  - uid: System.Double
-    name: double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
-  - name: '['
-  - name: ']'
-  - name: )
-  spec.vb:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
-    name: Split
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitDirection
-    name: GridSplitDirection
-  - name: ','
-  - name: " "
-  - name: ParamArray
-  - name: " "
-  - uid: System.Double
-    name: Double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
-  - name: (
-  - name: )
-  - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
-  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection)
-  name: Split(GridSplitDirection)
-  nameWithType: GridSplitterManager<GLView>.Split(GridSplitDirection)
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Split(SearchAThing.Desktop.GridSplitDirection)
-  nameWithType.vb: GridSplitterManager(Of GLView).Split(GridSplitDirection)
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Split(SearchAThing.Desktop.GridSplitDirection)
-  spec.csharp:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
-    name: Split
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitDirection
-    name: GridSplitDirection
-  - name: )
-  spec.vb:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Split(SearchAThing.Desktop.GridSplitDirection)
-    name: Split
-  - name: (
-  - uid: SearchAThing.Desktop.GridSplitDirection
-    name: GridSplitDirection
-  - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
-  commentId: M:SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
-  parent: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}
-  definition: SearchAThing.Desktop.GridSplitterManager`1.Remove
-  name: Remove()
-  nameWithType: GridSplitterManager<GLView>.Remove()
-  fullName: SearchAThing.Desktop.GridSplitterManager<SearchAThing.OpenGL.GUI.GLView>.Remove()
-  nameWithType.vb: GridSplitterManager(Of GLView).Remove()
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of SearchAThing.OpenGL.GUI.GLView).Remove()
-  spec.csharp:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
-    name: Remove
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: SearchAThing.Desktop.GridSplitterManager{SearchAThing.OpenGL.GUI.GLView}.Remove
-    name: Remove
-  - name: (
-  - name: )
 - uid: Avalonia.Controls.Grid.ShowGridLinesProperty
   commentId: F:Avalonia.Controls.Grid.ShowGridLinesProperty
   parent: Avalonia.Controls.Grid
@@ -6348,6 +6384,7 @@ references:
     isExternal: true
 - uid: SearchAThing.Desktop.GridSplitterManager`1
   commentId: T:SearchAThing.Desktop.GridSplitterManager`1
+  isExternal: true
   name: GridSplitterManager<T>
   nameWithType: GridSplitterManager<T>
   fullName: SearchAThing.Desktop.GridSplitterManager<T>
@@ -6357,12 +6394,14 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1
     name: GridSplitterManager
+    isExternal: true
   - name: <
   - name: T
   - name: '>'
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1
     name: GridSplitterManager
+    isExternal: true
   - name: (
   - name: Of
   - name: " "
@@ -6370,21 +6409,26 @@ references:
   - name: )
 - uid: SearchAThing.Desktop
   commentId: N:SearchAThing.Desktop
+  isExternal: true
   name: SearchAThing.Desktop
   nameWithType: SearchAThing.Desktop
   fullName: SearchAThing.Desktop
   spec.csharp:
   - uid: SearchAThing
     name: SearchAThing
+    isExternal: true
   - name: .
   - uid: SearchAThing.Desktop
     name: Desktop
+    isExternal: true
   spec.vb:
   - uid: SearchAThing
     name: SearchAThing
+    isExternal: true
   - name: .
   - uid: SearchAThing.Desktop
     name: Desktop
+    isExternal: true
 - uid: System.ComponentModel
   commentId: N:System.ComponentModel
   isExternal: true
@@ -6486,13 +6530,6 @@ references:
   - uid: Avalonia.Controls.Templates
     name: Templates
     isExternal: true
-- uid: SearchAThing.Desktop.GridSplitterManager`1.PropertyChanged
-  commentId: E:SearchAThing.Desktop.GridSplitterManager`1.PropertyChanged
-  name: PropertyChanged
-  nameWithType: GridSplitterManager<T>.PropertyChanged
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.PropertyChanged
-  nameWithType.vb: GridSplitterManager(Of T).PropertyChanged
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).PropertyChanged
 - uid: SearchAThing.Desktop.GridSplitterManager`1.OnPropertyChanged(System.String)
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.OnPropertyChanged(System.String)
   isExternal: true
@@ -6506,6 +6543,7 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.OnPropertyChanged(System.String)
     name: OnPropertyChanged
+    isExternal: true
   - name: (
   - uid: System.String
     name: string
@@ -6515,91 +6553,16 @@ references:
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.OnPropertyChanged(System.String)
     name: OnPropertyChanged
+    isExternal: true
   - name: (
   - uid: System.String
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager`1.FocusedControl
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.FocusedControl
-  name: FocusedControl
-  nameWithType: GridSplitterManager<T>.FocusedControl
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.FocusedControl
-  nameWithType.vb: GridSplitterManager(Of T).FocusedControl
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).FocusedControl
-- uid: SearchAThing.Desktop.GridSplitterManager`1.Children
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.Children
-  name: Children
-  nameWithType: GridSplitterManager<T>.Children
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.Children
-  nameWithType.vb: GridSplitterManager(Of T).Children
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).Children
-- uid: SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderThickness
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderThickness
-  name: FocusedControlBorderThickness
-  nameWithType: GridSplitterManager<T>.FocusedControlBorderThickness
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.FocusedControlBorderThickness
-  nameWithType.vb: GridSplitterManager(Of T).FocusedControlBorderThickness
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).FocusedControlBorderThickness
-- uid: SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderBrush
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderBrush
-  name: FocusedControlBorderBrush
-  nameWithType: GridSplitterManager<T>.FocusedControlBorderBrush
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.FocusedControlBorderBrush
-  nameWithType.vb: GridSplitterManager(Of T).FocusedControlBorderBrush
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).FocusedControlBorderBrush
-- uid: SearchAThing.Desktop.GridSplitterManager`1.CreateControl
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.CreateControl
-  name: CreateControl
-  nameWithType: GridSplitterManager<T>.CreateControl
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.CreateControl
-  nameWithType.vb: GridSplitterManager(Of T).CreateControl
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).CreateControl
-- uid: SearchAThing.Desktop.GridSplitterManager`1.SplitterThickness
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.SplitterThickness
-  name: SplitterThickness
-  nameWithType: GridSplitterManager<T>.SplitterThickness
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.SplitterThickness
-  nameWithType.vb: GridSplitterManager(Of T).SplitterThickness
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).SplitterThickness
-- uid: SearchAThing.Desktop.GridSplitterManager`1.SplitterBrush
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.SplitterBrush
-  name: SplitterBrush
-  nameWithType: GridSplitterManager<T>.SplitterBrush
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.SplitterBrush
-  nameWithType.vb: GridSplitterManager(Of T).SplitterBrush
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).SplitterBrush
-- uid: SearchAThing.Desktop.GridSplitterManager`1.DistributeSplitSize
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.DistributeSplitSize
-  name: DistributeSplitSize
-  nameWithType: GridSplitterManager<T>.DistributeSplitSize
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.DistributeSplitSize
-  nameWithType.vb: GridSplitterManager(Of T).DistributeSplitSize
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).DistributeSplitSize
-- uid: SearchAThing.Desktop.GridSplitterManager`1.DebugWriter
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.DebugWriter
-  name: DebugWriter
-  nameWithType: GridSplitterManager<T>.DebugWriter
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.DebugWriter
-  nameWithType.vb: GridSplitterManager(Of T).DebugWriter
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).DebugWriter
-- uid: SearchAThing.Desktop.GridSplitterManager`1.ControlCreated
-  commentId: E:SearchAThing.Desktop.GridSplitterManager`1.ControlCreated
-  name: ControlCreated
-  nameWithType: GridSplitterManager<T>.ControlCreated
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.ControlCreated
-  nameWithType.vb: GridSplitterManager(Of T).ControlCreated
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).ControlCreated
-- uid: SearchAThing.Desktop.GridSplitterManager`1.ControlRemoved
-  commentId: E:SearchAThing.Desktop.GridSplitterManager`1.ControlRemoved
-  name: ControlRemoved
-  nameWithType: GridSplitterManager<T>.ControlRemoved
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.ControlRemoved
-  nameWithType.vb: GridSplitterManager(Of T).ControlRemoved
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).ControlRemoved
 - uid: SearchAThing.Desktop.GridSplitterManager`1.Clear
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.Clear
+  isExternal: true
   name: Clear()
   nameWithType: GridSplitterManager<T>.Clear()
   fullName: SearchAThing.Desktop.GridSplitterManager<T>.Clear()
@@ -6608,20 +6571,15 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Clear
     name: Clear
+    isExternal: true
   - name: (
   - name: )
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Clear
     name: Clear
+    isExternal: true
   - name: (
   - name: )
-- uid: SearchAThing.Desktop.GridSplitterManager`1.JsonSettings
-  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.JsonSettings
-  name: JsonSettings
-  nameWithType: GridSplitterManager<T>.JsonSettings
-  fullName: SearchAThing.Desktop.GridSplitterManager<T>.JsonSettings
-  nameWithType.vb: GridSplitterManager(Of T).JsonSettings
-  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).JsonSettings
 - uid: SearchAThing.Desktop.GridSplitterManager`1.ScanGrid(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.ScanGrid(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
   isExternal: true
@@ -6635,9 +6593,11 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ScanGrid(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
     name: ScanGrid
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ConfigControlDelegate
     name: ConfigControlDelegate
+    isExternal: true
   - name: ','
   - name: " "
   - uid: System.Action`1
@@ -6648,9 +6608,11 @@ references:
   - name: (
   - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
     name: GridSplitterManagerLayoutItem
+    isExternal: true
   - name: " "
   - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.item
     name: item
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.item
   - name: ','
   - name: " "
@@ -6660,6 +6622,7 @@ references:
   - name: " "
   - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.control
     name: control
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.control
   - name: )
   - name: '>'
@@ -6667,9 +6630,11 @@ references:
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ScanGrid(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate,System.Action{System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}})
     name: ScanGrid
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ConfigControlDelegate
     name: ConfigControlDelegate
+    isExternal: true
   - name: ','
   - name: " "
   - uid: System.Action`1
@@ -6682,16 +6647,19 @@ references:
   - name: (
   - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.item
     name: item
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.item
   - name: " "
   - name: As
   - name: " "
   - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
     name: GridSplitterManagerLayoutItem
+    isExternal: true
   - name: ','
   - name: " "
   - uid: System.ValueTuple{SearchAThing.Desktop.GridSplitterManagerLayoutItem,Avalonia.Controls.Control}.control
     name: control
+    isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.valuetuple-searchathing.desktop.gridsplittermanagerlayoutitem,avalonia.controls.control-.control
   - name: " "
   - name: As
@@ -6704,6 +6672,7 @@ references:
   - name: )
 - uid: SearchAThing.Desktop.GridSplitterManager`1.SaveStructure(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.SaveStructure(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
+  isExternal: true
   name: SaveStructure(ConfigControlDelegate)
   nameWithType: GridSplitterManager<T>.SaveStructure(GridSplitterManager<T>.ConfigControlDelegate)
   fullName: SearchAThing.Desktop.GridSplitterManager<T>.SaveStructure(SearchAThing.Desktop.GridSplitterManager<T>.ConfigControlDelegate)
@@ -6712,19 +6681,24 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.SaveStructure(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
     name: SaveStructure
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ConfigControlDelegate
     name: ConfigControlDelegate
+    isExternal: true
   - name: )
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.SaveStructure(SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
     name: SaveStructure
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ConfigControlDelegate
     name: ConfigControlDelegate
+    isExternal: true
   - name: )
 - uid: SearchAThing.Desktop.GridSplitterManager`1.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
+  isExternal: true
   name: LoadStructure(GridSplitterManagerLayoutItem, ConfigControlDelegate)
   nameWithType: GridSplitterManager<T>.LoadStructure(GridSplitterManagerLayoutItem, GridSplitterManager<T>.ConfigControlDelegate)
   fullName: SearchAThing.Desktop.GridSplitterManager<T>.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem, SearchAThing.Desktop.GridSplitterManager<T>.ConfigControlDelegate)
@@ -6733,24 +6707,30 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
     name: LoadStructure
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
     name: GridSplitterManagerLayoutItem
+    isExternal: true
   - name: ','
   - name: " "
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ConfigControlDelegate
     name: ConfigControlDelegate
+    isExternal: true
   - name: )
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.LoadStructure(SearchAThing.Desktop.GridSplitterManagerLayoutItem,SearchAThing.Desktop.GridSplitterManager{`0}.ConfigControlDelegate)
     name: LoadStructure
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitterManagerLayoutItem
     name: GridSplitterManagerLayoutItem
+    isExternal: true
   - name: ','
   - name: " "
   - uid: SearchAThing.Desktop.GridSplitterManager`1.ConfigControlDelegate
     name: ConfigControlDelegate
+    isExternal: true
   - name: )
 - uid: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
@@ -6765,9 +6745,11 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
     name: Split
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitDirection
     name: GridSplitDirection
+    isExternal: true
   - name: ','
   - name: " "
   - name: params
@@ -6782,9 +6764,11 @@ references:
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection,System.Double[])
     name: Split
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitDirection
     name: GridSplitDirection
+    isExternal: true
   - name: ','
   - name: " "
   - name: ParamArray
@@ -6798,6 +6782,7 @@ references:
   - name: )
 - uid: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection)
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection)
+  isExternal: true
   name: Split(GridSplitDirection)
   nameWithType: GridSplitterManager<T>.Split(GridSplitDirection)
   fullName: SearchAThing.Desktop.GridSplitterManager<T>.Split(SearchAThing.Desktop.GridSplitDirection)
@@ -6806,19 +6791,24 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection)
     name: Split
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitDirection
     name: GridSplitDirection
+    isExternal: true
   - name: )
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Split(SearchAThing.Desktop.GridSplitDirection)
     name: Split
+    isExternal: true
   - name: (
   - uid: SearchAThing.Desktop.GridSplitDirection
     name: GridSplitDirection
+    isExternal: true
   - name: )
 - uid: SearchAThing.Desktop.GridSplitterManager`1.Remove
   commentId: M:SearchAThing.Desktop.GridSplitterManager`1.Remove
+  isExternal: true
   name: Remove()
   nameWithType: GridSplitterManager<T>.Remove()
   fullName: SearchAThing.Desktop.GridSplitterManager<T>.Remove()
@@ -6827,13 +6817,119 @@ references:
   spec.csharp:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Remove
     name: Remove
+    isExternal: true
   - name: (
   - name: )
   spec.vb:
   - uid: SearchAThing.Desktop.GridSplitterManager`1.Remove
     name: Remove
+    isExternal: true
   - name: (
   - name: )
+- uid: SearchAThing.Desktop.GridSplitterManager`1.FocusedControl
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.FocusedControl
+  isExternal: true
+  name: FocusedControl
+  nameWithType: GridSplitterManager<T>.FocusedControl
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.FocusedControl
+  nameWithType.vb: GridSplitterManager(Of T).FocusedControl
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).FocusedControl
+- uid: SearchAThing.Desktop.GridSplitterManager`1.Children
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.Children
+  isExternal: true
+  name: Children
+  nameWithType: GridSplitterManager<T>.Children
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.Children
+  nameWithType.vb: GridSplitterManager(Of T).Children
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).Children
+- uid: SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderThickness
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderThickness
+  isExternal: true
+  name: FocusedControlBorderThickness
+  nameWithType: GridSplitterManager<T>.FocusedControlBorderThickness
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.FocusedControlBorderThickness
+  nameWithType.vb: GridSplitterManager(Of T).FocusedControlBorderThickness
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).FocusedControlBorderThickness
+- uid: SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderBrush
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.FocusedControlBorderBrush
+  isExternal: true
+  name: FocusedControlBorderBrush
+  nameWithType: GridSplitterManager<T>.FocusedControlBorderBrush
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.FocusedControlBorderBrush
+  nameWithType.vb: GridSplitterManager(Of T).FocusedControlBorderBrush
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).FocusedControlBorderBrush
+- uid: SearchAThing.Desktop.GridSplitterManager`1.CreateControl
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.CreateControl
+  isExternal: true
+  name: CreateControl
+  nameWithType: GridSplitterManager<T>.CreateControl
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.CreateControl
+  nameWithType.vb: GridSplitterManager(Of T).CreateControl
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).CreateControl
+- uid: SearchAThing.Desktop.GridSplitterManager`1.SplitterThickness
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.SplitterThickness
+  isExternal: true
+  name: SplitterThickness
+  nameWithType: GridSplitterManager<T>.SplitterThickness
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.SplitterThickness
+  nameWithType.vb: GridSplitterManager(Of T).SplitterThickness
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).SplitterThickness
+- uid: SearchAThing.Desktop.GridSplitterManager`1.SplitterBrush
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.SplitterBrush
+  isExternal: true
+  name: SplitterBrush
+  nameWithType: GridSplitterManager<T>.SplitterBrush
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.SplitterBrush
+  nameWithType.vb: GridSplitterManager(Of T).SplitterBrush
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).SplitterBrush
+- uid: SearchAThing.Desktop.GridSplitterManager`1.DistributeSplitSize
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.DistributeSplitSize
+  isExternal: true
+  name: DistributeSplitSize
+  nameWithType: GridSplitterManager<T>.DistributeSplitSize
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.DistributeSplitSize
+  nameWithType.vb: GridSplitterManager(Of T).DistributeSplitSize
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).DistributeSplitSize
+- uid: SearchAThing.Desktop.GridSplitterManager`1.DebugWriter
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.DebugWriter
+  isExternal: true
+  name: DebugWriter
+  nameWithType: GridSplitterManager<T>.DebugWriter
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.DebugWriter
+  nameWithType.vb: GridSplitterManager(Of T).DebugWriter
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).DebugWriter
+- uid: SearchAThing.Desktop.GridSplitterManager`1.JsonSettings
+  commentId: P:SearchAThing.Desktop.GridSplitterManager`1.JsonSettings
+  isExternal: true
+  name: JsonSettings
+  nameWithType: GridSplitterManager<T>.JsonSettings
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.JsonSettings
+  nameWithType.vb: GridSplitterManager(Of T).JsonSettings
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).JsonSettings
+- uid: SearchAThing.Desktop.GridSplitterManager`1.PropertyChanged
+  commentId: E:SearchAThing.Desktop.GridSplitterManager`1.PropertyChanged
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: GridSplitterManager<T>.PropertyChanged
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.PropertyChanged
+  nameWithType.vb: GridSplitterManager(Of T).PropertyChanged
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).PropertyChanged
+- uid: SearchAThing.Desktop.GridSplitterManager`1.ControlCreated
+  commentId: E:SearchAThing.Desktop.GridSplitterManager`1.ControlCreated
+  isExternal: true
+  name: ControlCreated
+  nameWithType: GridSplitterManager<T>.ControlCreated
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.ControlCreated
+  nameWithType.vb: GridSplitterManager(Of T).ControlCreated
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).ControlCreated
+- uid: SearchAThing.Desktop.GridSplitterManager`1.ControlRemoved
+  commentId: E:SearchAThing.Desktop.GridSplitterManager`1.ControlRemoved
+  isExternal: true
+  name: ControlRemoved
+  nameWithType: GridSplitterManager<T>.ControlRemoved
+  fullName: SearchAThing.Desktop.GridSplitterManager<T>.ControlRemoved
+  nameWithType.vb: GridSplitterManager(Of T).ControlRemoved
+  fullName.vb: SearchAThing.Desktop.GridSplitterManager(Of T).ControlRemoved
 - uid: Avalonia.Interactivity.Interactive.AddHandler``1(Avalonia.Interactivity.RoutedEvent{``0},System.EventHandler{``0},Avalonia.Interactivity.RoutingStrategies,System.Boolean)
   commentId: M:Avalonia.Interactivity.Interactive.AddHandler``1(Avalonia.Interactivity.RoutedEvent{``0},System.EventHandler{``0},Avalonia.Interactivity.RoutingStrategies,System.Boolean)
   isExternal: true
