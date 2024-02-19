@@ -112,4 +112,11 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         };
     }
 
+    protected override void OnKeyDown(KeyEventArgs e)
+    {
+        base.OnKeyDown(e);
+
+        if (GLControlSplit?.FocusedControl is GLView glView)
+            glView.AvaloniaGLControl.HandleKeyDown(e);        
+    }
 }

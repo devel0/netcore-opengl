@@ -464,4 +464,12 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             dxf.Save(file.Path.AbsolutePath, isBinary: true);
         }
     }
+
+    protected override void OnKeyDown(KeyEventArgs e)
+    {
+        base.OnKeyDown(e);
+
+        if (GLControlSplit?.FocusedControl is GLView glView)
+            glView.AvaloniaGLControl.HandleKeyDown(e);        
+    }
 }
