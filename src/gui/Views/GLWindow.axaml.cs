@@ -22,7 +22,7 @@ public delegate void GLSplitAttachedDelegate(AvaloniaGLControlSplit glSplit);
 /// <param name="glSplit">Gl split reference.</param>
 /// <param name="avaloniaGLControl">Focused avalonia gl control.</param>
 /// <param name="isInitial">True if this is the first-est focused control of the gl split.</param>
-public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit, 
+public delegate void GLControlFocusedDelegate(AvaloniaGLControlSplit glSplit,
     AvaloniaGLControl avaloniaGLControl, bool isInitial);
 
 /// <summary>
@@ -129,7 +129,7 @@ public partial class GLWindow : Window, INotifyPropertyChanged
         GLModel = new GLModel(new GLContext());
 
         GLModel.NotificationRequest += (title, msg, type) =>
-            this.NotificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));        
+            this.NotificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));
 
         this.AttachGLControlSplit(RootGrid, GLModel,
             setGLControlSplit: x =>
@@ -211,6 +211,12 @@ public partial class GLWindow : Window, INotifyPropertyChanged
             {
                 w.NotificationManager = new WindowNotificationManager(TopLevel.GetTopLevel(w.RootGrid));
             };
+
+            w.KeyDown += (a, b) =>
+            {
+                if (w.GLControlSplit?.FocusedControl is GLView glView)
+                    glView.AvaloniaGLControl.HandleKeyDown(b);
+            };
         }).Wait();
 
         return w!;
@@ -258,7 +264,7 @@ public static partial class Ext
 
         glModel.NotificationRequest += (title, msg, type) =>
             notificationManager?.Show(new Notification(title, msg, type.ToAvaloniaNotificationType()));
-        
+
         window.Closed += (sender, e) =>
         {
 
