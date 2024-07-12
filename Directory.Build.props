@@ -20,6 +20,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
+		<LangVersion>12</LangVersion>
 		<AvaloniaVersion>11.0.9</AvaloniaVersion>
 		<AvaloniaXamlBehaviorsVersion>11.0.6</AvaloniaXamlBehaviorsVersion>
 		<!-- <AvaloniaVersion>11.0.999</AvaloniaVersion> -->
