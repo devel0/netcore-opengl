@@ -44,5 +44,6 @@
   "OrthoZoom": 1.0,
   "Near": 0.1,
   "Far": 32.64723,
-  "ShadeWithEdge": false
+  "ShadeWithEdge": false,
+  "UseShadow": true
 }
