@@ -132,7 +132,7 @@ void main()
     if (uFigureHighlight)
         materialColor = vec4(1, 1, 0, 1);
 
-    if (uFigureSelected || (fs_in.flags & VERTEX_FLAG_SELECTED) != 0)
+    if (uFigureSelected || (int(fs_in.flags) & VERTEX_FLAG_SELECTED) != 0)
         materialColor = vec4(0, 1, 0, 1);
 
     if (uFigureScreenCoord) {
