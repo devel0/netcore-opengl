@@ -38,4 +38,7 @@ public static partial class Constants
     /// <see cref="Toolkit.PreventZFighting"/>
     public const float DEFAULT_Far = 50000.0f;
 
+    public const int DEFAULT_WINDOW_WIDTH = 1024;
+    public const int DEFAULT_WINDOW_HEIGHT = 768;
+
 }

@@ -204,8 +204,9 @@ public partial class GLWindow : Window, INotifyPropertyChanged
             {
                 w.Title = AppDomain.CurrentDomain.FriendlyName;
             }
-            if (width is not null) w.Width = width.Value;
-            if (height is not null) w.Height = height.Value;
+            
+            w.Width = width ?? DEFAULT_WINDOW_WIDTH;
+            w.Height = height ?? DEFAULT_WINDOW_HEIGHT;
 
             w.Opened += (a, b) =>
             {
