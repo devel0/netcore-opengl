@@ -8,6 +8,7 @@
 <hr/>
 
 - [Introduction](#introduction)
+- [Requirements](#requirements)
 - [Quickstart](#quickstart)
 - [Build solution](#build-solution)
 - [Examples](#examples)
@@ -17,6 +18,7 @@
 - [Development key notes](#development-key-notes)
   - [Coordinate spaces](#coordinate-spaces)
   - [GL Dev inspect tool](#gl-dev-inspect-tool)
+  - [VsCode settings](#vscode-settings)
   - [Primitives, figures interaction](#primitives-figures-interaction)
     - [Selection and coord identify](#selection-and-coord-identify)
     - [Removal](#removal)
@@ -55,6 +57,12 @@ The library is composed by following modules:
 | **gui** [![gui-badge]][gui]          | NET Standard 2.0 | [core], [Avalonia], [netcore-desktop]                                                                                  | desktop gl widget                                                 |
 | **shapes** [![shapes-badge]][shapes] | NET Standard 2.0 | [core]                                                                                                                 | box, cone, sphere, arrow shapes                                   |
 | **nurbs** [![nurbs-badge]][nurbs]    | NET Standard 2.0 | [core], [G-Shark]                                                                                                      | nurbs figures                                                     |
+
+## Requirements
+
+```sh
+apt install libglfw3
+```
 
 ## Quickstart
 
@@ -430,6 +438,24 @@ Hit `F1` gesture to open gl dev tool useful to understand how conversion transla
 - add, remove, set position, color of lights
 
 ![](data/images/gldevtool.gif)
+
+### VsCode settings
+
+relevant glsl settings
+
+```json
+{
+  "[glsl]": {
+      "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "glsllint.additionalStageAssociations": {
+      ".fs": "frag",
+      ".vs": "vert",
+      ".gs": "geom"
+  },
+  "clang-format.language.glsl.style": "WebKit",
+}
+```
 
 ### Primitives, figures interaction
 
