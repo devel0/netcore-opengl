@@ -238,7 +238,7 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
 
     public void TransferGLPixels(GL GL)
     {
-        if (transferringGLPixels || Size.IsEmpty) return;
+        if (transferringGLPixels || Size.IsEmpty || Size.Width == 0 || Size.Height == 0) return;
 
         transferringGLPixels = true;
 
@@ -286,8 +286,8 @@ public partial class AvaloniaGLControl : Control, INotifyPropertyChanged, IRende
             context.DrawImage(bitmap,
                 new Rect(bitmap.Size),
                 new Rect(bitmap.Size));
-                //,
-                //BitmapInterpolationMode.LowQuality);
+            //,
+            //BitmapInterpolationMode.LowQuality);
         }
     }
 
