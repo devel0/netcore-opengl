@@ -116,6 +116,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         Title = AppDomain.CurrentDomain.FriendlyName;
 
+        Width = DEFAULT_WINDOW_WIDTH;
+        Height = DEFAULT_WINDOW_HEIGHT;
+
         // light[0] : -1700,0,1100
 
         var glCtx = new GLContext();

@@ -16,7 +16,7 @@ public enum ShadowResTypeEnum
 {
     LowRes,
     Default,
-    HiRes,    
+    HiRes,
 }
 
 public partial class MainWindow : Window, INotifyPropertyChanged
@@ -117,6 +117,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         InitializeComponent();
 
         Title = AppDomain.CurrentDomain.FriendlyName;
+
+        Width = DEFAULT_WINDOW_WIDTH;
+        Height = DEFAULT_WINDOW_HEIGHT;
 
         var glCtx = new GLContext();
         glModel = new GLModel(glCtx);

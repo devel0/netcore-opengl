@@ -218,6 +218,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     {
         InitializeComponent();
 
+        Width = 1600;
+        Height = 1024;
+
         var q = this.Resources;
 
         Title = AppDomain.CurrentDomain.FriendlyName;

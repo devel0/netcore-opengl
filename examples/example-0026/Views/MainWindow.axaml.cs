@@ -319,6 +319,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         Title = AppDomain.CurrentDomain.FriendlyName;
 
+        Width = DEFAULT_WINDOW_WIDTH;
+        Height = DEFAULT_WINDOW_HEIGHT;
+
         var glCtx = new GLContext();
         glModel = new GLModel(glCtx);
         glModel.BuildModel = (glCtl, isInitial) =>
