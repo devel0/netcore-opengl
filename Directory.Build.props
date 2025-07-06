@@ -16,12 +16,12 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<NetCoreOpenGLVersion>3.4.1</NetCoreOpenGLVersion>
+		<NetCoreOpenGLVersion>3.5.0</NetCoreOpenGLVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
 		<LangVersion>12</LangVersion>
-		<AvaloniaVersion>11.0.9</AvaloniaVersion>
+		<AvaloniaVersion>11.3.2</AvaloniaVersion>
 		<AvaloniaXamlBehaviorsVersion>11.0.6</AvaloniaXamlBehaviorsVersion>
 		<!-- <AvaloniaVersion>11.0.999</AvaloniaVersion> -->
 		<XamlNameReferenceGeneratorVersion>1.6.1</XamlNameReferenceGeneratorVersion>
