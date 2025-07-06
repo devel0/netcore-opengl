@@ -410,6 +410,14 @@ Shows earth representation through a textured uv sphere.
 
 [![img][e27]][e27]
 
+<hr/>
+
+Code: [0100][es100]
+
+Use of raycast to pick vertexes over a sphere.
+
+[![img][e100]][e100]
+
 ## Development key notes
 
 Most of technical documentation is directly integrated with [API documentation](https://devel0.github.io/netcore-opengl/html/annotated.html).
@@ -854,6 +862,7 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 [es25]: examples/example-0025/Program.cs
 [es26]: examples/example-0026/Views/MainWindow.axaml.cs
 [es27]: examples/example-0027/Program.cs
+[es100]: examples/example-0100/Program.cs
 
 [e0]: data/images/examples/0000.png
 [e1]: data/images/examples/0001.png
@@ -882,5 +891,6 @@ Configured through Settings/Pages on Branch docs ( path /docs ).
 [e25]: data/images/examples/0025.png
 [e26]: data/images/examples/0026.png
 [e27]: data/images/examples/0027.png
+[e100]: data/images/examples/0100.gif
 
 [FeasibleTriIntersectionTests]: https://github.com/devel0/netcore-opengl/blob/0ce534f6fcbb62279d814b0eca08f5be97ec8f98/src/core/primitive/IGLTriangle.cs#L113
