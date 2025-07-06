@@ -45,6 +45,8 @@ else
     fi
 fi
 
+regen_refs=false
+
 if $regen_refs; then
     echo "REGEN REFS"
 
@@ -66,7 +68,7 @@ rm -f "$lib_pkgs"
 rm -f "$refs_pkgs"
 
 docker build \
+    -t netcore-opengl-test \
     --build-arg USER_ID=$(id -u ${USER}) \
     --build-arg GROUP_ID=$(id -g ${USER}) \
-    -t netcore-opengl-test \
     "$exdir"

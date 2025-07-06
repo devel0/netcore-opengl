@@ -1,6 +1,6 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -y update
 
@@ -10,17 +10,15 @@ RUN apt-get update && \
         apt-get install -y git ntpdate ntp supervisor cron rsyslog nano net-tools inetutils-ping telnet mc rsync dnsutils iproute2 psmisc acl systemd traceroute ldap-utils tcpdump && \
         apt-get install -y software-properties-common
 
-ENV EDITOR nano
+ENV EDITOR=nano
 
 # timezone
 RUN apt-get install -y tzdata
 
-# net8.0
-# RUN wget https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
-#     dpkg -i packages-microsoft-prod.deb && \
-#     rm packages-microsoft-prod.deb
+# net9.0
+RUN add-apt-repository ppa:dotnet/backports
 
-RUN apt-get update && apt install -y dotnet-sdk-8.0
+RUN apt-get update && apt install -y dotnet-sdk-9.0
 
 # xvfb
 RUN apt-get install -y xvfb
@@ -32,8 +30,12 @@ RUN apt-get update && apt-get install -y libfontconfig-dev
 ARG USER_ID
 ARG GROUP_ID
 
+RUN groupmod -g 9999 ubuntu
+RUN usermod -u 9999 ubuntu
+
 RUN groupadd -g ${GROUP_ID} user
 RUN useradd -m -l -u ${USER_ID} -g user user
+
 RUN apt-get install -y sudo strace
 RUN echo "user ALL=(ALL) ALL" >> /etc/sudoers
 
@@ -45,3 +47,5 @@ COPY refs/refs.csproj /.refs
 RUN chown -R user.user /.refs
 
 RUN su -c "dotnet build /.refs" user
+
+RUN dotnet build /.refs

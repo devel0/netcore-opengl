@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <PackageReference Include="netcore-ext" Version="2.5.0" />
     <PackageReference Include="netcore-sci" Version="8.3.0" />
     <PackageReference Include="netDxf-devel0" Version="3.0.4" />
-    <PackageReference Include="Silk.NET" Version="2.17.1" />
+    <PackageReference Include="Silk.NET" Version="2.21.0" />
     <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.3" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
     <PackageReference Include="xunit" Version="2.4.2" />

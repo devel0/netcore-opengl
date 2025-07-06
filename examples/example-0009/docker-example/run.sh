@@ -11,7 +11,7 @@ docker run \
     -v "$exdir/../../..:/netcore-opengl" \
     -v "$exdir/output:/root/Desktop" \
     netcore-opengl-example-0009 \
-    bash -c "xvfb-run dotnet /netcore-opengl/examples/example-0009/bin/Debug/net8.0/example-0009.dll && echo finished && chown -R $(id -u):$(id -g) /root/Desktop"
+    bash -c "xvfb-run dotnet /netcore-opengl/examples/example-0009/bin/Debug/net9.0/example-0009.dll && echo finished && chown -R $(id -u):$(id -g) /root/Desktop"
 
 echo "Generated file:"
 
