@@ -16,7 +16,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<NetCoreOpenGLVersion>3.5.0</NetCoreOpenGLVersion>
+		<NetCoreOpenGLVersion>3.6.0</NetCoreOpenGLVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
